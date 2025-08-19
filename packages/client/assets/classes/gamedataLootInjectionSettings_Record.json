@@ -1,0 +1,175 @@
+{
+  "parent": "gamedataTweakDBRecord",
+  "name": "gamedataLootInjectionSettings_Record",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "BrokenChance",
+      "shortName": "BrokenChance",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 7827,
+      "flags": 1
+    },
+    {
+      "fullName": "BrokenOverrideChance",
+      "shortName": "BrokenOverrideChance",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 7828,
+      "flags": 1
+    },
+    {
+      "fullName": "GetStatsExlcudingBrokenCount",
+      "shortName": "GetStatsExlcudingBrokenCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 7823,
+      "flags": 1
+    },
+    {
+      "fullName": "GetStatsExlcudingBrokenItem",
+      "shortName": "GetStatsExlcudingBrokenItem",
+      "return": {
+        "type": "whandle:gamedataStat_Record",
+        "flags": 64
+      },
+      "index": 7824,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetStatsExlcudingBrokenItemHandle",
+      "shortName": "GetStatsExlcudingBrokenItemHandle",
+      "return": {
+        "type": "handle:gamedataStat_Record",
+        "flags": 64
+      },
+      "index": 7825,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetTagsExcludingBrokenCount",
+      "shortName": "GetTagsExcludingBrokenCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 7819,
+      "flags": 1
+    },
+    {
+      "fullName": "GetTagsExcludingBrokenItem",
+      "shortName": "GetTagsExcludingBrokenItem",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "index": 7820,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "InjectedLoot",
+      "shortName": "InjectedLoot",
+      "return": {
+        "type": "whandle:gamedataLootTable_Record",
+        "flags": 64
+      },
+      "index": 7816,
+      "flags": 1
+    },
+    {
+      "fullName": "InjectedLootHandle",
+      "shortName": "InjectedLootHandle",
+      "return": {
+        "type": "handle:gamedataLootTable_Record",
+        "flags": 64
+      },
+      "index": 7817,
+      "flags": 1
+    },
+    {
+      "fullName": "StatsExlcudingBroken",
+      "shortName": "StatsExlcudingBroken",
+      "index": 7822,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataStat_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "StatsExlcudingBrokenContains",
+      "shortName": "StatsExlcudingBrokenContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 7826,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataStat_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TagsExcludingBroken",
+      "shortName": "TagsExcludingBroken",
+      "return": {
+        "type": "array:CName",
+        "flags": 64
+      },
+      "index": 7818,
+      "flags": 1
+    },
+    {
+      "fullName": "TagsExcludingBrokenContains",
+      "shortName": "TagsExcludingBrokenContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 7821,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "parent": "gameuiMenuGameController",
+  "name": "gameuiWorldMapPreviewGameController",
+  "flags": 2,
+  "props": [
+    {
+      "type": "raRef:entEntityTemplate",
+      "name": "viewTemplate",
+      "group": "Entities",
+      "flags": 6627016709
+    },
+    {
+      "type": "rRef:worldEnvironmentAreaParameters",
+      "name": "viewEnvironmentDefinition",
+      "group": "Entities",
+      "flags": 6627016709
+    },
+    {
+      "type": "raRef:entEntityTemplate",
+      "name": "cursorTemplate",
+      "group": "Entities",
+      "flags": 6627016709
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "canvas",
+      "group": "Canvas",
+      "flags": 6627016705
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "GetCameraMode",
+      "shortName": "GetCameraMode",
+      "return": {
+        "type": "gameuiEWorldMapCameraMode",
+        "flags": 64
+      },
+      "index": 14598,
+      "flags": 1
+    },
+    {
+      "fullName": "JumpToZoomLevel",
+      "shortName": "JumpToZoomLevel",
+      "index": 14606,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "zoomLevel",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Move",
+      "shortName": "Move",
+      "index": 14600,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Vector4",
+          "name": "direction",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "strength",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "MoveTo",
+      "shortName": "MoveTo",
+      "index": 14601,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Vector3",
+          "name": "direction",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RotatePitch",
+      "shortName": "RotatePitch",
+      "index": 14603,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Float",
+          "name": "strength",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RotateYaw",
+      "shortName": "RotateYaw",
+      "index": 14602,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Float",
+          "name": "strength",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetCameraMode",
+      "shortName": "SetCameraMode",
+      "index": 14599,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gameuiEWorldMapCameraMode",
+          "name": "cameraMode",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ZoomIn",
+      "shortName": "ZoomIn",
+      "index": 14604,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Float",
+          "name": "strength",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "ZoomOut",
+      "shortName": "ZoomOut",
+      "index": 14605,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Float",
+          "name": "strength",
+          "flags": 1152
+        }
+      ]
+    }
+  ]
+}

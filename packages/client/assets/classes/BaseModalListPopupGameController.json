@@ -1,0 +1,324 @@
+{
+  "parent": "gameuiWidgetGameController",
+  "name": "BaseModalListPopupGameController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkWidgetReference",
+      "name": "content",
+      "flags": 4297195553
+    },
+    {
+      "type": "whandle:inkVirtualListController",
+      "name": "listController",
+      "flags": 4297195552
+    },
+    {
+      "type": "whandle:gameObject",
+      "name": "playerPuppet",
+      "flags": 4297195552
+    },
+    {
+      "type": "handle:inkGameNotificationData",
+      "name": "popupData",
+      "flags": 4431413280
+    },
+    {
+      "type": "String",
+      "name": "timeDilationProfile",
+      "flags": 4297195552
+    },
+    {
+      "type": "Bool",
+      "name": "canPlaySwitchAnimation",
+      "flags": 4297195552
+    },
+    {
+      "type": "handle:BaseModalListPopupTemplateClassifier",
+      "name": "templateClassifier",
+      "flags": 4431347744
+    },
+    {
+      "type": "whandle:inkISystemRequestsHandler",
+      "name": "systemRequestsHandler",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "switchAnimProxy",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "inoutTransitionAnimProxy",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "isInMenuCallbackID",
+      "flags": 4431347744
+    },
+    {
+      "type": "Float",
+      "name": "c_scrollInputThreshold",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "firstInit",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnAction",
+      "shortName": "OnAction",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "gameinputScriptListenerAction",
+          "name": "action",
+          "flags": 128
+        },
+        {
+          "type": "gameinputScriptListenerActionConsumer",
+          "name": "consumer",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnAllElementsSpawned",
+      "shortName": "OnAllElementsSpawned",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnHideAnimFinished",
+      "shortName": "OnHideAnimFinished",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkanimProxy",
+          "name": "proxy",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnIsInMenuChanged",
+      "shortName": "OnIsInMenuChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "param",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnItemSelected",
+      "shortName": "OnItemSelected",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkVirtualCompoundItemController",
+          "name": "previous",
+          "flags": 128
+        },
+        {
+          "type": "handle:inkVirtualCompoundItemController",
+          "name": "next",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPlayerAttach",
+      "shortName": "OnPlayerAttach",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "playerPuppet",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPlayerDetach",
+      "shortName": "OnPlayerDetach",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "playerPuppet",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnShowAnimFinished",
+      "shortName": "OnShowAnimFinished",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkanimProxy",
+          "name": "proxy",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "Activate;",
+      "shortName": "Activate",
+      "flags": 33024
+    },
+    {
+      "fullName": "BaseSetupVirtualList;",
+      "shortName": "BaseSetupVirtualList",
+      "flags": 32900
+    },
+    {
+      "fullName": "CleanVirtualList;",
+      "shortName": "CleanVirtualList",
+      "flags": 33024
+    },
+    {
+      "fullName": "Close;",
+      "shortName": "Close",
+      "flags": 33028
+    },
+    {
+      "fullName": "HandleScroll;Float",
+      "shortName": "HandleScroll",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Float",
+          "name": "axisData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnClose;",
+      "shortName": "OnClose",
+      "flags": 33024
+    },
+    {
+      "fullName": "ScrollNext;",
+      "shortName": "ScrollNext",
+      "flags": 32900
+    },
+    {
+      "fullName": "ScrollPrior;",
+      "shortName": "ScrollPrior",
+      "flags": 32900
+    },
+    {
+      "fullName": "Select;inkVirtualCompoundItemControllerinkVirtualCompoundItemController",
+      "shortName": "Select",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "handle:inkVirtualCompoundItemController",
+          "name": "previous",
+          "flags": 128
+        },
+        {
+          "type": "handle:inkVirtualCompoundItemController",
+          "name": "next",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SendPSMRadialCloseRequest;",
+      "shortName": "SendPSMRadialCloseRequest",
+      "flags": 32900
+    },
+    {
+      "fullName": "SetTimeDilatation;Bool",
+      "shortName": "SetTimeDilatation",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "enable",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetupData;",
+      "shortName": "SetupData",
+      "flags": 33024
+    },
+    {
+      "fullName": "SetupTimeModifierConfig;",
+      "shortName": "SetupTimeModifierConfig",
+      "flags": 33024
+    },
+    {
+      "fullName": "SetupVirtualList;",
+      "shortName": "SetupVirtualList",
+      "flags": 33024
+    },
+    {
+      "fullName": "VirtualListReady;",
+      "shortName": "VirtualListReady",
+      "flags": 33024
+    }
+  ]
+}

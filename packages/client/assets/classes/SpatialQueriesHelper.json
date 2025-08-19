@@ -1,0 +1,141 @@
+{
+  "parent": "IScriptable",
+  "name": "SpatialQueriesHelper",
+  "flags": 4,
+  "funcs": [
+    {
+      "fullName": "SpatialQueriesHelper::GetFloorAngle;GameObjectFloat",
+      "shortName": "GetFloorAngle",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "sourceObject",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "floorAngle",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "SpatialQueriesHelper::HasSpaceInFront;GameObjectVector4FloatFloatFloatFloat",
+      "shortName": "HasSpaceInFront",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "sourceObject",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "queryDirection",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "groundClearance",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "areaWidth",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "areaLength",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "areaHeight",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SpatialQueriesHelper::HasSpaceInFront;GameObjectFloatFloatFloatFloat",
+      "shortName": "HasSpaceInFront",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "sourceObject",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "groundClearance",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "areaWidth",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "areaLength",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "areaHeight",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SpatialQueriesHelper::IsTargetReachable;GameObjectGameObjectVector4BoolBool",
+      "shortName": "IsTargetReachable",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "owner",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameObject",
+          "name": "target",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "targetPos",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "depthTestForObstacle",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "isObstacleVaultable",
+          "flags": 640
+        }
+      ]
+    }
+  ]
+}

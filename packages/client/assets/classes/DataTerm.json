@@ -1,0 +1,545 @@
+{
+  "parent": "InteractiveDevice",
+  "name": "DataTerm",
+  "flags": 4,
+  "props": [
+    {
+      "type": "handle:gameFastTravelPointData",
+      "name": "linkedFastTravelPoint",
+      "group": "Fast Travel",
+      "flags": 4498456613
+    },
+    {
+      "type": "NodeRef",
+      "name": "exitNode",
+      "group": "Fast Travel",
+      "flags": 4364238881
+    },
+    {
+      "type": "NodeRef",
+      "name": "metroAnimationNode",
+      "group": "Subway",
+      "flags": 4364238881
+    },
+    {
+      "type": "Bool",
+      "name": "SubwayGateBroken",
+      "group": "Subway",
+      "flags": 4364238881
+    },
+    {
+      "type": "handle:FastTravelComponent",
+      "name": "fastTravelComponent",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:entIPlacedComponent",
+      "name": "lockColiderComponent",
+      "flags": 4431347744
+    },
+    {
+      "type": "gameNewMappinID",
+      "name": "mappinID",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isShortGlitchActive",
+      "flags": 4297130016
+    },
+    {
+      "type": "gameDelayID",
+      "name": "shortGlitchDelayID",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:entIPlacedComponent",
+      "name": "hologramMeshGreen",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:entIPlacedComponent",
+      "name": "hologramMeshRed",
+      "flags": 4431347744
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnAreaEnter",
+      "shortName": "OnAreaEnter",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:entAreaEnteredEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnAreaExit",
+      "shortName": "OnAreaExit",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:entAreaExitedEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnChangeSubwayGateStateEvent",
+      "shortName": "OnChangeSubwayGateStateEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:ChangeSubwayGateStateEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnDetach",
+      "shortName": "OnDetach",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnFastTravelPointsUpdated",
+      "shortName": "OnFastTravelPointsUpdated",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:FastTravelPointsUpdated",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnGameAttached",
+      "shortName": "OnGameAttached",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnHitEvent",
+      "shortName": "OnHitEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hit",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInteractionActivated",
+      "shortName": "OnInteractionActivated",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameinteractionsInteractionActivationEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnLogicReady",
+      "shortName": "OnLogicReady",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:SetLogicReadyEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnOpenWorldMapAction",
+      "shortName": "OnOpenWorldMapAction",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:OpenWorldMapDeviceAction",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRequestComponents",
+      "shortName": "OnRequestComponents",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "entEntityRequestComponentsInterface",
+          "name": "ri",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnStopShortGlitch",
+      "shortName": "OnStopShortGlitch",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:StopShortGlitchEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnTakeControl",
+      "shortName": "OnTakeControl",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "entEntityResolveComponentsInterface",
+          "name": "ri",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ActivateDevice;",
+      "shortName": "ActivateDevice",
+      "flags": 33024
+    },
+    {
+      "fullName": "AreCharacterPresentAtSubwayGate;",
+      "shortName": "AreCharacterPresentAtSubwayGate",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41092
+    },
+    {
+      "fullName": "CloseSubwayGate;",
+      "shortName": "CloseSubwayGate",
+      "flags": 33284
+    },
+    {
+      "fullName": "CreateBlackboard;",
+      "shortName": "CreateBlackboard",
+      "flags": 33024
+    },
+    {
+      "fullName": "CutPower;",
+      "shortName": "CutPower",
+      "flags": 33024
+    },
+    {
+      "fullName": "DeactivateDevice;",
+      "shortName": "DeactivateDevice",
+      "flags": 33024
+    },
+    {
+      "fullName": "DeterminGameplayRole;",
+      "shortName": "DeterminGameplayRole",
+      "return": {
+        "type": "EGameplayRole",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "GetBlackboardDef;",
+      "shortName": "GetBlackboardDef",
+      "return": {
+        "type": "handle:DataTermDeviceBlackboardDef",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "GetController;",
+      "shortName": "GetController",
+      "return": {
+        "type": "handle:DataTermController",
+        "flags": 64
+      },
+      "flags": 41216
+    },
+    {
+      "fullName": "GetDevicePS;",
+      "shortName": "GetDevicePS",
+      "return": {
+        "type": "handle:DataTermControllerPS",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "GetFastravelDeviceType;",
+      "shortName": "GetFastravelDeviceType",
+      "return": {
+        "type": "EFastTravelDeviceType",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetFastravelPointData;",
+      "shortName": "GetFastravelPointData",
+      "return": {
+        "type": "handle:gameFastTravelPointData",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetMappinSystem;",
+      "shortName": "GetMappinSystem",
+      "return": {
+        "type": "handle:gamemappinsMappinSystem",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "IsFastTravelPoint;",
+      "shortName": "IsFastTravelPoint",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "IsGameplayRoleValid;EGameplayRole",
+      "shortName": "IsGameplayRoleValid",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41472,
+      "params": [
+        {
+          "type": "EGameplayRole",
+          "name": "role",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsMappinRegistered;",
+      "shortName": "IsMappinRegistered",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "IsReadyForUI;",
+      "shortName": "IsReadyForUI",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41216
+    },
+    {
+      "fullName": "IsSubwayGateBroken;",
+      "shortName": "IsSubwayGateBroken",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "IsSubwayGateOpen;",
+      "shortName": "IsSubwayGateOpen",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41092
+    },
+    {
+      "fullName": "OpenSubwayGate;",
+      "shortName": "OpenSubwayGate",
+      "flags": 33284
+    },
+    {
+      "fullName": "PrepareMetroAnimEntityPosition;",
+      "shortName": "PrepareMetroAnimEntityPosition",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "ProcessSubwayGateNPCPresence;Bool",
+      "shortName": "ProcessSubwayGateNPCPresence",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "increase",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterFastTravelPoints;",
+      "shortName": "RegisterFastTravelPoints",
+      "flags": 32900
+    },
+    {
+      "fullName": "RegisterMappin;",
+      "shortName": "RegisterMappin",
+      "flags": 32900
+    },
+    {
+      "fullName": "RequestFastTravelMenu;",
+      "shortName": "RequestFastTravelMenu",
+      "flags": 32900
+    },
+    {
+      "fullName": "ResolveGameplayState;",
+      "shortName": "ResolveGameplayState",
+      "flags": 33024
+    },
+    {
+      "fullName": "ResolveGateApperance;",
+      "shortName": "ResolveGateApperance",
+      "flags": 32900
+    },
+    {
+      "fullName": "SendThisSubwayGateToFastTravelSystem;",
+      "shortName": "SendThisSubwayGateToFastTravelSystem",
+      "flags": 32900
+    },
+    {
+      "fullName": "StartGlitching;EGlitchStateFloat",
+      "shortName": "StartGlitching",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "EGlitchState",
+          "name": "glitchState",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "intensity",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "StartShortGlitch;",
+      "shortName": "StartShortGlitch",
+      "flags": 32900
+    },
+    {
+      "fullName": "StopGlitching;",
+      "shortName": "StopGlitching",
+      "flags": 33024
+    },
+    {
+      "fullName": "TeleportToExitNode;GameObject",
+      "shortName": "TeleportToExitNode",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "activator",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TurnOffDevice;",
+      "shortName": "TurnOffDevice",
+      "flags": 33024
+    },
+    {
+      "fullName": "TurnOffScreen;",
+      "shortName": "TurnOffScreen",
+      "flags": 33028
+    },
+    {
+      "fullName": "TurnOnDevice;",
+      "shortName": "TurnOnDevice",
+      "flags": 33024
+    },
+    {
+      "fullName": "TurnOnScreen;",
+      "shortName": "TurnOnScreen",
+      "flags": 33028
+    },
+    {
+      "fullName": "UnregisterMappin;",
+      "shortName": "UnregisterMappin",
+      "flags": 32900
+    },
+    {
+      "fullName": "UpdateFastTravelPointRecord;",
+      "shortName": "UpdateFastTravelPointRecord",
+      "flags": 32900
+    }
+  ]
+}

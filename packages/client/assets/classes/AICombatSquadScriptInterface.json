@@ -1,0 +1,217 @@
+{
+  "parent": "AISquadScriptInterface",
+  "name": "AICombatSquadScriptInterface",
+  "flags": 2,
+  "funcs": [
+    {
+      "fullName": "AddEnemy",
+      "shortName": "AddEnemy",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12765,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:entEntity",
+          "name": "et",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "EnemyList",
+      "shortName": "EnemyList",
+      "return": {
+        "type": "array:handle:entEntity",
+        "flags": 64
+      },
+      "index": 12769,
+      "flags": 1
+    },
+    {
+      "fullName": "EnemyListWeak",
+      "shortName": "EnemyListWeak",
+      "return": {
+        "type": "array:whandle:entEntity",
+        "flags": 64
+      },
+      "index": 12770,
+      "flags": 1
+    },
+    {
+      "fullName": "GetDefensiveCombatAlley",
+      "shortName": "GetDefensiveCombatAlley",
+      "return": {
+        "type": "handle:AICombatAlley",
+        "flags": 64
+      },
+      "index": 12773,
+      "flags": 1
+    },
+    {
+      "fullName": "GetEnemiesCount",
+      "shortName": "GetEnemiesCount",
+      "return": {
+        "type": "Uint32",
+        "flags": 64
+      },
+      "index": 12772,
+      "flags": 1
+    },
+    {
+      "fullName": "GetEnemyAttackersCount",
+      "shortName": "GetEnemyAttackersCount",
+      "return": {
+        "type": "Uint32",
+        "flags": 64
+      },
+      "index": 12768,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:entEntity",
+          "name": "enemy",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetOffensiveCombatAlley",
+      "shortName": "GetOffensiveCombatAlley",
+      "return": {
+        "type": "handle:AICombatAlley",
+        "flags": 64
+      },
+      "index": 12774,
+      "flags": 1
+    },
+    {
+      "fullName": "GetTacticRatio",
+      "shortName": "GetTacticRatio",
+      "return": {
+        "type": "AICombatSquadTacticRatio",
+        "flags": 64
+      },
+      "index": 12778,
+      "flags": 1
+    },
+    {
+      "fullName": "IsEnemy",
+      "shortName": "IsEnemy",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12771,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:entEntity",
+          "name": "potentialEnemy",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PullEnemies",
+      "shortName": "PullEnemies",
+      "index": 12779,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "sourceSquadName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterTactic",
+      "shortName": "RegisterTactic",
+      "index": 12775,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "sqAction",
+          "flags": 128
+        },
+        {
+          "type": "array:AICombatSectorType",
+          "name": "sectors",
+          "flags": 128
+        },
+        {
+          "type": "handle:AICombatAlley",
+          "name": "alley",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "timeout",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RemoveEnemy",
+      "shortName": "RemoveEnemy",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12766,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:entEntity",
+          "name": "et",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetAsEnemyAttacker",
+      "shortName": "SetAsEnemyAttacker",
+      "index": 12767,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:entEntity",
+          "name": "squadMember",
+          "flags": 128
+        },
+        {
+          "type": "handle:entEntity",
+          "name": "enemy",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UnregisterTactic",
+      "shortName": "UnregisterTactic",
+      "index": 12776,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "sqAction",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ValidCombatSquad",
+      "shortName": "ValidCombatSquad",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12777,
+      "flags": 1
+    }
+  ]
+}

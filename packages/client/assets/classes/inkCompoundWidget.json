@@ -1,0 +1,309 @@
+{
+  "parent": "inkWidget",
+  "name": "inkCompoundWidget",
+  "flags": 2,
+  "props": [
+    {
+      "type": "inkEChildOrder",
+      "name": "childOrder",
+      "group": "Type related",
+      "flags": 6627016705
+    },
+    {
+      "type": "handle:inkMultiChildren",
+      "name": "children",
+      "group": "Type related",
+      "flags": 6627016705
+    },
+    {
+      "type": "inkMargin",
+      "name": "childMargin",
+      "group": "Type related",
+      "flags": 6627016705
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "AddChild",
+      "shortName": "AddChild",
+      "return": {
+        "type": "whandle:inkWidget",
+        "flags": 64
+      },
+      "index": 2244,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "widgetTypeName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AddChildWidget",
+      "shortName": "AddChildWidget",
+      "index": 2245,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:inkWidget",
+          "name": "widget",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetChildMargin",
+      "shortName": "GetChildMargin",
+      "return": {
+        "type": "inkMargin",
+        "flags": 64
+      },
+      "index": 2256,
+      "flags": 1
+    },
+    {
+      "fullName": "GetChildOrder",
+      "shortName": "GetChildOrder",
+      "return": {
+        "type": "inkEChildOrder",
+        "flags": 64
+      },
+      "index": 2254,
+      "flags": 1
+    },
+    {
+      "fullName": "GetChildPosition",
+      "shortName": "GetChildPosition",
+      "return": {
+        "type": "Vector2",
+        "flags": 64
+      },
+      "index": 2258,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:inkWidget",
+          "name": "widget",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetChildSize",
+      "shortName": "GetChildSize",
+      "return": {
+        "type": "Vector2",
+        "flags": 64
+      },
+      "index": 2259,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:inkWidget",
+          "name": "widget",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetNumChildren",
+      "shortName": "GetNumChildren",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 2243,
+      "flags": 1
+    },
+    {
+      "fullName": "GetWidgetByIndex",
+      "shortName": "GetWidgetByIndex",
+      "return": {
+        "type": "whandle:inkWidget",
+        "flags": 64
+      },
+      "index": 2246,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetWidgetByPath",
+      "shortName": "GetWidgetByPath",
+      "return": {
+        "type": "whandle:inkWidget",
+        "flags": 64
+      },
+      "index": 2247,
+      "flags": 1,
+      "params": [
+        {
+          "type": "inkWidgetPath",
+          "name": "path",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetWidgetByPathName",
+      "shortName": "GetWidgetByPathName",
+      "return": {
+        "type": "whandle:inkWidget",
+        "flags": 64
+      },
+      "index": 2248,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "widgetNamePath",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RemoveAllChildren",
+      "shortName": "RemoveAllChildren",
+      "index": 2252,
+      "flags": 1
+    },
+    {
+      "fullName": "RemoveChild",
+      "shortName": "RemoveChild",
+      "index": 2249,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:inkWidget",
+          "name": "childWidget",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RemoveChildByIndex",
+      "shortName": "RemoveChildByIndex",
+      "index": 2250,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RemoveChildByName",
+      "shortName": "RemoveChildByName",
+      "index": 2251,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "widgetName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ReorderChild",
+      "shortName": "ReorderChild",
+      "index": 2253,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:inkWidget",
+          "name": "childWidget",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "newIndex",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetChildMargin",
+      "shortName": "SetChildMargin",
+      "index": 2257,
+      "flags": 1,
+      "params": [
+        {
+          "type": "inkMargin",
+          "name": "newMargin",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetChildOrder",
+      "shortName": "SetChildOrder",
+      "index": 2255,
+      "flags": 1,
+      "params": [
+        {
+          "type": "inkEChildOrder",
+          "name": "newOrder",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetWidget;inkWidgetPath",
+      "shortName": "GetWidget",
+      "return": {
+        "type": "whandle:inkWidget",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "inkWidgetPath",
+          "name": "path",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetWidget;Int32",
+      "shortName": "GetWidget",
+      "return": {
+        "type": "whandle:inkWidget",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetWidget;CName",
+      "shortName": "GetWidget",
+      "return": {
+        "type": "whandle:inkWidget",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "CName",
+          "name": "path",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

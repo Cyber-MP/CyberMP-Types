@@ -1,0 +1,344 @@
+{
+  "parent": "NcartTrainInkControllerBase",
+  "name": "NcartDoorScreenInkController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "array:ncartDoorScreenLineDataDef",
+      "name": "LinesList",
+      "flags": 6583025697
+    },
+    {
+      "type": "CName",
+      "name": "ActiveLineFactName",
+      "flags": 4297130017
+    },
+    {
+      "type": "CName",
+      "name": "NextStationFactName",
+      "flags": 4297130017
+    },
+    {
+      "type": "CName",
+      "name": "MetroStoppingFactName",
+      "flags": 4297130017
+    },
+    {
+      "type": "whandle:inkCompoundWidget",
+      "name": "root",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:questQuestsSystem",
+      "name": "questsSystem",
+      "flags": 4297130016
+    },
+    {
+      "type": "Uint32",
+      "name": "StopListenerId",
+      "flags": 4297130016
+    },
+    {
+      "type": "Uint32",
+      "name": "NextStationListenerId",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "gameTimeCallback",
+      "flags": 4431347744
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "ncartTextLogo",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "timeWidget",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "stationNameWidget",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "stationStatusWidget",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "districtNameWidget",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "stationDistrictBackgroundColor",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "sun_moon_container",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "weather_sun_widget",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "weather_moon_widget",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "weather_cloud_a_widget",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "weather_cloud_b_widget",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "weather_rain_widget",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "speed_display",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "speed_display_deco_1",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "speed_display_deco_2",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "speed_display_deco_3",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "speed_display_deco_4",
+      "flags": 4297130017
+    },
+    {
+      "type": "Int32",
+      "name": "cachedActiveLine",
+      "flags": 4297130016
+    },
+    {
+      "type": "Int32",
+      "name": "cachedNextStation",
+      "flags": 4297130016
+    },
+    {
+      "type": "ENcartDistricts",
+      "name": "cachedDistrict",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "updateDistrictName",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:vehicleBaseObject",
+      "name": "ownerObject",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:gameIBlackboard",
+      "name": "vehicleBlackboard",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "AnimProxy",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "speedListner",
+      "flags": 4431347744
+    },
+    {
+      "type": "Float",
+      "name": "speedLastValue",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnEndAnimLoop",
+      "shortName": "OnEndAnimLoop",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkanimProxy",
+          "name": "proxy",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnMetroArrivingAtStationEvent",
+      "shortName": "OnMetroArrivingAtStationEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "factValue",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnMetroNextStationChangeEvent",
+      "shortName": "OnMetroNextStationChangeEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "factValue",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnTrainSpeedChanged",
+      "shortName": "OnTrainSpeedChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Float",
+          "name": "speed",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "ChangeNextStationName;Int32",
+      "shortName": "ChangeNextStationName",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "newStation",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnGameTimeChanged;String",
+      "shortName": "OnGameTimeChanged",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "String",
+          "name": "time",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PlayArrowsAnimation;",
+      "shortName": "PlayArrowsAnimation",
+      "flags": 32900
+    },
+    {
+      "fullName": "RegisterBlackBoardCallbacks;",
+      "shortName": "RegisterBlackBoardCallbacks",
+      "flags": 32900
+    },
+    {
+      "fullName": "TrainStopAnim;",
+      "shortName": "TrainStopAnim",
+      "flags": 32900
+    },
+    {
+      "fullName": "UnregisterBlackBoardCallbacks;",
+      "shortName": "UnregisterBlackBoardCallbacks",
+      "flags": 32900
+    },
+    {
+      "fullName": "UpdateDayNightWeatherIcon;",
+      "shortName": "UpdateDayNightWeatherIcon",
+      "flags": 32900
+    },
+    {
+      "fullName": "UpdateDestinationStation;Int32",
+      "shortName": "UpdateDestinationStation",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "DestinationStation",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateMetroLine;Int32",
+      "shortName": "UpdateMetroLine",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "activeLine",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateWeather;",
+      "shortName": "UpdateWeather",
+      "flags": 32900
+    }
+  ]
+}

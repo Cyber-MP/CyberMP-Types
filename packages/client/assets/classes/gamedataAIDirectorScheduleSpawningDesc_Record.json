@@ -1,0 +1,121 @@
+{
+  "parent": "gamedataTweakDBRecord",
+  "name": "gamedataAIDirectorScheduleSpawningDesc_Record",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "EnemiesAmount",
+      "shortName": "EnemiesAmount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 4665,
+      "flags": 1
+    },
+    {
+      "fullName": "Entries",
+      "shortName": "Entries",
+      "index": 4658,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataAIDirectorSchedulePlanEnemyEntry_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "EntriesContains",
+      "shortName": "EntriesContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 4662,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataAIDirectorSchedulePlanEnemyEntry_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetEntriesCount",
+      "shortName": "GetEntriesCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 4659,
+      "flags": 1
+    },
+    {
+      "fullName": "GetEntriesItem",
+      "shortName": "GetEntriesItem",
+      "return": {
+        "type": "whandle:gamedataAIDirectorSchedulePlanEnemyEntry_Record",
+        "flags": 64
+      },
+      "index": 4660,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetEntriesItemHandle",
+      "shortName": "GetEntriesItemHandle",
+      "return": {
+        "type": "handle:gamedataAIDirectorSchedulePlanEnemyEntry_Record",
+        "flags": 64
+      },
+      "index": 4661,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SpawningAngle",
+      "shortName": "SpawningAngle",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 4664,
+      "flags": 1
+    },
+    {
+      "fullName": "SpawningBigDistance",
+      "shortName": "SpawningBigDistance",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 4663,
+      "flags": 1
+    },
+    {
+      "fullName": "SpawningMinDistance",
+      "shortName": "SpawningMinDistance",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 4666,
+      "flags": 1
+    }
+  ]
+}

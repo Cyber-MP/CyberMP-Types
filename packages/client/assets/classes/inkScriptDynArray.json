@@ -1,0 +1,105 @@
+{
+  "parent": "IScriptable",
+  "name": "inkScriptDynArray",
+  "flags": 2,
+  "funcs": [
+    {
+      "fullName": "Clear",
+      "shortName": "Clear",
+      "index": 1949,
+      "flags": 1
+    },
+    {
+      "fullName": "Empty",
+      "shortName": "Empty",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 1951,
+      "flags": 1
+    },
+    {
+      "fullName": "Get",
+      "shortName": "Get",
+      "return": {
+        "type": "array:whandle:IScriptable",
+        "flags": 64
+      },
+      "index": 1952,
+      "flags": 1
+    },
+    {
+      "fullName": "InsertAt",
+      "shortName": "InsertAt",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 1947,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Uint32",
+          "name": "index",
+          "flags": 128
+        },
+        {
+          "type": "whandle:IScriptable",
+          "name": "object",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PopBack",
+      "shortName": "PopBack",
+      "return": {
+        "type": "whandle:IScriptable",
+        "flags": 64
+      },
+      "index": 1946,
+      "flags": 1
+    },
+    {
+      "fullName": "PushBack",
+      "shortName": "PushBack",
+      "index": 1945,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:IScriptable",
+          "name": "object",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Remove",
+      "shortName": "Remove",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 1948,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:IScriptable",
+          "name": "object",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Size",
+      "shortName": "Size",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 1950,
+      "flags": 1
+    }
+  ]
+}

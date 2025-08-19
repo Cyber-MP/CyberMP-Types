@@ -1,0 +1,397 @@
+{
+  "parent": "gamedataTweakDBRecord",
+  "name": "gamedataGameplayLogicPackage_Record",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "AnimationWrapperOverrides",
+      "shortName": "AnimationWrapperOverrides",
+      "return": {
+        "type": "array:CName",
+        "flags": 64
+      },
+      "index": 6653,
+      "flags": 1
+    },
+    {
+      "fullName": "AnimationWrapperOverridesContains",
+      "shortName": "AnimationWrapperOverridesContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 6656,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Effectors",
+      "shortName": "Effectors",
+      "index": 6638,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataEffector_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "EffectorsContains",
+      "shortName": "EffectorsContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 6642,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataEffector_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetAnimationWrapperOverridesCount",
+      "shortName": "GetAnimationWrapperOverridesCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 6654,
+      "flags": 1
+    },
+    {
+      "fullName": "GetAnimationWrapperOverridesItem",
+      "shortName": "GetAnimationWrapperOverridesItem",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "index": 6655,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetEffectorsCount",
+      "shortName": "GetEffectorsCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 6639,
+      "flags": 1
+    },
+    {
+      "fullName": "GetEffectorsItem",
+      "shortName": "GetEffectorsItem",
+      "return": {
+        "type": "whandle:gamedataEffector_Record",
+        "flags": 64
+      },
+      "index": 6640,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetEffectorsItemHandle",
+      "shortName": "GetEffectorsItemHandle",
+      "return": {
+        "type": "handle:gamedataEffector_Record",
+        "flags": 64
+      },
+      "index": 6641,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetItemsCount",
+      "shortName": "GetItemsCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 6649,
+      "flags": 1
+    },
+    {
+      "fullName": "GetItemsItem",
+      "shortName": "GetItemsItem",
+      "return": {
+        "type": "whandle:gamedataInventoryItem_Record",
+        "flags": 64
+      },
+      "index": 6650,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetItemsItemHandle",
+      "shortName": "GetItemsItemHandle",
+      "return": {
+        "type": "handle:gamedataInventoryItem_Record",
+        "flags": 64
+      },
+      "index": 6651,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetStatPoolsCount",
+      "shortName": "GetStatPoolsCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 6634,
+      "flags": 1
+    },
+    {
+      "fullName": "GetStatPoolsItem",
+      "shortName": "GetStatPoolsItem",
+      "return": {
+        "type": "whandle:gamedataStatPool_Record",
+        "flags": 64
+      },
+      "index": 6635,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetStatPoolsItemHandle",
+      "shortName": "GetStatPoolsItemHandle",
+      "return": {
+        "type": "handle:gamedataStatPool_Record",
+        "flags": 64
+      },
+      "index": 6636,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetStatsCount",
+      "shortName": "GetStatsCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 6644,
+      "flags": 1
+    },
+    {
+      "fullName": "GetStatsItem",
+      "shortName": "GetStatsItem",
+      "return": {
+        "type": "whandle:gamedataStatModifier_Record",
+        "flags": 64
+      },
+      "index": 6645,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetStatsItemHandle",
+      "shortName": "GetStatsItemHandle",
+      "return": {
+        "type": "handle:gamedataStatModifier_Record",
+        "flags": 64
+      },
+      "index": 6646,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Items",
+      "shortName": "Items",
+      "index": 6648,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataInventoryItem_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "ItemsContains",
+      "shortName": "ItemsContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 6652,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataInventoryItem_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Prereq",
+      "shortName": "Prereq",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "index": 6657,
+      "flags": 1
+    },
+    {
+      "fullName": "Stackable",
+      "shortName": "Stackable",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 6658,
+      "flags": 1
+    },
+    {
+      "fullName": "StatPools",
+      "shortName": "StatPools",
+      "index": 6633,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataStatPool_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "StatPoolsContains",
+      "shortName": "StatPoolsContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 6637,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataStatPool_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Stats",
+      "shortName": "Stats",
+      "index": 6643,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataStatModifier_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "StatsContains",
+      "shortName": "StatsContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 6647,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataStatModifier_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UIData",
+      "shortName": "UIData",
+      "return": {
+        "type": "whandle:gamedataGameplayLogicPackageUIData_Record",
+        "flags": 64
+      },
+      "index": 6631,
+      "flags": 1
+    },
+    {
+      "fullName": "UIDataHandle",
+      "shortName": "UIDataHandle",
+      "return": {
+        "type": "handle:gamedataGameplayLogicPackageUIData_Record",
+        "flags": 64
+      },
+      "index": 6632,
+      "flags": 1
+    }
+  ]
+}

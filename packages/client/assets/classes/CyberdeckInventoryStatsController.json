@@ -1,0 +1,162 @@
+{
+  "parent": "inkWidgetLogicController",
+  "name": "CyberdeckInventoryStatsController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkTextWidgetReference",
+      "name": "bufferTotal",
+      "group": "Buffer",
+      "flags": 4297326625
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "bufferBase",
+      "group": "Buffer",
+      "flags": 4297326625
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "bufferBonus",
+      "group": "Buffer",
+      "flags": 4297326625
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "bufferHoverArea",
+      "group": "Buffer",
+      "flags": 4297326625
+    },
+    {
+      "type": "gameuiETooltipPlacement",
+      "name": "bufferTooltipPlacement",
+      "group": "Buffer",
+      "flags": 4297326625
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "ramTotal",
+      "group": "RAM",
+      "flags": 4297326625
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "ramBase",
+      "group": "RAM",
+      "flags": 4297326625
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "ramBonus",
+      "group": "RAM",
+      "flags": 4297326625
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "ramHoverArea",
+      "group": "RAM",
+      "flags": 4297326625
+    },
+    {
+      "type": "gameuiETooltipPlacement",
+      "name": "ramTooltipPlacement",
+      "group": "RAM",
+      "flags": 4297326625
+    },
+    {
+      "type": "whandle:gameuiTooltipsManager",
+      "name": "tooltipsManager",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnBufferHoverOver",
+      "shortName": "OnBufferHoverOver",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnHoverOut",
+      "shortName": "OnHoverOut",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnRamHoverOver",
+      "shortName": "OnRamHoverOver",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "SetupData;TweakDBIDPlayerPuppetgameuiTooltipsManager",
+      "shortName": "SetupData",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "TweakDBID",
+          "name": "tweakID",
+          "flags": 128
+        },
+        {
+          "type": "whandle:PlayerPuppet",
+          "name": "player",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameuiTooltipsManager",
+          "name": "tooltipsManager",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

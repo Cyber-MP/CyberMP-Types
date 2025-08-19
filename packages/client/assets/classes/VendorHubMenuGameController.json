@@ -1,0 +1,644 @@
+{
+  "parent": "gameuiMenuGameController",
+  "name": "VendorHubMenuGameController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkWidgetReference",
+      "name": "notificationRoot",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "tabRootContainer",
+      "group": "Center",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "tabRootRef",
+      "group": "Center",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "playerCredits",
+      "group": "Right",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "playerCreditsValue",
+      "group": "Right",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "playerWeight",
+      "group": "Right",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "playerWeightValue",
+      "group": "Right",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "vendorShopLabel",
+      "group": "Right",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "levelValue",
+      "group": "Left",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "streetCredLabel",
+      "group": "Left",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "levelBarProgress",
+      "group": "Left",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "levelBarSpacer",
+      "group": "Left",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "streetCredBarProgress",
+      "group": "Left",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "streetCredBarSpacer",
+      "group": "Left",
+      "flags": 4297130017
+    },
+    {
+      "type": "handle:VendorDataManager",
+      "name": "VendorDataManager",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:VendorUserData",
+      "name": "vendorUserData",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:questVendorPanelData",
+      "name": "vendorPanelData",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:StorageUserData",
+      "name": "storageUserData",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:PlayerDevelopmentSystem",
+      "name": "PDS",
+      "flags": 4431347744
+    },
+    {
+      "type": "whandle:inkWidget",
+      "name": "root",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:TabRadioGroup",
+      "name": "tabRoot",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:MoneyLabelController",
+      "name": "playerMoneyAnimator",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isRipperdoc",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isRipperdocViktorTutorial",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:gameStatusEffectSystem",
+      "name": "statusEffectSystem",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:questQuestsSystem",
+      "name": "questSystem",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:RipperdocTimeDilationCallback",
+      "name": "ripperdocTimeDilationCallback",
+      "flags": 4431347744
+    },
+    {
+      "type": "Bool",
+      "name": "timeDilationEnabling",
+      "flags": 4297130016
+    },
+    {
+      "type": "array:handle:RipperdocCyberwareEquipAnimationCategory",
+      "name": "equipAnimationCategories",
+      "flags": 6583025696
+    },
+    {
+      "type": "whandle:gameIBlackboard",
+      "name": "VendorBlackboard",
+      "flags": 4297326624
+    },
+    {
+      "type": "whandle:gameIBlackboard",
+      "name": "playerStatsBlackboard",
+      "flags": 4297326624
+    },
+    {
+      "type": "handle:UI_VendorDef",
+      "name": "VendorBlackboardDef",
+      "flags": 4431544352
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "VendorUpdatedCallbackID",
+      "flags": 4431544352
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "weightListener",
+      "flags": 4431544352
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "characterLevelListener",
+      "flags": 4431544352
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "characterCurrentXPListener",
+      "flags": 4431544352
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "characterCredListener",
+      "flags": 4431544352
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "characterCredPointsListener",
+      "flags": 4431544352
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "characterCurrentHealthListener",
+      "flags": 4431544352
+    },
+    {
+      "type": "whandle:inkMenuEventDispatcher",
+      "name": "menuEventDispatcher",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:PlayerPuppet",
+      "name": "player",
+      "flags": 4297130016
+    },
+    {
+      "type": "array:MenuData",
+      "name": "menuData",
+      "flags": 6583025696
+    },
+    {
+      "type": "Int32",
+      "name": "activeMenu",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isChangedManually",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "cameFromRipperdoc",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:StorageBlackboardDef",
+      "name": "storageDef",
+      "flags": 4431347744
+    },
+    {
+      "type": "whandle:gameIBlackboard",
+      "name": "storageBlackboard",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnButtonRelease",
+      "shortName": "OnButtonRelease",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnCharacterCurrentHealthUpdated",
+      "shortName": "OnCharacterCurrentHealthUpdated",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnCharacterLevelCurrentXPUpdated",
+      "shortName": "OnCharacterLevelCurrentXPUpdated",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnCharacterLevelUpdated",
+      "shortName": "OnCharacterLevelUpdated",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnCharacterStreetCredLevelUpdated",
+      "shortName": "OnCharacterStreetCredLevelUpdated",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnCharacterStreetCredPointsUpdated",
+      "shortName": "OnCharacterStreetCredPointsUpdated",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnCyberwareModsRequest",
+      "shortName": "OnCyberwareModsRequest",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:CyberwareTabModsRequest",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnEquipAnimationDataUpdate",
+      "shortName": "OnEquipAnimationDataUpdate",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:IScriptable",
+          "name": "userData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnPlayerWeightUpdated",
+      "shortName": "OnPlayerWeightUpdated",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Float",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRefreshCurrentTab",
+      "shortName": "OnRefreshCurrentTab",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:IScriptable",
+          "name": "userData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSetMenuEventDispatcher",
+      "shortName": "OnSetMenuEventDispatcher",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "whandle:inkMenuEventDispatcher",
+          "name": "menuEventDispatcher",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSetUserData",
+      "shortName": "OnSetUserData",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:IScriptable",
+          "name": "userData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSwitchToCharacterFromRipperdoc",
+      "shortName": "OnSwitchToCharacterFromRipperdoc",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:IScriptable",
+          "name": "userData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnTutorialComplete",
+      "shortName": "OnTutorialComplete",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:IScriptable",
+          "name": "userData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnValueChanged",
+      "shortName": "OnValueChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "whandle:inkRadioGroupController",
+          "name": "controller",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "selectedIndex",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnVendorUpdated",
+      "shortName": "OnVendorUpdated",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Variant",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CloseVendor;",
+      "shortName": "CloseVendor",
+      "flags": 32900
+    },
+    {
+      "fullName": "FinalizeEquipAnimationData;",
+      "shortName": "FinalizeEquipAnimationData",
+      "flags": 32900
+    },
+    {
+      "fullName": "Init;",
+      "shortName": "Init",
+      "flags": 32900
+    },
+    {
+      "fullName": "InitializeEquipAnimationData;",
+      "shortName": "InitializeEquipAnimationData",
+      "flags": 32900
+    },
+    {
+      "fullName": "InitializeExtraRipperdocData;",
+      "shortName": "InitializeExtraRipperdocData",
+      "flags": 32900
+    },
+    {
+      "fullName": "NotifyActivePanel;HubVendorMenuItems",
+      "shortName": "NotifyActivePanel",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "HubVendorMenuItems",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RemoveBB;",
+      "shortName": "RemoveBB",
+      "flags": 32900
+    },
+    {
+      "fullName": "ResetEquipAnimationData;",
+      "shortName": "ResetEquipAnimationData",
+      "flags": 32900
+    },
+    {
+      "fullName": "SetTimeDilatation;Bool",
+      "shortName": "SetTimeDilatation",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "enable",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetupBB;",
+      "shortName": "SetupBB",
+      "flags": 32900
+    },
+    {
+      "fullName": "SetupMenuTabs;Bool",
+      "shortName": "SetupMenuTabs",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "tutorialFinished",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetupTopBar;",
+      "shortName": "SetupTopBar",
+      "flags": 32900
+    },
+    {
+      "fullName": "UninitializeExtraRipperdocData;",
+      "shortName": "UninitializeExtraRipperdocData",
+      "flags": 32900
+    },
+    {
+      "fullName": "UpdateEquipAnimationData;gamedataEquipmentAreaBool",
+      "shortName": "UpdateEquipAnimationData",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "gamedataEquipmentArea",
+          "name": "equipArea",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "isEquip",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateMoney;",
+      "shortName": "UpdateMoney",
+      "flags": 32900
+    }
+  ]
+}

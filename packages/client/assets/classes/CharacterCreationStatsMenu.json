@@ -1,0 +1,595 @@
+{
+  "parent": "gameuiBaseCharacterCreationController",
+  "name": "CharacterCreationStatsMenu",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkWidgetReference",
+      "name": "attribute_01",
+      "flags": 4297326625
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "attribute_02",
+      "flags": 4297326625
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "attribute_03",
+      "flags": 4297326625
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "attribute_04",
+      "flags": 4297326625
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "attribute_05",
+      "flags": 4297326625
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "pointsLabel",
+      "flags": 4297326625
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "tooltipSlot",
+      "flags": 4297326625
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "skillPointLabel",
+      "flags": 4297326625
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "reset",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "nextMenuConfirmation",
+      "flags": 4297326625
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "nextMenukConfirmationLibraryWidget",
+      "flags": 4297326625
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "ConfirmationConfirmBtn",
+      "flags": 4297326625
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "ConfirmationCloseBtn",
+      "flags": 4297326625
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "TooltipsManagerRef",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "previousPageBtn",
+      "flags": 4297326625
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "navigationButtons",
+      "flags": 4297326625
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "optionSwitchHint",
+      "flags": 4297326625
+    },
+    {
+      "type": "array:whandle:characterCreationStatsAttributeBtn",
+      "name": "attributesControllers",
+      "flags": 6583025696
+    },
+    {
+      "type": "Int32",
+      "name": "attributePointsAvailable",
+      "flags": 4297130016
+    },
+    {
+      "type": "Int32",
+      "name": "startingAttributePoints",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:gameuiTooltipsManager",
+      "name": "TooltipsManager",
+      "flags": 4297130016
+    },
+    {
+      "type": "inkMargin",
+      "name": "toolTipOffset",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "animationProxy",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "confirmAnimationProxy",
+      "flags": 4431347744
+    },
+    {
+      "type": "whandle:inkWidget",
+      "name": "hoverdWidget",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "menuVisited",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnBtnHoverOut",
+      "shortName": "OnBtnHoverOut",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "whandle:inkWidget",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnBtnHoverOver",
+      "shortName": "OnBtnHoverOver",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "whandle:inkWidget",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnButtonRelease",
+      "shortName": "OnButtonRelease",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnConfirmationClose",
+      "shortName": "OnConfirmationClose",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnConfirmationConfirm",
+      "shortName": "OnConfirmationConfirm",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnHoverOutWidget",
+      "shortName": "OnHoverOutWidget",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnHoverOverWidget",
+      "shortName": "OnHoverOverWidget",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnOutroComplete",
+      "shortName": "OnOutroComplete",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkanimProxy",
+          "name": "anim",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPreviousButton",
+      "shortName": "OnPreviousButton",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRelease",
+      "shortName": "OnRelease",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSetUserData",
+      "shortName": "OnSetUserData",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:IScriptable",
+          "name": "userData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnShortcutPress",
+      "shortName": "OnShortcutPress",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnValueDecremented",
+      "shortName": "OnValueDecremented",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "whandle:inkWidget",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnValueIncremented",
+      "shortName": "OnValueIncremented",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "whandle:inkWidget",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Add;inkWidget",
+      "shortName": "Add",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "whandle:inkWidget",
+          "name": "targetWidget",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CanBeDecremented;Int32",
+      "shortName": "CanBeDecremented",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "currValue",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CanBeIncremented;Int32",
+      "shortName": "CanBeIncremented",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "currValue",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "DisableInputBelowConfirmationPopup;Bool",
+      "shortName": "DisableInputBelowConfirmationPopup",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "disabled",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "FillAttributeData;script_ref<String>Int32script_ref<String>",
+      "shortName": "FillAttributeData",
+      "return": {
+        "type": "handle:CharacterCreationAttributeData",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:String",
+          "name": "label",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "value",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:String",
+          "name": "desc",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HideConfirmation;",
+      "shortName": "HideConfirmation",
+      "flags": 33284
+    },
+    {
+      "fullName": "ManageAllButtonsVisibility;",
+      "shortName": "ManageAllButtonsVisibility",
+      "flags": 32900
+    },
+    {
+      "fullName": "NextMenu;",
+      "shortName": "NextMenu",
+      "flags": 33024
+    },
+    {
+      "fullName": "OnIntro;",
+      "shortName": "OnIntro",
+      "flags": 32900
+    },
+    {
+      "fullName": "OnOutro;",
+      "shortName": "OnOutro",
+      "flags": 32900
+    },
+    {
+      "fullName": "PlayAnim;CNameCName",
+      "shortName": "PlayAnim",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "CName",
+          "name": "animName",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "callBack",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "PrepareTooltips;",
+      "shortName": "PrepareTooltips",
+      "flags": 32900
+    },
+    {
+      "fullName": "PriorMenu;",
+      "shortName": "PriorMenu",
+      "flags": 33024
+    },
+    {
+      "fullName": "RandomizeAttributes;",
+      "shortName": "RandomizeAttributes",
+      "flags": 33284
+    },
+    {
+      "fullName": "ReachedLimit;Int32",
+      "shortName": "ReachedLimit",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "currValue",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RefreshControllers;",
+      "shortName": "RefreshControllers",
+      "flags": 33284
+    },
+    {
+      "fullName": "RefreshPointsLabel;",
+      "shortName": "RefreshPointsLabel",
+      "flags": 33284
+    },
+    {
+      "fullName": "ResetAllBtnBackToBaseline;",
+      "shortName": "ResetAllBtnBackToBaseline",
+      "flags": 32900
+    },
+    {
+      "fullName": "SaveChanges;",
+      "shortName": "SaveChanges",
+      "flags": 32900
+    },
+    {
+      "fullName": "SetDefaultTooltip;",
+      "shortName": "SetDefaultTooltip",
+      "flags": 33284
+    },
+    {
+      "fullName": "SetUpTooltipData;characterCreationStatsAttributeBtn",
+      "shortName": "SetUpTooltipData",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "whandle:characterCreationStatsAttributeBtn",
+          "name": "attribiuteController",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ShowConfirmation;",
+      "shortName": "ShowConfirmation",
+      "flags": 33284
+    },
+    {
+      "fullName": "SkipStatsMenu;",
+      "shortName": "SkipStatsMenu",
+      "flags": 32900
+    },
+    {
+      "fullName": "Subtract;inkWidget",
+      "shortName": "Subtract",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "whandle:inkWidget",
+          "name": "targetWidget",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,422 @@
+{
+  "parent": "gameIVehicleSystem",
+  "name": "gameVehicleSystem",
+  "flags": 2,
+  "props": [
+    {
+      "type": "array:CName",
+      "name": "restrictionTags",
+      "flags": 6583025696
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "gameVehicleSystem::IsPlayerInVehicle;GameInstance",
+      "shortName": "IsPlayerInVehicle",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "game",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameVehicleSystem::IsSummoningVehiclesRestricted;GameInstance",
+      "shortName": "IsSummoningVehiclesRestricted",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "game",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CanDriverShootInCarChase",
+      "shortName": "CanDriverShootInCarChase",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13707,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "vehicleID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CanPassengersShootInCarChase",
+      "shortName": "CanPassengersShootInCarChase",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13708,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "vehicleID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "DespawnPlayerVehicle",
+      "shortName": "DespawnPlayerVehicle",
+      "index": 13700,
+      "flags": 1,
+      "params": [
+        {
+          "type": "vehicleGarageVehicleID",
+          "name": "vehicleID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "EnableAllPlayerVehicles",
+      "shortName": "EnableAllPlayerVehicles",
+      "index": 13703,
+      "flags": 1
+    },
+    {
+      "fullName": "EnablePlayerVehicle",
+      "shortName": "EnablePlayerVehicle",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13702,
+      "flags": 1,
+      "params": [
+        {
+          "type": "String",
+          "name": "vehicle",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "enable",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "despawnIfDisabling",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "EnablePlayerVehicleCollision",
+      "shortName": "EnablePlayerVehicleCollision",
+      "index": 13717,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "enable",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetActivePlayerVehicle",
+      "shortName": "GetActivePlayerVehicle",
+      "return": {
+        "type": "vehiclePlayerVehicle",
+        "flags": 64
+      },
+      "index": 13712,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamedataVehicleType",
+          "name": "vehicleType",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "GetPlayerUnlockedVehicles",
+      "shortName": "GetPlayerUnlockedVehicles",
+      "index": 13710,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:vehiclePlayerVehicle",
+          "name": "unlockedVehicles",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "GetPlayerVehicles",
+      "shortName": "GetPlayerVehicles",
+      "index": 13709,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:vehiclePlayerVehicle",
+          "name": "vehicles",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "IsActivePlayerVehicleOnCooldown",
+      "shortName": "IsActivePlayerVehicleOnCooldown",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13697,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamedataVehicleType",
+          "name": "vehicleType",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "IsPlayerVehicleOnCooldown",
+      "shortName": "IsPlayerVehicleOnCooldown",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13698,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamedataVehicleType",
+          "name": "vehicleType",
+          "flags": 1152
+        },
+        {
+          "type": "TweakDBID",
+          "name": "vehicleID",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "IsVehiclePlayerUnlocked",
+      "shortName": "IsVehiclePlayerUnlocked",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13711,
+      "flags": 1,
+      "params": [
+        {
+          "type": "TweakDBID",
+          "name": "recordID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ResetChaseManager",
+      "shortName": "ResetChaseManager",
+      "index": 13715,
+      "flags": 1
+    },
+    {
+      "fullName": "SetChaseManagerLimit",
+      "shortName": "SetChaseManagerLimit",
+      "index": 13716,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "limit",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetRammingAttemptDuration",
+      "shortName": "SetRammingAttemptDuration",
+      "index": 13704,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Float",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetRammingUponCollisionDuration",
+      "shortName": "SetRammingUponCollisionDuration",
+      "index": 13705,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Float",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetSuicideSpeedChancePercentage",
+      "shortName": "SetSuicideSpeedChancePercentage",
+      "index": 13706,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Float",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SpawnActivePlayerVehicle",
+      "shortName": "SpawnActivePlayerVehicle",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13695,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamedataVehicleType",
+          "name": "vehicleType",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "SpawnPlayerVehicle",
+      "shortName": "SpawnPlayerVehicle",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13696,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamedataVehicleType",
+          "name": "vehicleType",
+          "flags": 1152
+        },
+        {
+          "type": "TweakDBID",
+          "name": "vehicleID",
+          "flags": 1152
+        },
+        {
+          "type": "Bool",
+          "name": "spawnOnlyOnValidRoad",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "TogglePlayerActiveVehicle",
+      "shortName": "TogglePlayerActiveVehicle",
+      "index": 13713,
+      "flags": 1,
+      "params": [
+        {
+          "type": "vehicleGarageVehicleID",
+          "name": "vehicleID",
+          "flags": 128
+        },
+        {
+          "type": "gamedataVehicleType",
+          "name": "vehicleType",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "enable",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TogglePlayerFavoriteVehicle",
+      "shortName": "TogglePlayerFavoriteVehicle",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13714,
+      "flags": 1,
+      "params": [
+        {
+          "type": "vehicleGarageVehicleID",
+          "name": "vehicleID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ToggleSummonMode",
+      "shortName": "ToggleSummonMode",
+      "index": 13699,
+      "flags": 1
+    },
+    {
+      "fullName": "UnregisterPlayerVehicle",
+      "shortName": "UnregisterPlayerVehicle",
+      "index": 13701,
+      "flags": 1,
+      "params": [
+        {
+          "type": "vehicleGarageVehicleID",
+          "name": "vehicleID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSummonVehicleFailed",
+      "shortName": "OnSummonVehicleFailed",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "GetVehicleRestrictions;",
+      "shortName": "GetVehicleRestrictions",
+      "return": {
+        "type": "array:CName",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "OnVehicleSystemAttach;",
+      "shortName": "OnVehicleSystemAttach",
+      "flags": 34052
+    }
+  ]
+}

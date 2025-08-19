@@ -1,0 +1,193 @@
+{
+  "parent": "gameScriptableSystem",
+  "name": "DelamainTaxiSystem",
+  "flags": 4,
+  "props": [
+    {
+      "type": "Bool",
+      "name": "isDelamainTaxiEnabledOnMap",
+      "flags": 4297130016
+    },
+    {
+      "type": "gameNewMappinID",
+      "name": "delamainMappinID",
+      "flags": 4297130016
+    },
+    {
+      "type": "Int32",
+      "name": "currentTravelCost",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "HUDHidden",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:DelamainTaxiComponent",
+      "name": "delamainTaxi",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "GetTravelCost;",
+      "shortName": "GetTravelCost",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "HasActiveDestination;",
+      "shortName": "HasActiveDestination",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "IsDelamainTaxiEnabledOnMap;",
+      "shortName": "IsDelamainTaxiEnabledOnMap",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "OnCancelDelamainRideRequest;CancelDelamainRideRequest",
+      "shortName": "OnCancelDelamainRideRequest",
+      "flags": 33924,
+      "params": [
+        {
+          "type": "handle:CancelDelamainRideRequest",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnCancelDriveIfNecessaryRequest;CancelDriveIfNecessaryRequest",
+      "shortName": "OnCancelDriveIfNecessaryRequest",
+      "flags": 33924,
+      "params": [
+        {
+          "type": "handle:CancelDriveIfNecessaryRequest",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnDelamainTaxiArrivedRequest;DelamainTaxiArrivedRequest",
+      "shortName": "OnDelamainTaxiArrivedRequest",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:DelamainTaxiArrivedRequest",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnDelamainTaxiCancelledRequest;DelamainTaxiCancelledRequest",
+      "shortName": "OnDelamainTaxiCancelledRequest",
+      "flags": 33924,
+      "params": [
+        {
+          "type": "handle:DelamainTaxiCancelledRequest",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnDelamainTaxiMenuToggledRequest;DelamainTaxiMenuToggledEvent",
+      "shortName": "OnDelamainTaxiMenuToggledRequest",
+      "flags": 33924,
+      "params": [
+        {
+          "type": "handle:DelamainTaxiMenuToggledEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPayTravelRequest;PayTravelRequest",
+      "shortName": "OnPayTravelRequest",
+      "flags": 33924,
+      "params": [
+        {
+          "type": "handle:PayTravelRequest",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRegisterDelamainTaxiRequest;RegisterDelamainTaxiRequest",
+      "shortName": "OnRegisterDelamainTaxiRequest",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:RegisterDelamainTaxiRequest",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSetHUDHiddenRequest;SetHUDHiddenRequest",
+      "shortName": "OnSetHUDHiddenRequest",
+      "flags": 33924,
+      "params": [
+        {
+          "type": "handle:SetHUDHiddenRequest",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSetTravelDestinationRequest;SetTravelDestinationRequest",
+      "shortName": "OnSetTravelDestinationRequest",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:SetTravelDestinationRequest",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnStartDelamainTaxiRequest;StartDelamainTaxiRequest",
+      "shortName": "OnStartDelamainTaxiRequest",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:StartDelamainTaxiRequest",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUnregisterCurrentTaxiRequest;UnregisterCurrentTaxiRequest",
+      "shortName": "OnUnregisterCurrentTaxiRequest",
+      "flags": 33924,
+      "params": [
+        {
+          "type": "handle:UnregisterCurrentTaxiRequest",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

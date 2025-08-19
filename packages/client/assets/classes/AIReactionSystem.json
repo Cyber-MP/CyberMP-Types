@@ -1,0 +1,283 @@
+{
+  "parent": "AIIReactionSystem",
+  "name": "AIReactionSystem",
+  "flags": 2,
+  "funcs": [
+    {
+      "fullName": "AddFearSource",
+      "shortName": "AddFearSource",
+      "index": 14105,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Vector3",
+          "name": "sourcePos",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "halfExtend",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "debugInfo",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "AddTrafficRunnersDirectly",
+      "shortName": "AddTrafficRunnersDirectly",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 14104,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "runner",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameObject",
+          "name": "threat",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsInImmovableWorkspot",
+      "shortName": "IsInImmovableWorkspot",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 14115,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "npcId",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsRegisteredAsAggressive",
+      "shortName": "IsRegisteredAsAggressive",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 14113,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "npcId",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "MarkDeadBody",
+      "shortName": "MarkDeadBody",
+      "index": 14110,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "id",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "isAggressive",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "isInScene",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "MarkDespawnCandidate",
+      "shortName": "MarkDespawnCandidate",
+      "index": 14108,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "id",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterFearReaction",
+      "shortName": "RegisterFearReaction",
+      "index": 14102,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "npc",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameObject",
+          "name": "threat",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterReaction",
+      "shortName": "RegisterReaction",
+      "return": {
+        "type": "AIReactionCountOutcome",
+        "flags": 64
+      },
+      "index": 14106,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "reaction",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TryAndJoinTraffic",
+      "shortName": "TryAndJoinTraffic",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 14116,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "npc",
+          "flags": 128
+        },
+        {
+          "type": "Vector3",
+          "name": "threatPos",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "shouldRunInTraffic",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TryRegisteringAggressiveNPC",
+      "shortName": "TryRegisteringAggressiveNPC",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 14111,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "civilianNPC",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "checkPlayerLos",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TryUnregisteringAggressiveNPC",
+      "shortName": "TryUnregisteringAggressiveNPC",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 14112,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "npcId",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UnmarkDespawnCandidate",
+      "shortName": "UnmarkDespawnCandidate",
+      "index": 14109,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "id",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UnregisterFearReaction",
+      "shortName": "UnregisterFearReaction",
+      "index": 14103,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "runner",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UnregisterReaction",
+      "shortName": "UnregisterReaction",
+      "return": {
+        "type": "AIReactionCountOutcome",
+        "flags": 64
+      },
+      "index": 14107,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "reaction",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UsesLoreAnimationWorkspot",
+      "shortName": "UsesLoreAnimationWorkspot",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 14114,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "npcId",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

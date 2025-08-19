@@ -1,0 +1,172 @@
+{
+  "parent": "GenericNotificationController",
+  "name": "CurrencyNotification",
+  "flags": 4,
+  "props": [
+    {
+      "type": "CName",
+      "name": "CurrencyUpdateAnimation",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "CurrencyDiff",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "CurrencyTotal",
+      "flags": 4297130017
+    },
+    {
+      "type": "whandle:inkTextValueProgressAnimationController",
+      "name": "total_animator",
+      "flags": 4297130017
+    },
+    {
+      "type": "handle:gameuiCurrencyUpdateNotificationViewData",
+      "name": "currencyData",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "animProxy",
+      "flags": 4431347744
+    },
+    {
+      "type": "CurrencyNotificationAnimState",
+      "name": "animState",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:gameIBlackboard",
+      "name": "blackboard",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:UI_SystemDef",
+      "name": "uiSystemBB",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "uiSystemId",
+      "flags": 4431347744
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnDataUpdate",
+      "shortName": "OnDataUpdate",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnIntoOver",
+      "shortName": "OnIntoOver",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkanimProxy",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnMainAnimationOver",
+      "shortName": "OnMainAnimationOver",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkanimProxy",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnMenuUpdate",
+      "shortName": "OnMenuUpdate",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnOutroOver",
+      "shortName": "OnOutroOver",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkanimProxy",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "PlayActiveAnim;",
+      "shortName": "PlayActiveAnim",
+      "flags": 32900
+    },
+    {
+      "fullName": "SetNotificationData",
+      "shortName": "SetNotificationData",
+      "flags": 34304,
+      "params": [
+        {
+          "type": "handle:gameuiGenericNotificationViewData",
+          "name": "notificationData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateData;",
+      "shortName": "UpdateData",
+      "flags": 32900
+    }
+  ]
+}

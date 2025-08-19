@@ -1,0 +1,321 @@
+{
+  "parent": "IScriptable",
+  "name": "CodexUtils",
+  "flags": 4,
+  "funcs": [
+    {
+      "fullName": "CodexUtils::AppendTutorialEntries;JournalManagerscript_ref<String>script_ref<array<JournalEntry>>",
+      "shortName": "AppendTutorialEntries",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32902,
+      "params": [
+        {
+          "type": "handle:gameJournalManager",
+          "name": "journal",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:String",
+          "name": "path",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:array:whandle:gameJournalEntry",
+          "name": "output",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CodexUtils::ConvertToCodexData;JournalManagerJournalCodexEntryInt32JournalRequestStateFilterscript_ref<array<Int32>>CodexListSyncDataBool",
+      "shortName": "ConvertToCodexData",
+      "return": {
+        "type": "handle:CodexEntryData",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameJournalManager",
+          "name": "journal",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameJournalCodexEntry",
+          "name": "journalCodexEntry",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "currentCategoryIndex",
+          "flags": 128
+        },
+        {
+          "type": "gameJournalRequestStateFilter",
+          "name": "stateFilter",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:array:Int32",
+          "name": "newEntries",
+          "flags": 128
+        },
+        {
+          "type": "whandle:CodexListSyncData",
+          "name": "activeDataSync",
+          "flags": 1152
+        },
+        {
+          "type": "Bool",
+          "name": "useFallbackImages",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "CodexUtils::GetCategoryTypeFromId;script_ref<String>",
+      "shortName": "GetCategoryTypeFromId",
+      "return": {
+        "type": "CodexCategoryType",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "script_ref:String",
+          "name": "id",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CodexUtils::GetCodexDataArray;JournalManagerCodexListSyncDataBool",
+      "shortName": "GetCodexDataArray",
+      "return": {
+        "type": "array:handle:VirutalNestedListData",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameJournalManager",
+          "name": "journal",
+          "flags": 128
+        },
+        {
+          "type": "whandle:CodexListSyncData",
+          "name": "activeDataSync",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "useFallbackImages",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "CodexUtils::GetCodexFilterIcon;CodexCategoryType",
+      "shortName": "GetCodexFilterIcon",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "CodexCategoryType",
+          "name": "category",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CodexUtils::GetCodexReplacementRecord;JournalManagerJournalEntry",
+      "shortName": "GetCodexReplacementRecord",
+      "return": {
+        "type": "whandle:gameJournalCodexEntry",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameJournalManager",
+          "name": "journal",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameJournalEntry",
+          "name": "currentEntry",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CodexUtils::GetGroupData;JournalCodexGrouparray<VirutalNestedListData>",
+      "shortName": "GetGroupData",
+      "return": {
+        "type": "whandle:VirutalNestedListData",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gameJournalCodexGroup",
+          "name": "currentGroup",
+          "flags": 128
+        },
+        {
+          "type": "array:handle:VirutalNestedListData",
+          "name": "groupsMap",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "CodexUtils::GetLocalizedTag;CName",
+      "shortName": "GetLocalizedTag",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "flags": 32902,
+      "params": [
+        {
+          "type": "CName",
+          "name": "tag",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CodexUtils::GetShardTextString;Boolscript_ref<String>",
+      "shortName": "GetShardTextString",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "isCrypted",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:String",
+          "name": "textString",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CodexUtils::GetShardTitleString;Boolscript_ref<String>",
+      "shortName": "GetShardTitleString",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "isCrypted",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:String",
+          "name": "titleString",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CodexUtils::GetShardsDataArray;JournalManagerCodexListSyncData",
+      "shortName": "GetShardsDataArray",
+      "return": {
+        "type": "array:handle:VirutalNestedListData",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameJournalManager",
+          "name": "journal",
+          "flags": 128
+        },
+        {
+          "type": "whandle:CodexListSyncData",
+          "name": "activeDataSync",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CodexUtils::GetTutorialsData;JournalManagerCodexListSyncDataInt32",
+      "shortName": "GetTutorialsData",
+      "return": {
+        "type": "array:handle:VirutalNestedListData",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameJournalManager",
+          "name": "journal",
+          "flags": 128
+        },
+        {
+          "type": "whandle:CodexListSyncData",
+          "name": "activeDataSync",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "offset",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CodexUtils::IsImageValid;TweakDBID",
+      "shortName": "IsImageValid",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "TweakDBID",
+          "name": "imageId",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CodexUtils::JournalToRepresentationArray;JournalManagerscript_ref<array<JournalEntry>>",
+      "shortName": "JournalToRepresentationArray",
+      "return": {
+        "type": "array:handle:JournalRepresentationData",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameJournalManager",
+          "name": "journal",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:array:whandle:gameJournalEntry",
+          "name": "entries",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

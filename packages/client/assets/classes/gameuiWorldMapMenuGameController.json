@@ -1,0 +1,2107 @@
+{
+  "parent": "gameuiMappinsContainerController",
+  "name": "gameuiWorldMapMenuGameController",
+  "flags": 2,
+  "props": [
+    {
+      "type": "TweakDBID",
+      "name": "settingsRecordID",
+      "flags": 6627016705
+    },
+    {
+      "type": "whandle:gameuiBaseWorldMapMappinController",
+      "name": "selectedMappin",
+      "flags": 6627016705
+    },
+    {
+      "type": "Bool",
+      "name": "playerOnTop",
+      "flags": 6627016705
+    },
+    {
+      "type": "CName",
+      "name": "entityPreviewLibraryID",
+      "group": "Widgets",
+      "flags": 6627016705
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "entityPreviewSpawnContainer",
+      "group": "Widgets",
+      "flags": 6627016705
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "floorPlanSpawnContainer",
+      "group": "Widgets",
+      "flags": 6627016705
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "compassWidget",
+      "group": "Widgets",
+      "flags": 6627016705
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "districtsContainer",
+      "group": "Widgets",
+      "flags": 6627016705
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "subdistrictsContainer",
+      "group": "Widgets",
+      "flags": 6627016705
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "mappinOutlinesContainer",
+      "group": "Widgets",
+      "flags": 6627016705
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "groupOutlinesContainer",
+      "group": "Widgets",
+      "flags": 6627016705
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "tooltipContainer",
+      "group": "Tooltip",
+      "flags": 6627016705
+    },
+    {
+      "type": "inkMargin",
+      "name": "tooltipOffset",
+      "group": "Tooltip",
+      "flags": 6627016705
+    },
+    {
+      "type": "inkMargin",
+      "name": "tooltipDistrictOffset",
+      "group": "Tooltip",
+      "flags": 6627016705
+    },
+    {
+      "type": "gameuiEWorldMapDistrictView",
+      "name": "districtView",
+      "group": "Runtime",
+      "flags": 6627016707
+    },
+    {
+      "type": "gamedataDistrict",
+      "name": "hoveredDistrict",
+      "group": "Runtime",
+      "flags": 6627016707
+    },
+    {
+      "type": "gamedataDistrict",
+      "name": "hoveredSubDistrict",
+      "group": "Runtime",
+      "flags": 6627016707
+    },
+    {
+      "type": "gamedataDistrict",
+      "name": "selectedDistrict",
+      "group": "Runtime",
+      "flags": 6627016707
+    },
+    {
+      "type": "Bool",
+      "name": "canChangeCustomFilter",
+      "group": "Runtime",
+      "flags": 6627016707
+    },
+    {
+      "type": "Bool",
+      "name": "isZoomToMappinEnabled",
+      "group": "Runtime",
+      "flags": 6627016707
+    },
+    {
+      "type": "gameNewMappinID",
+      "name": "delamainTaxiMappinID",
+      "group": "Runtime",
+      "flags": 6627016707
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "preloaderWidget",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "gameTimeText",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "fastTravelInstructions",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "delamainTaxiInstructions",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "filterSelector",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "filterSelectorWarning",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "filterText",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "districtIconImageContainer",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "districtIconImage",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "districtNameText",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "subdistrictNameText",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "locationAndGangsContainer",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "gangsInfoContainer",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "gangsList",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "questContainer",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "questName",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "openInJournalButton",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "objectiveName",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "objectiveBackground",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "objectiveFrame",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "topShadow",
+      "flags": 4297130017
+    },
+    {
+      "type": "Float",
+      "name": "rightAxisZoomThreshold",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "customFilters",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkVerticalPanelWidgetReference",
+      "name": "filtersList",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "filterLeftArrow",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "filterRightArrow",
+      "flags": 4297130017
+    },
+    {
+      "type": "array:inkWidgetReference",
+      "name": "quickFilterIndicators",
+      "flags": 6583025697
+    },
+    {
+      "type": "Float",
+      "name": "customFiltersListAnimationDelay",
+      "flags": 4297130017
+    },
+    {
+      "type": "gameuiEWorldMapCameraMode",
+      "name": "cameraMode",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:inkMenuEventDispatcher",
+      "name": "menuEventDispatcher",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:WorldMapTooltipContainer",
+      "name": "tooltipController",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:textTextParameterSet",
+      "name": "gameTimeTextParams",
+      "flags": 4431347744
+    },
+    {
+      "type": "gamedataDistrict",
+      "name": "previousHoveredDistrict",
+      "flags": 4297130016
+    },
+    {
+      "type": "gamedataDistrict",
+      "name": "currentHoveredDistrict",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "showedSubdistrictGangs",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:gameObject",
+      "name": "player",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:gameGameAudioSystem",
+      "name": "audioSystem",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:gameJournalManager",
+      "name": "journalManager",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:gamemappinsMappinSystem",
+      "name": "mappinSystem",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:gameIBlackboard",
+      "name": "mapBlackboard",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:UI_MapDef",
+      "name": "mapDefinition",
+      "flags": 4431347744
+    },
+    {
+      "type": "whandle:gameJournalQuestObjectiveBase",
+      "name": "trackedObjective",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:gameJournalQuest",
+      "name": "trackedQuest",
+      "flags": 4297130016
+    },
+    {
+      "type": "array:Vector3",
+      "name": "mappinsPositions",
+      "flags": 6583025696
+    },
+    {
+      "type": "Float",
+      "name": "lastRightAxisYAmount",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "justOpenedQuestJournal",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:MapMenuUserData",
+      "name": "initMappinFocus",
+      "flags": 4431544352
+    },
+    {
+      "type": "Int32",
+      "name": "currentQuickFilterIndex",
+      "flags": 4297130016
+    },
+    {
+      "type": "Int32",
+      "name": "currentCustomFilterIndex",
+      "flags": 4297130016
+    },
+    {
+      "type": "Int32",
+      "name": "spawnedCustomFilterIndex",
+      "flags": 4297130016
+    },
+    {
+      "type": "array:whandle:inkAsyncSpawnRequest",
+      "name": "gangsAsyncSpawnRequests",
+      "flags": 6583025696
+    },
+    {
+      "type": "array:whandle:WorldMapFiltersListItem",
+      "name": "customFiltersList",
+      "flags": 6583025696
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "animationProxy",
+      "flags": 4431347744
+    },
+    {
+      "type": "Bool",
+      "name": "entityAttached",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "readyToZoom",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isHoveringOverFilters",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isPanning",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isZooming",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "pressedRMB",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "startedFastTraveling",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "AreDistrictsVisible",
+      "shortName": "AreDistrictsVisible",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 14592,
+      "flags": 1
+    },
+    {
+      "fullName": "CanDebugTeleport",
+      "shortName": "CanDebugTeleport",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 14594,
+      "flags": 1
+    },
+    {
+      "fullName": "CancelDelamainTaxiMappinPosition",
+      "shortName": "CancelDelamainTaxiMappinPosition",
+      "index": 14583,
+      "flags": 1
+    },
+    {
+      "fullName": "ClearCustomFilter",
+      "shortName": "ClearCustomFilter",
+      "index": 14569,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamedataWorldMapFilter",
+          "name": "filter",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ConfirmDelamainTaxiMappinPosition",
+      "shortName": "ConfirmDelamainTaxiMappinPosition",
+      "index": 14582,
+      "flags": 1
+    },
+    {
+      "fullName": "FrameMappinPath",
+      "shortName": "FrameMappinPath",
+      "index": 14589,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Uint32",
+          "name": "hash",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "transitionTime",
+          "flags": 128
+        },
+        {
+          "type": "inkMargin",
+          "name": "margin",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "GetCurrentZoom",
+      "shortName": "GetCurrentZoom",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 14593,
+      "flags": 1
+    },
+    {
+      "fullName": "GetCustomFilters",
+      "shortName": "GetCustomFilters",
+      "return": {
+        "type": "Uint32",
+        "flags": 64
+      },
+      "index": 14567,
+      "flags": 1
+    },
+    {
+      "fullName": "GetEntityPreview",
+      "shortName": "GetEntityPreview",
+      "return": {
+        "type": "whandle:gameuiWorldMapPreviewGameController",
+        "flags": 64
+      },
+      "index": 14564,
+      "flags": 1
+    },
+    {
+      "fullName": "GetQuickFilter",
+      "shortName": "GetQuickFilter",
+      "return": {
+        "type": "gamedataWorldMapFilter",
+        "flags": 64
+      },
+      "index": 14570,
+      "flags": 1
+    },
+    {
+      "fullName": "GetSettings",
+      "shortName": "GetSettings",
+      "return": {
+        "type": "handle:gamedataWorldMapSettings_Record",
+        "flags": 64
+      },
+      "index": 14563,
+      "flags": 1
+    },
+    {
+      "fullName": "GetTravelDistance",
+      "shortName": "GetTravelDistance",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 14584,
+      "flags": 1
+    },
+    {
+      "fullName": "HasCustomFilter",
+      "shortName": "HasCustomFilter",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 14566,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamedataWorldMapFilter",
+          "name": "filter",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsEntityAttachedAndSetup",
+      "shortName": "IsEntityAttachedAndSetup",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 14562,
+      "flags": 1
+    },
+    {
+      "fullName": "IsEntitySetup",
+      "shortName": "IsEntitySetup",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 14561,
+      "flags": 1
+    },
+    {
+      "fullName": "MoveToPlayer",
+      "shortName": "MoveToPlayer",
+      "index": 14586,
+      "flags": 1
+    },
+    {
+      "fullName": "SaveFilters",
+      "shortName": "SaveFilters",
+      "index": 14573,
+      "flags": 1
+    },
+    {
+      "fullName": "SetCustomFilter",
+      "shortName": "SetCustomFilter",
+      "index": 14568,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamedataWorldMapFilter",
+          "name": "filter",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetFloorPlanVisible",
+      "shortName": "SetFloorPlanVisible",
+      "index": 14575,
+      "flags": 1
+    },
+    {
+      "fullName": "SetMapCursorEnabled",
+      "shortName": "SetMapCursorEnabled",
+      "index": 14574,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "enabled",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetMappinVisited",
+      "shortName": "SetMappinVisited",
+      "index": 14585,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameuiBaseWorldMapMappinController",
+          "name": "mappinController",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetMousePanEnabled",
+      "shortName": "SetMousePanEnabled",
+      "index": 14590,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "enabled",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetMouseRotateEnabled",
+      "shortName": "SetMouseRotateEnabled",
+      "index": 14591,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "enabled",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetQuickFilter",
+      "shortName": "SetQuickFilter",
+      "index": 14571,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamedataWorldMapFilter",
+          "name": "filter",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetQuickFilterFromRecord",
+      "shortName": "SetQuickFilterFromRecord",
+      "index": 14572,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataMappinUIFilterGroup_Record",
+          "name": "filterGroup",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetSelectedMappin",
+      "shortName": "SetSelectedMappin",
+      "index": 14565,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameuiBaseWorldMapMappinController",
+          "name": "mappinController",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TrackCustomPositionMappin",
+      "shortName": "TrackCustomPositionMappin",
+      "index": 14578,
+      "flags": 1
+    },
+    {
+      "fullName": "TrackDelamainTaxiMappin",
+      "shortName": "TrackDelamainTaxiMappin",
+      "index": 14579,
+      "flags": 1
+    },
+    {
+      "fullName": "TrackMappin",
+      "shortName": "TrackMappin",
+      "index": 14576,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameuiMappinBaseController",
+          "name": "mappinController",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UntrackCustomPositionMappin",
+      "shortName": "UntrackCustomPositionMappin",
+      "index": 14580,
+      "flags": 1
+    },
+    {
+      "fullName": "UntrackDelamainTaxiMappin",
+      "shortName": "UntrackDelamainTaxiMappin",
+      "index": 14581,
+      "flags": 1
+    },
+    {
+      "fullName": "UntrackMappin",
+      "shortName": "UntrackMappin",
+      "index": 14577,
+      "flags": 1
+    },
+    {
+      "fullName": "ZoomToMappin",
+      "shortName": "ZoomToMappin",
+      "index": 14587,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameuiBaseWorldMapMappinController",
+          "name": "mappinController",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ZoomWithMouse",
+      "shortName": "ZoomWithMouse",
+      "index": 14588,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "zoomIn",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnAxisInput",
+      "shortName": "OnAxisInput",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnBack",
+      "shortName": "OnBack",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:IScriptable",
+          "name": "userData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnCanChangeCustomFilterChanged",
+      "shortName": "OnCanChangeCustomFilterChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "flag",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnCustomFilterChanged",
+      "shortName": "OnCustomFilterChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnDistrictViewChanged",
+      "shortName": "OnDistrictViewChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "gameuiEWorldMapDistrictView",
+          "name": "oldView",
+          "flags": 128
+        },
+        {
+          "type": "gameuiEWorldMapDistrictView",
+          "name": "newView",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnEntityAttached",
+      "shortName": "OnEntityAttached",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnEntityDetached",
+      "shortName": "OnEntityDetached",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnFilterArrowHoverOut",
+      "shortName": "OnFilterArrowHoverOut",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnFilterArrowHoverOver",
+      "shortName": "OnFilterArrowHoverOver",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnFilterLeftArrowClicked",
+      "shortName": "OnFilterLeftArrowClicked",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnFilterListItemSpawned",
+      "shortName": "OnFilterListItemSpawned",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkWidget",
+          "name": "filterWidget",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "userData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnFilterRightArrowClicked",
+      "shortName": "OnFilterRightArrowClicked",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnFilterSwitched",
+      "shortName": "OnFilterSwitched",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnGangListItemSpawned",
+      "shortName": "OnGangListItemSpawned",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkWidget",
+          "name": "gangWidget",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "userData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnHoldInput",
+      "shortName": "OnHoldInput",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnHoverOutMappin",
+      "shortName": "OnHoverOutMappin",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnHoverOverMappin",
+      "shortName": "OnHoverOverMappin",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnMapNavigationDelay",
+      "shortName": "OnMapNavigationDelay",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:MapNavigationDelay",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPressInput",
+      "shortName": "OnPressInput",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnQuickFilterChanged",
+      "shortName": "OnQuickFilterChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "whandle:gamedataMappinUIFilterGroup_Record",
+          "name": "filterGroup",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnReleaseInput",
+      "shortName": "OnReleaseInput",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRemovePreloader",
+      "shortName": "OnRemovePreloader",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "whandle:inkWidget",
+          "name": "widget",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSelectedMappinChanged",
+      "shortName": "OnSelectedMappinChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameuiBaseWorldMapMappinController",
+          "name": "oldController",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameuiBaseWorldMapMappinController",
+          "name": "newController",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSetMenuEventDispatcher",
+      "shortName": "OnSetMenuEventDispatcher",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "whandle:inkMenuEventDispatcher",
+          "name": "menuEventDispatcher",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSetUserData",
+      "shortName": "OnSetUserData",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:IScriptable",
+          "name": "userData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSetZoomLevelEvent",
+      "shortName": "OnSetZoomLevelEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:SetZoomLevelEvent",
+          "name": "eventData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnShowSpinner",
+      "shortName": "OnShowSpinner",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnTrackedEntryChanges",
+      "shortName": "OnTrackedEntryChanges",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Uint32",
+          "name": "hash",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "className",
+          "flags": 128
+        },
+        {
+          "type": "gameJournalNotifyOption",
+          "name": "notifyOption",
+          "flags": 128
+        },
+        {
+          "type": "gameJournalChangeType",
+          "name": "changeType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnUpdateHoveredDistricts",
+      "shortName": "OnUpdateHoveredDistricts",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "gamedataDistrict",
+          "name": "district",
+          "flags": 128
+        },
+        {
+          "type": "gamedataDistrict",
+          "name": "subdistrict",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnZoomLevelChanged",
+      "shortName": "OnZoomLevelChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "oldLevel",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "newLevel",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnZoomToMappinEnabledChanged",
+      "shortName": "OnZoomToMappinEnabledChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "flag",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnZoomTransitionFinished",
+      "shortName": "OnZoomTransitionFinished",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "AddInputHintUpdate;UpdateInputHintMultipleEventBoolCNamescript_ref<String>Int32",
+      "shortName": "AddInputHintUpdate",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gameuiUpdateInputHintMultipleEvent",
+          "name": "evt",
+          "flags": 640
+        },
+        {
+          "type": "Bool",
+          "name": "show",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "action",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:String",
+          "name": "locKey",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "priority",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "CanOpenCodexPopup;IMappin",
+      "shortName": "CanOpenCodexPopup",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "whandle:gamemappinsIMappin",
+          "name": "mappin",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CanOpenJournalForMappin;IMappin",
+      "shortName": "CanOpenJournalForMappin",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "whandle:gamemappinsIMappin",
+          "name": "mappin",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CanPay;",
+      "shortName": "CanPay",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "CanPlayerTrackMappin;IMappin",
+      "shortName": "CanPlayerTrackMappin",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476,
+      "params": [
+        {
+          "type": "whandle:gamemappinsIMappin",
+          "name": "mappin",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CanPlayerTrackMappin;BaseWorldMapMappinController",
+      "shortName": "CanPlayerTrackMappin",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476,
+      "params": [
+        {
+          "type": "whandle:gameuiBaseWorldMapMappinController",
+          "name": "controller",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CanQuestTrackMappin;IMappin",
+      "shortName": "CanQuestTrackMappin",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476,
+      "params": [
+        {
+          "type": "whandle:gamemappinsIMappin",
+          "name": "mappin",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CanQuestTrackMappin;BaseWorldMapMappinController",
+      "shortName": "CanQuestTrackMappin",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476,
+      "params": [
+        {
+          "type": "whandle:gameuiBaseWorldMapMappinController",
+          "name": "controller",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CanZoomToMappin;BaseWorldMapMappinController",
+      "shortName": "CanZoomToMappin",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "whandle:gameuiBaseWorldMapMappinController",
+          "name": "controller",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ClearAllAsyncSpawnRequests;",
+      "shortName": "ClearAllAsyncSpawnRequests",
+      "flags": 32900
+    },
+    {
+      "fullName": "CreateMappinUIProfile;IMappingamedataMappinVariantMappinControllerCustomData",
+      "shortName": "CreateMappinUIProfile",
+      "return": {
+        "type": "gameuiMappinUIProfile",
+        "flags": 64
+      },
+      "flags": 33280,
+      "params": [
+        {
+          "type": "whandle:gamemappinsIMappin",
+          "name": "mappin",
+          "flags": 128
+        },
+        {
+          "type": "gamedataMappinVariant",
+          "name": "mappinVariant",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameuiMappinControllerCustomData",
+          "name": "customData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CycleQuickFilterNext;",
+      "shortName": "CycleQuickFilterNext",
+      "flags": 32900
+    },
+    {
+      "fullName": "CycleQuickFilterPrev;",
+      "shortName": "CycleQuickFilterPrev",
+      "flags": 32900
+    },
+    {
+      "fullName": "CycleWorldMapFilter;Bool",
+      "shortName": "CycleWorldMapFilter",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "cycleNext",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "DEBUG_Teleport;",
+      "shortName": "DEBUG_Teleport",
+      "flags": 32900
+    },
+    {
+      "fullName": "FastTravel;",
+      "shortName": "FastTravel",
+      "flags": 32900
+    },
+    {
+      "fullName": "GetCodexEntryForMappin;IMappin",
+      "shortName": "GetCodexEntryForMappin",
+      "return": {
+        "type": "whandle:gameJournalEntry",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "whandle:gamemappinsIMappin",
+          "name": "mappin",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetDelamainTaxiSystem;",
+      "shortName": "GetDelamainTaxiSystem",
+      "return": {
+        "type": "handle:DelamainTaxiSystem",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "GetDistrictAnimation;gameuiEWorldMapDistrictViewBool",
+      "shortName": "GetDistrictAnimation",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "gameuiEWorldMapDistrictView",
+          "name": "view",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "show",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetFastTravelSystem;",
+      "shortName": "GetFastTravelSystem",
+      "return": {
+        "type": "handle:FastTravelSystem",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "GetJournalManager;",
+      "shortName": "GetJournalManager",
+      "return": {
+        "type": "whandle:gameJournalManager",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetMappinJournalEntry;IMappin",
+      "shortName": "GetMappinJournalEntry",
+      "return": {
+        "type": "handle:gameJournalEntry",
+        "flags": 64
+      },
+      "flags": 41092,
+      "params": [
+        {
+          "type": "handle:gamemappinsIMappin",
+          "name": "mappin",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetMappinJournalPathHash;IMappin",
+      "shortName": "GetMappinJournalPathHash",
+      "return": {
+        "type": "Uint32",
+        "flags": 64
+      },
+      "flags": 41092,
+      "params": [
+        {
+          "type": "handle:gamemappinsIMappin",
+          "name": "mappin",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetOwner;",
+      "shortName": "GetOwner",
+      "return": {
+        "type": "handle:gameObject",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "GetPlayer;",
+      "shortName": "GetPlayer",
+      "return": {
+        "type": "whandle:gameObject",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetTooltipType;gamedataMappinVariant",
+      "shortName": "GetTooltipType",
+      "return": {
+        "type": "WorldMapTooltipType",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "gamedataMappinVariant",
+          "name": "mappinVariant",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetTotalZoomLevels;",
+      "shortName": "GetTotalZoomLevels",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "GetTravelCost;",
+      "shortName": "GetTravelCost",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "HandleAxisInput;inkPointerEvent",
+      "shortName": "HandleAxisInput",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HandleHoldInput;inkPointerEvent",
+      "shortName": "HandleHoldInput",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HandlePressInput;inkPointerEvent",
+      "shortName": "HandlePressInput",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HandleReleaseInput;inkPointerEvent",
+      "shortName": "HandleReleaseInput",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HasSelectedDelamainTaxiMappin;",
+      "shortName": "HasSelectedDelamainTaxiMappin",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "HasSelectedMappin;",
+      "shortName": "HasSelectedMappin",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "HideAllTooltips;",
+      "shortName": "HideAllTooltips",
+      "flags": 32900
+    },
+    {
+      "fullName": "HideMappinTooltip;BaseWorldMapMappinController",
+      "shortName": "HideMappinTooltip",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "whandle:gameuiBaseWorldMapMappinController",
+          "name": "controller",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "InitializeCustomFiltersList;",
+      "shortName": "InitializeCustomFiltersList",
+      "flags": 32900
+    },
+    {
+      "fullName": "InitializeQuickFiltersList;",
+      "shortName": "InitializeQuickFiltersList",
+      "flags": 32900
+    },
+    {
+      "fullName": "IsDelamainTaxiEnabled;",
+      "shortName": "IsDelamainTaxiEnabled",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "IsFastTravelEnabled;",
+      "shortName": "IsFastTravelEnabled",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "IsMappinQuestTracked;BaseWorldMapMappinController",
+      "shortName": "IsMappinQuestTracked",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476,
+      "params": [
+        {
+          "type": "whandle:gameuiBaseWorldMapMappinController",
+          "name": "controller",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsMappinQuestTracked;IMappin",
+      "shortName": "IsMappinQuestTracked",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476,
+      "params": [
+        {
+          "type": "whandle:gamemappinsIMappin",
+          "name": "mappin",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsPoliceTooltip;gamedataMappinVariant",
+      "shortName": "IsPoliceTooltip",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "gamedataMappinVariant",
+          "name": "mappinVariant",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "NavigateCustomFilters;ECustomFilterDPadNavigationOption",
+      "shortName": "NavigateCustomFilters",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "ECustomFilterDPadNavigationOption",
+          "name": "option",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OpenCodexPopup;JournalEntry",
+      "shortName": "OpenCodexPopup",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "whandle:gameJournalEntry",
+          "name": "jurnalEntry",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OpenQuestInJournal;JournalEntry",
+      "shortName": "OpenQuestInJournal",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "whandle:gameJournalEntry",
+          "name": "questEntry",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OpenSelectedQuest;",
+      "shortName": "OpenSelectedQuest",
+      "flags": 32900
+    },
+    {
+      "fullName": "OpenTrackedQuest;",
+      "shortName": "OpenTrackedQuest",
+      "flags": 32900
+    },
+    {
+      "fullName": "PlayCustomFiltersAnimations;",
+      "shortName": "PlayCustomFiltersAnimations",
+      "flags": 32900
+    },
+    {
+      "fullName": "PrepFastTravel;",
+      "shortName": "PrepFastTravel",
+      "flags": 32900
+    },
+    {
+      "fullName": "RefreshInputHints;",
+      "shortName": "RefreshInputHints",
+      "flags": 32900
+    },
+    {
+      "fullName": "SetMappinIconsVisible;Bool",
+      "shortName": "SetMappinIconsVisible",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "visible",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetQuickFilterIndicator;Int32",
+      "shortName": "SetQuickFilterIndicator",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ShouldDisplayInHud;gamedataMappinVariant",
+      "shortName": "ShouldDisplayInHud",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "gamedataMappinVariant",
+          "name": "mappinVariant",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ShowGangsInfo;gamedataDistrictgamedataDistrict",
+      "shortName": "ShowGangsInfo",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "gamedataDistrict",
+          "name": "district",
+          "flags": 128
+        },
+        {
+          "type": "gamedataDistrict",
+          "name": "sub",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ShowMappinTooltip;BaseWorldMapMappinController",
+      "shortName": "ShowMappinTooltip",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "whandle:gameuiBaseWorldMapMappinController",
+          "name": "controller",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ToggleQuickFilterIndicatorsVsibility;Bool",
+      "shortName": "ToggleQuickFilterIndicatorsVsibility",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "toggle",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TrackQuestMappin;BaseMappinBaseController",
+      "shortName": "TrackQuestMappin",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameuiMappinBaseController",
+          "name": "controller",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TryConfirmDelamainTaxi;",
+      "shortName": "TryConfirmDelamainTaxi",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "TryFastTravel;",
+      "shortName": "TryFastTravel",
+      "flags": 32900
+    },
+    {
+      "fullName": "TryTrackQuestOrSetWaypoint;",
+      "shortName": "TryTrackQuestOrSetWaypoint",
+      "flags": 32900
+    },
+    {
+      "fullName": "UninitializeCustomFiltersList;",
+      "shortName": "UninitializeCustomFiltersList",
+      "flags": 32900
+    },
+    {
+      "fullName": "UpdateCustomFilter;gamedataWorldMapFilterBool",
+      "shortName": "UpdateCustomFilter",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "gamedataWorldMapFilter",
+          "name": "filter",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "enable",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateDelamainTaxiVisiblity;Bool",
+      "shortName": "UpdateDelamainTaxiVisiblity",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "delamainTaxiEnabled",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateFastTravelVisiblity;Bool",
+      "shortName": "UpdateFastTravelVisiblity",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "fastTravelEnabled",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateGameTime;",
+      "shortName": "UpdateGameTime",
+      "flags": 32900
+    },
+    {
+      "fullName": "UpdateSelectedMappinTooltip;",
+      "shortName": "UpdateSelectedMappinTooltip",
+      "flags": 32900
+    },
+    {
+      "fullName": "UpdateTooltip;WorldMapTooltipTypeBaseWorldMapMappinController",
+      "shortName": "UpdateTooltip",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "WorldMapTooltipType",
+          "name": "tooltipType",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameuiBaseWorldMapMappinController",
+          "name": "controller",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateTrackedQuest;",
+      "shortName": "UpdateTrackedQuest",
+      "flags": 32900
+    },
+    {
+      "fullName": "UpdateTravelDestination;",
+      "shortName": "UpdateTravelDestination",
+      "flags": 32900
+    }
+  ]
+}

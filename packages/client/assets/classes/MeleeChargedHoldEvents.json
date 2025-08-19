@@ -1,0 +1,162 @@
+{
+  "parent": "MeleeRumblingEvents",
+  "name": "MeleeChargedHoldEvents",
+  "flags": 4,
+  "props": [
+    {
+      "type": "Bool",
+      "name": "clearWeaponCharge",
+      "flags": 4297326624
+    },
+    {
+      "type": "handle:gameStatModifierData_Deprecated",
+      "name": "effectiveRangeMod",
+      "flags": 4431544352
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "GetChargeValuePerSec;StateGameScriptInterface",
+      "shortName": "GetChargeValuePerSec",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetIntensity;",
+      "shortName": "GetIntensity",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "flags": 33280
+    },
+    {
+      "fullName": "IsMonowireQuickhackChargedAttack;StateGameScriptInterface",
+      "shortName": "IsMonowireQuickhackChargedAttack",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnEnter;StateContextStateGameScriptInterface",
+      "shortName": "OnEnter",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnExit;StateContextStateGameScriptInterface",
+      "shortName": "OnExit",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnExitCommon;StateContextStateGameScriptInterface",
+      "shortName": "OnExitCommon",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnExitToMeleeStrongAttack;StateContextStateGameScriptInterface",
+      "shortName": "OnExitToMeleeStrongAttack",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnForcedExit;StateContextStateGameScriptInterface",
+      "shortName": "OnForcedExit",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateEffectiveRange;StateGameScriptInterfaceFloat",
+      "shortName": "UpdateEffectiveRange",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "effectiveRange",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

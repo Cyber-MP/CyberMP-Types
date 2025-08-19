@@ -1,0 +1,1419 @@
+{
+  "parent": "IScriptable",
+  "name": "inkWidget",
+  "flags": 2,
+  "props": [
+    {
+      "type": "handle:inkWidgetLogicController",
+      "name": "logicController",
+      "group": "Logic",
+      "flags": 6627016704
+    },
+    {
+      "type": "array:handle:inkWidgetLogicController",
+      "name": "secondaryControllers",
+      "group": "Logic",
+      "flags": 6627016704
+    },
+    {
+      "type": "array:handle:inkUserData",
+      "name": "userData",
+      "group": "Logic",
+      "flags": 6631211013
+    },
+    {
+      "type": "CName",
+      "name": "name",
+      "group": "General",
+      "flags": 6627016705
+    },
+    {
+      "type": "CName",
+      "name": "state",
+      "group": "General",
+      "flags": 6627016705
+    },
+    {
+      "type": "Bool",
+      "name": "visible",
+      "group": "General",
+      "flags": 6627016705
+    },
+    {
+      "type": "Bool",
+      "name": "affectsLayoutWhenHidden",
+      "group": "General",
+      "flags": 6627016705
+    },
+    {
+      "type": "Bool",
+      "name": "isInteractive",
+      "group": "General",
+      "flags": 6627016705
+    },
+    {
+      "type": "Bool",
+      "name": "canSupportFocus",
+      "group": "General",
+      "flags": 6627016705
+    },
+    {
+      "type": "handle:inkStyleResourceWrapper",
+      "name": "style",
+      "group": "General",
+      "flags": 6627016709
+    },
+    {
+      "type": "whandle:inkWidget",
+      "name": "parentWidget",
+      "group": "General",
+      "flags": 6627016704
+    },
+    {
+      "type": "handle:inkPropertyManager",
+      "name": "propertyManager",
+      "group": "General",
+      "flags": 6627016704
+    },
+    {
+      "type": "Bool",
+      "name": "fitToContent",
+      "group": "Layout",
+      "flags": 6627016705
+    },
+    {
+      "type": "inkWidgetLayout",
+      "name": "layout",
+      "group": "Layout",
+      "flags": 6627016704
+    },
+    {
+      "type": "Float",
+      "name": "opacity",
+      "group": "Layout",
+      "flags": 6627016705
+    },
+    {
+      "type": "HDRColor",
+      "name": "tintColor",
+      "group": "Layout",
+      "flags": 6627016705
+    },
+    {
+      "type": "Vector2",
+      "name": "size",
+      "group": "Layout",
+      "flags": 6627016705
+    },
+    {
+      "type": "Vector2",
+      "name": "renderTransformPivot",
+      "group": "Layout",
+      "flags": 6627016705
+    },
+    {
+      "type": "inkUITransform",
+      "name": "renderTransform",
+      "group": "Layout",
+      "flags": 6627016705
+    },
+    {
+      "type": "array:handle:inkIEffect",
+      "name": "effects",
+      "group": "Effects",
+      "flags": 6631211013
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "inkWidget::DefaultState;",
+      "shortName": "DefaultState",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 33286
+    },
+    {
+      "fullName": "BindProperty",
+      "shortName": "BindProperty",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 1369,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "propertyName",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "stylePath",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CallCustomCallback",
+      "shortName": "CallCustomCallback",
+      "index": 1361,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "eventName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ChangeTranslation",
+      "shortName": "ChangeTranslation",
+      "index": 1352,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Vector2",
+          "name": "translationVector",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "DisableAllEffectsByType",
+      "shortName": "DisableAllEffectsByType",
+      "index": 1358,
+      "flags": 1,
+      "params": [
+        {
+          "type": "inkEffectType",
+          "name": "effectType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "FlagForVisualInvalidation",
+      "shortName": "FlagForVisualInvalidation",
+      "index": 1372,
+      "flags": 1
+    },
+    {
+      "fullName": "GatherUserData",
+      "shortName": "GatherUserData",
+      "index": 1368,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "userDataTypeName",
+          "flags": 128
+        },
+        {
+          "type": "array:handle:inkUserData",
+          "name": "userDataCollection",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetAffectsLayoutWhenHidden",
+      "shortName": "GetAffectsLayoutWhenHidden",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 1315,
+      "flags": 1
+    },
+    {
+      "fullName": "GetAnchor",
+      "shortName": "GetAnchor",
+      "return": {
+        "type": "inkEAnchor",
+        "flags": 64
+      },
+      "index": 1325,
+      "flags": 1
+    },
+    {
+      "fullName": "GetAnchorPoint",
+      "shortName": "GetAnchorPoint",
+      "return": {
+        "type": "Vector2",
+        "flags": 64
+      },
+      "index": 1335,
+      "flags": 1
+    },
+    {
+      "fullName": "GetController",
+      "shortName": "GetController",
+      "return": {
+        "type": "whandle:inkWidgetLogicController",
+        "flags": 64
+      },
+      "index": 1303,
+      "flags": 1
+    },
+    {
+      "fullName": "GetControllerByBaseType",
+      "shortName": "GetControllerByBaseType",
+      "return": {
+        "type": "whandle:inkWidgetLogicController",
+        "flags": 64
+      },
+      "index": 1305,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "controllerType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetControllerByType",
+      "shortName": "GetControllerByType",
+      "return": {
+        "type": "whandle:inkWidgetLogicController",
+        "flags": 64
+      },
+      "index": 1304,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "controllerType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetControllers",
+      "shortName": "GetControllers",
+      "return": {
+        "type": "array:whandle:inkWidgetLogicController",
+        "flags": 64
+      },
+      "index": 1306,
+      "flags": 1
+    },
+    {
+      "fullName": "GetControllersByType",
+      "shortName": "GetControllersByType",
+      "return": {
+        "type": "array:whandle:inkWidgetLogicController",
+        "flags": 64
+      },
+      "index": 1307,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "controllerType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetDesiredSize",
+      "shortName": "GetDesiredSize",
+      "return": {
+        "type": "Vector2",
+        "flags": 64
+      },
+      "index": 1341,
+      "flags": 1
+    },
+    {
+      "fullName": "GetEffectEnabled",
+      "shortName": "GetEffectEnabled",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 1357,
+      "flags": 1,
+      "params": [
+        {
+          "type": "inkEffectType",
+          "name": "effectType",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "effectName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetEffectParamValue",
+      "shortName": "GetEffectParamValue",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 1359,
+      "flags": 1,
+      "params": [
+        {
+          "type": "inkEffectType",
+          "name": "effectType",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "effectName",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "paramName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetFitToContent",
+      "shortName": "GetFitToContent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 1337,
+      "flags": 1
+    },
+    {
+      "fullName": "GetHAlign",
+      "shortName": "GetHAlign",
+      "return": {
+        "type": "inkEHorizontalAlign",
+        "flags": 64
+      },
+      "index": 1321,
+      "flags": 1
+    },
+    {
+      "fullName": "GetMargin",
+      "shortName": "GetMargin",
+      "return": {
+        "type": "inkMargin",
+        "flags": 64
+      },
+      "index": 1317,
+      "flags": 1
+    },
+    {
+      "fullName": "GetName",
+      "shortName": "GetName",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "index": 1297,
+      "flags": 1
+    },
+    {
+      "fullName": "GetNumControllers",
+      "shortName": "GetNumControllers",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 1308,
+      "flags": 1
+    },
+    {
+      "fullName": "GetNumControllersOfType",
+      "shortName": "GetNumControllersOfType",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 1309,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "controllerType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetOpacity",
+      "shortName": "GetOpacity",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 1333,
+      "flags": 1
+    },
+    {
+      "fullName": "GetPadding",
+      "shortName": "GetPadding",
+      "return": {
+        "type": "inkMargin",
+        "flags": 64
+      },
+      "index": 1319,
+      "flags": 1
+    },
+    {
+      "fullName": "GetRenderTransformPivot",
+      "shortName": "GetRenderTransformPivot",
+      "return": {
+        "type": "Vector2",
+        "flags": 64
+      },
+      "index": 1342,
+      "flags": 1
+    },
+    {
+      "fullName": "GetRotation",
+      "shortName": "GetRotation",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 1349,
+      "flags": 1
+    },
+    {
+      "fullName": "GetScale",
+      "shortName": "GetScale",
+      "return": {
+        "type": "Vector2",
+        "flags": 64
+      },
+      "index": 1345,
+      "flags": 1
+    },
+    {
+      "fullName": "GetShear",
+      "shortName": "GetShear",
+      "return": {
+        "type": "Vector2",
+        "flags": 64
+      },
+      "index": 1347,
+      "flags": 1
+    },
+    {
+      "fullName": "GetSize",
+      "shortName": "GetSize",
+      "return": {
+        "type": "Vector2",
+        "flags": 64
+      },
+      "index": 1339,
+      "flags": 1
+    },
+    {
+      "fullName": "GetSizeCoefficient",
+      "shortName": "GetSizeCoefficient",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 1329,
+      "flags": 1
+    },
+    {
+      "fullName": "GetSizeRule",
+      "shortName": "GetSizeRule",
+      "return": {
+        "type": "inkESizeRule",
+        "flags": 64
+      },
+      "index": 1327,
+      "flags": 1
+    },
+    {
+      "fullName": "GetState",
+      "shortName": "GetState",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "index": 1299,
+      "flags": 1
+    },
+    {
+      "fullName": "GetStylePath",
+      "shortName": "GetStylePath",
+      "return": {
+        "type": "redResourceReferenceScriptToken",
+        "flags": 64
+      },
+      "index": 1301,
+      "flags": 1
+    },
+    {
+      "fullName": "GetTintColor",
+      "shortName": "GetTintColor",
+      "return": {
+        "type": "HDRColor",
+        "flags": 64
+      },
+      "index": 1331,
+      "flags": 1
+    },
+    {
+      "fullName": "GetTranslation",
+      "shortName": "GetTranslation",
+      "return": {
+        "type": "Vector2",
+        "flags": 64
+      },
+      "index": 1351,
+      "flags": 1
+    },
+    {
+      "fullName": "GetUserData",
+      "shortName": "GetUserData",
+      "return": {
+        "type": "handle:inkUserData",
+        "flags": 64
+      },
+      "index": 1366,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "userDataTypeName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetUserDataArray",
+      "shortName": "GetUserDataArray",
+      "return": {
+        "type": "array:handle:inkUserData",
+        "flags": 64
+      },
+      "index": 1367,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "userDataTypeName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetUserDataObjectCount",
+      "shortName": "GetUserDataObjectCount",
+      "return": {
+        "type": "Uint32",
+        "flags": 64
+      },
+      "index": 1365,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "userDataTypeName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetVAlign",
+      "shortName": "GetVAlign",
+      "return": {
+        "type": "inkEVerticalAlign",
+        "flags": 64
+      },
+      "index": 1323,
+      "flags": 1
+    },
+    {
+      "fullName": "HasUserDataObject",
+      "shortName": "HasUserDataObject",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 1364,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "userDataTypeName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsInteractive",
+      "shortName": "IsInteractive",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 1313,
+      "flags": 1
+    },
+    {
+      "fullName": "IsVisible",
+      "shortName": "IsVisible",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 1310,
+      "flags": 1
+    },
+    {
+      "fullName": "PlayAnimation",
+      "shortName": "PlayAnimation",
+      "return": {
+        "type": "handle:inkanimProxy",
+        "flags": 64
+      },
+      "index": 1353,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:inkanimDefinition",
+          "name": "animationDefinition",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PlayAnimationWithOptions",
+      "shortName": "PlayAnimationWithOptions",
+      "return": {
+        "type": "handle:inkanimProxy",
+        "flags": 64
+      },
+      "index": 1354,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:inkanimDefinition",
+          "name": "animationDefinition",
+          "flags": 128
+        },
+        {
+          "type": "inkanimPlaybackOptions",
+          "name": "playbackOptions",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterToCallback",
+      "shortName": "RegisterToCallback",
+      "index": 1362,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "eventName",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "object",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "functionName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Reparent",
+      "shortName": "Reparent",
+      "index": 1371,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:inkCompoundWidget",
+          "name": "newParent",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "SetAffectsLayoutWhenHidden",
+      "shortName": "SetAffectsLayoutWhenHidden",
+      "index": 1316,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "affectsLayoutWhenHidden",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetAnchor",
+      "shortName": "SetAnchor",
+      "index": 1326,
+      "flags": 1,
+      "params": [
+        {
+          "type": "inkEAnchor",
+          "name": "anchor",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetAnchorPoint",
+      "shortName": "SetAnchorPoint",
+      "index": 1336,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Vector2",
+          "name": "anchorPoint",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetEffectEnabled",
+      "shortName": "SetEffectEnabled",
+      "index": 1356,
+      "flags": 1,
+      "params": [
+        {
+          "type": "inkEffectType",
+          "name": "effectType",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "effectName",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "enabled",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetEffectParamValue",
+      "shortName": "SetEffectParamValue",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 1360,
+      "flags": 1,
+      "params": [
+        {
+          "type": "inkEffectType",
+          "name": "effectType",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "effectName",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "paramName",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "paramValue",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetFitToContent",
+      "shortName": "SetFitToContent",
+      "index": 1338,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "fitToContent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetHAlign",
+      "shortName": "SetHAlign",
+      "index": 1322,
+      "flags": 1,
+      "params": [
+        {
+          "type": "inkEHorizontalAlign",
+          "name": "hAlign",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetInteractive",
+      "shortName": "SetInteractive",
+      "index": 1312,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetLayout",
+      "shortName": "SetLayout",
+      "index": 1314,
+      "flags": 1,
+      "params": [
+        {
+          "type": "inkWidgetLayout",
+          "name": "layout",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetMargin",
+      "shortName": "SetMargin",
+      "index": 1318,
+      "flags": 1,
+      "params": [
+        {
+          "type": "inkMargin",
+          "name": "margin",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetName",
+      "shortName": "SetName",
+      "index": 1298,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "widgetName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetOpacity",
+      "shortName": "SetOpacity",
+      "index": 1334,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Float",
+          "name": "opacity",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetPadding",
+      "shortName": "SetPadding",
+      "index": 1320,
+      "flags": 1,
+      "params": [
+        {
+          "type": "inkMargin",
+          "name": "padding",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetRenderTransformPivot",
+      "shortName": "SetRenderTransformPivot",
+      "index": 1343,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Vector2",
+          "name": "pivot",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetRotation",
+      "shortName": "SetRotation",
+      "index": 1348,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Float",
+          "name": "angleInDegrees",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetScale",
+      "shortName": "SetScale",
+      "index": 1344,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Vector2",
+          "name": "scale",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetShear",
+      "shortName": "SetShear",
+      "index": 1346,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Vector2",
+          "name": "shear",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetSize",
+      "shortName": "SetSize",
+      "index": 1340,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Vector2",
+          "name": "size",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetSizeCoefficient",
+      "shortName": "SetSizeCoefficient",
+      "index": 1330,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Float",
+          "name": "sizeCoefficient",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetSizeRule",
+      "shortName": "SetSizeRule",
+      "index": 1328,
+      "flags": 1,
+      "params": [
+        {
+          "type": "inkESizeRule",
+          "name": "sizeRule",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetState",
+      "shortName": "SetState",
+      "index": 1300,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "state",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetStyle",
+      "shortName": "SetStyle",
+      "index": 1302,
+      "flags": 1,
+      "params": [
+        {
+          "type": "redResourceReferenceScriptToken",
+          "name": "styleResPath",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetTintColor",
+      "shortName": "SetTintColor",
+      "index": 1332,
+      "flags": 1,
+      "params": [
+        {
+          "type": "HDRColor",
+          "name": "color",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetTranslation",
+      "shortName": "SetTranslation",
+      "index": 1350,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Vector2",
+          "name": "translationVector",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetVAlign",
+      "shortName": "SetVAlign",
+      "index": 1324,
+      "flags": 1,
+      "params": [
+        {
+          "type": "inkEVerticalAlign",
+          "name": "vAlign",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetVisible",
+      "shortName": "SetVisible",
+      "index": 1311,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "visible",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "StopAllAnimations",
+      "shortName": "StopAllAnimations",
+      "index": 1355,
+      "flags": 1
+    },
+    {
+      "fullName": "UnbindProperty",
+      "shortName": "UnbindProperty",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 1370,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "propertyName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UnregisterFromCallback",
+      "shortName": "UnregisterFromCallback",
+      "index": 1363,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "eventName",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "object",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "functionName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetDesiredHeight;",
+      "shortName": "GetDesiredHeight",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "GetDesiredWidth;",
+      "shortName": "GetDesiredWidth",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "GetHeight;",
+      "shortName": "GetHeight",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "GetWidth;",
+      "shortName": "GetWidth",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "SetAnchorPoint;FloatFloat",
+      "shortName": "SetAnchorPoint",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Float",
+          "name": "x",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "y",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetHeight;Float",
+      "shortName": "SetHeight",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Float",
+          "name": "height",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetMargin;FloatFloatFloatFloat",
+      "shortName": "SetMargin",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Float",
+          "name": "left",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "top",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "right",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "bottom",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetPadding;FloatFloatFloatFloat",
+      "shortName": "SetPadding",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Float",
+          "name": "left",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "top",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "right",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "bottom",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetRenderTransformPivot;FloatFloat",
+      "shortName": "SetRenderTransformPivot",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Float",
+          "name": "x",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "y",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetSize;FloatFloat",
+      "shortName": "SetSize",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Float",
+          "name": "width",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "height",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetTintColor;Uint8Uint8Uint8Uint8",
+      "shortName": "SetTintColor",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Uint8",
+          "name": "r",
+          "flags": 128
+        },
+        {
+          "type": "Uint8",
+          "name": "g",
+          "flags": 128
+        },
+        {
+          "type": "Uint8",
+          "name": "b",
+          "flags": 128
+        },
+        {
+          "type": "Uint8",
+          "name": "a",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetTintColor;Color",
+      "shortName": "SetTintColor",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Color",
+          "name": "color",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetTranslation;FloatFloat",
+      "shortName": "SetTranslation",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Float",
+          "name": "x",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "y",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetWidth;Float",
+      "shortName": "SetWidth",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Float",
+          "name": "width",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateMargin;FloatFloatFloatFloat",
+      "shortName": "UpdateMargin",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Float",
+          "name": "left",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "top",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "right",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "bottom",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

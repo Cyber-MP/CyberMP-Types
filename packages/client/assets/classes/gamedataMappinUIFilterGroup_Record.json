@@ -1,0 +1,121 @@
+{
+  "parent": "gamedataTweakDBRecord",
+  "name": "gamedataMappinUIFilterGroup_Record",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "FilterName",
+      "shortName": "FilterName",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "index": 6112,
+      "flags": 1
+    },
+    {
+      "fullName": "FilterType",
+      "shortName": "FilterType",
+      "return": {
+        "type": "whandle:gamedataWorldMapFilter_Record",
+        "flags": 64
+      },
+      "index": 6105,
+      "flags": 1
+    },
+    {
+      "fullName": "FilterTypeHandle",
+      "shortName": "FilterTypeHandle",
+      "return": {
+        "type": "handle:gamedataWorldMapFilter_Record",
+        "flags": 64
+      },
+      "index": 6106,
+      "flags": 1
+    },
+    {
+      "fullName": "GetMappinsCount",
+      "shortName": "GetMappinsCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 6108,
+      "flags": 1
+    },
+    {
+      "fullName": "GetMappinsItem",
+      "shortName": "GetMappinsItem",
+      "return": {
+        "type": "whandle:gamedataMappinVariant_Record",
+        "flags": 64
+      },
+      "index": 6109,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetMappinsItemHandle",
+      "shortName": "GetMappinsItemHandle",
+      "return": {
+        "type": "handle:gamedataMappinVariant_Record",
+        "flags": 64
+      },
+      "index": 6110,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Mappins",
+      "shortName": "Mappins",
+      "index": 6107,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataMappinVariant_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "MappinsContains",
+      "shortName": "MappinsContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 6111,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataMappinVariant_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ShouldCollectMappins",
+      "shortName": "ShouldCollectMappins",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 6113,
+      "flags": 1
+    }
+  ]
+}

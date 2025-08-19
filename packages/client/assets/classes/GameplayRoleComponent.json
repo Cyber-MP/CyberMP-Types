@@ -1,0 +1,1173 @@
+{
+  "parent": "gameScriptableComponent",
+  "name": "GameplayRoleComponent",
+  "flags": 4,
+  "props": [
+    {
+      "type": "EGameplayRole",
+      "name": "gameplayRole",
+      "group": "Gameplay Role",
+      "flags": 4364238881
+    },
+    {
+      "type": "Bool",
+      "name": "autoDeterminGameplayRole",
+      "group": "Gameplay Role",
+      "flags": 4364238881
+    },
+    {
+      "type": "EMappinDisplayMode",
+      "name": "mappinsDisplayMode",
+      "flags": 4364238881
+    },
+    {
+      "type": "Bool",
+      "name": "displayAllRolesAsGeneric",
+      "flags": 4364238881
+    },
+    {
+      "type": "Bool",
+      "name": "alwaysCreateMappinAsDynamic",
+      "flags": 4364238881
+    },
+    {
+      "type": "EMappinVisualState",
+      "name": "forcedMappinVisualState",
+      "flags": 4364238881
+    },
+    {
+      "type": "array:SDeviceMappinData",
+      "name": "mappins",
+      "flags": 6650134561
+    },
+    {
+      "type": "Float",
+      "name": "offsetValue",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isBeingScanned",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isCurrentTarget",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isShowingMappins",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "canShowMappinsByTask",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "canHideMappinsByTask",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isHighlightedInFocusMode",
+      "flags": 4297130016
+    },
+    {
+      "type": "EGameplayRole",
+      "name": "currentGameplayRole",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isGameplayRoleInitialized",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isForceHidden",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isForcedVisibleThroughWalls",
+      "flags": 4297130016
+    },
+    {
+      "type": "array:gamedataMappinVariant",
+      "name": "enabledMinimapMappins",
+      "flags": 6583025696
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnDeactivateQuickHackIndicator",
+      "shortName": "OnDeactivateQuickHackIndicator",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:DeactivateQuickHackIndicatorEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnEvaluateMappinVisualStateEvent",
+      "shortName": "OnEvaluateMappinVisualStateEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:EvaluateMappinsVisualStateEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnHUDInstruction",
+      "shortName": "OnHUDInstruction",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:HUDInstruction",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnHideSingleMappin",
+      "shortName": "OnHideSingleMappin",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:HideSingleMappinEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnLogicReady",
+      "shortName": "OnLogicReady",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:SetLogicReadyEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnLookedAtEvent",
+      "shortName": "OnLookedAtEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:LookedAtEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPerformedAction",
+      "shortName": "OnPerformedAction",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:PerformedAction",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPostInitialize",
+      "shortName": "OnPostInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:entPostInitializeEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPreUninitialize",
+      "shortName": "OnPreUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:entPreUninitializeEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnReEvaluateGameplayRole",
+      "shortName": "OnReEvaluateGameplayRole",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:EvaluateGameplayRoleEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnScanningLookedAt",
+      "shortName": "OnScanningLookedAt",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameScanningLookAtEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSetCurrentGameplayRole",
+      "shortName": "OnSetCurrentGameplayRole",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:SetCurrentGameplayRoleEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSetGameplayRole",
+      "shortName": "OnSetGameplayRole",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:SetGameplayRoleEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnShowSingleMappin",
+      "shortName": "OnShowSingleMappin",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:ShowSingleMappinEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnToggleGameplayMappinVisibilityEvent",
+      "shortName": "OnToggleGameplayMappinVisibilityEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:ToggleGameplayMappinVisibilityEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUnregisterAllMappinsEvent",
+      "shortName": "OnUnregisterAllMappinsEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:UnregisterAllMappinsEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUploadProgressStateChanged",
+      "shortName": "OnUploadProgressStateChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:UploadProgramProgressEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ActivatePhoneCallIndicator;GameplayRoleMappinData",
+      "shortName": "ActivatePhoneCallIndicator",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:GameplayRoleMappinData",
+          "name": "visualData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ActivateQuickHackDurationIndicator;GameplayRoleMappinData",
+      "shortName": "ActivateQuickHackDurationIndicator",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:GameplayRoleMappinData",
+          "name": "visualData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ActivateQuickHackIndicator;GameplayRoleMappinData",
+      "shortName": "ActivateQuickHackIndicator",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:GameplayRoleMappinData",
+          "name": "visualData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ActivateSingleMappin;Int32",
+      "shortName": "ActivateSingleMappin",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AddMappin;script_ref<SDeviceMappinData>",
+      "shortName": "AddMappin",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "script_ref:SDeviceMappinData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AddQuickhackMappinToQueue;GameplayRoleMappinData",
+      "shortName": "AddQuickhackMappinToQueue",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:GameplayRoleMappinData",
+          "name": "visualData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ClearAllRoleMappins;",
+      "shortName": "ClearAllRoleMappins",
+      "flags": 32900
+    },
+    {
+      "fullName": "ClearAllRoleMappinsByTask;",
+      "shortName": "ClearAllRoleMappinsByTask",
+      "flags": 33024
+    },
+    {
+      "fullName": "ClearAllRoleMappinsTask;ScriptTaskData",
+      "shortName": "ClearAllRoleMappinsTask",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gameScriptTaskData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CompareRoleMappinsData;GameplayRoleMappinDataGameplayRoleMappinData",
+      "shortName": "CompareRoleMappinsData",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:GameplayRoleMappinData",
+          "name": "data1",
+          "flags": 128
+        },
+        {
+          "type": "handle:GameplayRoleMappinData",
+          "name": "data2",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CreateRoleMappinData;script_ref<SDeviceMappinData>",
+      "shortName": "CreateRoleMappinData",
+      "return": {
+        "type": "handle:GameplayRoleMappinData",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:SDeviceMappinData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "DeactivatePhoneCallIndicator;",
+      "shortName": "DeactivatePhoneCallIndicator",
+      "flags": 32900
+    },
+    {
+      "fullName": "DeactivateQuickHackDurationIndicator;",
+      "shortName": "DeactivateQuickHackDurationIndicator",
+      "flags": 32900
+    },
+    {
+      "fullName": "DeactivateQuickHackIndicator;",
+      "shortName": "DeactivateQuickHackIndicator",
+      "flags": 32900
+    },
+    {
+      "fullName": "DeactivateSingleMappin;Int32",
+      "shortName": "DeactivateSingleMappin",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "DeterminGamplayRole;",
+      "shortName": "DeterminGamplayRole",
+      "flags": 32900
+    },
+    {
+      "fullName": "DeterminGamplayRoleByTask;",
+      "shortName": "DeterminGamplayRoleByTask",
+      "flags": 32900
+    },
+    {
+      "fullName": "DeterminGamplayRoleTask;ScriptTaskData",
+      "shortName": "DeterminGamplayRoleTask",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gameScriptTaskData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "EnableMappinVariantOnMinimap;gamedataMappinVariant",
+      "shortName": "EnableMappinVariantOnMinimap",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "gamedataMappinVariant",
+          "name": "mappinVariant",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "EvaluateMappins;",
+      "shortName": "EvaluateMappins",
+      "flags": 32896
+    },
+    {
+      "fullName": "EvaluatePositions;",
+      "shortName": "EvaluatePositions",
+      "flags": 32900
+    },
+    {
+      "fullName": "GetCurrentGameplayRole;",
+      "shortName": "GetCurrentGameplayRole",
+      "return": {
+        "type": "EGameplayRole",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetCurrentMappinVariant;EGameplayRole",
+      "shortName": "GetCurrentMappinVariant",
+      "return": {
+        "type": "gamedataMappinVariant",
+        "flags": 64
+      },
+      "flags": 41092,
+      "params": [
+        {
+          "type": "EGameplayRole",
+          "name": "role",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetForcedMappinVisualState;",
+      "shortName": "GetForcedMappinVisualState",
+      "return": {
+        "type": "EMappinVisualState",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetIconIdForMappinVariant;gamedataMappinVariant",
+      "shortName": "GetIconIdForMappinVariant",
+      "return": {
+        "type": "TweakDBID",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "gamedataMappinVariant",
+          "name": "mappinVariant",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetMappinDataForGamepleyRole;EGameplayRole",
+      "shortName": "GetMappinDataForGamepleyRole",
+      "return": {
+        "type": "SDeviceMappinData",
+        "flags": 64
+      },
+      "flags": 41092,
+      "params": [
+        {
+          "type": "EGameplayRole",
+          "name": "role",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetMappinSystem;",
+      "shortName": "GetMappinSystem",
+      "return": {
+        "type": "handle:gamemappinsMappinSystem",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "GetMinimalisticMappinVariant;",
+      "shortName": "GetMinimalisticMappinVariant",
+      "return": {
+        "type": "gamedataMappinVariant",
+        "flags": 64
+      },
+      "flags": 41092
+    },
+    {
+      "fullName": "GetNextAxis;EAxisType",
+      "shortName": "GetNextAxis",
+      "return": {
+        "type": "EAxisType",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "EAxisType",
+          "name": "currentAxis",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetPlaystyleMappinVariant;",
+      "shortName": "GetPlaystyleMappinVariant",
+      "return": {
+        "type": "gamedataMappinVariant",
+        "flags": 64
+      },
+      "flags": 41092
+    },
+    {
+      "fullName": "GetQuickHackQueueSize;",
+      "shortName": "GetQuickHackQueueSize",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "GetRoleMappinVariant;EGameplayRole",
+      "shortName": "GetRoleMappinVariant",
+      "return": {
+        "type": "gamedataMappinVariant",
+        "flags": 64
+      },
+      "flags": 41092,
+      "params": [
+        {
+          "type": "EGameplayRole",
+          "name": "role",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetUISystem;",
+      "shortName": "GetUISystem",
+      "return": {
+        "type": "handle:gameuiGameSystemUI",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "HasActiveMappin;gamedataMappinVariant",
+      "shortName": "HasActiveMappin",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476,
+      "params": [
+        {
+          "type": "gamedataMappinVariant",
+          "name": "mappinVariant",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HasMappin;script_ref<SDeviceMappinData>",
+      "shortName": "HasMappin",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41092,
+      "params": [
+        {
+          "type": "script_ref:SDeviceMappinData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HasMappin;EGameplayRole",
+      "shortName": "HasMappin",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41092,
+      "params": [
+        {
+          "type": "EGameplayRole",
+          "name": "gameplayRole",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HasMappin;gamedataMappinVariant",
+      "shortName": "HasMappin",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41092,
+      "params": [
+        {
+          "type": "gamedataMappinVariant",
+          "name": "mappinVariant",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HasOffscreenArrow;",
+      "shortName": "HasOffscreenArrow",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "HideRoleMappins;",
+      "shortName": "HideRoleMappins",
+      "flags": 33284
+    },
+    {
+      "fullName": "HideRoleMappinsByTask;",
+      "shortName": "HideRoleMappinsByTask",
+      "flags": 33024
+    },
+    {
+      "fullName": "HideRoleMappinsTask;ScriptTaskData",
+      "shortName": "HideRoleMappinsTask",
+      "flags": 34052,
+      "params": [
+        {
+          "type": "handle:gameScriptTaskData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HideSingleMappin;Int32",
+      "shortName": "HideSingleMappin",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HideSingleMappin_Event;Int32",
+      "shortName": "HideSingleMappin_Event",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "InitializeGamepleyRoleMappin;",
+      "shortName": "InitializeGamepleyRoleMappin",
+      "flags": 32900
+    },
+    {
+      "fullName": "InitializePhoneCallIndicator;",
+      "shortName": "InitializePhoneCallIndicator",
+      "flags": 32900
+    },
+    {
+      "fullName": "InitializeQuickHackIndicator;",
+      "shortName": "InitializeQuickHackIndicator",
+      "flags": 32900
+    },
+    {
+      "fullName": "IsCurrentTarget;",
+      "shortName": "IsCurrentTarget",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41092
+    },
+    {
+      "fullName": "IsForceHidden;",
+      "shortName": "IsForceHidden",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "IsGameplayRoleStatic;",
+      "shortName": "IsGameplayRoleStatic",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "IsHighlightedInFocusMode;",
+      "shortName": "IsHighlightedInFocusMode",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41092
+    },
+    {
+      "fullName": "IsMappinDataValid;script_ref<SDeviceMappinData>",
+      "shortName": "IsMappinDataValid",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:SDeviceMappinData",
+          "name": "mappinData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsMappinDynamic;",
+      "shortName": "IsMappinDynamic",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "IsShardRead;",
+      "shortName": "IsShardRead",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "OnGameAttach;",
+      "shortName": "OnGameAttach",
+      "flags": 34052
+    },
+    {
+      "fullName": "OnGameDetach;",
+      "shortName": "OnGameDetach",
+      "flags": 34052
+    },
+    {
+      "fullName": "ReEvaluateGameplayRole;",
+      "shortName": "ReEvaluateGameplayRole",
+      "flags": 32900
+    },
+    {
+      "fullName": "RemoveQuickhackMappinFromQueue;",
+      "shortName": "RemoveQuickhackMappinFromQueue",
+      "flags": 33284
+    },
+    {
+      "fullName": "RequestHUDRefresh;",
+      "shortName": "RequestHUDRefresh",
+      "flags": 32900
+    },
+    {
+      "fullName": "SetCurrentGameplayRoleWithNotification;EGameplayRole",
+      "shortName": "SetCurrentGameplayRoleWithNotification",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "EGameplayRole",
+          "name": "role",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetForceHidden;Bool",
+      "shortName": "SetForceHidden",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "isHidden",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ShowRoleMappins;",
+      "shortName": "ShowRoleMappins",
+      "flags": 33284
+    },
+    {
+      "fullName": "ShowRoleMappinsByTask;",
+      "shortName": "ShowRoleMappinsByTask",
+      "flags": 33024
+    },
+    {
+      "fullName": "ShowRoleMappinsTask;ScriptTaskData",
+      "shortName": "ShowRoleMappinsTask",
+      "flags": 34052,
+      "params": [
+        {
+          "type": "handle:gameScriptTaskData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ShowSingleMappin;Int32",
+      "shortName": "ShowSingleMappin",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ShowSingleMappin;Int32GameplayRoleMappinDataCName",
+      "shortName": "ShowSingleMappin",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        },
+        {
+          "type": "handle:GameplayRoleMappinData",
+          "name": "visualData",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "bindPositionToSlotName",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "ShowSingleMappin_Event;Int32",
+      "shortName": "ShowSingleMappin_Event",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ToggleMappin;Int32Bool",
+      "shortName": "ToggleMappin",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "mappinIndex",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "enable",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ToggleMappin;gamedataMappinVariantBoolBoolGameplayRoleMappinDataCName",
+      "shortName": "ToggleMappin",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "gamedataMappinVariant",
+          "name": "mappinVariant",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "enable",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "show",
+          "flags": 128
+        },
+        {
+          "type": "handle:GameplayRoleMappinData",
+          "name": "visualData",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "bindPositionToSlotName",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "ToggleMappin;gamedataMappinVariantBoolBool",
+      "shortName": "ToggleMappin",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "gamedataMappinVariant",
+          "name": "mappinVariant",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "enable",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "show",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ToggleMappin;gamedataMappinVariantBool",
+      "shortName": "ToggleMappin",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "gamedataMappinVariant",
+          "name": "mappinVariant",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "enable",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UnregisterAllMappins;",
+      "shortName": "UnregisterAllMappins",
+      "flags": 33284
+    },
+    {
+      "fullName": "UnregisterAllRoleMappins;",
+      "shortName": "UnregisterAllRoleMappins",
+      "flags": 33284
+    },
+    {
+      "fullName": "UpdateDefaultHighlight;",
+      "shortName": "UpdateDefaultHighlight",
+      "flags": 33028
+    },
+    {
+      "fullName": "UpdateSingleMappinData;Int32GameplayRoleMappinDataBool",
+      "shortName": "UpdateSingleMappinData",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        },
+        {
+          "type": "handle:GameplayRoleMappinData",
+          "name": "visualData",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "shouldUpdateVariant",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

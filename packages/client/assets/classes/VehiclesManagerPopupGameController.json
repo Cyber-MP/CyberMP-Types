@@ -1,0 +1,206 @@
+{
+  "parent": "BaseModalListPopupGameController",
+  "name": "VehiclesManagerPopupGameController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkWidgetReference",
+      "name": "repairOverlay",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "vehicleIconContainer",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "vehicleIcon",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkScrollAreaWidgetReference",
+      "name": "scrollArea",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "scrollControllerWidget",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "confirmButton",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "favoriteInputHint",
+      "flags": 4297130017
+    },
+    {
+      "type": "handle:VehiclesManagerDataView",
+      "name": "dataView",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkScriptableDataSourceWrapper",
+      "name": "dataSource",
+      "flags": 4431347744
+    },
+    {
+      "type": "whandle:QuickSlotsManager",
+      "name": "quickSlotsManager",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:inkScrollController",
+      "name": "scrollController",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "selectAnimProxy",
+      "flags": 4431347744
+    },
+    {
+      "type": "Uint32",
+      "name": "initialIndex",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnAction",
+      "shortName": "OnAction",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "gameinputScriptListenerAction",
+          "name": "action",
+          "flags": 128
+        },
+        {
+          "type": "gameinputScriptListenerActionConsumer",
+          "name": "consumer",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPlayerAttach",
+      "shortName": "OnPlayerAttach",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "player",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnScrollChanged",
+      "shortName": "OnScrollChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Vector2",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSelectAnimFinished",
+      "shortName": "OnSelectAnimFinished",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkanimProxy",
+          "name": "proxy",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnShowAnimFinished",
+      "shortName": "OnShowAnimFinished",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkanimProxy",
+          "name": "proxy",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Activate;",
+      "shortName": "Activate",
+      "flags": 33024
+    },
+    {
+      "fullName": "CleanVirtualList;",
+      "shortName": "CleanVirtualList",
+      "flags": 33024
+    },
+    {
+      "fullName": "Select;inkVirtualCompoundItemControllerinkVirtualCompoundItemController",
+      "shortName": "Select",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "handle:inkVirtualCompoundItemController",
+          "name": "previous",
+          "flags": 128
+        },
+        {
+          "type": "handle:inkVirtualCompoundItemController",
+          "name": "next",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SelectActiveVehicle;",
+      "shortName": "SelectActiveVehicle",
+      "flags": 32900
+    },
+    {
+      "fullName": "SetupData;",
+      "shortName": "SetupData",
+      "flags": 33024
+    },
+    {
+      "fullName": "SetupVirtualList;",
+      "shortName": "SetupVirtualList",
+      "flags": 33024
+    },
+    {
+      "fullName": "ToggleFavorite;",
+      "shortName": "ToggleFavorite",
+      "flags": 32900
+    }
+  ]
+}

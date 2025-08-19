@@ -1,0 +1,647 @@
+{
+  "parent": "gameScriptableSystem",
+  "name": "TakeOverControlSystem",
+  "flags": 4,
+  "props": [
+    {
+      "type": "whandle:gameObject",
+      "name": "controlledObject",
+      "flags": 4297130016
+    },
+    {
+      "type": "entEntityID",
+      "name": "takeControlSourceID",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isInputRegistered",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isInputLockedFromQuest",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isChainForcedFromQuest",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isActionButtonLocked",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isDeviceChainCreationLocked",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isReleaseOnHitLocked",
+      "flags": 4297130016
+    },
+    {
+      "type": "array:CName",
+      "name": "chainLockSources",
+      "flags": 6583025696
+    },
+    {
+      "type": "gameDelayID",
+      "name": "TCDUpdateDelayID",
+      "flags": 4297130016
+    },
+    {
+      "type": "Float",
+      "name": "TCSupdateRate",
+      "flags": 4297130016
+    },
+    {
+      "type": "Float",
+      "name": "lastInputSimTime",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:gameObject",
+      "name": "sniperNestObject",
+      "flags": 4297130016
+    },
+    {
+      "type": "Float",
+      "name": "timestampLastTCS",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "TakeOverControlSystem::CreateInputHint;GameInstanceBool",
+      "shortName": "CreateInputHint",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "isVisible",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TakeOverControlSystem::PlayFollowupEvent;GameInstanceEventEntityID",
+      "shortName": "PlayFollowupEvent",
+      "flags": 32902,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "game",
+          "flags": 128
+        },
+        {
+          "type": "handle:redEvent",
+          "name": "followupEvent",
+          "flags": 128
+        },
+        {
+          "type": "entEntityID",
+          "name": "followupEventEntityID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TakeOverControlSystem::ReleaseControl;GameInstanceEventEntityID",
+      "shortName": "ReleaseControl",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "game",
+          "flags": 128
+        },
+        {
+          "type": "handle:redEvent",
+          "name": "followupEvent",
+          "flags": 1152
+        },
+        {
+          "type": "entEntityID",
+          "name": "followupEventEntityID",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "TakeOverControlSystem::ReleaseControlOfRemoteControlledVehicle;GameInstanceEntityID",
+      "shortName": "ReleaseControlOfRemoteControlledVehicle",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "game",
+          "flags": 128
+        },
+        {
+          "type": "entEntityID",
+          "name": "playerID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TakeOverControlSystem::ReleaseControlOnHit;PlayerPuppet",
+      "shortName": "ReleaseControlOnHit",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:PlayerPuppet",
+          "name": "player",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TakeOverControlSystem::RequestTakeControl;GameObjectToggleTakeOverControl",
+      "shortName": "RequestTakeControl",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "handle:ToggleTakeOverControl",
+          "name": "originalevent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnAction",
+      "shortName": "OnAction",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "gameinputScriptListenerAction",
+          "name": "action",
+          "flags": 128
+        },
+        {
+          "type": "gameinputScriptListenerActionConsumer",
+          "name": "consumer",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "BreakTCSUpdate;",
+      "shortName": "BreakTCSUpdate",
+      "flags": 32900
+    },
+    {
+      "fullName": "CleanupActiveEntityInChainBlackboard;",
+      "shortName": "CleanupActiveEntityInChainBlackboard",
+      "flags": 32900
+    },
+    {
+      "fullName": "CleanupChainBlackboard;",
+      "shortName": "CleanupChainBlackboard",
+      "flags": 32900
+    },
+    {
+      "fullName": "CleanupControlledObject;",
+      "shortName": "CleanupControlledObject",
+      "flags": 32900
+    },
+    {
+      "fullName": "CreateTCSUpdate;",
+      "shortName": "CreateTCSUpdate",
+      "flags": 32900
+    },
+    {
+      "fullName": "EnablePlayerTPPRepresenation;Bool",
+      "shortName": "EnablePlayerTPPRepresenation",
+      "flags": 41092,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "enable",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ForceChainFromQuestRequest;Bool",
+      "shortName": "ForceChainFromQuestRequest",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "isChainForced",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetCameraDataFromControlledObject;GameObjectGameObject",
+      "shortName": "GetCameraDataFromControlledObject",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "ent",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameObject",
+          "name": "player",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetChain;",
+      "shortName": "GetChain",
+      "return": {
+        "type": "array:SWidgetPackage",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "GetControlledObject;",
+      "shortName": "GetControlledObject",
+      "return": {
+        "type": "handle:gameObject",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetCurrentActiveDeviceChainBlackboardIndex;script_ref<array<SWidgetPackage>>",
+      "shortName": "GetCurrentActiveDeviceChainBlackboardIndex",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:array:SWidgetPackage",
+          "name": "deviceChain",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetPackageFromChainNextToMe;BoolBool",
+      "shortName": "GetPackageFromChainNextToMe",
+      "return": {
+        "type": "SWidgetPackage",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "higher",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "isValid",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "HideAdvanceInteractionInputHints;",
+      "shortName": "HideAdvanceInteractionInputHints",
+      "flags": 32896
+    },
+    {
+      "fullName": "IsDeviceChainCreationLocked;",
+      "shortName": "IsDeviceChainCreationLocked",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "IsDeviceControlled;",
+      "shortName": "IsDeviceControlled",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "IsInputLockedFromQuest;",
+      "shortName": "IsInputLockedFromQuest",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "IsSavingLocked;",
+      "shortName": "IsSavingLocked",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33920
+    },
+    {
+      "fullName": "LockInputFromQuestRequest;Bool",
+      "shortName": "LockInputFromQuestRequest",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "isLocked",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "MoveToSpecificEntity;EntityID",
+      "shortName": "MoveToSpecificEntity",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "entity",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnLockDeviceChainCreationRequest;LockDeviceChainCreation",
+      "shortName": "OnLockDeviceChainCreationRequest",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:LockDeviceChainCreation",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnLockReleaseOnHitRequest;LockReleaseOnHit",
+      "shortName": "OnLockReleaseOnHitRequest",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:LockReleaseOnHit",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnLockTakeControlActionRequest;LockTakeControlAction",
+      "shortName": "OnLockTakeControlActionRequest",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:LockTakeControlAction",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRemoveFromChainRequest;RemoveFromChainRequest",
+      "shortName": "OnRemoveFromChainRequest",
+      "flags": 33924,
+      "params": [
+        {
+          "type": "handle:RemoveFromChainRequest",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRequestQuestTakeControlInputLock;RequestQuestTakeControlInputLock",
+      "shortName": "OnRequestQuestTakeControlInputLock",
+      "flags": 33924,
+      "params": [
+        {
+          "type": "handle:RequestQuestTakeControlInputLock",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRequestReleaseControl;RequestReleaseControl",
+      "shortName": "OnRequestReleaseControl",
+      "flags": 33924,
+      "params": [
+        {
+          "type": "handle:RequestReleaseControl",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRequestTakeControl;RequestTakeControl",
+      "shortName": "OnRequestTakeControl",
+      "flags": 33924,
+      "params": [
+        {
+          "type": "handle:RequestTakeControl",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnTCSUpdate;TCSUpdate",
+      "shortName": "OnTCSUpdate",
+      "flags": 33924,
+      "params": [
+        {
+          "type": "handle:TCSUpdate",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PSMSetIsPlayerControllDevice;Bool",
+      "shortName": "PSMSetIsPlayerControllDevice",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "controllsDevice",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RefreshDebug;Bool",
+      "shortName": "RefreshDebug",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "lastXYValue",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterAsCurrentObject;EntityID",
+      "shortName": "RegisterAsCurrentObject",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "entityID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterBBActiveObjectAsCurrentObject;",
+      "shortName": "RegisterBBActiveObjectAsCurrentObject",
+      "flags": 32900
+    },
+    {
+      "fullName": "RegisterObjectHandle;EntityID",
+      "shortName": "RegisterObjectHandle",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "EntID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterSystemOnInput;Bool",
+      "shortName": "RegisterSystemOnInput",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "register",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ReleaseCurrentObject;",
+      "shortName": "ReleaseCurrentObject",
+      "flags": 32900
+    },
+    {
+      "fullName": "ReturnToDeviceScreen;",
+      "shortName": "ReturnToDeviceScreen",
+      "flags": 32900
+    },
+    {
+      "fullName": "SendTSCActivateEventToEntity;Bool",
+      "shortName": "SendTSCActivateEventToEntity",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "isQuickhack",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ShowChainControls;Bool",
+      "shortName": "ShowChainControls",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "show",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ToggleToMainPlayerObject;",
+      "shortName": "ToggleToMainPlayerObject",
+      "flags": 32900
+    },
+    {
+      "fullName": "ToggleToNextControlledDevice;",
+      "shortName": "ToggleToNextControlledDevice",
+      "flags": 32900
+    },
+    {
+      "fullName": "ToggleToOtherDeviceFromChain;script_ref<SWidgetPackage>",
+      "shortName": "ToggleToOtherDeviceFromChain",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:SWidgetPackage",
+          "name": "otherPackage",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ToggleToPreviousControlledDevice;",
+      "shortName": "ToggleToPreviousControlledDevice",
+      "flags": 32900
+    },
+    {
+      "fullName": "TryFillControlBlackboard;RequestTakeControl",
+      "shortName": "TryFillControlBlackboard",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:RequestTakeControl",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TryFillControlBlackboardByForce;RequestTakeControl",
+      "shortName": "TryFillControlBlackboardByForce",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:RequestTakeControl",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

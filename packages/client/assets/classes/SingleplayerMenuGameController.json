@@ -1,0 +1,1278 @@
+{
+  "parent": "gameuiMainMenuGameController",
+  "name": "SingleplayerMenuGameController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "baseLogoContainer",
+      "group": "Logo",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "ep1LogoContainer",
+      "group": "Logo",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "gogButtonWidgetRef",
+      "group": "Buttons",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "accountSelector",
+      "group": "Buttons",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "gameVersionButton",
+      "group": "Buttons",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "patch2Notification",
+      "group": "Buttons",
+      "flags": 4297130017
+    },
+    {
+      "type": "Float",
+      "name": "patch2NotificationDelay",
+      "group": "Buttons",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "expansionBanner",
+      "group": "Expansion",
+      "flags": 4297130017
+    },
+    {
+      "type": "CName",
+      "name": "ep1IdName",
+      "group": "Expansion",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "buttonHintsManagerRef",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "continuetooltipContainer",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "tooltipsManagerRef",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "versionTextRef",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "eulaWidget",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "quitGameWidget",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "sliderWidget",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "declineButtonWidget",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "acceptButtonWidget",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "declineButtonText",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "acceptButtonText",
+      "flags": 4297130017
+    },
+    {
+      "type": "whandle:gameIOnlineSystem",
+      "name": "onlineSystem",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:inkISystemRequestsHandler",
+      "name": "requestHandler",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:ButtonHints",
+      "name": "buttonHintsController",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:ContinueGameTooltip",
+      "name": "continueGameTooltipController",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:inkWidgetLogicController",
+      "name": "expansionHintController",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:ExpansionBannerController",
+      "name": "expansionBannerController",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:inkMenuAccountLogicController",
+      "name": "accountSelectorController",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:inkTextReplaceAnimationController",
+      "name": "textAnimController",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:gameuiTooltipsManager",
+      "name": "tooltipsManager",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:gameuiGameSystemUI",
+      "name": "uiSystem",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:PatchNotesCheckData",
+      "name": "patchNotesCheckData",
+      "flags": 4431347744
+    },
+    {
+      "type": "servicesCloudSavesQueryStatus",
+      "name": "dataSyncStatus",
+      "flags": 4297130016
+    },
+    {
+      "type": "Int32",
+      "name": "savesCount",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "savesReady",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isOffline",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isModded",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isExpansionHintShown",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isMainMenuShownFirstTime",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isPatch2NotificationShown",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isReloadPopupShown",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isEp1Enabled",
+      "flags": 4297130016
+    },
+    {
+      "type": "String",
+      "name": "gameVersion",
+      "flags": 4297130016
+    },
+    {
+      "type": "CName",
+      "name": "patch2NotificationIntroName",
+      "flags": 4297130016
+    },
+    {
+      "type": "CName",
+      "name": "patch2NotificationOutroName",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "patch2NotificationAnimProxy",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "gameVersionAnim",
+      "flags": 4431347744
+    },
+    {
+      "type": "Bool",
+      "name": "eulaIsAccepted",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isEulaWindowOpened",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "eulaRead",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:inkSliderController",
+      "name": "sliderController",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:inkButtonController",
+      "name": "declineButtonController",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:inkButtonController",
+      "name": "acceptButtonController",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "eulaAnimationProxy",
+      "flags": 4431347744
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnAcceptButtonClick",
+      "shortName": "OnAcceptButtonClick",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "whandle:inkButtonController",
+          "name": "controller",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnAcceptButtonStateChanged",
+      "shortName": "OnAcceptButtonStateChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "whandle:inkButtonController",
+          "name": "controller",
+          "flags": 128
+        },
+        {
+          "type": "inkEButtonState",
+          "name": "oldState",
+          "flags": 128
+        },
+        {
+          "type": "inkEButtonState",
+          "name": "newState",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnAction",
+      "shortName": "OnAction",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "gameinputScriptListenerAction",
+          "name": "action",
+          "flags": 128
+        },
+        {
+          "type": "gameinputScriptListenerActionConsumer",
+          "name": "consumer",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnButtonPress",
+      "shortName": "OnButtonPress",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnCheckPatchNotes",
+      "shortName": "OnCheckPatchNotes",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:IScriptable",
+          "name": "userData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnCloseExpansionPopup",
+      "shortName": "OnCloseExpansionPopup",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:IScriptable",
+          "name": "userData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnClosePatchNotes",
+      "shortName": "OnClosePatchNotes",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:IScriptable",
+          "name": "userData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnCloudSavesQueryStatusChanged",
+      "shortName": "OnCloudSavesQueryStatusChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "servicesCloudSavesQueryStatus",
+          "name": "status",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnContinueButtonEnter",
+      "shortName": "OnContinueButtonEnter",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnContinueButtonLeave",
+      "shortName": "OnContinueButtonLeave",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnDeclineButtonClick",
+      "shortName": "OnDeclineButtonClick",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "whandle:inkButtonController",
+          "name": "controller",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnDeclineButtonStateChanged",
+      "shortName": "OnDeclineButtonStateChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "whandle:inkButtonController",
+          "name": "controller",
+          "flags": 128
+        },
+        {
+          "type": "inkEButtonState",
+          "name": "oldState",
+          "flags": 128
+        },
+        {
+          "type": "inkEButtonState",
+          "name": "newState",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnEulaDeclined",
+      "shortName": "OnEulaDeclined",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkanimProxy",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnEulaIsAccepted",
+      "shortName": "OnEulaIsAccepted",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkanimProxy",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnEulaReopen",
+      "shortName": "OnEulaReopen",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkanimProxy",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnEulaScrollbarValueChanged",
+      "shortName": "OnEulaScrollbarValueChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "whandle:inkSliderController",
+          "name": "sliderController",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "progress",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnExpansionBannerPressed",
+      "shortName": "OnExpansionBannerPressed",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnExpansionHintSpawned",
+      "shortName": "OnExpansionHintSpawned",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkWidget",
+          "name": "widget",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "userData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnGameVersionHoverOut",
+      "shortName": "OnGameVersionHoverOut",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnGameVersionHoverOver",
+      "shortName": "OnGameVersionHoverOver",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnGameVersionPress",
+      "shortName": "OnGameVersionPress",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnGlobalRelease",
+      "shortName": "OnGlobalRelease",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnGogPressed",
+      "shortName": "OnGogPressed",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnHideMainMenuTooltip",
+      "shortName": "OnHideMainMenuTooltip",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:IScriptable",
+          "name": "userData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnListRelease",
+      "shortName": "OnListRelease",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnMarketingConsentPopupTypeResult",
+      "shortName": "OnMarketingConsentPopupTypeResult",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "inkMarketingConsentPopupType",
+          "name": "resultType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnOnlineStatusChanged",
+      "shortName": "OnOnlineStatusChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "gameOnlineSystemStatus",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnOpenPatchNotes",
+      "shortName": "OnOpenPatchNotes",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:IScriptable",
+          "name": "userData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPatch2NotificationIntroFinished",
+      "shortName": "OnPatch2NotificationIntroFinished",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkanimProxy",
+          "name": "anim",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPatch2NotificationOutroFinished",
+      "shortName": "OnPatch2NotificationOutroFinished",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkanimProxy",
+          "name": "anim",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPurchaseDisabledError",
+      "shortName": "OnPurchaseDisabledError",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:IScriptable",
+          "name": "userData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRedrawRequested",
+      "shortName": "OnRedrawRequested",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnRetrySaveDataRequestDelay",
+      "shortName": "OnRetrySaveDataRequestDelay",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:RetrySaveDataRequestDelay",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSaveMetadataReady",
+      "shortName": "OnSaveMetadataReady",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkSaveMetadataInfo",
+          "name": "info",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSavesForLoadReady",
+      "shortName": "OnSavesForLoadReady",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "array:String",
+          "name": "saves",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSetMenuEventDispatcher",
+      "shortName": "OnSetMenuEventDispatcher",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "whandle:inkMenuEventDispatcher",
+          "name": "menuEventDispatcher",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSetUserData",
+      "shortName": "OnSetUserData",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:IScriptable",
+          "name": "userData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnShowMainMenuTooltip",
+      "shortName": "OnShowMainMenuTooltip",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:IScriptable",
+          "name": "userData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnShowOneTimeMessages",
+      "shortName": "OnShowOneTimeMessages",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:IScriptable",
+          "name": "userData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnTooltipContainerSpawned",
+      "shortName": "OnTooltipContainerSpawned",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkWidget",
+          "name": "widget",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "userData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "CheckPatchNotes;",
+      "shortName": "CheckPatchNotes",
+      "flags": 32900
+    },
+    {
+      "fullName": "DBG_ShowAccountButton;",
+      "shortName": "DBG_ShowAccountButton",
+      "flags": 32900
+    },
+    {
+      "fullName": "ExpansionBannerInteracted;",
+      "shortName": "ExpansionBannerInteracted",
+      "flags": 32900
+    },
+    {
+      "fullName": "FinishMenuInitialization;",
+      "shortName": "FinishMenuInitialization",
+      "flags": 32900
+    },
+    {
+      "fullName": "HandleMenuItemActivate;PauseMenuListItemData",
+      "shortName": "HandleMenuItemActivate",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33024,
+      "params": [
+        {
+          "type": "handle:PauseMenuListItemData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "InitializeAndShowEula;",
+      "shortName": "InitializeAndShowEula",
+      "flags": 32900
+    },
+    {
+      "fullName": "OnAcceptButtonPressed;",
+      "shortName": "OnAcceptButtonPressed",
+      "flags": 32900
+    },
+    {
+      "fullName": "OnAdditionalContentDataReloadProgress_MainMenu;Float",
+      "shortName": "OnAdditionalContentDataReloadProgress_MainMenu",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Float",
+          "name": "progress",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnAdditionalContentInstallationRequestResult_MainMenu;CNameBool",
+      "shortName": "OnAdditionalContentInstallationRequestResult_MainMenu",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "CName",
+          "name": "id",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "success",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnAdditionalContentInstallationResult_MainMenu;CNameBool",
+      "shortName": "OnAdditionalContentInstallationResult_MainMenu",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "CName",
+          "name": "id",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "success",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnAdditionalContentPurchaseResult_MainMenu;CNameBool",
+      "shortName": "OnAdditionalContentPurchaseResult_MainMenu",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "CName",
+          "name": "id",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "success",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnAdditionalContentStatusUpdateResult_MainMenu;CNameBool",
+      "shortName": "OnAdditionalContentStatusUpdateResult_MainMenu",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "CName",
+          "name": "id",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "success",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnDeclineButtonPressed;",
+      "shortName": "OnDeclineButtonPressed",
+      "flags": 32900
+    },
+    {
+      "fullName": "OnFirstTimeMainMenu;",
+      "shortName": "OnFirstTimeMainMenu",
+      "flags": 32900
+    },
+    {
+      "fullName": "OpenExpansionInfoPopup;ExpansionPopupTypeBool",
+      "shortName": "OpenExpansionInfoPopup",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "ExpansionPopupType",
+          "name": "type",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "forcibly",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OpenPatchNotesPopup;Bool",
+      "shortName": "OpenPatchNotesPopup",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "mode",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PopulateMenuItemList;",
+      "shortName": "PopulateMenuItemList",
+      "flags": 32896
+    },
+    {
+      "fullName": "PushErrorPopup;CNameCNameUint32",
+      "shortName": "PushErrorPopup",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "CName",
+          "name": "title",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "description",
+          "flags": 128
+        },
+        {
+          "type": "Uint32",
+          "name": "errorCode",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "SetButtonsVisible;Bool",
+      "shortName": "SetButtonsVisible",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "visible",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetControlsVisible;Bool",
+      "shortName": "SetControlsVisible",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "visible",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ShowActionsList;",
+      "shortName": "ShowActionsList",
+      "flags": 33024
+    },
+    {
+      "fullName": "ShowAdditionalDataInvalidError;Uint32",
+      "shortName": "ShowAdditionalDataInvalidError",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Uint32",
+          "name": "validationResult",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ShowExpansionError;ExpansionErrorType",
+      "shortName": "ShowExpansionError",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "ExpansionErrorType",
+          "name": "error",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ShowMarketingConsentPopup;inkMarketingConsentPopupType",
+      "shortName": "ShowMarketingConsentPopup",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "inkMarketingConsentPopupType",
+          "name": "type",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ShowPatch2Notification;",
+      "shortName": "ShowPatch2Notification",
+      "flags": 32900
+    },
+    {
+      "fullName": "ShowRussianLanguageDisclaimer;",
+      "shortName": "ShowRussianLanguageDisclaimer",
+      "flags": 32900
+    },
+    {
+      "fullName": "ShowSignInPopup;",
+      "shortName": "ShowSignInPopup",
+      "flags": 32900
+    },
+    {
+      "fullName": "SpawnExpansionHint;",
+      "shortName": "SpawnExpansionHint",
+      "flags": 32900
+    },
+    {
+      "fullName": "SwitchGameLogo;Bool",
+      "shortName": "SwitchGameLogo",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "isEP1Installed",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UninitializeEula;",
+      "shortName": "UninitializeEula",
+      "flags": 32900
+    },
+    {
+      "fullName": "UpdateExpansionBannerState;",
+      "shortName": "UpdateExpansionBannerState",
+      "flags": 32900
+    }
+  ]
+}

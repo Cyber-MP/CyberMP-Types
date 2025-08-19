@@ -1,0 +1,211 @@
+{
+  "parent": "gameComponent",
+  "name": "vehicleVisualCustomizationComponent",
+  "flags": 4,
+  "funcs": [
+    {
+      "fullName": "OnStoreVisualCustomizationDataForIDEvent",
+      "shortName": "OnStoreVisualCustomizationDataForIDEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:StoreVisualCustomizationDataForIDEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CanStoreVisualCustomizationTemplateType;VehicleVisualCustomizationTypeCName",
+      "shortName": "CanStoreVisualCustomizationTemplateType",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476,
+      "params": [
+        {
+          "type": "VehicleVisualCustomizationType",
+          "name": "type",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "modelName",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "DeleteVisualCustomizationTemplate;VehicleVisualCustomizationTemplateCName",
+      "shortName": "DeleteVisualCustomizationTemplate",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "VehicleVisualCustomizationTemplate",
+          "name": "template",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "modelName",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "GetMaxNumberOfVisualCustomizationTemplates;VehicleVisualCustomizationType",
+      "shortName": "GetMaxNumberOfVisualCustomizationTemplates",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "VehicleVisualCustomizationType",
+          "name": "type",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetMyPS;",
+      "shortName": "GetMyPS",
+      "return": {
+        "type": "handle:vehicleVisualCustomizationComponentPS",
+        "flags": 64
+      },
+      "flags": 41092
+    },
+    {
+      "fullName": "GetNumberOfStoredVisualCustomizationTemplates;VehicleVisualCustomizationTypeCName",
+      "shortName": "GetNumberOfStoredVisualCustomizationTemplates",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 41476,
+      "params": [
+        {
+          "type": "VehicleVisualCustomizationType",
+          "name": "type",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "modelName",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "GetOwner;",
+      "shortName": "GetOwner",
+      "return": {
+        "type": "handle:gameObject",
+        "flags": 64
+      },
+      "flags": 41092
+    },
+    {
+      "fullName": "GetStoredVisualCustomizationTemplate;VehicleVisualCustomizationTypeInt32CName",
+      "shortName": "GetStoredVisualCustomizationTemplate",
+      "return": {
+        "type": "VehicleVisualCustomizationTemplate",
+        "flags": 64
+      },
+      "flags": 41476,
+      "params": [
+        {
+          "type": "VehicleVisualCustomizationType",
+          "name": "type",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "modelName",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "HasVisualCustomizationTemplateStored;VehicleVisualCustomizationTemplateCName",
+      "shortName": "HasVisualCustomizationTemplateStored",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476,
+      "params": [
+        {
+          "type": "VehicleVisualCustomizationTemplate",
+          "name": "visualCustomization",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "modelName",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "OnGameAttach;",
+      "shortName": "OnGameAttach",
+      "flags": 33284
+    },
+    {
+      "fullName": "RemoveCorruptedTemplates;",
+      "shortName": "RemoveCorruptedTemplates",
+      "flags": 32900
+    },
+    {
+      "fullName": "RetrieveVisualCustomizationForVehicle;TweakDBID",
+      "shortName": "RetrieveVisualCustomizationForVehicle",
+      "return": {
+        "type": "VehicleVisualCustomizationTemplate",
+        "flags": 64
+      },
+      "flags": 41476,
+      "params": [
+        {
+          "type": "TweakDBID",
+          "name": "vehicleID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "StoreVisualCustomizationTemplate;VehicleVisualCustomizationTemplateCName",
+      "shortName": "StoreVisualCustomizationTemplate",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "VehicleVisualCustomizationTemplate",
+          "name": "template",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "modelName",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateStoredLegacyTemplates;",
+      "shortName": "UpdateStoredLegacyTemplates",
+      "flags": 32900
+    }
+  ]
+}

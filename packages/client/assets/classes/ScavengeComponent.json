@@ -1,0 +1,76 @@
+{
+  "parent": "gameScriptableComponent",
+  "name": "ScavengeComponent",
+  "flags": 4,
+  "props": [
+    {
+      "type": "array:whandle:gameObject",
+      "name": "scavengeTargets",
+      "flags": 6583222304
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnScavengeTargetReceived",
+      "shortName": "OnScavengeTargetReceived",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:ScavengeTargetConfirmEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSenseVisibilityEvent",
+      "shortName": "OnSenseVisibilityEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:senseVisibilityEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnTargetScavenged",
+      "shortName": "OnTargetScavenged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:TargetScavengedEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetScavengeTargets;",
+      "shortName": "GetScavengeTargets",
+      "return": {
+        "type": "array:whandle:gameObject",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "OnGameAttach;",
+      "shortName": "OnGameAttach",
+      "flags": 34308
+    }
+  ]
+}

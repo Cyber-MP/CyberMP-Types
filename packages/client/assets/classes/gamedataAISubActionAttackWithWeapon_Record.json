@@ -1,0 +1,231 @@
+{
+  "parent": "gamedataAISubAction_Record",
+  "name": "gamedataAISubActionAttackWithWeapon_Record",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "Attack",
+      "shortName": "Attack",
+      "return": {
+        "type": "whandle:gamedataAttack_Record",
+        "flags": 64
+      },
+      "index": 3036,
+      "flags": 1
+    },
+    {
+      "fullName": "AttackDuration",
+      "shortName": "AttackDuration",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 3047,
+      "flags": 1
+    },
+    {
+      "fullName": "AttackHandle",
+      "shortName": "AttackHandle",
+      "return": {
+        "type": "handle:gamedataAttack_Record",
+        "flags": 64
+      },
+      "index": 3037,
+      "flags": 1
+    },
+    {
+      "fullName": "AttackInitRange",
+      "shortName": "AttackInitRange",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 3054,
+      "flags": 1
+    },
+    {
+      "fullName": "AttackName",
+      "shortName": "AttackName",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "index": 3043,
+      "flags": 1
+    },
+    {
+      "fullName": "AttackRange",
+      "shortName": "AttackRange",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 3050,
+      "flags": 1
+    },
+    {
+      "fullName": "AttackTime",
+      "shortName": "AttackTime",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 3051,
+      "flags": 1
+    },
+    {
+      "fullName": "AttackWidth",
+      "shortName": "AttackWidth",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 3053,
+      "flags": 1
+    },
+    {
+      "fullName": "AxisLowerMargin",
+      "shortName": "AxisLowerMargin",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 3049,
+      "flags": 1
+    },
+    {
+      "fullName": "AxisUpperMargin",
+      "shortName": "AxisUpperMargin",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 3048,
+      "flags": 1
+    },
+    {
+      "fullName": "ColliderBoxSize",
+      "shortName": "ColliderBoxSize",
+      "return": {
+        "type": "Vector3",
+        "flags": 64
+      },
+      "index": 3044,
+      "flags": 1
+    },
+    {
+      "fullName": "ConeDirection",
+      "shortName": "ConeDirection",
+      "return": {
+        "type": "Vector3",
+        "flags": 64
+      },
+      "index": 3045,
+      "flags": 1
+    },
+    {
+      "fullName": "ConeHalfAngle",
+      "shortName": "ConeHalfAngle",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 3052,
+      "flags": 1
+    },
+    {
+      "fullName": "GetWeaponSlotsCount",
+      "shortName": "GetWeaponSlotsCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 3039,
+      "flags": 1
+    },
+    {
+      "fullName": "GetWeaponSlotsItem",
+      "shortName": "GetWeaponSlotsItem",
+      "return": {
+        "type": "whandle:gamedataAttachmentSlot_Record",
+        "flags": 64
+      },
+      "index": 3040,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetWeaponSlotsItemHandle",
+      "shortName": "GetWeaponSlotsItemHandle",
+      "return": {
+        "type": "handle:gamedataAttachmentSlot_Record",
+        "flags": 64
+      },
+      "index": 3041,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PositionOffset",
+      "shortName": "PositionOffset",
+      "return": {
+        "type": "Vector3",
+        "flags": 64
+      },
+      "index": 3046,
+      "flags": 1
+    },
+    {
+      "fullName": "StopContinuousAttackOnDurationEnd",
+      "shortName": "StopContinuousAttackOnDurationEnd",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 3055,
+      "flags": 1
+    },
+    {
+      "fullName": "WeaponSlots",
+      "shortName": "WeaponSlots",
+      "index": 3038,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataAttachmentSlot_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "WeaponSlotsContains",
+      "shortName": "WeaponSlotsContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 3042,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataAttachmentSlot_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

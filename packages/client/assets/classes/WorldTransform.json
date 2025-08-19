@@ -1,0 +1,433 @@
+{
+  "name": "WorldTransform",
+  "flags": 18,
+  "props": [
+    {
+      "type": "WorldPosition",
+      "name": "Position",
+      "flags": 6694125569
+    },
+    {
+      "type": "Quaternion",
+      "name": "Orientation",
+      "flags": 6694125569
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "GetForward",
+      "shortName": "GetForward",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "index": 906,
+      "flags": 3,
+      "params": [
+        {
+          "type": "WorldTransform",
+          "name": "xform",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetInverse",
+      "shortName": "GetInverse",
+      "return": {
+        "type": "WorldTransform",
+        "flags": 64
+      },
+      "index": 905,
+      "flags": 3,
+      "params": [
+        {
+          "type": "WorldTransform",
+          "name": "xform",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetOrientation",
+      "shortName": "GetOrientation",
+      "return": {
+        "type": "Quaternion",
+        "flags": 64
+      },
+      "index": 904,
+      "flags": 3,
+      "params": [
+        {
+          "type": "WorldTransform",
+          "name": "xform",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetRight",
+      "shortName": "GetRight",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "index": 907,
+      "flags": 3,
+      "params": [
+        {
+          "type": "WorldTransform",
+          "name": "xform",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetUp",
+      "shortName": "GetUp",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "index": 908,
+      "flags": 3,
+      "params": [
+        {
+          "type": "WorldTransform",
+          "name": "xform",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetWorldPosition",
+      "shortName": "GetWorldPosition",
+      "return": {
+        "type": "WorldPosition",
+        "flags": 64
+      },
+      "index": 903,
+      "flags": 3,
+      "params": [
+        {
+          "type": "WorldTransform",
+          "name": "xform",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetIdentity",
+      "shortName": "SetIdentity",
+      "index": 889,
+      "flags": 3,
+      "params": [
+        {
+          "type": "WorldTransform",
+          "name": "xform",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetOrientation",
+      "shortName": "SetOrientation",
+      "index": 892,
+      "flags": 3,
+      "params": [
+        {
+          "type": "WorldTransform",
+          "name": "xform",
+          "flags": 128
+        },
+        {
+          "type": "Quaternion",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetOrientationEuler",
+      "shortName": "SetOrientationEuler",
+      "index": 893,
+      "flags": 3,
+      "params": [
+        {
+          "type": "WorldTransform",
+          "name": "xform",
+          "flags": 128
+        },
+        {
+          "type": "EulerAngles",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetOrientationFromDir",
+      "shortName": "SetOrientationFromDir",
+      "index": 894,
+      "flags": 3,
+      "params": [
+        {
+          "type": "WorldTransform",
+          "name": "xform",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetPosition",
+      "shortName": "SetPosition",
+      "index": 891,
+      "flags": 3,
+      "params": [
+        {
+          "type": "WorldTransform",
+          "name": "xform",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetWorldPosition",
+      "shortName": "SetWorldPosition",
+      "index": 890,
+      "flags": 3,
+      "params": [
+        {
+          "type": "WorldTransform",
+          "name": "xform",
+          "flags": 128
+        },
+        {
+          "type": "WorldPosition",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ToMatrix",
+      "shortName": "ToMatrix",
+      "return": {
+        "type": "Matrix",
+        "flags": 64
+      },
+      "index": 909,
+      "flags": 3,
+      "params": [
+        {
+          "type": "WorldTransform",
+          "name": "xform",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TransformInvPoint",
+      "shortName": "TransformInvPoint",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "index": 901,
+      "flags": 3,
+      "params": [
+        {
+          "type": "WorldTransform",
+          "name": "xform",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TransformInvWorldPosition",
+      "shortName": "TransformInvWorldPosition",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "index": 902,
+      "flags": 3,
+      "params": [
+        {
+          "type": "WorldTransform",
+          "name": "xform",
+          "flags": 128
+        },
+        {
+          "type": "WorldPosition",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TransformInvWorldXForm",
+      "shortName": "TransformInvWorldXForm",
+      "return": {
+        "type": "Transform",
+        "flags": 64
+      },
+      "index": 899,
+      "flags": 3,
+      "params": [
+        {
+          "type": "WorldTransform",
+          "name": "xform",
+          "flags": 128
+        },
+        {
+          "type": "WorldTransform",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TransformInvXForm",
+      "shortName": "TransformInvXForm",
+      "return": {
+        "type": "Transform",
+        "flags": 64
+      },
+      "index": 900,
+      "flags": 3,
+      "params": [
+        {
+          "type": "WorldTransform",
+          "name": "xform",
+          "flags": 128
+        },
+        {
+          "type": "Transform",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TransformPoint",
+      "shortName": "TransformPoint",
+      "return": {
+        "type": "WorldPosition",
+        "flags": 64
+      },
+      "index": 897,
+      "flags": 3,
+      "params": [
+        {
+          "type": "WorldTransform",
+          "name": "xform",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TransformWorldPosition",
+      "shortName": "TransformWorldPosition",
+      "return": {
+        "type": "WorldPosition",
+        "flags": 64
+      },
+      "index": 898,
+      "flags": 3,
+      "params": [
+        {
+          "type": "WorldTransform",
+          "name": "xform",
+          "flags": 128
+        },
+        {
+          "type": "WorldPosition",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TransformWorldXForm",
+      "shortName": "TransformWorldXForm",
+      "return": {
+        "type": "WorldTransform",
+        "flags": 64
+      },
+      "index": 896,
+      "flags": 3,
+      "params": [
+        {
+          "type": "WorldTransform",
+          "name": "xform",
+          "flags": 128
+        },
+        {
+          "type": "WorldTransform",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TransformXForm",
+      "shortName": "TransformXForm",
+      "return": {
+        "type": "WorldTransform",
+        "flags": 64
+      },
+      "index": 895,
+      "flags": 3,
+      "params": [
+        {
+          "type": "WorldTransform",
+          "name": "xform",
+          "flags": 128
+        },
+        {
+          "type": "Transform",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "_ToXForm",
+      "shortName": "_ToXForm",
+      "return": {
+        "type": "Transform",
+        "flags": 64
+      },
+      "index": 910,
+      "flags": 3,
+      "params": [
+        {
+          "type": "WorldTransform",
+          "name": "xform",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

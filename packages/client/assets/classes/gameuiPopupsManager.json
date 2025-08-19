@@ -1,0 +1,1122 @@
+{
+  "parent": "gameuiWidgetGameController",
+  "name": "gameuiPopupsManager",
+  "flags": 2,
+  "props": [
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "bracketsContainer",
+      "group": "Tutorial Brackets",
+      "flags": 6627016705
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "tutorialOverlayContainer",
+      "group": "Tutorial Brackets",
+      "flags": 6627016705
+    },
+    {
+      "type": "CName",
+      "name": "bracketLibraryID",
+      "group": "Tutorial Brackets",
+      "flags": 6627016705
+    },
+    {
+      "type": "whandle:gameIBlackboard",
+      "name": "blackboard",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:UIGameDataDef",
+      "name": "bbDefinition",
+      "flags": 4431347744
+    },
+    {
+      "type": "whandle:gameJournalManager",
+      "name": "journalManager",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:gameuiGameSystemUI",
+      "name": "uiSystem",
+      "flags": 4431347744
+    },
+    {
+      "type": "whandle:gameIBlackboard",
+      "name": "uiSystemBB",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:UI_SystemDef",
+      "name": "uiSystemBBDef",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "uiSystemId",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "isShownBbId",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "dataBbId",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "photomodeActiveId",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "phoneActiveId",
+      "flags": 4431347744
+    },
+    {
+      "type": "Bool",
+      "name": "tutorialOnHold",
+      "flags": 4297130016
+    },
+    {
+      "type": "gamePopupData",
+      "name": "tutorialData",
+      "flags": 4297130016
+    },
+    {
+      "type": "gamePopupSettings",
+      "name": "tutorialSettings",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "phoneMessageOnHold",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:JournalNotificationData",
+      "name": "phoneMessageData",
+      "flags": 4431347744
+    },
+    {
+      "type": "Bool",
+      "name": "shardReadOnHold",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:NotifyShardRead",
+      "name": "shardReadData",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkFrameNotificationData",
+      "name": "smartFrameData",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkGameNotificationData",
+      "name": "vehicleColorSelectorData",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkGameNotificationToken",
+      "name": "tutorialToken",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkGameNotificationToken",
+      "name": "phoneMessageToken",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkGameNotificationToken",
+      "name": "shardToken",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkGameNotificationToken",
+      "name": "vehiclesManagerToken",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkGameNotificationToken",
+      "name": "vehicleRadioToken",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkGameNotificationToken",
+      "name": "codexToken",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkGameNotificationToken",
+      "name": "ponrToken",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkGameNotificationToken",
+      "name": "twintoneOverride",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkGameNotificationToken",
+      "name": "expansionToken",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkGameNotificationToken",
+      "name": "expansionErrorToken",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkGameNotificationToken",
+      "name": "patchNotesToken",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkGameNotificationToken",
+      "name": "marketingConsentToken",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkGameNotificationToken",
+      "name": "signInToken",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkGameNotificationToken",
+      "name": "expansionStateToken",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkGameNotificationToken",
+      "name": "vehicleVisualCustomizationSelectorToken",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkGameNotificationToken",
+      "name": "frameSwitcherToken",
+      "flags": 4431347744
+    },
+    {
+      "type": "Bool",
+      "name": "isInMenu",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isInPhotoMode",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isOnPhone",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isBlockingPopupOpened",
+      "flags": 4297130016
+    },
+    {
+      "type": "array:handle:inkGameNotificationData",
+      "name": "popUpQueue",
+      "flags": 6583025696
+    },
+    {
+      "type": "Bool",
+      "name": "activePopUp",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "ChangeTutorialVisibility",
+      "shortName": "ChangeTutorialVisibility",
+      "index": 14761,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "hideTutorial",
+          "flags": 128
+        },
+        {
+          "type": "gameuiTutorialHiddenReason",
+          "name": "reason",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ChangeTutorialVisibilityInMenu",
+      "shortName": "ChangeTutorialVisibilityInMenu",
+      "index": 14760,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "isInMenu",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnAdditionalContentDataReloadProgress",
+      "shortName": "OnAdditionalContentDataReloadProgress",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Float",
+          "name": "progress",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnAdditionalContentInstallationRequestResult",
+      "shortName": "OnAdditionalContentInstallationRequestResult",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "CName",
+          "name": "id",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "success",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnAdditionalContentInstallationResult",
+      "shortName": "OnAdditionalContentInstallationResult",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "CName",
+          "name": "id",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "success",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnClosePonRRewardsScreen",
+      "shortName": "OnClosePonRRewardsScreen",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkGameNotificationData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnCloseTwintoneOverrideScreen",
+      "shortName": "OnCloseTwintoneOverrideScreen",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkGameNotificationData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnCodexPopupCloseRequest",
+      "shortName": "OnCodexPopupCloseRequest",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkGameNotificationData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnCodexPopupRequest",
+      "shortName": "OnCodexPopupRequest",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:OpenCodexPopupEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnExpansionErrorPopupCloseRequest",
+      "shortName": "OnExpansionErrorPopupCloseRequest",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkGameNotificationData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnExpansionErrorPopupRequest",
+      "shortName": "OnExpansionErrorPopupRequest",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:OpenExpansionErrorPopupEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnExpansionPopupCloseRequest",
+      "shortName": "OnExpansionPopupCloseRequest",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkGameNotificationData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnExpansionPopupRequest",
+      "shortName": "OnExpansionPopupRequest",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:OpenExpansionPopupEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnExpansionStatePopupCloseRequest",
+      "shortName": "OnExpansionStatePopupCloseRequest",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkGameNotificationData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnFrameSwitcherCloseRequest",
+      "shortName": "OnFrameSwitcherCloseRequest",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkFrameNotificationData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnFrameSwitcherEvent",
+      "shortName": "OnFrameSwitcherEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:FrameSwitcherEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnMarketingConsentPopupCloseRequest",
+      "shortName": "OnMarketingConsentPopupCloseRequest",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkGameNotificationData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnMarketingConsentPopupRequest",
+      "shortName": "OnMarketingConsentPopupRequest",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:MarketingConsentPopupEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnMenuUpdate",
+      "shortName": "OnMenuUpdate",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "isInMenu",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnMessagePopupUseCloseRequest",
+      "shortName": "OnMessagePopupUseCloseRequest",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkGameNotificationData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPatchNotesPopupCloseRequest",
+      "shortName": "OnPatchNotesPopupCloseRequest",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkGameNotificationData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPatchNotesPopupRequest",
+      "shortName": "OnPatchNotesPopupRequest",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:OpenPatchNotesPopupEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPhoneMessageHideRequest",
+      "shortName": "OnPhoneMessageHideRequest",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:PhoneMessageHidePopupEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPhoneMessageShowRequest",
+      "shortName": "OnPhoneMessageShowRequest",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:PhoneMessagePopupEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPhoneUpdate",
+      "shortName": "OnPhoneUpdate",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "isOnPhone",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPhotomodeUpdate",
+      "shortName": "OnPhotomodeUpdate",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "isInPhotomode",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPlayerAttach",
+      "shortName": "OnPlayerAttach",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "playerPuppet",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPlayerDetach",
+      "shortName": "OnPlayerDetach",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "playerPuppet",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPopupCloseRequest",
+      "shortName": "OnPopupCloseRequest",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkGameNotificationData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnQuickSlotButtonHoldStartEvent",
+      "shortName": "OnQuickSlotButtonHoldStartEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:QuickSlotButtonHoldStartEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnShardRead",
+      "shortName": "OnShardRead",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:NotifyShardRead",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnShardReadClosed",
+      "shortName": "OnShardReadClosed",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkGameNotificationData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSignInPopupCloseRequest",
+      "shortName": "OnSignInPopupCloseRequest",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkGameNotificationData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSignInPopupRequest",
+      "shortName": "OnSignInPopupRequest",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:SignInPopupEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSpawnPonRRewardsScreen",
+      "shortName": "OnSpawnPonRRewardsScreen",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:questShowPointOfNoReturnPromptEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSpawnTwintoneOverride",
+      "shortName": "OnSpawnTwintoneOverride",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:ShowTwintoneOverrideEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnUpdateData",
+      "shortName": "OnUpdateData",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Variant",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUpdateVisibility",
+      "shortName": "OnUpdateVisibility",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnVehicleRadioCloseRequest",
+      "shortName": "OnVehicleRadioCloseRequest",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkGameNotificationData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnVehicleVisualCustomizationCloseRequest",
+      "shortName": "OnVehicleVisualCustomizationCloseRequest",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkGameNotificationData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnVehiclesManagerCloseRequest",
+      "shortName": "OnVehiclesManagerCloseRequest",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkGameNotificationData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CanShowExclusivePopUp;",
+      "shortName": "CanShowExclusivePopUp",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "HideExclusivePopUps;",
+      "shortName": "HideExclusivePopUps",
+      "flags": 32900
+    },
+    {
+      "fullName": "NotifyFrameCancel;inkFrameNotificationData",
+      "shortName": "NotifyFrameCancel",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:inkFrameNotificationData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "NotifyFrameSwitch;inkFrameNotificationData",
+      "shortName": "NotifyFrameSwitch",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:inkFrameNotificationData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessCrackableShardTutorial;",
+      "shortName": "ProcessCrackableShardTutorial",
+      "flags": 33284
+    },
+    {
+      "fullName": "ProcessQueue;",
+      "shortName": "ProcessQueue",
+      "flags": 33284
+    },
+    {
+      "fullName": "SendPSMRadialCloseRequest;",
+      "shortName": "SendPSMRadialCloseRequest",
+      "flags": 32900
+    },
+    {
+      "fullName": "SetPhoneMessageVisibility;Bool",
+      "shortName": "SetPhoneMessageVisibility",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "hideToken",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetShardReadVisibility;Bool",
+      "shortName": "SetShardReadVisibility",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "hideToken",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetTutorialTokenVisibility;Bool",
+      "shortName": "SetTutorialTokenVisibility",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "hideToken",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ShardRead;",
+      "shortName": "ShardRead",
+      "flags": 33284
+    },
+    {
+      "fullName": "ShowActionBlockedNotification;",
+      "shortName": "ShowActionBlockedNotification",
+      "flags": 32900
+    },
+    {
+      "fullName": "ShowExpansionPopup;ExpansionStatusExpansionPopupType",
+      "shortName": "ShowExpansionPopup",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "ExpansionStatus",
+          "name": "state",
+          "flags": 128
+        },
+        {
+          "type": "ExpansionPopupType",
+          "name": "type",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ShowExpansionStateGameNotificationRequest;ExpansionStatus",
+      "shortName": "ShowExpansionStateGameNotificationRequest",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "ExpansionStatus",
+          "name": "state",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ShowExpansionStatePopupRequest;ExpansionStatus",
+      "shortName": "ShowExpansionStatePopupRequest",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "ExpansionStatus",
+          "name": "state",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ShowMarketingConsentPopup;inkMarketingConsentPopupType",
+      "shortName": "ShowMarketingConsentPopup",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "inkMarketingConsentPopupType",
+          "name": "type",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ShowPatchNotesPopup;",
+      "shortName": "ShowPatchNotesPopup",
+      "flags": 33284
+    },
+    {
+      "fullName": "ShowPhoneMessage;",
+      "shortName": "ShowPhoneMessage",
+      "flags": 33284
+    },
+    {
+      "fullName": "ShowSignInPopup;",
+      "shortName": "ShowSignInPopup",
+      "flags": 33284
+    },
+    {
+      "fullName": "ShowTutorial;",
+      "shortName": "ShowTutorial",
+      "flags": 32900
+    },
+    {
+      "fullName": "SpawnVehicleRadioPopup;",
+      "shortName": "SpawnVehicleRadioPopup",
+      "flags": 32900
+    },
+    {
+      "fullName": "SpawnVehicleVisualCustomizationSelectorPopup;",
+      "shortName": "SpawnVehicleVisualCustomizationSelectorPopup",
+      "flags": 32900
+    },
+    {
+      "fullName": "SpawnVehiclesManagerPopup;",
+      "shortName": "SpawnVehiclesManagerPopup",
+      "flags": 32900
+    },
+    {
+      "fullName": "TrySpawnPocketRadioPopup;",
+      "shortName": "TrySpawnPocketRadioPopup",
+      "flags": 32900
+    },
+    {
+      "fullName": "TrySpawnVehicleRadioPopup;",
+      "shortName": "TrySpawnVehicleRadioPopup",
+      "flags": 32900
+    },
+    {
+      "fullName": "TrySpawnVehicleVisualCustomizationSelectorPopup;",
+      "shortName": "TrySpawnVehicleVisualCustomizationSelectorPopup",
+      "flags": 32900
+    }
+  ]
+}

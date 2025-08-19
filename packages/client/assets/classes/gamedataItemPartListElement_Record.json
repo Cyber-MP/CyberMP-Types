@@ -1,0 +1,111 @@
+{
+  "parent": "gamedataTweakDBRecord",
+  "name": "gamedataItemPartListElement_Record",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "GetStatModifierWeightCount",
+      "shortName": "GetStatModifierWeightCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 2624,
+      "flags": 1
+    },
+    {
+      "fullName": "GetStatModifierWeightItem",
+      "shortName": "GetStatModifierWeightItem",
+      "return": {
+        "type": "whandle:gamedataStatModifier_Record",
+        "flags": 64
+      },
+      "index": 2625,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetStatModifierWeightItemHandle",
+      "shortName": "GetStatModifierWeightItemHandle",
+      "return": {
+        "type": "handle:gamedataStatModifier_Record",
+        "flags": 64
+      },
+      "index": 2626,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Item",
+      "shortName": "Item",
+      "return": {
+        "type": "whandle:gamedataItem_Record",
+        "flags": 64
+      },
+      "index": 2621,
+      "flags": 1
+    },
+    {
+      "fullName": "ItemHandle",
+      "shortName": "ItemHandle",
+      "return": {
+        "type": "handle:gamedataItem_Record",
+        "flags": 64
+      },
+      "index": 2622,
+      "flags": 1
+    },
+    {
+      "fullName": "StatModifierWeight",
+      "shortName": "StatModifierWeight",
+      "index": 2623,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataStatModifier_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "StatModifierWeightContains",
+      "shortName": "StatModifierWeightContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 2627,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataStatModifier_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Weight",
+      "shortName": "Weight",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 2628,
+      "flags": 1
+    }
+  ]
+}

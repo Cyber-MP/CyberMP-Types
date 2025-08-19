@@ -1,0 +1,136 @@
+{
+  "parent": "DeviceActionWidgetControllerBase",
+  "name": "PayActionWidgetController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkWidgetReference",
+      "name": "priceContainer",
+      "group": "Widget Refs",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "moneyStatusContainer",
+      "group": "Widget Refs",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "processingStatusContainer",
+      "group": "Widget Refs",
+      "flags": 4297195553
+    },
+    {
+      "type": "CName",
+      "name": "moneyStatusAnimName",
+      "group": "Animations",
+      "flags": 4297195553
+    },
+    {
+      "type": "CName",
+      "name": "processingAnimName",
+      "group": "Animations",
+      "flags": 4297195553
+    },
+    {
+      "type": "Bool",
+      "name": "isProcessingPayment",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnNoMoneyShowed",
+      "shortName": "OnNoMoneyShowed",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkanimProxy",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPaymentProcessed",
+      "shortName": "OnPaymentProcessed",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkanimProxy",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CanExecuteAction;",
+      "shortName": "CanExecuteAction",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "FinalizeActionExecution;GameObjectDeviceAction",
+      "shortName": "FinalizeActionExecution",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "executor",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamedeviceAction",
+          "name": "action",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Initialize;DeviceInkGameControllerBasescript_ref<SActionWidgetPackage>",
+      "shortName": "Initialize",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "handle:DeviceInkGameControllerBase",
+          "name": "gameController",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:SActionWidgetPackage",
+          "name": "widgetData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessPayment;PayGameObject",
+      "shortName": "ProcessPayment",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:Pay",
+          "name": "action",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameObject",
+          "name": "executor",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

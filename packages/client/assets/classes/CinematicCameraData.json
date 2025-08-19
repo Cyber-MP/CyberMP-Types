@@ -1,0 +1,110 @@
+{
+  "name": "CinematicCameraData",
+  "flags": 8,
+  "props": [
+    {
+      "type": "handle:vehicleCinematicCameraComponent",
+      "name": "cameraComponent",
+      "flags": 4429447200
+    },
+    {
+      "type": "handle:vehicleCinematicCameraShot",
+      "name": "currentShot",
+      "flags": 4429447200
+    },
+    {
+      "type": "WorldTransform",
+      "name": "shotInitialTransform",
+      "flags": 4295229472
+    },
+    {
+      "type": "WorldTransform",
+      "name": "vehicleInitialTransform",
+      "flags": 4295229472
+    },
+    {
+      "type": "Box",
+      "name": "referenceLocalBoundingBox",
+      "flags": 4295229472
+    },
+    {
+      "type": "Box",
+      "name": "currentLocalBoundingBox",
+      "flags": 4295229472
+    },
+    {
+      "type": "Float",
+      "name": "shotStartTime",
+      "flags": 4295229472
+    },
+    {
+      "type": "WorldTransform",
+      "name": "shotRootTransform",
+      "flags": 4295229472
+    },
+    {
+      "type": "WorldTransform",
+      "name": "shotSpaceTransform",
+      "flags": 4295229472
+    },
+    {
+      "type": "WorldTransform",
+      "name": "vehicleTransform",
+      "flags": 4295229472
+    },
+    {
+      "type": "Float",
+      "name": "vehicleSpeed",
+      "flags": 4295229472
+    },
+    {
+      "type": "Float",
+      "name": "currentTime",
+      "flags": 4295229472
+    },
+    {
+      "type": "Float",
+      "name": "deltaTime",
+      "flags": 4295229472
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "CinematicCameraData::GetShotScaleRatios;CinematicCameraData",
+      "shortName": "GetShotScaleRatios",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "CinematicCameraData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CinematicCameraData::ScaleTransformForVehicle;CinematicCameraDataTransform",
+      "shortName": "ScaleTransformForVehicle",
+      "return": {
+        "type": "Transform",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "CinematicCameraData",
+          "name": "data",
+          "flags": 128
+        },
+        {
+          "type": "Transform",
+          "name": "transform",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

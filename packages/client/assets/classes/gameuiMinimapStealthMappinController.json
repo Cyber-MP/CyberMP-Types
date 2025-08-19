@@ -1,0 +1,441 @@
+{
+  "parent": "gameuiBaseMinimapMappinController",
+  "name": "gameuiMinimapStealthMappinController",
+  "flags": 2,
+  "props": [
+    {
+      "type": "inkImageWidgetReference",
+      "name": "visionConeWidget",
+      "group": "Widgets",
+      "flags": 6627016705
+    },
+    {
+      "type": "whandle:gamemappinsStealthMappin",
+      "name": "stealthMappin",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "fadeOutAnim",
+      "flags": 4431347744
+    },
+    {
+      "type": "Bool",
+      "name": "isTagged",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "wasVisible",
+      "flags": 4297130016
+    },
+    {
+      "type": "CName",
+      "name": "mappinState",
+      "flags": 4297130016
+    },
+    {
+      "type": "CName",
+      "name": "preventionState",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "hasBeenLooted",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isAggressive",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "detectionAboveZero",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isAlive",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "wasAlive",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "wasCompanion",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "couldSeePlayer",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isPrevention",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isCrowdNPC",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "cautious",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "shouldShowVisionCone",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isDevice",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isCamera",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isTurret",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isNetrunner",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isHacking",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isSquadInCombat",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "wasSquadInCombat",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "clampingAvailable",
+      "flags": 4297130016
+    },
+    {
+      "type": "Float",
+      "name": "defaultOpacity",
+      "flags": 4297130016
+    },
+    {
+      "type": "Float",
+      "name": "adjustedOpacity",
+      "flags": 4297130016
+    },
+    {
+      "type": "Float",
+      "name": "defaultConeOpacity",
+      "flags": 4297130016
+    },
+    {
+      "type": "Float",
+      "name": "detectingConeOpacity",
+      "flags": 4297130016
+    },
+    {
+      "type": "Uint32",
+      "name": "highestLootQuality",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "lockLootQuality",
+      "flags": 4297130016
+    },
+    {
+      "type": "gamedataNPCHighLevelState",
+      "name": "highLevelState",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:inkWidget",
+      "name": "iconWidgetGlitch",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:inkWidget",
+      "name": "visionConeWidgetGlitch",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:inkWidget",
+      "name": "clampArrowWidgetGlitch",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:gameIBlackboard",
+      "name": "puppetStateBlackboard",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isInVehicleStance",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "stanceStateCb",
+      "flags": 4431347744
+    },
+    {
+      "type": "Bool",
+      "name": "policeChasePrototypeEnabled",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:PreventionMinimapMappinComponent",
+      "name": "preventionMinimapMappinComponent",
+      "flags": 4431347744
+    },
+    {
+      "type": "CName",
+      "name": "preventionVisionConeColor",
+      "flags": 4297130017
+    },
+    {
+      "type": "Float",
+      "name": "preventionDetectionDropThreshold",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "wasMaxDetectionReached",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "showAnim",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "alertedAnim",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "preventionAnimProxy",
+      "flags": 4431347744
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnFadeOutAnimFinished",
+      "shortName": "OnFadeOutAnimFinished",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkanimProxy",
+          "name": "proxy",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnIntro",
+      "shortName": "OnIntro",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnPreventionAnimLoop",
+      "shortName": "OnPreventionAnimLoop",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkanimProxy",
+          "name": "anim",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnStanceStateChanged",
+      "shortName": "OnStanceStateChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnUpdate",
+      "shortName": "OnUpdate",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "ComputeRootState;",
+      "shortName": "ComputeRootState",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 33024
+    },
+    {
+      "fullName": "FadeOut;",
+      "shortName": "FadeOut",
+      "flags": 33028
+    },
+    {
+      "fullName": "GetPreventionMapinState;",
+      "shortName": "GetPreventionMapinState",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 33028
+    },
+    {
+      "fullName": "GetStateForAttitude;EAIAttitudeBool",
+      "shortName": "GetStateForAttitude",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 33028,
+      "params": [
+        {
+          "type": "EAIAttitude",
+          "name": "attitude",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "canSeePlayer",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Intro;",
+      "shortName": "Intro",
+      "flags": 33024
+    },
+    {
+      "fullName": "IsVehicleStance;gamedataNPCStanceState",
+      "shortName": "IsVehicleStance",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "gamedataNPCStanceState",
+          "name": "stance",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PlayPreventionAnim;",
+      "shortName": "PlayPreventionAnim",
+      "flags": 32900
+    },
+    {
+      "fullName": "RequestUpdateRootState;",
+      "shortName": "RequestUpdateRootState",
+      "flags": 33284
+    },
+    {
+      "fullName": "StopPreventionAnim;",
+      "shortName": "StopPreventionAnim",
+      "flags": 32900
+    },
+    {
+      "fullName": "ToggleVisionConeVisibility;Bool",
+      "shortName": "ToggleVisionConeVisibility",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "shouldShowVisionCone",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Update;",
+      "shortName": "Update",
+      "flags": 33024
+    },
+    {
+      "fullName": "UpdateAboveBelowVerticalRelation;",
+      "shortName": "UpdateAboveBelowVerticalRelation",
+      "flags": 33024
+    },
+    {
+      "fullName": "UpdateClamping;",
+      "shortName": "UpdateClamping",
+      "flags": 33024
+    },
+    {
+      "fullName": "UpdateVisionWidgetVisiblity;",
+      "shortName": "UpdateVisionWidgetVisiblity",
+      "flags": 33284
+    }
+  ]
+}

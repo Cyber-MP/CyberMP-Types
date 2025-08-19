@@ -1,0 +1,454 @@
+{
+  "parent": "AGenericTooltipControllerWithDebug",
+  "name": "ProgramTooltipController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "backgroundContainer",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "equipedWrapper",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "equipedCorner",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "recipeWrapper",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "recipeBG",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "root",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "nameText",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "nameTextContainer",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "nameForRecipeText",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "tierText",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "durationWidget",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "uploadTimeWidget",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "cooldownWidget",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "memoryCostValueText",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "damageWrapper",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "damageLabel",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "damageValue",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "damageContinuous",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "healthPercentageLabel",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "priceContainer",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "priceText",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "descriptionWrapper",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "descriptionText",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "hackTypeWrapper",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "hackTypeText",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "perkContainer",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "perkText",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "qualityContainer",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "qualityText",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "effectsList",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "headerSegment",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "typeSegment",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "DEBUG_iconErrorWrapper",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "DEBUG_iconErrorText",
+      "flags": 4297130017
+    },
+    {
+      "type": "handle:InventoryTooltipData",
+      "name": "data",
+      "flags": 4431347744
+    },
+    {
+      "type": "InventoryTooltipData_QuickhackData",
+      "name": "quickHackData",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:UIInventoryItem",
+      "name": "itemData",
+      "flags": 4297130016
+    },
+    {
+      "type": "InventoryTooltipDisplayContext",
+      "name": "displayContext",
+      "flags": 4297130016
+    },
+    {
+      "type": "gameItemDisplayContext",
+      "name": "itemDisplayContext",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isCrafting",
+      "flags": 4297130017
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "DEBUG_UpdateDebugInfo;",
+      "shortName": "DEBUG_UpdateDebugInfo",
+      "flags": 33024
+    },
+    {
+      "fullName": "GetHackCategory;",
+      "shortName": "GetHackCategory",
+      "return": {
+        "type": "whandle:gamedataHackCategory_Record",
+        "flags": 64
+      },
+      "flags": 32896
+    },
+    {
+      "fullName": "IsDamageStat;gamedataStatTypegamedataStatType",
+      "shortName": "IsDamageStat",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "gamedataStatType",
+          "name": "targetStat",
+          "flags": 128
+        },
+        {
+          "type": "gamedataStatType",
+          "name": "valueStat",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "NewGetHackCategory;",
+      "shortName": "NewGetHackCategory",
+      "return": {
+        "type": "whandle:gamedataHackCategory_Record",
+        "flags": 64
+      },
+      "flags": 32896
+    },
+    {
+      "fullName": "NewRefreshUI;UIInventoryItemPlayerPuppet",
+      "shortName": "NewRefreshUI",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "whandle:UIInventoryItem",
+          "name": "itemData",
+          "flags": 128
+        },
+        {
+          "type": "whandle:PlayerPuppet",
+          "name": "player",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "NewUpdateCategory;",
+      "shortName": "NewUpdateCategory",
+      "flags": 32896
+    },
+    {
+      "fullName": "NewUpdateDamage;UIInventoryItemProgramData",
+      "shortName": "NewUpdateDamage",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "whandle:UIInventoryItemProgramData",
+          "name": "programData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "NewUpdateDescription;",
+      "shortName": "NewUpdateDescription",
+      "flags": 32896
+    },
+    {
+      "fullName": "NewUpdateMods;",
+      "shortName": "NewUpdateMods",
+      "flags": 32900
+    },
+    {
+      "fullName": "NewUpdatePrice;PlayerPuppet",
+      "shortName": "NewUpdatePrice",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "whandle:PlayerPuppet",
+          "name": "player",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "NewUpdateRarity;UIInventoryItemProgramData",
+      "shortName": "NewUpdateRarity",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "whandle:UIInventoryItemProgramData",
+          "name": "programData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RefreshUI;",
+      "shortName": "RefreshUI",
+      "flags": 32896
+    },
+    {
+      "fullName": "SetData;ATooltipData",
+      "shortName": "SetData",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "handle:ATooltipData",
+          "name": "tooltipData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateCategory;",
+      "shortName": "UpdateCategory",
+      "flags": 32896
+    },
+    {
+      "fullName": "UpdateDamage;",
+      "shortName": "UpdateDamage",
+      "flags": 32900
+    },
+    {
+      "fullName": "UpdateDescription;",
+      "shortName": "UpdateDescription",
+      "flags": 32896
+    },
+    {
+      "fullName": "UpdateDetail;BoolinkWidgetRefscript_ref<String>FloatFloat",
+      "shortName": "UpdateDetail",
+      "flags": 32896,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "shwoProgramDuration",
+          "flags": 128
+        },
+        {
+          "type": "inkWidgetReference",
+          "name": "targetWidget",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:String",
+          "name": "key",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "value",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "diff",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateDetail;UIInventoryItemFloat",
+      "shortName": "UpdateDetail",
+      "flags": 32896,
+      "params": [
+        {
+          "type": "whandle:UIInventoryItem",
+          "name": "item",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateMods;",
+      "shortName": "UpdateMods",
+      "flags": 32900
+    },
+    {
+      "fullName": "UpdatePerkRequirement;",
+      "shortName": "UpdatePerkRequirement",
+      "flags": 32900
+    },
+    {
+      "fullName": "UpdatePrice;",
+      "shortName": "UpdatePrice",
+      "flags": 32900
+    },
+    {
+      "fullName": "UpdateRarity;",
+      "shortName": "UpdateRarity",
+      "flags": 32900
+    },
+    {
+      "fullName": "UpdateRequirements;",
+      "shortName": "UpdateRequirements",
+      "flags": 32900
+    },
+    {
+      "fullName": "UpdateUploadDetail;inkWidgetRefscript_ref<String>FloatFloat",
+      "shortName": "UpdateUploadDetail",
+      "flags": 32896,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "targetWidget",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:String",
+          "name": "key",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "value",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "diff",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

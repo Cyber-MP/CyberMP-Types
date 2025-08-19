@@ -1,0 +1,102 @@
+{
+  "parent": "gameIDebugCheatsSystem",
+  "name": "gameDebugCheatsSystem",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "DecreaseGlobalTimeDilation",
+      "shortName": "DecreaseGlobalTimeDilation",
+      "index": 14954,
+      "flags": 1
+    },
+    {
+      "fullName": "DecreasePlayerTimeDilation",
+      "shortName": "DecreasePlayerTimeDilation",
+      "index": 14956,
+      "flags": 1
+    },
+    {
+      "fullName": "EnableCheat",
+      "shortName": "EnableCheat",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 14950,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "object",
+          "flags": 128
+        },
+        {
+          "type": "gamecheatsystemFlag",
+          "name": "cheatType",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "enable",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HasCheat",
+      "shortName": "HasCheat",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 14952,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "object",
+          "flags": 128
+        },
+        {
+          "type": "gamecheatsystemFlag",
+          "name": "gmType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IncreaseGlobalTimeDilation",
+      "shortName": "IncreaseGlobalTimeDilation",
+      "index": 14953,
+      "flags": 1
+    },
+    {
+      "fullName": "IncreasePlayerTimeDilation",
+      "shortName": "IncreasePlayerTimeDilation",
+      "index": 14955,
+      "flags": 1
+    },
+    {
+      "fullName": "ToggleCheat",
+      "shortName": "ToggleCheat",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 14951,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "object",
+          "flags": 128
+        },
+        {
+          "type": "gamecheatsystemFlag",
+          "name": "gmType",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

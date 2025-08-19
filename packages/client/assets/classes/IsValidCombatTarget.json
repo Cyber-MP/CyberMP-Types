@@ -1,0 +1,51 @@
+{
+  "parent": "AIbehaviorconditionScript",
+  "name": "IsValidCombatTarget",
+  "flags": 4,
+  "props": [
+    {
+      "type": "Bool",
+      "name": "considerSourceAVehicleDriver",
+      "flags": 4297326625
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "Check;ScriptExecutionContext",
+      "shortName": "Check",
+      "return": {
+        "type": "AIbehaviorConditionOutcomes",
+        "flags": 64
+      },
+      "flags": 34048,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsValidForPrevention;ScriptedPuppetScriptedPuppet",
+      "shortName": "IsValidForPrevention",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:ScriptedPuppet",
+          "name": "instigator",
+          "flags": 128
+        },
+        {
+          "type": "handle:ScriptedPuppet",
+          "name": "source",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

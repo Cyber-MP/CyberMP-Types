@@ -1,0 +1,328 @@
+{
+  "parent": "inkWidgetLogicController",
+  "name": "GalleryScreenshotItem",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkWidgetReference",
+      "name": "screenshotPreview",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "container",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "hoverFrame",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "favoriteIcon",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "emptyBackground",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "errorVisual",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "selectedBorder",
+      "flags": 4297130017
+    },
+    {
+      "type": "whandle:GalleryMenuGameController",
+      "name": "galleryMenuGameController",
+      "flags": 4297195552
+    },
+    {
+      "type": "whandle:inkCompoundWidget",
+      "name": "preloader",
+      "flags": 4297195552
+    },
+    {
+      "type": "Vector2",
+      "name": "basePreviewSize",
+      "flags": 4297195552
+    },
+    {
+      "type": "handle:GalleryScreenshotPreviewData",
+      "name": "screenshotData",
+      "flags": 4431413280
+    },
+    {
+      "type": "whandle:ButtonHints",
+      "name": "buttonHintsController",
+      "flags": 4297195552
+    },
+    {
+      "type": "Bool",
+      "name": "isHovered",
+      "flags": 4297195552
+    },
+    {
+      "type": "Bool",
+      "name": "canBeHoveredOver",
+      "flags": 4297195552
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnHoverOut",
+      "shortName": "OnHoverOut",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnHoverOver",
+      "shortName": "OnHoverOver",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "DisplayEmptyPreview;",
+      "shortName": "DisplayEmptyPreview",
+      "flags": 33284
+    },
+    {
+      "fullName": "DisplayErrorPreview;",
+      "shortName": "DisplayErrorPreview",
+      "flags": 33284
+    },
+    {
+      "fullName": "DisplayPreload;Bool",
+      "shortName": "DisplayPreload",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "display",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetData;",
+      "shortName": "GetData",
+      "return": {
+        "type": "handle:GalleryScreenshotPreviewData",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "GetHash;",
+      "shortName": "GetHash",
+      "return": {
+        "type": "Uint32",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "GetPath;",
+      "shortName": "GetPath",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "GetPreviewImageWidget;",
+      "shortName": "GetPreviewImageWidget",
+      "return": {
+        "type": "whandle:inkImageWidget",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "HasScreenshot;",
+      "shortName": "HasScreenshot",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "HideButtonHints;",
+      "shortName": "HideButtonHints",
+      "flags": 32900
+    },
+    {
+      "fullName": "IsDisplayingErrorVisual;",
+      "shortName": "IsDisplayingErrorVisual",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "IsSelected;Uint32",
+      "shortName": "IsSelected",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476,
+      "params": [
+        {
+          "type": "Uint32",
+          "name": "hash",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnScreenshotLoaded;Vector2Int32",
+      "shortName": "OnScreenshotLoaded",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Vector2",
+          "name": "screenshotSize",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "errorCode",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RefreshButtonHints;",
+      "shortName": "RefreshButtonHints",
+      "flags": 33284
+    },
+    {
+      "fullName": "RefreshFavoriteButtonHint;",
+      "shortName": "RefreshFavoriteButtonHint",
+      "flags": 32900
+    },
+    {
+      "fullName": "SetCanBeHoveredOver;Bool",
+      "shortName": "SetCanBeHoveredOver",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "canBeHoveredOver",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetData;Int32GameScreenshotInfoBoolGalleryMenuGameController",
+      "shortName": "SetData",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        },
+        {
+          "type": "inkGameScreenshotInfo",
+          "name": "screenshotInfo",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "isFavorite",
+          "flags": 128
+        },
+        {
+          "type": "whandle:GalleryMenuGameController",
+          "name": "galleryMenuGameController",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetFavoriteDisplay;Bool",
+      "shortName": "SetFavoriteDisplay",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "isFavorite",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetInputHintController;ButtonHints",
+      "shortName": "SetInputHintController",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:ButtonHints",
+          "name": "buttonHintsController",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetSelected;Uint32",
+      "shortName": "SetSelected",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Uint32",
+          "name": "hash",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

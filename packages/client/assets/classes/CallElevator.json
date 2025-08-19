@@ -1,0 +1,116 @@
+{
+  "parent": "ActionBool",
+  "name": "CallElevator",
+  "flags": 4,
+  "props": [
+    {
+      "type": "Int32",
+      "name": "destination",
+      "flags": 4297326624
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "CallElevator::IsAvailable;ScriptableDeviceComponentPS",
+      "shortName": "IsAvailable",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:ScriptableDeviceComponentPS",
+          "name": "device",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CallElevator::IsClearanceValid;Clearance",
+      "shortName": "IsClearanceValid",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gamedeviceClearance",
+          "name": "clearance",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CallElevator::IsDefaultConditionMet;ScriptableDeviceComponentPSscript_ref<GetActionsContext>",
+      "shortName": "IsDefaultConditionMet",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:ScriptableDeviceComponentPS",
+          "name": "device",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:gameGetActionsContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CreateActionWidgetPackage;Bool",
+      "shortName": "CreateActionWidgetPackage",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "isElevatorAtThisFloor",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetInkWidgetTweakDBID;Bool",
+      "shortName": "GetInkWidgetTweakDBID",
+      "return": {
+        "type": "TweakDBID",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "isElevatorAtThisFloor",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetTweakDBChoiceRecord;",
+      "shortName": "GetTweakDBChoiceRecord",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "flags": 33280
+    },
+    {
+      "fullName": "SetProperties;Int32",
+      "shortName": "SetProperties",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "destination",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

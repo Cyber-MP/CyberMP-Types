@@ -1,0 +1,166 @@
+{
+  "parent": "LocomotionGroundDecisions",
+  "name": "StatusEffectDecisions",
+  "flags": 4,
+  "props": [
+    {
+      "type": "whandle:gameObject",
+      "name": "executionOwner",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:DefaultTransitionStatusEffectListener",
+      "name": "statusEffectListener",
+      "flags": 4431347744
+    },
+    {
+      "type": "String",
+      "name": "statusEffectEnumName",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "EnterCondition;StateContextStateGameScriptInterface",
+      "shortName": "EnterCondition",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 42496,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HasMovementAffiliatedStatusEffect;StateContextStateGameScriptInterface",
+      "shortName": "HasMovementAffiliatedStatusEffect",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41092,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnAttach;StateContextStateGameScriptInterface",
+      "shortName": "OnAttach",
+      "flags": 34048,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnDetach;StateContextStateGameScriptInterface",
+      "shortName": "OnDetach",
+      "flags": 34052,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnStatusEffectApplied;StatusEffect_Record",
+      "shortName": "OnStatusEffectApplied",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "whandle:gamedataStatusEffect_Record",
+          "name": "statusEffect",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnStatusEffectRemoved;StatusEffect_Record",
+      "shortName": "OnStatusEffectRemoved",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "whandle:gamedataStatusEffect_Record",
+          "name": "statusEffect",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ToRegularFall;StateContextStateGameScriptInterface",
+      "shortName": "ToRegularFall",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41216,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ToStand;StateContextStateGameScriptInterface",
+      "shortName": "ToStand",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 42240,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

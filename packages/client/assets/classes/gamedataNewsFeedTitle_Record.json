@@ -1,0 +1,61 @@
+{
+  "parent": "gamedataTweakDBRecord",
+  "name": "gamedataNewsFeedTitle_Record",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "GetTitlesListCount",
+      "shortName": "GetTitlesListCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 5671,
+      "flags": 1
+    },
+    {
+      "fullName": "GetTitlesListItem",
+      "shortName": "GetTitlesListItem",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "index": 5672,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TitlesList",
+      "shortName": "TitlesList",
+      "return": {
+        "type": "array:CName",
+        "flags": 64
+      },
+      "index": 5670,
+      "flags": 1
+    },
+    {
+      "fullName": "TitlesListContains",
+      "shortName": "TitlesListContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 5673,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

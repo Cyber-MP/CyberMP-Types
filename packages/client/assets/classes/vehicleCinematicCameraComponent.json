@@ -1,0 +1,257 @@
+{
+  "parent": "gameCameraComponent",
+  "name": "vehicleCinematicCameraComponent",
+  "flags": 2,
+  "props": [
+    {
+      "type": "Bool",
+      "name": "teleportThisFrame",
+      "flags": 6627016704
+    },
+    {
+      "type": "WorldTransform",
+      "name": "targetTransform",
+      "flags": 6627016704
+    },
+    {
+      "type": "array:vehicleCinematicCameraShotGroup",
+      "name": "groups",
+      "flags": 6631211009
+    },
+    {
+      "type": "Float",
+      "name": "middleZoneSizeForShotSelection",
+      "flags": 4297326625
+    },
+    {
+      "type": "Int32",
+      "name": "consecutiveStaticShotsProbabilityBonus",
+      "flags": 4297326625
+    },
+    {
+      "type": "Int32",
+      "name": "consecutiveDynamicShotsProbabilityBonus",
+      "flags": 4297326625
+    },
+    {
+      "type": "Float",
+      "name": "maxProbabilityBonusFromCameraProximityToShot",
+      "flags": 4297326625
+    },
+    {
+      "type": "Float",
+      "name": "maxDistanceFromCameraToHaveProbabilityBonusForShot",
+      "flags": 4297326625
+    },
+    {
+      "type": "Float",
+      "name": "lastChangeTime",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "shotChangeRequested",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:vehicleCinematicCameraShot",
+      "name": "currentShot",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:vehicleCinematicCameraShot",
+      "name": "lastShot",
+      "flags": 4431347744
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "CheckCollisionsAtPosition",
+      "shortName": "CheckCollisionsAtPosition",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13866,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Vector3",
+          "name": "position",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CheckIfHasLineOfSightWithVehicle",
+      "shortName": "CheckIfHasLineOfSightWithVehicle",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13868,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Vector3",
+          "name": "position",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CheckIfShotIsObstructed",
+      "shortName": "CheckIfShotIsObstructed",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13867,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Vector3",
+          "name": "position",
+          "flags": 128
+        },
+        {
+          "type": "Vector3",
+          "name": "direction",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CheckIfVehicleIsInFrustum",
+      "shortName": "CheckIfVehicleIsInFrustum",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13869,
+      "flags": 1
+    },
+    {
+      "fullName": "GetEngineTime",
+      "shortName": "GetEngineTime",
+      "return": {
+        "type": "EngineTime",
+        "flags": 64
+      },
+      "index": 13865,
+      "flags": 1
+    },
+    {
+      "fullName": "GetGroup",
+      "shortName": "GetGroup",
+      "return": {
+        "type": "handle:vehicleCinematicCameraShotGroup",
+        "flags": 64
+      },
+      "index": 13863,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetGroupCount",
+      "shortName": "GetGroupCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 13864,
+      "flags": 1
+    },
+    {
+      "fullName": "ChangeCameraShot;vehicleCinematicCameraShotUpdateContext",
+      "shortName": "ChangeCameraShot",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "vehicleCinematicCameraShotUpdateContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ExtractShotsFromGroup;vehicleCinematicCameraShotGroupvehicleCinematicCameraShotUpdateContextscript_ref<array<vehicleCinematicCameraShot>>",
+      "shortName": "ExtractShotsFromGroup",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:vehicleCinematicCameraShotGroup",
+          "name": "group",
+          "flags": 128
+        },
+        {
+          "type": "vehicleCinematicCameraShotUpdateContext",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:array:handle:vehicleCinematicCameraShot",
+          "name": "shots",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetLastShot;",
+      "shortName": "GetLastShot",
+      "return": {
+        "type": "handle:vehicleCinematicCameraShot",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetWorldPosition;",
+      "shortName": "GetWorldPosition",
+      "return": {
+        "type": "WorldPosition",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "SelectRandomShot;array<vehicleCinematicCameraShot>vehicleCinematicCameraShotUpdateContext",
+      "shortName": "SelectRandomShot",
+      "return": {
+        "type": "handle:vehicleCinematicCameraShot",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "array:handle:vehicleCinematicCameraShot",
+          "name": "possibleShots",
+          "flags": 128
+        },
+        {
+          "type": "vehicleCinematicCameraShotUpdateContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateCameraState;vehicleCinematicCameraShotUpdateContext",
+      "shortName": "UpdateCameraState",
+      "flags": 34308,
+      "params": [
+        {
+          "type": "vehicleCinematicCameraShotUpdateContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "parent": "gameIAttitudeManager",
+  "name": "gameCAttitudeManager",
+  "flags": 2,
+  "funcs": [
+    {
+      "fullName": "GetAttitudeGroup",
+      "shortName": "GetAttitudeGroup",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "index": 13583,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "entityID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetAttitudeRelation",
+      "shortName": "GetAttitudeRelation",
+      "return": {
+        "type": "EAIAttitude",
+        "flags": 64
+      },
+      "index": 13584,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "firstGroup",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "secondGroup",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetAttitudeRelationFromTweak",
+      "shortName": "GetAttitudeRelationFromTweak",
+      "return": {
+        "type": "EAIAttitude",
+        "flags": 64
+      },
+      "index": 13585,
+      "flags": 1,
+      "params": [
+        {
+          "type": "TweakDBID",
+          "name": "firstGroup",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "secondGroup",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetAttitudeGroupRelationPersistent",
+      "shortName": "SetAttitudeGroupRelationPersistent",
+      "index": 13587,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "firstGroup",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "secondGroup",
+          "flags": 128
+        },
+        {
+          "type": "EAIAttitude",
+          "name": "attitude",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetAttitudeGroupRelationfromTweakPersistent",
+      "shortName": "SetAttitudeGroupRelationfromTweakPersistent",
+      "index": 13586,
+      "flags": 1,
+      "params": [
+        {
+          "type": "TweakDBID",
+          "name": "firstGroup",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "secondGroup",
+          "flags": 128
+        },
+        {
+          "type": "EAIAttitude",
+          "name": "attitude",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetAttitudeRelation",
+      "shortName": "SetAttitudeRelation",
+      "index": 13588,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "firstGroup",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "secondGroup",
+          "flags": 128
+        },
+        {
+          "type": "EAIAttitude",
+          "name": "attitude",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetAttitudeRelationFromTweak",
+      "shortName": "SetAttitudeRelationFromTweak",
+      "index": 13589,
+      "flags": 1,
+      "params": [
+        {
+          "type": "TweakDBID",
+          "name": "firstGroup",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "secondGroup",
+          "flags": 128
+        },
+        {
+          "type": "EAIAttitude",
+          "name": "attitude",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

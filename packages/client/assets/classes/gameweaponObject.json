@@ -1,0 +1,2205 @@
+{
+  "parent": "gameItemObject",
+  "name": "gameweaponObject",
+  "flags": 2,
+  "props": [
+    {
+      "type": "rRef:gameEffectSet",
+      "name": "effect",
+      "flags": 6627016705
+    },
+    {
+      "type": "Bool",
+      "name": "hasOverheat",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:worldEffectBlackboard",
+      "name": "overheatEffectBlackboard",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:OverheatStatListener",
+      "name": "overheatListener",
+      "flags": 4431347744
+    },
+    {
+      "type": "Bool",
+      "name": "overheatDelaySent",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:worldEffectBlackboard",
+      "name": "chargeEffectBlackboard",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:WeaponChargeStatListener",
+      "name": "chargeStatListener",
+      "flags": 4431347744
+    },
+    {
+      "type": "CName",
+      "name": "triggerEffectName",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:worldEffectBlackboard",
+      "name": "meleeHitEffectBlackboard",
+      "flags": 4431347744
+    },
+    {
+      "type": "Float",
+      "name": "meleeHitEffectValue",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:DamageStatListener",
+      "name": "damageTypeListener",
+      "flags": 4431347744
+    },
+    {
+      "type": "String",
+      "name": "trailName",
+      "flags": 4297130016
+    },
+    {
+      "type": "Float",
+      "name": "maxChargeThreshold",
+      "flags": 4297130016
+    },
+    {
+      "type": "Int32",
+      "name": "animOwner",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "perfectChargeStarted",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "perfectChargeReached",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "perfectChargeShot",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "lowAmmoEffectActive",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "hasSecondaryTriggerMode",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:gamedataWeaponItem_Record",
+      "name": "weaponRecord",
+      "flags": 4431347744
+    },
+    {
+      "type": "Bool",
+      "name": "isHeavyWeapon",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isMeleeWeapon",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isRangedWeapon",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isShotgunWeapon",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:gameIBlackboard",
+      "name": "AIBlackboard",
+      "flags": 4431347744
+    },
+    {
+      "type": "Bool",
+      "name": "isCharged",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "TriggerWeaponEffects",
+      "shortName": "TriggerWeaponEffects",
+      "index": 13138,
+      "flags": 3,
+      "params": [
+        {
+          "type": "whandle:gameweaponObject",
+          "name": "weapon",
+          "flags": 128
+        },
+        {
+          "type": "gamedataFxAction",
+          "name": "fxAction",
+          "flags": 128
+        },
+        {
+          "type": "handle:worldEffectBlackboard",
+          "name": "fxBlackboard",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "gameweaponObject::CanCriticallyHit;WeaponObject",
+      "shortName": "CanCriticallyHit",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameweaponObject",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameweaponObject::CanIgnoreArmor;WeaponObject",
+      "shortName": "CanIgnoreArmor",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameweaponObject",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameweaponObject::CanReload;WeaponObject",
+      "shortName": "CanReload",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameweaponObject",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameweaponObject::ChangeTriggerMode;WeaponObjectgamedataTriggerMode",
+      "shortName": "ChangeTriggerMode",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameweaponObject",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "gamedataTriggerMode",
+          "name": "triggerMode",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameweaponObject::GetAmmoType;WeaponObject",
+      "shortName": "GetAmmoType",
+      "return": {
+        "type": "gameItemID",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gameweaponObject",
+          "name": "weapon",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameweaponObject::GetAmmoType;ItemID",
+      "shortName": "GetAmmoType",
+      "return": {
+        "type": "gameItemID",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gameItemID",
+          "name": "weaponID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameweaponObject::GetBaseMaxChargeThreshold;WeaponObject",
+      "shortName": "GetBaseMaxChargeThreshold",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameweaponObject",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameweaponObject::GetDriverCombatBikeWeaponTag;",
+      "shortName": "GetDriverCombatBikeWeaponTag",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 33286
+    },
+    {
+      "fullName": "gameweaponObject::GetDriverCombatRangedWeaponTag;",
+      "shortName": "GetDriverCombatRangedWeaponTag",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 33286
+    },
+    {
+      "fullName": "gameweaponObject::GetFullyChargedThreshold;WeaponObject",
+      "shortName": "GetFullyChargedThreshold",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameweaponObject",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameweaponObject::GetMagazineAmmoCount;WeaponObject",
+      "shortName": "GetMagazineAmmoCount",
+      "return": {
+        "type": "Uint32",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameweaponObject",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameweaponObject::GetMagazineCapacity;WeaponObject",
+      "shortName": "GetMagazineCapacity",
+      "return": {
+        "type": "Uint32",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameweaponObject",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameweaponObject::GetMagazinePercentage;WeaponObject",
+      "shortName": "GetMagazinePercentage",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameweaponObject",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameweaponObject::GetMeleeWeaponTag;",
+      "shortName": "GetMeleeWeaponTag",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 33286
+    },
+    {
+      "fullName": "gameweaponObject::GetOneHandedRangedWeaponTag;",
+      "shortName": "GetOneHandedRangedWeaponTag",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 33286
+    },
+    {
+      "fullName": "gameweaponObject::GetOverchargeThreshold;WeaponObject",
+      "shortName": "GetOverchargeThreshold",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameweaponObject",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameweaponObject::GetRangedWeaponTag;",
+      "shortName": "GetRangedWeaponTag",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 33286
+    },
+    {
+      "fullName": "gameweaponObject::GetShotgunWeaponTag;",
+      "shortName": "GetShotgunWeaponTag",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 33286
+    },
+    {
+      "fullName": "gameweaponObject::GetWeaponCharge;WeaponObject",
+      "shortName": "GetWeaponCharge",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gameweaponObject",
+          "name": "weapon",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameweaponObject::GetWeaponChargeNormalized;WeaponObject",
+      "shortName": "GetWeaponChargeNormalized",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gameweaponObject",
+          "name": "weapon",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameweaponObject::GetWeaponType;ItemID",
+      "shortName": "GetWeaponType",
+      "return": {
+        "type": "gamedataItemType",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gameItemID",
+          "name": "weaponID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameweaponObject::HasAvailableAmmo;WeaponObject",
+      "shortName": "HasAvailableAmmo",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameweaponObject",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameweaponObject::HasAvailableAmmoInInventory;WeaponObject",
+      "shortName": "HasAvailableAmmoInInventory",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameweaponObject",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameweaponObject::IsBlade;ItemID",
+      "shortName": "IsBlade",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gameItemID",
+          "name": "weaponID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameweaponObject::IsBlunt;ItemID",
+      "shortName": "IsBlunt",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gameItemID",
+          "name": "weaponID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameweaponObject::IsCyberwareWeapon;ItemID",
+      "shortName": "IsCyberwareWeapon",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gameItemID",
+          "name": "weaponID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameweaponObject::IsFists;ItemID",
+      "shortName": "IsFists",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gameItemID",
+          "name": "weaponID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameweaponObject::IsMagazineEmpty;WeaponObject",
+      "shortName": "IsMagazineEmpty",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameweaponObject",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameweaponObject::IsMagazineFull;WeaponObject",
+      "shortName": "IsMagazineFull",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameweaponObject",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameweaponObject::IsMelee;ItemID",
+      "shortName": "IsMelee",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gameItemID",
+          "name": "weaponID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameweaponObject::IsMelee;WeaponItem_Record",
+      "shortName": "IsMelee",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gamedataWeaponItem_Record",
+          "name": "wpnRec",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameweaponObject::IsOfType;ItemIDgamedataItemType",
+      "shortName": "IsOfType",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gameItemID",
+          "name": "weaponID",
+          "flags": 128
+        },
+        {
+          "type": "gamedataItemType",
+          "name": "type",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameweaponObject::IsOneHandedRanged;ItemID",
+      "shortName": "IsOneHandedRanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gameItemID",
+          "name": "weaponID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameweaponObject::IsRanged;Item_Record",
+      "shortName": "IsRanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gamedataItem_Record",
+          "name": "wpnRec",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameweaponObject::IsRanged;ItemID",
+      "shortName": "IsRanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gameItemID",
+          "name": "weaponID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameweaponObject::KillFXActionFromSet;WeaponObjectWeaponVFXSet_RecordgamedataFxActionworldEffectBlackboard",
+      "shortName": "KillFXActionFromSet",
+      "flags": 32902,
+      "params": [
+        {
+          "type": "whandle:gameweaponObject",
+          "name": "weapon",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gamedataWeaponVFXSet_Record",
+          "name": "weaponFxSet",
+          "flags": 128
+        },
+        {
+          "type": "gamedataFxAction",
+          "name": "fxAction",
+          "flags": 128
+        },
+        {
+          "type": "handle:worldEffectBlackboard",
+          "name": "fxBlackboard",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "gameweaponObject::RegisterChargeStatListener;WeaponObjectBool",
+      "shortName": "RegisterChargeStatListener",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gameweaponObject",
+          "name": "weapon",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "register",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameweaponObject::SendAmmoUpdateEvent;GameObjectWeaponObject",
+      "shortName": "SendAmmoUpdateEvent",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "weaponOwner",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameweaponObject",
+          "name": "weapon",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameweaponObject::SendMuzzleOffset;WeaponObjectGameObject",
+      "shortName": "SendMuzzleOffset",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameweaponObject",
+          "name": "weapon",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameObject",
+          "name": "owner",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameweaponObject::StopWeaponEffects;GameObjectWeaponObjectgamedataFxActionworldEffectBlackboard",
+      "shortName": "StopWeaponEffects",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "weaponOwner",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameweaponObject",
+          "name": "weapon",
+          "flags": 128
+        },
+        {
+          "type": "gamedataFxAction",
+          "name": "fxAction",
+          "flags": 128
+        },
+        {
+          "type": "handle:worldEffectBlackboard",
+          "name": "fxBlackboard",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "gameweaponObject::TechPierceChargeLevel;WeaponObject",
+      "shortName": "TechPierceChargeLevel",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameweaponObject",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AI_PlayChargeStartedSound",
+      "shortName": "AI_PlayChargeStartedSound",
+      "index": 13114,
+      "flags": 1
+    },
+    {
+      "fullName": "AI_PlayMeleeAttackSound",
+      "shortName": "AI_PlayMeleeAttackSound",
+      "index": 13115,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "isQuickMelee",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AI_SetAttackData",
+      "shortName": "AI_SetAttackData",
+      "index": 13113,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gameIAttack",
+          "name": "attack",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AI_ShootAt",
+      "shortName": "AI_ShootAt",
+      "index": 13110,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:entIPositionProvider",
+          "name": "targetPositionProvider",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameObject",
+          "name": "targetObject",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameObject",
+          "name": "instigator",
+          "flags": 128
+        },
+        {
+          "type": "Uint16",
+          "name": "ammoCost",
+          "flags": 128
+        },
+        {
+          "type": "gameprojectileWeaponParams",
+          "name": "projectileParams",
+          "flags": 128
+        },
+        {
+          "type": "Uint8",
+          "name": "projectilesPerShot",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "charge",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "maxSpread",
+          "flags": 1152
+        },
+        {
+          "type": "Vector4",
+          "name": "muzzleOffset",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "AI_ShootForwards",
+      "shortName": "AI_ShootForwards",
+      "index": 13111,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "instigator",
+          "flags": 128
+        },
+        {
+          "type": "Uint16",
+          "name": "ammoCost",
+          "flags": 128
+        },
+        {
+          "type": "gameprojectileWeaponParams",
+          "name": "projectileParams",
+          "flags": 128
+        },
+        {
+          "type": "Uint8",
+          "name": "projectilesPerShot",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "charge",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "overridePos",
+          "flags": 1152
+        },
+        {
+          "type": "Vector4",
+          "name": "overrideForward",
+          "flags": 1152
+        },
+        {
+          "type": "Vector4",
+          "name": "muzzleOffset",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "AI_ShootSelfOffScreen",
+      "shortName": "AI_ShootSelfOffScreen",
+      "index": 13112,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gamePuppet",
+          "name": "targetObject",
+          "flags": 128
+        },
+        {
+          "type": "Uint16",
+          "name": "ammoCost",
+          "flags": 128
+        },
+        {
+          "type": "gameprojectileWeaponParams",
+          "name": "projectileParams",
+          "flags": 128
+        },
+        {
+          "type": "Uint8",
+          "name": "projectilesPerShot",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "charge",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "DefaultRangedAttackPackage",
+      "shortName": "DefaultRangedAttackPackage",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13107,
+      "flags": 1
+    },
+    {
+      "fullName": "GetAttack",
+      "shortName": "GetAttack",
+      "return": {
+        "type": "handle:gameIAttack",
+        "flags": 64
+      },
+      "index": 13095,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "recordName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetAttacks",
+      "shortName": "GetAttacks",
+      "return": {
+        "type": "array:handle:gameIAttack",
+        "flags": 64
+      },
+      "index": 13094,
+      "flags": 1
+    },
+    {
+      "fullName": "GetCurrentAttack",
+      "shortName": "GetCurrentAttack",
+      "return": {
+        "type": "handle:gameIAttack",
+        "flags": 64
+      },
+      "index": 13096,
+      "flags": 1
+    },
+    {
+      "fullName": "GetCurrentRangedAttack",
+      "shortName": "GetCurrentRangedAttack",
+      "return": {
+        "type": "whandle:gamedataRangedAttackPackage_Record",
+        "flags": 64
+      },
+      "index": 13122,
+      "flags": 1
+    },
+    {
+      "fullName": "GetCurrentTriggerMode",
+      "shortName": "GetCurrentTriggerMode",
+      "return": {
+        "type": "handle:gamedataTriggerMode_Record",
+        "flags": 64
+      },
+      "index": 13097,
+      "flags": 1
+    },
+    {
+      "fullName": "GetFxPackage",
+      "shortName": "GetFxPackage",
+      "return": {
+        "type": "whandle:gameweaponFxPackage",
+        "flags": 64
+      },
+      "index": 13098,
+      "flags": 1
+    },
+    {
+      "fullName": "GetFxPackageQuickMelee",
+      "shortName": "GetFxPackageQuickMelee",
+      "return": {
+        "type": "whandle:gameweaponFxPackage",
+        "flags": 64
+      },
+      "index": 13099,
+      "flags": 1
+    },
+    {
+      "fullName": "GetIronSightOffset",
+      "shortName": "GetIronSightOffset",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "index": 13125,
+      "flags": 1
+    },
+    {
+      "fullName": "GetMuzzleOffset",
+      "shortName": "GetMuzzleOffset",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "index": 13126,
+      "flags": 1
+    },
+    {
+      "fullName": "GetMuzzleSlotWorldTransform",
+      "shortName": "GetMuzzleSlotWorldTransform",
+      "return": {
+        "type": "Transform",
+        "flags": 64
+      },
+      "index": 13135,
+      "flags": 1
+    },
+    {
+      "fullName": "GetScopeOffset",
+      "shortName": "GetScopeOffset",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "index": 13124,
+      "flags": 1
+    },
+    {
+      "fullName": "GetSharedData",
+      "shortName": "GetSharedData",
+      "return": {
+        "type": "handle:gameIBlackboard",
+        "flags": 64
+      },
+      "index": 13100,
+      "flags": 1
+    },
+    {
+      "fullName": "GetTotalAmmoCount",
+      "shortName": "GetTotalAmmoCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 13101,
+      "flags": 1
+    },
+    {
+      "fullName": "GetTriggerModes",
+      "shortName": "GetTriggerModes",
+      "return": {
+        "type": "array:handle:gamedataTriggerMode_Record",
+        "flags": 64
+      },
+      "index": 13102,
+      "flags": 1
+    },
+    {
+      "fullName": "HasAmmoChangeRequest",
+      "shortName": "HasAmmoChangeRequest",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13103,
+      "flags": 1
+    },
+    {
+      "fullName": "HasPendingReload",
+      "shortName": "HasPendingReload",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13104,
+      "flags": 1
+    },
+    {
+      "fullName": "HasScope",
+      "shortName": "HasScope",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13123,
+      "flags": 1
+    },
+    {
+      "fullName": "IsContinuousAttackStarted",
+      "shortName": "IsContinuousAttackStarted",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13121,
+      "flags": 1
+    },
+    {
+      "fullName": "IsControlledByPlayer",
+      "shortName": "IsControlledByPlayer",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13136,
+      "flags": 1
+    },
+    {
+      "fullName": "IsSilenced",
+      "shortName": "IsSilenced",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13127,
+      "flags": 1
+    },
+    {
+      "fullName": "IsTargetLocked",
+      "shortName": "IsTargetLocked",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13129,
+      "flags": 1
+    },
+    {
+      "fullName": "IsVehiclePowerWeaponRear",
+      "shortName": "IsVehiclePowerWeaponRear",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13128,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "vehicle",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OverrideRangedAttackPackage",
+      "shortName": "OverrideRangedAttackPackage",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13106,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataRangedAttackPackage_Record",
+          "name": "package",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PrepareContinuousAttack",
+      "shortName": "PrepareContinuousAttack",
+      "index": 13117,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Vector4",
+          "name": "startPos",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "startDir",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RemoveWeaponEffects",
+      "shortName": "RemoveWeaponEffects",
+      "index": 13134,
+      "flags": 1
+    },
+    {
+      "fullName": "SetAttack",
+      "shortName": "SetAttack",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13105,
+      "flags": 1,
+      "params": [
+        {
+          "type": "TweakDBID",
+          "name": "attackID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetTriggerDown",
+      "shortName": "SetTriggerDown",
+      "index": 13116,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "triggerDown",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetVisible",
+      "shortName": "SetVisible",
+      "index": 13137,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "visible",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetWeaponEffects",
+      "shortName": "SetWeaponEffects",
+      "index": 13133,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataWeaponVFXAction_Record",
+          "name": "weaponVFXActionRecord",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetupBurstFireSound",
+      "shortName": "SetupBurstFireSound",
+      "index": 13132,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "numShotsInBurst",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ShootStraight",
+      "shortName": "ShootStraight",
+      "index": 13131,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "shootStraight",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "StartContinuousAttack",
+      "shortName": "StartContinuousAttack",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13119,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Vector4",
+          "name": "startPos",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "startDir",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "StartPreparedContinuousAttack",
+      "shortName": "StartPreparedContinuousAttack",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13118,
+      "flags": 1
+    },
+    {
+      "fullName": "StartReload",
+      "shortName": "StartReload",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 13108,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Float",
+          "name": "durationOverride",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "StopContinuousAttack",
+      "shortName": "StopContinuousAttack",
+      "index": 13120,
+      "flags": 1
+    },
+    {
+      "fullName": "StopReload",
+      "shortName": "StopReload",
+      "index": 13109,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gameweaponReloadStatus",
+          "name": "reloadStatus",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateTargetingSight",
+      "shortName": "UpdateTargetingSight",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13130,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "targetID",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "targetPosition",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnAmmoStateChangeEvent",
+      "shortName": "OnAmmoStateChangeEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:AmmoStateChangeEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnDetach",
+      "shortName": "OnDetach",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnForceFadeOutlineEventForWeapon",
+      "shortName": "OnForceFadeOutlineEventForWeapon",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:ForceFadeOutlineEventForWeapon",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnGameAttached",
+      "shortName": "OnGameAttached",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnMeleeHitEvent",
+      "shortName": "OnMeleeHitEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:MeleeHitEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnOutlineRequestEvent",
+      "shortName": "OnOutlineRequestEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:OutlineRequestEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPlayerWeaponSetupEvent",
+      "shortName": "OnPlayerWeaponSetupEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:PlayerWeaponSetupEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRemoveActiveWeapon",
+      "shortName": "OnRemoveActiveWeapon",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameweaponeventsRemoveActiveWeaponEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSetActiveWeapon",
+      "shortName": "OnSetActiveWeapon",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameweaponeventsSetActiveWeaponEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSetWeaponOwner",
+      "shortName": "OnSetWeaponOwner",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:SetWeaponOwnerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnStartOverheatEffectEvent",
+      "shortName": "OnStartOverheatEffectEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:StartOverheatEffectEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUpdateDamageChangeEvent",
+      "shortName": "OnUpdateDamageChangeEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:UpdateDamageChangeEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUpdateMeleeTrailEffect",
+      "shortName": "OnUpdateMeleeTrailEffect",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:UpdateMeleeTrailEffectEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUpdateOverheat",
+      "shortName": "OnUpdateOverheat",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:UpdateOverheatEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUpdateWeaponCharge",
+      "shortName": "OnUpdateWeaponCharge",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:UpdateWeaponChargeEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnVisualSpawnAttached",
+      "shortName": "OnVisualSpawnAttached",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnWaponeventsOwnerAimEvent",
+      "shortName": "OnWaponeventsOwnerAimEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameweaponeventsOwnerAimEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnWeaponRegisterChargeStatListener",
+      "shortName": "OnWeaponRegisterChargeStatListener",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:WeaponRegisterChargeStatListener",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CatcheTriggerEffectFromWeaponType;",
+      "shortName": "CatcheTriggerEffectFromWeaponType",
+      "flags": 32900
+    },
+    {
+      "fullName": "CheckLocked;",
+      "shortName": "CheckLocked",
+      "flags": 32900
+    },
+    {
+      "fullName": "GetAIBlackboard;",
+      "shortName": "GetAIBlackboard",
+      "return": {
+        "type": "handle:gameIBlackboard",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetAppearanceNameFromComponent;CName",
+      "shortName": "GetAppearanceNameFromComponent",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 41476,
+      "params": [
+        {
+          "type": "CName",
+          "name": "componentName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetBlackboardIntVariable;BlackboardID_Int",
+      "shortName": "GetBlackboardIntVariable",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "gamebbScriptID_Int32",
+          "name": "id",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetBoolPropertyFromWeaponDefinition;TweakDBID",
+      "shortName": "GetBoolPropertyFromWeaponDefinition",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "TweakDBID",
+          "name": "property",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetCurrentDamageType;",
+      "shortName": "GetCurrentDamageType",
+      "return": {
+        "type": "gamedataDamageType",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "GetCurrentMeleeTrailEffectName;",
+      "shortName": "GetCurrentMeleeTrailEffectName",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "GetMaxChargeTreshold;",
+      "shortName": "GetMaxChargeTreshold",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "GetNamePropertyFromWeaponDefinition;TweakDBID",
+      "shortName": "GetNamePropertyFromWeaponDefinition",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "TweakDBID",
+          "name": "property",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetNextWeaponOwner;",
+      "shortName": "GetNextWeaponOwner",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "GetPerfectChargeWindow;",
+      "shortName": "GetPerfectChargeWindow",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "GetTriggerEffectName;",
+      "shortName": "GetTriggerEffectName",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetWeaponRecord;",
+      "shortName": "GetWeaponRecord",
+      "return": {
+        "type": "handle:gamedataWeaponItem_Record",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "HandleVisualEffectsSetup;",
+      "shortName": "HandleVisualEffectsSetup",
+      "flags": 32900
+    },
+    {
+      "fullName": "HasMonowireWithQuickhackSelected;",
+      "shortName": "HasMonowireWithQuickhackSelected",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33028
+    },
+    {
+      "fullName": "HasSecondaryTriggerMode;",
+      "shortName": "HasSecondaryTriggerMode",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "IsBlade;",
+      "shortName": "IsBlade",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "IsBlunt;",
+      "shortName": "IsBlunt",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "IsCharged;",
+      "shortName": "IsCharged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "IsHeavyWeapon;",
+      "shortName": "IsHeavyWeapon",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "IsMagazineEmpty;",
+      "shortName": "IsMagazineEmpty",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "IsMantisBlades;",
+      "shortName": "IsMantisBlades",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "IsMelee;",
+      "shortName": "IsMelee",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "IsMonowire;",
+      "shortName": "IsMonowire",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "IsRanged;",
+      "shortName": "IsRanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "IsShotgun;",
+      "shortName": "IsShotgun",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "IsThrowable;",
+      "shortName": "IsThrowable",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "OnAttachSetStatPools;",
+      "shortName": "OnAttachSetStatPools",
+      "flags": 32900
+    },
+    {
+      "fullName": "OnUpdateWeaponStatsEvent;UpdateWeaponStatsEvent",
+      "shortName": "OnUpdateWeaponStatsEvent",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:UpdateWeaponStatsEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PlayMeleeSound;GameObjectCName",
+      "shortName": "PlayMeleeSound",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "soundName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PlayMeleeSound;",
+      "shortName": "PlayMeleeSound",
+      "flags": 32900
+    },
+    {
+      "fullName": "PlayPerfectChargeEvent;GameObjectCName",
+      "shortName": "PlayPerfectChargeEvent",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "type",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PlayPerfectChargeUIEvent;CName",
+      "shortName": "PlayPerfectChargeUIEvent",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "CName",
+          "name": "type",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterChargeStatListener;",
+      "shortName": "RegisterChargeStatListener",
+      "flags": 32900
+    },
+    {
+      "fullName": "RegisterStatListeners;",
+      "shortName": "RegisterStatListeners",
+      "flags": 32900
+    },
+    {
+      "fullName": "RegisterStatPoolListeners;",
+      "shortName": "RegisterStatPoolListeners",
+      "flags": 32900
+    },
+    {
+      "fullName": "SendScopeData;",
+      "shortName": "SendScopeData",
+      "flags": 32900
+    },
+    {
+      "fullName": "SendWeaponOwnerVehicleData;",
+      "shortName": "SendWeaponOwnerVehicleData",
+      "flags": 32900
+    },
+    {
+      "fullName": "SendWeaponStatsAnimFeature;",
+      "shortName": "SendWeaponStatsAnimFeature",
+      "flags": 32900
+    },
+    {
+      "fullName": "SetCharged;Bool",
+      "shortName": "SetCharged",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "charged",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetCurrentMeleeTrailEffect;gamedataDamageType",
+      "shortName": "SetCurrentMeleeTrailEffect",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "gamedataDamageType",
+          "name": "damageType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetMaxChargeThreshold;Float",
+      "shortName": "SetMaxChargeThreshold",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Float",
+          "name": "maxCharge",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetWeaponOwner;",
+      "shortName": "SetWeaponOwner",
+      "flags": 32900
+    },
+    {
+      "fullName": "SetWeaponOwner;Int32",
+      "shortName": "SetWeaponOwner",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "owner",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetupWeaponEffects;",
+      "shortName": "SetupWeaponEffects",
+      "flags": 32900
+    },
+    {
+      "fullName": "StartCurrentMeleeTrailEffect;String",
+      "shortName": "StartCurrentMeleeTrailEffect",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "String",
+          "name": "attackSide",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "StartIdleMeleeEffect;gamedataDamageType",
+      "shortName": "StartIdleMeleeEffect",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "gamedataDamageType",
+          "name": "damageType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "StartOverheatEffect;",
+      "shortName": "StartOverheatEffect",
+      "flags": 33028
+    },
+    {
+      "fullName": "StopCurrentMeleeTrailEffect;String",
+      "shortName": "StopCurrentMeleeTrailEffect",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "String",
+          "name": "attackSide",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "StopMeleeSound;GameObjectCName",
+      "shortName": "StopMeleeSound",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "soundName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "StopMeleeSound;",
+      "shortName": "StopMeleeSound",
+      "flags": 32900
+    },
+    {
+      "fullName": "UnregisterChargeStatListener;",
+      "shortName": "UnregisterChargeStatListener",
+      "flags": 32900
+    },
+    {
+      "fullName": "WeaponHasTag;CName",
+      "shortName": "WeaponHasTag",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476,
+      "params": [
+        {
+          "type": "CName",
+          "name": "tag",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

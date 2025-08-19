@@ -1,0 +1,81 @@
+{
+  "parent": "gamedataTweakDBRecord",
+  "name": "gamedataObjectActionCost_Record",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "CostMods",
+      "shortName": "CostMods",
+      "index": 9618,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataStatModifier_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "CostModsContains",
+      "shortName": "CostModsContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 9622,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataStatModifier_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetCostModsCount",
+      "shortName": "GetCostModsCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 9619,
+      "flags": 1
+    },
+    {
+      "fullName": "GetCostModsItem",
+      "shortName": "GetCostModsItem",
+      "return": {
+        "type": "whandle:gamedataStatModifier_Record",
+        "flags": 64
+      },
+      "index": 9620,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetCostModsItemHandle",
+      "shortName": "GetCostModsItemHandle",
+      "return": {
+        "type": "handle:gamedataStatModifier_Record",
+        "flags": 64
+      },
+      "index": 9621,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

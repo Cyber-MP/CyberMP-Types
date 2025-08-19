@@ -1,0 +1,119 @@
+{
+  "parent": "DeviceInkGameControllerBase",
+  "name": "JukeboxInkGameController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkHorizontalPanelWidgetReference",
+      "name": "ActionsPanel",
+      "group": "Widget Refs",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "PriceText",
+      "group": "Widget Refs",
+      "flags": 4297130017
+    },
+    {
+      "type": "whandle:PlayPauseActionWidgetController",
+      "name": "playButton",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:NextPreviousActionWidgetController",
+      "name": "nextButton",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:NextPreviousActionWidgetController",
+      "name": "previousButton",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnActionWidgetSpawned",
+      "shortName": "OnActionWidgetSpawned",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkWidget",
+          "name": "widget",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "userData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Decline;",
+      "shortName": "Decline",
+      "flags": 33028
+    },
+    {
+      "fullName": "ExecuteDeviceActions;DeviceActionWidgetControllerBase",
+      "shortName": "ExecuteDeviceActions",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "handle:DeviceActionWidgetControllerBase",
+          "name": "controller",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetOwner;",
+      "shortName": "GetOwner",
+      "return": {
+        "type": "handle:Jukebox",
+        "flags": 64
+      },
+      "flags": 33024
+    },
+    {
+      "fullName": "Refresh;EDeviceStatus",
+      "shortName": "Refresh",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "EDeviceStatus",
+          "name": "state",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterBlackboardCallbacks;IBlackboard",
+      "shortName": "RegisterBlackboardCallbacks",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "handle:gameIBlackboard",
+          "name": "blackboard",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateActionWidgets;script_ref<array<SActionWidgetPackage>>",
+      "shortName": "UpdateActionWidgets",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "script_ref:array:SActionWidgetPackage",
+          "name": "widgetsData",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

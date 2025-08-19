@@ -1,0 +1,95 @@
+{
+  "parent": "gameIInventoryManager",
+  "name": "gameInventoryManager",
+  "flags": 2,
+  "funcs": [
+    {
+      "fullName": "AddEquipmentStateFlag",
+      "shortName": "AddEquipmentStateFlag",
+      "index": 13234,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gameEEquipmentManagerState",
+          "name": "equipmentFlag",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CreateBasicItemData",
+      "shortName": "CreateBasicItemData",
+      "return": {
+        "type": "handle:gameItemData",
+        "flags": 64
+      },
+      "index": 13237,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gameItemID",
+          "name": "itemID",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameObject",
+          "name": "owner",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetCyberwareUpgradeSeed",
+      "shortName": "GetCyberwareUpgradeSeed",
+      "return": {
+        "type": "Uint32",
+        "flags": 64
+      },
+      "index": 13238,
+      "flags": 1
+    },
+    {
+      "fullName": "HasEquipmentStateFlag",
+      "shortName": "HasEquipmentStateFlag",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13236,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gameEEquipmentManagerState",
+          "name": "equipmentFlag",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IncrementCyberwareUpgradeSeed",
+      "shortName": "IncrementCyberwareUpgradeSeed",
+      "index": 13239,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Uint32",
+          "name": "amount",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RemoveEquipmentStateFlag",
+      "shortName": "RemoveEquipmentStateFlag",
+      "index": 13235,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gameEEquipmentManagerState",
+          "name": "equipmentFlag",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "parent": "gamedataIPrereq_Record",
+  "name": "gamedataNPCTypePrereq_Record",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "AllowedTypes",
+      "shortName": "AllowedTypes",
+      "index": 2951,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataNPCType_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "AllowedTypesContains",
+      "shortName": "AllowedTypesContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 2955,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataNPCType_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetAllowedTypesCount",
+      "shortName": "GetAllowedTypesCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 2952,
+      "flags": 1
+    },
+    {
+      "fullName": "GetAllowedTypesItem",
+      "shortName": "GetAllowedTypesItem",
+      "return": {
+        "type": "whandle:gamedataNPCType_Record",
+        "flags": 64
+      },
+      "index": 2953,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetAllowedTypesItemHandle",
+      "shortName": "GetAllowedTypesItemHandle",
+      "return": {
+        "type": "handle:gamedataNPCType_Record",
+        "flags": 64
+      },
+      "index": 2954,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Invert",
+      "shortName": "Invert",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 2956,
+      "flags": 1
+    }
+  ]
+}

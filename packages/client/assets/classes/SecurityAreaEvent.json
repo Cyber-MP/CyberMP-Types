@@ -1,0 +1,82 @@
+{
+  "parent": "ActionBool",
+  "name": "SecurityAreaEvent",
+  "flags": 4,
+  "props": [
+    {
+      "type": "SecurityAreaData",
+      "name": "securityAreaData",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:gameObject",
+      "name": "whoBreached",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "GetSecurityAreaData;",
+      "shortName": "GetSecurityAreaData",
+      "return": {
+        "type": "SecurityAreaData",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "GetSecurityAreaID;",
+      "shortName": "GetSecurityAreaID",
+      "return": {
+        "type": "gamePersistentID",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "GetWhoBreached;",
+      "shortName": "GetWhoBreached",
+      "return": {
+        "type": "handle:gameObject",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "ModifyAreaTypeHack;ESecurityAreaType",
+      "shortName": "ModifyAreaTypeHack",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "ESecurityAreaType",
+          "name": "modifiedAreaType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetAreaData;script_ref<SecurityAreaData>",
+      "shortName": "SetAreaData",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "script_ref:SecurityAreaData",
+          "name": "areaData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetWhoBreached;GameObject",
+      "shortName": "SetWhoBreached",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "whoBreached",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

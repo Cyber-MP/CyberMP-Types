@@ -1,0 +1,66 @@
+{
+  "parent": "entIPlacedComponent",
+  "name": "gameMovingPlatform",
+  "flags": 2,
+  "props": [
+    {
+      "type": "gameMovingPlatformLoopType",
+      "name": "loopType",
+      "flags": 6694125569
+    },
+    {
+      "type": "Bool",
+      "name": "supportLegacyUnalignedMarkers",
+      "flags": 6694125569
+    },
+    {
+      "type": "Bool",
+      "name": "enableWaterInteractions",
+      "flags": 6694125569
+    },
+    {
+      "type": "CName",
+      "name": "soundPositionName",
+      "flags": 6694125569
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "IsMoving",
+      "shortName": "IsMoving",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12679,
+      "flags": 1
+    },
+    {
+      "fullName": "Pause",
+      "shortName": "Pause",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 12677,
+      "flags": 1
+    },
+    {
+      "fullName": "Unpause",
+      "shortName": "Unpause",
+      "return": {
+        "type": "gamePlatformMovementState",
+        "flags": 64
+      },
+      "index": 12678,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Float",
+          "name": "time",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,197 @@
+{
+  "parent": "IScriptable",
+  "name": "gamePlayerObstacleSystem",
+  "flags": 2,
+  "funcs": [
+    {
+      "fullName": "DisableQueriesForOwner",
+      "shortName": "DisableQueriesForOwner",
+      "index": 12249,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "instigator",
+          "flags": 128
+        },
+        {
+          "type": "gamePlayerObstacleSystemQueryType",
+          "name": "queryToDisable_1",
+          "flags": 128
+        },
+        {
+          "type": "gamePlayerObstacleSystemQueryType",
+          "name": "queryToDisable_2",
+          "flags": 1152
+        },
+        {
+          "type": "gamePlayerObstacleSystemQueryType",
+          "name": "queryToDisable_3",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "EnableQueriesForOwner",
+      "shortName": "EnableQueriesForOwner",
+      "index": 12248,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "instigator",
+          "flags": 128
+        },
+        {
+          "type": "gamePlayerObstacleSystemQueryType",
+          "name": "queryToEnable_1",
+          "flags": 128
+        },
+        {
+          "type": "gamePlayerObstacleSystemQueryType",
+          "name": "queryToEnable_2",
+          "flags": 1152
+        },
+        {
+          "type": "gamePlayerObstacleSystemQueryType",
+          "name": "queryToEnable_3",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "GetCoverDirection",
+      "shortName": "GetCoverDirection",
+      "return": {
+        "type": "gamePlayerCoverDirection",
+        "flags": 64
+      },
+      "index": 12245,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "instigator",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetCurrentClimbInfo",
+      "shortName": "GetCurrentClimbInfo",
+      "return": {
+        "type": "handle:gamePlayerClimbInfo",
+        "flags": 64
+      },
+      "index": 12246,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "instigator",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetSlopeInfo",
+      "shortName": "GetSlopeInfo",
+      "return": {
+        "type": "handle:worldgeometryaverageNormalDetectionHelperResult",
+        "flags": 64
+      },
+      "index": 12247,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "instigator",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ManualLeanLeft",
+      "shortName": "ManualLeanLeft",
+      "index": 12244,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "instigator",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ManualLeanRight",
+      "shortName": "ManualLeanRight",
+      "index": 12243,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "instigator",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnAutoCoverActivation",
+      "shortName": "OnAutoCoverActivation",
+      "index": 12242,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "instigator",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnCoverDeactivation",
+      "shortName": "OnCoverDeactivation",
+      "index": 12241,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "instigator",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnEnterCrouch",
+      "shortName": "OnEnterCrouch",
+      "index": 12239,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "instigator",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetIsSwimming",
+      "shortName": "SetIsSwimming",
+      "index": 12240,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "isSwimming",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameObject",
+          "name": "instigator",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

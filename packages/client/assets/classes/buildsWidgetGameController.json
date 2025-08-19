@@ -1,0 +1,162 @@
+{
+  "parent": "gameuiWidgetGameController",
+  "name": "buildsWidgetGameController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "array:whandle:inkHorizontalPanelWidget",
+      "name": "horizontalPanelsList",
+      "flags": 6583025696
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "CreateBuildButton;Int32gamedataBuildType",
+      "shortName": "CreateBuildButton",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "rowIdx",
+          "flags": 128
+        },
+        {
+          "type": "gamedataBuildType",
+          "name": "type",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CreateCustomButton;Int32CustomButtonType",
+      "shortName": "CreateCustomButton",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "rowIdx",
+          "flags": 128
+        },
+        {
+          "type": "CustomButtonType",
+          "name": "type",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetProperDevBuildList;",
+      "shortName": "GetProperDevBuildList",
+      "return": {
+        "type": "array:array:gamedataBuildType",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "OnBuildMenuEnter;inkPointerEvent",
+      "shortName": "OnBuildMenuEnter",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnBuildMenuExit;inkPointerEvent",
+      "shortName": "OnBuildMenuExit",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnBuildsMenuSelectBuild;inkPointerEvent",
+      "shortName": "OnBuildsMenuSelectBuild",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnClickedCutonButton_DiscoverAllPoiMappins;inkPointerEvent",
+      "shortName": "OnClickedCutonButton_DiscoverAllPoiMappins",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnClickedCutonButton_ShowAllPoiMappins;inkPointerEvent",
+      "shortName": "OnClickedCutonButton_ShowAllPoiMappins",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnClickedCutonButton_UnlockAllVehicles;inkPointerEvent",
+      "shortName": "OnClickedCutonButton_UnlockAllVehicles",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetTooltip;gamedataBuildType",
+      "shortName": "SetTooltip",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "gamedataBuildType",
+          "name": "type",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ShowTooltip;Bool",
+      "shortName": "ShowTooltip",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "val",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

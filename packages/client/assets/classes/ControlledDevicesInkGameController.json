@@ -1,0 +1,296 @@
+{
+  "parent": "gameuiWidgetGameController",
+  "name": "ControlledDevicesInkGameController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "whandle:inkCanvasWidget",
+      "name": "rootWidget",
+      "flags": 4297195552
+    },
+    {
+      "type": "whandle:inkHorizontalPanelWidget",
+      "name": "devicesStackSlot",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:inkTextWidget",
+      "name": "currentDeviceText",
+      "flags": 4297130016
+    },
+    {
+      "type": "array:SWidgetPackage",
+      "name": "controlledDevicesWidgetsData",
+      "flags": 6583091232
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "isDeviceWorking_BBID",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "activeDevice_BBID",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "deviceChain_BBID",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "chainLocked_BBID",
+      "flags": 4431347744
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnControlledDeviceChanged",
+      "shortName": "OnControlledDeviceChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnControlledDeviceWorkStateChanged",
+      "shortName": "OnControlledDeviceWorkStateChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnDeviceChainLocked",
+      "shortName": "OnDeviceChainLocked",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnDeviceSpawned",
+      "shortName": "OnDeviceSpawned",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkWidget",
+          "name": "widget",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "userData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnTakeControllOverDevice",
+      "shortName": "OnTakeControllOverDevice",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Variant",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "AddControlledDeviceWidget;inkWidgetSWidgetPackage",
+      "shortName": "AddControlledDeviceWidget",
+      "return": {
+        "type": "whandle:inkWidget",
+        "flags": 64
+      },
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:inkWidget",
+          "name": "widget",
+          "flags": 128
+        },
+        {
+          "type": "SWidgetPackage",
+          "name": "widgetData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ClearControlledDevicesStack;",
+      "shortName": "ClearControlledDevicesStack",
+      "flags": 32900
+    },
+    {
+      "fullName": "CreateSwitchCameraHint;Bool",
+      "shortName": "CreateSwitchCameraHint",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "isVisible",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetBlackboard;",
+      "shortName": "GetBlackboard",
+      "return": {
+        "type": "handle:gameIBlackboard",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "GetBlackboardDef;",
+      "shortName": "GetBlackboardDef",
+      "return": {
+        "type": "handle:DeviceTakeControlDef",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "GetControlledDeviceWidget;Int32",
+      "shortName": "GetControlledDeviceWidget",
+      "return": {
+        "type": "whandle:inkWidget",
+        "flags": 64
+      },
+      "flags": 33028,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "id",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetControlledDeviceWidget;script_ref<SWidgetPackage>",
+      "shortName": "GetControlledDeviceWidget",
+      "return": {
+        "type": "whandle:inkWidget",
+        "flags": 64
+      },
+      "flags": 33028,
+      "params": [
+        {
+          "type": "script_ref:SWidgetPackage",
+          "name": "widgetData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HideControlledDeviceWidgets;",
+      "shortName": "HideControlledDeviceWidgets",
+      "flags": 33028
+    },
+    {
+      "fullName": "InitializeControlledDeviceWidget;inkWidgetscript_ref<SWidgetPackage>",
+      "shortName": "InitializeControlledDeviceWidget",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:inkWidget",
+          "name": "widget",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:SWidgetPackage",
+          "name": "widgetData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterBlackboardCallbacks;",
+      "shortName": "RegisterBlackboardCallbacks",
+      "flags": 32900
+    },
+    {
+      "fullName": "SetRootVisibility;Bool",
+      "shortName": "SetRootVisibility",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "isVisible",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UnRegisterBlackboardCallbacks;",
+      "shortName": "UnRegisterBlackboardCallbacks",
+      "flags": 32900
+    },
+    {
+      "fullName": "UpdateControlledDevicesWidgets;script_ref<array<SWidgetPackage>>",
+      "shortName": "UpdateControlledDevicesWidgets",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "script_ref:array:SWidgetPackage",
+          "name": "widgetsData",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

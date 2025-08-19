@@ -1,0 +1,666 @@
+{
+  "parent": "AGenericTooltipControllerWithDebug",
+  "name": "PerkDisplayTooltipController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkWidgetReference",
+      "name": "root",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "perkNameText",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "videoWrapper",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkVideoWidgetReference",
+      "name": "videoWidget",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "unlockStateText",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "perkTypeText",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "perkTypeWrapper",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "unlockInfoWrapper",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "unlockPointsText",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "unlockPointsDesc",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "unlockPerkWrapper",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "levelText",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "levelDescriptionText",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "nextLevelWrapper",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "nextLevelText",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "nextLevelDescriptionText",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "level1Wrapper",
+      "flags": 4297130017
+    },
+    {
+      "type": "array:PerkTooltipDescriptionEntry",
+      "name": "levelsDescriptions",
+      "flags": 6583025697
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "relatedWeaponTypeWrapper",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "relatedWeaponTypeIcon",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "relatedWeaponTypeText",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "traitLevelGrowthText",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "unlockTraitPointsText",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "unlockTraitWrapper",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "inputHints",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "buyHint",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "sellHint",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "relicCost",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "costText",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "costImage",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "perkLevelWrapper",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "perkLevelCurrent",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "perkLevelMax",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "cornerContainer",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "cyberwareDetailsInfo",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "DEBUG_iconErrorWrapper",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "DEBUG_iconErrorText",
+      "flags": 4297195553
+    },
+    {
+      "type": "handle:BasePerksMenuTooltipData",
+      "name": "data",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:userSettingsUserSettings",
+      "name": "settings",
+      "flags": 4431413280
+    },
+    {
+      "type": "handle:PerkDisplayTooltipSettingsListener",
+      "name": "settingsListener",
+      "flags": 4431413280
+    },
+    {
+      "type": "CName",
+      "name": "groupPath",
+      "flags": 4297195552
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "tooltipWrapper",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "horizontalSizer",
+      "flags": 4297195553
+    },
+    {
+      "type": "Bool",
+      "name": "bigFontEnabled",
+      "flags": 4297195552
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "CommonUpdateVideo;BasePerkDisplayData",
+      "shortName": "CommonUpdateVideo",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:BasePerkDisplayData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "DEBUG_UpdateDebugInfo;",
+      "shortName": "DEBUG_UpdateDebugInfo",
+      "flags": 33024
+    },
+    {
+      "fullName": "GetLevelDescription;BasePerkDisplayDataTweakDBRecord",
+      "shortName": "GetLevelDescription",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:BasePerkDisplayData",
+          "name": "perkData",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamedataTweakDBRecord",
+          "name": "levelDataRecord",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetUiLocalizationData;TweakDBRecord",
+      "shortName": "GetUiLocalizationData",
+      "return": {
+        "type": "handle:gameUILocalizationDataPackage",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gamedataTweakDBRecord",
+          "name": "levelDataRecord",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsMeleewarePerk;gamedataNewPerkType",
+      "shortName": "IsMeleewarePerk",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "gamedataNewPerkType",
+          "name": "type",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsTrulyEspionagePerk;gamedataNewPerkType",
+      "shortName": "IsTrulyEspionagePerk",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "gamedataNewPerkType",
+          "name": "perkType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "MeleewarePerkToIcon;gamedataNewPerkType",
+      "shortName": "MeleewarePerkToIcon",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "gamedataNewPerkType",
+          "name": "type",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "MeleewarePerkToText;gamedataNewPerkType",
+      "shortName": "MeleewarePerkToText",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "gamedataNewPerkType",
+          "name": "type",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "NewPerkWeaponGroupTypeToIcon;gamedataPerkWeaponGroupType",
+      "shortName": "NewPerkWeaponGroupTypeToIcon",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "gamedataPerkWeaponGroupType",
+          "name": "type",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnVarModified;CNameCNameConfigVarTypeConfigChangeReason",
+      "shortName": "OnVarModified",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "CName",
+          "name": "groupPath",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "varName",
+          "flags": 128
+        },
+        {
+          "type": "InGameConfigVarType",
+          "name": "varType",
+          "flags": 128
+        },
+        {
+          "type": "InGameConfigChangeReason",
+          "name": "reason",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PerkWeaponGroupTypeToIcon;gamedataPerkWeaponGroupType",
+      "shortName": "PerkWeaponGroupTypeToIcon",
+      "return": {
+        "type": "TweakDBID",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "gamedataPerkWeaponGroupType",
+          "name": "type",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PerkWeaponGroupTypeToText;gamedataPerkWeaponGroupType",
+      "shortName": "PerkWeaponGroupTypeToText",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "gamedataPerkWeaponGroupType",
+          "name": "type",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Refresh;",
+      "shortName": "Refresh",
+      "flags": 33280
+    },
+    {
+      "fullName": "RefreshTooltip;PerkTooltipData",
+      "shortName": "RefreshTooltip",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:PerkTooltipData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RefreshTooltip;NewPerkTooltipData",
+      "shortName": "RefreshTooltip",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:NewPerkTooltipData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RefreshTooltip;TraitTooltipData",
+      "shortName": "RefreshTooltip",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:TraitTooltipData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetData;ATooltipData",
+      "shortName": "SetData",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "handle:ATooltipData",
+          "name": "tooltipData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetTooltipSize;Bool",
+      "shortName": "SetTooltipSize",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateName;BasePerkDisplayData",
+      "shortName": "UpdateName",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:BasePerkDisplayData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdatePerkDescriptions;BasePerkDisplayDataBasePerkLevelData_Records",
+      "shortName": "UpdatePerkDescriptions",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:BasePerkDisplayData",
+          "name": "perkData",
+          "flags": 128
+        },
+        {
+          "type": "handle:BasePerkLevelData_Records",
+          "name": "perkPackageRecords",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateRelatedWeaponType;NewPerk_Record",
+      "shortName": "UpdateRelatedWeaponType",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "whandle:gamedataNewPerk_Record",
+          "name": "perkRecord",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateRequirements;PlayerDevelopmentDataPerkTooltipData",
+      "shortName": "UpdateRequirements",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "whandle:PlayerDevelopmentData",
+          "name": "playerDevelopmentData",
+          "flags": 128
+        },
+        {
+          "type": "handle:PerkTooltipData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateRequirements;PlayerDevelopmentDataNewPerkTooltipData",
+      "shortName": "UpdateRequirements",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "whandle:PlayerDevelopmentData",
+          "name": "playerDevelopmentData",
+          "flags": 128
+        },
+        {
+          "type": "handle:NewPerkTooltipData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateRequirements;PlayerDevelopmentDataTraitTooltipData",
+      "shortName": "UpdateRequirements",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "whandle:PlayerDevelopmentData",
+          "name": "playerDevelopmentData",
+          "flags": 128
+        },
+        {
+          "type": "handle:TraitTooltipData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateState;BasePerkDisplayData",
+      "shortName": "UpdateState",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:BasePerkDisplayData",
+          "name": "basePerkData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateTooltipHints;BasePerksMenuTooltipDataBasePerkDisplayData",
+      "shortName": "UpdateTooltipHints",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:BasePerksMenuTooltipData",
+          "name": "data",
+          "flags": 128
+        },
+        {
+          "type": "handle:BasePerkDisplayData",
+          "name": "perkData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateTooltipSize;",
+      "shortName": "UpdateTooltipSize",
+      "flags": 32900
+    },
+    {
+      "fullName": "UpdateTraitDescriptions;TraitTooltipData",
+      "shortName": "UpdateTraitDescriptions",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:TraitTooltipData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateType;TweakDBRecord",
+      "shortName": "UpdateType",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "whandle:gamedataTweakDBRecord",
+          "name": "perkRecord",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateVideo;BasePerksMenuTooltipDataBasePerkDisplayData",
+      "shortName": "UpdateVideo",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:BasePerksMenuTooltipData",
+          "name": "data",
+          "flags": 128
+        },
+        {
+          "type": "handle:BasePerkDisplayData",
+          "name": "perkData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateVideo;TraitTooltipData",
+      "shortName": "UpdateVideo",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:TraitTooltipData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

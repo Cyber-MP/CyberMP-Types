@@ -1,0 +1,243 @@
+{
+  "parent": "gameIGameSystem",
+  "name": "gamemountingIMountingFacility",
+  "flags": 3,
+  "funcs": [
+    {
+      "fullName": "InfoHasChild",
+      "shortName": "InfoHasChild",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 11665,
+      "flags": 3,
+      "params": [
+        {
+          "type": "gamemountingMountingInfo",
+          "name": "info",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "InfoHasParent",
+      "shortName": "InfoHasParent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 11664,
+      "flags": 3,
+      "params": [
+        {
+          "type": "gamemountingMountingInfo",
+          "name": "info",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "InfoIsComplete",
+      "shortName": "InfoIsComplete",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 11666,
+      "flags": 3,
+      "params": [
+        {
+          "type": "gamemountingMountingInfo",
+          "name": "info",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RelationshipGetOtherObject",
+      "shortName": "RelationshipGetOtherObject",
+      "return": {
+        "type": "whandle:gameObject",
+        "flags": 64
+      },
+      "index": 11668,
+      "flags": 3,
+      "params": [
+        {
+          "type": "gamemountingMountingRelationship",
+          "name": "relationship",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SlotIsValid",
+      "shortName": "SlotIsValid",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 11667,
+      "flags": 3,
+      "params": [
+        {
+          "type": "gamemountingMountingSlotId",
+          "name": "slotId",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetMountingInfoMultipleWithIds",
+      "shortName": "GetMountingInfoMultipleWithIds",
+      "return": {
+        "type": "array:gamemountingMountingInfo",
+        "flags": 64
+      },
+      "index": 11662,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "child",
+          "flags": 1152
+        },
+        {
+          "type": "entEntityID",
+          "name": "parent",
+          "flags": 1152
+        },
+        {
+          "type": "gamemountingMountingSlotId",
+          "name": "slotId",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "GetMountingInfoMultipleWithObjects",
+      "shortName": "GetMountingInfoMultipleWithObjects",
+      "return": {
+        "type": "array:gamemountingMountingInfo",
+        "flags": 64
+      },
+      "index": 11661,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "child",
+          "flags": 1152
+        },
+        {
+          "type": "handle:gameObject",
+          "name": "parent",
+          "flags": 1152
+        },
+        {
+          "type": "gamemountingMountingSlotId",
+          "name": "slotId",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "GetMountingInfoSingleWithIds",
+      "shortName": "GetMountingInfoSingleWithIds",
+      "return": {
+        "type": "gamemountingMountingInfo",
+        "flags": 64
+      },
+      "index": 11660,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "child",
+          "flags": 1152
+        },
+        {
+          "type": "entEntityID",
+          "name": "parent",
+          "flags": 1152
+        },
+        {
+          "type": "gamemountingMountingSlotId",
+          "name": "slotId",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "GetMountingInfoSingleWithObjects",
+      "shortName": "GetMountingInfoSingleWithObjects",
+      "return": {
+        "type": "gamemountingMountingInfo",
+        "flags": 64
+      },
+      "index": 11659,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "child",
+          "flags": 1152
+        },
+        {
+          "type": "handle:gameObject",
+          "name": "parent",
+          "flags": 1152
+        },
+        {
+          "type": "gamemountingMountingSlotId",
+          "name": "slotId",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "IsMountedToAnything",
+      "shortName": "IsMountedToAnything",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 11663,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "child",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Mount",
+      "shortName": "Mount",
+      "index": 11669,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gamemountingMountingRequest",
+          "name": "mountEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Unmount",
+      "shortName": "Unmount",
+      "index": 11670,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gamemountingUnmountingRequest",
+          "name": "unmountEvent",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

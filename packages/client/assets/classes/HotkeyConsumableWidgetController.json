@@ -1,0 +1,264 @@
+{
+  "parent": "gameuiNewPhoneRelatedHUDGameController",
+  "name": "HotkeyConsumableWidgetController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "radioSlot",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "vehicleCustomizationSlot",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "autodriveSlot",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "container",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetLibraryReference",
+      "name": "DpadHintLibraryPath",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetLibraryReference",
+      "name": "autodriveLibraryPath",
+      "flags": 4297130017
+    },
+    {
+      "type": "Bool",
+      "name": "IsInDriverCombat",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "IsPoliceVehicle",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isRadioBlocked",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isInVehicleScene",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isQuestBlocked",
+      "flags": 4297130016
+    },
+    {
+      "type": "Uint32",
+      "name": "carHudListenerId",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:HotkeyRadioStatusListener",
+      "name": "statusListener",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "PlayerEnteredVehicleListener",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "autodriveToggledListener",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "containerAnimProxy",
+      "flags": 4431347744
+    },
+    {
+      "type": "Bool",
+      "name": "containerVisibility",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnAutodriveToggled",
+      "shortName": "OnAutodriveToggled",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnPlayerAttach",
+      "shortName": "OnPlayerAttach",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "player",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPlayerDetach",
+      "shortName": "OnPlayerDetach",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "player",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPlayerEnteredVehicle",
+      "shortName": "OnPlayerEnteredVehicle",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "val",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUnlockCarHud",
+      "shortName": "OnUnlockCarHud",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsRadioEnabled;",
+      "shortName": "IsRadioEnabled",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "RefreshInPoliceVehicle;",
+      "shortName": "RefreshInPoliceVehicle",
+      "flags": 32900
+    },
+    {
+      "fullName": "RefreshStatusEffect;",
+      "shortName": "RefreshStatusEffect",
+      "flags": 33284
+    },
+    {
+      "fullName": "RefreshUnlockCarHud;",
+      "shortName": "RefreshUnlockCarHud",
+      "flags": 33284
+    },
+    {
+      "fullName": "RegisterBlackboardListeners;",
+      "shortName": "RegisterBlackboardListeners",
+      "flags": 32900
+    },
+    {
+      "fullName": "RegisterCarHudListener;",
+      "shortName": "RegisterCarHudListener",
+      "flags": 32900
+    },
+    {
+      "fullName": "RegisterStatusEffectListeners;",
+      "shortName": "RegisterStatusEffectListeners",
+      "flags": 32900
+    },
+    {
+      "fullName": "ResolveRadioState;",
+      "shortName": "ResolveRadioState",
+      "flags": 33028
+    },
+    {
+      "fullName": "SetContainerVisibility;BoolBool",
+      "shortName": "SetContainerVisibility",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "visible",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "instant",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UnregisterBlackboardListeners;",
+      "shortName": "UnregisterBlackboardListeners",
+      "flags": 32900
+    },
+    {
+      "fullName": "UnregisterCarHudListener;",
+      "shortName": "UnregisterCarHudListener",
+      "flags": 32900
+    },
+    {
+      "fullName": "UpdateBlackboard;",
+      "shortName": "UpdateBlackboard",
+      "flags": 32900
+    },
+    {
+      "fullName": "UpdateRadioVisibility;",
+      "shortName": "UpdateRadioVisibility",
+      "flags": 32900
+    }
+  ]
+}

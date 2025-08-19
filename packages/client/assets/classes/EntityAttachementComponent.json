@@ -1,0 +1,87 @@
+{
+  "parent": "gameScriptableComponent",
+  "name": "EntityAttachementComponent",
+  "flags": 4,
+  "props": [
+    {
+      "type": "EntityAttachementData",
+      "name": "parentAttachementData",
+      "flags": 4364435489
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnChildAttachementRequest",
+      "shortName": "OnChildAttachementRequest",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:EntityAttachementRequestEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AttachChild;script_ref<EntityAttachementData>",
+      "shortName": "AttachChild",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:EntityAttachementData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AttachToParent;EntityAttachementData",
+      "shortName": "AttachToParent",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "EntityAttachementData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetMyPS;",
+      "shortName": "GetMyPS",
+      "return": {
+        "type": "handle:EntityAttachementComponentPS",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "GetParentAttachementData;",
+      "shortName": "GetParentAttachementData",
+      "return": {
+        "type": "EntityAttachementData",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "OnGameAttach;",
+      "shortName": "OnGameAttach",
+      "flags": 34052
+    },
+    {
+      "fullName": "RestoreAttachements;",
+      "shortName": "RestoreAttachements",
+      "flags": 32900
+    },
+    {
+      "fullName": "RestoreChildAttachements;",
+      "shortName": "RestoreChildAttachements",
+      "flags": 32900
+    }
+  ]
+}

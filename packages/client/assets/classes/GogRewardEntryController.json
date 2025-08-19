@@ -1,0 +1,102 @@
+{
+  "parent": "inkWidgetLogicController",
+  "name": "GogRewardEntryController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkWidgetReference",
+      "name": "nameWidget",
+      "flags": 4297326625
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "descriptionWidget",
+      "flags": 4297326625
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "iconImage",
+      "flags": 4297326625
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "ep1LabelContainer",
+      "flags": 4297326625
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "backgroundWidget",
+      "flags": 4297326625
+    },
+    {
+      "type": "Bool",
+      "name": "isUnlocked",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "IsUnlocked;",
+      "shortName": "IsUnlocked",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "OldUpdateRewardDetails;script_ref<String>script_ref<String>CNameBool",
+      "shortName": "OldUpdateRewardDetails",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "script_ref:String",
+          "name": "rewardTitle",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:String",
+          "name": "rewardDescription",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "iconSlot",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "isUnlocked",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateRewardDetails;CNameCNameBoolBool",
+      "shortName": "UpdateRewardDetails",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "CName",
+          "name": "iconName",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "state",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "isUnlocked",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "isOutfit",
+          "flags": 1152
+        }
+      ]
+    }
+  ]
+}

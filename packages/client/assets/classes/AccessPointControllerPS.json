@@ -1,0 +1,908 @@
+{
+  "parent": "MasterControllerPS",
+  "name": "AccessPointControllerPS",
+  "flags": 1028,
+  "props": [
+    {
+      "type": "array:String",
+      "name": "rewardNotificationIcons",
+      "flags": 6583025696
+    },
+    {
+      "type": "String",
+      "name": "rewardNotificationString",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:HackingContainer",
+      "name": "accessPointSkillChecks",
+      "flags": 4498456613
+    },
+    {
+      "type": "Bool",
+      "name": "isBreached",
+      "flags": 4565565472
+    },
+    {
+      "type": "Bool",
+      "name": "moneyAwarded",
+      "flags": 4565565472
+    },
+    {
+      "type": "Bool",
+      "name": "isVirtual",
+      "flags": 4297130017
+    },
+    {
+      "type": "array:CName",
+      "name": "pingedSquads",
+      "flags": 6583025696
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnInstantiated",
+      "shortName": "OnInstantiated",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "ActionResetNetworkBreachState;",
+      "shortName": "ActionResetNetworkBreachState",
+      "return": {
+        "type": "handle:ResetNetworkBreachState",
+        "flags": 64
+      },
+      "flags": 33028
+    },
+    {
+      "fullName": "ActionRevealEnemiesProgram;",
+      "shortName": "ActionRevealEnemiesProgram",
+      "return": {
+        "type": "handle:RevealEnemiesProgram",
+        "flags": 64
+      },
+      "flags": 33028
+    },
+    {
+      "fullName": "ActionSpiderbotEnableAccessPoint;",
+      "shortName": "ActionSpiderbotEnableAccessPoint",
+      "return": {
+        "type": "handle:SpiderbotEnableAccessPoint",
+        "flags": 64
+      },
+      "flags": 33028
+    },
+    {
+      "fullName": "AddHackReward;TransactionSystemTweakDBIDUint32",
+      "shortName": "AddHackReward",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameTransactionSystem",
+          "name": "TS",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "itemTweakID",
+          "flags": 128
+        },
+        {
+          "type": "Uint32",
+          "name": "amount",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "AddPingedSquad;CName",
+      "shortName": "AddPingedSquad",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "CName",
+          "name": "squadName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AddReward;TransactionSystemTweakDBIDUint32",
+      "shortName": "AddReward",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameTransactionSystem",
+          "name": "TS",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "itemQueryTDBID",
+          "flags": 128
+        },
+        {
+          "type": "Uint32",
+          "name": "amount",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "BreachConnectedDevices;",
+      "shortName": "BreachConnectedDevices",
+      "flags": 33284
+    },
+    {
+      "fullName": "CanCreateAnyQuickHackActions;",
+      "shortName": "CanCreateAnyQuickHackActions",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41216
+    },
+    {
+      "fullName": "CanCreateAnySpiderbotActions;",
+      "shortName": "CanCreateAnySpiderbotActions",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33024
+    },
+    {
+      "fullName": "CheckConnectedClassTypes;",
+      "shortName": "CheckConnectedClassTypes",
+      "return": {
+        "type": "ConnectedClassTypes",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "CheckMasterRunnerAchievement;Int32",
+      "shortName": "CheckMasterRunnerAchievement",
+      "flags": 41220,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "minigameProgramsCompleted",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CleanRewardNotification;",
+      "shortName": "CleanRewardNotification",
+      "flags": 32900
+    },
+    {
+      "fullName": "ClearPingedSquads;",
+      "shortName": "ClearPingedSquads",
+      "flags": 32900
+    },
+    {
+      "fullName": "DebugBreachConnectedDevices;",
+      "shortName": "DebugBreachConnectedDevices",
+      "flags": 33284
+    },
+    {
+      "fullName": "ExtractActions;",
+      "shortName": "ExtractActions",
+      "return": {
+        "type": "array:handle:gamedeviceAction",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "FilterRedundantPrograms;script_ref<array<TweakDBID>>",
+      "shortName": "FilterRedundantPrograms",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:array:TweakDBID",
+          "name": "programs",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "FinalizeNetrunnerDive;HackingMinigameState",
+      "shortName": "FinalizeNetrunnerDive",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "gameuiHackingMinigameState",
+          "name": "state",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GameAttached;",
+      "shortName": "GameAttached",
+      "flags": 33024
+    },
+    {
+      "fullName": "GenerateMaterialDrops;FloatTransactionSystem",
+      "shortName": "GenerateMaterialDrops",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Float",
+          "name": "playerLevel",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameTransactionSystem",
+          "name": "TS",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetBackdoorAccessPoint;",
+      "shortName": "GetBackdoorAccessPoint",
+      "return": {
+        "type": "handle:AccessPointControllerPS",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "GetBlackboardDef;",
+      "shortName": "GetBlackboardDef",
+      "return": {
+        "type": "handle:BackDoorDeviceBlackboardDef",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "GetClearance",
+      "shortName": "GetClearance",
+      "return": {
+        "type": "handle:gamedeviceClearance",
+        "flags": 64
+      },
+      "flags": 41216
+    },
+    {
+      "fullName": "GetCommunityProxies;",
+      "shortName": "GetCommunityProxies",
+      "return": {
+        "type": "array:handle:CommunityProxyPS",
+        "flags": 64
+      },
+      "flags": 41092
+    },
+    {
+      "fullName": "GetDevicesThatPlayerCanBreach;",
+      "shortName": "GetDevicesThatPlayerCanBreach",
+      "return": {
+        "type": "array:handle:ScriptableDeviceComponentPS",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetMinigameDefinition;",
+      "shortName": "GetMinigameDefinition",
+      "return": {
+        "type": "TweakDBID",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "GetNetworkArea;",
+      "shortName": "GetNetworkArea",
+      "return": {
+        "type": "whandle:NetworkAreaControllerPS",
+        "flags": 64
+      },
+      "flags": 41216
+    },
+    {
+      "fullName": "GetNetworkName;",
+      "shortName": "GetNetworkName",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "GetNetworkSizeCount;",
+      "shortName": "GetNetworkSizeCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "GetPlayersUniqueHacks;TransactionSystemarray<TweakDBID>gamedataQualityarray<TweakDBID>",
+      "shortName": "GetPlayersUniqueHacks",
+      "return": {
+        "type": "array:TweakDBID",
+        "flags": 64
+      },
+      "flags": 41092,
+      "params": [
+        {
+          "type": "handle:gameTransactionSystem",
+          "name": "TS",
+          "flags": 128
+        },
+        {
+          "type": "array:TweakDBID",
+          "name": "hacksPool",
+          "flags": 128
+        },
+        {
+          "type": "gamedataQuality",
+          "name": "quality",
+          "flags": 128
+        },
+        {
+          "type": "array:TweakDBID",
+          "name": "playerHacksTweak",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "GetQuestActionByName;CName",
+      "shortName": "GetQuestActionByName",
+      "return": {
+        "type": "handle:gamedeviceAction",
+        "flags": 64
+      },
+      "flags": 33280,
+      "params": [
+        {
+          "type": "CName",
+          "name": "actionName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetQuestActions;array<DeviceAction>script_ref<GetActionsContext>",
+      "shortName": "GetQuestActions",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "array:handle:gamedeviceAction",
+          "name": "outActions",
+          "flags": 640
+        },
+        {
+          "type": "script_ref:gameGetActionsContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetQuickhackReward;FloatTransactionSystem",
+      "shortName": "GetQuickhackReward",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Float",
+          "name": "playerLevel",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameTransactionSystem",
+          "name": "TS",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetSkillCheckContainerForSetup;",
+      "shortName": "GetSkillCheckContainerForSetup",
+      "return": {
+        "type": "handle:BaseSkillCheckContainer",
+        "flags": 64
+      },
+      "flags": 33024
+    },
+    {
+      "fullName": "HasNetworkBackdoor;",
+      "shortName": "HasNetworkBackdoor",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "IsAccessPointOf;PersistentID",
+      "shortName": "IsAccessPointOf",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476,
+      "params": [
+        {
+          "type": "gamePersistentID",
+          "name": "slaveToCheck",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsBreached;",
+      "shortName": "IsBreached",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 58880
+    },
+    {
+      "fullName": "IsConnectedToBackdoorDevice;",
+      "shortName": "IsConnectedToBackdoorDevice",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "IsMainframe;",
+      "shortName": "IsMainframe",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "IsNetworkBreached;",
+      "shortName": "IsNetworkBreached",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 57860
+    },
+    {
+      "fullName": "IsSpiderbotHackingConditionFullfilled;",
+      "shortName": "IsSpiderbotHackingConditionFullfilled",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33028
+    },
+    {
+      "fullName": "IsSquadMarkedWithPing;CName",
+      "shortName": "IsSquadMarkedWithPing",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "CName",
+          "name": "squadName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsVirtual;",
+      "shortName": "IsVirtual",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "OnBreachAccessPointEvent;BreachAccessPointEvent",
+      "shortName": "OnBreachAccessPointEvent",
+      "return": {
+        "type": "EntityNotificationType",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:BreachAccessPointEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnFillTakeOverChainBBoardEvent;FillTakeOverChainBBoardEvent",
+      "shortName": "OnFillTakeOverChainBBoardEvent",
+      "return": {
+        "type": "EntityNotificationType",
+        "flags": 64
+      },
+      "flags": 33024,
+      "params": [
+        {
+          "type": "handle:FillTakeOverChainBBoardEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnNPCBreachEvent;NPCBreachEvent",
+      "shortName": "OnNPCBreachEvent",
+      "return": {
+        "type": "EntityNotificationType",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:NPCBreachEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnNetworkMoneySiphoned;NetworkMoneySiphoned",
+      "shortName": "OnNetworkMoneySiphoned",
+      "return": {
+        "type": "EntityNotificationType",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:NetworkMoneySiphoned",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnQuestBreachAccessPoint;QuestBreachAccessPoint",
+      "shortName": "OnQuestBreachAccessPoint",
+      "return": {
+        "type": "EntityNotificationType",
+        "flags": 64
+      },
+      "flags": 34304,
+      "params": [
+        {
+          "type": "handle:QuestBreachAccessPoint",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnQuestRemoveQuickHacks;QuestRemoveQuickHacks",
+      "shortName": "OnQuestRemoveQuickHacks",
+      "return": {
+        "type": "EntityNotificationType",
+        "flags": 64
+      },
+      "flags": 33280,
+      "params": [
+        {
+          "type": "handle:QuestRemoveQuickHacks",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRefreshSlavesEvent;RefreshSlavesEvent",
+      "shortName": "OnRefreshSlavesEvent",
+      "return": {
+        "type": "EntityNotificationType",
+        "flags": 64
+      },
+      "flags": 34048,
+      "params": [
+        {
+          "type": "handle:RefreshSlavesEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnResetNetworkBreachState;ResetNetworkBreachState",
+      "shortName": "OnResetNetworkBreachState",
+      "return": {
+        "type": "EntityNotificationType",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:ResetNetworkBreachState",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRevealEnemiesProgram;RevealEnemiesProgram",
+      "shortName": "OnRevealEnemiesProgram",
+      "return": {
+        "type": "EntityNotificationType",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:RevealEnemiesProgram",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSetExposeQuickHacks;SetExposeQuickHacks",
+      "shortName": "OnSetExposeQuickHacks",
+      "return": {
+        "type": "EntityNotificationType",
+        "flags": 64
+      },
+      "flags": 34304,
+      "params": [
+        {
+          "type": "handle:SetExposeQuickHacks",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSpiderbotEnableAccessPoint;SpiderbotEnableAccessPoint",
+      "shortName": "OnSpiderbotEnableAccessPoint",
+      "return": {
+        "type": "EntityNotificationType",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:SpiderbotEnableAccessPoint",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnValidate;Validate",
+      "shortName": "OnValidate",
+      "return": {
+        "type": "EntityNotificationType",
+        "flags": 64
+      },
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:Validate",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PingSquad;",
+      "shortName": "PingSquad",
+      "flags": 32896
+    },
+    {
+      "fullName": "ProcessLoot;FloatBoolFloatTransactionSystem",
+      "shortName": "ProcessLoot",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Float",
+          "name": "baseMoney",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "craftingMaterial",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "baseShardDropChance",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameTransactionSystem",
+          "name": "TS",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessMinigameNetworkActions;DeviceComponentPS",
+      "shortName": "ProcessMinigameNetworkActions",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameDeviceComponentPS",
+          "name": "device",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RefreshSlaves;script_ref<array<DeviceComponentPS>>",
+      "shortName": "RefreshSlaves",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:array:handle:gameDeviceComponentPS",
+          "name": "devices",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RemovePingedSquad;CName",
+      "shortName": "RemovePingedSquad",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "CName",
+          "name": "squadName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ResolveDive;Bool",
+      "shortName": "ResolveDive",
+      "flags": 41216,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "isRemote",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RevealDevicesGrid;BoolVector4FxResourceBoolFloatBoolBoolBool",
+      "shortName": "RevealDevicesGrid",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "shouldDraw",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "ownerEntityPosition",
+          "flags": 1152
+        },
+        {
+          "type": "gameFxResource",
+          "name": "fxDefault",
+          "flags": 1152
+        },
+        {
+          "type": "Bool",
+          "name": "isPing",
+          "flags": 1152
+        },
+        {
+          "type": "Float",
+          "name": "lifetime",
+          "flags": 1152
+        },
+        {
+          "type": "Bool",
+          "name": "revealSlave",
+          "flags": 1152
+        },
+        {
+          "type": "Bool",
+          "name": "revealMaster",
+          "flags": 1152
+        },
+        {
+          "type": "Bool",
+          "name": "ignoreRevealed",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "RewardMoney;Float",
+      "shortName": "RewardMoney",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Float",
+          "name": "baseMoney",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SendMinigameFailedToAllNPCs;",
+      "shortName": "SendMinigameFailedToAllNPCs",
+      "flags": 41092
+    },
+    {
+      "fullName": "SetIsBreached;Bool",
+      "shortName": "SetIsBreached",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "isBreached",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ShouldRevealNetworkGrid;",
+      "shortName": "ShouldRevealNetworkGrid",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "ShouldRewardMoney;",
+      "shortName": "ShouldRewardMoney",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41092
+    },
+    {
+      "fullName": "ShowRewardNotification;",
+      "shortName": "ShowRewardNotification",
+      "flags": 32900
+    },
+    {
+      "fullName": "UploadProgram;Int32",
+      "shortName": "UploadProgram",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "programID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "WasMoneyAwarded;",
+      "shortName": "WasMoneyAwarded",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41092
+    }
+  ]
+}

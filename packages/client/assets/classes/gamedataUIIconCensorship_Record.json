@@ -1,0 +1,121 @@
+{
+  "parent": "gamedataTweakDBRecord",
+  "name": "gamedataUIIconCensorship_Record",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "CensorFlags",
+      "shortName": "CensorFlags",
+      "index": 5219,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataUIIconCensorFlag_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "CensorFlagsContains",
+      "shortName": "CensorFlagsContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 5223,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataUIIconCensorFlag_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CensoredIcon",
+      "shortName": "CensoredIcon",
+      "return": {
+        "type": "whandle:gamedataUIIcon_Record",
+        "flags": 64
+      },
+      "index": 5215,
+      "flags": 1
+    },
+    {
+      "fullName": "CensoredIconHandle",
+      "shortName": "CensoredIconHandle",
+      "return": {
+        "type": "handle:gamedataUIIcon_Record",
+        "flags": 64
+      },
+      "index": 5216,
+      "flags": 1
+    },
+    {
+      "fullName": "GetCensorFlagsCount",
+      "shortName": "GetCensorFlagsCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 5220,
+      "flags": 1
+    },
+    {
+      "fullName": "GetCensorFlagsItem",
+      "shortName": "GetCensorFlagsItem",
+      "return": {
+        "type": "whandle:gamedataUIIconCensorFlag_Record",
+        "flags": 64
+      },
+      "index": 5221,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetCensorFlagsItemHandle",
+      "shortName": "GetCensorFlagsItemHandle",
+      "return": {
+        "type": "handle:gamedataUIIconCensorFlag_Record",
+        "flags": 64
+      },
+      "index": 5222,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Replacer",
+      "shortName": "Replacer",
+      "return": {
+        "type": "whandle:gamedataUIIcon_Record",
+        "flags": 64
+      },
+      "index": 5217,
+      "flags": 1
+    },
+    {
+      "fullName": "ReplacerHandle",
+      "shortName": "ReplacerHandle",
+      "return": {
+        "type": "handle:gamedataUIIcon_Record",
+        "flags": 64
+      },
+      "index": 5218,
+      "flags": 1
+    }
+  ]
+}

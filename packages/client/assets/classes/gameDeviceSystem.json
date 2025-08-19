@@ -1,0 +1,359 @@
+{
+  "parent": "gameIDeviceSystem",
+  "name": "gameDeviceSystem",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "AddDynamicConnection",
+      "shortName": "AddDynamicConnection",
+      "index": 11825,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamePersistentID",
+          "name": "deviceEntityID",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "deviceClassName",
+          "flags": 128
+        },
+        {
+          "type": "gamePersistentID",
+          "name": "parentEntityID",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "parentClassName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "DEBUG_GetAncestorsData",
+      "shortName": "DEBUG_GetAncestorsData",
+      "index": 11827,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "entityID",
+          "flags": 128
+        },
+        {
+          "type": "array:worldDeviceRef",
+          "name": "outDevicesData",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "DEBUG_GetChildrenData",
+      "shortName": "DEBUG_GetChildrenData",
+      "index": 11829,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "entityID",
+          "flags": 128
+        },
+        {
+          "type": "array:worldDeviceRef",
+          "name": "outDevicesData",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "DEBUG_GetDescendantsData",
+      "shortName": "DEBUG_GetDescendantsData",
+      "index": 11830,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "entityID",
+          "flags": 128
+        },
+        {
+          "type": "array:worldDeviceRef",
+          "name": "outDevicesData",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "DEBUG_GetParentsData",
+      "shortName": "DEBUG_GetParentsData",
+      "index": 11828,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "entityID",
+          "flags": 128
+        },
+        {
+          "type": "array:worldDeviceRef",
+          "name": "outDevicesData",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "GetAllAncestors",
+      "shortName": "GetAllAncestors",
+      "index": 11813,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "entityID",
+          "flags": 128
+        },
+        {
+          "type": "array:handle:gameDeviceComponentPS",
+          "name": "outDevices",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "GetAllDescendants",
+      "shortName": "GetAllDescendants",
+      "index": 11816,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "entityID",
+          "flags": 128
+        },
+        {
+          "type": "array:handle:gameDeviceComponentPS",
+          "name": "outDevices",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "GetChildren",
+      "shortName": "GetChildren",
+      "index": 11815,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "entityID",
+          "flags": 128
+        },
+        {
+          "type": "array:handle:gameDeviceComponentPS",
+          "name": "outDevices",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "GetLazyAllAncestors",
+      "shortName": "GetLazyAllAncestors",
+      "index": 11817,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "entityID",
+          "flags": 128
+        },
+        {
+          "type": "array:handle:gameLazyDevice",
+          "name": "outDevices",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "GetLazyAllDescendants",
+      "shortName": "GetLazyAllDescendants",
+      "index": 11820,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "entityID",
+          "flags": 128
+        },
+        {
+          "type": "array:handle:gameLazyDevice",
+          "name": "outDevices",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "GetLazyChildren",
+      "shortName": "GetLazyChildren",
+      "index": 11819,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "entityID",
+          "flags": 128
+        },
+        {
+          "type": "array:handle:gameLazyDevice",
+          "name": "outDevices",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "GetLazyParents",
+      "shortName": "GetLazyParents",
+      "index": 11818,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "entityID",
+          "flags": 128
+        },
+        {
+          "type": "array:handle:gameLazyDevice",
+          "name": "outDevices",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "GetNodePosition",
+      "shortName": "GetNodePosition",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 11812,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "entityID",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "position",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "GetParents",
+      "shortName": "GetParents",
+      "index": 11814,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "entityID",
+          "flags": 128
+        },
+        {
+          "type": "array:handle:gameDeviceComponentPS",
+          "name": "outDevices",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "HasAnyAncestor",
+      "shortName": "HasAnyAncestor",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 11821,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "entityID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HasAnyChild",
+      "shortName": "HasAnyChild",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 11823,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "entityID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HasAnyDescendant",
+      "shortName": "HasAnyDescendant",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 11824,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "entityID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HasAnyParent",
+      "shortName": "HasAnyParent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 11822,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "entityID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RemoveDynamicConnection",
+      "shortName": "RemoveDynamicConnection",
+      "index": 11826,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamePersistentID",
+          "name": "deviceEntityID",
+          "flags": 128
+        },
+        {
+          "type": "gamePersistentID",
+          "name": "parentEntityID",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

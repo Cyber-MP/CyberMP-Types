@@ -1,0 +1,164 @@
+{
+  "parent": "gameEffectExecutor_Scripted",
+  "name": "MeleeHitAnimEventExecutor",
+  "flags": 4,
+  "props": [
+    {
+      "type": "Bool",
+      "name": "ignoreWaterImpacts",
+      "flags": 4297130017
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "CanAttackGuardBreak;EntityEntityWeaponObjectWeaponObjectBool",
+      "shortName": "CanAttackGuardBreak",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "whandle:entEntity",
+          "name": "instigator",
+          "flags": 128
+        },
+        {
+          "type": "whandle:entEntity",
+          "name": "target",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameweaponObject",
+          "name": "instigatorWeapon",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameweaponObject",
+          "name": "targetWeapon",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "strongAttack",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetStimuliData;script_ref<String>StimuliEvent",
+      "shortName": "GetStimuliData",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:String",
+          "name": "path",
+          "flags": 128
+        },
+        {
+          "type": "handle:senseStimuliEvent",
+          "name": "stimToProcess",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "GetTargetWeapon;ScriptedPuppet",
+      "shortName": "GetTargetWeapon",
+      "return": {
+        "type": "whandle:gameweaponObject",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "whandle:ScriptedPuppet",
+          "name": "target",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsMuted;EffectScriptContextEffectExecutionScriptContext",
+      "shortName": "IsMuted",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "gameEffectScriptContext",
+          "name": "ctx",
+          "flags": 128
+        },
+        {
+          "type": "gameEffectExecutionScriptContext",
+          "name": "applierCtx",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Process;EffectScriptContextEffectExecutionScriptContext",
+      "shortName": "Process",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 34308,
+      "params": [
+        {
+          "type": "gameEffectScriptContext",
+          "name": "ctx",
+          "flags": 128
+        },
+        {
+          "type": "gameEffectExecutionScriptContext",
+          "name": "applierCtx",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SpawnBlockEffects;WeaponObjectWeaponObject",
+      "shortName": "SpawnBlockEffects",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "whandle:gameweaponObject",
+          "name": "instigatorWeapon",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameweaponObject",
+          "name": "targetWeapon",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TriggerSingleStimuliOnHit;EffectScriptContextEffectExecutionScriptContextgamedataStimType",
+      "shortName": "TriggerSingleStimuliOnHit",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "gameEffectScriptContext",
+          "name": "ctx",
+          "flags": 128
+        },
+        {
+          "type": "gameEffectExecutionScriptContext",
+          "name": "applierCtx",
+          "flags": 128
+        },
+        {
+          "type": "gamedataStimType",
+          "name": "stimToSend",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

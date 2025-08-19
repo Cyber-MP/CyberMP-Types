@@ -1,0 +1,449 @@
+{
+  "parent": "DeviceInkGameControllerBase",
+  "name": "MasterDeviceInkGameControllerBase",
+  "flags": 4,
+  "props": [
+    {
+      "type": "array:SThumbnailWidgetPackage",
+      "name": "thumbnailWidgetsData",
+      "flags": 6583091232
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "onThumbnailWidgetsUpdateListener",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "onCleanPasswordListener",
+      "flags": 4431347744
+    },
+    {
+      "type": "whandle:KeypadDeviceController",
+      "name": "keypadController",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnCleanPassword",
+      "shortName": "OnCleanPassword",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnDeviceWidgetSpawned",
+      "shortName": "OnDeviceWidgetSpawned",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkWidget",
+          "name": "widget",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "userData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnThumbnailActionCallback",
+      "shortName": "OnThumbnailActionCallback",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnThumbnailWidgetSpawned",
+      "shortName": "OnThumbnailWidgetSpawned",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkWidget",
+          "name": "widget",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "userData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnThumbnailWidgetsUpdate",
+      "shortName": "OnThumbnailWidgetsUpdate",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Variant",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "AddThumbnailWidget;inkWidgetSThumbnailWidgetPackage",
+      "shortName": "AddThumbnailWidget",
+      "return": {
+        "type": "whandle:inkWidget",
+        "flags": 64
+      },
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:inkWidget",
+          "name": "widget",
+          "flags": 128
+        },
+        {
+          "type": "SThumbnailWidgetPackage",
+          "name": "widgetData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AddThumbnailWidgetData;script_ref<SThumbnailWidgetPackage>",
+      "shortName": "AddThumbnailWidgetData",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "script_ref:SThumbnailWidgetPackage",
+          "name": "widgetData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CreateThumbnailWidget;inkWidgetscript_ref<SThumbnailWidgetPackage>",
+      "shortName": "CreateThumbnailWidget",
+      "return": {
+        "type": "whandle:inkWidget",
+        "flags": 64
+      },
+      "flags": 33028,
+      "params": [
+        {
+          "type": "whandle:inkWidget",
+          "name": "parentWidget",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:SThumbnailWidgetPackage",
+          "name": "widgetData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CreateThumbnailWidgetAsync;inkWidgetSThumbnailWidgetPackage",
+      "shortName": "CreateThumbnailWidgetAsync",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "whandle:inkWidget",
+          "name": "parentWidget",
+          "flags": 128
+        },
+        {
+          "type": "SThumbnailWidgetPackage",
+          "name": "widgetData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetOwner;",
+      "shortName": "GetOwner",
+      "return": {
+        "type": "handle:InteractiveMasterDevice",
+        "flags": 64
+      },
+      "flags": 33024
+    },
+    {
+      "fullName": "GetThumbnailWidget;script_ref<SThumbnailWidgetPackage>",
+      "shortName": "GetThumbnailWidget",
+      "return": {
+        "type": "whandle:inkWidget",
+        "flags": 64
+      },
+      "flags": 33028,
+      "params": [
+        {
+          "type": "script_ref:SThumbnailWidgetPackage",
+          "name": "widgetData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetThumbnailWidgetDataIndex;SThumbnailWidgetPackage",
+      "shortName": "GetThumbnailWidgetDataIndex",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 33028,
+      "params": [
+        {
+          "type": "SThumbnailWidgetPackage",
+          "name": "widgetData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HasThumbnailWidget;script_ref<SThumbnailWidgetPackage>",
+      "shortName": "HasThumbnailWidget",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33028,
+      "params": [
+        {
+          "type": "script_ref:SThumbnailWidgetPackage",
+          "name": "widgetData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HasThumbnailWidgetData;script_ref<SThumbnailWidgetPackage>",
+      "shortName": "HasThumbnailWidgetData",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33028,
+      "params": [
+        {
+          "type": "script_ref:SThumbnailWidgetPackage",
+          "name": "widgetData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HideThumbnailWidgets;",
+      "shortName": "HideThumbnailWidgets",
+      "flags": 33028
+    },
+    {
+      "fullName": "InitializeThumbnailWidget;inkWidgetscript_ref<SThumbnailWidgetPackage>",
+      "shortName": "InitializeThumbnailWidget",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:inkWidget",
+          "name": "widget",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:SThumbnailWidgetPackage",
+          "name": "widgetData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsOwner;PersistentID",
+      "shortName": "IsOwner",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33028,
+      "params": [
+        {
+          "type": "gamePersistentID",
+          "name": "deviceID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Refresh;EDeviceStatus",
+      "shortName": "Refresh",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "EDeviceStatus",
+          "name": "state",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterBlackboardCallbacks;IBlackboard",
+      "shortName": "RegisterBlackboardCallbacks",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "handle:gameIBlackboard",
+          "name": "blackboard",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RequestDeviceWidgetsUpdate;script_ref<array<PersistentID>>",
+      "shortName": "RequestDeviceWidgetsUpdate",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "script_ref:array:gamePersistentID",
+          "name": "devices",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RequestDeviceWidgetsUpdate;PersistentID",
+      "shortName": "RequestDeviceWidgetsUpdate",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "gamePersistentID",
+          "name": "device",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RequestThumbnailWidgetsUpdate;",
+      "shortName": "RequestThumbnailWidgetsUpdate",
+      "flags": 33028
+    },
+    {
+      "fullName": "TrySaveKeypadController;inkWidget",
+      "shortName": "TrySaveKeypadController",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:inkWidget",
+          "name": "widget",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UnRegisterBlackboardCallbacks;IBlackboard",
+      "shortName": "UnRegisterBlackboardCallbacks",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "handle:gameIBlackboard",
+          "name": "blackboard",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateActionWidgets;script_ref<array<SActionWidgetPackage>>",
+      "shortName": "UpdateActionWidgets",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "script_ref:array:SActionWidgetPackage",
+          "name": "widgetsData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateDeviceWidgets;script_ref<array<SDeviceWidgetPackage>>",
+      "shortName": "UpdateDeviceWidgets",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "script_ref:array:SDeviceWidgetPackage",
+          "name": "widgetsData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateThumbnailWidgetData;script_ref<SThumbnailWidgetPackage>Int32",
+      "shortName": "UpdateThumbnailWidgetData",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "script_ref:SThumbnailWidgetPackage",
+          "name": "widgetData",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateThumbnailWidgets;script_ref<array<SThumbnailWidgetPackage>>",
+      "shortName": "UpdateThumbnailWidgets",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "script_ref:array:SThumbnailWidgetPackage",
+          "name": "widgetsData",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

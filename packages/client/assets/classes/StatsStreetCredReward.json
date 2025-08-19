@@ -1,0 +1,167 @@
+{
+  "parent": "inkWidgetLogicController",
+  "name": "StatsStreetCredReward",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "prevRewardsList",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "currentRewardsList",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "nextRewardsList",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "scrollSlider",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "scrollButtonHint",
+      "flags": 4297130017
+    },
+    {
+      "type": "Int32",
+      "name": "rewardSize",
+      "flags": 4297130016
+    },
+    {
+      "type": "Int32",
+      "name": "tooltipIndex",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:gameuiTooltipsManager",
+      "name": "tooltipsManager",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnHoverOut",
+      "shortName": "OnHoverOut",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnHoverOver",
+      "shortName": "OnHoverOver",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRewardsHoverOut",
+      "shortName": "OnRewardsHoverOut",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRewardsHoverOver",
+      "shortName": "OnRewardsHoverOver",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetData;ProficiencyDisplayDatagameuiTooltipsManagerInt32",
+      "shortName": "SetData",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:ProficiencyDisplayData",
+          "name": "proficiencyData",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameuiTooltipsManager",
+          "name": "tooltipsManager",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "tooltipIndex",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetData;array<LevelRewardDisplayData>gameuiTooltipsManagerInt32Int32script_ref<String>",
+      "shortName": "SetData",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "array:handle:LevelRewardDisplayData",
+          "name": "rewardData",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameuiTooltipsManager",
+          "name": "tooltipsManager",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "currentLevel",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "tooltipIndex",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:String",
+          "name": "attributeName",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

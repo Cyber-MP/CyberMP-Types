@@ -1,0 +1,122 @@
+{
+  "parent": "vehicleAVBaseObject",
+  "name": "ncartMetroObject",
+  "flags": 4,
+  "props": [
+    {
+      "type": "gameDelayID",
+      "name": "pitchAdjustmentDelayID",
+      "flags": 4297130016
+    },
+    {
+      "type": "Float",
+      "name": "Z",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "checkForLeveling",
+      "flags": 4297130016
+    },
+    {
+      "type": "Int32",
+      "name": "pitchingValue",
+      "flags": 4297130016
+    },
+    {
+      "type": "Float",
+      "name": "pitchAngleCheckInterval",
+      "flags": 4297326625
+    },
+    {
+      "type": "Float",
+      "name": "pitchAngleReturnInterval",
+      "flags": 4297326625
+    },
+    {
+      "type": "CName",
+      "name": "trainReverseDirectionFactName",
+      "flags": 4297326625
+    },
+    {
+      "type": "Float",
+      "name": "pitchAngleAdjustmentTreshold",
+      "flags": 4297326625
+    },
+    {
+      "type": "Float",
+      "name": "pitchAngleLevelOutTreshold",
+      "flags": 4297326625
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnDetach",
+      "shortName": "OnDetach",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnGameAttached",
+      "shortName": "OnGameAttached",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnMetroPitchAdjustmentEvent",
+      "shortName": "OnMetroPitchAdjustmentEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:MetroPitchAdjustmentEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "LevelOutPitch;",
+      "shortName": "LevelOutPitch",
+      "flags": 32900
+    },
+    {
+      "fullName": "PerformPitchAdjustment;Float",
+      "shortName": "PerformPitchAdjustment",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Float",
+          "name": "z",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PerformYawAjustment;",
+      "shortName": "PerformYawAjustment",
+      "flags": 32900
+    },
+    {
+      "fullName": "TogglePitchAdjustment;Bool",
+      "shortName": "TogglePitchAdjustment",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "on",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

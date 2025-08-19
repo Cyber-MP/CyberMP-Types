@@ -1,0 +1,52 @@
+{
+  "parent": "IScriptable",
+  "name": "UILocalizationMap",
+  "flags": 4,
+  "props": [
+    {
+      "type": "array:UILocRecord",
+      "name": "map",
+      "flags": 6583025696
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "AddRecord;CNamescript_ref<String>",
+      "shortName": "AddRecord",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "CName",
+          "name": "tag",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:String",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Init;",
+      "shortName": "Init",
+      "flags": 33284
+    },
+    {
+      "fullName": "Localize;CName",
+      "shortName": "Localize",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "CName",
+          "name": "tag",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,296 @@
+{
+  "parent": "inkWidgetLogicController",
+  "name": "PunkScoreSelectorControllerInt",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkWidgetReference",
+      "name": "sliderWidget",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "labelMinWidget",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "labelMaxWidget",
+      "flags": 4297130017
+    },
+    {
+      "type": "whandle:inkWidget",
+      "name": "rootWidget",
+      "flags": 4297130016
+    },
+    {
+      "type": "Int32",
+      "name": "newValue",
+      "flags": 4297130016
+    },
+    {
+      "type": "Int32",
+      "name": "localValue",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "inputDisabled",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:inkSliderController",
+      "name": "sliderController",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:inkButtonController",
+      "name": "sliderButtonController",
+      "flags": 4297130016
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "sliderAreaWidget",
+      "flags": 4297130016
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "sliderHandleWidget",
+      "flags": 4297130016
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "ValueText",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "LeftArrow",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "RightArrow",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "HintsContainer",
+      "flags": 4297130017
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnHoverOut",
+      "shortName": "OnHoverOut",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnHoverOver",
+      "shortName": "OnHoverOver",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnLeft",
+      "shortName": "OnLeft",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRight",
+      "shortName": "OnRight",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnShortcutPress",
+      "shortName": "OnShortcutPress",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnShortcutRepeat",
+      "shortName": "OnShortcutRepeat",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSliderValueChanged",
+      "shortName": "OnSliderValueChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "whandle:inkSliderController",
+          "name": "sliderController",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "progress",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "AcceptValue;Bool",
+      "shortName": "AcceptValue",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "forward",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ChangeValue;Bool",
+      "shortName": "ChangeValue",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "forward",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetValue;",
+      "shortName": "GetValue",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "Refresh;",
+      "shortName": "Refresh",
+      "flags": 33284
+    },
+    {
+      "fullName": "SetDisabledInputState;Bool",
+      "shortName": "SetDisabledInputState",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "inputDisabled",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetValue;Int32",
+      "shortName": "SetValue",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateDisabledInputState;",
+      "shortName": "UpdateDisabledInputState",
+      "flags": 32900
+    },
+    {
+      "fullName": "UpdateValueTextLanguageResources;",
+      "shortName": "UpdateValueTextLanguageResources",
+      "flags": 33028
+    }
+  ]
+}

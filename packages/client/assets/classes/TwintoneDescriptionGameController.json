@@ -1,0 +1,608 @@
+{
+  "parent": "BaseChunkGameController",
+  "name": "TwintoneDescriptionGameController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkWidgetReference",
+      "name": "cursorRootContainerRef",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "paintjobInterface",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "restrictedPaintjobInterface",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkVideoWidgetReference",
+      "name": "videoHeaderRef",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "videoGroupRef",
+      "flags": 4297130017
+    },
+    {
+      "type": "redResourceReferenceScriptToken",
+      "name": "defaultVideoLoop",
+      "flags": 4297130017
+    },
+    {
+      "type": "redResourceReferenceScriptToken",
+      "name": "thanksVideo",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "vehicleManufacturer",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "applicableGroupRef",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "buyButtonText",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "applicableModelNamesText",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "templateTypeText",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "priceText",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "profileNotAvailableText",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "colorTemplatePreviewContainer",
+      "flags": 4297130017
+    },
+    {
+      "type": "Uint32",
+      "name": "c_progressBarDuration",
+      "flags": 4297130016
+    },
+    {
+      "type": "Uint32",
+      "name": "c_progressBarUpdateRate",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:ColorTemplatePreviewDisplayController",
+      "name": "colorTemplatePreview",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "vehicleCustomizationChangedCallbackID",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "vehicleManufacturerCallbackID",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "playerMountedCallbackID",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "scannerModeChangedCallbackID",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "activeTabChangedCallbackID",
+      "flags": 4431347744
+    },
+    {
+      "type": "gameDelayID",
+      "name": "progressBarDelayID",
+      "flags": 4297130016
+    },
+    {
+      "type": "VehicleVisualCustomizationTemplate",
+      "name": "scannedVehicleTemplate",
+      "flags": 4297130016
+    },
+    {
+      "type": "CName",
+      "name": "scannedModelName",
+      "flags": 4297130016
+    },
+    {
+      "type": "VehicleVisualCustomizationTemplate",
+      "name": "cachedVehicleTemplate",
+      "flags": 4297130016
+    },
+    {
+      "type": "CName",
+      "name": "cachedModelName",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isScanInProgress",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:gameIBlackboard",
+      "name": "blackboardUI",
+      "flags": 4297130016
+    },
+    {
+      "type": "ScriptGameInstance",
+      "name": "game",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:vehicleVisualCustomizationComponent",
+      "name": "playerVVCComponent",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "progressBarUpdateProxy",
+      "flags": 4431347744
+    },
+    {
+      "type": "Float",
+      "name": "progressBarCounter",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "buyAnimationProxy",
+      "flags": 4431347744
+    },
+    {
+      "type": "Bool",
+      "name": "twintoneVisible",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "scanAvailable",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "applyAvailable",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "applyAfterSave",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "endAnimationCancelled",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnAction",
+      "shortName": "OnAction",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "gameinputScriptListenerAction",
+          "name": "action",
+          "flags": 128
+        },
+        {
+          "type": "gameinputScriptListenerActionConsumer",
+          "name": "consumer",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnActiveTabChanged",
+      "shortName": "OnActiveTabChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Variant",
+          "name": "val",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnOverridePopUpClosed",
+      "shortName": "OnOverridePopUpClosed",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:OnTwintoneOverrideClosedEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPlayerMountedChanged",
+      "shortName": "OnPlayerMountedChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "mounted",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnProgressBarDone",
+      "shortName": "OnProgressBarDone",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkanimProxy",
+          "name": "proxy",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnScannerModeChanged",
+      "shortName": "OnScannerModeChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Variant",
+          "name": "val",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnUpdateProgressBar",
+      "shortName": "OnUpdateProgressBar",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkanimProxy",
+          "name": "proxy",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnVehicleCustomizationChanged",
+      "shortName": "OnVehicleCustomizationChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Variant",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnVehicleManufacturerChanged",
+      "shortName": "OnVehicleManufacturerChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Variant",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnVideoFinished",
+      "shortName": "OnVideoFinished",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "whandle:inkVideoWidget",
+          "name": "videoWidget",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ApplyTwintoneProfile;",
+      "shortName": "ApplyTwintoneProfile",
+      "flags": 32900
+    },
+    {
+      "fullName": "CancelScanningFinishAnimation;",
+      "shortName": "CancelScanningFinishAnimation",
+      "flags": 32900
+    },
+    {
+      "fullName": "FinishScanningAndSave;",
+      "shortName": "FinishScanningAndSave",
+      "flags": 32900
+    },
+    {
+      "fullName": "GetApplicableModelsForTemplate;VehicleVisualCustomizationTemplate",
+      "shortName": "GetApplicableModelsForTemplate",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "flags": 41092,
+      "params": [
+        {
+          "type": "VehicleVisualCustomizationTemplate",
+          "name": "template",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetPlayerMoney;",
+      "shortName": "GetPlayerMoney",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "GetProgressBarBlackboard;",
+      "shortName": "GetProgressBarBlackboard",
+      "return": {
+        "type": "handle:gameIBlackboard",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "GetScanningPrice;VehicleVisualCustomizationType",
+      "shortName": "GetScanningPrice",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "VehicleVisualCustomizationType",
+          "name": "type",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetUIGameDataBlackboard;",
+      "shortName": "GetUIGameDataBlackboard",
+      "return": {
+        "type": "handle:gameIBlackboard",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "GetUIScannerBlackboard;",
+      "shortName": "GetUIScannerBlackboard",
+      "return": {
+        "type": "handle:gameIBlackboard",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "OnTwintoneVisibleChanged;Bool",
+      "shortName": "OnTwintoneVisibleChanged",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "visible",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OpenOverridePopUp;",
+      "shortName": "OpenOverridePopUp",
+      "flags": 32900
+    },
+    {
+      "fullName": "PlayButtonAnimationEnd;",
+      "shortName": "PlayButtonAnimationEnd",
+      "flags": 32900
+    },
+    {
+      "fullName": "PlayButtonAnimationStart;",
+      "shortName": "PlayButtonAnimationStart",
+      "flags": 32900
+    },
+    {
+      "fullName": "RefreshTwintoneAvailability;",
+      "shortName": "RefreshTwintoneAvailability",
+      "flags": 32900
+    },
+    {
+      "fullName": "RemovePlayerMoney;Int32",
+      "shortName": "RemovePlayerMoney",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "amount",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SaveTwintoneProfile;Bool",
+      "shortName": "SaveTwintoneProfile",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "applyAfterSave",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SendCustomizationToVehicle;VehicleVisualCustomizationTemplate",
+      "shortName": "SendCustomizationToVehicle",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "VehicleVisualCustomizationTemplate",
+          "name": "template",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetSaveAvailable;Bool",
+      "shortName": "SetSaveAvailable",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "available",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetupBuyButtonState;BoolBool",
+      "shortName": "SetupBuyButtonState",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "twintoneAvailable",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "uniqueTemplate",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "ShowNotEnoughMoneyWarning;",
+      "shortName": "ShowNotEnoughMoneyWarning",
+      "flags": 32900
+    },
+    {
+      "fullName": "StartProgressBar;",
+      "shortName": "StartProgressBar",
+      "flags": 32900
+    },
+    {
+      "fullName": "StartTwintoneScan;",
+      "shortName": "StartTwintoneScan",
+      "flags": 32900
+    },
+    {
+      "fullName": "StopProgressBar;Bool",
+      "shortName": "StopProgressBar",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "keepBarWidgetAlive",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateApplyAvailable;",
+      "shortName": "UpdateApplyAvailable",
+      "flags": 32900
+    }
+  ]
+}

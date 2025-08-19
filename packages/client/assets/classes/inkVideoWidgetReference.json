@@ -1,0 +1,289 @@
+{
+  "parent": "inkLeafWidgetReference",
+  "name": "inkVideoWidgetReference",
+  "flags": 2,
+  "funcs": [
+    {
+      "fullName": "FastForwardTo",
+      "shortName": "FastForwardTo",
+      "index": 1446,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkVideoWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "Uint32",
+          "name": "numberOfFrames",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ForceVideoFrameRate",
+      "shortName": "ForceVideoFrameRate",
+      "index": 1440,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkVideoWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "forceVideoFrameRate",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetVideoWidgetSummary",
+      "shortName": "GetVideoWidgetSummary",
+      "return": {
+        "type": "inkVideoWidgetSummary",
+        "flags": 64
+      },
+      "index": 1450,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkVideoWidgetReference",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsParallaxEnabled",
+      "shortName": "IsParallaxEnabled",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 1455,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkVideoWidgetReference",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsPaused",
+      "shortName": "IsPaused",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 1454,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkVideoWidgetReference",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsPlayingVideo",
+      "shortName": "IsPlayingVideo",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 1453,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkVideoWidgetReference",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "JumpToFrame",
+      "shortName": "JumpToFrame",
+      "index": 1448,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkVideoWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "Uint32",
+          "name": "frameNumber",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "JumpToTime",
+      "shortName": "JumpToTime",
+      "index": 1449,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkVideoWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "timeInSeconds",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Pause",
+      "shortName": "Pause",
+      "index": 1443,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkVideoWidgetReference",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Play",
+      "shortName": "Play",
+      "index": 1441,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkVideoWidgetReference",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PreloadNextVideo",
+      "shortName": "PreloadNextVideo",
+      "index": 1451,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkVideoWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "redResourceReferenceScriptToken",
+          "name": "videoRes",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Resume",
+      "shortName": "Resume",
+      "index": 1444,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkVideoWidgetReference",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RewindTo",
+      "shortName": "RewindTo",
+      "index": 1447,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkVideoWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "Uint32",
+          "name": "numberOfFrames",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetLoop",
+      "shortName": "SetLoop",
+      "index": 1452,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkVideoWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "isLooped",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetVideoPath",
+      "shortName": "SetVideoPath",
+      "index": 1439,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkVideoWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "redResourceReferenceScriptToken",
+          "name": "videoPath",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SkipFrames",
+      "shortName": "SkipFrames",
+      "index": 1445,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkVideoWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "numberOfFrames",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Stop",
+      "shortName": "Stop",
+      "index": 1442,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkVideoWidgetReference",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,318 @@
+{
+  "parent": "inkWidgetLogicController",
+  "name": "characterCreationStatsAttributeBtn",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkTextWidgetReference",
+      "name": "value",
+      "flags": 4297326625
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "label",
+      "flags": 4297326625
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "icon",
+      "flags": 4297326625
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "buttons",
+      "flags": 4297326625
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "selector",
+      "flags": 4297326625
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "addBtnhitArea",
+      "flags": 4297326625
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "minusBtnhitArea",
+      "flags": 4297326625
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "minMaxLabel",
+      "flags": 4297326625
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "minMaxLabelText",
+      "flags": 4297326625
+    },
+    {
+      "type": "handle:CharacterCreationAttributeData",
+      "name": "data",
+      "flags": 4431544352
+    },
+    {
+      "type": "Bool",
+      "name": "animating",
+      "flags": 4297326624
+    },
+    {
+      "type": "Bool",
+      "name": "minusEnabled",
+      "flags": 4297326624
+    },
+    {
+      "type": "Bool",
+      "name": "addEnabled",
+      "flags": 4297326624
+    },
+    {
+      "type": "Bool",
+      "name": "maxed",
+      "flags": 4297326624
+    },
+    {
+      "type": "Bool",
+      "name": "isPlusOrMinusBtnHoveredOver",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "inputDisabled",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnAdd",
+      "shortName": "OnAdd",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnHitAreaOnHoverOut",
+      "shortName": "OnHitAreaOnHoverOut",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnHitAreaOnHoverOver",
+      "shortName": "OnHitAreaOnHoverOver",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnMinus",
+      "shortName": "OnMinus",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnMinusHoverOut",
+      "shortName": "OnMinusHoverOut",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnMinusHoverOver",
+      "shortName": "OnMinusHoverOver",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPlusHoverOut",
+      "shortName": "OnPlusHoverOut",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPlusHoverOver",
+      "shortName": "OnPlusHoverOver",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "Decrement;",
+      "shortName": "Decrement",
+      "flags": 33284
+    },
+    {
+      "fullName": "Increment;",
+      "shortName": "Increment",
+      "flags": 33284
+    },
+    {
+      "fullName": "ManageBtnVisibility;BoolBool",
+      "shortName": "ManageBtnVisibility",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "addEnabled",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "minusEnabled",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ManageLabel;BoolBool",
+      "shortName": "ManageLabel",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "atMin",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "atMax",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Refresh;",
+      "shortName": "Refresh",
+      "flags": 33284
+    },
+    {
+      "fullName": "RefreshVisibility;",
+      "shortName": "RefreshVisibility",
+      "flags": 32900
+    },
+    {
+      "fullName": "SetData;gamedataStatTypeInt32",
+      "shortName": "SetData",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "gamedataStatType",
+          "name": "attribute",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetInputDisabled;Bool",
+      "shortName": "SetInputDisabled",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "disable",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

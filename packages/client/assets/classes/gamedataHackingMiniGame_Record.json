@@ -1,0 +1,623 @@
+{
+  "parent": "gamedataTweakDBRecord",
+  "name": "gamedataHackingMiniGame_Record",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "AllowedTraps",
+      "shortName": "AllowedTraps",
+      "index": 6667,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataTrap_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "AllowedTrapsContains",
+      "shortName": "AllowedTrapsContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 6671,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataTrap_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "BufferModifier",
+      "shortName": "BufferModifier",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 6709,
+      "flags": 1
+    },
+    {
+      "fullName": "Dimension",
+      "shortName": "Dimension",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 6706,
+      "flags": 1
+    },
+    {
+      "fullName": "EnemyNetrunnerLevel",
+      "shortName": "EnemyNetrunnerLevel",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 6705,
+      "flags": 1
+    },
+    {
+      "fullName": "GameType",
+      "shortName": "GameType",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 6707,
+      "flags": 1
+    },
+    {
+      "fullName": "GetAllowedTrapsCount",
+      "shortName": "GetAllowedTrapsCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 6668,
+      "flags": 1
+    },
+    {
+      "fullName": "GetAllowedTrapsItem",
+      "shortName": "GetAllowedTrapsItem",
+      "return": {
+        "type": "whandle:gamedataTrap_Record",
+        "flags": 64
+      },
+      "index": 6669,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetAllowedTrapsItemHandle",
+      "shortName": "GetAllowedTrapsItemHandle",
+      "return": {
+        "type": "handle:gamedataTrap_Record",
+        "flags": 64
+      },
+      "index": 6670,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetPredefinedBasicAccessCount",
+      "shortName": "GetPredefinedBasicAccessCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 6677,
+      "flags": 1
+    },
+    {
+      "fullName": "GetPredefinedBasicAccessItem",
+      "shortName": "GetPredefinedBasicAccessItem",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "index": 6678,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetPredefinedCyberdeckProgramsCount",
+      "shortName": "GetPredefinedCyberdeckProgramsCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 6693,
+      "flags": 1
+    },
+    {
+      "fullName": "GetPredefinedCyberdeckProgramsItem",
+      "shortName": "GetPredefinedCyberdeckProgramsItem",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "index": 6694,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetPredefinedEnemyProgramsCount",
+      "shortName": "GetPredefinedEnemyProgramsCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 6681,
+      "flags": 1
+    },
+    {
+      "fullName": "GetPredefinedEnemyProgramsItem",
+      "shortName": "GetPredefinedEnemyProgramsItem",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "index": 6682,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetPredefinedGridCount",
+      "shortName": "GetPredefinedGridCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 6689,
+      "flags": 1
+    },
+    {
+      "fullName": "GetPredefinedGridItem",
+      "shortName": "GetPredefinedGridItem",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "index": 6690,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetPredefinedNetworkProgramsCount",
+      "shortName": "GetPredefinedNetworkProgramsCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 6673,
+      "flags": 1
+    },
+    {
+      "fullName": "GetPredefinedNetworkProgramsItem",
+      "shortName": "GetPredefinedNetworkProgramsItem",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "index": 6674,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetSymbolProbabilitiesAlternativeCount",
+      "shortName": "GetSymbolProbabilitiesAlternativeCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 6701,
+      "flags": 1
+    },
+    {
+      "fullName": "GetSymbolProbabilitiesAlternativeItem",
+      "shortName": "GetSymbolProbabilitiesAlternativeItem",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "index": 6702,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetSymbolProbabilitiesCount",
+      "shortName": "GetSymbolProbabilitiesCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 6697,
+      "flags": 1
+    },
+    {
+      "fullName": "GetSymbolProbabilitiesItem",
+      "shortName": "GetSymbolProbabilitiesItem",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "index": 6698,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetSymbolsCount",
+      "shortName": "GetSymbolsCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 6685,
+      "flags": 1
+    },
+    {
+      "fullName": "GetSymbolsItem",
+      "shortName": "GetSymbolsItem",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "index": 6686,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HasEnemyNetrunner",
+      "shortName": "HasEnemyNetrunner",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 6711,
+      "flags": 1
+    },
+    {
+      "fullName": "HasHiddenCells",
+      "shortName": "HasHiddenCells",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 6712,
+      "flags": 1
+    },
+    {
+      "fullName": "HasInitialTimer",
+      "shortName": "HasInitialTimer",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 6713,
+      "flags": 1
+    },
+    {
+      "fullName": "HiddenCellsProbability",
+      "shortName": "HiddenCellsProbability",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 6710,
+      "flags": 1
+    },
+    {
+      "fullName": "InitialTimer",
+      "shortName": "InitialTimer",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 6708,
+      "flags": 1
+    },
+    {
+      "fullName": "NetworkLevel",
+      "shortName": "NetworkLevel",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 6704,
+      "flags": 1
+    },
+    {
+      "fullName": "Officer",
+      "shortName": "Officer",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 6714,
+      "flags": 1
+    },
+    {
+      "fullName": "PredefinedBasicAccess",
+      "shortName": "PredefinedBasicAccess",
+      "return": {
+        "type": "array:String",
+        "flags": 64
+      },
+      "index": 6676,
+      "flags": 1
+    },
+    {
+      "fullName": "PredefinedBasicAccessContains",
+      "shortName": "PredefinedBasicAccessContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 6679,
+      "flags": 1,
+      "params": [
+        {
+          "type": "String",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PredefinedCyberdeckPrograms",
+      "shortName": "PredefinedCyberdeckPrograms",
+      "return": {
+        "type": "array:String",
+        "flags": 64
+      },
+      "index": 6692,
+      "flags": 1
+    },
+    {
+      "fullName": "PredefinedCyberdeckProgramsContains",
+      "shortName": "PredefinedCyberdeckProgramsContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 6695,
+      "flags": 1,
+      "params": [
+        {
+          "type": "String",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PredefinedEnemyPrograms",
+      "shortName": "PredefinedEnemyPrograms",
+      "return": {
+        "type": "array:String",
+        "flags": 64
+      },
+      "index": 6680,
+      "flags": 1
+    },
+    {
+      "fullName": "PredefinedEnemyProgramsContains",
+      "shortName": "PredefinedEnemyProgramsContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 6683,
+      "flags": 1,
+      "params": [
+        {
+          "type": "String",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PredefinedGrid",
+      "shortName": "PredefinedGrid",
+      "return": {
+        "type": "array:String",
+        "flags": 64
+      },
+      "index": 6688,
+      "flags": 1
+    },
+    {
+      "fullName": "PredefinedGridContains",
+      "shortName": "PredefinedGridContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 6691,
+      "flags": 1,
+      "params": [
+        {
+          "type": "String",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PredefinedNetworkPrograms",
+      "shortName": "PredefinedNetworkPrograms",
+      "return": {
+        "type": "array:String",
+        "flags": 64
+      },
+      "index": 6672,
+      "flags": 1
+    },
+    {
+      "fullName": "PredefinedNetworkProgramsContains",
+      "shortName": "PredefinedNetworkProgramsContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 6675,
+      "flags": 1,
+      "params": [
+        {
+          "type": "String",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SymbolProbabilities",
+      "shortName": "SymbolProbabilities",
+      "return": {
+        "type": "array:String",
+        "flags": 64
+      },
+      "index": 6696,
+      "flags": 1
+    },
+    {
+      "fullName": "SymbolProbabilitiesAlternative",
+      "shortName": "SymbolProbabilitiesAlternative",
+      "return": {
+        "type": "array:String",
+        "flags": 64
+      },
+      "index": 6700,
+      "flags": 1
+    },
+    {
+      "fullName": "SymbolProbabilitiesAlternativeContains",
+      "shortName": "SymbolProbabilitiesAlternativeContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 6703,
+      "flags": 1,
+      "params": [
+        {
+          "type": "String",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SymbolProbabilitiesContains",
+      "shortName": "SymbolProbabilitiesContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 6699,
+      "flags": 1,
+      "params": [
+        {
+          "type": "String",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Symbols",
+      "shortName": "Symbols",
+      "return": {
+        "type": "array:String",
+        "flags": 64
+      },
+      "index": 6684,
+      "flags": 1
+    },
+    {
+      "fullName": "SymbolsContains",
+      "shortName": "SymbolsContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 6687,
+      "flags": 1,
+      "params": [
+        {
+          "type": "String",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

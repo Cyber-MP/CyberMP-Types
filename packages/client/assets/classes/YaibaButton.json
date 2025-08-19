@@ -1,0 +1,96 @@
+{
+  "parent": "inkButtonController",
+  "name": "YaibaButton",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkImageWidgetReference",
+      "name": "normalBackground",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "pressBackground",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "hoverBackground",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "disabledBackground",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "enabledText",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "disabledText",
+      "flags": 4297130017
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnButtonStateChanged",
+      "shortName": "OnButtonStateChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "whandle:inkButtonController",
+          "name": "controller",
+          "flags": 128
+        },
+        {
+          "type": "inkEButtonState",
+          "name": "oldState",
+          "flags": 128
+        },
+        {
+          "type": "inkEButtonState",
+          "name": "newState",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "SetImageOrDefaultVisible;inkImageRefBoolinkImageRef",
+      "shortName": "SetImageOrDefaultVisible",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "inkImageWidgetReference",
+          "name": "image",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "visible",
+          "flags": 128
+        },
+        {
+          "type": "inkImageWidgetReference",
+          "name": "defaultImage",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

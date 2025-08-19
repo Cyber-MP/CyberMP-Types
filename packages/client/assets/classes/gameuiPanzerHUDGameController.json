@@ -1,0 +1,574 @@
+{
+  "parent": "gameuiHUDGameController",
+  "name": "gameuiPanzerHUDGameController",
+  "flags": 2,
+  "props": [
+    {
+      "type": "whandle:vehicleBaseObject",
+      "name": "vehicle",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:VehicleComponentPS",
+      "name": "vehiclePS",
+      "flags": 4431347744
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "Date",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "Timer",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "healthStatus",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "healthBar",
+      "flags": 4297130017
+    },
+    {
+      "type": "Float",
+      "name": "rightStickX",
+      "flags": 4297130016
+    },
+    {
+      "type": "Float",
+      "name": "rightStickY",
+      "flags": 4297130016
+    },
+    {
+      "type": "inkCanvasWidgetReference",
+      "name": "LeanAngleValue",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkCanvasWidgetReference",
+      "name": "CoriRotation",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkCanvasWidgetReference",
+      "name": "CompassRotation",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkCanvasWidgetReference",
+      "name": "Cori_S",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkCanvasWidgetReference",
+      "name": "Cori_M",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "trimmerArrow",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "SpeedValue",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "RPMValue",
+      "flags": 4297130017
+    },
+    {
+      "type": "whandle:gameIBlackboard",
+      "name": "scanBlackboard",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:gameIBlackboard",
+      "name": "psmBlackboard",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "PSM_BBID",
+      "flags": 4431347744
+    },
+    {
+      "type": "whandle:inkCompoundWidget",
+      "name": "root",
+      "flags": 4297130016
+    },
+    {
+      "type": "Float",
+      "name": "currentZoom",
+      "flags": 4297130016
+    },
+    {
+      "type": "GameTime",
+      "name": "currentTime",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:gameIBlackboard",
+      "name": "vehicleBlackboard",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:gameIBlackboard",
+      "name": "activeVehicleUIBlackboard",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "vehicleBBStateConectionId",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "speedBBConnectionId",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "gearBBConnectionId",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "tppBBConnectionId",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "rpmValueBBConnectionId",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "leanAngleBBConnectionId",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "playerStateBBConnectionId",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "isTargetingFriendlyConnectionId",
+      "flags": 4431347744
+    },
+    {
+      "type": "whandle:gameIBlackboard",
+      "name": "bbPlayerStats",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "bbPlayerEventId",
+      "flags": 4431347744
+    },
+    {
+      "type": "Int32",
+      "name": "currentHealth",
+      "flags": 4297130016
+    },
+    {
+      "type": "Int32",
+      "name": "previousHealth",
+      "flags": 4297130016
+    },
+    {
+      "type": "Int32",
+      "name": "maximumHealth",
+      "flags": 4297130016
+    },
+    {
+      "type": "Float",
+      "name": "quickhacksMemoryPercent",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:gameObject",
+      "name": "playerObject",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:gameIBlackboard",
+      "name": "weaponBlackboard",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "weaponParamsListenerId",
+      "flags": 4431347744
+    },
+    {
+      "type": "array:TargetIndicatorEntry",
+      "name": "targetIndicators",
+      "flags": 6583025696
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "targetHolder",
+      "flags": 4297130017
+    },
+    {
+      "type": "CName",
+      "name": "targetWidgetLibraryName",
+      "flags": 4297130017
+    },
+    {
+      "type": "Int32",
+      "name": "targetWidgetPoolSize",
+      "flags": 4297130017
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnAction",
+      "shortName": "OnAction",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "gameinputScriptListenerAction",
+          "name": "action",
+          "flags": 128
+        },
+        {
+          "type": "gameinputScriptListenerActionConsumer",
+          "name": "consumer",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnCameraModeChanged",
+      "shortName": "OnCameraModeChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "mode",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnForwardVehicleQuestEnableUIEvent",
+      "shortName": "OnForwardVehicleQuestEnableUIEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:ForwardVehicleQuestEnableUIEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnGearValueChanged",
+      "shortName": "OnGearValueChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "gearValue",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnIsTargetingFriendly",
+      "shortName": "OnIsTargetingFriendly",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "isTargetingFriendly",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnLeanAngleChanged",
+      "shortName": "OnLeanAngleChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Float",
+          "name": "leanAngle",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPlayerAttach",
+      "shortName": "OnPlayerAttach",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "playerPuppet",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPlayerDetach",
+      "shortName": "OnPlayerDetach",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "playerPuppet",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPlayerVehicleStateChange",
+      "shortName": "OnPlayerVehicleStateChange",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRpmMaxChanged",
+      "shortName": "OnRpmMaxChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Float",
+          "name": "rpmMax",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRpmValueChanged",
+      "shortName": "OnRpmValueChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Float",
+          "name": "rpmValue",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSmartGunParams",
+      "shortName": "OnSmartGunParams",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Variant",
+          "name": "argParams",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSpeedValueChanged",
+      "shortName": "OnSpeedValueChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Float",
+          "name": "speedValue",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnStatsChanged",
+      "shortName": "OnStatsChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Variant",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnVehicleStateChanged",
+      "shortName": "OnVehicleStateChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "state",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnZoomChange",
+      "shortName": "OnZoomChange",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Float",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "DisableTargetIndicator;TargetIndicatorEntry",
+      "shortName": "DisableTargetIndicator",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "TargetIndicatorEntry",
+          "name": "indicatorEntry",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "EnableTargetIndicator;TargetIndicatorEntryscript_ref<smartGunUITargetParameters>",
+      "shortName": "EnableTargetIndicator",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "TargetIndicatorEntry",
+          "name": "indicatorEntry",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:gamesmartGunUITargetParameters",
+          "name": "targetData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "EvaluateUIState;",
+      "shortName": "EvaluateUIState",
+      "flags": 32900
+    },
+    {
+      "fullName": "SpawnTargetIndicators;",
+      "shortName": "SpawnTargetIndicators",
+      "flags": 32900
+    },
+    {
+      "fullName": "TogglePanzerSpecificFX;Bool",
+      "shortName": "TogglePanzerSpecificFX",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "toggle",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TurnOff;",
+      "shortName": "TurnOff",
+      "flags": 32900
+    },
+    {
+      "fullName": "TurnOn;",
+      "shortName": "TurnOn",
+      "flags": 32900
+    }
+  ]
+}

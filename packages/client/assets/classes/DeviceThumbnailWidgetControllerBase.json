@@ -1,0 +1,76 @@
+{
+  "parent": "DeviceButtonLogicControllerBase",
+  "name": "DeviceThumbnailWidgetControllerBase",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkImageWidgetReference",
+      "name": "deviceIconRef",
+      "group": "Widget Refs",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "statusNameWidget",
+      "group": "Widget Refs",
+      "flags": 4297195553
+    },
+    {
+      "type": "whandle:ThumbnailUI",
+      "name": "thumbnailAction",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "GetAction;",
+      "shortName": "GetAction",
+      "return": {
+        "type": "whandle:ThumbnailUI",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "Initialize;DeviceInkGameControllerBasescript_ref<SThumbnailWidgetPackage>",
+      "shortName": "Initialize",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "handle:DeviceInkGameControllerBase",
+          "name": "gameController",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:SThumbnailWidgetPackage",
+          "name": "widgetData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterThumbnailActionCallback;DeviceInkGameControllerBase",
+      "shortName": "RegisterThumbnailActionCallback",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:DeviceInkGameControllerBase",
+          "name": "gameController",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetAction;ThumbnailUI",
+      "shortName": "SetAction",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "whandle:ThumbnailUI",
+          "name": "action",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

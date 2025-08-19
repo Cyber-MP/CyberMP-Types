@@ -1,0 +1,581 @@
+{
+  "parent": "IScriptable",
+  "name": "AISquadScriptInterface",
+  "flags": 2,
+  "funcs": [
+    {
+      "fullName": "AckOrder",
+      "shortName": "AckOrder",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12743,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "sqAction",
+          "flags": 128
+        },
+        {
+          "type": "handle:entEntity",
+          "name": "et",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Commit",
+      "shortName": "Commit",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12749,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "sqAction",
+          "flags": 128
+        },
+        {
+          "type": "handle:entEntity",
+          "name": "et",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetAllAcknowledgedOrders",
+      "shortName": "GetAllAcknowledgedOrders",
+      "return": {
+        "type": "array:Uint32",
+        "flags": 64
+      },
+      "index": 12757,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:entEntity",
+          "name": "et",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetAllCommitedOrders",
+      "shortName": "GetAllCommitedOrders",
+      "return": {
+        "type": "array:Uint32",
+        "flags": 64
+      },
+      "index": 12756,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:entEntity",
+          "name": "et",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetAllOrders",
+      "shortName": "GetAllOrders",
+      "return": {
+        "type": "array:Uint32",
+        "flags": 64
+      },
+      "index": 12755,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:entEntity",
+          "name": "et",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetMembersCount",
+      "shortName": "GetMembersCount",
+      "return": {
+        "type": "Uint32",
+        "flags": 64
+      },
+      "index": 12747,
+      "flags": 1
+    },
+    {
+      "fullName": "GetName",
+      "shortName": "GetName",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "index": 12733,
+      "flags": 1
+    },
+    {
+      "fullName": "GetOrderById",
+      "shortName": "GetOrderById",
+      "return": {
+        "type": "AIsquadsOrder",
+        "flags": 64
+      },
+      "index": 12754,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Uint32",
+          "name": "orderId",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetSquadType",
+      "shortName": "GetSquadType",
+      "return": {
+        "type": "AISquadType",
+        "flags": 64
+      },
+      "index": 12758,
+      "flags": 1
+    },
+    {
+      "fullName": "GetTemplate",
+      "shortName": "GetTemplate",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "index": 12734,
+      "flags": 1
+    },
+    {
+      "fullName": "GiveOrder",
+      "shortName": "GiveOrder",
+      "return": {
+        "type": "Uint32",
+        "flags": 64
+      },
+      "index": 12741,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "sqAction",
+          "flags": 128
+        },
+        {
+          "type": "handle:entEntity",
+          "name": "et",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GuardedCall",
+      "shortName": "GuardedCall",
+      "index": 12761,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "callThisFunction",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HasAcknowledgedOrderBySquadAction",
+      "shortName": "HasAcknowledgedOrderBySquadAction",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12753,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "sqAction",
+          "flags": 128
+        },
+        {
+          "type": "handle:entEntity",
+          "name": "et",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HasOrderBySquadAction",
+      "shortName": "HasOrderBySquadAction",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12752,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "sqAction",
+          "flags": 128
+        },
+        {
+          "type": "handle:entEntity",
+          "name": "et",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsSquadActionOpen",
+      "shortName": "IsSquadActionOpen",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12748,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "sqAction",
+          "flags": 128
+        },
+        {
+          "type": "handle:entEntity",
+          "name": "et",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Join",
+      "shortName": "Join",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12735,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:entEntity",
+          "name": "et",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Leave",
+      "shortName": "Leave",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12736,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:entEntity",
+          "name": "et",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ListMembers",
+      "shortName": "ListMembers",
+      "return": {
+        "type": "array:handle:entEntity",
+        "flags": 64
+      },
+      "index": 12744,
+      "flags": 1
+    },
+    {
+      "fullName": "ListMembersWeak",
+      "shortName": "ListMembersWeak",
+      "return": {
+        "type": "array:whandle:entEntity",
+        "flags": 64
+      },
+      "index": 12745,
+      "flags": 1
+    },
+    {
+      "fullName": "ListMembersWithSquadActionWeak",
+      "shortName": "ListMembersWithSquadActionWeak",
+      "return": {
+        "type": "array:whandle:entEntity",
+        "flags": 64
+      },
+      "index": 12746,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "sqAction",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "LockAccess",
+      "shortName": "LockAccess",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12759,
+      "flags": 1
+    },
+    {
+      "fullName": "OpenSquadAction",
+      "shortName": "OpenSquadAction",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12737,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "name",
+          "flags": 128
+        },
+        {
+          "type": "handle:entEntity",
+          "name": "et",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "timeout",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RefreshSquadAction",
+      "shortName": "RefreshSquadAction",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12738,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "name",
+          "flags": 128
+        },
+        {
+          "type": "handle:entEntity",
+          "name": "et",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "timeout",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ReportDone",
+      "shortName": "ReportDone",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12750,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "sqAction",
+          "flags": 128
+        },
+        {
+          "type": "handle:entEntity",
+          "name": "et",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ReportFail",
+      "shortName": "ReportFail",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12751,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "sqAction",
+          "flags": 128
+        },
+        {
+          "type": "handle:entEntity",
+          "name": "et",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RequestOrder",
+      "shortName": "RequestOrder",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12740,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "sqAction",
+          "flags": 128
+        },
+        {
+          "type": "handle:entEntity",
+          "name": "et",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RevokeOrder",
+      "shortName": "RevokeOrder",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12742,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "sqAction",
+          "flags": 128
+        },
+        {
+          "type": "handle:entEntity",
+          "name": "et",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RevokeSquadAction",
+      "shortName": "RevokeSquadAction",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12739,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "name",
+          "flags": 128
+        },
+        {
+          "type": "handle:entEntity",
+          "name": "et",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TriggerActivation",
+      "shortName": "TriggerActivation",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12763,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "name",
+          "flags": 128
+        },
+        {
+          "type": "handle:entEntity",
+          "name": "et",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TriggerDeactivation",
+      "shortName": "TriggerDeactivation",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12764,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "name",
+          "flags": 128
+        },
+        {
+          "type": "handle:entEntity",
+          "name": "et",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TriggerEvaluation",
+      "shortName": "TriggerEvaluation",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12762,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "name",
+          "flags": 128
+        },
+        {
+          "type": "handle:entEntity",
+          "name": "et",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UnlockAccess",
+      "shortName": "UnlockAccess",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12760,
+      "flags": 1
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "parent": "gameStatusEffectBase",
+  "name": "gameStatusEffect",
+  "flags": 66,
+  "props": [
+    {
+      "type": "Uint32",
+      "name": "durationID",
+      "flags": 6895452160
+    },
+    {
+      "type": "Float",
+      "name": "duration",
+      "flags": 6895452160
+    },
+    {
+      "type": "Float",
+      "name": "remainingDuration",
+      "flags": 6895452160
+    },
+    {
+      "type": "Uint32",
+      "name": "maxStacks",
+      "flags": 6895452160
+    },
+    {
+      "type": "array:gameSourceData",
+      "name": "sourcesData",
+      "flags": 6895452160
+    },
+    {
+      "type": "Float",
+      "name": "initialApplicationTimestamp",
+      "flags": 6895452160
+    },
+    {
+      "type": "Float",
+      "name": "lastApplicationTimestamp",
+      "flags": 6895452160
+    },
+    {
+      "type": "entEntityID",
+      "name": "ownerEntityID",
+      "flags": 6895452160
+    },
+    {
+      "type": "TweakDBID",
+      "name": "instigatorRecordID",
+      "flags": 6895452160
+    },
+    {
+      "type": "entEntityID",
+      "name": "instigatorEntityID",
+      "flags": 6895452160
+    },
+    {
+      "type": "entEntityID",
+      "name": "proxyEntityID",
+      "flags": 6895452160
+    },
+    {
+      "type": "Vector4",
+      "name": "direction",
+      "flags": 6895452160
+    },
+    {
+      "type": "Bool",
+      "name": "removeAllStacksWhenDurationEnds",
+      "flags": 6895452160
+    },
+    {
+      "type": "CName",
+      "name": "applicationSource",
+      "flags": 6895452160
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "GetDirection",
+      "shortName": "GetDirection",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "index": 12798,
+      "flags": 1
+    },
+    {
+      "fullName": "GetInitialApplicationSimTimestamp",
+      "shortName": "GetInitialApplicationSimTimestamp",
+      "return": {
+        "type": "EngineTime",
+        "flags": 64
+      },
+      "index": 12792,
+      "flags": 1
+    },
+    {
+      "fullName": "GetInstigatorEntityID",
+      "shortName": "GetInstigatorEntityID",
+      "return": {
+        "type": "entEntityID",
+        "flags": 64
+      },
+      "index": 12796,
+      "flags": 1
+    },
+    {
+      "fullName": "GetInstigatorStaticDataID",
+      "shortName": "GetInstigatorStaticDataID",
+      "return": {
+        "type": "TweakDBID",
+        "flags": 64
+      },
+      "index": 12795,
+      "flags": 1
+    },
+    {
+      "fullName": "GetLastApplicationSimTimestamp",
+      "shortName": "GetLastApplicationSimTimestamp",
+      "return": {
+        "type": "EngineTime",
+        "flags": 64
+      },
+      "index": 12793,
+      "flags": 1
+    },
+    {
+      "fullName": "GetMaxStacks",
+      "shortName": "GetMaxStacks",
+      "return": {
+        "type": "Uint32",
+        "flags": 64
+      },
+      "index": 12791,
+      "flags": 1
+    },
+    {
+      "fullName": "GetProxyEntityID",
+      "shortName": "GetProxyEntityID",
+      "return": {
+        "type": "entEntityID",
+        "flags": 64
+      },
+      "index": 12797,
+      "flags": 1
+    },
+    {
+      "fullName": "GetRecord",
+      "shortName": "GetRecord",
+      "return": {
+        "type": "whandle:gamedataStatusEffect_Record",
+        "flags": 64
+      },
+      "index": 12788,
+      "flags": 1
+    },
+    {
+      "fullName": "GetRemainingDuration",
+      "shortName": "GetRemainingDuration",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 12794,
+      "flags": 1
+    },
+    {
+      "fullName": "GetStackCount",
+      "shortName": "GetStackCount",
+      "return": {
+        "type": "Uint32",
+        "flags": 64
+      },
+      "index": 12789,
+      "flags": 1
+    },
+    {
+      "fullName": "GetTotalDuration",
+      "shortName": "GetTotalDuration",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 12790,
+      "flags": 1
+    }
+  ]
+}

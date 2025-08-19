@@ -1,0 +1,460 @@
+{
+  "parent": "entIPlacedComponent",
+  "name": "gameprojectileComponent",
+  "flags": 2,
+  "props": [
+    {
+      "type": "gameprojectileOnCollisionAction",
+      "name": "onCollisionAction",
+      "flags": 6627016705
+    },
+    {
+      "type": "Bool",
+      "name": "useSweepCollision",
+      "flags": 6627016705
+    },
+    {
+      "type": "Bool",
+      "name": "collisionsFilterClosest",
+      "flags": 6627016705
+    },
+    {
+      "type": "Float",
+      "name": "sweepCollisionRadius",
+      "flags": 6627016705
+    },
+    {
+      "type": "Quaternion",
+      "name": "rotationOffset",
+      "flags": 6627016705
+    },
+    {
+      "type": "Bool",
+      "name": "deriveOwnerVelocity",
+      "group": "Derived velocity",
+      "flags": 6627016709
+    },
+    {
+      "type": "gameprojectileVelocityParams",
+      "name": "derivedVelocityParams",
+      "group": "Derived velocity",
+      "flags": 6627016709
+    },
+    {
+      "type": "handle:physicsFilterData",
+      "name": "filterData",
+      "group": "Collision filtering Types",
+      "flags": 6627016707
+    },
+    {
+      "type": "physicsQueryPreset",
+      "name": "queryPreset",
+      "group": "Collision filtering Types",
+      "flags": 6627016705
+    },
+    {
+      "type": "raRef:worldEffect",
+      "name": "previewEffect",
+      "group": "Visual effects",
+      "flags": 6627016709
+    },
+    {
+      "type": "raRef:worldEffect",
+      "name": "bouncePreviewEffect",
+      "group": "Visual effects",
+      "flags": 6627016709
+    },
+    {
+      "type": "raRef:worldEffect",
+      "name": "explosionPreviewEffect",
+      "group": "Visual effects",
+      "flags": 6627016709
+    },
+    {
+      "type": "Float",
+      "name": "explosionPreviewTime",
+      "group": "Visual effects",
+      "flags": 6627016705
+    },
+    {
+      "type": "gameEffectRef",
+      "name": "gameEffectRef",
+      "group": "Game effect",
+      "flags": 6627016705
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "AddAccelerateTowards",
+      "shortName": "AddAccelerateTowards",
+      "index": 12377,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameprojectileAccelerateTowardsTrajectoryParams",
+          "name": "params",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AddAxisRotation",
+      "shortName": "AddAxisRotation",
+      "index": 12398,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Vector4",
+          "name": "axis",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AddFollow",
+      "shortName": "AddFollow",
+      "index": 12375,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameprojectileFollowTrajectoryParams",
+          "name": "params",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AddFollowCurve",
+      "shortName": "AddFollowCurve",
+      "index": 12376,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameprojectileFollowCurveTrajectoryParams",
+          "name": "params",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AddIgnoredEntity",
+      "shortName": "AddIgnoredEntity",
+      "index": 12388,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "entityID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AddLinear",
+      "shortName": "AddLinear",
+      "index": 12378,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameprojectileLinearTrajectoryParams",
+          "name": "params",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AddParabolic",
+      "shortName": "AddParabolic",
+      "index": 12374,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameprojectileParabolicTrajectoryParams",
+          "name": "params",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ClearIgnoredEntities",
+      "shortName": "ClearIgnoredEntities",
+      "index": 12390,
+      "flags": 1
+    },
+    {
+      "fullName": "ClearTrajectories",
+      "shortName": "ClearTrajectories",
+      "index": 12385,
+      "flags": 1
+    },
+    {
+      "fullName": "GetGameEffectInstance",
+      "shortName": "GetGameEffectInstance",
+      "return": {
+        "type": "handle:gameEffectInstance",
+        "flags": 64
+      },
+      "index": 12393,
+      "flags": 1
+    },
+    {
+      "fullName": "GetPrintVelocity",
+      "shortName": "GetPrintVelocity",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "index": 12381,
+      "flags": 1
+    },
+    {
+      "fullName": "GetProjectileOwner",
+      "shortName": "GetProjectileOwner",
+      "return": {
+        "type": "whandle:gameObject",
+        "flags": 64
+      },
+      "index": 12403,
+      "flags": 1
+    },
+    {
+      "fullName": "GetTrailVFXName",
+      "shortName": "GetTrailVFXName",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "index": 12395,
+      "flags": 1
+    },
+    {
+      "fullName": "GetTrailVFXScale",
+      "shortName": "GetTrailVFXScale",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 12396,
+      "flags": 1
+    },
+    {
+      "fullName": "IsTrajectoryEmpty",
+      "shortName": "IsTrajectoryEmpty",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12386,
+      "flags": 1
+    },
+    {
+      "fullName": "LockOrientation",
+      "shortName": "LockOrientation",
+      "index": 12399,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "enable",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "LogDebugVariable",
+      "shortName": "LogDebugVariable",
+      "index": 12404,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "key",
+          "flags": 128
+        },
+        {
+          "type": "String",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RemoveIgnoredEntity",
+      "shortName": "RemoveIgnoredEntity",
+      "index": 12389,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "entityID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetCollisionCooldown",
+      "shortName": "SetCollisionCooldown",
+      "index": 12402,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Float",
+          "name": "cooldown",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetCollisionEvaluator",
+      "shortName": "SetCollisionEvaluator",
+      "index": 12400,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameprojectileScriptCollisionEvaluator",
+          "name": "collisionEvaluator",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetDeactivationDepth",
+      "shortName": "SetDeactivationDepth",
+      "index": 12401,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Float",
+          "name": "depth",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetDesiredTransform",
+      "shortName": "SetDesiredTransform",
+      "index": 12383,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Transform",
+          "name": "transform",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetEnergyLossFactor",
+      "shortName": "SetEnergyLossFactor",
+      "index": 12384,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Float",
+          "name": "energyLossFactor",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "puppetEnergyLossFactor",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetEnergyLossFactor",
+      "shortName": "SetEnergyLossFactor",
+      "index": 12387,
+      "flags": 1
+    },
+    {
+      "fullName": "SetExplosionVisualRadius",
+      "shortName": "SetExplosionVisualRadius",
+      "index": 12391,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Float",
+          "name": "explosionRadius",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetOnCollisionAction",
+      "shortName": "SetOnCollisionAction",
+      "index": 12392,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gameprojectileOnCollisionAction",
+          "name": "action",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetSpiral",
+      "shortName": "SetSpiral",
+      "index": 12380,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameprojectileSpiralParams",
+          "name": "params",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetWasTrajectoryStopped",
+      "shortName": "SetWasTrajectoryStopped",
+      "index": 12382,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "wasStopped",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Slide",
+      "shortName": "Slide",
+      "index": 12379,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameprojectileSlideTrajectoryParams",
+          "name": "params",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SpawnTrailVFX",
+      "shortName": "SpawnTrailVFX",
+      "index": 12394,
+      "flags": 1
+    },
+    {
+      "fullName": "ToggleAxisRotation",
+      "shortName": "ToggleAxisRotation",
+      "index": 12397,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "enabled",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "parent": "TrafficLight",
+  "name": "TrafficZebra",
+  "flags": 4,
+  "funcs": [
+    {
+      "fullName": "OnTakeControl",
+      "shortName": "OnTakeControl",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "entEntityResolveComponentsInterface",
+          "name": "ri",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnTrafficLightChangeEvent",
+      "shortName": "OnTrafficLightChangeEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:worldTrafficLightChangeEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetController;",
+      "shortName": "GetController",
+      "return": {
+        "type": "handle:TrafficZebraController",
+        "flags": 64
+      },
+      "flags": 41088
+    },
+    {
+      "fullName": "GetDevicePS;",
+      "shortName": "GetDevicePS",
+      "return": {
+        "type": "handle:TrafficZebraControllerPS",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "HandleGreenLight;",
+      "shortName": "HandleGreenLight",
+      "flags": 32900
+    },
+    {
+      "fullName": "HandleRedLight;",
+      "shortName": "HandleRedLight",
+      "flags": 32900
+    }
+  ]
+}

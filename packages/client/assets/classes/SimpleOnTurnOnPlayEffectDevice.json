@@ -1,0 +1,72 @@
+{
+  "parent": "Device",
+  "name": "SimpleOnTurnOnPlayEffectDevice",
+  "flags": 4,
+  "props": [
+    {
+      "type": "CName",
+      "name": "OnTurnOnEffectName",
+      "flags": 4364435489
+    },
+    {
+      "type": "CName",
+      "name": "OnTurnOffEffectName",
+      "flags": 4364435489
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnTakeControl",
+      "shortName": "OnTakeControl",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "entEntityResolveComponentsInterface",
+          "name": "ri",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetController;",
+      "shortName": "GetController",
+      "return": {
+        "type": "handle:SimpleOnTurnOnPlayEffectDeviceController",
+        "flags": 64
+      },
+      "flags": 41088
+    },
+    {
+      "fullName": "GetDevicePS;",
+      "shortName": "GetDevicePS",
+      "return": {
+        "type": "handle:SimpleOnTurnOnPlayEffectDeviceControllerPS",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "ShouldRegisterToHUD;",
+      "shortName": "ShouldRegisterToHUD",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41216
+    },
+    {
+      "fullName": "TurnOffDevice;",
+      "shortName": "TurnOffDevice",
+      "flags": 33024
+    },
+    {
+      "fullName": "TurnOnDevice;",
+      "shortName": "TurnOnDevice",
+      "flags": 33024
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "parent": "IScriptable",
+  "name": "VehicleMinimapMappinComponent",
+  "flags": 4,
+  "props": [
+    {
+      "type": "whandle:MinimapPOIMappinController",
+      "name": "minimapPOIMappinController",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:vehicleBaseObject",
+      "name": "vehicle",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:gameIBlackboard",
+      "name": "uiVehicleBB",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:VehicleDef",
+      "name": "vehicleBBDef",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "deleteAnimCallback",
+      "flags": 4431347744
+    },
+    {
+      "type": "Bool",
+      "name": "destroyMappinOnAnimEnd",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "vehicleIsLatestSummoned",
+      "flags": 4297130016
+    },
+    {
+      "type": "entEntityID",
+      "name": "vehicleEntityID",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:VehicleSummonDataDef",
+      "name": "vehicleSummonDataDef",
+      "flags": 4431347744
+    },
+    {
+      "type": "whandle:gameIBlackboard",
+      "name": "vehicleSummonDataBB",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "vehicleSummonStateCallback",
+      "flags": 4431347744
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnDeleteAnimSet",
+      "shortName": "OnDeleteAnimSet",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "CName",
+          "name": "deleteAnimName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnVehicleSummonStateChanged",
+      "shortName": "OnVehicleSummonStateChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Uint32",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ActivatePingAnimation;Bool",
+      "shortName": "ActivatePingAnimation",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "activate",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnAnimEnd;",
+      "shortName": "OnAnimEnd",
+      "flags": 33284
+    },
+    {
+      "fullName": "OnInitialize;MinimapPOIMappinControllerVehicleMappin",
+      "shortName": "OnInitialize",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "whandle:MinimapPOIMappinController",
+          "name": "minimapPOIMappinController",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gamemappinsVehicleMappin",
+          "name": "vehicleMappin",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUninitialize;",
+      "shortName": "OnUninitialize",
+      "flags": 33284
+    },
+    {
+      "fullName": "VehicleIsLatestSummoned;",
+      "shortName": "VehicleIsLatestSummoned",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900
+    }
+  ]
+}

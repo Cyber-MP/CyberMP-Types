@@ -1,0 +1,350 @@
+{
+  "parent": "gameuiBaseGOGProfileController",
+  "name": "GOGProfileGameController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkWidgetReference",
+      "name": "retryButton",
+      "flags": 4297326625
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "parentContainerWidget",
+      "flags": 4297326625
+    },
+    {
+      "type": "Bool",
+      "name": "isFirstLogin",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "showingFirstLogin",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "canRetry",
+      "flags": 4297130016
+    },
+    {
+      "type": "GogPopupScreenType",
+      "name": "currentScreenType",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:inkWidget",
+      "name": "currentWidget",
+      "flags": 4297130016
+    },
+    {
+      "type": "array:handle:GogRewardEntryData",
+      "name": "gogRewardsList",
+      "flags": 6583025696
+    },
+    {
+      "type": "handle:gameuiGameSystemUI",
+      "name": "uiSystem",
+      "flags": 4431347744
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnButtonRelease",
+      "shortName": "OnButtonRelease",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnDelayedUpdateLayoutCompletedEvent",
+      "shortName": "OnDelayedUpdateLayoutCompletedEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:DelayedUpdateLayoutCompletedEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnDisconnectClickedEvent",
+      "shortName": "OnDisconnectClickedEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:DisconnectClickedEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnGogRewardsEntryHoverOut",
+      "shortName": "OnGogRewardsEntryHoverOut",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:GogRewardsEntryHoverOut",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnGogRewardsEntryHoverOver",
+      "shortName": "OnGogRewardsEntryHoverOver",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:GogRewardsEntryHoverOver",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnLinkClicked",
+      "shortName": "OnLinkClicked",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:LinkClickedEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRefreshGOGState",
+      "shortName": "OnRefreshGOGState",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameuiRefreshGOGState",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRetry",
+      "shortName": "OnRetry",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "GetMenuState;",
+      "shortName": "GetMenuState",
+      "return": {
+        "type": "EGOGMenuState",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "GetObtainedAndAmazonRewards;",
+      "shortName": "GetObtainedAndAmazonRewards",
+      "return": {
+        "type": "array:handle:GogRewardEntryData",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "HandleClose;inkPointerEvent",
+      "shortName": "HandleClose",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HandleRetry;",
+      "shortName": "HandleRetry",
+      "flags": 32900
+    },
+    {
+      "fullName": "HidePreviousWidget;",
+      "shortName": "HidePreviousWidget",
+      "flags": 32900
+    },
+    {
+      "fullName": "IsBaseRewardGroup;CName",
+      "shortName": "IsBaseRewardGroup",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "CName",
+          "name": "groupName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsErrorRetryable;GOGRewardsSystemErrors",
+      "shortName": "IsErrorRetryable",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "gameOnlineSystemErrors",
+          "name": "error",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PopulateRewardsList;Bool",
+      "shortName": "PopulateRewardsList",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "isEp1Enabled",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ShowError;GOGRewardsSystemErrors",
+      "shortName": "ShowError",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "gameOnlineSystemErrors",
+          "name": "error",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ShowFeatureInfo;",
+      "shortName": "ShowFeatureInfo",
+      "flags": 32900
+    },
+    {
+      "fullName": "ShowLoading;",
+      "shortName": "ShowLoading",
+      "flags": 32900
+    },
+    {
+      "fullName": "ShowRegister;script_ref<String>script_ref<array<Uint8>>",
+      "shortName": "ShowRegister",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:String",
+          "name": "registerUrl",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:array:Uint8",
+          "name": "qrCodePNGBlob",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ShowRetryButton;Bool",
+      "shortName": "ShowRetryButton",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "show",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ShowRewards;",
+      "shortName": "ShowRewards",
+      "flags": 32900
+    },
+    {
+      "fullName": "ShowThanks;",
+      "shortName": "ShowThanks",
+      "flags": 32900
+    },
+    {
+      "fullName": "UpdateUnlockedRewards;",
+      "shortName": "UpdateUnlockedRewards",
+      "flags": 32900
+    }
+  ]
+}

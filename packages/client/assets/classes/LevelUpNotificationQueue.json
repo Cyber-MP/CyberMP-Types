@@ -1,0 +1,200 @@
+{
+  "parent": "gameuiGenericNotificationGameController",
+  "name": "LevelUpNotificationQueue",
+  "flags": 4,
+  "props": [
+    {
+      "type": "Float",
+      "name": "duration",
+      "flags": 4297130017
+    },
+    {
+      "type": "whandle:gameIBlackboard",
+      "name": "levelUpBlackboard",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "playerLevelUpListener",
+      "flags": 4431347744
+    },
+    {
+      "type": "whandle:gameObject",
+      "name": "playerObject",
+      "flags": 4297130016
+    },
+    {
+      "type": "gamePSMCombat",
+      "name": "combatModePSM",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "combatModeListener",
+      "flags": 4431347744
+    },
+    {
+      "type": "Int32",
+      "name": "lastEspionageLevel",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:gameIBlackboard",
+      "name": "warningBlackboard",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:UI_NotificationsDef",
+      "name": "warningBlackboardDef",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "warningMessageCallbackId",
+      "flags": 4431347744
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnCombatStateChanged",
+      "shortName": "OnCombatStateChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnPlayerAttach",
+      "shortName": "OnPlayerAttach",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "playerPuppet",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPlayerDetach",
+      "shortName": "OnPlayerDetach",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "playerGameObject",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnWarningMessageAppeared",
+      "shortName": "OnWarningMessageAppeared",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Variant",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetID;",
+      "shortName": "GetID",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 34304
+    },
+    {
+      "fullName": "GetShouldSaveState;",
+      "shortName": "GetShouldSaveState",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 34304
+    },
+    {
+      "fullName": "OnCharacterLevelUpdated;Variant",
+      "shortName": "OnCharacterLevelUpdated",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Variant",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterPSMListeners;GameObject",
+      "shortName": "RegisterPSMListeners",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "playerObject",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetLastRelicLevel;",
+      "shortName": "SetLastRelicLevel",
+      "flags": 32900
+    },
+    {
+      "fullName": "UnregisterPSMListeners;GameObject",
+      "shortName": "UnregisterPSMListeners",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "playerObject",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

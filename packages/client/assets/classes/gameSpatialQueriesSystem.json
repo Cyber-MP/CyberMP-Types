@@ -1,0 +1,279 @@
+{
+  "parent": "gameISpatialQueriesSystem",
+  "name": "gameSpatialQueriesSystem",
+  "flags": 2,
+  "funcs": [
+    {
+      "fullName": "GetDebugPreviewDuration",
+      "shortName": "GetDebugPreviewDuration",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 12222,
+      "flags": 1
+    },
+    {
+      "fullName": "GetGeometryDescriptionSystem",
+      "shortName": "GetGeometryDescriptionSystem",
+      "return": {
+        "type": "handle:gameGeometryDescriptionSystem",
+        "flags": 64
+      },
+      "index": 12215,
+      "flags": 1
+    },
+    {
+      "fullName": "GetPlayerObstacleSystem",
+      "shortName": "GetPlayerObstacleSystem",
+      "return": {
+        "type": "handle:gamePlayerObstacleSystem",
+        "flags": 64
+      },
+      "index": 12214,
+      "flags": 1
+    },
+    {
+      "fullName": "Overlap",
+      "shortName": "Overlap",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12216,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Vector4",
+          "name": "primitiveDimension",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "position",
+          "flags": 128
+        },
+        {
+          "type": "EulerAngles",
+          "name": "rotation",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "collisionGroup",
+          "flags": 1152
+        },
+        {
+          "type": "physicsTraceResult",
+          "name": "result",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "OverlapByQueryFilter",
+      "shortName": "OverlapByQueryFilter",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12217,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Vector4",
+          "name": "primitiveDimension",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "position",
+          "flags": 128
+        },
+        {
+          "type": "Quaternion",
+          "name": "rotation",
+          "flags": 128
+        },
+        {
+          "type": "physicsQueryFilter",
+          "name": "queryFilter",
+          "flags": 128
+        },
+        {
+          "type": "physicsTraceResult",
+          "name": "result",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "SyncRaycastByCollisionGroup",
+      "shortName": "SyncRaycastByCollisionGroup",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12221,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Vector4",
+          "name": "start",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "end",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "collisionGroup",
+          "flags": 1152
+        },
+        {
+          "type": "physicsTraceResult",
+          "name": "result",
+          "flags": 640
+        },
+        {
+          "type": "Bool",
+          "name": "staticOnly",
+          "flags": 1152
+        },
+        {
+          "type": "Bool",
+          "name": "dynamicOnly",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "SyncRaycastByCollisionPreset",
+      "shortName": "SyncRaycastByCollisionPreset",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12220,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Vector4",
+          "name": "start",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "end",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "collisionPreset",
+          "flags": 1152
+        },
+        {
+          "type": "physicsTraceResult",
+          "name": "result",
+          "flags": 640
+        },
+        {
+          "type": "Bool",
+          "name": "staticOnly",
+          "flags": 1152
+        },
+        {
+          "type": "Bool",
+          "name": "dynamicOnly",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "SyncRaycastByQueryFilter",
+      "shortName": "SyncRaycastByQueryFilter",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12218,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Vector4",
+          "name": "start",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "end",
+          "flags": 128
+        },
+        {
+          "type": "physicsQueryFilter",
+          "name": "queryFilter",
+          "flags": 128
+        },
+        {
+          "type": "physicsTraceResult",
+          "name": "result",
+          "flags": 640
+        },
+        {
+          "type": "Bool",
+          "name": "staticOnly",
+          "flags": 1152
+        },
+        {
+          "type": "Bool",
+          "name": "dynamicOnly",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "SyncRaycastByQueryPreset",
+      "shortName": "SyncRaycastByQueryPreset",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12219,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Vector4",
+          "name": "start",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "end",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "queryPreset",
+          "flags": 1152
+        },
+        {
+          "type": "physicsTraceResult",
+          "name": "result",
+          "flags": 640
+        },
+        {
+          "type": "Bool",
+          "name": "staticOnly",
+          "flags": 1152
+        },
+        {
+          "type": "Bool",
+          "name": "dynamicOnly",
+          "flags": 1152
+        }
+      ]
+    }
+  ]
+}

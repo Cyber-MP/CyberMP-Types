@@ -1,0 +1,68 @@
+{
+  "parent": "gameScriptableSystem",
+  "name": "SideScrollerMiniGameScoreSystemAdvanced",
+  "flags": 4,
+  "props": [
+    {
+      "type": "[3]Int32",
+      "name": "scoreData",
+      "flags": 4297130016
+    },
+    {
+      "type": "[3]String",
+      "name": "gameNames",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "GetGameId;script_ref<String>",
+      "shortName": "GetGameId",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 41092,
+      "params": [
+        {
+          "type": "script_ref:String",
+          "name": "gameName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetMaxScore;script_ref<String>",
+      "shortName": "GetMaxScore",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 41476,
+      "params": [
+        {
+          "type": "script_ref:String",
+          "name": "gameName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnAttach;",
+      "shortName": "OnAttach",
+      "flags": 33920
+    },
+    {
+      "fullName": "OnSendScore;SendScoreRequestAdvanced",
+      "shortName": "OnSendScore",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:SendScoreRequestAdvanced",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "parent": "Pay",
+  "name": "Confess",
+  "flags": 4,
+  "funcs": [
+    {
+      "fullName": "Confess::IsAvailable;ScriptableDeviceComponentPS",
+      "shortName": "IsAvailable",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:ScriptableDeviceComponentPS",
+          "name": "device",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Confess::IsClearanceValid;Clearance",
+      "shortName": "IsClearanceValid",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gamedeviceClearance",
+          "name": "clearance",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Confess::IsDefaultConditionMet;ScriptableDeviceComponentPSscript_ref<GetActionsContext>",
+      "shortName": "IsDefaultConditionMet",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:ScriptableDeviceComponentPS",
+          "name": "device",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:gameGetActionsContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetInkWidgetTweakDBID;",
+      "shortName": "GetInkWidgetTweakDBID",
+      "return": {
+        "type": "TweakDBID",
+        "flags": 64
+      },
+      "flags": 33280
+    },
+    {
+      "fullName": "SetProperties;CName",
+      "shortName": "SetProperties",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "CName",
+          "name": "displayName",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

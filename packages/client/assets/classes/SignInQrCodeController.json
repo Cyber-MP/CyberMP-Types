@@ -1,0 +1,40 @@
+{
+  "parent": "gameuiBaseGOGRegisterController",
+  "name": "SignInQrCodeController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkImageWidgetReference",
+      "name": "qrImageWidgetRef",
+      "flags": 4297130017
+    },
+    {
+      "type": "whandle:inkImageWidget",
+      "name": "qrImageWidget",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "UpdateQrCode;array<Uint8>",
+      "shortName": "UpdateQrCode",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "array:Uint8",
+          "name": "qrCodePNGBlob",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

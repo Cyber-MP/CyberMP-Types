@@ -1,0 +1,207 @@
+{
+  "parent": "gameuiBaseMinimapMappinController",
+  "name": "MinimapPOIMappinController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkWidgetReference",
+      "name": "pulseWidget",
+      "flags": 4297195553
+    },
+    {
+      "type": "Bool",
+      "name": "pingAnimationOnStateChange",
+      "flags": 4297195553
+    },
+    {
+      "type": "whandle:gamemappinsPointOfInterestMappin",
+      "name": "poiMappin",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:gamemappinsQuestMappin",
+      "name": "questMappin",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isCompletedPhase",
+      "flags": 4297130016
+    },
+    {
+      "type": "gamedataMappinPhase",
+      "name": "mappinPhase",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "pingAnim",
+      "flags": 4431347744
+    },
+    {
+      "type": "gamedataMappinVariant",
+      "name": "mappinVariant",
+      "flags": 4297130016
+    },
+    {
+      "type": "Uint32",
+      "name": "c_pingAnimCount",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isNcpdScanner",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:VehicleMinimapMappinComponent",
+      "name": "vehicleMinimapMappinComponent",
+      "flags": 4431347744
+    },
+    {
+      "type": "Bool",
+      "name": "keepIconOnClamping",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnPulseAnimLoop",
+      "shortName": "OnPulseAnimLoop",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkanimProxy",
+          "name": "anim",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnQuestMappinHighlight",
+      "shortName": "OnQuestMappinHighlight",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:QuestMappinHighlightEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "ComputeRootState;",
+      "shortName": "ComputeRootState",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 33024
+    },
+    {
+      "fullName": "Initialize;",
+      "shortName": "Initialize",
+      "flags": 33024
+    },
+    {
+      "fullName": "Intro;",
+      "shortName": "Intro",
+      "flags": 33024
+    },
+    {
+      "fullName": "IsNcpdScanner;gamedataMappinVariant",
+      "shortName": "IsNcpdScanner",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "gamedataMappinVariant",
+          "name": "variant",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "KeepIconOnClamping;",
+      "shortName": "KeepIconOnClamping",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33024
+    },
+    {
+      "fullName": "PlayPingAnimation;BoolCName",
+      "shortName": "PlayPingAnimation",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "loopInfinite",
+          "flags": 1152
+        },
+        {
+          "type": "CName",
+          "name": "overrideAnimName",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "RequestUpdateRootState;",
+      "shortName": "RequestUpdateRootState",
+      "flags": 33284
+    },
+    {
+      "fullName": "StopPingAnimation;Bool",
+      "shortName": "StopPingAnimation",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "goToEnd",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "Update;",
+      "shortName": "Update",
+      "flags": 33024
+    },
+    {
+      "fullName": "UpdateIcon;",
+      "shortName": "UpdateIcon",
+      "flags": 33028
+    },
+    {
+      "fullName": "UpdateVisibility;",
+      "shortName": "UpdateVisibility",
+      "flags": 33028
+    }
+  ]
+}

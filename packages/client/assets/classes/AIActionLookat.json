@@ -1,0 +1,63 @@
+{
+  "parent": "IScriptable",
+  "name": "AIActionLookat",
+  "flags": 5,
+  "funcs": [
+    {
+      "fullName": "AIActionLookat::Activate;ScriptExecutionContextAIActionLookAtData_RecordLookAtAddEvent",
+      "shortName": "Activate",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gamedataAIActionLookAtData_Record",
+          "name": "record",
+          "flags": 128
+        },
+        {
+          "type": "handle:entLookAtAddEvent",
+          "name": "lookAtEvent",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "AIActionLookat::Deactivate;GameObjectscript_ref<array<LookAtAddEvent>>",
+      "shortName": "Deactivate",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "owner",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:array:handle:entLookAtAddEvent",
+          "name": "lookAtAddEvents",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AIActionLookat::GetLookatPartsRequests;LookAtPreset_Recordscript_ref<array<LookAtPartRequest>>",
+      "shortName": "GetLookatPartsRequests",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gamedataLookAtPreset_Record",
+          "name": "lookatPresetRecord",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:array:animLookAtPartRequest",
+          "name": "lookAtParts",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

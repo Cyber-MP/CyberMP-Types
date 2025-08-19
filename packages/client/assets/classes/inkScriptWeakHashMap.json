@@ -1,0 +1,113 @@
+{
+  "parent": "IScriptable",
+  "name": "inkScriptWeakHashMap",
+  "flags": 2,
+  "funcs": [
+    {
+      "fullName": "Clear",
+      "shortName": "Clear",
+      "index": 1975,
+      "flags": 1
+    },
+    {
+      "fullName": "Get",
+      "shortName": "Get",
+      "return": {
+        "type": "whandle:IScriptable",
+        "flags": 64
+      },
+      "index": 1971,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Uint64",
+          "name": "key",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetValues",
+      "shortName": "GetValues",
+      "index": 1976,
+      "flags": 1,
+      "params": [
+        {
+          "type": "script_ref:array:whandle:IScriptable",
+          "name": "values",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Insert",
+      "shortName": "Insert",
+      "index": 1970,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Uint64",
+          "name": "key",
+          "flags": 128
+        },
+        {
+          "type": "whandle:IScriptable",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "KeyExist",
+      "shortName": "KeyExist",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 1973,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Uint64",
+          "name": "key",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Remove",
+      "shortName": "Remove",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 1974,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Uint64",
+          "name": "key",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Set",
+      "shortName": "Set",
+      "index": 1972,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Uint64",
+          "name": "key",
+          "flags": 128
+        },
+        {
+          "type": "whandle:IScriptable",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

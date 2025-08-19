@@ -1,0 +1,71 @@
+{
+  "parent": "IScriptable",
+  "name": "GameObjectListener",
+  "flags": 4,
+  "props": [
+    {
+      "type": "handle:gamePrereqState",
+      "name": "prereqOwner",
+      "flags": 4431544352
+    },
+    {
+      "type": "Bool",
+      "name": "e3HackBlock",
+      "flags": 4297326624
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "ModifyOwner;PrereqState",
+      "shortName": "ModifyOwner",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:gamePrereqState",
+          "name": "owner",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRevealAccessPoint;Bool",
+      "shortName": "OnRevealAccessPoint",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "shouldReveal",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnStatusEffectTrigger;Bool",
+      "shortName": "OnStatusEffectTrigger",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "shouldTrigger",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterOwner;PrereqState",
+      "shortName": "RegisterOwner",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:gamePrereqState",
+          "name": "owner",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

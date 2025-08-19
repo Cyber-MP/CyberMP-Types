@@ -1,0 +1,390 @@
+{
+  "parent": "IScriptable",
+  "name": "PocketRadio",
+  "flags": 4,
+  "props": [
+    {
+      "type": "whandle:PlayerPuppet",
+      "name": "player",
+      "flags": 4297130016
+    },
+    {
+      "type": "Int32",
+      "name": "station",
+      "flags": 4297130016
+    },
+    {
+      "type": "Int32",
+      "name": "selectedStation",
+      "flags": 4297130016
+    },
+    {
+      "type": "Int32",
+      "name": "toggledStation",
+      "flags": 4297130016
+    },
+    {
+      "type": "array:Bool",
+      "name": "restrictions",
+      "flags": 6583025696
+    },
+    {
+      "type": "Bool",
+      "name": "isConditionRestricted",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isUnlockDelayRestricted",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isRestrictionOverwritten",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isOn",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:PocketRadioQuestContentLockListener",
+      "name": "questContentLockListener",
+      "flags": 4431347744
+    },
+    {
+      "type": "Float",
+      "name": "radioPressTime",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isInMetro",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:RadioportSettingsListener",
+      "name": "settings",
+      "flags": 4431347744
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "PocketRadio::ConfigEnablePocketRadio;",
+      "shortName": "ConfigEnablePocketRadio",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286
+    },
+    {
+      "fullName": "GetStation;",
+      "shortName": "GetStation",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "GetStationName;",
+      "shortName": "GetStationName",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "GetTrackName;",
+      "shortName": "GetTrackName",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "HandleInputAction;ListenerAction",
+      "shortName": "HandleInputAction",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "gameinputScriptListenerAction",
+          "name": "action",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HandleRadioToggleEvent;RadioToggleEvent",
+      "shortName": "HandleRadioToggleEvent",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:RadioToggleEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HandleRestriction;PocketRadioRestrictionsBool",
+      "shortName": "HandleRestriction",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "PocketRadioRestrictions",
+          "name": "restriction",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "restricted",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HandleRestrictionStateChanged;",
+      "shortName": "HandleRestrictionStateChanged",
+      "flags": 33284
+    },
+    {
+      "fullName": "HandleStatusEffectApplied;script_ref<array<CName>>CNamePocketRadioRestrictions",
+      "shortName": "HandleStatusEffectApplied",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:array:CName",
+          "name": "gameplayTags",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "tag",
+          "flags": 128
+        },
+        {
+          "type": "PocketRadioRestrictions",
+          "name": "type",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HandleStatusEffectRemoved;script_ref<array<CName>>CNamePocketRadioRestrictions",
+      "shortName": "HandleStatusEffectRemoved",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:array:CName",
+          "name": "gameplayTags",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "tag",
+          "flags": 128
+        },
+        {
+          "type": "PocketRadioRestrictions",
+          "name": "type",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HandleUIUpdate;",
+      "shortName": "HandleUIUpdate",
+      "flags": 32900
+    },
+    {
+      "fullName": "HandleVehicleMounted;VehicleObject",
+      "shortName": "HandleVehicleMounted",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "whandle:vehicleBaseObject",
+          "name": "vehicle",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HandleVehicleRadioEvent;VehicleRadioEvent",
+      "shortName": "HandleVehicleRadioEvent",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:VehicleRadioEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HandleVehicleRadioStationChanged;VehicleRadioStationChanged",
+      "shortName": "HandleVehicleRadioStationChanged",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:vehicleRadioStationChanged",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HandleVehicleUnmounted;VehicleObject",
+      "shortName": "HandleVehicleUnmounted",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "whandle:vehicleBaseObject",
+          "name": "vehicle",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "InitializeRestrictions;",
+      "shortName": "InitializeRestrictions",
+      "flags": 32900
+    },
+    {
+      "fullName": "IsActive;",
+      "shortName": "IsActive",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "IsMutedByVolumeSetting;",
+      "shortName": "IsMutedByVolumeSetting",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "IsRestricted;",
+      "shortName": "IsRestricted",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "IsRestrictionOverwritten;",
+      "shortName": "IsRestrictionOverwritten",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "OnPlayerAttach;PlayerPuppet",
+      "shortName": "OnPlayerAttach",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:PlayerPuppet",
+          "name": "player",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPlayerDetach;PlayerPuppet",
+      "shortName": "OnPlayerDetach",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:PlayerPuppet",
+          "name": "player",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnStatusEffectApplied;ApplyStatusEffectEventscript_ref<array<CName>>",
+      "shortName": "OnStatusEffectApplied",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:gameeventsApplyStatusEffectEvent",
+          "name": "evt",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:array:CName",
+          "name": "gameplayTags",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnStatusEffectRemoved;RemoveStatusEffectscript_ref<array<CName>>",
+      "shortName": "OnStatusEffectRemoved",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:gameeventsRemoveStatusEffect",
+          "name": "evt",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:array:CName",
+          "name": "gameplayTags",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ShouldIgnoreEvents;",
+      "shortName": "ShouldIgnoreEvents",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "TurnOff;Bool",
+      "shortName": "TurnOff",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "playSFX",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TurnOn;Bool",
+      "shortName": "TurnOn",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "playSFX",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateConditionRestricted;",
+      "shortName": "UpdateConditionRestricted",
+      "flags": 32900
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "parent": "IScriptable",
+  "name": "AISubActionEquipOnSlot_Record_Implementation",
+  "flags": 5,
+  "funcs": [
+    {
+      "fullName": "AISubActionEquipOnSlot_Record_Implementation::Activate;ScriptExecutionContextAISubActionEquipOnSlot_Record",
+      "shortName": "Activate",
+      "flags": 34310,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gamedataAISubActionEquipOnSlot_Record",
+          "name": "record",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AISubActionEquipOnSlot_Record_Implementation::ApplyAnimFeature;ScriptExecutionContextscript_ref<array<NPCItemToEquip>>Bool",
+      "shortName": "ApplyAnimFeature",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:array:NPCItemToEquip",
+          "name": "itemsToEquip",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "sendAnimFeature",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AISubActionEquipOnSlot_Record_Implementation::Deactivate;ScriptExecutionContextAISubActionEquipOnSlot_RecordFloatBool",
+      "shortName": "Deactivate",
+      "flags": 34310,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gamedataAISubActionEquipOnSlot_Record",
+          "name": "record",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "duration",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "interrupted",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AISubActionEquipOnSlot_Record_Implementation::Equip;ScriptExecutionContextscript_ref<array<NPCItemToEquip>>Bool",
+      "shortName": "Equip",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:array:NPCItemToEquip",
+          "name": "itemsToEquip",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "cacheEquipped",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AISubActionEquipOnSlot_Record_Implementation::Update;ScriptExecutionContextAISubActionEquipOnSlot_RecordFloat",
+      "shortName": "Update",
+      "return": {
+        "type": "AIbehaviorUpdateOutcome",
+        "flags": 64
+      },
+      "flags": 34310,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gamedataAISubActionEquipOnSlot_Record",
+          "name": "record",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "duration",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "parent": "ItemTooltipModuleController",
+  "name": "ItemTooltipIconModule",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkImageWidgetReference",
+      "name": "container",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "icon",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "iconicLines",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "transmogged",
+      "flags": 4297130017
+    },
+    {
+      "type": "handle:gameuiIconsNameResolver",
+      "name": "iconsNameResolver",
+      "flags": 4431347744
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnIconCallback",
+      "shortName": "OnIconCallback",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkCallbackData",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnNEW_IconCallback",
+      "shortName": "OnNEW_IconCallback",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkCallbackData",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetIconPath;MinimalItemTooltipDataItem_Record",
+      "shortName": "GetIconPath",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:MinimalItemTooltipData",
+          "name": "data",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gamedataItem_Record",
+          "name": "itemRecord",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "GetIconScale;MinimalItemTooltipDatagamedataEquipmentArea",
+      "shortName": "GetIconScale",
+      "return": {
+        "type": "Vector2",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:MinimalItemTooltipData",
+          "name": "data",
+          "flags": 128
+        },
+        {
+          "type": "gamedataEquipmentArea",
+          "name": "equipmentArea",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "NEW_GetIconScale;gamedataEquipmentArea",
+      "shortName": "NEW_GetIconScale",
+      "return": {
+        "type": "Vector2",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "gamedataEquipmentArea",
+          "name": "equipmentArea",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "NEW_Update;UIInventoryItem",
+      "shortName": "NEW_Update",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "whandle:UIInventoryItem",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Update;MinimalItemTooltipData",
+      "shortName": "Update",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "handle:MinimalItemTooltipData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "parent": "HitReactionComponent",
+  "name": "HitReactionMechComponent",
+  "flags": 4,
+  "funcs": [
+    {
+      "fullName": "OnForcedDeathEvent",
+      "shortName": "OnForcedDeathEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:ForcedDeathEvent",
+          "name": "forcedDeath",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "EvaluateHit;gameHitEvent",
+      "shortName": "EvaluateHit",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "newHitEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "MechIsDeadOnInit;",
+      "shortName": "MechIsDeadOnInit",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "OnGameAttached;",
+      "shortName": "OnGameAttached",
+      "flags": 33280
+    },
+    {
+      "fullName": "ProcessMechDeath;gameHitEventNPCPuppet",
+      "shortName": "ProcessMechDeath",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        },
+        {
+          "type": "handle:NPCPuppet",
+          "name": "npc",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

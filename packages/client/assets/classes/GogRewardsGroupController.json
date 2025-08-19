@@ -1,0 +1,100 @@
+{
+  "parent": "inkWidgetLogicController",
+  "name": "GogRewardsGroupController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkTextWidgetReference",
+      "name": "label",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "containerWidget",
+      "flags": 4297130017
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnEntryHoverOut",
+      "shortName": "OnEntryHoverOut",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnEntryHoverOver",
+      "shortName": "OnEntryHoverOver",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GroupNameToLabelText;CName",
+      "shortName": "GroupNameToLabelText",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "CName",
+          "name": "groupName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GroupNameToState;CName",
+      "shortName": "GroupNameToState",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "CName",
+          "name": "groupName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateGroup;CNamearray<GogRewardEntryData>",
+      "shortName": "UpdateGroup",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "CName",
+          "name": "groupName",
+          "flags": 128
+        },
+        {
+          "type": "array:handle:GogRewardEntryData",
+          "name": "rewards",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

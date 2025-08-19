@@ -1,0 +1,387 @@
+{
+  "parent": "IScriptable",
+  "name": "TweakAIActionRecord",
+  "flags": 5,
+  "funcs": [
+    {
+      "fullName": "TweakAIActionRecord::GetActionRecord;ScriptExecutionContextTweakDBIDscript_ref<String>AIAction_Record",
+      "shortName": "GetActionRecord",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "actionID",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:String",
+          "name": "actionDebugName",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gamedataAIAction_Record",
+          "name": "actionRecord",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "TweakAIActionRecord::GetActionRecordFromSelector;ScriptExecutionContextAIActionSelector_Recordscript_ref<String>AIAction_RecordInt32Bool",
+      "shortName": "GetActionRecordFromSelector",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gamedataAIActionSelector_Record",
+          "name": "selectorRecord",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:String",
+          "name": "actionDebugName",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gamedataAIAction_Record",
+          "name": "actionRecord",
+          "flags": 640
+        },
+        {
+          "type": "Int32",
+          "name": "nodeIterator",
+          "flags": 640
+        },
+        {
+          "type": "Bool",
+          "name": "shouldCallAgain",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "TweakAIActionRecord::GetActionRecordFromSequence;ScriptExecutionContextAIActionSequence_Recordscript_ref<String>AIAction_RecordInt32Bool",
+      "shortName": "GetActionRecordFromSequence",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gamedataAIActionSequence_Record",
+          "name": "sequenceRecord",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:String",
+          "name": "actionDebugName",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gamedataAIAction_Record",
+          "name": "actionRecord",
+          "flags": 640
+        },
+        {
+          "type": "Int32",
+          "name": "sequenceIterator",
+          "flags": 640
+        },
+        {
+          "type": "Bool",
+          "name": "shouldCallAgain",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "TweakAIActionRecord::GetDebugActionNameFromRecord;TweakDBIDscript_ref<String>",
+      "shortName": "GetDebugActionNameFromRecord",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "TweakDBID",
+          "name": "record",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:String",
+          "name": "debugStringName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TweakAIActionRecord::GetFriendlyName;TweakDBIDscript_ref<String>",
+      "shortName": "GetFriendlyName",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "TweakDBID",
+          "name": "record",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:String",
+          "name": "nodeName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TweakAIActionRecord::GetHeldItemType;ScriptExecutionContextgamedataItemType",
+      "shortName": "GetHeldItemType",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "gamedataItemType",
+          "name": "heldItemType",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "TweakAIActionRecord::GetSelectorRecord;ScriptExecutionContextTweakDBIDscript_ref<String>AIActionSelector_Record",
+      "shortName": "GetSelectorRecord",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "selectorID",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:String",
+          "name": "selectorDebugName",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gamedataAIActionSelector_Record",
+          "name": "selectorRecord",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "TweakAIActionRecord::GetSequenceRecord;ScriptExecutionContextTweakDBIDscript_ref<String>AIActionSequence_Record",
+      "shortName": "GetSequenceRecord",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "sequenceID",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:String",
+          "name": "sequenceDebugName",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gamedataAIActionSequence_Record",
+          "name": "sequenceRecord",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "TweakAIActionRecord::GetSmartCompositeRecord;ScriptExecutionContextTweakDBIDscript_ref<String>AIActionSmartComposite_Record",
+      "shortName": "GetSmartCompositeRecord",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "smartCompositeID",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:String",
+          "name": "smartCompositeDebugName",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gamedataAIActionSmartComposite_Record",
+          "name": "smartCompositeRecord",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "TweakAIActionRecord::IsArchetypeAction;TweakDBID",
+      "shortName": "IsArchetypeAction",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "TweakDBID",
+          "name": "record",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TweakAIActionRecord::IsSmartCompositeASelector;AIActionSmartComposite_Record",
+      "shortName": "IsSmartCompositeASelector",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gamedataAIActionSmartComposite_Record",
+          "name": "smartCompositeRecord",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TweakAIActionRecord::IsSmartCompositeASequence;AIActionSmartComposite_Record",
+      "shortName": "IsSmartCompositeASequence",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gamedataAIActionSmartComposite_Record",
+          "name": "smartCompositeRecord",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TweakAIActionRecord::IsThisLastActionInSelector;AIActionSelector_RecordInt32",
+      "shortName": "IsThisLastActionInSelector",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gamedataAIActionSelector_Record",
+          "name": "selectorRecord",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "nodeIterator",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TweakAIActionRecord::IsThisLastActionInSequence;AIActionSequence_RecordInt32",
+      "shortName": "IsThisLastActionInSequence",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gamedataAIActionSequence_Record",
+          "name": "sequenceRecord",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "sequenceIterator",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TweakAIActionRecord::IsThisLastActionInSmartComposite;AIActionSmartComposite_RecordInt32",
+      "shortName": "IsThisLastActionInSmartComposite",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gamedataAIActionSmartComposite_Record",
+          "name": "smartCompositeRecord",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "iterator",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

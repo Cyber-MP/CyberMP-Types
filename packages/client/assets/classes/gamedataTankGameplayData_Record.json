@@ -1,0 +1,185 @@
+{
+  "parent": "gamedataTweakDBRecord",
+  "name": "gamedataTankGameplayData_Record",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "GetLevelListCount",
+      "shortName": "GetLevelListCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 3172,
+      "flags": 1
+    },
+    {
+      "fullName": "GetLevelListItem",
+      "shortName": "GetLevelListItem",
+      "return": {
+        "type": "whandle:gamedataTankLevelGameplay_Record",
+        "flags": 64
+      },
+      "index": 3173,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetLevelListItemHandle",
+      "shortName": "GetLevelListItemHandle",
+      "return": {
+        "type": "handle:gamedataTankLevelGameplay_Record",
+        "flags": 64
+      },
+      "index": 3174,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetScoreMultiplierBreakpointListCount",
+      "shortName": "GetScoreMultiplierBreakpointListCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 3167,
+      "flags": 1
+    },
+    {
+      "fullName": "GetScoreMultiplierBreakpointListItem",
+      "shortName": "GetScoreMultiplierBreakpointListItem",
+      "return": {
+        "type": "whandle:gamedataTankScoreMultiplierBreakpoint_Record",
+        "flags": 64
+      },
+      "index": 3168,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetScoreMultiplierBreakpointListItemHandle",
+      "shortName": "GetScoreMultiplierBreakpointListItemHandle",
+      "return": {
+        "type": "handle:gamedataTankScoreMultiplierBreakpoint_Record",
+        "flags": 64
+      },
+      "index": 3169,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "LevelList",
+      "shortName": "LevelList",
+      "index": 3171,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataTankLevelGameplay_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "LevelListContains",
+      "shortName": "LevelListContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 3175,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataTankLevelGameplay_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ScoreMultiplierBreakpointList",
+      "shortName": "ScoreMultiplierBreakpointList",
+      "index": 3166,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataTankScoreMultiplierBreakpoint_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "ScoreMultiplierBreakpointListContains",
+      "shortName": "ScoreMultiplierBreakpointListContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 3170,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataTankScoreMultiplierBreakpoint_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ScoreMultiplierDecayBlockedTime",
+      "shortName": "ScoreMultiplierDecayBlockedTime",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 3177,
+      "flags": 1
+    },
+    {
+      "fullName": "ScoreMultiplierDecayRate",
+      "shortName": "ScoreMultiplierDecayRate",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 3178,
+      "flags": 1
+    },
+    {
+      "fullName": "WorldVelocity",
+      "shortName": "WorldVelocity",
+      "return": {
+        "type": "Vector2",
+        "flags": 64
+      },
+      "index": 3176,
+      "flags": 1
+    }
+  ]
+}

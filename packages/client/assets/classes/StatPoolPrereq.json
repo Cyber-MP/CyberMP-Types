@@ -1,0 +1,216 @@
+{
+  "parent": "gameIScriptablePrereq",
+  "name": "StatPoolPrereq",
+  "flags": 4,
+  "props": [
+    {
+      "type": "gamedataStatPoolType",
+      "name": "statPoolType",
+      "flags": 4297326624
+    },
+    {
+      "type": "array:whandle:gamedataStatModifier_Record",
+      "name": "valueToCheck",
+      "flags": 6583222304
+    },
+    {
+      "type": "EComparisonType",
+      "name": "comparisonType",
+      "flags": 4297326624
+    },
+    {
+      "type": "Bool",
+      "name": "skipOnApply",
+      "flags": 4297326624
+    },
+    {
+      "type": "Bool",
+      "name": "comparePercentage",
+      "flags": 4297326624
+    },
+    {
+      "type": "ObjectToCheck",
+      "name": "objToCheck",
+      "flags": 4297326624
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "CompareValues;GameObjectStatsObjectIDIScriptable",
+      "shortName": "CompareValues",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41220,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "object",
+          "flags": 128
+        },
+        {
+          "type": "gameStatsObjectID",
+          "name": "statsObjID",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetObject;GameObject",
+      "shortName": "GetObject",
+      "return": {
+        "type": "handle:gameObject",
+        "flags": 64
+      },
+      "flags": 41220,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "owner",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetStatsObjectID;GameObject",
+      "shortName": "GetStatsObjectID",
+      "return": {
+        "type": "gameStatsObjectID",
+        "flags": 64
+      },
+      "flags": 41220,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "owner",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetValueToCheck;StatPoolPrereqState",
+      "shortName": "GetValueToCheck",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 41220,
+      "params": [
+        {
+          "type": "handle:StatPoolPrereqState",
+          "name": "state",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Initialize;TweakDBID",
+      "shortName": "Initialize",
+      "flags": 34048,
+      "params": [
+        {
+          "type": "TweakDBID",
+          "name": "recordID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsFulfilled",
+      "shortName": "IsFulfilled",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41472,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "game",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnApplied;PrereqStateGameInstanceIScriptable",
+      "shortName": "OnApplied",
+      "flags": 42240,
+      "params": [
+        {
+          "type": "handle:gamePrereqState",
+          "name": "state",
+          "flags": 128
+        },
+        {
+          "type": "ScriptGameInstance",
+          "name": "game",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRegister;PrereqStateGameInstanceIScriptable",
+      "shortName": "OnRegister",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 42240,
+      "params": [
+        {
+          "type": "handle:gamePrereqState",
+          "name": "state",
+          "flags": 128
+        },
+        {
+          "type": "ScriptGameInstance",
+          "name": "game",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUnregister;PrereqStateGameInstanceIScriptable",
+      "shortName": "OnUnregister",
+      "flags": 42240,
+      "params": [
+        {
+          "type": "handle:gamePrereqState",
+          "name": "state",
+          "flags": 128
+        },
+        {
+          "type": "ScriptGameInstance",
+          "name": "game",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

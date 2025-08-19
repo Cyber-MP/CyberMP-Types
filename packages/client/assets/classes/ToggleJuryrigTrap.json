@@ -1,0 +1,81 @@
+{
+  "parent": "ActionBool",
+  "name": "ToggleJuryrigTrap",
+  "flags": 4,
+  "funcs": [
+    {
+      "fullName": "ToggleJuryrigTrap::IsAvailable;ScriptableDeviceComponentPS",
+      "shortName": "IsAvailable",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:ScriptableDeviceComponentPS",
+          "name": "device",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ToggleJuryrigTrap::IsContextValid;script_ref<GetActionsContext>",
+      "shortName": "IsContextValid",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "script_ref:gameGetActionsContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ToggleJuryrigTrap::IsDefaultConditionMet;ScriptableDeviceComponentPSscript_ref<GetActionsContext>",
+      "shortName": "IsDefaultConditionMet",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:ScriptableDeviceComponentPS",
+          "name": "device",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:gameGetActionsContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetTweakDBChoiceRecord;",
+      "shortName": "GetTweakDBChoiceRecord",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "flags": 33280
+    },
+    {
+      "fullName": "SetProperties;EJuryrigTrapState",
+      "shortName": "SetProperties",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "EJuryrigTrapState",
+          "name": "state",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

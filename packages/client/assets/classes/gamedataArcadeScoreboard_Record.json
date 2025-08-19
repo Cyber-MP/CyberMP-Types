@@ -1,0 +1,145 @@
+{
+  "parent": "gamedataTweakDBRecord",
+  "name": "gamedataArcadeScoreboard_Record",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "ArcadeScoreboardEntryList",
+      "shortName": "ArcadeScoreboardEntryList",
+      "index": 6288,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataArcadeScoreboardEntry_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "ArcadeScoreboardEntryListContains",
+      "shortName": "ArcadeScoreboardEntryListContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 6292,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataArcadeScoreboardEntry_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ArcadeScoreboardHighScoreSFX",
+      "shortName": "ArcadeScoreboardHighScoreSFX",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "index": 6297,
+      "flags": 1
+    },
+    {
+      "fullName": "ArcadeScoreboardQuestFactList",
+      "shortName": "ArcadeScoreboardQuestFactList",
+      "return": {
+        "type": "array:CName",
+        "flags": 64
+      },
+      "index": 6293,
+      "flags": 1
+    },
+    {
+      "fullName": "ArcadeScoreboardQuestFactListContains",
+      "shortName": "ArcadeScoreboardQuestFactListContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 6296,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetArcadeScoreboardEntryListCount",
+      "shortName": "GetArcadeScoreboardEntryListCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 6289,
+      "flags": 1
+    },
+    {
+      "fullName": "GetArcadeScoreboardEntryListItem",
+      "shortName": "GetArcadeScoreboardEntryListItem",
+      "return": {
+        "type": "whandle:gamedataArcadeScoreboardEntry_Record",
+        "flags": 64
+      },
+      "index": 6290,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetArcadeScoreboardEntryListItemHandle",
+      "shortName": "GetArcadeScoreboardEntryListItemHandle",
+      "return": {
+        "type": "handle:gamedataArcadeScoreboardEntry_Record",
+        "flags": 64
+      },
+      "index": 6291,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetArcadeScoreboardQuestFactListCount",
+      "shortName": "GetArcadeScoreboardQuestFactListCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 6294,
+      "flags": 1
+    },
+    {
+      "fullName": "GetArcadeScoreboardQuestFactListItem",
+      "shortName": "GetArcadeScoreboardQuestFactListItem",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "index": 6295,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

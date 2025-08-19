@@ -1,0 +1,168 @@
+{
+  "parent": "inkWidgetLogicController",
+  "name": "GalleryFilterController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkImageWidgetReference",
+      "name": "icon",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "text",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "filterRootWidget",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkGameScreenshotSortMode",
+      "name": "filterType",
+      "flags": 4297130016
+    },
+    {
+      "type": "CName",
+      "name": "labelKey",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:gameuiTooltipsManager",
+      "name": "tooltipsManager",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "active",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "hovered",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnHoverOut",
+      "shortName": "OnHoverOut",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnHoverOver",
+      "shortName": "OnHoverOver",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "GetFilterType;",
+      "shortName": "GetFilterType",
+      "return": {
+        "type": "inkGameScreenshotSortMode",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "IsActive;",
+      "shortName": "IsActive",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "SetActive;Bool",
+      "shortName": "SetActive",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetFilterType;inkGameScreenshotSortMode",
+      "shortName": "SetFilterType",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "inkGameScreenshotSortMode",
+          "name": "filterType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Setup;inkGameScreenshotSortModeCNameCNamegameuiTooltipsManager",
+      "shortName": "Setup",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "inkGameScreenshotSortMode",
+          "name": "filterType",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "iconName",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "labelKey",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameuiTooltipsManager",
+          "name": "tooltipsManager",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

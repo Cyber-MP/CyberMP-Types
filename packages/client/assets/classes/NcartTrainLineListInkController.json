@@ -1,0 +1,342 @@
+{
+  "parent": "NcartTrainInkControllerBase",
+  "name": "NcartTrainLineListInkController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "array:ncartLineListDef",
+      "name": "LinesList",
+      "flags": 6583025697
+    },
+    {
+      "type": "CName",
+      "name": "ActiveMetroLineNumberFactName",
+      "flags": 4297130017
+    },
+    {
+      "type": "CName",
+      "name": "ActiveMetroStationNumberFactName",
+      "flags": 4297130017
+    },
+    {
+      "type": "CName",
+      "name": "MetroStoppingFactName",
+      "flags": 4297130017
+    },
+    {
+      "type": "CName",
+      "name": "MetroReverseDirectionFact",
+      "flags": 4297130017
+    },
+    {
+      "type": "whandle:inkCompoundWidget",
+      "name": "root",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:questQuestsSystem",
+      "name": "questsSystem",
+      "flags": 4297130016
+    },
+    {
+      "type": "Uint32",
+      "name": "activeStationListenerId",
+      "flags": 4297130016
+    },
+    {
+      "type": "Uint32",
+      "name": "activeLineListenerId",
+      "flags": 4297130016
+    },
+    {
+      "type": "Uint32",
+      "name": "StopListenerId",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "StationListSetUp",
+      "flags": 4297130016
+    },
+    {
+      "type": "Int32",
+      "name": "lastDestination",
+      "flags": 4297130016
+    },
+    {
+      "type": "Int32",
+      "name": "currentActiveStation",
+      "flags": 4297130016
+    },
+    {
+      "type": "Int32",
+      "name": "activeStationWidget",
+      "flags": 4297130016
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "ncartLogo",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "ncartLogoDeco",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "ncartLogoDecoFrame1",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "ncartLogoDecoFrame2",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "ncartLogoDecoFrame3",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "ncartLogoDecoFrame4",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "line_loop_symbol",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "ncartDecoAccent1",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "ncartDecoAccent2",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "ncartDecoAccent3",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "ncartDecoAccent4",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "ncartTextLogo",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkHorizontalPanelWidgetReference",
+      "name": "ncartDirectionArrowsList",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkHorizontalPanelWidgetReference",
+      "name": "ncartLineStationList",
+      "flags": 4297130017
+    },
+    {
+      "type": "Uint32",
+      "name": "cachedLine",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnMetroActiveLineChangeEvent",
+      "shortName": "OnMetroActiveLineChangeEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "factValue",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnMetroActiveStationChangeEvent",
+      "shortName": "OnMetroActiveStationChangeEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "factValue",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnMetroArrivingAtStationEvent",
+      "shortName": "OnMetroArrivingAtStationEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "factValue",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "MarkNextStationOnLine;Int32",
+      "shortName": "MarkNextStationOnLine",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "activeStation",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "MarkStationActive;Int32",
+      "shortName": "MarkStationActive",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "stationPosition",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "MarkStationInactive;inkCompoundWidgetBool",
+      "shortName": "MarkStationInactive",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "whandle:inkCompoundWidget",
+          "name": "widget",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "lastStation",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PaintDirectionArrows;Int32",
+      "shortName": "PaintDirectionArrows",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "line",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PaintStationMarker;inkCompoundWidgetColorColor",
+      "shortName": "PaintStationMarker",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "whandle:inkCompoundWidget",
+          "name": "widget",
+          "flags": 128
+        },
+        {
+          "type": "Color",
+          "name": "lineColor",
+          "flags": 128
+        },
+        {
+          "type": "Color",
+          "name": "districtColor",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PlayAnimationInReverse;",
+      "shortName": "PlayAnimationInReverse",
+      "return": {
+        "type": "inkanimPlaybackOptions",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "PlayDirectionArrows;",
+      "shortName": "PlayDirectionArrows",
+      "flags": 32900
+    },
+    {
+      "fullName": "PopulateStationList;Int32",
+      "shortName": "PopulateStationList",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "line",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SignalTrainStop;",
+      "shortName": "SignalTrainStop",
+      "flags": 32900
+    },
+    {
+      "fullName": "UpdateMetroLine;Uint32",
+      "shortName": "UpdateMetroLine",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Uint32",
+          "name": "activeLine",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,172 @@
+{
+  "parent": "ScriptableDeviceComponentPS",
+  "name": "NcartTimetableControllerPS",
+  "flags": 1028,
+  "props": [
+    {
+      "type": "NcartTimetableSetup",
+      "name": "ncartTimetableSetup",
+      "flags": 4364238881
+    },
+    {
+      "type": "Int32",
+      "name": "currentTimeToDepart",
+      "flags": 4565565472
+    },
+    {
+      "type": "Int32",
+      "name": "currentLine",
+      "flags": 4565565472
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnInstantiated",
+      "shortName": "OnInstantiated",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "CanCreateAnyQuickHackActions;",
+      "shortName": "CanCreateAnyQuickHackActions",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41216
+    },
+    {
+      "fullName": "GetBackgroundTextureTweakDBID;",
+      "shortName": "GetBackgroundTextureTweakDBID",
+      "return": {
+        "type": "TweakDBID",
+        "flags": 64
+      },
+      "flags": 33024
+    },
+    {
+      "fullName": "GetBlackboardDef;",
+      "shortName": "GetBlackboardDef",
+      "return": {
+        "type": "handle:NcartTimetableBlackboardDef",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "GetCurrentLine;",
+      "shortName": "GetCurrentLine",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetCurrentTimeToDepart;",
+      "shortName": "GetCurrentTimeToDepart",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetCurrentTimeToDepartAsString;",
+      "shortName": "GetCurrentTimeToDepartAsString",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetDepartFrequency;",
+      "shortName": "GetDepartFrequency",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetDeviceIconTweakDBID;",
+      "shortName": "GetDeviceIconTweakDBID",
+      "return": {
+        "type": "TweakDBID",
+        "flags": 64
+      },
+      "flags": 33024
+    },
+    {
+      "fullName": "GetQuestActions;array<DeviceAction>script_ref<GetActionsContext>",
+      "shortName": "GetQuestActions",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "array:handle:gamedeviceAction",
+          "name": "outActions",
+          "flags": 640
+        },
+        {
+          "type": "script_ref:gameGetActionsContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetQuickHackActions;array<DeviceAction>script_ref<GetActionsContext>",
+      "shortName": "GetQuickHackActions",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "array:handle:gamedeviceAction",
+          "name": "outActions",
+          "flags": 640
+        },
+        {
+          "type": "script_ref:gameGetActionsContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetUiUpdateFrequency;",
+      "shortName": "GetUiUpdateFrequency",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "Initialize;",
+      "shortName": "Initialize",
+      "flags": 33024
+    },
+    {
+      "fullName": "ResetTimeToDepart;",
+      "shortName": "ResetTimeToDepart",
+      "flags": 32900
+    },
+    {
+      "fullName": "SelectNewRandomLine;",
+      "shortName": "SelectNewRandomLine",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "UpdateCurrentTimeToDepart;",
+      "shortName": "UpdateCurrentTimeToDepart",
+      "flags": 33284
+    }
+  ]
+}

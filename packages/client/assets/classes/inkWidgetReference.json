@@ -1,0 +1,1638 @@
+{
+  "name": "inkWidgetReference",
+  "flags": 2,
+  "props": [
+    {
+      "type": "whandle:inkWidget",
+      "name": "widget",
+      "flags": 6627016704
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "BindProperty",
+      "shortName": "BindProperty",
+      "index": 1248,
+      "flags": 3
+    },
+    {
+      "fullName": "CallCustomCallback",
+      "shortName": "CallCustomCallback",
+      "index": 1240,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "eventName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ChangeTranslation",
+      "shortName": "ChangeTranslation",
+      "index": 1236,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "Vector2",
+          "name": "translationVector",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Equals",
+      "shortName": "Equals",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 1183,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "inkWidgetReference",
+          "name": "other",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GatherUserData",
+      "shortName": "GatherUserData",
+      "index": 1247,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "userDataTypeName",
+          "flags": 128
+        },
+        {
+          "type": "array:handle:inkUserData",
+          "name": "userDataCollection",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Get",
+      "shortName": "Get",
+      "return": {
+        "type": "whandle:inkWidget",
+        "flags": 64
+      },
+      "index": 1181,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetAnchor",
+      "shortName": "GetAnchor",
+      "return": {
+        "type": "inkEAnchor",
+        "flags": 64
+      },
+      "index": 1210,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetAnchorPoint",
+      "shortName": "GetAnchorPoint",
+      "return": {
+        "type": "Vector2",
+        "flags": 64
+      },
+      "index": 1212,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetController",
+      "shortName": "GetController",
+      "return": {
+        "type": "whandle:inkWidgetLogicController",
+        "flags": 64
+      },
+      "index": 1190,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetControllerByType",
+      "shortName": "GetControllerByType",
+      "return": {
+        "type": "whandle:inkWidgetLogicController",
+        "flags": 64
+      },
+      "index": 1191,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "controllerType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetControllers",
+      "shortName": "GetControllers",
+      "return": {
+        "type": "array:whandle:inkWidgetLogicController",
+        "flags": 64
+      },
+      "index": 1192,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetControllersByType",
+      "shortName": "GetControllersByType",
+      "return": {
+        "type": "array:whandle:inkWidgetLogicController",
+        "flags": 64
+      },
+      "index": 1193,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "controllerType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetDesiredSize",
+      "shortName": "GetDesiredSize",
+      "return": {
+        "type": "Vector2",
+        "flags": 64
+      },
+      "index": 1221,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetFitToContent",
+      "shortName": "GetFitToContent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 1218,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetHAlign",
+      "shortName": "GetHAlign",
+      "return": {
+        "type": "inkEHorizontalAlign",
+        "flags": 64
+      },
+      "index": 1201,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetMargin",
+      "shortName": "GetMargin",
+      "return": {
+        "type": "inkMargin",
+        "flags": 64
+      },
+      "index": 1197,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetName",
+      "shortName": "GetName",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "index": 1185,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetNumControllers",
+      "shortName": "GetNumControllers",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 1194,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetNumControllersOfType",
+      "shortName": "GetNumControllersOfType",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 1195,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "controllerType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetOpacity",
+      "shortName": "GetOpacity",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 1225,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetPadding",
+      "shortName": "GetPadding",
+      "return": {
+        "type": "inkMargin",
+        "flags": 64
+      },
+      "index": 1199,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetRenderTransformPivot",
+      "shortName": "GetRenderTransformPivot",
+      "return": {
+        "type": "Vector2",
+        "flags": 64
+      },
+      "index": 1227,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetRotation",
+      "shortName": "GetRotation",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 1233,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetScale",
+      "shortName": "GetScale",
+      "return": {
+        "type": "Vector2",
+        "flags": 64
+      },
+      "index": 1229,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetShear",
+      "shortName": "GetShear",
+      "return": {
+        "type": "Vector2",
+        "flags": 64
+      },
+      "index": 1231,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetSize",
+      "shortName": "GetSize",
+      "return": {
+        "type": "Vector2",
+        "flags": 64
+      },
+      "index": 1220,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetSizeCoefficient",
+      "shortName": "GetSizeCoefficient",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 1216,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetSizeRule",
+      "shortName": "GetSizeRule",
+      "return": {
+        "type": "inkESizeRule",
+        "flags": 64
+      },
+      "index": 1214,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetState",
+      "shortName": "GetState",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "index": 1186,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetStylePath",
+      "shortName": "GetStylePath",
+      "return": {
+        "type": "redResourceReferenceScriptToken",
+        "flags": 64
+      },
+      "index": 1188,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetTintColor",
+      "shortName": "GetTintColor",
+      "return": {
+        "type": "HDRColor",
+        "flags": 64
+      },
+      "index": 1223,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetTranslation",
+      "shortName": "GetTranslation",
+      "return": {
+        "type": "Vector2",
+        "flags": 64
+      },
+      "index": 1235,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetUserData",
+      "shortName": "GetUserData",
+      "return": {
+        "type": "handle:inkUserData",
+        "flags": 64
+      },
+      "index": 1245,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "userDataTypeName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetUserDataArray",
+      "shortName": "GetUserDataArray",
+      "return": {
+        "type": "array:handle:inkUserData",
+        "flags": 64
+      },
+      "index": 1246,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "userDataTypeName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetUserDataObjectCount",
+      "shortName": "GetUserDataObjectCount",
+      "return": {
+        "type": "Uint32",
+        "flags": 64
+      },
+      "index": 1244,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "userDataTypeName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetVAlign",
+      "shortName": "GetVAlign",
+      "return": {
+        "type": "inkEVerticalAlign",
+        "flags": 64
+      },
+      "index": 1203,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HasUserDataObject",
+      "shortName": "HasUserDataObject",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 1243,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "userDataTypeName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsInteractive",
+      "shortName": "IsInteractive",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 1208,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsValid",
+      "shortName": "IsValid",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 1182,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsVisible",
+      "shortName": "IsVisible",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 1205,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PlayAnimation",
+      "shortName": "PlayAnimation",
+      "return": {
+        "type": "handle:inkanimProxy",
+        "flags": 64
+      },
+      "index": 1237,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "handle:inkanimDefinition",
+          "name": "animationDefinition",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PlayAnimationWithOptions",
+      "shortName": "PlayAnimationWithOptions",
+      "return": {
+        "type": "handle:inkanimProxy",
+        "flags": 64
+      },
+      "index": 1238,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "handle:inkanimDefinition",
+          "name": "animationDefinition",
+          "flags": 128
+        },
+        {
+          "type": "inkanimPlaybackOptions",
+          "name": "playbackOptions",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterToCallback",
+      "shortName": "RegisterToCallback",
+      "index": 1241,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "eventName",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "object",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "functionName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Reparent",
+      "shortName": "Reparent",
+      "index": 1250,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "whandle:inkCompoundWidget",
+          "name": "newParent",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "SetAnchor",
+      "shortName": "SetAnchor",
+      "index": 1209,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "inkEAnchor",
+          "name": "anchor",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetAnchorPoint",
+      "shortName": "SetAnchorPoint",
+      "index": 1211,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "Vector2",
+          "name": "anchorPoint",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetFitToContent",
+      "shortName": "SetFitToContent",
+      "index": 1217,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "fitToContent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetHAlign",
+      "shortName": "SetHAlign",
+      "index": 1202,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "inkEHorizontalAlign",
+          "name": "hAlign",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetInteractive",
+      "shortName": "SetInteractive",
+      "index": 1207,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetLayout",
+      "shortName": "SetLayout",
+      "index": 1196,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "inkWidgetLayout",
+          "name": "layout",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetMargin",
+      "shortName": "SetMargin",
+      "index": 1198,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "inkMargin",
+          "name": "margin",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetName",
+      "shortName": "SetName",
+      "index": 1184,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "widgetName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetOpacity",
+      "shortName": "SetOpacity",
+      "index": 1224,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "opacity",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetPadding",
+      "shortName": "SetPadding",
+      "index": 1200,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "inkMargin",
+          "name": "padding",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetRenderTransformPivot",
+      "shortName": "SetRenderTransformPivot",
+      "index": 1226,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "Vector2",
+          "name": "pivot",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetRotation",
+      "shortName": "SetRotation",
+      "index": 1232,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "angleInDegrees",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetScale",
+      "shortName": "SetScale",
+      "index": 1228,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "Vector2",
+          "name": "scale",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetShear",
+      "shortName": "SetShear",
+      "index": 1230,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "Vector2",
+          "name": "shear",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetSize",
+      "shortName": "SetSize",
+      "index": 1219,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "Vector2",
+          "name": "size",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetSizeCoefficient",
+      "shortName": "SetSizeCoefficient",
+      "index": 1215,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "sizeCoefficient",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetSizeRule",
+      "shortName": "SetSizeRule",
+      "index": 1213,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "inkESizeRule",
+          "name": "sizeRule",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetState",
+      "shortName": "SetState",
+      "index": 1187,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "state",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetStyle",
+      "shortName": "SetStyle",
+      "index": 1189,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "redResourceReferenceScriptToken",
+          "name": "styleResPath",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetTintColor",
+      "shortName": "SetTintColor",
+      "index": 1222,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "HDRColor",
+          "name": "color",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetTranslation",
+      "shortName": "SetTranslation",
+      "index": 1234,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "Vector2",
+          "name": "translationVector",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetVAlign",
+      "shortName": "SetVAlign",
+      "index": 1204,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "inkEVerticalAlign",
+          "name": "vAlign",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetVisible",
+      "shortName": "SetVisible",
+      "index": 1206,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "visible",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "StopAllAnimations",
+      "shortName": "StopAllAnimations",
+      "index": 1239,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UnbindProperty",
+      "shortName": "UnbindProperty",
+      "index": 1249,
+      "flags": 3
+    },
+    {
+      "fullName": "UnregisterFromCallback",
+      "shortName": "UnregisterFromCallback",
+      "index": 1242,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "eventName",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "object",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "functionName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "inkWidgetReference::DefaultState;inkWidgetRef",
+      "shortName": "DefaultState",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "inkWidgetReference::GetDesiredHeight;inkWidgetRef",
+      "shortName": "GetDesiredHeight",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "inkWidgetReference::GetDesiredWidth;inkWidgetRef",
+      "shortName": "GetDesiredWidth",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "inkWidgetReference::GetHeight;inkWidgetRef",
+      "shortName": "GetHeight",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "inkWidgetReference::GetWidth;inkWidgetRef",
+      "shortName": "GetWidth",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "inkWidgetReference::SetAnchorPoint;inkWidgetRefFloatFloat",
+      "shortName": "SetAnchorPoint",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "x",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "y",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "inkWidgetReference::SetHeight;inkWidgetRefFloat",
+      "shortName": "SetHeight",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "height",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "inkWidgetReference::SetMargin;inkWidgetRefFloatFloatFloatFloat",
+      "shortName": "SetMargin",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "left",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "top",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "right",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "bottom",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "inkWidgetReference::SetPadding;inkWidgetRefFloatFloatFloatFloat",
+      "shortName": "SetPadding",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "left",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "top",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "right",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "bottom",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "inkWidgetReference::SetRenderTransformPivot;inkWidgetRefFloatFloat",
+      "shortName": "SetRenderTransformPivot",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "x",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "y",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "inkWidgetReference::SetSize;inkWidgetRefFloatFloat",
+      "shortName": "SetSize",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "width",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "height",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "inkWidgetReference::SetTintColor;inkWidgetRefColor",
+      "shortName": "SetTintColor",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "Color",
+          "name": "color",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "inkWidgetReference::SetTintColor;inkWidgetRefUint8Uint8Uint8Uint8",
+      "shortName": "SetTintColor",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "Uint8",
+          "name": "r",
+          "flags": 128
+        },
+        {
+          "type": "Uint8",
+          "name": "g",
+          "flags": 128
+        },
+        {
+          "type": "Uint8",
+          "name": "b",
+          "flags": 128
+        },
+        {
+          "type": "Uint8",
+          "name": "a",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "inkWidgetReference::SetTranslation;inkWidgetRefFloatFloat",
+      "shortName": "SetTranslation",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "x",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "y",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "inkWidgetReference::SetWidth;inkWidgetRefFloat",
+      "shortName": "SetWidth",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "width",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "inkWidgetReference::UpdateMargin;inkWidgetRefFloatFloatFloatFloat",
+      "shortName": "UpdateMargin",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "left",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "top",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "right",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "bottom",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

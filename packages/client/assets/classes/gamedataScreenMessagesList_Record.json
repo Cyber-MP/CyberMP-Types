@@ -1,0 +1,81 @@
+{
+  "parent": "gamedataTweakDBRecord",
+  "name": "gamedataScreenMessagesList_Record",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "GetMessagesCount",
+      "shortName": "GetMessagesCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 3308,
+      "flags": 1
+    },
+    {
+      "fullName": "GetMessagesItem",
+      "shortName": "GetMessagesItem",
+      "return": {
+        "type": "whandle:gamedataScreenMessageData_Record",
+        "flags": 64
+      },
+      "index": 3309,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetMessagesItemHandle",
+      "shortName": "GetMessagesItemHandle",
+      "return": {
+        "type": "handle:gamedataScreenMessageData_Record",
+        "flags": 64
+      },
+      "index": 3310,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Messages",
+      "shortName": "Messages",
+      "index": 3307,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataScreenMessageData_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "MessagesContains",
+      "shortName": "MessagesContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 3311,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataScreenMessageData_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

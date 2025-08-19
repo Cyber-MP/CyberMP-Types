@@ -1,0 +1,1604 @@
+{
+  "parent": "IScriptable",
+  "name": "gameIBlackboard",
+  "flags": 67,
+  "funcs": [
+    {
+      "fullName": "Create",
+      "shortName": "Create",
+      "return": {
+        "type": "handle:gameIBlackboard",
+        "flags": 64
+      },
+      "index": 11438,
+      "flags": 3,
+      "params": [
+        {
+          "type": "handle:gamebbScriptDefinition",
+          "name": "definition",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ClearAllFields",
+      "shortName": "ClearAllFields",
+      "index": 11444,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "signal",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "FireCallbacks",
+      "shortName": "FireCallbacks",
+      "index": 11440,
+      "flags": 8193
+    },
+    {
+      "fullName": "GetBool",
+      "shortName": "GetBool",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 11372,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "gamebbScriptID_Bool",
+          "name": "id",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetEntityID",
+      "shortName": "GetEntityID",
+      "return": {
+        "type": "entEntityID",
+        "flags": 64
+      },
+      "index": 11426,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "gamebbScriptID_EntityID",
+          "name": "id",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetFloat",
+      "shortName": "GetFloat",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 11390,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "gamebbScriptID_Float",
+          "name": "id",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetInt",
+      "shortName": "GetInt",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 11378,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "gamebbScriptID_Int32",
+          "name": "id",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetName",
+      "shortName": "GetName",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "index": 11402,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "gamebbScriptID_CName",
+          "name": "id",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetQuat",
+      "shortName": "GetQuat",
+      "return": {
+        "type": "Quaternion",
+        "flags": 64
+      },
+      "index": 11420,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "gamebbScriptID_Quaternion",
+          "name": "id",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetString",
+      "shortName": "GetString",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "index": 11396,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "gamebbScriptID_String",
+          "name": "id",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetUint",
+      "shortName": "GetUint",
+      "return": {
+        "type": "Uint32",
+        "flags": 64
+      },
+      "index": 11384,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "gamebbScriptID_Uint32",
+          "name": "id",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetVariant",
+      "shortName": "GetVariant",
+      "return": {
+        "type": "Variant",
+        "flags": 64
+      },
+      "index": 11432,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "gamebbScriptID_Variant",
+          "name": "tag",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetVector2",
+      "shortName": "GetVector2",
+      "return": {
+        "type": "Vector2",
+        "flags": 64
+      },
+      "index": 11408,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "gamebbScriptID_Vector2",
+          "name": "id",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetVector4",
+      "shortName": "GetVector4",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "index": 11414,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "gamebbScriptID_Vector4",
+          "name": "id",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterDelayedListenerBool",
+      "shortName": "RegisterDelayedListenerBool",
+      "return": {
+        "type": "handle:redCallbackObject",
+        "flags": 64
+      },
+      "index": 11377,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamebbScriptID_Bool",
+          "name": "id",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "object",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "func",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "fireIfValueExist",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterDelayedListenerEntityID",
+      "shortName": "RegisterDelayedListenerEntityID",
+      "return": {
+        "type": "handle:redCallbackObject",
+        "flags": 64
+      },
+      "index": 11431,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamebbScriptID_EntityID",
+          "name": "id",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "object",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "func",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "fireIfValueExist",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterDelayedListenerFloat",
+      "shortName": "RegisterDelayedListenerFloat",
+      "return": {
+        "type": "handle:redCallbackObject",
+        "flags": 64
+      },
+      "index": 11395,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamebbScriptID_Float",
+          "name": "id",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "object",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "func",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "fireIfValueExist",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterDelayedListenerInt",
+      "shortName": "RegisterDelayedListenerInt",
+      "return": {
+        "type": "handle:redCallbackObject",
+        "flags": 64
+      },
+      "index": 11383,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamebbScriptID_Int32",
+          "name": "id",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "object",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "func",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "fireIfValueExist",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterDelayedListenerName",
+      "shortName": "RegisterDelayedListenerName",
+      "return": {
+        "type": "handle:redCallbackObject",
+        "flags": 64
+      },
+      "index": 11407,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamebbScriptID_CName",
+          "name": "id",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "object",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "func",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "fireIfValueExist",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterDelayedListenerQuat",
+      "shortName": "RegisterDelayedListenerQuat",
+      "return": {
+        "type": "handle:redCallbackObject",
+        "flags": 64
+      },
+      "index": 11425,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamebbScriptID_Quaternion",
+          "name": "id",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "object",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "func",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "fireIfValueExist",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterDelayedListenerString",
+      "shortName": "RegisterDelayedListenerString",
+      "return": {
+        "type": "handle:redCallbackObject",
+        "flags": 64
+      },
+      "index": 11401,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamebbScriptID_String",
+          "name": "id",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "object",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "func",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "fireIfValueExist",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterDelayedListenerUint",
+      "shortName": "RegisterDelayedListenerUint",
+      "return": {
+        "type": "handle:redCallbackObject",
+        "flags": 64
+      },
+      "index": 11389,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamebbScriptID_Uint32",
+          "name": "id",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "object",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "func",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "fireIfValueExist",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterDelayedListenerVariant",
+      "shortName": "RegisterDelayedListenerVariant",
+      "return": {
+        "type": "handle:redCallbackObject",
+        "flags": 64
+      },
+      "index": 11437,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamebbScriptID_Variant",
+          "name": "id",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "object",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "func",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "fireIfValueExist",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterDelayedListenerVector2",
+      "shortName": "RegisterDelayedListenerVector2",
+      "return": {
+        "type": "handle:redCallbackObject",
+        "flags": 64
+      },
+      "index": 11413,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamebbScriptID_Vector2",
+          "name": "id",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "object",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "func",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "fireIfValueExist",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterDelayedListenerVector4",
+      "shortName": "RegisterDelayedListenerVector4",
+      "return": {
+        "type": "handle:redCallbackObject",
+        "flags": 64
+      },
+      "index": 11419,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamebbScriptID_Vector4",
+          "name": "id",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "object",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "func",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "fireIfValueExist",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterEntity",
+      "shortName": "RegisterEntity",
+      "return": {
+        "type": "Uint32",
+        "flags": 64
+      },
+      "index": 11441,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamebbScriptID",
+          "name": "id",
+          "flags": 128
+        },
+        {
+          "type": "ScriptGameInstance",
+          "name": "gameInstance",
+          "flags": 128
+        },
+        {
+          "type": "entEntityID",
+          "name": "entityID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterListenerBool",
+      "shortName": "RegisterListenerBool",
+      "return": {
+        "type": "handle:redCallbackObject",
+        "flags": 64
+      },
+      "index": 11375,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamebbScriptID_Bool",
+          "name": "id",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "object",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "func",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "fireIfValueExist",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterListenerEntityID",
+      "shortName": "RegisterListenerEntityID",
+      "return": {
+        "type": "handle:redCallbackObject",
+        "flags": 64
+      },
+      "index": 11429,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamebbScriptID_EntityID",
+          "name": "id",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "object",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "func",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "fireIfValueExist",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterListenerFloat",
+      "shortName": "RegisterListenerFloat",
+      "return": {
+        "type": "handle:redCallbackObject",
+        "flags": 64
+      },
+      "index": 11393,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamebbScriptID_Float",
+          "name": "id",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "object",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "func",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "fireIfValueExist",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterListenerInt",
+      "shortName": "RegisterListenerInt",
+      "return": {
+        "type": "handle:redCallbackObject",
+        "flags": 64
+      },
+      "index": 11381,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamebbScriptID_Int32",
+          "name": "id",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "object",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "func",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "fireIfValueExist",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterListenerName",
+      "shortName": "RegisterListenerName",
+      "return": {
+        "type": "handle:redCallbackObject",
+        "flags": 64
+      },
+      "index": 11405,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamebbScriptID_CName",
+          "name": "id",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "object",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "func",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "fireIfValueExist",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterListenerQuat",
+      "shortName": "RegisterListenerQuat",
+      "return": {
+        "type": "handle:redCallbackObject",
+        "flags": 64
+      },
+      "index": 11423,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamebbScriptID_Quaternion",
+          "name": "id",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "object",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "func",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "fireIfValueExist",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterListenerString",
+      "shortName": "RegisterListenerString",
+      "return": {
+        "type": "handle:redCallbackObject",
+        "flags": 64
+      },
+      "index": 11399,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamebbScriptID_String",
+          "name": "id",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "object",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "func",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "fireIfValueExist",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterListenerUint",
+      "shortName": "RegisterListenerUint",
+      "return": {
+        "type": "handle:redCallbackObject",
+        "flags": 64
+      },
+      "index": 11387,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamebbScriptID_Uint32",
+          "name": "id",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "object",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "func",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "fireIfValueExist",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterListenerVariant",
+      "shortName": "RegisterListenerVariant",
+      "return": {
+        "type": "handle:redCallbackObject",
+        "flags": 64
+      },
+      "index": 11435,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamebbScriptID_Variant",
+          "name": "tag",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "object",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "func",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "fireIfValueExist",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterListenerVector2",
+      "shortName": "RegisterListenerVector2",
+      "return": {
+        "type": "handle:redCallbackObject",
+        "flags": 64
+      },
+      "index": 11411,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamebbScriptID_Vector2",
+          "name": "id",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "object",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "func",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "fireIfValueExist",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterListenerVector4",
+      "shortName": "RegisterListenerVector4",
+      "return": {
+        "type": "handle:redCallbackObject",
+        "flags": 64
+      },
+      "index": 11417,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamebbScriptID_Vector4",
+          "name": "id",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "object",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "func",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "fireIfValueExist",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "SetBool",
+      "shortName": "SetBool",
+      "index": 11373,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamebbScriptID_Bool",
+          "name": "id",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "value",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "forceFire",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "SetEntityID",
+      "shortName": "SetEntityID",
+      "index": 11427,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamebbScriptID_EntityID",
+          "name": "id",
+          "flags": 128
+        },
+        {
+          "type": "entEntityID",
+          "name": "value",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "forceFire",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "SetFloat",
+      "shortName": "SetFloat",
+      "index": 11391,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamebbScriptID_Float",
+          "name": "id",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "value",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "forceFire",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "SetInt",
+      "shortName": "SetInt",
+      "index": 11379,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamebbScriptID_Int32",
+          "name": "id",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "value",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "forceFire",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "SetName",
+      "shortName": "SetName",
+      "index": 11403,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamebbScriptID_CName",
+          "name": "id",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "value",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "forceFire",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "SetQuat",
+      "shortName": "SetQuat",
+      "index": 11421,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamebbScriptID_Quaternion",
+          "name": "id",
+          "flags": 128
+        },
+        {
+          "type": "Quaternion",
+          "name": "value",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "forceFire",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "SetString",
+      "shortName": "SetString",
+      "index": 11397,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamebbScriptID_String",
+          "name": "id",
+          "flags": 128
+        },
+        {
+          "type": "String",
+          "name": "value",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "forceFire",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "SetUint",
+      "shortName": "SetUint",
+      "index": 11385,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamebbScriptID_Uint32",
+          "name": "id",
+          "flags": 128
+        },
+        {
+          "type": "Uint32",
+          "name": "value",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "forceFire",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "SetVariant",
+      "shortName": "SetVariant",
+      "index": 11433,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamebbScriptID_Variant",
+          "name": "tag",
+          "flags": 128
+        },
+        {
+          "type": "Variant",
+          "name": "value",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "forceFire",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "SetVector2",
+      "shortName": "SetVector2",
+      "index": 11409,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamebbScriptID_Vector2",
+          "name": "id",
+          "flags": 128
+        },
+        {
+          "type": "Vector2",
+          "name": "value",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "forceFire",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "SetVector4",
+      "shortName": "SetVector4",
+      "index": 11415,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamebbScriptID_Vector4",
+          "name": "id",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "value",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "forceFire",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "Signal",
+      "shortName": "Signal",
+      "index": 11439,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "gamebbScriptID",
+          "name": "id",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SignalBool",
+      "shortName": "SignalBool",
+      "index": 11374,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamebbScriptID_Bool",
+          "name": "id",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SignalEntityID",
+      "shortName": "SignalEntityID",
+      "index": 11428,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamebbScriptID_EntityID",
+          "name": "id",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SignalFloat",
+      "shortName": "SignalFloat",
+      "index": 11392,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamebbScriptID_Float",
+          "name": "id",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SignalInt",
+      "shortName": "SignalInt",
+      "index": 11380,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamebbScriptID_Int32",
+          "name": "id",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SignalName",
+      "shortName": "SignalName",
+      "index": 11404,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamebbScriptID_CName",
+          "name": "id",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SignalQuat",
+      "shortName": "SignalQuat",
+      "index": 11422,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamebbScriptID_Quaternion",
+          "name": "id",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SignalString",
+      "shortName": "SignalString",
+      "index": 11398,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamebbScriptID_String",
+          "name": "id",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SignalUint",
+      "shortName": "SignalUint",
+      "index": 11386,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamebbScriptID_Uint32",
+          "name": "id",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SignalVariant",
+      "shortName": "SignalVariant",
+      "index": 11434,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamebbScriptID_Variant",
+          "name": "id",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SignalVector2",
+      "shortName": "SignalVector2",
+      "index": 11410,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamebbScriptID_Vector2",
+          "name": "id",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SignalVector4",
+      "shortName": "SignalVector4",
+      "index": 11416,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamebbScriptID_Vector4",
+          "name": "id",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UnregisterDelayedListener",
+      "shortName": "UnregisterDelayedListener",
+      "index": 11443,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamebbScriptID",
+          "name": "id",
+          "flags": 128
+        },
+        {
+          "type": "handle:redCallbackObject",
+          "name": "callbackHandle",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "UnregisterEntity",
+      "shortName": "UnregisterEntity",
+      "index": 11442,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamebbScriptID",
+          "name": "id",
+          "flags": 128
+        },
+        {
+          "type": "handle:redCallbackObject",
+          "name": "callbackHandle",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "UnregisterListenerBool",
+      "shortName": "UnregisterListenerBool",
+      "index": 11376,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamebbScriptID_Bool",
+          "name": "id",
+          "flags": 128
+        },
+        {
+          "type": "handle:redCallbackObject",
+          "name": "callbackHandle",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "UnregisterListenerEntityID",
+      "shortName": "UnregisterListenerEntityID",
+      "index": 11430,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamebbScriptID_EntityID",
+          "name": "id",
+          "flags": 128
+        },
+        {
+          "type": "handle:redCallbackObject",
+          "name": "callbackHandle",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "UnregisterListenerFloat",
+      "shortName": "UnregisterListenerFloat",
+      "index": 11394,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamebbScriptID_Float",
+          "name": "id",
+          "flags": 128
+        },
+        {
+          "type": "handle:redCallbackObject",
+          "name": "callbackHandle",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "UnregisterListenerInt",
+      "shortName": "UnregisterListenerInt",
+      "index": 11382,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamebbScriptID_Int32",
+          "name": "id",
+          "flags": 128
+        },
+        {
+          "type": "handle:redCallbackObject",
+          "name": "callbackHandle",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "UnregisterListenerName",
+      "shortName": "UnregisterListenerName",
+      "index": 11406,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamebbScriptID_CName",
+          "name": "id",
+          "flags": 128
+        },
+        {
+          "type": "handle:redCallbackObject",
+          "name": "callbackHandle",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "UnregisterListenerQuat",
+      "shortName": "UnregisterListenerQuat",
+      "index": 11424,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamebbScriptID_Quaternion",
+          "name": "id",
+          "flags": 128
+        },
+        {
+          "type": "handle:redCallbackObject",
+          "name": "callbackHandle",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "UnregisterListenerString",
+      "shortName": "UnregisterListenerString",
+      "index": 11400,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamebbScriptID_String",
+          "name": "id",
+          "flags": 128
+        },
+        {
+          "type": "handle:redCallbackObject",
+          "name": "callbackHandle",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "UnregisterListenerUint",
+      "shortName": "UnregisterListenerUint",
+      "index": 11388,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamebbScriptID_Uint32",
+          "name": "id",
+          "flags": 128
+        },
+        {
+          "type": "handle:redCallbackObject",
+          "name": "callbackHandle",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "UnregisterListenerVariant",
+      "shortName": "UnregisterListenerVariant",
+      "index": 11436,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamebbScriptID_Variant",
+          "name": "id",
+          "flags": 128
+        },
+        {
+          "type": "handle:redCallbackObject",
+          "name": "callbackHandle",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "UnregisterListenerVector2",
+      "shortName": "UnregisterListenerVector2",
+      "index": 11412,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamebbScriptID_Vector2",
+          "name": "id",
+          "flags": 128
+        },
+        {
+          "type": "handle:redCallbackObject",
+          "name": "callbackHandle",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "UnregisterListenerVector4",
+      "shortName": "UnregisterListenerVector4",
+      "index": 11418,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamebbScriptID_Vector4",
+          "name": "id",
+          "flags": 128
+        },
+        {
+          "type": "handle:redCallbackObject",
+          "name": "callbackHandle",
+          "flags": 640
+        }
+      ]
+    }
+  ]
+}

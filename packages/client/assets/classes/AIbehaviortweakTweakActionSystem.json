@@ -1,0 +1,380 @@
+{
+  "parent": "gameIGameSystem",
+  "name": "AIbehaviortweakTweakActionSystem",
+  "flags": 2,
+  "funcs": [
+    {
+      "fullName": "ActivationCheck",
+      "shortName": "ActivationCheck",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 14014,
+      "flags": 1,
+      "params": [
+        {
+          "type": "script_ref:AIbehaviorScriptExecutionContext",
+          "name": "ctx",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "actionRecordId",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Debug_OnActionEnded",
+      "shortName": "Debug_OnActionEnded",
+      "return": {
+        "type": "Uint32",
+        "flags": 64
+      },
+      "index": 14020,
+      "flags": 1,
+      "params": [
+        {
+          "type": "script_ref:AIbehaviorScriptExecutionContext",
+          "name": "ctx",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "recordId",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Debug_OnActionNextPhase",
+      "shortName": "Debug_OnActionNextPhase",
+      "return": {
+        "type": "Uint32",
+        "flags": 64
+      },
+      "index": 14022,
+      "flags": 1,
+      "params": [
+        {
+          "type": "script_ref:AIbehaviorScriptExecutionContext",
+          "name": "ctx",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "recordId",
+          "flags": 128
+        },
+        {
+          "type": "Uint32",
+          "name": "phase",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Debug_OnActionPhaseStarted",
+      "shortName": "Debug_OnActionPhaseStarted",
+      "return": {
+        "type": "Uint32",
+        "flags": 64
+      },
+      "index": 14021,
+      "flags": 1,
+      "params": [
+        {
+          "type": "script_ref:AIbehaviorScriptExecutionContext",
+          "name": "ctx",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "recordId",
+          "flags": 128
+        },
+        {
+          "type": "Uint32",
+          "name": "phase",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Debug_OnActionRepeatPhase",
+      "shortName": "Debug_OnActionRepeatPhase",
+      "return": {
+        "type": "Uint32",
+        "flags": 64
+      },
+      "index": 14023,
+      "flags": 1,
+      "params": [
+        {
+          "type": "script_ref:AIbehaviorScriptExecutionContext",
+          "name": "ctx",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "recordId",
+          "flags": 128
+        },
+        {
+          "type": "Uint32",
+          "name": "phase",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Debug_OnActionStarted",
+      "shortName": "Debug_OnActionStarted",
+      "return": {
+        "type": "Uint32",
+        "flags": 64
+      },
+      "index": 14019,
+      "flags": 1,
+      "params": [
+        {
+          "type": "script_ref:AIbehaviorScriptExecutionContext",
+          "name": "ctx",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "recordId",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "baseId",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "compositeId",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "EvaluateActionCondition",
+      "shortName": "EvaluateActionCondition",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 14010,
+      "flags": 1,
+      "params": [
+        {
+          "type": "script_ref:AIbehaviorScriptExecutionContext",
+          "name": "ctx",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamedataAIActionCondition_Record",
+          "name": "record",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "EvaluateActionTargetAll",
+      "shortName": "EvaluateActionTargetAll",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 14012,
+      "flags": 1,
+      "params": [
+        {
+          "type": "script_ref:AIbehaviorScriptExecutionContext",
+          "name": "ctx",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "recordId",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "predictionTime",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameObject",
+          "name": "object",
+          "flags": 640
+        },
+        {
+          "type": "Vector4",
+          "name": "position",
+          "flags": 640
+        },
+        {
+          "type": "Uint64",
+          "name": "coverId",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "EvaluateActionTargetObject",
+      "shortName": "EvaluateActionTargetObject",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 14011,
+      "flags": 1,
+      "params": [
+        {
+          "type": "script_ref:AIbehaviorScriptExecutionContext",
+          "name": "ctx",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "recordId",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameObject",
+          "name": "object",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "ForceDirty",
+      "shortName": "ForceDirty",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 14013,
+      "flags": 1,
+      "params": [
+        {
+          "type": "script_ref:AIbehaviorScriptExecutionContext",
+          "name": "ctx",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "recordId",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetTweakCompositeAlternativesLimit",
+      "shortName": "GetTweakCompositeAlternativesLimit",
+      "return": {
+        "type": "Uint32",
+        "flags": 64
+      },
+      "index": 14017,
+      "flags": 1,
+      "params": [
+        {
+          "type": "script_ref:AIbehaviorScriptExecutionContext",
+          "name": "ctx",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsTweakCompositeAlternativesLimitEnabled",
+      "shortName": "IsTweakCompositeAlternativesLimitEnabled",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 14018,
+      "flags": 1,
+      "params": [
+        {
+          "type": "script_ref:AIbehaviorScriptExecutionContext",
+          "name": "ctx",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "playerInCombat",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "NextPhaseCheck",
+      "shortName": "NextPhaseCheck",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 14015,
+      "flags": 1,
+      "params": [
+        {
+          "type": "script_ref:AIbehaviorScriptExecutionContext",
+          "name": "ctx",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "actionRecordId",
+          "flags": 128
+        },
+        {
+          "type": "Uint32",
+          "name": "phase",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RepeatPhaseCheck",
+      "shortName": "RepeatPhaseCheck",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 14016,
+      "flags": 1,
+      "params": [
+        {
+          "type": "script_ref:AIbehaviorScriptExecutionContext",
+          "name": "ctx",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "actionRecordId",
+          "flags": 128
+        },
+        {
+          "type": "Uint32",
+          "name": "phase",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

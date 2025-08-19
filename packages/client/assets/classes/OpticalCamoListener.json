@@ -1,0 +1,54 @@
+{
+  "parent": "gameScriptStatusEffectListener",
+  "name": "OpticalCamoListener",
+  "flags": 4,
+  "props": [
+    {
+      "type": "whandle:gameuiCrosshairBaseGameController",
+      "name": "controller",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OpticalCamoListener::Create;gameuiCrosshairBaseGameController",
+      "shortName": "Create",
+      "return": {
+        "type": "handle:OpticalCamoListener",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gameuiCrosshairBaseGameController",
+          "name": "controlller",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnStatusEffectApplied;StatusEffect_Record",
+      "shortName": "OnStatusEffectApplied",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "whandle:gamedataStatusEffect_Record",
+          "name": "statusEffect",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnStatusEffectRemoved;StatusEffect_Record",
+      "shortName": "OnStatusEffectRemoved",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "whandle:gamedataStatusEffect_Record",
+          "name": "statusEffect",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

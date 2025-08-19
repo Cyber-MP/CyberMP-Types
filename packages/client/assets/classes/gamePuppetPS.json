@@ -1,0 +1,177 @@
+{
+  "parent": "gameObjectPS",
+  "name": "gamePuppetPS",
+  "flags": 1026,
+  "props": [
+    {
+      "type": "CName",
+      "name": "gender",
+      "flags": 6895452160
+    },
+    {
+      "type": "Bool",
+      "name": "wasQuickHacked",
+      "flags": 6895452160
+    },
+    {
+      "type": "Bool",
+      "name": "hasQuickHackBegunUpload",
+      "flags": 6895452160
+    },
+    {
+      "type": "Bool",
+      "name": "hasAlternativeName",
+      "flags": 6895452160
+    },
+    {
+      "type": "Bool",
+      "name": "isCrouch",
+      "flags": 6895452160
+    },
+    {
+      "type": "Bool",
+      "name": "allowVehicleCollisionRagdoll",
+      "flags": 6895452160
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "GetGender",
+      "shortName": "GetGender",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "index": 11739,
+      "flags": 8193
+    },
+    {
+      "fullName": "GetTpp",
+      "shortName": "GetTpp",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 11749,
+      "flags": 1
+    },
+    {
+      "fullName": "HasAlternativeName",
+      "shortName": "HasAlternativeName",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 11746,
+      "flags": 1
+    },
+    {
+      "fullName": "HasNPCTriggeredCombatInSecuritySystem",
+      "shortName": "HasNPCTriggeredCombatInSecuritySystem",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 11744,
+      "flags": 8193
+    },
+    {
+      "fullName": "HasQuickHackBegunUpload",
+      "shortName": "HasQuickHackBegunUpload",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 11742,
+      "flags": 8193
+    },
+    {
+      "fullName": "IsCrouch",
+      "shortName": "IsCrouch",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 11748,
+      "flags": 1
+    },
+    {
+      "fullName": "SetCrouch",
+      "shortName": "SetCrouch",
+      "index": 11747,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "set",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetHasNPCTriggeredCombatInSecuritySystem",
+      "shortName": "SetHasNPCTriggeredCombatInSecuritySystem",
+      "index": 11745,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "set",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetHasQuickHackBegunUpload",
+      "shortName": "SetHasQuickHackBegunUpload",
+      "index": 11743,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "newValue",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetWasQuickHacked",
+      "shortName": "SetWasQuickHacked",
+      "index": 11741,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "newValue",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "WasQuickHacked",
+      "shortName": "WasQuickHacked",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 11740,
+      "flags": 8193
+    },
+    {
+      "fullName": "OnNotifiedSecSysAboutCombat;NotifiedSecSysAboutCombat",
+      "shortName": "OnNotifiedSecSysAboutCombat",
+      "return": {
+        "type": "EntityNotificationType",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:NotifiedSecSysAboutCombat",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

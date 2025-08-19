@@ -1,0 +1,82 @@
+{
+  "parent": "redEvent",
+  "name": "gamedeviceAction",
+  "flags": 66,
+  "props": [
+    {
+      "type": "CName",
+      "name": "actionName",
+      "flags": 6627016704
+    },
+    {
+      "type": "Int32",
+      "name": "clearanceLevel",
+      "flags": 6627016704
+    },
+    {
+      "type": "String",
+      "name": "localizedObjectName",
+      "flags": 6627016704
+    },
+    {
+      "type": "Int32",
+      "name": "paymentQuantity",
+      "flags": 6627016704
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "GetCurrentDisplayString",
+      "shortName": "GetCurrentDisplayString",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "index": 11936,
+      "flags": 8193
+    },
+    {
+      "fullName": "GetDeviceClassName",
+      "shortName": "GetDeviceClassName",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "index": 11935,
+      "flags": 1
+    },
+    {
+      "fullName": "GetPersistentID",
+      "shortName": "GetPersistentID",
+      "return": {
+        "type": "gamePersistentID",
+        "flags": 64
+      },
+      "index": 11934,
+      "flags": 1
+    },
+    {
+      "fullName": "GetProperties",
+      "shortName": "GetProperties",
+      "return": {
+        "type": "array:handle:gamedeviceActionProperty",
+        "flags": 64
+      },
+      "index": 11933,
+      "flags": 1
+    },
+    {
+      "fullName": "SetUp",
+      "shortName": "SetUp",
+      "index": 11932,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gamePersistentState",
+          "name": "ps",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

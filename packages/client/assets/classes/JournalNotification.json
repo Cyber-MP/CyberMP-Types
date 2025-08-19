@@ -1,0 +1,93 @@
+{
+  "parent": "GenericNotificationController",
+  "name": "JournalNotification",
+  "flags": 4,
+  "props": [
+    {
+      "type": "whandle:gameIBlackboard",
+      "name": "interactionsBlackboard",
+      "flags": 4297195552
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "bbListenerId",
+      "flags": 4431413280
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "animProxy",
+      "flags": 4431413280
+    },
+    {
+      "type": "handle:gameuiQuestUpdateNotificationViewData",
+      "name": "questNotificationData",
+      "flags": 4431413280
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnInteractionUpdate",
+      "shortName": "OnInteractionUpdate",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnNotificationPaused",
+      "shortName": "OnNotificationPaused",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnNotificationResumed",
+      "shortName": "OnNotificationResumed",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "SetNotificationData",
+      "shortName": "SetNotificationData",
+      "flags": 34304,
+      "params": [
+        {
+          "type": "handle:gameuiGenericNotificationViewData",
+          "name": "notificationData",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

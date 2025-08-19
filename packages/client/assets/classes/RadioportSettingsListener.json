@@ -1,0 +1,125 @@
+{
+  "parent": "userSettingsVarListener",
+  "name": "RadioportSettingsListener",
+  "flags": 4,
+  "props": [
+    {
+      "type": "whandle:PlayerPuppet",
+      "name": "player",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:userSettingsUserSettings",
+      "name": "settings",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:userSettingsGroup",
+      "name": "settingsGroup",
+      "flags": 4431347744
+    },
+    {
+      "type": "Bool",
+      "name": "syncToCarRadio",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "cycleOnButtonPress",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "saveStation",
+      "flags": 4297130016
+    },
+    {
+      "type": "CName",
+      "name": "syncToCarRadioName",
+      "flags": 4297130016
+    },
+    {
+      "type": "CName",
+      "name": "cycleOnButtonPressName",
+      "flags": 4297130016
+    },
+    {
+      "type": "CName",
+      "name": "saveStationName",
+      "flags": 4297130016
+    },
+    {
+      "type": "CName",
+      "name": "radioportSettingsPath",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "GetCycleButtonPress;",
+      "shortName": "GetCycleButtonPress",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetSaveStation;",
+      "shortName": "GetSaveStation",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetSyncToCarRadio;",
+      "shortName": "GetSyncToCarRadio",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "Initialize;PlayerPuppet",
+      "shortName": "Initialize",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "whandle:PlayerPuppet",
+          "name": "player",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnVarModified",
+      "shortName": "OnVarModified",
+      "flags": 34304,
+      "params": [
+        {
+          "type": "CName",
+          "name": "groupPath",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "varName",
+          "flags": 128
+        },
+        {
+          "type": "InGameConfigVarType",
+          "name": "varType",
+          "flags": 128
+        },
+        {
+          "type": "InGameConfigChangeReason",
+          "name": "reason",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

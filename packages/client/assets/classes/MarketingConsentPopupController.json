@@ -1,0 +1,416 @@
+{
+  "parent": "gameuiWidgetGameController",
+  "name": "MarketingConsentPopupController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkWidgetReference",
+      "name": "titleOneRef",
+      "group": "Consent",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "titleTwoRef",
+      "group": "Consent",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "messageIntroOneRef",
+      "group": "Consent",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "messageIntroTwoRef",
+      "group": "Consent",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "ageConsentRef",
+      "group": "Consent",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "qrCodeContainerRef",
+      "group": "Consent",
+      "flags": 4297130017
+    },
+    {
+      "type": "Bool",
+      "name": "questionOne_State",
+      "group": "Question One",
+      "flags": 4297130017
+    },
+    {
+      "type": "Bool",
+      "name": "questionTwo_State",
+      "group": "Question Two",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "questionOne_ContainerRef",
+      "group": "Question One",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "questionTwo_ContainerRef",
+      "group": "Question Two",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "questionOne_ToggleRef",
+      "group": "Question One",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "questionOne_ToggleFillRef",
+      "group": "Question One",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "questionTwo_ToggleRef",
+      "group": "Question Two",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "questionTwo_ToggleFillRef",
+      "group": "Question Two",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "hyperlinkButtonRef",
+      "group": "Buttons",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "applyButtonRef",
+      "group": "Buttons",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "declineButtonRef",
+      "group": "Buttons",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "aceptAllButtonRef",
+      "group": "Buttons",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "declineAllButtonRef",
+      "group": "Buttons",
+      "flags": 4297130017
+    },
+    {
+      "type": "CName",
+      "name": "introAnimationName",
+      "group": "Animations",
+      "flags": 4297130017
+    },
+    {
+      "type": "CName",
+      "name": "aceptAllAnimationName",
+      "group": "Animations",
+      "flags": 4297130017
+    },
+    {
+      "type": "CName",
+      "name": "declineAllAnimationName",
+      "group": "Animations",
+      "flags": 4297130017
+    },
+    {
+      "type": "handle:MarketingConsentPopupData",
+      "name": "data",
+      "flags": 4431347744
+    },
+    {
+      "type": "Bool",
+      "name": "showBothQuestions",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:inkISystemRequestsHandler",
+      "name": "requestHandler",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "introAnimProxy",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "confirmationAnimProxy",
+      "flags": 4431347744
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnConfirmationFinished",
+      "shortName": "OnConfirmationFinished",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkanimProxy",
+          "name": "proxy",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnHoverOutQuestionOne",
+      "shortName": "OnHoverOutQuestionOne",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnHoverOutQuestionTwo",
+      "shortName": "OnHoverOutQuestionTwo",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnOutroAnimationFinished",
+      "shortName": "OnOutroAnimationFinished",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkanimProxy",
+          "name": "proxy",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPressAceptAll",
+      "shortName": "OnPressAceptAll",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPressApply",
+      "shortName": "OnPressApply",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPressDecline",
+      "shortName": "OnPressDecline",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPressDeclineAll",
+      "shortName": "OnPressDeclineAll",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPressHyperlink",
+      "shortName": "OnPressHyperlink",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPressQuestionOne",
+      "shortName": "OnPressQuestionOne",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPressQuestionTwo",
+      "shortName": "OnPressQuestionTwo",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRelease",
+      "shortName": "OnRelease",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "AceptAllClose;",
+      "shortName": "AceptAllClose",
+      "flags": 32900
+    },
+    {
+      "fullName": "ApplyClose;",
+      "shortName": "ApplyClose",
+      "flags": 32900
+    },
+    {
+      "fullName": "Close;",
+      "shortName": "Close",
+      "flags": 32900
+    },
+    {
+      "fullName": "DeclineAllClose;",
+      "shortName": "DeclineAllClose",
+      "flags": 32900
+    },
+    {
+      "fullName": "DeclineClose;",
+      "shortName": "DeclineClose",
+      "flags": 32900
+    },
+    {
+      "fullName": "SendResults;",
+      "shortName": "SendResults",
+      "flags": 32900
+    },
+    {
+      "fullName": "UpdateToggleOne;",
+      "shortName": "UpdateToggleOne",
+      "flags": 32900
+    },
+    {
+      "fullName": "UpdateToggleTwo;",
+      "shortName": "UpdateToggleTwo",
+      "flags": 32900
+    }
+  ]
+}

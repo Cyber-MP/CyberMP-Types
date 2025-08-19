@@ -1,0 +1,397 @@
+{
+  "parent": "gameuiWidgetGameController",
+  "name": "ComputerYaibaShowroomController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "CName",
+      "name": "orderedFact",
+      "group": "Settings",
+      "flags": 4297130017
+    },
+    {
+      "type": "CName",
+      "name": "toBuyPageAnim",
+      "group": "Settings",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "modelText",
+      "group": "Webpage",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "homePage",
+      "group": "Webpage",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "buyButton",
+      "group": "Webpage",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "buyPage",
+      "group": "Webpage",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "playerBalanceText",
+      "group": "Webpage",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "detailsCanvas",
+      "group": "Webpage",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "speedometer",
+      "group": "Webpage",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "orderButton",
+      "group": "Offer",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "backButton",
+      "group": "Offer",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "wheelCoverCheckBox",
+      "group": "Check Box",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "wheelRimsCheckBox",
+      "group": "Check Box",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "brandingCheckBox",
+      "group": "Check Box",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "backRestCheckBox",
+      "group": "Check Box",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "wheelCoverPreview",
+      "group": "Preview",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "wheelRimsPreview",
+      "group": "Preview",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "brandingPreview",
+      "group": "Preview",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "backRestPreview",
+      "group": "Preview",
+      "flags": 4297130017
+    },
+    {
+      "type": "handle:gameInventoryScriptListener",
+      "name": "inventoryListener",
+      "flags": 4431347744
+    },
+    {
+      "type": "whandle:YaibaButton",
+      "name": "orderButtonController",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:YaibaButton",
+      "name": "backButtonController",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:CheckYaibaOption",
+      "name": "wheelCoverCheckController",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:CheckYaibaOption",
+      "name": "wheelRimsCheckController",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:CheckYaibaOption",
+      "name": "brandingCheckController",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:CheckYaibaOption",
+      "name": "backRestCheckController",
+      "flags": 4297130016
+    },
+    {
+      "type": "CName",
+      "name": "wheelCoverFact",
+      "flags": 4297130016
+    },
+    {
+      "type": "CName",
+      "name": "WheelRimsFact",
+      "flags": 4297130016
+    },
+    {
+      "type": "CName",
+      "name": "BrandingFact",
+      "flags": 4297130016
+    },
+    {
+      "type": "CName",
+      "name": "BackRestFact",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isAnimated",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:userSettingsUserSettings",
+      "name": "settings",
+      "flags": 4431347744
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnAnimFinished",
+      "shortName": "OnAnimFinished",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkanimProxy",
+          "name": "proxy",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnBackRelease",
+      "shortName": "OnBackRelease",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnCheckChanged",
+      "shortName": "OnCheckChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "whandle:inkWidget",
+          "name": "checkBox",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnOrderRelease",
+      "shortName": "OnOrderRelease",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnReleaseBuyButton",
+      "shortName": "OnReleaseBuyButton",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CheckAvailability;",
+      "shortName": "CheckAvailability",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "GetGame;",
+      "shortName": "GetGame",
+      "return": {
+        "type": "ScriptGameInstance",
+        "flags": 64
+      },
+      "flags": 33028
+    },
+    {
+      "fullName": "GetPlayerMoney;",
+      "shortName": "GetPlayerMoney",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "InitCheckBox;inkWidgetRefBoolinkWidgetCName",
+      "shortName": "InitCheckBox",
+      "return": {
+        "type": "whandle:CheckYaibaOption",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "checkBox",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "isEnabled",
+          "flags": 128
+        },
+        {
+          "type": "whandle:inkWidget",
+          "name": "preview",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "fact",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnOrdered;",
+      "shortName": "OnOrdered",
+      "flags": 32900
+    },
+    {
+      "fullName": "RefreshModelText;",
+      "shortName": "RefreshModelText",
+      "flags": 32900
+    },
+    {
+      "fullName": "RemovePlayerMoney;Int32",
+      "shortName": "RemovePlayerMoney",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "amount",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetFact;CNameInt32",
+      "shortName": "SetFact",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "CName",
+          "name": "factName",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "factCount",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ShowNotification;",
+      "shortName": "ShowNotification",
+      "flags": 32900
+    },
+    {
+      "fullName": "SwitchToBuyPage;",
+      "shortName": "SwitchToBuyPage",
+      "flags": 32900
+    },
+    {
+      "fullName": "SwitchToHomePage;",
+      "shortName": "SwitchToHomePage",
+      "flags": 32900
+    }
+  ]
+}

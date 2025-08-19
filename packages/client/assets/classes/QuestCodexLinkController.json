@@ -1,0 +1,65 @@
+{
+  "parent": "BaseCodexLinkController",
+  "name": "QuestCodexLinkController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkWidgetReference",
+      "name": "linkLabelContainer",
+      "flags": 4297195553
+    },
+    {
+      "type": "whandle:gameJournalEntry",
+      "name": "journalEntry",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "Activate;",
+      "shortName": "Activate",
+      "flags": 32896
+    },
+    {
+      "fullName": "Setup;JournalEntryJournalEntry",
+      "shortName": "Setup",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "whandle:gameJournalEntry",
+          "name": "journalEntry",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameJournalEntry",
+          "name": "journalEntryReplacer",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "SetupCodexLink;JournalCodexEntry",
+      "shortName": "SetupCodexLink",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "whandle:gameJournalCodexEntry",
+          "name": "codexEntry",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetupImageLink;JournalImageEntry",
+      "shortName": "SetupImageLink",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "whandle:gameJournalImageEntry",
+          "name": "imageEntry",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

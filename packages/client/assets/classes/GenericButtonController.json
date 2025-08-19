@@ -1,0 +1,153 @@
+{
+  "parent": "inkWidgetLogicController",
+  "name": "GenericButtonController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkTextWidgetReference",
+      "name": "label",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "frameHovered",
+      "flags": 4297130017
+    },
+    {
+      "type": "Bool",
+      "name": "itemHovered",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "enabled",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "GenericButtonController::ApplyDisabledLayout;inkTextRefinkWidget",
+      "shortName": "ApplyDisabledLayout",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "inkTextWidgetReference",
+          "name": "label",
+          "flags": 128
+        },
+        {
+          "type": "handle:inkWidget",
+          "name": "root",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GenericButtonController::ApplyEnabledLayout;inkTextRefinkWidget",
+      "shortName": "ApplyEnabledLayout",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "inkTextWidgetReference",
+          "name": "label",
+          "flags": 128
+        },
+        {
+          "type": "handle:inkWidget",
+          "name": "root",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnButtonHoverOut",
+      "shortName": "OnButtonHoverOut",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnButtonHoverOver",
+      "shortName": "OnButtonHoverOver",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnButtonRelease",
+      "shortName": "OnButtonRelease",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "Init;script_ref<String>",
+      "shortName": "Init",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "script_ref:String",
+          "name": "label",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateButton;script_ref<String>",
+      "shortName": "UpdateButton",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "script_ref:String",
+          "name": "label",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

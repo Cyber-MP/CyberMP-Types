@@ -1,0 +1,1850 @@
+{
+  "name": "ScriptGameInstance",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "FindEntityByID",
+      "shortName": "FindEntityByID",
+      "return": {
+        "type": "handle:entEntity",
+        "flags": 64
+      },
+      "index": 11547,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "entEntityID",
+          "name": "entityId",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "FindWaypointsByTag",
+      "shortName": "FindWaypointsByTag",
+      "index": 11541,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "tag",
+          "flags": 128
+        },
+        {
+          "type": "array:Vector4",
+          "name": "waypoints",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "GetAINavigationSystem",
+      "shortName": "GetAINavigationSystem",
+      "return": {
+        "type": "handle:AINavigationSystem",
+        "flags": 64
+      },
+      "index": 11619,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetAchievementSystem",
+      "shortName": "GetAchievementSystem",
+      "return": {
+        "type": "handle:gameAchievementSystem",
+        "flags": 64
+      },
+      "index": 11623,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetActivityLogSystem",
+      "shortName": "GetActivityLogSystem",
+      "return": {
+        "type": "handle:gameActivityLogSystem",
+        "flags": 64
+      },
+      "index": 11551,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetAnimationSystem",
+      "shortName": "GetAnimationSystem",
+      "return": {
+        "type": "handle:worldAnimationSystemScriptInterface",
+        "flags": 64
+      },
+      "index": 11552,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetAttitudeSystem",
+      "shortName": "GetAttitudeSystem",
+      "return": {
+        "type": "handle:gameCAttitudeManager",
+        "flags": 64
+      },
+      "index": 11553,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetAudioSystem",
+      "shortName": "GetAudioSystem",
+      "return": {
+        "type": "handle:gameGameAudioSystem",
+        "flags": 64
+      },
+      "index": 11554,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetAutoSaveSystem",
+      "shortName": "GetAutoSaveSystem",
+      "return": {
+        "type": "handle:gameAutoSaveSystem",
+        "flags": 64
+      },
+      "index": 11634,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetBlackboardSystem",
+      "shortName": "GetBlackboardSystem",
+      "return": {
+        "type": "handle:gameBlackboardSystem",
+        "flags": 64
+      },
+      "index": 11555,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetCameraSystem",
+      "shortName": "GetCameraSystem",
+      "return": {
+        "type": "handle:gameCameraSystem",
+        "flags": 64
+      },
+      "index": 11556,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetCharacterCustomizationSystem",
+      "shortName": "GetCharacterCustomizationSystem",
+      "return": {
+        "type": "handle:gameuiICharacterCustomizationSystem",
+        "flags": 64
+      },
+      "index": 11629,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetCombatQueriesSystem",
+      "shortName": "GetCombatQueriesSystem",
+      "return": {
+        "type": "handle:gameICombatQueriesSystem",
+        "flags": 64
+      },
+      "index": 11607,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetCommunitySystem",
+      "shortName": "GetCommunitySystem",
+      "return": {
+        "type": "handle:gameCommunitySystem",
+        "flags": 64
+      },
+      "index": 11557,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetCompanionSystem",
+      "shortName": "GetCompanionSystem",
+      "return": {
+        "type": "handle:gameCompanionSystem",
+        "flags": 64
+      },
+      "index": 11558,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetContainerManager",
+      "shortName": "GetContainerManager",
+      "return": {
+        "type": "handle:gameContainerManager",
+        "flags": 64
+      },
+      "index": 11645,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetCooldownSystem",
+      "shortName": "GetCooldownSystem",
+      "return": {
+        "type": "handle:gameICooldownSystem",
+        "flags": 64
+      },
+      "index": 11614,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetCoverManager",
+      "shortName": "GetCoverManager",
+      "return": {
+        "type": "handle:AISmartCoverManager",
+        "flags": 64
+      },
+      "index": 11563,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetDamageSystem",
+      "shortName": "GetDamageSystem",
+      "return": {
+        "type": "handle:gameDamageSystem",
+        "flags": 64
+      },
+      "index": 11589,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetDebugCheatsSystem",
+      "shortName": "GetDebugCheatsSystem",
+      "return": {
+        "type": "handle:gameDebugCheatsSystem",
+        "flags": 64
+      },
+      "index": 11606,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetDebugDrawHistorySystem",
+      "shortName": "GetDebugDrawHistorySystem",
+      "return": {
+        "type": "handle:gameIDebugDrawHistorySystem",
+        "flags": 64
+      },
+      "index": 11565,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetDebugPlayerBreadcrumbs",
+      "shortName": "GetDebugPlayerBreadcrumbs",
+      "return": {
+        "type": "handle:gameDebugPlayerBreadcrumbs",
+        "flags": 64
+      },
+      "index": 11615,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetDebugVisualizerSystem",
+      "shortName": "GetDebugVisualizerSystem",
+      "return": {
+        "type": "handle:gameDebugVisualizerSystem",
+        "flags": 64
+      },
+      "index": 11564,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetDelaySystem",
+      "shortName": "GetDelaySystem",
+      "return": {
+        "type": "handle:gameDelaySystem",
+        "flags": 64
+      },
+      "index": 11566,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetDeviceSystem",
+      "shortName": "GetDeviceSystem",
+      "return": {
+        "type": "handle:gameDeviceSystem",
+        "flags": 64
+      },
+      "index": 11567,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetDynamicSpawnSystem",
+      "shortName": "GetDynamicSpawnSystem",
+      "return": {
+        "type": "handle:gameDynamicSpawnSystem",
+        "flags": 64
+      },
+      "index": 11560,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetEffectorSystem",
+      "shortName": "GetEffectorSystem",
+      "return": {
+        "type": "handle:gameEffectorSystem",
+        "flags": 64
+      },
+      "index": 11588,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetEngineTime",
+      "shortName": "GetEngineTime",
+      "return": {
+        "type": "EngineTime",
+        "flags": 64
+      },
+      "index": 11543,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetEntityList",
+      "shortName": "GetEntityList",
+      "return": {
+        "type": "array:handle:entEntity",
+        "flags": 64
+      },
+      "index": 11548,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetEntitySpawnerEventsBroadcaster",
+      "shortName": "GetEntitySpawnerEventsBroadcaster",
+      "return": {
+        "type": "handle:gameEntitySpawnerEventsBroadcasterImpl",
+        "flags": 64
+      },
+      "index": 11568,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetFrameNumber",
+      "shortName": "GetFrameNumber",
+      "return": {
+        "type": "Uint64",
+        "flags": 64
+      },
+      "index": 11546,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetFxSystem",
+      "shortName": "GetFxSystem",
+      "return": {
+        "type": "handle:gameFxSystem",
+        "flags": 64
+      },
+      "index": 11599,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetGameEffectSystem",
+      "shortName": "GetGameEffectSystem",
+      "return": {
+        "type": "handle:gameEffectSystem",
+        "flags": 64
+      },
+      "index": 11569,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetGameFeatureManager",
+      "shortName": "GetGameFeatureManager",
+      "return": {
+        "type": "handle:gameGameFeatureManager",
+        "flags": 64
+      },
+      "index": 11640,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetGameRulesSystem",
+      "shortName": "GetGameRulesSystem",
+      "return": {
+        "type": "handle:gameIGameRulesSystem",
+        "flags": 64
+      },
+      "index": 11608,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetGameTagSystem",
+      "shortName": "GetGameTagSystem",
+      "return": {
+        "type": "handle:gameGameTagSystem",
+        "flags": 64
+      },
+      "index": 11609,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetGameTime",
+      "shortName": "GetGameTime",
+      "return": {
+        "type": "GameTime",
+        "flags": 64
+      },
+      "index": 11542,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetGamepadLightController",
+      "shortName": "GetGamepadLightController",
+      "return": {
+        "type": "handle:gameuiGamepadLightController",
+        "flags": 64
+      },
+      "index": 11562,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetGameplayLogicPackageSystem",
+      "shortName": "GetGameplayLogicPackageSystem",
+      "return": {
+        "type": "handle:gameGameplayLogicPackageSystem",
+        "flags": 64
+      },
+      "index": 11604,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetGlobalTVSystem",
+      "shortName": "GetGlobalTVSystem",
+      "return": {
+        "type": "handle:gameuiGlobalTvSystem",
+        "flags": 64
+      },
+      "index": 11617,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetGodModeSystem",
+      "shortName": "GetGodModeSystem",
+      "return": {
+        "type": "handle:gameGodModeSystem",
+        "flags": 64
+      },
+      "index": 11587,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetInfluenceMapSystem",
+      "shortName": "GetInfluenceMapSystem",
+      "return": {
+        "type": "handle:gameinfluenceSystem",
+        "flags": 64
+      },
+      "index": 11598,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetInteractionManager",
+      "shortName": "GetInteractionManager",
+      "return": {
+        "type": "handle:gameinteractionsCManager",
+        "flags": 64
+      },
+      "index": 11616,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetInventoryManager",
+      "shortName": "GetInventoryManager",
+      "return": {
+        "type": "handle:gameInventoryManager",
+        "flags": 64
+      },
+      "index": 11596,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetJournalManager",
+      "shortName": "GetJournalManager",
+      "return": {
+        "type": "handle:gameJournalManager",
+        "flags": 64
+      },
+      "index": 11605,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetLevelAssignmentSystem",
+      "shortName": "GetLevelAssignmentSystem",
+      "return": {
+        "type": "handle:gameLevelAssignmentSystem",
+        "flags": 64
+      },
+      "index": 11625,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetLocationManager",
+      "shortName": "GetLocationManager",
+      "return": {
+        "type": "handle:gameLocationManager",
+        "flags": 64
+      },
+      "index": 11572,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetLootManager",
+      "shortName": "GetLootManager",
+      "return": {
+        "type": "handle:gameLootManager",
+        "flags": 64
+      },
+      "index": 11571,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetMappinSystem",
+      "shortName": "GetMappinSystem",
+      "return": {
+        "type": "handle:gamemappinsMappinSystem",
+        "flags": 64
+      },
+      "index": 11573,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetMinimapSystem",
+      "shortName": "GetMinimapSystem",
+      "return": {
+        "type": "handle:gameMinimapSystem",
+        "flags": 64
+      },
+      "index": 11644,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetMountingFacility",
+      "shortName": "GetMountingFacility",
+      "return": {
+        "type": "handle:gamemountingIMountingFacility",
+        "flags": 64
+      },
+      "index": 11602,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetNavigationSystem",
+      "shortName": "GetNavigationSystem",
+      "return": {
+        "type": "handle:worldNavigationScriptInterface",
+        "flags": 64
+      },
+      "index": 11574,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetNodeTransform",
+      "shortName": "GetNodeTransform",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 11549,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "worldGlobalNodeRef",
+          "name": "nodeRef",
+          "flags": 128
+        },
+        {
+          "type": "Transform",
+          "name": "transform",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "GetObjectPoolSystem",
+      "shortName": "GetObjectPoolSystem",
+      "return": {
+        "type": "handle:gameObjectPoolSystem",
+        "flags": 64
+      },
+      "index": 11575,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetOnlineSystem",
+      "shortName": "GetOnlineSystem",
+      "return": {
+        "type": "handle:gameIOnlineSystem",
+        "flags": 64
+      },
+      "index": 11639,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetPersistencySystem",
+      "shortName": "GetPersistencySystem",
+      "return": {
+        "type": "handle:gamePersistencySystem",
+        "flags": 64
+      },
+      "index": 11576,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetPhoneManager",
+      "shortName": "GetPhoneManager",
+      "return": {
+        "type": "handle:questPhoneManager",
+        "flags": 64
+      },
+      "index": 11637,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetPhotoModeSystem",
+      "shortName": "GetPhotoModeSystem",
+      "return": {
+        "type": "handle:gamePhotoModeSystem",
+        "flags": 64
+      },
+      "index": 11627,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetPingSystem",
+      "shortName": "GetPingSystem",
+      "return": {
+        "type": "handle:gamePingSystem",
+        "flags": 64
+      },
+      "index": 11610,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetPlayerManagerSystem",
+      "shortName": "GetPlayerManagerSystem",
+      "return": {
+        "type": "handle:gameIPlayerManager",
+        "flags": 64
+      },
+      "index": 11611,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetPlayerSystem",
+      "shortName": "GetPlayerSystem",
+      "return": {
+        "type": "handle:cpPlayerSystem",
+        "flags": 64
+      },
+      "index": 11577,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetPlaythroughTime",
+      "shortName": "GetPlaythroughTime",
+      "return": {
+        "type": "EngineTime",
+        "flags": 64
+      },
+      "index": 11545,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetPoliceRadioSystem",
+      "shortName": "GetPoliceRadioSystem",
+      "return": {
+        "type": "handle:gamePoliceRadioSystem",
+        "flags": 64
+      },
+      "index": 11561,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetPrereqManager",
+      "shortName": "GetPrereqManager",
+      "return": {
+        "type": "handle:gamePrereqManager",
+        "flags": 64
+      },
+      "index": 11578,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetPreventionSpawnSystem",
+      "shortName": "GetPreventionSpawnSystem",
+      "return": {
+        "type": "handle:gamePreventionSpawnSystem",
+        "flags": 64
+      },
+      "index": 11559,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetProjectileSystem",
+      "shortName": "GetProjectileSystem",
+      "return": {
+        "type": "handle:gameProjectileSystem",
+        "flags": 64
+      },
+      "index": 11612,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetQuestsContentSystem",
+      "shortName": "GetQuestsContentSystem",
+      "return": {
+        "type": "handle:questQuestsContentSystem",
+        "flags": 64
+      },
+      "index": 11580,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetQuestsSystem",
+      "shortName": "GetQuestsSystem",
+      "return": {
+        "type": "handle:questQuestsSystem",
+        "flags": 64
+      },
+      "index": 11579,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetRacingSystem",
+      "shortName": "GetRacingSystem",
+      "return": {
+        "type": "handle:vehicleRacingSystem",
+        "flags": 64
+      },
+      "index": 11633,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetRazerChromaEffectsSystem",
+      "shortName": "GetRazerChromaEffectsSystem",
+      "return": {
+        "type": "handle:gameRazerChromaEffectsSystem",
+        "flags": 64
+      },
+      "index": 11643,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetReactionSystem",
+      "shortName": "GetReactionSystem",
+      "return": {
+        "type": "handle:AIReactionSystem",
+        "flags": 64
+      },
+      "index": 11632,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetRestrictMovementAreaManager",
+      "shortName": "GetRestrictMovementAreaManager",
+      "return": {
+        "type": "handle:AIGuardAreaManager",
+        "flags": 64
+      },
+      "index": 11600,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetRuntimeInfo",
+      "shortName": "GetRuntimeInfo",
+      "return": {
+        "type": "handle:worldRuntimeInfo",
+        "flags": 64
+      },
+      "index": 11603,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetSafeAreaManager",
+      "shortName": "GetSafeAreaManager",
+      "return": {
+        "type": "handle:AISafeAreaManager",
+        "flags": 64
+      },
+      "index": 11601,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetSceneSystem",
+      "shortName": "GetSceneSystem",
+      "return": {
+        "type": "handle:scnISceneSystem",
+        "flags": 64
+      },
+      "index": 11581,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetScriptableSystemsContainer",
+      "shortName": "GetScriptableSystemsContainer",
+      "return": {
+        "type": "handle:gameScriptableSystemsContainer",
+        "flags": 64
+      },
+      "index": 11582,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetScriptsDebugOverlaySystem",
+      "shortName": "GetScriptsDebugOverlaySystem",
+      "return": {
+        "type": "handle:gameScriptsDebugOverlaySystem",
+        "flags": 64
+      },
+      "index": 11613,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetSenseManager",
+      "shortName": "GetSenseManager",
+      "return": {
+        "type": "handle:senseCSenseManager",
+        "flags": 64
+      },
+      "index": 11620,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetSettingsSystem",
+      "shortName": "GetSettingsSystem",
+      "return": {
+        "type": "handle:userSettingsUserSettings",
+        "flags": 64
+      },
+      "index": 11628,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetSimTime",
+      "shortName": "GetSimTime",
+      "return": {
+        "type": "EngineTime",
+        "flags": 64
+      },
+      "index": 11544,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetSpatialQueriesSystem",
+      "shortName": "GetSpatialQueriesSystem",
+      "return": {
+        "type": "handle:gameSpatialQueriesSystem",
+        "flags": 64
+      },
+      "index": 11570,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetStatPoolsSystem",
+      "shortName": "GetStatPoolsSystem",
+      "return": {
+        "type": "handle:gameStatPoolsSystem",
+        "flags": 64
+      },
+      "index": 11583,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetStatsDataSystem",
+      "shortName": "GetStatsDataSystem",
+      "return": {
+        "type": "handle:gameStatsDataSystem",
+        "flags": 64
+      },
+      "index": 11585,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetStatsSystem",
+      "shortName": "GetStatsSystem",
+      "return": {
+        "type": "handle:gameStatsSystem",
+        "flags": 64
+      },
+      "index": 11584,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetStatusEffectSystem",
+      "shortName": "GetStatusEffectSystem",
+      "return": {
+        "type": "handle:gameStatusEffectSystem",
+        "flags": 64
+      },
+      "index": 11586,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetStimuliSystem",
+      "shortName": "GetStimuliSystem",
+      "return": {
+        "type": "handle:gameStimuliSystem",
+        "flags": 64
+      },
+      "index": 11636,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetSubtitleHandlerSystem",
+      "shortName": "GetSubtitleHandlerSystem",
+      "return": {
+        "type": "handle:gameuiSubtitleHandlerSystem",
+        "flags": 64
+      },
+      "index": 11618,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetTargetingSystem",
+      "shortName": "GetTargetingSystem",
+      "return": {
+        "type": "handle:gametargetingTargetingSystem",
+        "flags": 64
+      },
+      "index": 11590,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetTelemetrySystem",
+      "shortName": "GetTelemetrySystem",
+      "return": {
+        "type": "handle:gameTelemetryTelemetrySystem",
+        "flags": 64
+      },
+      "index": 11626,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetTeleportationFacility",
+      "shortName": "GetTeleportationFacility",
+      "return": {
+        "type": "handle:gameTeleportationFacility",
+        "flags": 64
+      },
+      "index": 11597,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetTimeSystem",
+      "shortName": "GetTimeSystem",
+      "return": {
+        "type": "handle:gameTimeSystem",
+        "flags": 64
+      },
+      "index": 11591,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetTrafficSystem",
+      "shortName": "GetTrafficSystem",
+      "return": {
+        "type": "handle:worldTrafficScriptInterface",
+        "flags": 64
+      },
+      "index": 11621,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetTransactionSystem",
+      "shortName": "GetTransactionSystem",
+      "return": {
+        "type": "handle:gameTransactionSystem",
+        "flags": 64
+      },
+      "index": 11592,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetTutorialManager",
+      "shortName": "GetTutorialManager",
+      "return": {
+        "type": "handle:questTutorialManager",
+        "flags": 64
+      },
+      "index": 11635,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetUIObjectsLoaderSystem",
+      "shortName": "GetUIObjectsLoaderSystem",
+      "return": {
+        "type": "handle:gameuiIUIObjectsLoaderSystem",
+        "flags": 64
+      },
+      "index": 11630,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetUISystem",
+      "shortName": "GetUISystem",
+      "return": {
+        "type": "handle:gameuiGameSystemUI",
+        "flags": 64
+      },
+      "index": 11622,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetVehicleSystem",
+      "shortName": "GetVehicleSystem",
+      "return": {
+        "type": "handle:gameVehicleSystem",
+        "flags": 64
+      },
+      "index": 11594,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetVisionModeSystem",
+      "shortName": "GetVisionModeSystem",
+      "return": {
+        "type": "handle:gameVisionModeSystem",
+        "flags": 64
+      },
+      "index": 11593,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetWardrobeSystem",
+      "shortName": "GetWardrobeSystem",
+      "return": {
+        "type": "handle:gameWardrobeSystem",
+        "flags": 64
+      },
+      "index": 11641,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetWatchdogSystem",
+      "shortName": "GetWatchdogSystem",
+      "return": {
+        "type": "handle:gameIWatchdogSystem",
+        "flags": 64
+      },
+      "index": 11624,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetWeatherSystem",
+      "shortName": "GetWeatherSystem",
+      "return": {
+        "type": "handle:worldWeatherScriptInterface",
+        "flags": 64
+      },
+      "index": 11631,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetWorkspotSystem",
+      "shortName": "GetWorkspotSystem",
+      "return": {
+        "type": "handle:gameWorkspotGameSystem",
+        "flags": 64
+      },
+      "index": 11595,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsRestoringState",
+      "shortName": "IsRestoringState",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 11539,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsSavingLocked",
+      "shortName": "IsSavingLocked",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 11638,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "array:gameSaveLock",
+          "name": "locks",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "IsTweakContentTagActive",
+      "shortName": "IsTweakContentTagActive",
+      "index": 11642,
+      "flags": 3
+    },
+    {
+      "fullName": "IsValid",
+      "shortName": "IsValid",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 11540,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "QueueScriptableSystemRequest",
+      "shortName": "QueueScriptableSystemRequest",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 11550,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "scriptableSystemName",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameScriptableSystemRequest",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

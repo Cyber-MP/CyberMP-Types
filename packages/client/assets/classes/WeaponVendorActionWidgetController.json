@@ -1,0 +1,148 @@
+{
+  "parent": "DeviceActionWidgetControllerBase",
+  "name": "WeaponVendorActionWidgetController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkTextWidgetReference",
+      "name": "buttonText",
+      "group": "Widget Refs",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "standardButtonContainer",
+      "group": "Widget Refs",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "hoveredButtonContainer",
+      "group": "Widget Refs",
+      "flags": 4297195553
+    },
+    {
+      "type": "ButtonStatus",
+      "name": "buttonState",
+      "flags": 4297130016
+    },
+    {
+      "type": "HoverStatus",
+      "name": "hoverState",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isBusy",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnHoverOut",
+      "shortName": "OnHoverOut",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnHoverOver",
+      "shortName": "OnHoverOver",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnProcessed",
+      "shortName": "OnProcessed",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkanimProxy",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "FinalizeActionExecution;GameObjectDeviceAction",
+      "shortName": "FinalizeActionExecution",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "executor",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamedeviceAction",
+          "name": "action",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Initialize;DeviceInkGameControllerBasescript_ref<SActionWidgetPackage>",
+      "shortName": "Initialize",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "handle:DeviceInkGameControllerBase",
+          "name": "gameController",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:SActionWidgetPackage",
+          "name": "widgetData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsProcessing;",
+      "shortName": "IsProcessing",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "NoMoney;",
+      "shortName": "NoMoney",
+      "flags": 33284
+    },
+    {
+      "fullName": "Processing;",
+      "shortName": "Processing",
+      "flags": 33284
+    },
+    {
+      "fullName": "ResetToDefault;",
+      "shortName": "ResetToDefault",
+      "flags": 33284
+    }
+  ]
+}

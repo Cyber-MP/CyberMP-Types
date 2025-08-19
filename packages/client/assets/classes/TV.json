@@ -1,0 +1,533 @@
+{
+  "parent": "InteractiveDevice",
+  "name": "TV",
+  "flags": 4,
+  "props": [
+    {
+      "type": "Bool",
+      "name": "isShortGlitchActive",
+      "flags": 4297130016
+    },
+    {
+      "type": "gameDelayID",
+      "name": "shortGlitchDelayID",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isTVMoving",
+      "flags": 4297195553
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnDetach",
+      "shortName": "OnDetach",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnHitEvent",
+      "shortName": "OnHitEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hit",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnNextChannel",
+      "shortName": "OnNextChannel",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:NextStation",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPreviousChannel",
+      "shortName": "OnPreviousChannel",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:PreviousStation",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnQuestDefaultStation",
+      "shortName": "OnQuestDefaultStation",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:QuestDefaultStation",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnQuestMuteSounds",
+      "shortName": "OnQuestMuteSounds",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:QuestMuteSounds",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnQuestSetChannel",
+      "shortName": "OnQuestSetChannel",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:QuestSetChannel",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnQuestSetGlobalChannel",
+      "shortName": "OnQuestSetGlobalChannel",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:SetGlobalTvChannel",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnQuestSetGlobalTvOnly",
+      "shortName": "OnQuestSetGlobalTvOnly",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:SetGlobalTvOnly",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnQuestToggleInteractivity",
+      "shortName": "OnQuestToggleInteractivity",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:QuestToggleInteractivity",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRequestComponents",
+      "shortName": "OnRequestComponents",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "entEntityRequestComponentsInterface",
+          "name": "ri",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnStopShortGlitch",
+      "shortName": "OnStopShortGlitch",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:StopShortGlitchEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnTakeControl",
+      "shortName": "OnTakeControl",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "entEntityResolveComponentsInterface",
+          "name": "ri",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnToggleON",
+      "shortName": "OnToggleON",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:ToggleON",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnTogglePower",
+      "shortName": "OnTogglePower",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:TogglePower",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ApplyActiveStatusEffect;EntityIDTweakDBID",
+      "shortName": "ApplyActiveStatusEffect",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "target",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "statusEffect",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CreateBlackboard;",
+      "shortName": "CreateBlackboard",
+      "flags": 33024
+    },
+    {
+      "fullName": "DeterminGameplayRole;",
+      "shortName": "DeterminGameplayRole",
+      "return": {
+        "type": "EGameplayRole",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "GetBlackboardDef;",
+      "shortName": "GetBlackboardDef",
+      "return": {
+        "type": "handle:TVDeviceBlackboardDef",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "GetBroadcastGlitchVideoPath;",
+      "shortName": "GetBroadcastGlitchVideoPath",
+      "return": {
+        "type": "redResourceReferenceScriptToken",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetChannelData;Int32",
+      "shortName": "GetChannelData",
+      "return": {
+        "type": "STvChannel",
+        "flags": 64
+      },
+      "flags": 41476,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "channelIDX",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetChannelId;script_ref<String>",
+      "shortName": "GetChannelId",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:String",
+          "name": "channelName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetChannelName;Int32",
+      "shortName": "GetChannelName",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "flags": 41092,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetController;",
+      "shortName": "GetController",
+      "return": {
+        "type": "handle:TVController",
+        "flags": 64
+      },
+      "flags": 41216
+    },
+    {
+      "fullName": "GetDefaultGlitchVideoPath;",
+      "shortName": "GetDefaultGlitchVideoPath",
+      "return": {
+        "type": "redResourceReferenceScriptToken",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetDevicePS;",
+      "shortName": "GetDevicePS",
+      "return": {
+        "type": "handle:TVControllerPS",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "GetGlobalTVChannels;",
+      "shortName": "GetGlobalTVChannels",
+      "return": {
+        "type": "array:whandle:gamedataChannelData_Record",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "IsDeviceMovableScript;",
+      "shortName": "IsDeviceMovableScript",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 34048
+    },
+    {
+      "fullName": "IsInteractive;",
+      "shortName": "IsInteractive",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "IsReadyForUI;",
+      "shortName": "IsReadyForUI",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "ResavePersistentData;PersistentState",
+      "shortName": "ResavePersistentData",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 34304,
+      "params": [
+        {
+          "type": "handle:gamePersistentState",
+          "name": "ps",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ResolveGameplayState;",
+      "shortName": "ResolveGameplayState",
+      "flags": 33024
+    },
+    {
+      "fullName": "SelectChannel;Int32",
+      "shortName": "SelectChannel",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "currentChannelIDX",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SelectChannel;script_ref<String>",
+      "shortName": "SelectChannel",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:String",
+          "name": "channelName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "StartGlitching;EGlitchStateFloat",
+      "shortName": "StartGlitching",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "EGlitchState",
+          "name": "glitchState",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "intensity",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "StartShortGlitch;",
+      "shortName": "StartShortGlitch",
+      "flags": 32900
+    },
+    {
+      "fullName": "StopGlitching;",
+      "shortName": "StopGlitching",
+      "flags": 33024
+    },
+    {
+      "fullName": "ToggleSoundEmmiter;Bool",
+      "shortName": "ToggleSoundEmmiter",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "mute",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TurnOffDevice;",
+      "shortName": "TurnOffDevice",
+      "flags": 33024
+    },
+    {
+      "fullName": "TurnOffScreen;",
+      "shortName": "TurnOffScreen",
+      "flags": 33024
+    },
+    {
+      "fullName": "TurnOnDevice;",
+      "shortName": "TurnOnDevice",
+      "flags": 33024
+    },
+    {
+      "fullName": "TurnOnScreen;",
+      "shortName": "TurnOnScreen",
+      "flags": 33024
+    },
+    {
+      "fullName": "UploadActiveProgramOnNPC;EntityID",
+      "shortName": "UploadActiveProgramOnNPC",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "targetID",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,191 @@
+{
+  "parent": "gamedataAIActionSubCondition_Record",
+  "name": "gamedataAIItemCond_Record",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "CheckAllItemsInEquipmentGroup",
+      "shortName": "CheckAllItemsInEquipmentGroup",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 3032,
+      "flags": 1
+    },
+    {
+      "fullName": "EquipmentGroup",
+      "shortName": "EquipmentGroup",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "index": 3031,
+      "flags": 1
+    },
+    {
+      "fullName": "Evolution",
+      "shortName": "Evolution",
+      "return": {
+        "type": "whandle:gamedataWeaponEvolution_Record",
+        "flags": 64
+      },
+      "index": 3023,
+      "flags": 1
+    },
+    {
+      "fullName": "EvolutionHandle",
+      "shortName": "EvolutionHandle",
+      "return": {
+        "type": "handle:gamedataWeaponEvolution_Record",
+        "flags": 64
+      },
+      "index": 3024,
+      "flags": 1
+    },
+    {
+      "fullName": "GetTriggerModesCount",
+      "shortName": "GetTriggerModesCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 3026,
+      "flags": 1
+    },
+    {
+      "fullName": "GetTriggerModesItem",
+      "shortName": "GetTriggerModesItem",
+      "return": {
+        "type": "whandle:gamedataTriggerMode_Record",
+        "flags": 64
+      },
+      "index": 3027,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetTriggerModesItemHandle",
+      "shortName": "GetTriggerModesItemHandle",
+      "return": {
+        "type": "handle:gamedataTriggerMode_Record",
+        "flags": 64
+      },
+      "index": 3028,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ItemCategory",
+      "shortName": "ItemCategory",
+      "return": {
+        "type": "whandle:gamedataItemCategory_Record",
+        "flags": 64
+      },
+      "index": 3017,
+      "flags": 1
+    },
+    {
+      "fullName": "ItemCategoryHandle",
+      "shortName": "ItemCategoryHandle",
+      "return": {
+        "type": "handle:gamedataItemCategory_Record",
+        "flags": 64
+      },
+      "index": 3018,
+      "flags": 1
+    },
+    {
+      "fullName": "ItemID",
+      "shortName": "ItemID",
+      "return": {
+        "type": "whandle:gamedataItem_Record",
+        "flags": 64
+      },
+      "index": 3021,
+      "flags": 1
+    },
+    {
+      "fullName": "ItemIDHandle",
+      "shortName": "ItemIDHandle",
+      "return": {
+        "type": "handle:gamedataItem_Record",
+        "flags": 64
+      },
+      "index": 3022,
+      "flags": 1
+    },
+    {
+      "fullName": "ItemTag",
+      "shortName": "ItemTag",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "index": 3030,
+      "flags": 1
+    },
+    {
+      "fullName": "ItemType",
+      "shortName": "ItemType",
+      "return": {
+        "type": "whandle:gamedataItemType_Record",
+        "flags": 64
+      },
+      "index": 3019,
+      "flags": 1
+    },
+    {
+      "fullName": "ItemTypeHandle",
+      "shortName": "ItemTypeHandle",
+      "return": {
+        "type": "handle:gamedataItemType_Record",
+        "flags": 64
+      },
+      "index": 3020,
+      "flags": 1
+    },
+    {
+      "fullName": "TriggerModes",
+      "shortName": "TriggerModes",
+      "index": 3025,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataTriggerMode_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "TriggerModesContains",
+      "shortName": "TriggerModesContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 3029,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataTriggerMode_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

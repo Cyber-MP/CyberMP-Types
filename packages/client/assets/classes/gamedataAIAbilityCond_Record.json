@@ -1,0 +1,101 @@
+{
+  "parent": "gamedataAIActionSubCondition_Record",
+  "name": "gamedataAIAbilityCond_Record",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "Abilities",
+      "shortName": "Abilities",
+      "index": 8426,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataGameplayAbility_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "AbilitiesContains",
+      "shortName": "AbilitiesContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 8430,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataGameplayAbility_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetAbilitiesCount",
+      "shortName": "GetAbilitiesCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 8427,
+      "flags": 1
+    },
+    {
+      "fullName": "GetAbilitiesItem",
+      "shortName": "GetAbilitiesItem",
+      "return": {
+        "type": "whandle:gamedataGameplayAbility_Record",
+        "flags": 64
+      },
+      "index": 8428,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetAbilitiesItemHandle",
+      "shortName": "GetAbilitiesItemHandle",
+      "return": {
+        "type": "handle:gamedataGameplayAbility_Record",
+        "flags": 64
+      },
+      "index": 8429,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Target",
+      "shortName": "Target",
+      "return": {
+        "type": "whandle:gamedataAIActionTarget_Record",
+        "flags": 64
+      },
+      "index": 8424,
+      "flags": 1
+    },
+    {
+      "fullName": "TargetHandle",
+      "shortName": "TargetHandle",
+      "return": {
+        "type": "handle:gamedataAIActionTarget_Record",
+        "flags": 64
+      },
+      "index": 8425,
+      "flags": 1
+    }
+  ]
+}

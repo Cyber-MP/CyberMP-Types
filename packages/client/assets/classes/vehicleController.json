@@ -1,0 +1,203 @@
+{
+  "parent": "gameComponent",
+  "name": "vehicleController",
+  "flags": 66,
+  "props": [
+    {
+      "type": "CName",
+      "name": "alarmCurve",
+      "group": "Controller",
+      "flags": 6627016704
+    },
+    {
+      "type": "Float",
+      "name": "alarmTime",
+      "group": "Controller",
+      "flags": 6627016704
+    },
+    {
+      "type": "Bool",
+      "name": "overrideHeadlightsSettingsForPlayer",
+      "group": "Controller",
+      "flags": 6627016705
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "AreDefaultLightsToggled",
+      "shortName": "AreDefaultLightsToggled",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13889,
+      "flags": 1
+    },
+    {
+      "fullName": "ResetLightColor",
+      "shortName": "ResetLightColor",
+      "index": 13883,
+      "flags": 1,
+      "params": [
+        {
+          "type": "vehicleELightType",
+          "name": "lightType",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "inTime",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "ResetLightParameters",
+      "shortName": "ResetLightParameters",
+      "index": 13887,
+      "flags": 1,
+      "params": [
+        {
+          "type": "vehicleELightType",
+          "name": "lightType",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "inTime",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "ResetLightStrength",
+      "shortName": "ResetLightStrength",
+      "index": 13885,
+      "flags": 1,
+      "params": [
+        {
+          "type": "vehicleELightType",
+          "name": "lightType",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "inTime",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "SetLightColor",
+      "shortName": "SetLightColor",
+      "index": 13882,
+      "flags": 1,
+      "params": [
+        {
+          "type": "vehicleELightType",
+          "name": "lightType",
+          "flags": 128
+        },
+        {
+          "type": "Color",
+          "name": "color",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "inTime",
+          "flags": 1152
+        },
+        {
+          "type": "Bool",
+          "name": "forceOverrideEmissiveColor",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "SetLightParameters",
+      "shortName": "SetLightParameters",
+      "index": 13886,
+      "flags": 1,
+      "params": [
+        {
+          "type": "vehicleELightType",
+          "name": "lightType",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "strength",
+          "flags": 128
+        },
+        {
+          "type": "Color",
+          "name": "color",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "inTime",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "SetLightStrength",
+      "shortName": "SetLightStrength",
+      "index": 13884,
+      "flags": 1,
+      "params": [
+        {
+          "type": "vehicleELightType",
+          "name": "lightType",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "strength",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "inTime",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "ToggleLights",
+      "shortName": "ToggleLights",
+      "index": 13888,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "on",
+          "flags": 128
+        },
+        {
+          "type": "vehicleELightType",
+          "name": "lightType",
+          "flags": 1152
+        },
+        {
+          "type": "Float",
+          "name": "inTime",
+          "flags": 1152
+        },
+        {
+          "type": "CName",
+          "name": "lerpCurve",
+          "flags": 1152
+        },
+        {
+          "type": "Bool",
+          "name": "loop",
+          "flags": 1152
+        }
+      ]
+    }
+  ]
+}

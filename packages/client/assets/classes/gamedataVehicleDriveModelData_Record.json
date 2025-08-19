@@ -1,0 +1,651 @@
+{
+  "parent": "gamedataTweakDBRecord",
+  "name": "gamedataVehicleDriveModelData_Record",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "AirResistanceFactor",
+      "shortName": "AirResistanceFactor",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 9681,
+      "flags": 1
+    },
+    {
+      "fullName": "AntiSwaybarDampingScalor",
+      "shortName": "AntiSwaybarDampingScalor",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 9702,
+      "flags": 1
+    },
+    {
+      "fullName": "BankBodyFBTanMultiplier",
+      "shortName": "BankBodyFBTanMultiplier",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 9687,
+      "flags": 1
+    },
+    {
+      "fullName": "BankBodyLRTanMultiplier",
+      "shortName": "BankBodyLRTanMultiplier",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 9693,
+      "flags": 1
+    },
+    {
+      "fullName": "BodyFriction",
+      "shortName": "BodyFriction",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 9691,
+      "flags": 1
+    },
+    {
+      "fullName": "BrakingEstimationMagicFactor",
+      "shortName": "BrakingEstimationMagicFactor",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 9718,
+      "flags": 1
+    },
+    {
+      "fullName": "BrakingFrictionFactor",
+      "shortName": "BrakingFrictionFactor",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 9712,
+      "flags": 1
+    },
+    {
+      "fullName": "BurnOut",
+      "shortName": "BurnOut",
+      "return": {
+        "type": "whandle:gamedataVehicleBurnOut_Record",
+        "flags": 64
+      },
+      "index": 9664,
+      "flags": 1
+    },
+    {
+      "fullName": "BurnOutHandle",
+      "shortName": "BurnOutHandle",
+      "return": {
+        "type": "handle:gamedataVehicleBurnOut_Record",
+        "flags": 64
+      },
+      "index": 9665,
+      "flags": 1
+    },
+    {
+      "fullName": "Center_of_mass_offset",
+      "shortName": "Center_of_mass_offset",
+      "return": {
+        "type": "Vector3",
+        "flags": 64
+      },
+      "index": 9673,
+      "flags": 1
+    },
+    {
+      "fullName": "Chassis_mass",
+      "shortName": "Chassis_mass",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 9709,
+      "flags": 1
+    },
+    {
+      "fullName": "DifferentialOvershootFactor",
+      "shortName": "DifferentialOvershootFactor",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 9713,
+      "flags": 1
+    },
+    {
+      "fullName": "DriveHelpers",
+      "shortName": "DriveHelpers",
+      "index": 9668,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataDriveHelper_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "DriveHelpersContains",
+      "shortName": "DriveHelpersContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 9672,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataDriveHelper_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "FlatTireSim",
+      "shortName": "FlatTireSim",
+      "return": {
+        "type": "whandle:gamedataVehicleFlatTireSimulation_Record",
+        "flags": 64
+      },
+      "index": 9666,
+      "flags": 1
+    },
+    {
+      "fullName": "FlatTireSimHandle",
+      "shortName": "FlatTireSimHandle",
+      "return": {
+        "type": "handle:gamedataVehicleFlatTireSimulation_Record",
+        "flags": 64
+      },
+      "index": 9667,
+      "flags": 1
+    },
+    {
+      "fullName": "ForwardWeightTransferFactor",
+      "shortName": "ForwardWeightTransferFactor",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 9686,
+      "flags": 1
+    },
+    {
+      "fullName": "GetDriveHelpersCount",
+      "shortName": "GetDriveHelpersCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 9669,
+      "flags": 1
+    },
+    {
+      "fullName": "GetDriveHelpersItem",
+      "shortName": "GetDriveHelpersItem",
+      "return": {
+        "type": "whandle:gamedataDriveHelper_Record",
+        "flags": 64
+      },
+      "index": 9670,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetDriveHelpersItemHandle",
+      "shortName": "GetDriveHelpersItemHandle",
+      "return": {
+        "type": "handle:gamedataDriveHelper_Record",
+        "flags": 64
+      },
+      "index": 9671,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HandbrakeBrakingTorque",
+      "shortName": "HandbrakeBrakingTorque",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 9706,
+      "flags": 1
+    },
+    {
+      "fullName": "LowVelStoppingDeceleration",
+      "shortName": "LowVelStoppingDeceleration",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 9704,
+      "flags": 1
+    },
+    {
+      "fullName": "MaxWheelTurnDeg",
+      "shortName": "MaxWheelTurnDeg",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 9689,
+      "flags": 1
+    },
+    {
+      "fullName": "MomentOfInertia",
+      "shortName": "MomentOfInertia",
+      "return": {
+        "type": "Vector3",
+        "flags": 64
+      },
+      "index": 9674,
+      "flags": 1
+    },
+    {
+      "fullName": "MomentOfInertiaScale",
+      "shortName": "MomentOfInertiaScale",
+      "return": {
+        "type": "Vector3",
+        "flags": 64
+      },
+      "index": 9675,
+      "flags": 1
+    },
+    {
+      "fullName": "PerfectSteeringFactor",
+      "shortName": "PerfectSteeringFactor",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 9696,
+      "flags": 1
+    },
+    {
+      "fullName": "SideWeightTransferFactor",
+      "shortName": "SideWeightTransferFactor",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 9678,
+      "flags": 1
+    },
+    {
+      "fullName": "SlipAngleCurveScale",
+      "shortName": "SlipAngleCurveScale",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 9715,
+      "flags": 1
+    },
+    {
+      "fullName": "SlipAngleMinSpeedThreshold",
+      "shortName": "SlipAngleMinSpeedThreshold",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 9714,
+      "flags": 1
+    },
+    {
+      "fullName": "SlipRatioCurveScale",
+      "shortName": "SlipRatioCurveScale",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 9717,
+      "flags": 1
+    },
+    {
+      "fullName": "SlipRatioMinSpeedThreshold",
+      "shortName": "SlipRatioMinSpeedThreshold",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 9716,
+      "flags": 1
+    },
+    {
+      "fullName": "SlopeTractionReductionBegin",
+      "shortName": "SlopeTractionReductionBegin",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 9676,
+      "flags": 1
+    },
+    {
+      "fullName": "SlopeTractionReductionFactor",
+      "shortName": "SlopeTractionReductionFactor",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 9708,
+      "flags": 1
+    },
+    {
+      "fullName": "SlopeTractionReductionMax",
+      "shortName": "SlopeTractionReductionMax",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 9701,
+      "flags": 1
+    },
+    {
+      "fullName": "SmoothWheelContactDecreaseTime",
+      "shortName": "SmoothWheelContactDecreaseTime",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 9694,
+      "flags": 1
+    },
+    {
+      "fullName": "SmoothWheelContactIncreseTime",
+      "shortName": "SmoothWheelContactIncreseTime",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 9710,
+      "flags": 1
+    },
+    {
+      "fullName": "Total_mass",
+      "shortName": "Total_mass",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 9684,
+      "flags": 1
+    },
+    {
+      "fullName": "TurnUpdateBaseSpeedThreshold",
+      "shortName": "TurnUpdateBaseSpeedThreshold",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 9682,
+      "flags": 1
+    },
+    {
+      "fullName": "TurnUpdateInputDiffForFastChange",
+      "shortName": "TurnUpdateInputDiffForFastChange",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 9679,
+      "flags": 1
+    },
+    {
+      "fullName": "TurnUpdateInputDiffForSlowChange",
+      "shortName": "TurnUpdateInputDiffForSlowChange",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 9677,
+      "flags": 1
+    },
+    {
+      "fullName": "TurnUpdateInputDiffProgressionPow",
+      "shortName": "TurnUpdateInputDiffProgressionPow",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 9688,
+      "flags": 1
+    },
+    {
+      "fullName": "TurnUpdateInputFastChangeSpeed",
+      "shortName": "TurnUpdateInputFastChangeSpeed",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 9699,
+      "flags": 1
+    },
+    {
+      "fullName": "TurnUpdateInputSlowChangeSpeed",
+      "shortName": "TurnUpdateInputSlowChangeSpeed",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 9685,
+      "flags": 1
+    },
+    {
+      "fullName": "TurnUpdateMaxSpeedThreshold",
+      "shortName": "TurnUpdateMaxSpeedThreshold",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 9703,
+      "flags": 1
+    },
+    {
+      "fullName": "TurnUpdateMaxSpeedTurnChangeMul",
+      "shortName": "TurnUpdateMaxSpeedTurnChangeMul",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 9683,
+      "flags": 1
+    },
+    {
+      "fullName": "TurnUpdateMaxSpeedTurnMul",
+      "shortName": "TurnUpdateMaxSpeedTurnMul",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 9698,
+      "flags": 1
+    },
+    {
+      "fullName": "TurnUpdateMidSpeedThreshold",
+      "shortName": "TurnUpdateMidSpeedThreshold",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 9711,
+      "flags": 1
+    },
+    {
+      "fullName": "TurnUpdateMidSpeedTurnChangeMul",
+      "shortName": "TurnUpdateMidSpeedTurnChangeMul",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 9690,
+      "flags": 1
+    },
+    {
+      "fullName": "TurnUpdateMidSpeedTurnMul",
+      "shortName": "TurnUpdateMidSpeedTurnMul",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 9680,
+      "flags": 1
+    },
+    {
+      "fullName": "TurningRollFactor",
+      "shortName": "TurningRollFactor",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 9697,
+      "flags": 1
+    },
+    {
+      "fullName": "TurningRollFactorWeakContactMul",
+      "shortName": "TurningRollFactorWeakContactMul",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 9692,
+      "flags": 1
+    },
+    {
+      "fullName": "TurningRollFactorWeakContactThresholdMax",
+      "shortName": "TurningRollFactorWeakContactThresholdMax",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 9695,
+      "flags": 1
+    },
+    {
+      "fullName": "TurningRollFactorWeakContactThresholdMin",
+      "shortName": "TurningRollFactorWeakContactThresholdMin",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 9705,
+      "flags": 1
+    },
+    {
+      "fullName": "UseAlternativeTurnUpdate",
+      "shortName": "UseAlternativeTurnUpdate",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 9719,
+      "flags": 1
+    },
+    {
+      "fullName": "WaterParams",
+      "shortName": "WaterParams",
+      "return": {
+        "type": "whandle:gamedataVehicleWater_Record",
+        "flags": 64
+      },
+      "index": 9658,
+      "flags": 1
+    },
+    {
+      "fullName": "WaterParamsHandle",
+      "shortName": "WaterParamsHandle",
+      "return": {
+        "type": "handle:gamedataVehicleWater_Record",
+        "flags": 64
+      },
+      "index": 9659,
+      "flags": 1
+    },
+    {
+      "fullName": "WheelSetup",
+      "shortName": "WheelSetup",
+      "return": {
+        "type": "whandle:gamedataVehicleWheelDrivingSetup_Record",
+        "flags": 64
+      },
+      "index": 9660,
+      "flags": 1
+    },
+    {
+      "fullName": "WheelSetupHandle",
+      "shortName": "WheelSetupHandle",
+      "return": {
+        "type": "handle:gamedataVehicleWheelDrivingSetup_Record",
+        "flags": 64
+      },
+      "index": 9661,
+      "flags": 1
+    },
+    {
+      "fullName": "WheelTurnMaxAddPerSecond",
+      "shortName": "WheelTurnMaxAddPerSecond",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 9700,
+      "flags": 1
+    },
+    {
+      "fullName": "WheelTurnMaxSubPerSecond",
+      "shortName": "WheelTurnMaxSubPerSecond",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 9707,
+      "flags": 1
+    },
+    {
+      "fullName": "WheelsFrictionMap",
+      "shortName": "WheelsFrictionMap",
+      "return": {
+        "type": "whandle:gamedataVehicleWheelsFrictionMap_Record",
+        "flags": 64
+      },
+      "index": 9662,
+      "flags": 1
+    },
+    {
+      "fullName": "WheelsFrictionMapHandle",
+      "shortName": "WheelsFrictionMapHandle",
+      "return": {
+        "type": "handle:gamedataVehicleWheelsFrictionMap_Record",
+        "flags": 64
+      },
+      "index": 9663,
+      "flags": 1
+    }
+  ]
+}

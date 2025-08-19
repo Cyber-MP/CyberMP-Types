@@ -1,0 +1,91 @@
+{
+  "parent": "AIbehaviortaskScript",
+  "name": "MeleeAttackCommandTask",
+  "flags": 4,
+  "props": [
+    {
+      "type": "handle:AIArgumentMapping",
+      "name": "inCommand",
+      "flags": 4431413285
+    },
+    {
+      "type": "whandle:AIMeleeAttackCommand",
+      "name": "currentCommand",
+      "flags": 4297195552
+    },
+    {
+      "type": "handle:gamedataAIThreatPersistenceSource_Record",
+      "name": "threatPersistenceSource",
+      "flags": 4431413280
+    },
+    {
+      "type": "Float",
+      "name": "activationTimeStamp",
+      "flags": 4297195552
+    },
+    {
+      "type": "Float",
+      "name": "commandDuration",
+      "flags": 4297195552
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "Activate;ScriptExecutionContext",
+      "shortName": "Activate",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CancelCommand;ScriptExecutionContextAIMeleeAttackCommand",
+      "shortName": "CancelCommand",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "handle:AIMeleeAttackCommand",
+          "name": "typedCommand",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Deactivate;ScriptExecutionContext",
+      "shortName": "Deactivate",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Update;ScriptExecutionContext",
+      "shortName": "Update",
+      "return": {
+        "type": "AIbehaviorUpdateOutcome",
+        "flags": 64
+      },
+      "flags": 33024,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

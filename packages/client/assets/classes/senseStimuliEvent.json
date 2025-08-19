@@ -1,0 +1,171 @@
+{
+  "parent": "senseBaseStimuliEvent",
+  "name": "senseStimuliEvent",
+  "flags": 2,
+  "props": [
+    {
+      "type": "whandle:gameObject",
+      "name": "sourceObject",
+      "flags": 6627016704
+    },
+    {
+      "type": "senseStimInvestigateData",
+      "name": "stimInvestigateData",
+      "flags": 6627016704
+    },
+    {
+      "type": "array:Vector4",
+      "name": "movePositions",
+      "flags": 6627016704
+    },
+    {
+      "type": "Vector4",
+      "name": "sourcePosition",
+      "flags": 6627016705
+    },
+    {
+      "type": "whandle:gamedataStim_Record",
+      "name": "stimRecord",
+      "flags": 6627016705
+    },
+    {
+      "type": "Float",
+      "name": "radius",
+      "flags": 6627016705
+    },
+    {
+      "type": "Float",
+      "name": "detection",
+      "flags": 6627016705
+    },
+    {
+      "type": "gamedataStimType",
+      "name": "stimType",
+      "flags": 6627016705
+    },
+    {
+      "type": "gamedataStimPropagation",
+      "name": "stimPropagation",
+      "flags": 6627016705
+    },
+    {
+      "type": "handle:senseStimuliData",
+      "name": "data",
+      "flags": 6627016704
+    },
+    {
+      "type": "Bool",
+      "name": "purelyDirect",
+      "flags": 6627016705
+    },
+    {
+      "type": "Uint32",
+      "name": "id",
+      "flags": 4297326625
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "IsTagInStimuli",
+      "shortName": "IsTagInStimuli",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12371,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "CName",
+          "name": "tag",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetStimInterval;",
+      "shortName": "GetStimInterval",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetStimType;",
+      "shortName": "GetStimType",
+      "return": {
+        "type": "gamedataStimType",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "IsAudio;",
+      "shortName": "IsAudio",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "IsCategory;CName",
+      "shortName": "IsCategory",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "CName",
+          "name": "category",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsPurelyDirect;",
+      "shortName": "IsPurelyDirect",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "IsVisual;",
+      "shortName": "IsVisual",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "SetPurelyDirect;Bool",
+      "shortName": "SetPurelyDirect",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "pureDirect",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetStimType;gamedataStimType",
+      "shortName": "SetStimType",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "gamedataStimType",
+          "name": "newStimType",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

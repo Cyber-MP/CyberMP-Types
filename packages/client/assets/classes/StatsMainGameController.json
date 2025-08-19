@@ -1,0 +1,341 @@
+{
+  "parent": "gameuiMenuGameController",
+  "name": "StatsMainGameController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkWidgetReference",
+      "name": "MainViewRoot",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "statsList",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "TooltipsManagerRef",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "levelControllerRef",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "streetCredControllerRef",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "detailListControllerRef",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "statsStreetCredRewardRef",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "statsPlayTimeControllerdRef",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "btnInventory",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "buttonHintsManagerRef",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "rightPanelFluff1",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "rightPanelFluff2",
+      "flags": 4297130017
+    },
+    {
+      "type": "whandle:gameuiTooltipsManager",
+      "name": "TooltipsManager",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:InventoryDataManagerV2",
+      "name": "InventoryManager",
+      "flags": 4431347744
+    },
+    {
+      "type": "whandle:PlayerPuppet",
+      "name": "player",
+      "flags": 4297130016
+    },
+    {
+      "type": "array:gameStatViewData",
+      "name": "healthStatsData",
+      "flags": 6583025696
+    },
+    {
+      "type": "array:gameStatViewData",
+      "name": "DPSStatsData",
+      "flags": 6583025696
+    },
+    {
+      "type": "array:gameStatViewData",
+      "name": "armorStatsData",
+      "flags": 6583025696
+    },
+    {
+      "type": "array:gameStatViewData",
+      "name": "otherStatsData",
+      "flags": 6583025696
+    },
+    {
+      "type": "whandle:gameIBlackboard",
+      "name": "playerStatsBlackboard",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "currencyListener",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "characterCredListener",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "characterLevelListener",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "characterCurrentXPListener",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "characterCredPointsListener",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:PlayerDevelopmentSystem",
+      "name": "PDS",
+      "flags": 4431347744
+    },
+    {
+      "type": "whandle:StatsProgressController",
+      "name": "levelController",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:StatsProgressController",
+      "name": "streetCredController",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:StatsDetailListController",
+      "name": "detailListController",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:StatsStreetCredReward",
+      "name": "statsStreetCredReward",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:StatsPlayTimeController",
+      "name": "statsPlayTimeController",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:PreviousMenuData",
+      "name": "previousMenuData",
+      "flags": 4431347744
+    },
+    {
+      "type": "whandle:ButtonHints",
+      "name": "buttonHintsController",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "animProxy",
+      "flags": 4431347744
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnCategoryClicked",
+      "shortName": "OnCategoryClicked",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:CategoryClickedEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnCharacterLevelCurrentXPUpdated",
+      "shortName": "OnCharacterLevelCurrentXPUpdated",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnCharacterLevelUpdated",
+      "shortName": "OnCharacterLevelUpdated",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnCharacterStreetCredLevelUpdated",
+      "shortName": "OnCharacterStreetCredLevelUpdated",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnCharacterStreetCredPointsUpdated",
+      "shortName": "OnCharacterStreetCredPointsUpdated",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnSetUserData",
+      "shortName": "OnSetUserData",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:IScriptable",
+          "name": "userData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "AddStat;gamedataStatTypescript_ref<array<StatViewData>>",
+      "shortName": "AddStat",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "gamedataStatType",
+          "name": "statType",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:array:gameStatViewData",
+          "name": "datalist",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnIntro;",
+      "shortName": "OnIntro",
+      "flags": 32900
+    },
+    {
+      "fullName": "PopulateStats;",
+      "shortName": "PopulateStats",
+      "flags": 33284
+    },
+    {
+      "fullName": "RequestStat;gamedataStatTypescript_ref<array<StatViewData>>",
+      "shortName": "RequestStat",
+      "return": {
+        "type": "gameStatViewData",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "gamedataStatType",
+          "name": "stat",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:array:gameStatViewData",
+          "name": "datalist",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

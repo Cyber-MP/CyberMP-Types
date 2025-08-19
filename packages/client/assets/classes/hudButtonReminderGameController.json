@@ -1,0 +1,217 @@
+{
+  "parent": "gameuiHUDGameController",
+  "name": "hudButtonReminderGameController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "Button1",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "Button2",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "Button3",
+      "flags": 4297130017
+    },
+    {
+      "type": "whandle:gameIBlackboard",
+      "name": "uiHudButtonHelpBB",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "interactingWithDeviceBBID",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "OnRedrawText_1Callback",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "OnRedrawIcon_1Callback",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "OnRedrawText_2Callback",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "OnRedrawIcon_2Callback",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "OnRedrawText_3Callback",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "OnRedrawIcon_3Callback",
+      "flags": 4431347744
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnInteractingWithDevice",
+      "shortName": "OnInteractingWithDevice",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPlayerAttach",
+      "shortName": "OnPlayerAttach",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "playerGameObject",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPlayerDetach",
+      "shortName": "OnPlayerDetach",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "playerGameObject",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRedrawIcon_1;CName",
+      "shortName": "OnRedrawIcon_1",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "CName",
+          "name": "argValue",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRedrawIcon_2;CName",
+      "shortName": "OnRedrawIcon_2",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "CName",
+          "name": "argValue",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRedrawIcon_3;CName",
+      "shortName": "OnRedrawIcon_3",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "CName",
+          "name": "argValue",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRedrawText_1;script_ref<String>",
+      "shortName": "OnRedrawText_1",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:String",
+          "name": "argValue",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRedrawText_2;script_ref<String>",
+      "shortName": "OnRedrawText_2",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:String",
+          "name": "argValue",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRedrawText_3;script_ref<String>",
+      "shortName": "OnRedrawText_3",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:String",
+          "name": "argValue",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterPSMListeners;GameObject",
+      "shortName": "RegisterPSMListeners",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "playerPuppet",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UnregisterPSMListeners;GameObject",
+      "shortName": "UnregisterPSMListeners",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "playerPuppet",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

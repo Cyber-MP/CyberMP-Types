@@ -1,0 +1,369 @@
+{
+  "name": "Matrix",
+  "flags": 18,
+  "props": [
+    {
+      "type": "Vector4",
+      "name": "X",
+      "flags": 6627016705
+    },
+    {
+      "type": "Vector4",
+      "name": "Y",
+      "flags": 6627016705
+    },
+    {
+      "type": "Vector4",
+      "name": "Z",
+      "flags": 6627016705
+    },
+    {
+      "type": "Vector4",
+      "name": "W",
+      "flags": 6627016705
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "BuildFromDirectionVector",
+      "shortName": "BuildFromDirectionVector",
+      "return": {
+        "type": "Matrix",
+        "flags": 64
+      },
+      "index": 1017,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Vector4",
+          "name": "dirVec",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "upVec",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "BuiltPreScale",
+      "shortName": "BuiltPreScale",
+      "return": {
+        "type": "Matrix",
+        "flags": 64
+      },
+      "index": 1014,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Vector4",
+          "name": "scale",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "BuiltRTS",
+      "shortName": "BuiltRTS",
+      "return": {
+        "type": "Matrix",
+        "flags": 64
+      },
+      "index": 1016,
+      "flags": 3,
+      "params": [
+        {
+          "type": "EulerAngles",
+          "name": "rotation",
+          "flags": 1152
+        },
+        {
+          "type": "Vector4",
+          "name": "translation",
+          "flags": 1152
+        },
+        {
+          "type": "Vector4",
+          "name": "scale",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "BuiltRotation",
+      "shortName": "BuiltRotation",
+      "return": {
+        "type": "Matrix",
+        "flags": 64
+      },
+      "index": 1012,
+      "flags": 3,
+      "params": [
+        {
+          "type": "EulerAngles",
+          "name": "rot",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "BuiltScale",
+      "shortName": "BuiltScale",
+      "return": {
+        "type": "Matrix",
+        "flags": 64
+      },
+      "index": 1013,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Vector4",
+          "name": "scale",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "BuiltTRS",
+      "shortName": "BuiltTRS",
+      "return": {
+        "type": "Matrix",
+        "flags": 64
+      },
+      "index": 1015,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Vector4",
+          "name": "translation",
+          "flags": 1152
+        },
+        {
+          "type": "EulerAngles",
+          "name": "rotation",
+          "flags": 1152
+        },
+        {
+          "type": "Vector4",
+          "name": "scale",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "BuiltTranslation",
+      "shortName": "BuiltTranslation",
+      "return": {
+        "type": "Matrix",
+        "flags": 64
+      },
+      "index": 1011,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Vector4",
+          "name": "move",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetAxisX",
+      "shortName": "GetAxisX",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "index": 1021,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Matrix",
+          "name": "m",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetAxisY",
+      "shortName": "GetAxisY",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "index": 1022,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Matrix",
+          "name": "m",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetAxisZ",
+      "shortName": "GetAxisZ",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "index": 1023,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Matrix",
+          "name": "m",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetDirectionVector",
+      "shortName": "GetDirectionVector",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "index": 1024,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Matrix",
+          "name": "m",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetInverted",
+      "shortName": "GetInverted",
+      "return": {
+        "type": "Matrix",
+        "flags": 64
+      },
+      "index": 1025,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Matrix",
+          "name": "m",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetInvertedFull",
+      "shortName": "GetInvertedFull",
+      "return": {
+        "type": "Matrix",
+        "flags": 64
+      },
+      "index": 1026,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Matrix",
+          "name": "m",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetRotation",
+      "shortName": "GetRotation",
+      "return": {
+        "type": "EulerAngles",
+        "flags": 64
+      },
+      "index": 1019,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Matrix",
+          "name": "m",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetScale",
+      "shortName": "GetScale",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "index": 1020,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Matrix",
+          "name": "m",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetTranslation",
+      "shortName": "GetTranslation",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "index": 1018,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Matrix",
+          "name": "m",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Identity",
+      "shortName": "Identity",
+      "return": {
+        "type": "Matrix",
+        "flags": 64
+      },
+      "index": 1010,
+      "flags": 3
+    },
+    {
+      "fullName": "IsOk",
+      "shortName": "IsOk",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 1028,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Matrix",
+          "name": "m",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ToQuat",
+      "shortName": "ToQuat",
+      "return": {
+        "type": "Quaternion",
+        "flags": 64
+      },
+      "index": 1027,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Matrix",
+          "name": "m",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,249 @@
+{
+  "parent": "gamePlayerSystem",
+  "name": "cpPlayerSystem",
+  "flags": 2,
+  "funcs": [
+    {
+      "fullName": "FindPlayerControlledObjects",
+      "shortName": "FindPlayerControlledObjects",
+      "return": {
+        "type": "Uint32",
+        "flags": 64
+      },
+      "index": 14930,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Vector4",
+          "name": "position",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "radius",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "includeLocalPlayers",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "includeRemotePlayers",
+          "flags": 128
+        },
+        {
+          "type": "array:handle:gameObject",
+          "name": "outPlayerGameObjects",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "GetGameInstance",
+      "shortName": "GetGameInstance",
+      "return": {
+        "type": "ScriptGameInstance",
+        "flags": 64
+      },
+      "index": 14931,
+      "flags": 8193
+    },
+    {
+      "fullName": "GetLocalPlayerControlledGameObject",
+      "shortName": "GetLocalPlayerControlledGameObject",
+      "return": {
+        "type": "handle:gameObject",
+        "flags": 64
+      },
+      "index": 14932,
+      "flags": 8193
+    },
+    {
+      "fullName": "GetLocalPlayerMainGameObject",
+      "shortName": "GetLocalPlayerMainGameObject",
+      "return": {
+        "type": "handle:gameObject",
+        "flags": 64
+      },
+      "index": 14933,
+      "flags": 8193
+    },
+    {
+      "fullName": "IsCPOControlSchemeForced",
+      "shortName": "IsCPOControlSchemeForced",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 14934,
+      "flags": 1
+    },
+    {
+      "fullName": "IsInFreeCamera",
+      "shortName": "IsInFreeCamera",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 14935,
+      "flags": 1
+    },
+    {
+      "fullName": "LocalPlayerControlExistingObject",
+      "shortName": "LocalPlayerControlExistingObject",
+      "index": 14936,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "entityID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterPlayerPuppetAttachedCallback",
+      "shortName": "RegisterPlayerPuppetAttachedCallback",
+      "return": {
+        "type": "Uint32",
+        "flags": 64
+      },
+      "index": 14937,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:IScriptable",
+          "name": "object",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "func",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterPlayerPuppetDetachedCallback",
+      "shortName": "RegisterPlayerPuppetDetachedCallback",
+      "return": {
+        "type": "Uint32",
+        "flags": 64
+      },
+      "index": 14938,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:IScriptable",
+          "name": "object",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "func",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetFreeCameraTransform",
+      "shortName": "SetFreeCameraTransform",
+      "index": 14939,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Transform",
+          "name": "newTransform",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UnregisterPlayerPuppetAttachedCallback",
+      "shortName": "UnregisterPlayerPuppetAttachedCallback",
+      "index": 14940,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Uint32",
+          "name": "callbackID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UnregisterPlayerPuppetDetachedCallback",
+      "shortName": "UnregisterPlayerPuppetDetachedCallback",
+      "index": 14941,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Uint32",
+          "name": "callbackID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnGameRestored",
+      "shortName": "OnGameRestored",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33036
+    },
+    {
+      "fullName": "OnLocalPlayerChanged",
+      "shortName": "OnLocalPlayerChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33036,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "controlledObject",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnLocalPlayerPossesionChanged",
+      "shortName": "OnLocalPlayerPossesionChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33036,
+      "params": [
+        {
+          "type": "gamedataPlayerPossesion",
+          "name": "playerPossesion",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnShutdown",
+      "shortName": "OnShutdown",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33036
+    },
+    {
+      "fullName": "GetPossessedByJohnnyFactName;",
+      "shortName": "GetPossessedByJohnnyFactName",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "flags": 41476
+    }
+  ]
+}

@@ -1,0 +1,4552 @@
+{
+  "parent": "IScriptable",
+  "name": "gameRPGManager",
+  "flags": 2,
+  "funcs": [
+    {
+      "fullName": "ApplyAbilityArray",
+      "shortName": "ApplyAbilityArray",
+      "index": 13051,
+      "flags": 3,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "owner",
+          "flags": 128
+        },
+        {
+          "type": "array:whandle:gamedataGameplayAbility_Record",
+          "name": "abilities",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CalculateAdditiveModifiers",
+      "shortName": "CalculateAdditiveModifiers",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 13042,
+      "flags": 3,
+      "params": [
+        {
+          "type": "array:whandle:gamedataStatModifier_Record",
+          "name": "modifiers",
+          "flags": 128
+        },
+        {
+          "type": "ScriptGameInstance",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameObject",
+          "name": "root",
+          "flags": 128
+        },
+        {
+          "type": "gameStatsObjectID",
+          "name": "targetID",
+          "flags": 128
+        },
+        {
+          "type": "gameStatsObjectID",
+          "name": "instigator",
+          "flags": 1152
+        },
+        {
+          "type": "gameStatsObjectID",
+          "name": "itemStatsID",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "CalculateAdditiveMultiplierModifiers",
+      "shortName": "CalculateAdditiveMultiplierModifiers",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 13044,
+      "flags": 3,
+      "params": [
+        {
+          "type": "array:whandle:gamedataStatModifier_Record",
+          "name": "modifiers",
+          "flags": 128
+        },
+        {
+          "type": "ScriptGameInstance",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameObject",
+          "name": "root",
+          "flags": 128
+        },
+        {
+          "type": "gameStatsObjectID",
+          "name": "targetID",
+          "flags": 128
+        },
+        {
+          "type": "gameStatsObjectID",
+          "name": "instigator",
+          "flags": 1152
+        },
+        {
+          "type": "gameStatsObjectID",
+          "name": "itemStatsID",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "CalculateBuyPrice",
+      "shortName": "CalculateBuyPrice",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 13052,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameObject",
+          "name": "vendor",
+          "flags": 128
+        },
+        {
+          "type": "gameItemID",
+          "name": "itemID",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "multiplier",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CalculateCombinedModifier",
+      "shortName": "CalculateCombinedModifier",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 13049,
+      "flags": 3,
+      "params": [
+        {
+          "type": "whandle:gamedataCombinedStatModifier_Record",
+          "name": "modifier",
+          "flags": 128
+        },
+        {
+          "type": "ScriptGameInstance",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameObject",
+          "name": "root",
+          "flags": 128
+        },
+        {
+          "type": "gameStatsObjectID",
+          "name": "targetID",
+          "flags": 128
+        },
+        {
+          "type": "gameStatsObjectID",
+          "name": "instigator",
+          "flags": 1152
+        },
+        {
+          "type": "gameStatsObjectID",
+          "name": "itemStatsID",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "CalculateConstantModifier",
+      "shortName": "CalculateConstantModifier",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 13046,
+      "flags": 3,
+      "params": [
+        {
+          "type": "whandle:gamedataConstantStatModifier_Record",
+          "name": "modifier",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CalculateCurveModifier",
+      "shortName": "CalculateCurveModifier",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 13048,
+      "flags": 3,
+      "params": [
+        {
+          "type": "whandle:gamedataCurveStatModifier_Record",
+          "name": "modifier",
+          "flags": 128
+        },
+        {
+          "type": "ScriptGameInstance",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameObject",
+          "name": "root",
+          "flags": 128
+        },
+        {
+          "type": "gameStatsObjectID",
+          "name": "targetID",
+          "flags": 128
+        },
+        {
+          "type": "gameStatsObjectID",
+          "name": "instigator",
+          "flags": 1152
+        },
+        {
+          "type": "gameStatsObjectID",
+          "name": "itemStatsID",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "CalculateMultiplierModifiers",
+      "shortName": "CalculateMultiplierModifiers",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 13043,
+      "flags": 3,
+      "params": [
+        {
+          "type": "array:whandle:gamedataStatModifier_Record",
+          "name": "modifiers",
+          "flags": 128
+        },
+        {
+          "type": "ScriptGameInstance",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameObject",
+          "name": "root",
+          "flags": 128
+        },
+        {
+          "type": "gameStatsObjectID",
+          "name": "targetID",
+          "flags": 128
+        },
+        {
+          "type": "gameStatsObjectID",
+          "name": "instigator",
+          "flags": 1152
+        },
+        {
+          "type": "gameStatsObjectID",
+          "name": "itemStatsID",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "CalculatePowerDifferential",
+      "shortName": "CalculatePowerDifferential",
+      "return": {
+        "type": "gameEPowerDifferential",
+        "flags": 64
+      },
+      "index": 13056,
+      "flags": 3,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "target",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CalculateRandomModifier",
+      "shortName": "CalculateRandomModifier",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 13047,
+      "flags": 3,
+      "params": [
+        {
+          "type": "whandle:gamedataRandomStatModifier_Record",
+          "name": "modifier",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CalculateSellPrice",
+      "shortName": "CalculateSellPrice",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 13053,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameObject",
+          "name": "vendor",
+          "flags": 128
+        },
+        {
+          "type": "gameItemID",
+          "name": "itemID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CalculateSellPriceItemData",
+      "shortName": "CalculateSellPriceItemData",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 13054,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameObject",
+          "name": "vendor",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameItemData",
+          "name": "itemData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CalculateStatModifier",
+      "shortName": "CalculateStatModifier",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 13045,
+      "flags": 3,
+      "params": [
+        {
+          "type": "whandle:gamedataStatModifier_Record",
+          "name": "modifier",
+          "flags": 128
+        },
+        {
+          "type": "ScriptGameInstance",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameObject",
+          "name": "root",
+          "flags": 128
+        },
+        {
+          "type": "gameStatsObjectID",
+          "name": "targetID",
+          "flags": 128
+        },
+        {
+          "type": "gameStatsObjectID",
+          "name": "instigator",
+          "flags": 1152
+        },
+        {
+          "type": "gameStatsObjectID",
+          "name": "itemStatsID",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "CalculateStatModifiers",
+      "shortName": "CalculateStatModifiers",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 13041,
+      "flags": 3,
+      "params": [
+        {
+          "type": "array:whandle:gamedataStatModifier_Record",
+          "name": "modifiers",
+          "flags": 128
+        },
+        {
+          "type": "ScriptGameInstance",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameObject",
+          "name": "root",
+          "flags": 128
+        },
+        {
+          "type": "gameStatsObjectID",
+          "name": "targetID",
+          "flags": 128
+        },
+        {
+          "type": "gameStatsObjectID",
+          "name": "instigator",
+          "flags": 1152
+        },
+        {
+          "type": "gameStatsObjectID",
+          "name": "itemStatsID",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "GetFloatItemQuality",
+      "shortName": "GetFloatItemQuality",
+      "return": {
+        "type": "gamedataQuality",
+        "flags": 64
+      },
+      "index": 13034,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Float",
+          "name": "qualityStat",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetInnerItemDataQuality",
+      "shortName": "GetInnerItemDataQuality",
+      "return": {
+        "type": "gamedataQuality",
+        "flags": 64
+      },
+      "index": 13032,
+      "flags": 3,
+      "params": [
+        {
+          "type": "gameInnerItemData",
+          "name": "itemData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetItemData",
+      "shortName": "GetItemData",
+      "return": {
+        "type": "whandle:gameItemData",
+        "flags": 64
+      },
+      "index": 13031,
+      "flags": 3,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "gi",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameObject",
+          "name": "owner",
+          "flags": 128
+        },
+        {
+          "type": "gameItemID",
+          "name": "itemID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetItemDataQuality",
+      "shortName": "GetItemDataQuality",
+      "return": {
+        "type": "gamedataQuality",
+        "flags": 64
+      },
+      "index": 13033,
+      "flags": 3,
+      "params": [
+        {
+          "type": "whandle:gameItemData",
+          "name": "itemData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetQualityBasedOnPowerLevel",
+      "shortName": "GetQualityBasedOnPowerLevel",
+      "index": 13055,
+      "flags": 3
+    },
+    {
+      "fullName": "GetRefObjectID",
+      "shortName": "GetRefObjectID",
+      "return": {
+        "type": "gameStatsObjectID",
+        "flags": 64
+      },
+      "index": 13050,
+      "flags": 3,
+      "params": [
+        {
+          "type": "CName",
+          "name": "refObjectName",
+          "flags": 128
+        },
+        {
+          "type": "ScriptGameInstance",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameObject",
+          "name": "root",
+          "flags": 128
+        },
+        {
+          "type": "gameStatsObjectID",
+          "name": "targetID",
+          "flags": 128
+        },
+        {
+          "type": "gameStatsObjectID",
+          "name": "instigator",
+          "flags": 1152
+        },
+        {
+          "type": "gameStatsObjectID",
+          "name": "itemStatsID",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "IsInnerItemDataIconic",
+      "shortName": "IsInnerItemDataIconic",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13035,
+      "flags": 3,
+      "params": [
+        {
+          "type": "gameInnerItemData",
+          "name": "itemData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsItemBroken",
+      "shortName": "IsItemBroken",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13037,
+      "flags": 3,
+      "params": [
+        {
+          "type": "handle:gameItemData",
+          "name": "itemData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsItemDataIconic",
+      "shortName": "IsItemDataIconic",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13036,
+      "flags": 3,
+      "params": [
+        {
+          "type": "whandle:gameItemData",
+          "name": "itemData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsSlotAvailable",
+      "shortName": "IsSlotAvailable",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13040,
+      "flags": 3,
+      "params": [
+        {
+          "type": "whandle:gameItemData",
+          "name": "itemData",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gamedataAttachmentSlot_Record",
+          "name": "attachmentSlotRecord",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ShouldFlipNegativeValue",
+      "shortName": "ShouldFlipNegativeValue",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13038,
+      "flags": 3,
+      "params": [
+        {
+          "type": "whandle:gamedataStat_Record",
+          "name": "record",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ShouldSlotBeAvailable",
+      "shortName": "ShouldSlotBeAvailable",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13039,
+      "flags": 3,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "owner",
+          "flags": 128
+        },
+        {
+          "type": "gameItemID",
+          "name": "item",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gamedataAttachmentSlot_Record",
+          "name": "attachmentSlotRecord",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::ApplyAbility;GameObjectGameplayAbility_Record",
+      "shortName": "ApplyAbility",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "owner",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gamedataGameplayAbility_Record",
+          "name": "ability",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::ApplyAbilityGroup;GameObjectGameplayAbilityGroup_Record",
+      "shortName": "ApplyAbilityGroup",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "owner",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gamedataGameplayAbilityGroup_Record",
+          "name": "group",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::ApplyEffectorsArray;GameObjectscript_ref<array<Effector_Record>>",
+      "shortName": "ApplyEffectorsArray",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "owner",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:array:whandle:gamedataEffector_Record",
+          "name": "arr",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::ApplyGLP;GameObjectGameplayLogicPackage_Record",
+      "shortName": "ApplyGLP",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "owner",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gamedataGameplayLogicPackage_Record",
+          "name": "package",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::ApplyGLPArray;GameObjectscript_ref<array<GameplayLogicPackage_Record>>BoolInt32",
+      "shortName": "ApplyGLPArray",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "owner",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:array:whandle:gamedataGameplayLogicPackage_Record",
+          "name": "arr",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "ignoreAppliedPackages",
+          "flags": 1152
+        },
+        {
+          "type": "Int32",
+          "name": "withAnimationWrapperOverrides",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::ApplyStatModifierGroups;GameObjectscript_ref<array<StatModifierGroup_Record>>",
+      "shortName": "ApplyStatModifierGroups",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "owner",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:array:whandle:gamedataStatModifierGroup_Record",
+          "name": "arr",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::AwardExperienceFromDamage;gameHitEventFloat",
+      "shortName": "AwardExperienceFromDamage",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "damagePercentage",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::AwardExperienceFromDeflect;gameHitEvent",
+      "shortName": "AwardExperienceFromDeflect",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::AwardExperienceFromLocomotion;PlayerPuppetFloat",
+      "shortName": "AwardExperienceFromLocomotion",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:PlayerPuppet",
+          "name": "player",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "amount",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::AwardExperienceFromQuickhack;PlayerPuppetFloatEntityIDgamedataHackCategory",
+      "shortName": "AwardExperienceFromQuickhack",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:PlayerPuppet",
+          "name": "player",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "cost",
+          "flags": 128
+        },
+        {
+          "type": "entEntityID",
+          "name": "target",
+          "flags": 128
+        },
+        {
+          "type": "gamedataHackCategory",
+          "name": "category",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::AwardExperienceFromResourceSpent;PlayerPuppetFloatgamedataStatPoolTypegameHitEvent",
+      "shortName": "AwardExperienceFromResourceSpent",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:PlayerPuppet",
+          "name": "player",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "value",
+          "flags": 128
+        },
+        {
+          "type": "gamedataStatPoolType",
+          "name": "type",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::AwardExperienceInstantly;PlayerPuppetInt32gamedataProficiencyType",
+      "shortName": "AwardExperienceInstantly",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:PlayerPuppet",
+          "name": "player",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "amount",
+          "flags": 128
+        },
+        {
+          "type": "gamedataProficiencyType",
+          "name": "type",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::AwardXP;GameInstanceFloatgamedataProficiencyType",
+      "shortName": "AwardXP",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "gi",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "amount",
+          "flags": 128
+        },
+        {
+          "type": "gamedataProficiencyType",
+          "name": "type",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::BreakItem;GameInstanceGameObjectItemID",
+      "shortName": "BreakItem",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "gi",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameObject",
+          "name": "owner",
+          "flags": 128
+        },
+        {
+          "type": "gameItemID",
+          "name": "itemID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::CalculateEP1Reward;GameInstanceFloatFloat",
+      "shortName": "CalculateEP1Reward",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "gi",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "experienceValue",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "playerLevel",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::CalculateMinorActivityReward;GameInstanceFloat",
+      "shortName": "CalculateMinorActivityReward",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "gi",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "experienceValue",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::CalculatePowerDifferential;Int32",
+      "shortName": "CalculatePowerDifferential",
+      "return": {
+        "type": "gameEPowerDifferential",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "level",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::CalculateStatModifiers;FloatFloatFloatscript_ref<array<StatModifier_Record>>GameInstanceGameObjectStatsObjectIDStatsObjectIDStatsObjectID",
+      "shortName": "CalculateStatModifiers",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "Float",
+          "name": "addValue",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "multValue",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "addMultValue",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:array:whandle:gamedataStatModifier_Record",
+          "name": "modifiers",
+          "flags": 128
+        },
+        {
+          "type": "ScriptGameInstance",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameObject",
+          "name": "root",
+          "flags": 128
+        },
+        {
+          "type": "gameStatsObjectID",
+          "name": "targetID",
+          "flags": 128
+        },
+        {
+          "type": "gameStatsObjectID",
+          "name": "instigator",
+          "flags": 1152
+        },
+        {
+          "type": "gameStatsObjectID",
+          "name": "itemStatsID",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::CalculateStreetStoryReward;GameInstanceFloat",
+      "shortName": "CalculateStreetStoryReward",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "gi",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "experienceValue",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::CalculateThreatValue;GameObject",
+      "shortName": "CalculateThreatValue",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "obj",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::CanAffordAndPerformCyberwareUpgrade;GameObjectgamedataQualityItem_RecordCyberwareUpgradeCostData",
+      "shortName": "CanAffordAndPerformCyberwareUpgrade",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "owner",
+          "flags": 128
+        },
+        {
+          "type": "gamedataQuality",
+          "name": "currentQuality",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamedataItem_Record",
+          "name": "upgradeItemRecord",
+          "flags": 128
+        },
+        {
+          "type": "CyberwareUpgradeCostData",
+          "name": "costData",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::CanDownloadFunds;GameInstanceItemID",
+      "shortName": "CanDownloadFunds",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "gi",
+          "flags": 128
+        },
+        {
+          "type": "gameItemID",
+          "name": "itemID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::CanItemBeDisassembled;GameInstancegameItemData",
+      "shortName": "CanItemBeDisassembled",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "gameInstance",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameItemData",
+          "name": "itemData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::CanItemBeDisassembled;GameInstanceItemID",
+      "shortName": "CanItemBeDisassembled",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "gameInstance",
+          "flags": 128
+        },
+        {
+          "type": "gameItemID",
+          "name": "itemID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::CanItemBeDropped;GameObjectgameItemData",
+      "shortName": "CanItemBeDropped",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "puppet",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameItemData",
+          "name": "itemData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::CanPartBeUnequipped;InventoryItemDataTweakDBID",
+      "shortName": "CanPartBeUnequipped",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gameInventoryItemData",
+          "name": "data",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "slotId",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::CanPlayerCraftFromInventory;GameObject",
+      "shortName": "CanPlayerCraftFromInventory",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "obj",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::CanPlayerUpgradeFromInventory;GameObject",
+      "shortName": "CanPlayerUpgradeFromInventory",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "obj",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::CanUpgradeCyberware;GameObjectItemIDBoolgamedataQualitygamedataQualityItem_RecordCyberwareUpgradeCostDataBool",
+      "shortName": "CanUpgradeCyberware",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "owner",
+          "flags": 128
+        },
+        {
+          "type": "gameItemID",
+          "name": "itemID",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "isEquipped",
+          "flags": 128
+        },
+        {
+          "type": "gamedataQuality",
+          "name": "selectedQuality",
+          "flags": 128
+        },
+        {
+          "type": "gamedataQuality",
+          "name": "upgradeItemQuality",
+          "flags": 640
+        },
+        {
+          "type": "handle:gamedataItem_Record",
+          "name": "upgradeItemRecord",
+          "flags": 640
+        },
+        {
+          "type": "CyberwareUpgradeCostData",
+          "name": "costData",
+          "flags": 640
+        },
+        {
+          "type": "Bool",
+          "name": "updateOutputOnFailure",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::CheckDifficultyToPerkLevel;gamedataPerkTypeEGameplayChallengeLevelEntityID",
+      "shortName": "CheckDifficultyToPerkLevel",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gamedataPerkType",
+          "name": "perk",
+          "flags": 128
+        },
+        {
+          "type": "EGameplayChallengeLevel",
+          "name": "difficulty",
+          "flags": 128
+        },
+        {
+          "type": "entEntityID",
+          "name": "id",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::CheckDifficultyToStatValue;GameInstancegamedataStatTypeEGameplayChallengeLevelEntityID",
+      "shortName": "CheckDifficultyToStatValue",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "gi",
+          "flags": 128
+        },
+        {
+          "type": "gamedataStatType",
+          "name": "skill",
+          "flags": 128
+        },
+        {
+          "type": "EGameplayChallengeLevel",
+          "name": "difficulty",
+          "flags": 128
+        },
+        {
+          "type": "entEntityID",
+          "name": "id",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::CheckPerkPrereqs;gameItemDataGameObjectscript_ref<String>",
+      "shortName": "CheckPerkPrereqs",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameItemData",
+          "name": "itemData",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameObject",
+          "name": "owner",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:String",
+          "name": "perkRequiredName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::CheckPrereq;IPrereq_RecordGameObjectStatsObjectID",
+      "shortName": "CheckPrereq",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gamedataIPrereq_Record",
+          "name": "prereqRecord",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameObject",
+          "name": "target",
+          "flags": 128
+        },
+        {
+          "type": "gameStatsObjectID",
+          "name": "referenceStatsID",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::CheckPrereqs;script_ref<array<IPrereq_Record>>GameObjectStatsObjectID",
+      "shortName": "CheckPrereqs",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "script_ref:array:whandle:gamedataIPrereq_Record",
+          "name": "prereqs",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameObject",
+          "name": "target",
+          "flags": 128
+        },
+        {
+          "type": "gameStatsObjectID",
+          "name": "referenceStatsID",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::ConsumeItem;GameObjectInteractionChoiceEvent",
+      "shortName": "ConsumeItem",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "obj",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameinteractionsChoiceEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::ConvertCombinedValueToQuality;Int32",
+      "shortName": "ConvertCombinedValueToQuality",
+      "return": {
+        "type": "gamedataQuality",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "combinedValue",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::ConvertPlayerLevelToCyberwareQuality;FloatBool",
+      "shortName": "ConvertPlayerLevelToCyberwareQuality",
+      "return": {
+        "type": "gamedataQuality",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "Float",
+          "name": "playerLevel",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "includeAboveLegendary",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::ConvertQualityToCombinedValue;gamedataQuality",
+      "shortName": "ConvertQualityToCombinedValue",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gamedataQuality",
+          "name": "quality",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::ConvertQualityToItemPlusValue;gamedataQuality",
+      "shortName": "ConvertQualityToItemPlusValue",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gamedataQuality",
+          "name": "quality",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::ConvertQualityToNonPlusQuality;gamedataQuality",
+      "shortName": "ConvertQualityToNonPlusQuality",
+      "return": {
+        "type": "gamedataQuality",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gamedataQuality",
+          "name": "quality",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::CreateCombinedStatModifier;gamedataStatTypegameStatModifierTypegamedataStatTypegameCombinedStatOperationFloatgameStatObjectsRelation",
+      "shortName": "CreateCombinedStatModifier",
+      "return": {
+        "type": "handle:gameStatModifierData_Deprecated",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gamedataStatType",
+          "name": "statType",
+          "flags": 128
+        },
+        {
+          "type": "gameStatModifierType",
+          "name": "modType",
+          "flags": 128
+        },
+        {
+          "type": "gamedataStatType",
+          "name": "refStat",
+          "flags": 128
+        },
+        {
+          "type": "gameCombinedStatOperation",
+          "name": "opSymbol",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "value",
+          "flags": 128
+        },
+        {
+          "type": "gameStatObjectsRelation",
+          "name": "refObject",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::CreateCurveModifier;CurveStatModifier_Record",
+      "shortName": "CreateCurveModifier",
+      "return": {
+        "type": "handle:gameStatModifierData_Deprecated",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gamedataCurveStatModifier_Record",
+          "name": "statRecord",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::CreateReplaceEquipmentRequest;GameObjectItemIDItemIDItemID",
+      "shortName": "CreateReplaceEquipmentRequest",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "owner",
+          "flags": 128
+        },
+        {
+          "type": "gameItemID",
+          "name": "equippedItemID",
+          "flags": 128
+        },
+        {
+          "type": "gameItemID",
+          "name": "upgradeItemID",
+          "flags": 128
+        },
+        {
+          "type": "gameItemID",
+          "name": "partItemID",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::CreateSimpleQuickhackData;PlayerPuppetScriptedPuppetObjectAction_Record",
+      "shortName": "CreateSimpleQuickhackData",
+      "return": {
+        "type": "handle:QuickhackData",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:PlayerPuppet",
+          "name": "playerOwner",
+          "flags": 128
+        },
+        {
+          "type": "handle:ScriptedPuppet",
+          "name": "targetScriptedPuppet",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamedataObjectAction_Record",
+          "name": "quickhackActionRecord",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::CreateStatModifier;gamedataStatTypegameStatModifierTypeFloat",
+      "shortName": "CreateStatModifier",
+      "return": {
+        "type": "handle:gameStatModifierData_Deprecated",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gamedataStatType",
+          "name": "statType",
+          "flags": 128
+        },
+        {
+          "type": "gameStatModifierType",
+          "name": "modType",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::CreateStatModifierUsingCurve;gamedataStatTypegameStatModifierTypegamedataStatTypeCNameCName",
+      "shortName": "CreateStatModifierUsingCurve",
+      "return": {
+        "type": "handle:gameStatModifierData_Deprecated",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gamedataStatType",
+          "name": "statType",
+          "flags": 128
+        },
+        {
+          "type": "gameStatModifierType",
+          "name": "modType",
+          "flags": 128
+        },
+        {
+          "type": "gamedataStatType",
+          "name": "refStat",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "curveName",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "columnName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::CyberwareHasSideUpgrade;ItemIDItem_Record",
+      "shortName": "CyberwareHasSideUpgrade",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gameItemID",
+          "name": "itemID",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamedataItem_Record",
+          "name": "sideUpgradeItemRecord",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::CyberwareHasUpgrade;GameInstanceItemIDgamedataQualitygamedataQualityItem_Record",
+      "shortName": "CyberwareHasUpgrade",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "game",
+          "flags": 128
+        },
+        {
+          "type": "gameItemID",
+          "name": "itemID",
+          "flags": 128
+        },
+        {
+          "type": "gamedataQuality",
+          "name": "currentQuality",
+          "flags": 128
+        },
+        {
+          "type": "gamedataQuality",
+          "name": "desiredQuality",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamedataItem_Record",
+          "name": "upgradeItemRecord",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::DecrementQuickHackBlackboard;GameInstanceTweakDBID",
+      "shortName": "DecrementQuickHackBlackboard",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "gameInstance",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "actionID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::DoesPlayerHaveQuickHack;PlayerPuppetTweakDBID",
+      "shortName": "DoesPlayerHaveQuickHack",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:PlayerPuppet",
+          "name": "player",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "quickHackTweak",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::DropManyItems;GameInstanceGameObjectscript_ref<array<ItemModParams>>",
+      "shortName": "DropManyItems",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "gameInstance",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameObject",
+          "name": "obj",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:array:gameItemModParams",
+          "name": "items",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::ExtractItemsOfEquipArea;gamedataEquipmentAreascript_ref<array<gameItemData>>script_ref<array<gameItemData>>",
+      "shortName": "ExtractItemsOfEquipArea",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gamedataEquipmentArea",
+          "name": "type",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:array:whandle:gameItemData",
+          "name": "input",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:array:whandle:gameItemData",
+          "name": "output",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::ForceEquipItemOnPlayer;GameObjectTweakDBIDBool",
+      "shortName": "ForceEquipItemOnPlayer",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "puppet",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "itemTDBID",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "addToInv",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::ForceEquipPersonalLink;PlayerPuppet",
+      "shortName": "ForceEquipPersonalLink",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:PlayerPuppet",
+          "name": "player",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::ForceEquipStrongArms;PlayerPuppetBool",
+      "shortName": "ForceEquipStrongArms",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:PlayerPuppet",
+          "name": "player",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "instantStatChange",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::ForceItemTier;GameObjectgameItemDataCName",
+      "shortName": "ForceItemTier",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "obj",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameItemData",
+          "name": "itemData",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "forcedQuality",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::ForceUnequipItemFromPlayer;GameObjectTweakDBIDBool",
+      "shortName": "ForceUnequipItemFromPlayer",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "puppet",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "slotTDBID",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "removeItem",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::ForceUnequipPersonalLink;PlayerPuppet",
+      "shortName": "ForceUnequipPersonalLink",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:PlayerPuppet",
+          "name": "player",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::ForceUnequipStrongArms;PlayerPuppet",
+      "shortName": "ForceUnequipStrongArms",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:PlayerPuppet",
+          "name": "player",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetAmmoCount;GameObjectItemID",
+      "shortName": "GetAmmoCount",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "owner",
+          "flags": 128
+        },
+        {
+          "type": "gameItemID",
+          "name": "itemID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetAmmoCountValue;GameObjectItemID",
+      "shortName": "GetAmmoCountValue",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "owner",
+          "flags": 128
+        },
+        {
+          "type": "gameItemID",
+          "name": "itemID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetAttachmentSlotID;script_ref<String>",
+      "shortName": "GetAttachmentSlotID",
+      "return": {
+        "type": "TweakDBID",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "script_ref:String",
+          "name": "slot",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetAttachmentSlotIDs;",
+      "shortName": "GetAttachmentSlotIDs",
+      "return": {
+        "type": "array:TweakDBID",
+        "flags": 64
+      },
+      "flags": 33286
+    },
+    {
+      "fullName": "gameRPGManager::GetAttributeDataRecord;gamedataAttributeDataType",
+      "shortName": "GetAttributeDataRecord",
+      "return": {
+        "type": "handle:gamedataAttributeData_Record",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gamedataAttributeDataType",
+          "name": "type",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetAvailableSlotsForQuality;gameItemDatagamedataQuality",
+      "shortName": "GetAvailableSlotsForQuality",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gameItemData",
+          "name": "itemData",
+          "flags": 128
+        },
+        {
+          "type": "gamedataQuality",
+          "name": "quality",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetBluelineBuildCheckValue;GameObjectContentAssignment_RecordEGameplayChallengeLevel",
+      "shortName": "GetBluelineBuildCheckValue",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "player",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamedataContentAssignment_Record",
+          "name": "contentAssignment",
+          "flags": 128
+        },
+        {
+          "type": "EGameplayChallengeLevel",
+          "name": "difficulty",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetBluelinePaymentValue;GameObjectContentAssignment_RecordEGameplayChallengeLevel",
+      "shortName": "GetBluelinePaymentValue",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "player",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamedataContentAssignment_Record",
+          "name": "contentAssignment",
+          "flags": 128
+        },
+        {
+          "type": "EGameplayChallengeLevel",
+          "name": "difficulty",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetBuildScore;GameObjectPlayerBuild_Record",
+      "shortName": "GetBuildScore",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "player",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamedataPlayerBuild_Record",
+          "name": "buildToCheck",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetBumpedQuality;gamedataQuality",
+      "shortName": "GetBumpedQuality",
+      "return": {
+        "type": "gamedataQuality",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gamedataQuality",
+          "name": "quality",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetCharacterWeakspotCount;gamePuppet",
+      "shortName": "GetCharacterWeakspotCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gamePuppet",
+          "name": "puppet",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetCheckValue;GameInstanceFloatEGameplayChallengeLevel",
+      "shortName": "GetCheckValue",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "gi",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "powerLevel",
+          "flags": 128
+        },
+        {
+          "type": "EGameplayChallengeLevel",
+          "name": "difficulty",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetCombinedItemQualityValue;GameInstanceItemID",
+      "shortName": "GetCombinedItemQualityValue",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "game",
+          "flags": 128
+        },
+        {
+          "type": "gameItemID",
+          "name": "itemID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetCraftingMaterialRecord;gamedataQualityBool",
+      "shortName": "GetCraftingMaterialRecord",
+      "return": {
+        "type": "handle:gamedataItem_Record",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gamedataQuality",
+          "name": "quality",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "isQuickhack",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetCyberwareUpgradeCost;Item_Record",
+      "shortName": "GetCyberwareUpgradeCost",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gamedataItem_Record",
+          "name": "itemRecord",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetCyberwareUpgradeData;GameObjectUIInventoryItemItem_RecordCyberwareUpgradeCostDataUint32UIInventoryScriptableSystemBool",
+      "shortName": "GetCyberwareUpgradeData",
+      "return": {
+        "type": "handle:RipperdocTokenPopupData",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "owner",
+          "flags": 128
+        },
+        {
+          "type": "whandle:UIInventoryItem",
+          "name": "itemData",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamedataItem_Record",
+          "name": "upgradeItemRecord",
+          "flags": 128
+        },
+        {
+          "type": "CyberwareUpgradeCostData",
+          "name": "costData",
+          "flags": 128
+        },
+        {
+          "type": "Uint32",
+          "name": "seed",
+          "flags": 128
+        },
+        {
+          "type": "whandle:UIInventoryScriptableSystem",
+          "name": "inventorySystem",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "useMultichoice",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetCyberwareUpgradeItemDataWithOffset;GameObjectItem_RecordTweakDBIDUint32Int32",
+      "shortName": "GetCyberwareUpgradeItemDataWithOffset",
+      "return": {
+        "type": "handle:gameItemData",
+        "flags": 64
+      },
+      "flags": 32902,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "owner",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamedataItem_Record",
+          "name": "upgradeItemRecord",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "statsShardTDBID",
+          "flags": 128
+        },
+        {
+          "type": "Uint32",
+          "name": "seed",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "offset",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetCyberwareUpgradeShardCount;GameObjectgamedataQuality",
+      "shortName": "GetCyberwareUpgradeShardCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "owner",
+          "flags": 128
+        },
+        {
+          "type": "gamedataQuality",
+          "name": "quality",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetCyberwareUpgradeShardID;gamedataQuality",
+      "shortName": "GetCyberwareUpgradeShardID",
+      "return": {
+        "type": "TweakDBID",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gamedataQuality",
+          "name": "quality",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetCyberwareUpgradeShardItemData;GameObjectgamedataQuality",
+      "shortName": "GetCyberwareUpgradeShardItemData",
+      "return": {
+        "type": "whandle:gameItemData",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "owner",
+          "flags": 128
+        },
+        {
+          "type": "gamedataQuality",
+          "name": "quality",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetDominatingDamageType;GameInstancegameItemData",
+      "shortName": "GetDominatingDamageType",
+      "return": {
+        "type": "gamedataDamageType",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "gi",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameItemData",
+          "name": "itemData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetEquipRequirements;GameObjectgameItemData",
+      "shortName": "GetEquipRequirements",
+      "return": {
+        "type": "array:gameSItemStackRequirementData",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "owner",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameItemData",
+          "name": "itemData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetFirstUnmetEquipRequirement;GameObjectscript_ref<array<SItemStackRequirementData>>",
+      "shortName": "GetFirstUnmetEquipRequirement",
+      "return": {
+        "type": "gameSItemStackRequirementData",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "owner",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:array:gameSItemStackRequirementData",
+          "name": "equipRequirements",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetHighestResistances;GameObject",
+      "shortName": "GetHighestResistances",
+      "return": {
+        "type": "array:gameStatTotalValue",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "obj",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetItemActions;ItemID",
+      "shortName": "GetItemActions",
+      "return": {
+        "type": "array:whandle:gamedataObjectAction_Record",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gameItemID",
+          "name": "itemID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetItemCategory;ItemID",
+      "shortName": "GetItemCategory",
+      "return": {
+        "type": "gamedataItemCategory",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gameItemID",
+          "name": "itemID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetItemFromInventory;GameObjectTweakDBID",
+      "shortName": "GetItemFromInventory",
+      "return": {
+        "type": "gameItemID",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "object",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetItemPlus;gameItemData",
+      "shortName": "GetItemPlus",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameItemData",
+          "name": "itemData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetItemQuality;Float",
+      "shortName": "GetItemQuality",
+      "return": {
+        "type": "gamedataQuality",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "Float",
+          "name": "qualityStat",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetItemQuality;InnerItemData",
+      "shortName": "GetItemQuality",
+      "return": {
+        "type": "gamedataQuality",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gameInnerItemData",
+          "name": "itemData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetItemQuality;gameItemData",
+      "shortName": "GetItemQuality",
+      "return": {
+        "type": "gamedataQuality",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gameItemData",
+          "name": "itemData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetItemQualityFromRecord;Item_Record",
+      "shortName": "GetItemQualityFromRecord",
+      "return": {
+        "type": "gamedataQuality",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gamedataItem_Record",
+          "name": "itemRecord",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetItemRecord;ItemID",
+      "shortName": "GetItemRecord",
+      "return": {
+        "type": "handle:gamedataItem_Record",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gameItemID",
+          "name": "itemID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetItemStackWeight;GameObjectgameItemData",
+      "shortName": "GetItemStackWeight",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "owner",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameItemData",
+          "name": "itemData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetItemTierForUpgrades;gameItemData",
+      "shortName": "GetItemTierForUpgrades",
+      "return": {
+        "type": "gamedataQuality",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gameItemData",
+          "name": "itemData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetItemTierForUpgrades;Float",
+      "shortName": "GetItemTierForUpgrades",
+      "return": {
+        "type": "gamedataQuality",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "Float",
+          "name": "tierStat",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetItemTierFromName;CName",
+      "shortName": "GetItemTierFromName",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "CName",
+          "name": "tierName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetItemType;ItemID",
+      "shortName": "GetItemType",
+      "return": {
+        "type": "gamedataItemType",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gameItemID",
+          "name": "itemID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetItemWeight;gameItemData",
+      "shortName": "GetItemWeight",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameItemData",
+          "name": "itemData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetLevelPercentage;GameObject",
+      "shortName": "GetLevelPercentage",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 34310,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "object",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetListOfRandomStatsFromEvolutionType;gamedataWeaponEvolution",
+      "shortName": "GetListOfRandomStatsFromEvolutionType",
+      "return": {
+        "type": "array:whandle:gamedataStat_Record",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gamedataWeaponEvolution",
+          "name": "evolution",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetLowestResistances;GameObject",
+      "shortName": "GetLowestResistances",
+      "return": {
+        "type": "array:gameStatTotalValue",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "obj",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetMaxStats;GameObjectscript_ref<array<gamedataStatType>>",
+      "shortName": "GetMaxStats",
+      "return": {
+        "type": "array:gameStatTotalValue",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "obj",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:array:gamedataStatType",
+          "name": "stats",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetMinStats;GameObjectscript_ref<array<gamedataStatType>>",
+      "shortName": "GetMinStats",
+      "return": {
+        "type": "array:gameStatTotalValue",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "obj",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:array:gamedataStatType",
+          "name": "stats",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetModsSlotIDs;gamedataItemType",
+      "shortName": "GetModsSlotIDs",
+      "return": {
+        "type": "array:TweakDBID",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gamedataItemType",
+          "name": "type",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetMonoWireQuickHackData;PlayerPuppetScriptedPuppetWeaponObject",
+      "shortName": "GetMonoWireQuickHackData",
+      "return": {
+        "type": "handle:QuickhackData",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:PlayerPuppet",
+          "name": "playerOwner",
+          "flags": 128
+        },
+        {
+          "type": "handle:ScriptedPuppet",
+          "name": "targetScriptedPuppet",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameweaponObject",
+          "name": "weaponObject",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetMonoWireQuickhackRecord;WeaponObject",
+      "shortName": "GetMonoWireQuickhackRecord",
+      "return": {
+        "type": "handle:gamedataItem_Record",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameweaponObject",
+          "name": "weaponObject",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetNestedPrereqs;script_ref<array<IPrereq_Record>>",
+      "shortName": "GetNestedPrereqs",
+      "return": {
+        "type": "array:handle:gamedataStatPrereq_Record",
+        "flags": 64
+      },
+      "flags": 32902,
+      "params": [
+        {
+          "type": "script_ref:array:whandle:gamedataIPrereq_Record",
+          "name": "prereqs",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetNewPerkRecord;gamedataNewPerkType",
+      "shortName": "GetNewPerkRecord",
+      "return": {
+        "type": "handle:gamedataNewPerk_Record",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gamedataNewPerkType",
+          "name": "type",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetNextItemQuality;gameItemData",
+      "shortName": "GetNextItemQuality",
+      "return": {
+        "type": "gamedataQuality",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gameItemData",
+          "name": "itemData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetPlayerCurrentHealthPercent;GameInstance",
+      "shortName": "GetPlayerCurrentHealthPercent",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "gi",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetPlayerNextLevelBasedOnRandomQuality;gamedataQuality",
+      "shortName": "GetPlayerNextLevelBasedOnRandomQuality",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gamedataQuality",
+          "name": "quality",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetPlayerQuickHackList;PlayerPuppet",
+      "shortName": "GetPlayerQuickHackList",
+      "return": {
+        "type": "array:TweakDBID",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:PlayerPuppet",
+          "name": "player",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetPlayerQuickHackListWithQuality;PlayerPuppet",
+      "shortName": "GetPlayerQuickHackListWithQuality",
+      "return": {
+        "type": "array:PlayerQuickhackData",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:PlayerPuppet",
+          "name": "player",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetPowerLevelFromContentAssignment;GameInstanceTweakDBID",
+      "shortName": "GetPowerLevelFromContentAssignment",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "gi",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "contentAssignmentID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetProficiencyRecord;gamedataProficiencyType",
+      "shortName": "GetProficiencyRecord",
+      "return": {
+        "type": "handle:gamedataProficiency_Record",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gamedataProficiencyType",
+          "name": "type",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetRandomizedGadget;ScriptedPuppet",
+      "shortName": "GetRandomizedGadget",
+      "return": {
+        "type": "TweakDBID",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:ScriptedPuppet",
+          "name": "puppet",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetRandomizedHealingConsumable;ScriptedPuppet",
+      "shortName": "GetRandomizedHealingConsumable",
+      "return": {
+        "type": "TweakDBID",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:ScriptedPuppet",
+          "name": "puppet",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetRarityMultiplier;NPCPuppetCName",
+      "shortName": "GetRarityMultiplier",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:NPCPuppet",
+          "name": "puppet",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "curveName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetResistanceTypeFromDamageType;gamedataDamageType",
+      "shortName": "GetResistanceTypeFromDamageType",
+      "return": {
+        "type": "gamedataStatType",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gamedataDamageType",
+          "name": "damageType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetRetrievableAttachments;gameItemData",
+      "shortName": "GetRetrievableAttachments",
+      "return": {
+        "type": "array:ItemAttachments",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gameItemData",
+          "name": "itemData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetScannerResistanceDetails;GameObjectgamedataStatTypeGameObject",
+      "shortName": "GetScannerResistanceDetails",
+      "return": {
+        "type": "ScannerStatDetails",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "obj",
+          "flags": 128
+        },
+        {
+          "type": "gamedataStatType",
+          "name": "statType",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameObject",
+          "name": "player",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetStatRecord;gamedataStatType",
+      "shortName": "GetStatRecord",
+      "return": {
+        "type": "handle:gamedataStat_Record",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gamedataStatType",
+          "name": "type",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetStatValueFromObject;GameInstanceGameObjectgamedataStatType",
+      "shortName": "GetStatValueFromObject",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "gi",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameObject",
+          "name": "object",
+          "flags": 128
+        },
+        {
+          "type": "gamedataStatType",
+          "name": "stat",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetStatValues;GameObjectscript_ref<array<gamedataStatType>>",
+      "shortName": "GetStatValues",
+      "return": {
+        "type": "array:gameStatTotalValue",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "obj",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:array:gamedataStatType",
+          "name": "stats",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetTraitRecord;gamedataTraitType",
+      "shortName": "GetTraitRecord",
+      "return": {
+        "type": "handle:gamedataTrait_Record",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gamedataTraitType",
+          "name": "type",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetVendorWareRequirement;GameInstanceVendorWare_RecordStatsObjectID",
+      "shortName": "GetVendorWareRequirement",
+      "return": {
+        "type": "gameSItemStackRequirementData",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "game",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gamedataVendorWare_Record",
+          "name": "record",
+          "flags": 128
+        },
+        {
+          "type": "gameStatsObjectID",
+          "name": "itemStatsID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetWeaponAmmoTDBID;ItemID",
+      "shortName": "GetWeaponAmmoTDBID",
+      "return": {
+        "type": "TweakDBID",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gameItemID",
+          "name": "weaponID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GetWeaponEvolution;ItemID",
+      "shortName": "GetWeaponEvolution",
+      "return": {
+        "type": "gamedataWeaponEvolution",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gameItemID",
+          "name": "itemID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GiveReward;GameInstanceTweakDBIDStatsObjectIDFloat",
+      "shortName": "GiveReward",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "gi",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "rewardID",
+          "flags": 128
+        },
+        {
+          "type": "gameStatsObjectID",
+          "name": "target",
+          "flags": 1152
+        },
+        {
+          "type": "Float",
+          "name": "moneyMultiplier",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GiveReward;GameInstanceTweakDBIDInt32StatsObjectIDFloat",
+      "shortName": "GiveReward",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "gi",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "rewardID",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "amount",
+          "flags": 128
+        },
+        {
+          "type": "gameStatsObjectID",
+          "name": "target",
+          "flags": 1152
+        },
+        {
+          "type": "Float",
+          "name": "moneyMultiplier",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::GiveScavengeReward;GameInstanceTweakDBIDEntityID",
+      "shortName": "GiveScavengeReward",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "gi",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "rewardID",
+          "flags": 128
+        },
+        {
+          "type": "entEntityID",
+          "name": "scavengeTargetEntityID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::HandleBuyShardPopupClosed;GameObjectItemIDRipperdocTokenPopupCloseData",
+      "shortName": "HandleBuyShardPopupClosed",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "owner",
+          "flags": 128
+        },
+        {
+          "type": "gameItemID",
+          "name": "equippedItemId",
+          "flags": 128
+        },
+        {
+          "type": "handle:RipperdocTokenPopupCloseData",
+          "name": "resultData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::HasDownloadFundsAction;ItemID",
+      "shortName": "HasDownloadFundsAction",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gameItemID",
+          "name": "itemID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::HasItem;GameObjectItemID",
+      "shortName": "HasItem",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "obj",
+          "flags": 128
+        },
+        {
+          "type": "gameItemID",
+          "name": "id",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::HasItem;GameObjectTweakDBID",
+      "shortName": "HasItem",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "obj",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "id",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::HasSmartLinkRequirement;gameItemData",
+      "shortName": "HasSmartLinkRequirement",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameItemData",
+          "name": "itemData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::HasStatFlag;GameObjectgamedataStatType",
+      "shortName": "HasStatFlag",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "owner",
+          "flags": 128
+        },
+        {
+          "type": "gamedataStatType",
+          "name": "flag",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::HealPuppetAfterQuickhack;GameInstanceGameObject",
+      "shortName": "HealPuppetAfterQuickhack",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "gi",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameObject",
+          "name": "executor",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::IncrementQuickHackBlackboard;GameInstanceTweakDBID",
+      "shortName": "IncrementQuickHackBlackboard",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "gameInstance",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "actionID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::InjectStatModifier;GameInstanceGameObjectgameStatModifierData",
+      "shortName": "InjectStatModifier",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "gi",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameObject",
+          "name": "obj",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameStatModifierData_Deprecated",
+          "name": "modifier",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::InjectStatModifierToItem;GameInstancegameItemDatagameStatModifierData",
+      "shortName": "InjectStatModifierToItem",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "gi",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameItemData",
+          "name": "itemData",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameStatModifierData_Deprecated",
+          "name": "modifier",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::IsClothingMod;gamedataItemType",
+      "shortName": "IsClothingMod",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gamedataItemType",
+          "name": "type",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::IsClothingMod;ItemID",
+      "shortName": "IsClothingMod",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gameItemID",
+          "name": "itemID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::IsDamageStat;gamedataStatType",
+      "shortName": "IsDamageStat",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gamedataStatType",
+          "name": "stat",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::IsInventoryEmpty;GameObject",
+      "shortName": "IsInventoryEmpty",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "object",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::IsItemAdaptiveStemCells;TweakDBID",
+      "shortName": "IsItemAdaptiveStemCells",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "TweakDBID",
+          "name": "itemID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::IsItemClothing;ItemID",
+      "shortName": "IsItemClothing",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gameItemID",
+          "name": "itemID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::IsItemCrafted;gameItemData",
+      "shortName": "IsItemCrafted",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gameItemData",
+          "name": "itemData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::IsItemCrafted;GameInstanceItemID",
+      "shortName": "IsItemCrafted",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "gi",
+          "flags": 128
+        },
+        {
+          "type": "gameItemID",
+          "name": "itemId",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::IsItemCyberware;ItemID",
+      "shortName": "IsItemCyberware",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gameItemID",
+          "name": "itemID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::IsItemEffectivelyIdentical;ItemIDItemID",
+      "shortName": "IsItemEffectivelyIdentical",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gameItemID",
+          "name": "itemID1",
+          "flags": 128
+        },
+        {
+          "type": "gameItemID",
+          "name": "itemID2",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::IsItemEquipped;GameObjectItemID",
+      "shortName": "IsItemEquipped",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "owner",
+          "flags": 128
+        },
+        {
+          "type": "gameItemID",
+          "name": "itemID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::IsItemGadget;ItemID",
+      "shortName": "IsItemGadget",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gameItemID",
+          "name": "itemID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::IsItemIconic;gameItemData",
+      "shortName": "IsItemIconic",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gameItemData",
+          "name": "itemData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::IsItemIconic;InnerItemData",
+      "shortName": "IsItemIconic",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gameInnerItemData",
+          "name": "itemData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::IsItemMaxLevel;gameItemData",
+      "shortName": "IsItemMaxLevel",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gameItemData",
+          "name": "itemData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::IsItemMaxTier;gameItemData",
+      "shortName": "IsItemMaxTier",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gameItemData",
+          "name": "itemData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::IsItemMisc;ItemID",
+      "shortName": "IsItemMisc",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gameItemID",
+          "name": "itemID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::IsItemProgram;ItemID",
+      "shortName": "IsItemProgram",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gameItemID",
+          "name": "itemID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::IsItemSingleInstance;gameItemData",
+      "shortName": "IsItemSingleInstance",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gameItemData",
+          "name": "itemData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::IsItemTypeCyberwareWeapon;gamedataItemType",
+      "shortName": "IsItemTypeCyberwareWeapon",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gamedataItemType",
+          "name": "type",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::IsItemWeapon;ItemID",
+      "shortName": "IsItemWeapon",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gameItemID",
+          "name": "itemID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::IsMuzzleAttachment;gamedataItemType",
+      "shortName": "IsMuzzleAttachment",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gamedataItemType",
+          "name": "type",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::IsNonModifableSlot;TweakDBID",
+      "shortName": "IsNonModifableSlot",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32902,
+      "params": [
+        {
+          "type": "TweakDBID",
+          "name": "slot",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::IsRicochetChanceEnabled;GameInstanceGameObjectItemID",
+      "shortName": "IsRicochetChanceEnabled",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "gi",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameObject",
+          "name": "owner",
+          "flags": 128
+        },
+        {
+          "type": "gameItemID",
+          "name": "itemID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::IsScopeAttachment;ItemID",
+      "shortName": "IsScopeAttachment",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gameItemID",
+          "name": "itemID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::IsScopeAttachment;gamedataItemType",
+      "shortName": "IsScopeAttachment",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gamedataItemType",
+          "name": "type",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::IsTechPierceEnabled;GameInstanceGameObjectItemID",
+      "shortName": "IsTechPierceEnabled",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "gi",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameObject",
+          "name": "owner",
+          "flags": 128
+        },
+        {
+          "type": "gameItemID",
+          "name": "itemID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::IsWeaponMelee;gamedataItemType",
+      "shortName": "IsWeaponMelee",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gamedataItemType",
+          "name": "type",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::IsWeaponMod;gamedataItemType",
+      "shortName": "IsWeaponMod",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gamedataItemType",
+          "name": "type",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::IsWeaponMod;ItemID",
+      "shortName": "IsWeaponMod",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gameItemID",
+          "name": "itemID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::ItemQualityEnumToValue;gamedataQuality",
+      "shortName": "ItemQualityEnumToValue",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gamedataQuality",
+          "name": "q",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::ItemQualityNameToValue;CName",
+      "shortName": "ItemQualityNameToValue",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "CName",
+          "name": "q",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::PrepareGameEffectAttack;GameInstanceGameObjectGameObjectTweakDBIDVector4array<SHitFlag>GameObjectFloat",
+      "shortName": "PrepareGameEffectAttack",
+      "return": {
+        "type": "handle:gameAttack_GameEffect",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "gi",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameObject",
+          "name": "instigator",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameObject",
+          "name": "source",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "attackName",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "position",
+          "flags": 1152
+        },
+        {
+          "type": "array:SHitFlag",
+          "name": "hitFlags",
+          "flags": 1152
+        },
+        {
+          "type": "handle:gameObject",
+          "name": "target",
+          "flags": 1152
+        },
+        {
+          "type": "Float",
+          "name": "tickRateOverride",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::ProcessOnLootedPackages;GameObjectItemID",
+      "shortName": "ProcessOnLootedPackages",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "owner",
+          "flags": 128
+        },
+        {
+          "type": "gameItemID",
+          "name": "itemID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::ProcessReadAction;InteractionChoiceEvent",
+      "shortName": "ProcessReadAction",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameinteractionsChoiceEvent",
+          "name": "choice",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::RemoveAbility;GameObjectGameplayAbility_Record",
+      "shortName": "RemoveAbility",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "owner",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gamedataGameplayAbility_Record",
+          "name": "ability",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::RemoveAbilityGroup;GameObjectGameplayAbilityGroup_Record",
+      "shortName": "RemoveAbilityGroup",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "owner",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gamedataGameplayAbilityGroup_Record",
+          "name": "group",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::RemoveDuplicatedHacks;script_ref<array<PlayerQuickhackData>>",
+      "shortName": "RemoveDuplicatedHacks",
+      "flags": 32902,
+      "params": [
+        {
+          "type": "script_ref:array:PlayerQuickhackData",
+          "name": "commands",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::RemoveDuplicatedHacks;script_ref<array<ObjectAction_Record>>script_ref<array<ObjectAction_Record>>",
+      "shortName": "RemoveDuplicatedHacks",
+      "flags": 32902,
+      "params": [
+        {
+          "type": "script_ref:array:whandle:gamedataObjectAction_Record",
+          "name": "deck",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:array:whandle:gamedataObjectAction_Record",
+          "name": "splinter",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::RemoveEffectorsArray;GameObjectscript_ref<array<Effector_Record>>",
+      "shortName": "RemoveEffectorsArray",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "owner",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:array:whandle:gamedataEffector_Record",
+          "name": "arr",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::RemoveGLP;GameObjectGameplayLogicPackage_Record",
+      "shortName": "RemoveGLP",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "owner",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gamedataGameplayLogicPackage_Record",
+          "name": "package",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::RemoveStatModifierGroups;GameObjectscript_ref<array<StatModifierGroup_Record>>",
+      "shortName": "RemoveStatModifierGroups",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "owner",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:array:whandle:gamedataStatModifierGroup_Record",
+          "name": "arr",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::ResistancesList;",
+      "shortName": "ResistancesList",
+      "return": {
+        "type": "array:gamedataStatType",
+        "flags": 64
+      },
+      "flags": 33286
+    },
+    {
+      "fullName": "gameRPGManager::ReturnRetrievableWeaponMods;gameItemDataGameObject",
+      "shortName": "ReturnRetrievableWeaponMods",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gameItemData",
+          "name": "itemData",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameObject",
+          "name": "owner",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::SendAddAchievementRequest;GameInstancegamedataAchievementAchievement_Record",
+      "shortName": "SendAddAchievementRequest",
+      "flags": 32902,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "gi",
+          "flags": 128
+        },
+        {
+          "type": "gamedataAchievement",
+          "name": "achievement",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gamedataAchievement_Record",
+          "name": "achievementRecord",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::SendPhotoModeItemUnlockRequest;GameInstancePhotoModeItem_Record",
+      "shortName": "SendPhotoModeItemUnlockRequest",
+      "flags": 32902,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "gi",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gamedataPhotoModeItem_Record",
+          "name": "photoModeItm",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::SetDroppedWeaponQuality;ScriptedPuppetgameItemData",
+      "shortName": "SetDroppedWeaponQuality",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:ScriptedPuppet",
+          "name": "npc",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameItemData",
+          "name": "itemData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::SetQualityBasedOnLevel;GameObject",
+      "shortName": "SetQualityBasedOnLevel",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "object",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::ShouldShowCWChoice;GameObjectUIInventoryItem",
+      "shortName": "ShouldShowCWChoice",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "owner",
+          "flags": 128
+        },
+        {
+          "type": "whandle:UIInventoryItem",
+          "name": "itemData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::StatRecordToModifier;StatModifier_Record",
+      "shortName": "StatRecordToModifier",
+      "return": {
+        "type": "handle:gameStatModifierData_Deprecated",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gamedataStatModifier_Record",
+          "name": "statRecord",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::ToggleHolsteredArmAppearance;GameObjectBool",
+      "shortName": "ToggleHolsteredArmAppearance",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "puppet",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "setHoleInArm",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::ToggleLootHighlight;GameObjectBool",
+      "shortName": "ToggleLootHighlight",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "obj",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "enable",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameRPGManager::TogglePersonalLinkAppearance;GameObject",
+      "shortName": "TogglePersonalLinkAppearance",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "puppet",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

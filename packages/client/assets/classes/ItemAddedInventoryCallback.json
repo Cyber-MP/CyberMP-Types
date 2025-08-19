@@ -1,0 +1,47 @@
+{
+  "parent": "gameInventoryScriptCallback",
+  "name": "ItemAddedInventoryCallback",
+  "flags": 4,
+  "props": [
+    {
+      "type": "whandle:ItemsNotificationQueue",
+      "name": "notificationQueue",
+      "flags": 4297326624
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "GetItemRarity;gameItemData",
+      "shortName": "GetItemRarity",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "whandle:gameItemData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnItemNotification;ItemIDgameItemData",
+      "shortName": "OnItemNotification",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "gameItemID",
+          "name": "item",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameItemData",
+          "name": "itemData",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

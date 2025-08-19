@@ -1,0 +1,186 @@
+{
+  "parent": "inkWidgetLogicController",
+  "name": "CheckYaibaOption",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkWidgetReference",
+      "name": "checkBox",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "checkMark",
+      "flags": 4297130017
+    },
+    {
+      "type": "MuramasaOption",
+      "name": "option",
+      "flags": 4297130017
+    },
+    {
+      "type": "Float",
+      "name": "defaultOpacity",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isChecked",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isHovered",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isEnabled",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:YaibaOptionPreview",
+      "name": "previewController",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnHoverOut",
+      "shortName": "OnHoverOut",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnHoverOver",
+      "shortName": "OnHoverOver",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRelease",
+      "shortName": "OnRelease",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetOption;",
+      "shortName": "GetOption",
+      "return": {
+        "type": "MuramasaOption",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "GetRemovalAnim;",
+      "shortName": "GetRemovalAnim",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetSelectionAnim;",
+      "shortName": "GetSelectionAnim",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "Initialize;GameInstanceinkWidgetCName",
+      "shortName": "Initialize",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "gameInstance",
+          "flags": 128
+        },
+        {
+          "type": "whandle:inkWidget",
+          "name": "preview",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "fact",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsChecked;",
+      "shortName": "IsChecked",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "IsHovered;",
+      "shortName": "IsHovered",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "RefreshVisibility;",
+      "shortName": "RefreshVisibility",
+      "flags": 32900
+    },
+    {
+      "fullName": "SetEnabled;Bool",
+      "shortName": "SetEnabled",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "enabled",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Uninitialize;",
+      "shortName": "Uninitialize",
+      "flags": 33284
+    }
+  ]
+}

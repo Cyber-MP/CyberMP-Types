@@ -1,0 +1,267 @@
+{
+  "parent": "gameScriptableComponent",
+  "name": "SimpleTargetManager",
+  "flags": 4,
+  "funcs": [
+    {
+      "fullName": "SimpleTargetManager::AddTarget;script_ref<array<Target>>GameObjectBoolBool",
+      "shortName": "AddTarget",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "script_ref:array:handle:Target",
+          "name": "targetsList",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameObject",
+          "name": "goTarget",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "isInteresting",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "isVisible",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SimpleTargetManager::GetFirstInterestingTarget;script_ref<array<Target>>",
+      "shortName": "GetFirstInterestingTarget",
+      "return": {
+        "type": "handle:Target",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "script_ref:array:handle:Target",
+          "name": "targetsList",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SimpleTargetManager::GetFirstInterestingTargetObject;script_ref<array<Target>>",
+      "shortName": "GetFirstInterestingTargetObject",
+      "return": {
+        "type": "whandle:gameObject",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "script_ref:array:handle:Target",
+          "name": "targetsList",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SimpleTargetManager::GetSpecificTarget;script_ref<array<Target>>GameObject",
+      "shortName": "GetSpecificTarget",
+      "return": {
+        "type": "handle:Target",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "script_ref:array:handle:Target",
+          "name": "targetsList",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameObject",
+          "name": "target",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SimpleTargetManager::GetSpecificTarget;script_ref<array<Target>>EntityID",
+      "shortName": "GetSpecificTarget",
+      "return": {
+        "type": "handle:Target",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "script_ref:array:handle:Target",
+          "name": "targetsList",
+          "flags": 128
+        },
+        {
+          "type": "entEntityID",
+          "name": "targetID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SimpleTargetManager::GetSpecificTarget;script_ref<array<Target>>Int32",
+      "shortName": "GetSpecificTarget",
+      "return": {
+        "type": "handle:Target",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "script_ref:array:handle:Target",
+          "name": "targetsList",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SimpleTargetManager::HasInterestingTargets;script_ref<array<Target>>",
+      "shortName": "HasInterestingTargets",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "script_ref:array:handle:Target",
+          "name": "targetsList",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SimpleTargetManager::IsTargetAlreadyAdded;script_ref<array<Target>>GameObject",
+      "shortName": "IsTargetAlreadyAdded",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "script_ref:array:handle:Target",
+          "name": "targetsList",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameObject",
+          "name": "gameObject",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SimpleTargetManager::IsTargetAlreadyAdded;script_ref<array<Target>>Target",
+      "shortName": "IsTargetAlreadyAdded",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "script_ref:array:handle:Target",
+          "name": "targets",
+          "flags": 128
+        },
+        {
+          "type": "handle:Target",
+          "name": "targetToCheck",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SimpleTargetManager::IsTargetVisible;script_ref<array<Target>>GameObject",
+      "shortName": "IsTargetVisible",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "script_ref:array:handle:Target",
+          "name": "targetsList",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameObject",
+          "name": "gameObject",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SimpleTargetManager::RemoveAllTargets;script_ref<array<Target>>",
+      "shortName": "RemoveAllTargets",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "script_ref:array:handle:Target",
+          "name": "targetsList",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SimpleTargetManager::RemoveTarget;script_ref<array<Target>>GameObject",
+      "shortName": "RemoveTarget",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "script_ref:array:handle:Target",
+          "name": "targetsList",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameObject",
+          "name": "targetToRemove",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SimpleTargetManager::SetTargetVisible;script_ref<array<Target>>GameObjectBool",
+      "shortName": "SetTargetVisible",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "script_ref:array:handle:Target",
+          "name": "targetsList",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameObject",
+          "name": "targetToRemove",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "isVisible",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

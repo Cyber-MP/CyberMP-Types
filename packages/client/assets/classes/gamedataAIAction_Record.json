@@ -1,0 +1,1027 @@
+{
+  "parent": "gamedataAINode_Record",
+  "name": "gamedataAIAction_Record",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "Ability",
+      "shortName": "Ability",
+      "return": {
+        "type": "whandle:gamedataGameplayAbility_Record",
+        "flags": 64
+      },
+      "index": 2469,
+      "flags": 1
+    },
+    {
+      "fullName": "AbilityHandle",
+      "shortName": "AbilityHandle",
+      "return": {
+        "type": "handle:gamedataGameplayAbility_Record",
+        "flags": 64
+      },
+      "index": 2470,
+      "flags": 1
+    },
+    {
+      "fullName": "AllowBlendDuration",
+      "shortName": "AllowBlendDuration",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 2523,
+      "flags": 1
+    },
+    {
+      "fullName": "AllowBlendPercCap",
+      "shortName": "AllowBlendPercCap",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 2525,
+      "flags": 1
+    },
+    {
+      "fullName": "AnimData",
+      "shortName": "AnimData",
+      "return": {
+        "type": "whandle:gamedataAIActionAnimData_Record",
+        "flags": 64
+      },
+      "index": 2453,
+      "flags": 1
+    },
+    {
+      "fullName": "AnimDataHandle",
+      "shortName": "AnimDataHandle",
+      "return": {
+        "type": "handle:gamedataAIActionAnimData_Record",
+        "flags": 64
+      },
+      "index": 2454,
+      "flags": 1
+    },
+    {
+      "fullName": "AnimationWrapperOverrides",
+      "shortName": "AnimationWrapperOverrides",
+      "return": {
+        "type": "array:CName",
+        "flags": 64
+      },
+      "index": 2519,
+      "flags": 1
+    },
+    {
+      "fullName": "AnimationWrapperOverridesContains",
+      "shortName": "AnimationWrapperOverridesContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 2522,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Commands",
+      "shortName": "Commands",
+      "return": {
+        "type": "array:CName",
+        "flags": 64
+      },
+      "index": 2510,
+      "flags": 1
+    },
+    {
+      "fullName": "CommandsContains",
+      "shortName": "CommandsContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 2513,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CompleteWithFailure",
+      "shortName": "CompleteWithFailure",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 2531,
+      "flags": 1
+    },
+    {
+      "fullName": "Cooldowns",
+      "shortName": "Cooldowns",
+      "index": 2495,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataAIActionCooldown_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "CooldownsContains",
+      "shortName": "CooldownsContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 2499,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataAIActionCooldown_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "DisableAction",
+      "shortName": "DisableAction",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 2528,
+      "flags": 1
+    },
+    {
+      "fullName": "DisableActionInMultiplayer",
+      "shortName": "DisableActionInMultiplayer",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 2530,
+      "flags": 1
+    },
+    {
+      "fullName": "FailIfAnimationNotStreamedIn",
+      "shortName": "FailIfAnimationNotStreamedIn",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 2527,
+      "flags": 1
+    },
+    {
+      "fullName": "GetAnimationWrapperOverridesCount",
+      "shortName": "GetAnimationWrapperOverridesCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 2520,
+      "flags": 1
+    },
+    {
+      "fullName": "GetAnimationWrapperOverridesItem",
+      "shortName": "GetAnimationWrapperOverridesItem",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "index": 2521,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetCommandsCount",
+      "shortName": "GetCommandsCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 2511,
+      "flags": 1
+    },
+    {
+      "fullName": "GetCommandsItem",
+      "shortName": "GetCommandsItem",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "index": 2512,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetCooldownsCount",
+      "shortName": "GetCooldownsCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 2496,
+      "flags": 1
+    },
+    {
+      "fullName": "GetCooldownsItem",
+      "shortName": "GetCooldownsItem",
+      "return": {
+        "type": "whandle:gamedataAIActionCooldown_Record",
+        "flags": 64
+      },
+      "index": 2497,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetCooldownsItemHandle",
+      "shortName": "GetCooldownsItemHandle",
+      "return": {
+        "type": "handle:gamedataAIActionCooldown_Record",
+        "flags": 64
+      },
+      "index": 2498,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetInitCooldownsCount",
+      "shortName": "GetInitCooldownsCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 2506,
+      "flags": 1
+    },
+    {
+      "fullName": "GetInitCooldownsItem",
+      "shortName": "GetInitCooldownsItem",
+      "return": {
+        "type": "whandle:gamedataAIActionCooldown_Record",
+        "flags": 64
+      },
+      "index": 2507,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetInitCooldownsItemHandle",
+      "shortName": "GetInitCooldownsItemHandle",
+      "return": {
+        "type": "handle:gamedataAIActionCooldown_Record",
+        "flags": 64
+      },
+      "index": 2508,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetLookatsCount",
+      "shortName": "GetLookatsCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 2515,
+      "flags": 1
+    },
+    {
+      "fullName": "GetLookatsItem",
+      "shortName": "GetLookatsItem",
+      "return": {
+        "type": "whandle:gamedataAIActionLookAtData_Record",
+        "flags": 64
+      },
+      "index": 2516,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetLookatsItemHandle",
+      "shortName": "GetLookatsItemHandle",
+      "return": {
+        "type": "handle:gamedataAIActionLookAtData_Record",
+        "flags": 64
+      },
+      "index": 2517,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetLoopSubActionsCount",
+      "shortName": "GetLoopSubActionsCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 2476,
+      "flags": 1
+    },
+    {
+      "fullName": "GetLoopSubActionsItem",
+      "shortName": "GetLoopSubActionsItem",
+      "return": {
+        "type": "whandle:gamedataAISubAction_Record",
+        "flags": 64
+      },
+      "index": 2477,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetLoopSubActionsItemHandle",
+      "shortName": "GetLoopSubActionsItemHandle",
+      "return": {
+        "type": "handle:gamedataAISubAction_Record",
+        "flags": 64
+      },
+      "index": 2478,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetRecoverySubActionsCount",
+      "shortName": "GetRecoverySubActionsCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 2486,
+      "flags": 1
+    },
+    {
+      "fullName": "GetRecoverySubActionsItem",
+      "shortName": "GetRecoverySubActionsItem",
+      "return": {
+        "type": "whandle:gamedataAISubAction_Record",
+        "flags": 64
+      },
+      "index": 2487,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetRecoverySubActionsItemHandle",
+      "shortName": "GetRecoverySubActionsItemHandle",
+      "return": {
+        "type": "handle:gamedataAISubAction_Record",
+        "flags": 64
+      },
+      "index": 2488,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetStartupSubActionsCount",
+      "shortName": "GetStartupSubActionsCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 2481,
+      "flags": 1
+    },
+    {
+      "fullName": "GetStartupSubActionsItem",
+      "shortName": "GetStartupSubActionsItem",
+      "return": {
+        "type": "whandle:gamedataAISubAction_Record",
+        "flags": 64
+      },
+      "index": 2482,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetStartupSubActionsItemHandle",
+      "shortName": "GetStartupSubActionsItemHandle",
+      "return": {
+        "type": "handle:gamedataAISubAction_Record",
+        "flags": 64
+      },
+      "index": 2483,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetSubActionsCount",
+      "shortName": "GetSubActionsCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 2491,
+      "flags": 1
+    },
+    {
+      "fullName": "GetSubActionsItem",
+      "shortName": "GetSubActionsItem",
+      "return": {
+        "type": "whandle:gamedataAISubAction_Record",
+        "flags": 64
+      },
+      "index": 2492,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetSubActionsItemHandle",
+      "shortName": "GetSubActionsItemHandle",
+      "return": {
+        "type": "handle:gamedataAISubAction_Record",
+        "flags": 64
+      },
+      "index": 2493,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetTicketsCount",
+      "shortName": "GetTicketsCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 2501,
+      "flags": 1
+    },
+    {
+      "fullName": "GetTicketsItem",
+      "shortName": "GetTicketsItem",
+      "return": {
+        "type": "whandle:gamedataAITicketType_Record",
+        "flags": 64
+      },
+      "index": 2502,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetTicketsItemHandle",
+      "shortName": "GetTicketsItemHandle",
+      "return": {
+        "type": "handle:gamedataAITicketType_Record",
+        "flags": 64
+      },
+      "index": 2503,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "InitCooldowns",
+      "shortName": "InitCooldowns",
+      "index": 2505,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataAIActionCooldown_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "InitCooldownsContains",
+      "shortName": "InitCooldownsContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 2509,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataAIActionCooldown_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Lookats",
+      "shortName": "Lookats",
+      "index": 2514,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataAIActionLookAtData_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "LookatsContains",
+      "shortName": "LookatsContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 2518,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataAIActionLookAtData_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Loop",
+      "shortName": "Loop",
+      "return": {
+        "type": "whandle:gamedataAIActionPhase_Record",
+        "flags": 64
+      },
+      "index": 2473,
+      "flags": 1
+    },
+    {
+      "fullName": "LoopEndCondition",
+      "shortName": "LoopEndCondition",
+      "return": {
+        "type": "whandle:gamedataAIActionOR_Record",
+        "flags": 64
+      },
+      "index": 2471,
+      "flags": 1
+    },
+    {
+      "fullName": "LoopEndConditionHandle",
+      "shortName": "LoopEndConditionHandle",
+      "return": {
+        "type": "handle:gamedataAIActionOR_Record",
+        "flags": 64
+      },
+      "index": 2472,
+      "flags": 1
+    },
+    {
+      "fullName": "LoopHandle",
+      "shortName": "LoopHandle",
+      "return": {
+        "type": "handle:gamedataAIActionPhase_Record",
+        "flags": 64
+      },
+      "index": 2474,
+      "flags": 1
+    },
+    {
+      "fullName": "LoopRepeatCondition",
+      "shortName": "LoopRepeatCondition",
+      "return": {
+        "type": "whandle:gamedataAIActionOR_Record",
+        "flags": 64
+      },
+      "index": 2465,
+      "flags": 1
+    },
+    {
+      "fullName": "LoopRepeatConditionHandle",
+      "shortName": "LoopRepeatConditionHandle",
+      "return": {
+        "type": "handle:gamedataAIActionOR_Record",
+        "flags": 64
+      },
+      "index": 2466,
+      "flags": 1
+    },
+    {
+      "fullName": "LoopSubActions",
+      "shortName": "LoopSubActions",
+      "index": 2475,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataAISubAction_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "LoopSubActionsContains",
+      "shortName": "LoopSubActionsContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 2479,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataAISubAction_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Recovery",
+      "shortName": "Recovery",
+      "return": {
+        "type": "whandle:gamedataAIActionPhase_Record",
+        "flags": 64
+      },
+      "index": 2455,
+      "flags": 1
+    },
+    {
+      "fullName": "RecoveryEndCondition",
+      "shortName": "RecoveryEndCondition",
+      "return": {
+        "type": "whandle:gamedataAIActionOR_Record",
+        "flags": 64
+      },
+      "index": 2459,
+      "flags": 1
+    },
+    {
+      "fullName": "RecoveryEndConditionHandle",
+      "shortName": "RecoveryEndConditionHandle",
+      "return": {
+        "type": "handle:gamedataAIActionOR_Record",
+        "flags": 64
+      },
+      "index": 2460,
+      "flags": 1
+    },
+    {
+      "fullName": "RecoveryHandle",
+      "shortName": "RecoveryHandle",
+      "return": {
+        "type": "handle:gamedataAIActionPhase_Record",
+        "flags": 64
+      },
+      "index": 2456,
+      "flags": 1
+    },
+    {
+      "fullName": "RecoveryRepeatCondition",
+      "shortName": "RecoveryRepeatCondition",
+      "return": {
+        "type": "whandle:gamedataAIActionOR_Record",
+        "flags": 64
+      },
+      "index": 2467,
+      "flags": 1
+    },
+    {
+      "fullName": "RecoveryRepeatConditionHandle",
+      "shortName": "RecoveryRepeatConditionHandle",
+      "return": {
+        "type": "handle:gamedataAIActionOR_Record",
+        "flags": 64
+      },
+      "index": 2468,
+      "flags": 1
+    },
+    {
+      "fullName": "RecoverySubActions",
+      "shortName": "RecoverySubActions",
+      "index": 2485,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataAISubAction_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "RecoverySubActionsContains",
+      "shortName": "RecoverySubActionsContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 2489,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataAISubAction_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RevokingTicketCompletesAction",
+      "shortName": "RevokingTicketCompletesAction",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 2532,
+      "flags": 1
+    },
+    {
+      "fullName": "Startup",
+      "shortName": "Startup",
+      "return": {
+        "type": "whandle:gamedataAIActionPhase_Record",
+        "flags": 64
+      },
+      "index": 2457,
+      "flags": 1
+    },
+    {
+      "fullName": "StartupEndCondition",
+      "shortName": "StartupEndCondition",
+      "return": {
+        "type": "whandle:gamedataAIActionOR_Record",
+        "flags": 64
+      },
+      "index": 2463,
+      "flags": 1
+    },
+    {
+      "fullName": "StartupEndConditionHandle",
+      "shortName": "StartupEndConditionHandle",
+      "return": {
+        "type": "handle:gamedataAIActionOR_Record",
+        "flags": 64
+      },
+      "index": 2464,
+      "flags": 1
+    },
+    {
+      "fullName": "StartupHandle",
+      "shortName": "StartupHandle",
+      "return": {
+        "type": "handle:gamedataAIActionPhase_Record",
+        "flags": 64
+      },
+      "index": 2458,
+      "flags": 1
+    },
+    {
+      "fullName": "StartupRepeatCondition",
+      "shortName": "StartupRepeatCondition",
+      "return": {
+        "type": "whandle:gamedataAIActionOR_Record",
+        "flags": 64
+      },
+      "index": 2461,
+      "flags": 1
+    },
+    {
+      "fullName": "StartupRepeatConditionHandle",
+      "shortName": "StartupRepeatConditionHandle",
+      "return": {
+        "type": "handle:gamedataAIActionOR_Record",
+        "flags": 64
+      },
+      "index": 2462,
+      "flags": 1
+    },
+    {
+      "fullName": "StartupSubActions",
+      "shortName": "StartupSubActions",
+      "index": 2480,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataAISubAction_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "StartupSubActionsContains",
+      "shortName": "StartupSubActionsContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 2484,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataAISubAction_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SubActions",
+      "shortName": "SubActions",
+      "index": 2490,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataAISubAction_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "SubActionsCanCompleteAction",
+      "shortName": "SubActionsCanCompleteAction",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 2526,
+      "flags": 1
+    },
+    {
+      "fullName": "SubActionsContains",
+      "shortName": "SubActionsContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 2494,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataAISubAction_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TicketAcknowledgeTimeout",
+      "shortName": "TicketAcknowledgeTimeout",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 2524,
+      "flags": 1
+    },
+    {
+      "fullName": "Tickets",
+      "shortName": "Tickets",
+      "index": 2500,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataAITicketType_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "TicketsContains",
+      "shortName": "TicketsContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 2504,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataAITicketType_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "WaitForAnimationToLoad",
+      "shortName": "WaitForAnimationToLoad",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 2529,
+      "flags": 1
+    }
+  ]
+}

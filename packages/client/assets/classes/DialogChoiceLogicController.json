@@ -1,0 +1,488 @@
+{
+  "parent": "inkWidgetLogicController",
+  "name": "DialogChoiceLogicController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkWidgetReference",
+      "name": "InputViewRef",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "VerticalLineWidget",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "ActiveTextRef",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "InActiveTextRootRef",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "TextFlexRef",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "SelectedBgRef",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "SelectedBgRefJohnny",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "CaptionHolder",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "SecondaryCaptionHolder",
+      "flags": 4297130017
+    },
+    {
+      "type": "whandle:inkCompoundWidget",
+      "name": "RootWidget",
+      "flags": 4297130017
+    },
+    {
+      "type": "Float",
+      "name": "AnimationTime",
+      "flags": 4297130017
+    },
+    {
+      "type": "Float",
+      "name": "AnimationSpeed",
+      "flags": 4297130017
+    },
+    {
+      "type": "Bool",
+      "name": "UseConstantSpeed",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "phoneIcon",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "tagWrapper",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "tagSeparator",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "tagTextRef",
+      "flags": 4297130017
+    },
+    {
+      "type": "whandle:inkWidget",
+      "name": "TextFlex",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:inkWidget",
+      "name": "InActiveTextRoot",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:inkWidget",
+      "name": "SelectedBg",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:inkWidget",
+      "name": "SelectedBgJohnny",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:InteractionsInputView",
+      "name": "InputView",
+      "flags": 4297130016
+    },
+    {
+      "type": "array:whandle:CaptionImageIconsLogicController",
+      "name": "CaptionControllers",
+      "flags": 6583025696
+    },
+    {
+      "type": "array:whandle:CaptionImageIconsLogicController",
+      "name": "SecondaryCaptionControllers",
+      "flags": 6583025696
+    },
+    {
+      "type": "gameinteractionsChoiceTypeWrapper",
+      "name": "type",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isSelected",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "prevIsSelected",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "hasDedicatedInput",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "overriddenInput",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isPreserveSelectionFadeOut",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isPhoneLockActive",
+      "flags": 4297130016
+    },
+    {
+      "type": "CName",
+      "name": "dedicatedInputName",
+      "flags": 4297130016
+    },
+    {
+      "type": "CName",
+      "name": "Active",
+      "flags": 4297130016
+    },
+    {
+      "type": "CName",
+      "name": "Inactive",
+      "flags": 4297130016
+    },
+    {
+      "type": "CName",
+      "name": "Black",
+      "flags": 4297130016
+    },
+    {
+      "type": "CName",
+      "name": "questColor",
+      "flags": 4297130016
+    },
+    {
+      "type": "CName",
+      "name": "possessedDialog",
+      "flags": 4297130016
+    },
+    {
+      "type": "Int32",
+      "name": "ControllerPromptLimit",
+      "flags": 4297130016
+    },
+    {
+      "type": "Float",
+      "name": "fadingOptionEndTransparency",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "animSelectedBgProxy",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "animSelectedJohnnyBgProxy",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "animActiveTextProxy",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "animfFadingOutProxy",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "animIntroProxy",
+      "flags": 4431347744
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "AnimateSelection;",
+      "shortName": "AnimateSelection",
+      "flags": 33284
+    },
+    {
+      "fullName": "Fade;FloatFloatFloat",
+      "shortName": "Fade",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Float",
+          "name": "startValue",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "endValue",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "fadeOutTime",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "FadeOut;Float",
+      "shortName": "FadeOut",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Float",
+          "name": "fadeOutTime",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HideAllCaptionParts;",
+      "shortName": "HideAllCaptionParts",
+      "flags": 32900
+    },
+    {
+      "fullName": "OverrideInputButton;Bool",
+      "shortName": "OverrideInputButton",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "overrideButton",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ResizeCaptionParts;Int32",
+      "shortName": "ResizeCaptionParts",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "newSize",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetButtonPromptTextureFromHub;CName",
+      "shortName": "SetButtonPromptTextureFromHub",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "CName",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetCaptionParts;script_ref<array<InteractionChoiceCaptionPart>>",
+      "shortName": "SetCaptionParts",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "script_ref:array:handle:gameinteractionsChoiceCaptionPart",
+          "name": "argList",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetChoiceText;script_ref<String>script_ref<String>",
+      "shortName": "SetChoiceText",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "script_ref:String",
+          "name": "text",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:String",
+          "name": "tag",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetData;Int32Int32BoolBool",
+      "shortName": "SetData",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "currentNum",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "allItemsNum",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "hasAbove",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "hasBelow",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetDedicatedInput;CName",
+      "shortName": "SetDedicatedInput",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "CName",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetDimmed;Bool",
+      "shortName": "SetDimmed",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetFadingState;BoolFloatFloatinkWidget",
+      "shortName": "SetFadingState",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "isFading",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "timedDuration",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "timedProgress",
+          "flags": 128
+        },
+        {
+          "type": "whandle:inkWidget",
+          "name": "progressBar",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetGlowline;",
+      "shortName": "SetGlowline",
+      "flags": 33284
+    },
+    {
+      "fullName": "SetIsPhoneLockActive;Bool",
+      "shortName": "SetIsPhoneLockActive",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetSelected;Bool",
+      "shortName": "SetSelected",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "isSelected",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetType;ChoiceTypeWrapper",
+      "shortName": "SetType",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "gameinteractionsChoiceTypeWrapper",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetVisible;Bool",
+      "shortName": "SetVisible",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "visible",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateColors;",
+      "shortName": "UpdateColors",
+      "flags": 32900
+    },
+    {
+      "fullName": "UpdateView;",
+      "shortName": "UpdateView",
+      "flags": 33284
+    }
+  ]
+}

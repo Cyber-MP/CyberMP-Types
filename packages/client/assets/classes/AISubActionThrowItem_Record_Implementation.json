@@ -1,0 +1,270 @@
+{
+  "parent": "IScriptable",
+  "name": "AISubActionThrowItem_Record_Implementation",
+  "flags": 5,
+  "funcs": [
+    {
+      "fullName": "AISubActionThrowItem_Record_Implementation::Activate;ScriptExecutionContextAISubActionThrowItem_Record",
+      "shortName": "Activate",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gamedataAISubActionThrowItem_Record",
+          "name": "record",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AISubActionThrowItem_Record_Implementation::CreateCurvedTrajectory;GameObjectTweakDBIDFloat",
+      "shortName": "CreateCurvedTrajectory",
+      "return": {
+        "type": "handle:gameprojectileTrajectoryParams",
+        "flags": 64
+      },
+      "flags": 32902,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "target",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "paramsTDBRecord",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "predictionTime",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AISubActionThrowItem_Record_Implementation::CreateCurvedTrajectoryFollowTargetSlot;GameObjectCNameTweakDBID",
+      "shortName": "CreateCurvedTrajectoryFollowTargetSlot",
+      "return": {
+        "type": "handle:gameprojectileTrajectoryParams",
+        "flags": 64
+      },
+      "flags": 32902,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "target",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "slotName",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "paramsTDBRecord",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AISubActionThrowItem_Record_Implementation::CreateParabolicTrajectory;AISubActionThrowItem_RecordVector4Float",
+      "shortName": "CreateParabolicTrajectory",
+      "return": {
+        "type": "handle:gameprojectileTrajectoryParams",
+        "flags": 64
+      },
+      "flags": 32902,
+      "params": [
+        {
+          "type": "whandle:gamedataAISubActionThrowItem_Record",
+          "name": "record",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "targetPosition",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "throwAngle",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AISubActionThrowItem_Record_Implementation::Deactivate;ScriptExecutionContextAISubActionThrowItem_RecordFloatBool",
+      "shortName": "Deactivate",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gamedataAISubActionThrowItem_Record",
+          "name": "record",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "duration",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "interrupted",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AISubActionThrowItem_Record_Implementation::DropItem;ScriptExecutionContextAISubActionThrowItem_Record",
+      "shortName": "DropItem",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gamedataAISubActionThrowItem_Record",
+          "name": "record",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AISubActionThrowItem_Record_Implementation::GetCachedGrenadeQuery;ScriptExecutionContextVector4FloatgameGrenadeThrowStartType",
+      "shortName": "GetCachedGrenadeQuery",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "targetPosition",
+          "flags": 640
+        },
+        {
+          "type": "Float",
+          "name": "throwAngle",
+          "flags": 640
+        },
+        {
+          "type": "gameGrenadeThrowStartType",
+          "name": "outStartType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AISubActionThrowItem_Record_Implementation::ReadCurvedTrajectoryTDBParams;FollowCurveTrajectoryParamsTweakDBID",
+      "shortName": "ReadCurvedTrajectoryTDBParams",
+      "flags": 32902,
+      "params": [
+        {
+          "type": "handle:gameprojectileFollowCurveTrajectoryParams",
+          "name": "trajectoryParams",
+          "flags": 640
+        },
+        {
+          "type": "TweakDBID",
+          "name": "paramsTDBRecord",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AISubActionThrowItem_Record_Implementation::SetNPCThrowingGrenade;ScriptExecutionContext",
+      "shortName": "SetNPCThrowingGrenade",
+      "flags": 33030,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AISubActionThrowItem_Record_Implementation::ThrowInit;ScriptExecutionContextAISubActionThrowItem_Record",
+      "shortName": "ThrowInit",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gamedataAISubActionThrowItem_Record",
+          "name": "record",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AISubActionThrowItem_Record_Implementation::ThrowItem;ScriptExecutionContextAISubActionThrowItem_Record",
+      "shortName": "ThrowItem",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gamedataAISubActionThrowItem_Record",
+          "name": "record",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AISubActionThrowItem_Record_Implementation::Update;ScriptExecutionContextAISubActionThrowItem_RecordFloat",
+      "shortName": "Update",
+      "return": {
+        "type": "AIbehaviorUpdateOutcome",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gamedataAISubActionThrowItem_Record",
+          "name": "record",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "duration",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

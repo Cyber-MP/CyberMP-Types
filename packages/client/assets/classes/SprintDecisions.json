@@ -1,0 +1,137 @@
+{
+  "parent": "LocomotionGroundDecisions",
+  "name": "SprintDecisions",
+  "flags": 4,
+  "props": [
+    {
+      "type": "Bool",
+      "name": "sprintPressed",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "toggleSprintPressed",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "dodgeForwardPressed",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "SprintDecisions::IsWreckingBallAllowed;StateGameScriptInterface",
+      "shortName": "IsWreckingBallAllowed",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32902,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnAction",
+      "shortName": "OnAction",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "gameinputScriptListenerAction",
+          "name": "action",
+          "flags": 128
+        },
+        {
+          "type": "gameinputScriptListenerActionConsumer",
+          "name": "consumer",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "EnterCondition;StateContextStateGameScriptInterface",
+      "shortName": "EnterCondition",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 42240,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnAttach;StateContextStateGameScriptInterface",
+      "shortName": "OnAttach",
+      "flags": 34048,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnDetach;StateContextStateGameScriptInterface",
+      "shortName": "OnDetach",
+      "flags": 34052,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ToStand;StateContextStateGameScriptInterface",
+      "shortName": "ToStand",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41216,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

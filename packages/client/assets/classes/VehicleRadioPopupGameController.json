@@ -1,0 +1,339 @@
+{
+  "parent": "BaseModalListPopupGameController",
+  "name": "VehicleRadioPopupGameController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkImageWidgetReference",
+      "name": "icon",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "trackName",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkScrollAreaWidgetReference",
+      "name": "scrollArea",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "scrollControllerWidget",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "radioVolumeSettings",
+      "group": "Volume",
+      "flags": 4297130017
+    },
+    {
+      "type": "CName",
+      "name": "volumeSettingGroupName",
+      "group": "Volume",
+      "flags": 4297130017
+    },
+    {
+      "type": "CName",
+      "name": "volumeSettingVarName",
+      "group": "Volume",
+      "flags": 4297130017
+    },
+    {
+      "type": "handle:RadioStationsDataView",
+      "name": "dataView",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkScriptableDataSourceWrapper",
+      "name": "dataSource",
+      "flags": 4431347744
+    },
+    {
+      "type": "whandle:QuickSlotsManager",
+      "name": "quickSlotsManager",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:PlayerPuppet",
+      "name": "player",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:vehicleBaseObject",
+      "name": "playerVehicle",
+      "flags": 4297130016
+    },
+    {
+      "type": "Uint32",
+      "name": "startupIndex",
+      "flags": 4297130016
+    },
+    {
+      "type": "Int32",
+      "name": "currentRadioId",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:RadioStationListItemController",
+      "name": "selectedItem",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:inkScrollController",
+      "name": "scrollController",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "canVolumeDown",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "canVolumeUp",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:RadioVolumeSettingsController",
+      "name": "radioVolumeSettingsController",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnAction",
+      "shortName": "OnAction",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "gameinputScriptListenerAction",
+          "name": "action",
+          "flags": 128
+        },
+        {
+          "type": "gameinputScriptListenerActionConsumer",
+          "name": "consumer",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPlayerAttach",
+      "shortName": "OnPlayerAttach",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "playerPuppet",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnScrollChanged",
+      "shortName": "OnScrollChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Vector2",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnShowAnimFinished",
+      "shortName": "OnShowAnimFinished",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkanimProxy",
+          "name": "proxy",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnVehicleRadioEvent",
+      "shortName": "OnVehicleRadioEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:UIVehicleRadioEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnVehicleRadioSongChanged",
+      "shortName": "OnVehicleRadioSongChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:vehicleRadioSongChanged",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Activate;",
+      "shortName": "Activate",
+      "flags": 33024
+    },
+    {
+      "fullName": "AdjustRadioVolumeWithAction;CNamegameinputActionType",
+      "shortName": "AdjustRadioVolumeWithAction",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "CName",
+          "name": "actionName",
+          "flags": 128
+        },
+        {
+          "type": "gameinputActionType",
+          "name": "actionType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CleanVirtualList;",
+      "shortName": "CleanVirtualList",
+      "flags": 33024
+    },
+    {
+      "fullName": "GetRadioReceiverEntityID;",
+      "shortName": "GetRadioReceiverEntityID",
+      "return": {
+        "type": "entEntityID",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "GetRadioReceiverStationName;",
+      "shortName": "GetRadioReceiverStationName",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "GetRadioReceiverTrackName;",
+      "shortName": "GetRadioReceiverTrackName",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "GetVolumeSettingVarName;",
+      "shortName": "GetVolumeSettingVarName",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "IsRadioReceiverActive;",
+      "shortName": "IsRadioReceiverActive",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "OnClose;",
+      "shortName": "OnClose",
+      "flags": 33024
+    },
+    {
+      "fullName": "Select;inkVirtualCompoundItemControllerinkVirtualCompoundItemController",
+      "shortName": "Select",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "handle:inkVirtualCompoundItemController",
+          "name": "previous",
+          "flags": 128
+        },
+        {
+          "type": "handle:inkVirtualCompoundItemController",
+          "name": "next",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetTrackName;CName",
+      "shortName": "SetTrackName",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "CName",
+          "name": "track",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetupData;",
+      "shortName": "SetupData",
+      "flags": 33024
+    },
+    {
+      "fullName": "SetupTimeModifierConfig;",
+      "shortName": "SetupTimeModifierConfig",
+      "flags": 33024
+    },
+    {
+      "fullName": "SetupVirtualList;",
+      "shortName": "SetupVirtualList",
+      "flags": 33024
+    },
+    {
+      "fullName": "SetupVolumeContorls;",
+      "shortName": "SetupVolumeContorls",
+      "flags": 32900
+    },
+    {
+      "fullName": "VirtualListReady;",
+      "shortName": "VirtualListReady",
+      "flags": 33024
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "parent": "gamedataTweakDBRecord",
+  "name": "gamedataWeaponsTooltipData_Record",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "GetMaxStatsValueCount",
+      "shortName": "GetMaxStatsValueCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 5894,
+      "flags": 1
+    },
+    {
+      "fullName": "GetMaxStatsValueItem",
+      "shortName": "GetMaxStatsValueItem",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 5895,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetStatsToCompareCount",
+      "shortName": "GetStatsToCompareCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 5889,
+      "flags": 1
+    },
+    {
+      "fullName": "GetStatsToCompareItem",
+      "shortName": "GetStatsToCompareItem",
+      "return": {
+        "type": "whandle:gamedataStat_Record",
+        "flags": 64
+      },
+      "index": 5890,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetStatsToCompareItemHandle",
+      "shortName": "GetStatsToCompareItemHandle",
+      "return": {
+        "type": "handle:gamedataStat_Record",
+        "flags": 64
+      },
+      "index": 5891,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "MaxStatsValue",
+      "shortName": "MaxStatsValue",
+      "return": {
+        "type": "array:Float",
+        "flags": 64
+      },
+      "index": 5893,
+      "flags": 1
+    },
+    {
+      "fullName": "MaxStatsValueContains",
+      "shortName": "MaxStatsValueContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 5896,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Float",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "StatsToCompare",
+      "shortName": "StatsToCompare",
+      "index": 5888,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataStat_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "StatsToCompareContains",
+      "shortName": "StatsToCompareContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 5892,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataStat_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

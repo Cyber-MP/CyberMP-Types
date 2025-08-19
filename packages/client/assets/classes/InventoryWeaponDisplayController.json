@@ -1,0 +1,80 @@
+{
+  "parent": "InventoryItemDisplayController",
+  "name": "InventoryWeaponDisplayController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "weaponSpecyficModsRoot",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "silencerIcon",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "scopeIcon",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "ammoIcon",
+      "flags": 4297195553
+    },
+    {
+      "type": "array:whandle:InventoryItemPartDisplay",
+      "name": "weaponAttachmentsDisplay",
+      "flags": 6583091232
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "NewRefreshUI;UIInventoryItem",
+      "shortName": "NewRefreshUI",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "handle:UIInventoryItem",
+          "name": "itemData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "NewUpdateWeaponParts;UIInventoryItem",
+      "shortName": "NewUpdateWeaponParts",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "handle:UIInventoryItem",
+          "name": "itemData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RefreshUI;",
+      "shortName": "RefreshUI",
+      "flags": 33024
+    },
+    {
+      "fullName": "UpdateAmmoIcon;gameItemData",
+      "shortName": "UpdateAmmoIcon",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "whandle:gameItemData",
+          "name": "itemData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateWeaponParts;",
+      "shortName": "UpdateWeaponParts",
+      "flags": 33024
+    }
+  ]
+}

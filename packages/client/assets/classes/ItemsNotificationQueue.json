@@ -1,0 +1,378 @@
+{
+  "parent": "gameuiGenericNotificationGameController",
+  "name": "ItemsNotificationQueue",
+  "flags": 4,
+  "props": [
+    {
+      "type": "Float",
+      "name": "showDuration",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:gameTransactionSystem",
+      "name": "transactionSystem",
+      "flags": 4297130016
+    },
+    {
+      "type": "CName",
+      "name": "currencyNotification",
+      "flags": 4297130016
+    },
+    {
+      "type": "CName",
+      "name": "itemNotification",
+      "flags": 4297130016
+    },
+    {
+      "type": "CName",
+      "name": "xpNotification",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:gameObject",
+      "name": "playerPuppet",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:gameInventoryScriptListener",
+      "name": "inventoryListener",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:gameInventoryScriptListener",
+      "name": "currencyInventoryListener",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:PlayerDevelopmentSystem",
+      "name": "playerDevelopmentSystem",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "combatModeListener",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:InventoryDataManagerV2",
+      "name": "InventoryManager",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:ItemPreferredComparisonResolver",
+      "name": "comparisonResolver",
+      "flags": 4431347744
+    },
+    {
+      "type": "gamePSMCombat",
+      "name": "combatModePSM",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:gameDelaySystem",
+      "name": "delaySystem",
+      "flags": 4431347744
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnCharacterProficiencyUpdated",
+      "shortName": "OnCharacterProficiencyUpdated",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:ProficiencyProgressEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnCombatStateChanged",
+      "shortName": "OnCombatStateChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnNewTarotCardAdded",
+      "shortName": "OnNewTarotCardAdded",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:TarotCardAdded",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPlayerAttach",
+      "shortName": "OnPlayerAttach",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "playerPuppet",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPlayerDetach",
+      "shortName": "OnPlayerDetach",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "playerPuppet",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUILootedItemEvent",
+      "shortName": "OnUILootedItemEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameeventsLootedItemEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "EquipmentAreaNeedsNotification;gamedataEquipmentArea",
+      "shortName": "EquipmentAreaNeedsNotification",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "gamedataEquipmentArea",
+          "name": "area",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetComparisonState;script_ref<InventoryItemData>",
+      "shortName": "GetComparisonState",
+      "return": {
+        "type": "gameItemComparisonState",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:gameInventoryItemData",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetID;",
+      "shortName": "GetID",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 34304
+    },
+    {
+      "fullName": "GetShouldSaveState;",
+      "shortName": "GetShouldSaveState",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 34304
+    },
+    {
+      "fullName": "IsBestInBackpack;script_ref<InventoryItemData>",
+      "shortName": "IsBestInBackpack",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:gameInventoryItemData",
+          "name": "newItem",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "NeedsNotification;script_ref<InventoryItemData>",
+      "shortName": "NeedsNotification",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:gameInventoryItemData",
+          "name": "newItem",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PushCurrencyNotification;Int32Uint32",
+      "shortName": "PushCurrencyNotification",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "diff",
+          "flags": 128
+        },
+        {
+          "type": "Uint32",
+          "name": "total",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PushItemNotification;ItemIDCName",
+      "shortName": "PushItemNotification",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "gameItemID",
+          "name": "itemID",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "itemRarity",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PushXPNotification;Int32Int32Int32CNamescript_ref<String>gamedataProficiencyTypeInt32Bool",
+      "shortName": "PushXPNotification",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "value",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "remainingPointsToLevelUp",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "delta",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "notificationColorTheme",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:String",
+          "name": "notificationName",
+          "flags": 128
+        },
+        {
+          "type": "gamedataProficiencyType",
+          "name": "type",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "currentLevel",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "isLevelMaxed",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterPSMListeners;GameObject",
+      "shortName": "RegisterPSMListeners",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "playerObject",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ShouldRarityForceNotification;script_ref<InventoryItemData>",
+      "shortName": "ShouldRarityForceNotification",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:gameInventoryItemData",
+          "name": "newItem",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UnregisterPSMListeners;GameObject",
+      "shortName": "UnregisterPSMListeners",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "playerObject",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

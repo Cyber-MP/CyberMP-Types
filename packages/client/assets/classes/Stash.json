@@ -1,0 +1,564 @@
+{
+  "parent": "InteractiveDevice",
+  "name": "Stash",
+  "flags": 4,
+  "funcs": [
+    {
+      "fullName": "Stash::BlockScalingInStash;GameObjectgameItemData",
+      "shortName": "BlockScalingInStash",
+      "flags": 32902,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "stashObj",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameItemData",
+          "name": "itemData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Stash::CheckReginaRewardsPresenceInStash;GameObject",
+      "shortName": "CheckReginaRewardsPresenceInStash",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "stashObj",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Stash::ConsumablesRetrofix;GameObject",
+      "shortName": "ConsumablesRetrofix",
+      "flags": 32902,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "stashObj",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Stash::CreateInstallPartRequest_Attachment;GameObjectgameItemDataItemID",
+      "shortName": "CreateInstallPartRequest_Attachment",
+      "return": {
+        "type": "handle:InstallItemPart",
+        "flags": 64
+      },
+      "flags": 32902,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "stashObj",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameItemData",
+          "name": "itemData",
+          "flags": 128
+        },
+        {
+          "type": "gameItemID",
+          "name": "part",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Stash::CreateInstallPartRequest_Mod;GameObjectgameItemDataItemID",
+      "shortName": "CreateInstallPartRequest_Mod",
+      "return": {
+        "type": "handle:InstallItemPart",
+        "flags": 64
+      },
+      "flags": 32902,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "stashObj",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameItemData",
+          "name": "itemData",
+          "flags": 128
+        },
+        {
+          "type": "gameItemID",
+          "name": "part",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Stash::CreateRemovePartRequest;GameObjectItemIDTweakDBID",
+      "shortName": "CreateRemovePartRequest",
+      "return": {
+        "type": "handle:RemoveItemPart",
+        "flags": 64
+      },
+      "flags": 32902,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "stashObj",
+          "flags": 128
+        },
+        {
+          "type": "gameItemID",
+          "name": "item",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "slotID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Stash::GiveReginaRefinedCWRewardInStash;GameObject",
+      "shortName": "GiveReginaRefinedCWRewardInStash",
+      "flags": 32902,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "stashObj",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Stash::IconicsReworkCompensateInStash;GameObject",
+      "shortName": "IconicsReworkCompensateInStash",
+      "flags": 32902,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "stashObj",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Stash::InstallModsToRedesignedItems;GameObject",
+      "shortName": "InstallModsToRedesignedItems",
+      "flags": 32902,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "stashObj",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Stash::IsInStash;GameObjectItemID",
+      "shortName": "IsInStash",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "stashObj",
+          "flags": 128
+        },
+        {
+          "type": "gameItemID",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Stash::ProcessAmazonGritAttachmentsPurgeInStash;GameObject",
+      "shortName": "ProcessAmazonGritAttachmentsPurgeInStash",
+      "flags": 32902,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "stashObj",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Stash::ProcessGritModsPurgeInStash;GameObject",
+      "shortName": "ProcessGritModsPurgeInStash",
+      "flags": 32902,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "stashObj",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Stash::ProcessIconicsFactsForBlackMarketerInStash;GameObject",
+      "shortName": "ProcessIconicsFactsForBlackMarketerInStash",
+      "flags": 32902,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "stashObj",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Stash::ProcessNonIconicWeaponsRescaleInStash;GameObject",
+      "shortName": "ProcessNonIconicWeaponsRescaleInStash",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "stashObj",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Stash::ProcessStashRetroFixes;GameObject",
+      "shortName": "ProcessStashRetroFixes",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "stashObj",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Stash::ProcessWeaponsAndClothingModsPurgeInStash;GameObject",
+      "shortName": "ProcessWeaponsAndClothingModsPurgeInStash",
+      "flags": 32902,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "stashObj",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Stash::ProcessWeaponsModsCompensateInStash;GameObject",
+      "shortName": "ProcessWeaponsModsCompensateInStash",
+      "flags": 32902,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "stashObj",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Stash::RasetsuItemPlayerScalingInStash;GameObject",
+      "shortName": "RasetsuItemPlayerScalingInStash",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "stashObj",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Stash::RemoveAllModsFromClothing;GameObject",
+      "shortName": "RemoveAllModsFromClothing",
+      "flags": 32902,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "stashObj",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Stash::RemoveDeprecatedReginaCWRewardInStash;GameObject",
+      "shortName": "RemoveDeprecatedReginaCWRewardInStash",
+      "flags": 32902,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "stashObj",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Stash::RemoveRedundantScopesFromAchillesRifles;GameObject",
+      "shortName": "RemoveRedundantScopesFromAchillesRifles",
+      "flags": 32902,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "stashObj",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Stash::ReplaceLeftHandVariantWeaponsWithRegularInStash;GameObject",
+      "shortName": "ReplaceLeftHandVariantWeaponsWithRegularInStash",
+      "flags": 32902,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "stashObj",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Stash::RescaleStashedIconicsToPlayerLevel;GameObjectgameItemData",
+      "shortName": "RescaleStashedIconicsToPlayerLevel",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "stashObj",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameItemData",
+          "name": "itemData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Stash::RetroScaleNonIconicWeaponsInStash;GameObjectgameItemData",
+      "shortName": "RetroScaleNonIconicWeaponsInStash",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "stashObj",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameItemData",
+          "name": "itemData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Stash::ScaleAndLockLeftHandWeaponsCompensateInStash;GameObject",
+      "shortName": "ScaleAndLockLeftHandWeaponsCompensateInStash",
+      "flags": 32902,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "stashObj",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Stash::ScaleLeftHandCompensateWeaponsToPlayerLevelInStash;GameObjectgameItemData",
+      "shortName": "ScaleLeftHandCompensateWeaponsToPlayerLevelInStash",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "stashObj",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameItemData",
+          "name": "itemData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Stash::ScaleRasetsuToProperTierInStash;GameObjectgameItemData",
+      "shortName": "ScaleRasetsuToProperTierInStash",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "stashObj",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameItemData",
+          "name": "itemData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Stash::ScaleStashIconicsToPlayerLevel;GameObject",
+      "shortName": "ScaleStashIconicsToPlayerLevel",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "stashObj",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Stash::UnifyIconicWeaponsUpgradesCountWithEffectiveTierInStash;GameObjectgameItemData",
+      "shortName": "UnifyIconicWeaponsUpgradesCountWithEffectiveTierInStash",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "stashObj",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameItemData",
+          "name": "itemData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Stash::UnifyIconicsUpgradeCountWithEffectiveTierInStash;GameObject",
+      "shortName": "UnifyIconicsUpgradeCountWithEffectiveTierInStash",
+      "flags": 32902,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "stashObj",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInteractionActivated",
+      "shortName": "OnInteractionActivated",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameinteractionsInteractionActivationEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnOpenStash",
+      "shortName": "OnOpenStash",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:OpenStash",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRequestComponents",
+      "shortName": "OnRequestComponents",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "entEntityRequestComponentsInterface",
+          "name": "ri",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnTakeControl",
+      "shortName": "OnTakeControl",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "entEntityResolveComponentsInterface",
+          "name": "ri",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "DeterminGameplayRole;",
+      "shortName": "DeterminGameplayRole",
+      "return": {
+        "type": "EGameplayRole",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "DeterminGameplayRoleMappinVisuaState;script_ref<SDeviceMappinData>",
+      "shortName": "DeterminGameplayRoleMappinVisuaState",
+      "return": {
+        "type": "EMappinVisualState",
+        "flags": 64
+      },
+      "flags": 41472,
+      "params": [
+        {
+          "type": "script_ref:SDeviceMappinData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetController;",
+      "shortName": "GetController",
+      "return": {
+        "type": "handle:StashController",
+        "flags": 64
+      },
+      "flags": 41088
+    },
+    {
+      "fullName": "GetDevicePS;",
+      "shortName": "GetDevicePS",
+      "return": {
+        "type": "handle:StashControllerPS",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "IsPlayerStash;",
+      "shortName": "IsPlayerStash",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41472
+    }
+  ]
+}

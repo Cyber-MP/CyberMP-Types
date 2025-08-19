@@ -1,0 +1,198 @@
+{
+  "parent": "gameuiHUDGameController",
+  "name": "WantedBarGameController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "array:inkWidgetReference",
+      "name": "starsWidget",
+      "flags": 6583025697
+    },
+    {
+      "type": "whandle:gameIBlackboard",
+      "name": "wantedBlackboard",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:UI_WantedBarDef",
+      "name": "wantedBlackboardDef",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "wantedDataCallbackID",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "wantedStateCallbackID",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "wantedZoneCallbackID",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "introAnimProxy",
+      "flags": 4431347744
+    },
+    {
+      "type": "array:handle:inkanimProxy",
+      "name": "bountyStarAnimProxy",
+      "flags": 6583025696
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "bountyAnimProxy",
+      "flags": 4431347744
+    },
+    {
+      "type": "inkanimPlaybackOptions",
+      "name": "animOptionsLoop",
+      "flags": 4297130016
+    },
+    {
+      "type": "Int32",
+      "name": "currentState",
+      "flags": 4297130016
+    },
+    {
+      "type": "Int32",
+      "name": "numOfStar",
+      "flags": 4297130016
+    },
+    {
+      "type": "Int32",
+      "name": "wantedLevel",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:inkWidget",
+      "name": "rootWidget",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isDogtown",
+      "flags": 4297130016
+    },
+    {
+      "type": "Float",
+      "name": "WANTED_TIER_1",
+      "flags": 4297130016
+    },
+    {
+      "type": "Float",
+      "name": "WANTED_MIN",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnWantedBarHidden",
+      "shortName": "OnWantedBarHidden",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkanimProxy",
+          "name": "animationProxy",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnWantedBarIntro",
+      "shortName": "OnWantedBarIntro",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkanimProxy",
+          "name": "animationProxy",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnWantedDataChange",
+      "shortName": "OnWantedDataChange",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnWantedStateChange",
+      "shortName": "OnWantedStateChange",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "CName",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "FlashAndHide;",
+      "shortName": "FlashAndHide",
+      "flags": 32900
+    },
+    {
+      "fullName": "StopBountyAnims;",
+      "shortName": "StopBountyAnims",
+      "flags": 32900
+    },
+    {
+      "fullName": "UpdateWantedBar;Int32",
+      "shortName": "UpdateWantedBar",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "newWantedLevel",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

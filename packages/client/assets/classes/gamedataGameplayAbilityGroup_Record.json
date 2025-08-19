@@ -1,0 +1,81 @@
+{
+  "parent": "gamedataTweakDBRecord",
+  "name": "gamedataGameplayAbilityGroup_Record",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "Abilities",
+      "shortName": "Abilities",
+      "index": 8312,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataGameplayAbility_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "AbilitiesContains",
+      "shortName": "AbilitiesContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 8316,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataGameplayAbility_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetAbilitiesCount",
+      "shortName": "GetAbilitiesCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 8313,
+      "flags": 1
+    },
+    {
+      "fullName": "GetAbilitiesItem",
+      "shortName": "GetAbilitiesItem",
+      "return": {
+        "type": "whandle:gamedataGameplayAbility_Record",
+        "flags": 64
+      },
+      "index": 8314,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetAbilitiesItemHandle",
+      "shortName": "GetAbilitiesItemHandle",
+      "return": {
+        "type": "handle:gamedataGameplayAbility_Record",
+        "flags": 64
+      },
+      "index": 8315,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "parent": "inkWidgetLogicController",
+  "name": "NewItemTooltipAttachmentEntryController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkTextWidgetReference",
+      "name": "text",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "attunementContainer",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "attunementText",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "attunementIcon",
+      "flags": 4297195553
+    },
+    {
+      "type": "handle:userSettingsUserSettings",
+      "name": "settings",
+      "flags": 4431413280
+    },
+    {
+      "type": "handle:NewItemTooltipAttachmentEntrySettingsListener",
+      "name": "settingsListener",
+      "flags": 4431413280
+    },
+    {
+      "type": "CName",
+      "name": "groupPath",
+      "flags": 4297195552
+    },
+    {
+      "type": "Bool",
+      "name": "bigFontEnabled",
+      "flags": 4297195552
+    },
+    {
+      "type": "Bool",
+      "name": "isCrafting",
+      "flags": 4297195552
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "GetContext;Bool",
+      "shortName": "GetContext",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "isCrafting",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "NewSetTooltipSize;Bool",
+      "shortName": "NewSetTooltipSize",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "NewUpdateTooltipSize;",
+      "shortName": "NewUpdateTooltipSize",
+      "flags": 32900
+    },
+    {
+      "fullName": "OnVarModified;CNameCNameConfigVarTypeConfigChangeReason",
+      "shortName": "OnVarModified",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "CName",
+          "name": "groupPath",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "varName",
+          "flags": 128
+        },
+        {
+          "type": "InGameConfigVarType",
+          "name": "varType",
+          "flags": 128
+        },
+        {
+          "type": "InGameConfigChangeReason",
+          "name": "reason",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetData;NewItemTooltipAttachmentEntryData",
+      "shortName": "SetData",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:NewItemTooltipAttachmentEntryData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

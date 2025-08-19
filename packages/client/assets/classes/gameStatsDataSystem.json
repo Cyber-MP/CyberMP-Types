@@ -1,0 +1,150 @@
+{
+  "parent": "gameIStatsDataSystem",
+  "name": "gameStatsDataSystem",
+  "flags": 2,
+  "funcs": [
+    {
+      "fullName": "GetArmorEffectivenessValue",
+      "shortName": "GetArmorEffectivenessValue",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 12851,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "isPlayer",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "GetDifficulty",
+      "shortName": "GetDifficulty",
+      "return": {
+        "type": "gameDifficulty",
+        "flags": 64
+      },
+      "index": 12849,
+      "flags": 8193
+    },
+    {
+      "fullName": "GetMaxValueFromCurve",
+      "shortName": "GetMaxValueFromCurve",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 12848,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "curveSetName",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "curveName",
+          "flags": 1152
+        },
+        {
+          "type": "gameDifficulty",
+          "name": "difficulty",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "GetMinValueFromCurve",
+      "shortName": "GetMinValueFromCurve",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 12847,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "curveSetName",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "curveName",
+          "flags": 1152
+        },
+        {
+          "type": "gameDifficulty",
+          "name": "difficulty",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "GetSuggestedDefenseValues",
+      "shortName": "GetSuggestedDefenseValues",
+      "return": {
+        "type": "gameSuggestedDefenseValues",
+        "flags": 64
+      },
+      "index": 12852,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Float",
+          "name": "playerLevel",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetValueFromCurve",
+      "shortName": "GetValueFromCurve",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 12846,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "curveSetName",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "argumentValue",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "curveName",
+          "flags": 1152
+        },
+        {
+          "type": "gameDifficulty",
+          "name": "difficulty",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "SetDifficulty",
+      "shortName": "SetDifficulty",
+      "index": 12850,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gameDifficulty",
+          "name": "difficulty",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,373 @@
+{
+  "parent": "IScriptable",
+  "name": "entEntity",
+  "flags": 2,
+  "props": [
+    {
+      "type": "ECustomCameraTarget",
+      "name": "customCameraTarget",
+      "flags": 6627016705
+    },
+    {
+      "type": "RenderSceneLayerMask",
+      "name": "renderSceneLayerMask",
+      "flags": 6694125569
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "CanServiceEvent",
+      "shortName": "CanServiceEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 11246,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "CName",
+          "name": "evtName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Dispose",
+      "shortName": "Dispose",
+      "index": 11241,
+      "flags": 1
+    },
+    {
+      "fullName": "FindComponentByName",
+      "shortName": "FindComponentByName",
+      "return": {
+        "type": "handle:entIComponent",
+        "flags": 64
+      },
+      "index": 11243,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "CName",
+          "name": "componentName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetControllingPeerID",
+      "shortName": "GetControllingPeerID",
+      "return": {
+        "type": "Uint32",
+        "flags": 64
+      },
+      "index": 11254,
+      "flags": 8193
+    },
+    {
+      "fullName": "GetCurrentAppearanceName",
+      "shortName": "GetCurrentAppearanceName",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "index": 11265,
+      "flags": 8193
+    },
+    {
+      "fullName": "GetCurrentColorVariantName",
+      "shortName": "GetCurrentColorVariantName",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "index": 11266,
+      "flags": 8193
+    },
+    {
+      "fullName": "GetEntity",
+      "shortName": "GetEntity",
+      "return": {
+        "type": "entEntityGameInterface",
+        "flags": 64
+      },
+      "index": 11242,
+      "flags": 8193
+    },
+    {
+      "fullName": "GetEntityID",
+      "shortName": "GetEntityID",
+      "return": {
+        "type": "entEntityID",
+        "flags": 64
+      },
+      "index": 11245,
+      "flags": 8193
+    },
+    {
+      "fullName": "GetWorldForward",
+      "shortName": "GetWorldForward",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "index": 11260,
+      "flags": 8193
+    },
+    {
+      "fullName": "GetWorldOrientation",
+      "shortName": "GetWorldOrientation",
+      "return": {
+        "type": "Quaternion",
+        "flags": 64
+      },
+      "index": 11258,
+      "flags": 8193
+    },
+    {
+      "fullName": "GetWorldPosition",
+      "shortName": "GetWorldPosition",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "index": 11257,
+      "flags": 8193
+    },
+    {
+      "fullName": "GetWorldRight",
+      "shortName": "GetWorldRight",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "index": 11261,
+      "flags": 8193
+    },
+    {
+      "fullName": "GetWorldUp",
+      "shortName": "GetWorldUp",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "index": 11262,
+      "flags": 8193
+    },
+    {
+      "fullName": "GetWorldYaw",
+      "shortName": "GetWorldYaw",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 11259,
+      "flags": 8193
+    },
+    {
+      "fullName": "IsAttached",
+      "shortName": "IsAttached",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 11252,
+      "flags": 8193
+    },
+    {
+      "fullName": "IsControlledByAnotherClient",
+      "shortName": "IsControlledByAnotherClient",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 11251,
+      "flags": 8193
+    },
+    {
+      "fullName": "IsControlledByAnyPeer",
+      "shortName": "IsControlledByAnyPeer",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 11249,
+      "flags": 8193
+    },
+    {
+      "fullName": "IsControlledByLocalPeer",
+      "shortName": "IsControlledByLocalPeer",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 11250,
+      "flags": 8193
+    },
+    {
+      "fullName": "IsReplicated",
+      "shortName": "IsReplicated",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 11253,
+      "flags": 8193
+    },
+    {
+      "fullName": "MatchVisualTag",
+      "shortName": "MatchVisualTag",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 11255,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "CName",
+          "name": "visualTag",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "MatchVisualTags",
+      "shortName": "MatchVisualTags",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 11256,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "array:CName",
+          "name": "visualTags",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PrefetchAppearanceChange",
+      "shortName": "PrefetchAppearanceChange",
+      "index": 11263,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "newAppearanceName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "QueueEvent",
+      "shortName": "QueueEvent",
+      "index": 11244,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:redEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "QueueEventForEntityID",
+      "shortName": "QueueEventForEntityID",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 11248,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "entityID",
+          "flags": 128
+        },
+        {
+          "type": "handle:redEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "QueueEventForNodeID",
+      "shortName": "QueueEventForNodeID",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 11247,
+      "flags": 1,
+      "params": [
+        {
+          "type": "worldGlobalNodeRef",
+          "name": "nodeID",
+          "flags": 128
+        },
+        {
+          "type": "handle:redEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ScheduleAppearanceChange",
+      "shortName": "ScheduleAppearanceChange",
+      "index": 11264,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "newAppearanceName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSetGlitchOnUIEvent",
+      "shortName": "OnSetGlitchOnUIEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:SetGlitchOnUIEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetWorldTransform;",
+      "shortName": "GetWorldTransform",
+      "return": {
+        "type": "WorldTransform",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "OnInspectorDebugDraw;InfoBox",
+      "shortName": "OnInspectorDebugDraw",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "handle:rendInfoBox",
+          "name": "box",
+          "flags": 640
+        }
+      ]
+    }
+  ]
+}

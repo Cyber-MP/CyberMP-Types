@@ -1,0 +1,102 @@
+{
+  "parent": "inkWidgetLogicController",
+  "name": "GalleryFavoriteManager",
+  "flags": 4,
+  "props": [
+    {
+      "type": "CName",
+      "name": "favoritesSettingGroup",
+      "flags": 4297130016
+    },
+    {
+      "type": "CName",
+      "name": "favoritesSettingVar",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:inkISystemRequestsHandler",
+      "name": "systemHandler",
+      "flags": 4297130016
+    },
+    {
+      "type": "array:Uint32",
+      "name": "favoritesValue",
+      "flags": 6583025696
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "CountFavorites;array<GameScreenshotInfo>",
+      "shortName": "CountFavorites",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "array:inkGameScreenshotInfo",
+          "name": "screenshotInfos",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "InitValues;array<Uint32>",
+      "shortName": "InitValues",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "array:Uint32",
+          "name": "values",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsFavorite;Uint32",
+      "shortName": "IsFavorite",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Uint32",
+          "name": "hash",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetFavorite;Uint32Bool",
+      "shortName": "SetFavorite",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Uint32",
+          "name": "hash",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "favorite",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Setup;inkISystemRequestsHandler",
+      "shortName": "Setup",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "whandle:inkISystemRequestsHandler",
+          "name": "systemHandler",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

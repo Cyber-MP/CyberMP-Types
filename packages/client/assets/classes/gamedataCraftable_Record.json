@@ -1,0 +1,81 @@
+{
+  "parent": "gamedataTweakDBRecord",
+  "name": "gamedataCraftable_Record",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "CraftableItem",
+      "shortName": "CraftableItem",
+      "index": 4191,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataItem_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "CraftableItemContains",
+      "shortName": "CraftableItemContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 4195,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataItem_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetCraftableItemCount",
+      "shortName": "GetCraftableItemCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 4192,
+      "flags": 1
+    },
+    {
+      "fullName": "GetCraftableItemItem",
+      "shortName": "GetCraftableItemItem",
+      "return": {
+        "type": "whandle:gamedataItem_Record",
+        "flags": 64
+      },
+      "index": 4193,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetCraftableItemItemHandle",
+      "shortName": "GetCraftableItemItemHandle",
+      "return": {
+        "type": "handle:gamedataItem_Record",
+        "flags": 64
+      },
+      "index": 4194,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

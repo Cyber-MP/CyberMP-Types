@@ -1,0 +1,111 @@
+{
+  "parent": "gamedataAINode_Record",
+  "name": "gamedataAIActionSequence_Record",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "Actions",
+      "shortName": "Actions",
+      "index": 4650,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataAIAction_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "ActionsContains",
+      "shortName": "ActionsContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 4654,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataAIAction_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "DisableActionsLimit",
+      "shortName": "DisableActionsLimit",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 4656,
+      "flags": 1
+    },
+    {
+      "fullName": "FailOnNodeActivationConditionFailure",
+      "shortName": "FailOnNodeActivationConditionFailure",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 4657,
+      "flags": 1
+    },
+    {
+      "fullName": "GetActionsCount",
+      "shortName": "GetActionsCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 4651,
+      "flags": 1
+    },
+    {
+      "fullName": "GetActionsItem",
+      "shortName": "GetActionsItem",
+      "return": {
+        "type": "whandle:gamedataAIAction_Record",
+        "flags": 64
+      },
+      "index": 4652,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetActionsItemHandle",
+      "shortName": "GetActionsItemHandle",
+      "return": {
+        "type": "handle:gamedataAIAction_Record",
+        "flags": 64
+      },
+      "index": 4653,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HasMemory",
+      "shortName": "HasMemory",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 4655,
+      "flags": 1
+    }
+  ]
+}

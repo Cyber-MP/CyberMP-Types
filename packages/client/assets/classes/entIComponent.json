@@ -1,0 +1,128 @@
+{
+  "parent": "IScriptable",
+  "name": "entIComponent",
+  "flags": 67,
+  "props": [
+    {
+      "type": "CName",
+      "name": "name",
+      "group": "Component:Order=100",
+      "flags": 6627016705
+    },
+    {
+      "type": "Bool",
+      "name": "isReplicable",
+      "group": "Component:Order=100",
+      "flags": 6627016705
+    },
+    {
+      "type": "CRUID",
+      "name": "id",
+      "group": "Component:Order=100",
+      "flags": 6627016707
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "FindComponentByName",
+      "shortName": "FindComponentByName",
+      "return": {
+        "type": "whandle:entIComponent",
+        "flags": 64
+      },
+      "index": 11321,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "CName",
+          "name": "componentName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetAppearanceName",
+      "shortName": "GetAppearanceName",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "index": 11319,
+      "flags": 8193
+    },
+    {
+      "fullName": "GetEntity",
+      "shortName": "GetEntity",
+      "return": {
+        "type": "whandle:entEntity",
+        "flags": 64
+      },
+      "index": 11320,
+      "flags": 8193
+    },
+    {
+      "fullName": "GetName",
+      "shortName": "GetName",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "index": 11322,
+      "flags": 8193
+    },
+    {
+      "fullName": "IsEnabled",
+      "shortName": "IsEnabled",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 11323,
+      "flags": 8193
+    },
+    {
+      "fullName": "QueueEntityEvent",
+      "shortName": "QueueEntityEvent",
+      "index": 11325,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:redEvent",
+          "name": "ev",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterRenderDebug",
+      "shortName": "RegisterRenderDebug",
+      "index": 11326,
+      "flags": 1,
+      "params": [
+        {
+          "type": "String",
+          "name": "filterName",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "functionName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Toggle",
+      "shortName": "Toggle",
+      "index": 11324,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "on",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

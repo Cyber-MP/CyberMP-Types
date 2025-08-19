@@ -1,0 +1,71 @@
+{
+  "parent": "IScriptable",
+  "name": "inkMenuScenario",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "GetMenusState",
+      "shortName": "GetMenusState",
+      "return": {
+        "type": "whandle:inkMenusState",
+        "flags": 64
+      },
+      "index": 2040,
+      "flags": 1
+    },
+    {
+      "fullName": "GetSystemRequestsHandler",
+      "shortName": "GetSystemRequestsHandler",
+      "return": {
+        "type": "whandle:inkISystemRequestsHandler",
+        "flags": 64
+      },
+      "index": 2041,
+      "flags": 1
+    },
+    {
+      "fullName": "QueueBroadcastEvent",
+      "shortName": "QueueBroadcastEvent",
+      "index": 2043,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:redEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "QueueEvent",
+      "shortName": "QueueEvent",
+      "index": 2042,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:redEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SwitchToScenario",
+      "shortName": "SwitchToScenario",
+      "index": 2039,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "name",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "userData",
+          "flags": 1152
+        }
+      ]
+    }
+  ]
+}

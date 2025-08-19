@@ -1,0 +1,650 @@
+{
+  "parent": "gameuiMenuGameController",
+  "name": "questLogGameController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkWidgetReference",
+      "name": "virtualList",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "detailsPanel",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "buttonHints",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "filtersList",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "questList",
+      "flags": 4297130017
+    },
+    {
+      "type": "ScriptGameInstance",
+      "name": "game",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:gameJournalManager",
+      "name": "journalManager",
+      "flags": 4297130016
+    },
+    {
+      "type": "array:whandle:gameJournalEntry",
+      "name": "quests",
+      "flags": 6583025696
+    },
+    {
+      "type": "array:whandle:gameJournalEntry",
+      "name": "resolvedQuests",
+      "flags": 6583025696
+    },
+    {
+      "type": "whandle:ButtonHints",
+      "name": "buttonHintsController",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:inkMenuEventDispatcher",
+      "name": "menuEventDispatcher",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:gameJournalQuest",
+      "name": "trackedQuest",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:gameJournalQuest",
+      "name": "curreentQuest",
+      "flags": 4297130016
+    },
+    {
+      "type": "Int32",
+      "name": "externallyOpenedQuestHash",
+      "flags": 4297130016
+    },
+    {
+      "type": "Int32",
+      "name": "playerLevel",
+      "flags": 4297130016
+    },
+    {
+      "type": "Int32",
+      "name": "recommendedLevel",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "entryAnimProxy",
+      "flags": 4431347744
+    },
+    {
+      "type": "Bool",
+      "name": "canUsePhone",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:QuestDetailsPanelController",
+      "name": "detailsPanelCtrl",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:QuestListVirtualController",
+      "name": "virtualListController",
+      "flags": 4297130016
+    },
+    {
+      "type": "array:whandle:QuestListFilterButtonController",
+      "name": "filters",
+      "flags": 6583025696
+    },
+    {
+      "type": "whandle:QuestListFilterButtonController",
+      "name": "activeFilter",
+      "flags": 4297130016
+    },
+    {
+      "type": "Int32",
+      "name": "currentCustomFilterIndex",
+      "flags": 4297130016
+    },
+    {
+      "type": "Float",
+      "name": "axisDataThreshold",
+      "flags": 4297130016
+    },
+    {
+      "type": "Float",
+      "name": "mouseDataThreshold",
+      "flags": 4297130016
+    },
+    {
+      "type": "Float",
+      "name": "delayedShowDuration",
+      "flags": 4297130016
+    },
+    {
+      "type": "gameDelayID",
+      "name": "delayedShow",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "listPanelHoverd",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isDelayTicking",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "firstInit",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "filterSwich",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:gameJournalQuest",
+      "name": "questData",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:gameJournalQuest",
+      "name": "appliedQuestData",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "skipAnimation",
+      "flags": 4297130016
+    },
+    {
+      "type": "array:handle:QuestListItemData",
+      "name": "listData",
+      "flags": 6583222304
+    },
+    {
+      "type": "array:QuestListItemType",
+      "name": "questTypeList",
+      "flags": 6583222304
+    },
+    {
+      "type": "whandle:gameJournalQuest",
+      "name": "questToOpen",
+      "flags": 4297326624
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "questLogGameController::GetTopQuestEntry;JournalManagerJournalEntry",
+      "shortName": "GetTopQuestEntry",
+      "return": {
+        "type": "whandle:gameJournalQuest",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameJournalManager",
+          "name": "journalManager",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameJournalEntry",
+          "name": "entry",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnAllElementsSpawned",
+      "shortName": "OnAllElementsSpawned",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnAxisInput",
+      "shortName": "OnAxisInput",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnBack",
+      "shortName": "OnBack",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:IScriptable",
+          "name": "userData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnCodexPopupClosedEvent",
+      "shortName": "OnCodexPopupClosedEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:CodexPopupClosedEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnCodexPopupRequest",
+      "shortName": "OnCodexPopupRequest",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:OpenCodexPopupEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnFilterButtonSpawned",
+      "shortName": "OnFilterButtonSpawned",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkWidget",
+          "name": "widget",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "userData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnFilterReleased",
+      "shortName": "OnFilterReleased",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnJournalReady",
+      "shortName": "OnJournalReady",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Uint32",
+          "name": "entryHash",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "className",
+          "flags": 128
+        },
+        {
+          "type": "gameJournalNotifyOption",
+          "name": "notifyOption",
+          "flags": 128
+        },
+        {
+          "type": "gameJournalChangeType",
+          "name": "changeType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnQuestListItemSelected",
+      "shortName": "OnQuestListItemSelected",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:QuestlListItemSelected",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnQuestListLeave",
+      "shortName": "OnQuestListLeave",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnQuestListPanelEnter",
+      "shortName": "OnQuestListPanelEnter",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnQuestlListItemDelayedHover",
+      "shortName": "OnQuestlListItemDelayedHover",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:QuestlListItemDelayedHover",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnReleaseInput",
+      "shortName": "OnReleaseInput",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRequestChangeTrackedObjective",
+      "shortName": "OnRequestChangeTrackedObjective",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:RequestChangeTrackedObjective",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSetMenuEventDispatcher",
+      "shortName": "OnSetMenuEventDispatcher",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "whandle:inkMenuEventDispatcher",
+          "name": "menuEventDispatcher",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSetUserData",
+      "shortName": "OnSetUserData",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:IScriptable",
+          "name": "userData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "BuildQuestList;",
+      "shortName": "BuildQuestList",
+      "flags": 32900
+    },
+    {
+      "fullName": "DisplayQuestData;JournalQuestBool",
+      "shortName": "DisplayQuestData",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "whandle:gameJournalQuest",
+          "name": "questData",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "skipAnimation",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetDisplayedCategory;gameJournalQuestType",
+      "shortName": "GetDisplayedCategory",
+      "return": {
+        "type": "QuestListItemType",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "gameJournalQuestType",
+          "name": "category",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetFirstObjectiveFromQuest;JournalQuest",
+      "shortName": "GetFirstObjectiveFromQuest",
+      "return": {
+        "type": "whandle:gameJournalQuestObjective",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "whandle:gameJournalQuest",
+          "name": "journalQuest",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetListedCategories;",
+      "shortName": "GetListedCategories",
+      "return": {
+        "type": "array:gameJournalQuestType",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "GetQuestListItemData;JournalQuestQuestListItemTypeJournalQuest",
+      "shortName": "GetQuestListItemData",
+      "return": {
+        "type": "handle:QuestListItemData",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameJournalQuest",
+          "name": "questEntry",
+          "flags": 128
+        },
+        {
+          "type": "QuestListItemType",
+          "name": "questType",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameJournalQuest",
+          "name": "trackedQuest",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "GetSortTypeName;QuestListSortType",
+      "shortName": "GetSortTypeName",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "QuestListSortType",
+          "name": "currentQuestSortType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsPhoneAvailable;",
+      "shortName": "IsPhoneAvailable",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "NavigateCustomFilters;ECustomFilterDPadNavigationOption",
+      "shortName": "NavigateCustomFilters",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "ECustomFilterDPadNavigationOption",
+          "name": "option",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RequestSpawnFilterButton;Int32",
+      "shortName": "RequestSpawnFilterButton",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "type",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetupFilterButtons;",
+      "shortName": "SetupFilterButtons",
+      "flags": 32900
+    },
+    {
+      "fullName": "UpdateTrackingInputHint;",
+      "shortName": "UpdateTrackingInputHint",
+      "flags": 32900
+    }
+  ]
+}

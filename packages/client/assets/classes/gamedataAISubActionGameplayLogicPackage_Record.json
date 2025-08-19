@@ -1,0 +1,81 @@
+{
+  "parent": "gamedataAISubAction_Record",
+  "name": "gamedataAISubActionGameplayLogicPackage_Record",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "GetPackagesCount",
+      "shortName": "GetPackagesCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 6536,
+      "flags": 1
+    },
+    {
+      "fullName": "GetPackagesItem",
+      "shortName": "GetPackagesItem",
+      "return": {
+        "type": "whandle:gamedataGameplayLogicPackage_Record",
+        "flags": 64
+      },
+      "index": 6537,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetPackagesItemHandle",
+      "shortName": "GetPackagesItemHandle",
+      "return": {
+        "type": "handle:gamedataGameplayLogicPackage_Record",
+        "flags": 64
+      },
+      "index": 6538,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Packages",
+      "shortName": "Packages",
+      "index": 6535,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataGameplayLogicPackage_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "PackagesContains",
+      "shortName": "PackagesContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 6539,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataGameplayLogicPackage_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

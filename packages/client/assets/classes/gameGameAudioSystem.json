@@ -1,0 +1,796 @@
+{
+  "parent": "gameIGameAudioSystem",
+  "name": "gameGameAudioSystem",
+  "flags": 2,
+  "props": [
+    {
+      "type": "Uint8",
+      "name": "enemyPingStimCount",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "mixHasDetectedCombat",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "AddTriggerEffect",
+      "shortName": "AddTriggerEffect",
+      "index": 12286,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "effectName",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "label",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CloseAcousticPortal",
+      "shortName": "CloseAcousticPortal",
+      "index": 12266,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "object",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "EquipNewFootwearByPlayer",
+      "shortName": "EquipNewFootwearByPlayer",
+      "index": 12291,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gameItemID",
+          "name": "itemID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "EquipNewOutfitByPlayer",
+      "shortName": "EquipNewOutfitByPlayer",
+      "index": 12292,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gameItemID",
+          "name": "itemID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetLeftTriggerState",
+      "shortName": "GetLeftTriggerState",
+      "return": {
+        "type": "gameInputTriggerState",
+        "flags": 64
+      },
+      "index": 12279,
+      "flags": 1
+    },
+    {
+      "fullName": "GetMeleeChargedAttackMinimumValue",
+      "shortName": "GetMeleeChargedAttackMinimumValue",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 12294,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "configName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetPlaylistCurrentSong",
+      "shortName": "GetPlaylistCurrentSong",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "index": 12271,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "playlistName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetPlaylistSongs",
+      "shortName": "GetPlaylistSongs",
+      "return": {
+        "type": "array:CName",
+        "flags": 64
+      },
+      "index": 12270,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "playlistName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetRightTriggerState",
+      "shortName": "GetRightTriggerState",
+      "return": {
+        "type": "gameInputTriggerState",
+        "flags": 64
+      },
+      "index": 12280,
+      "flags": 1
+    },
+    {
+      "fullName": "GlobalParameter",
+      "shortName": "GlobalParameter",
+      "index": 12262,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "parameterName",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "parameterValue",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsInScanningMode",
+      "shortName": "IsInScanningMode",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12273,
+      "flags": 1
+    },
+    {
+      "fullName": "NotifyGameTone",
+      "shortName": "NotifyGameTone",
+      "index": 12267,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "eventName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OpenAcousticPortal",
+      "shortName": "OpenAcousticPortal",
+      "index": 12265,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "object",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Parameter",
+      "shortName": "Parameter",
+      "index": 12261,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "parameterName",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "parameterValue",
+          "flags": 128
+        },
+        {
+          "type": "entEntityID",
+          "name": "entityID",
+          "flags": 1152
+        },
+        {
+          "type": "CName",
+          "name": "emitterName",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "Play",
+      "shortName": "Play",
+      "index": 12256,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "eventName",
+          "flags": 128
+        },
+        {
+          "type": "entEntityID",
+          "name": "entityID",
+          "flags": 1152
+        },
+        {
+          "type": "CName",
+          "name": "emitterName",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "PlayImpact",
+      "shortName": "PlayImpact",
+      "index": 12258,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "impactContext",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "position",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameObject",
+          "name": "object",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PlayOnEmitter",
+      "shortName": "PlayOnEmitter",
+      "index": 12259,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "eventName",
+          "flags": 128
+        },
+        {
+          "type": "entEntityID",
+          "name": "entityID",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "emitterName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PlayShockwave",
+      "shortName": "PlayShockwave",
+      "index": 12264,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "shockwaveType",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "position",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterEnemyPingStim",
+      "shortName": "RegisterEnemyPingStim",
+      "index": 12282,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamedataNPCHighLevelState",
+          "name": "enemyState",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "isPoliceman",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterPreventionHeatStage",
+      "shortName": "RegisterPreventionHeatStage",
+      "index": 12283,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Uint8",
+          "name": "preventionHeatStage",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RemoveAllTriggerEffects",
+      "shortName": "RemoveAllTriggerEffects",
+      "index": 12290,
+      "flags": 1
+    },
+    {
+      "fullName": "RemoveTriggerEffect",
+      "shortName": "RemoveTriggerEffect",
+      "index": 12289,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "label",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ReplaceTriggerEffect",
+      "shortName": "ReplaceTriggerEffect",
+      "index": 12287,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "effectName",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "label",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "createIfNotPresent",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "ReplaceTriggerEffectMode",
+      "shortName": "ReplaceTriggerEffectMode",
+      "index": 12275,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Uint16",
+          "name": "id",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "effect",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RequestSongOnPlaylist",
+      "shortName": "RequestSongOnPlaylist",
+      "index": 12269,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "playlistName",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "songName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RequestSongOnRadioStation",
+      "shortName": "RequestSongOnRadioStation",
+      "index": 12268,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "stationName",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "songName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RevertTriggerEffect",
+      "shortName": "RevertTriggerEffect",
+      "index": 12288,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "label",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetBDCameraListenerOverride",
+      "shortName": "SetBDCameraListenerOverride",
+      "index": 12284,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetInScanningMode",
+      "shortName": "SetInScanningMode",
+      "index": 12272,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "inScanningMode",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetTriggerEffectMode",
+      "shortName": "SetTriggerEffectMode",
+      "return": {
+        "type": "Uint16",
+        "flags": 64
+      },
+      "index": 12274,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "effect",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetTriggerEffectModeTimed",
+      "shortName": "SetTriggerEffectModeTimed",
+      "return": {
+        "type": "Uint16",
+        "flags": 64
+      },
+      "index": 12278,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "effect",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "time",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "State",
+      "shortName": "State",
+      "index": 12263,
+      "flags": 1,
+      "params": [
+        {
+          "type": "String",
+          "name": "stateGroup",
+          "flags": 128
+        },
+        {
+          "type": "String",
+          "name": "state",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Stop",
+      "shortName": "Stop",
+      "index": 12257,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "eventName",
+          "flags": 128
+        },
+        {
+          "type": "entEntityID",
+          "name": "entityID",
+          "flags": 1152
+        },
+        {
+          "type": "CName",
+          "name": "emitterName",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "Switch",
+      "shortName": "Switch",
+      "index": 12260,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "switchName",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "switchValue",
+          "flags": 128
+        },
+        {
+          "type": "entEntityID",
+          "name": "entityID",
+          "flags": 1152
+        },
+        {
+          "type": "CName",
+          "name": "emitterName",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "TriggerFlyby",
+      "shortName": "TriggerFlyby",
+      "index": 12281,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Vector4",
+          "name": "position",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "direction",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "startPosition",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameObject",
+          "name": "object",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UnequipOutfitByPlayer",
+      "shortName": "UnequipOutfitByPlayer",
+      "index": 12293,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gameItemID",
+          "name": "itemID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UnsetTriggerEffectMode",
+      "shortName": "UnsetTriggerEffectMode",
+      "index": 12277,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Uint16",
+          "name": "id",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateTriggerEffectFrequency",
+      "shortName": "UpdateTriggerEffectFrequency",
+      "index": 12276,
+      "flags": 1
+    },
+    {
+      "fullName": "VoIsPerceptible",
+      "shortName": "VoIsPerceptible",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12285,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "entityId",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnGameEnd",
+      "shortName": "OnGameEnd",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33036
+    },
+    {
+      "fullName": "AddTriggerEffectIfPlayerNotInVehicleDriverSeat;GameObjectCNameCName",
+      "shortName": "AddTriggerEffectIfPlayerNotInVehicleDriverSeat",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "playerObject",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "triggerName",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "triggerLabel",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HandleCombatMix;GameObject",
+      "shortName": "HandleCombatMix",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "localPlayer",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HandleDynamicMixAreaEnter;GameObject",
+      "shortName": "HandleDynamicMixAreaEnter",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "localPlayer",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HandleDynamicMixAreaExit;GameObject",
+      "shortName": "HandleDynamicMixAreaExit",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "localPlayer",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HandleOutOfCombatMix;GameObject",
+      "shortName": "HandleOutOfCombatMix",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "localPlayer",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsPlayerInVehicleInDriverSeat;GameObject",
+      "shortName": "IsPlayerInVehicleInDriverSeat",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "playerObject",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PlayItemActionSound;CNamegameItemData",
+      "shortName": "PlayItemActionSound",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "CName",
+          "name": "action",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameItemData",
+          "name": "itemData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PlayItemLootedSound;gameItemData",
+      "shortName": "PlayItemLootedSound",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "whandle:gameItemData",
+          "name": "itemData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PlayLootAllSound;",
+      "shortName": "PlayLootAllSound",
+      "flags": 33284
+    }
+  ]
+}

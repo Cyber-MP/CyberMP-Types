@@ -1,0 +1,260 @@
+{
+  "parent": "gameScriptableComponent",
+  "name": "DelamainTaxiComponent",
+  "flags": 4,
+  "props": [
+    {
+      "type": "CName",
+      "name": "taxiStateFact",
+      "flags": 4297130017
+    },
+    {
+      "type": "CName",
+      "name": "taxiSeatFact",
+      "flags": 4297130017
+    },
+    {
+      "type": "ScriptGameInstance",
+      "name": "gameInstance",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:DelamainTaxiSystem",
+      "name": "delamainTaxiSystem",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:AutoDriveSystem",
+      "name": "autoDriveSystem",
+      "flags": 4297130016
+    },
+    {
+      "type": "DelamainTaxiState",
+      "name": "currentState",
+      "flags": 4297130016
+    },
+    {
+      "type": "Uint32",
+      "name": "callbackID",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "vehicleSpeedCallbackID",
+      "flags": 4431544352
+    },
+    {
+      "type": "Bool",
+      "name": "isActiveCab",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnFactChanged",
+      "shortName": "OnFactChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameFactChangedEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnVehicleFinishedMountingEvent",
+      "shortName": "OnVehicleFinishedMountingEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:vehicleFinishedMountingEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnVehicleParkedEvent",
+      "shortName": "OnVehicleParkedEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:vehicleParkedEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnVehicleStartedMountingEvent",
+      "shortName": "OnVehicleStartedMountingEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:vehicleStartedMountingEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CancelRide;Bool",
+      "shortName": "CancelRide",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "forceExit",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetPS",
+      "shortName": "GetPS",
+      "return": {
+        "type": "handle:DelamainTaxiComponentPS",
+        "flags": 64
+      },
+      "flags": 41216
+    },
+    {
+      "fullName": "GetVehicle;",
+      "shortName": "GetVehicle",
+      "return": {
+        "type": "whandle:vehicleBaseObject",
+        "flags": 64
+      },
+      "flags": 41220
+    },
+    {
+      "fullName": "GetVehicleControllerPS;",
+      "shortName": "GetVehicleControllerPS",
+      "return": {
+        "type": "handle:vehicleControllerPS",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "GoToFreeRoam;",
+      "shortName": "GoToFreeRoam",
+      "flags": 32900
+    },
+    {
+      "fullName": "InitState;",
+      "shortName": "InitState",
+      "flags": 32900
+    },
+    {
+      "fullName": "OnDelamainTaxiArrivedEvent;",
+      "shortName": "OnDelamainTaxiArrivedEvent",
+      "flags": 33284
+    },
+    {
+      "fullName": "OnGameAttach;",
+      "shortName": "OnGameAttach",
+      "flags": 33924
+    },
+    {
+      "fullName": "OnGameDetach;",
+      "shortName": "OnGameDetach",
+      "flags": 33924
+    },
+    {
+      "fullName": "OnVehicleSpeedChange;Float",
+      "shortName": "OnVehicleSpeedChange",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "Float",
+          "name": "speed",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "QueueExitCabEvent;",
+      "shortName": "QueueExitCabEvent",
+      "flags": 32900
+    },
+    {
+      "fullName": "SetDoorState;Bool",
+      "shortName": "SetDoorState",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "open",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetHUDHidden;Bool",
+      "shortName": "SetHUDHidden",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "hidden",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetState;DelamainTaxiStateBool",
+      "shortName": "SetState",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "DelamainTaxiState",
+          "name": "state",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "force",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "SetupVehicleSpeedBBListener;",
+      "shortName": "SetupVehicleSpeedBBListener",
+      "flags": 33028
+    },
+    {
+      "fullName": "StartAutoDrive;",
+      "shortName": "StartAutoDrive",
+      "flags": 33284
+    },
+    {
+      "fullName": "UnregisterCab;",
+      "shortName": "UnregisterCab",
+      "flags": 32900
+    },
+    {
+      "fullName": "UnregisterVehicleSpeedBBListener;",
+      "shortName": "UnregisterVehicleSpeedBBListener",
+      "flags": 33028
+    }
+  ]
+}

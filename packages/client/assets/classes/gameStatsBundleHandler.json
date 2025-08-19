@@ -1,0 +1,94 @@
+{
+  "parent": "IScriptable",
+  "name": "gameStatsBundleHandler",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "AddModifier",
+      "shortName": "AddModifier",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12856,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameStatModifierData_Deprecated",
+          "name": "modifierData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetStatBoolValue",
+      "shortName": "GetStatBoolValue",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12854,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamedataStatType",
+          "name": "statType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetStatDetails",
+      "shortName": "GetStatDetails",
+      "return": {
+        "type": "array:gameStatDetailedData",
+        "flags": 64
+      },
+      "index": 12855,
+      "flags": 1
+    },
+    {
+      "fullName": "GetStatValue",
+      "shortName": "GetStatValue",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 12853,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamedataStatType",
+          "name": "statType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RemoveAllModifiers",
+      "shortName": "RemoveAllModifiers",
+      "index": 12858,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamedataStatType",
+          "name": "statType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RemoveModifier",
+      "shortName": "RemoveModifier",
+      "index": 12857,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameStatModifierData_Deprecated",
+          "name": "modifierData",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

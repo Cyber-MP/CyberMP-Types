@@ -1,0 +1,214 @@
+{
+  "parent": "IScriptable",
+  "name": "AISubActionAttackWithWeapon_Record_Implementation",
+  "flags": 5,
+  "funcs": [
+    {
+      "fullName": "AISubActionAttackWithWeapon_Record_Implementation::Activate;ScriptExecutionContextAISubActionAttackWithWeapon_Record",
+      "shortName": "Activate",
+      "flags": 34310,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gamedataAISubActionAttackWithWeapon_Record",
+          "name": "record",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AISubActionAttackWithWeapon_Record_Implementation::AttackWithWeapon;ScriptExecutionContextAISubActionAttackWithWeapon_Record",
+      "shortName": "AttackWithWeapon",
+      "return": {
+        "type": "AIbehaviorUpdateOutcome",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gamedataAISubActionAttackWithWeapon_Record",
+          "name": "record",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AISubActionAttackWithWeapon_Record_Implementation::Deactivate;ScriptExecutionContextAISubActionAttackWithWeapon_RecordFloatBool",
+      "shortName": "Deactivate",
+      "flags": 34310,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gamedataAISubActionAttackWithWeapon_Record",
+          "name": "record",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "duration",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "interrupted",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AISubActionAttackWithWeapon_Record_Implementation::FillEffectData;ScriptExecutionContextAISubActionAttackWithWeapon_RecordAttack_GameEffectEffectInstance",
+      "shortName": "FillEffectData",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gamedataAISubActionAttackWithWeapon_Record",
+          "name": "record",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameAttack_GameEffect",
+          "name": "attack",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameEffectInstance",
+          "name": "effect",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AISubActionAttackWithWeapon_Record_Implementation::GetWeapon;ScriptExecutionContextAISubActionAttackWithWeapon_RecordWeaponObject",
+      "shortName": "GetWeapon",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gamedataAISubActionAttackWithWeapon_Record",
+          "name": "record",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameweaponObject",
+          "name": "weapon",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "AISubActionAttackWithWeapon_Record_Implementation::PrepareContinuousAttack;WeaponObject",
+      "shortName": "PrepareContinuousAttack",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gameweaponObject",
+          "name": "weapon",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AISubActionAttackWithWeapon_Record_Implementation::SetAttackNameInBlackBoard;ScriptExecutionContextCName",
+      "shortName": "SetAttackNameInBlackBoard",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "attackName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AISubActionAttackWithWeapon_Record_Implementation::StartContinuousAttack;ScriptExecutionContextWeaponObject",
+      "shortName": "StartContinuousAttack",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameweaponObject",
+          "name": "weapon",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AISubActionAttackWithWeapon_Record_Implementation::StartPreparedContinuousAttack;ScriptExecutionContextWeaponObject",
+      "shortName": "StartPreparedContinuousAttack",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameweaponObject",
+          "name": "weapon",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AISubActionAttackWithWeapon_Record_Implementation::Update;ScriptExecutionContextAISubActionAttackWithWeapon_RecordFloat",
+      "shortName": "Update",
+      "return": {
+        "type": "AIbehaviorUpdateOutcome",
+        "flags": 64
+      },
+      "flags": 34310,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gamedataAISubActionAttackWithWeapon_Record",
+          "name": "record",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "duration",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "parent": "gameuiMenuGameController",
+  "name": "gameuiPreviewGameController",
+  "flags": 3,
+  "props": [
+    {
+      "type": "Float",
+      "name": "yawSpeed",
+      "flags": 6627016705
+    },
+    {
+      "type": "Float",
+      "name": "yawDefault",
+      "flags": 6627016705
+    },
+    {
+      "type": "Bool",
+      "name": "isRotatable",
+      "flags": 4297195553
+    },
+    {
+      "type": "Float",
+      "name": "rotationSpeed",
+      "flags": 4297195553
+    },
+    {
+      "type": "Bool",
+      "name": "inputDisabled",
+      "flags": 4297195552
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "Rotate",
+      "shortName": "Rotate",
+      "index": 14757,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Float",
+          "name": "yaw",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RotateVector",
+      "shortName": "RotateVector",
+      "index": 14758,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Vector3",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnAxisInput",
+      "shortName": "OnAxisInput",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "HandleAxisInput;inkPointerEvent",
+      "shortName": "HandleAxisInput",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetInputDisabled;Bool",
+      "shortName": "SetInputDisabled",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "disabled",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

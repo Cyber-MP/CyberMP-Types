@@ -1,0 +1,512 @@
+{
+  "parent": "gameScriptableComponent",
+  "name": "PhotoModePlayerEntityComponent",
+  "flags": 4,
+  "props": [
+    {
+      "type": "gameItemID",
+      "name": "usedWeaponItemId",
+      "flags": 4297130016
+    },
+    {
+      "type": "gameItemID",
+      "name": "currentWeaponInSlot",
+      "flags": 4297130016
+    },
+    {
+      "type": "gameItemID",
+      "name": "swapMeleeWeaponItemId",
+      "flags": 4297130016
+    },
+    {
+      "type": "gameItemID",
+      "name": "swapHangunWeaponItemId",
+      "flags": 4297130016
+    },
+    {
+      "type": "gameItemID",
+      "name": "swapRifleWeaponItemId",
+      "flags": 4297130016
+    },
+    {
+      "type": "gameItemID",
+      "name": "swapShootgunWeaponItemId",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:gamePuppet",
+      "name": "fakePuppet",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:PlayerPuppet",
+      "name": "mainPuppet",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:PlayerPuppet",
+      "name": "currentPuppet",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:gameTransactionSystem",
+      "name": "TS",
+      "flags": 4431347744
+    },
+    {
+      "type": "array:gameItemID",
+      "name": "loadingItems",
+      "flags": 6583025696
+    },
+    {
+      "type": "array:gameItemID",
+      "name": "loadingVisualItems",
+      "flags": 6583025696
+    },
+    {
+      "type": "Float",
+      "name": "itemsLoadingTime",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "muzzleEffectEnabled",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "customizable",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "holsteredArmsShouldBeVisible",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "holsteredArmsBeingSpawned",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "holsteredArmsVisible",
+      "flags": 4297130016
+    },
+    {
+      "type": "gameItemID",
+      "name": "holsteredArmsItem",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "cyberwareArmsBeingSpawned",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "cyberwareArmsVisible",
+      "flags": 4297130016
+    },
+    {
+      "type": "gameItemID",
+      "name": "cyberwareArmsItem",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnItemAddedToSlot",
+      "shortName": "OnItemAddedToSlot",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameAttachmentSlotEventsItemAddedToSlot",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnItemVisualsAddedToSlot",
+      "shortName": "OnItemVisualsAddedToSlot",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameAttachmentSlotEventsItemVisualsAddedToSlot",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AddAmmoForWeapon;ItemID",
+      "shortName": "AddAmmoForWeapon",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "gameItemID",
+          "name": "weaponID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ClearInventory;",
+      "shortName": "ClearInventory",
+      "flags": 32900
+    },
+    {
+      "fullName": "EquipHolsteredArms;",
+      "shortName": "EquipHolsteredArms",
+      "flags": 32900
+    },
+    {
+      "fullName": "EquipWeaponOfThisType;array<gamedataItemType>",
+      "shortName": "EquipWeaponOfThisType",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "array:gamedataItemType",
+          "name": "typesList",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "FindMatchingEquipmentInEquipArea;gamedataEquipmentAreaarray<gamedataItemType>",
+      "shortName": "FindMatchingEquipmentInEquipArea",
+      "return": {
+        "type": "gameItemID",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "gamedataEquipmentArea",
+          "name": "area",
+          "flags": 128
+        },
+        {
+          "type": "array:gamedataItemType",
+          "name": "typesList",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "FindMatchingEquipmentInInventory;array<gamedataItemType>",
+      "shortName": "FindMatchingEquipmentInInventory",
+      "return": {
+        "type": "gameItemID",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "array:gamedataItemType",
+          "name": "typesList",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetEquipArea;EquipmentSystemPlayerDatagamedataEquipmentArea",
+      "shortName": "GetEquipArea",
+      "return": {
+        "type": "gameSEquipArea",
+        "flags": 64
+      },
+      "flags": 41092,
+      "params": [
+        {
+          "type": "handle:EquipmentSystemPlayerData",
+          "name": "equipmentData",
+          "flags": 128
+        },
+        {
+          "type": "gamedataEquipmentArea",
+          "name": "areaType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetPhotoModeActiveEquipAreas;EquipmentSystemPlayerData",
+      "shortName": "GetPhotoModeActiveEquipAreas",
+      "return": {
+        "type": "array:gameSEquipArea",
+        "flags": 64
+      },
+      "flags": 41476,
+      "params": [
+        {
+          "type": "handle:EquipmentSystemPlayerData",
+          "name": "equipmentData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetPhotoModeActiveSlots;",
+      "shortName": "GetPhotoModeActiveSlots",
+      "return": {
+        "type": "array:gamedataEquipmentArea",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetPhotoModeEquipAreas;EquipmentSystemPlayerDataBoolBool",
+      "shortName": "GetPhotoModeEquipAreas",
+      "return": {
+        "type": "array:gameSEquipArea",
+        "flags": 64
+      },
+      "flags": 41476,
+      "params": [
+        {
+          "type": "handle:EquipmentSystemPlayerData",
+          "name": "equipmentData",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "isVisual",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "withUnderwear",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetPhotoModeVisualEquipAreas;EquipmentSystemPlayerDataBool",
+      "shortName": "GetPhotoModeVisualEquipAreas",
+      "return": {
+        "type": "array:gameSEquipArea",
+        "flags": 64
+      },
+      "flags": 41476,
+      "params": [
+        {
+          "type": "handle:EquipmentSystemPlayerData",
+          "name": "equipmentData",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "withUnderwear",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetPhotoModeVisualSlots;Bool",
+      "shortName": "GetPhotoModeVisualSlots",
+      "return": {
+        "type": "array:gamedataEquipmentArea",
+        "flags": 64
+      },
+      "flags": 41476,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "withUnderwear",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetWeaponInHands;",
+      "shortName": "GetWeaponInHands",
+      "return": {
+        "type": "gamedataItemType",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "HasAllItemsFinishedLoading;",
+      "shortName": "HasAllItemsFinishedLoading",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "HasAllItemsVisualsFinishedLoading;",
+      "shortName": "HasAllItemsVisualsFinishedLoading",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "IsItemOfThisType;ItemIDscript_ref<array<gamedataItemType>>",
+      "shortName": "IsItemOfThisType",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "gameItemID",
+          "name": "item",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:array:gamedataItemType",
+          "name": "typesList",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsMuzzleFireSupported;",
+      "shortName": "IsMuzzleFireSupported",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "OnGameAttach;",
+      "shortName": "OnGameAttach",
+      "flags": 32900
+    },
+    {
+      "fullName": "OnGameDetach;",
+      "shortName": "OnGameDetach",
+      "flags": 32900
+    },
+    {
+      "fullName": "PutOnFakeItem;ItemIDPlayerPuppet",
+      "shortName": "PutOnFakeItem",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "gameItemID",
+          "name": "itemToAdd",
+          "flags": 128
+        },
+        {
+          "type": "whandle:PlayerPuppet",
+          "name": "puppet",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PutOnFakeItemFromCurrentPuppet;ItemID",
+      "shortName": "PutOnFakeItemFromCurrentPuppet",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "gameItemID",
+          "name": "itemToAdd",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PutOnFakeItemFromMainPuppet;ItemID",
+      "shortName": "PutOnFakeItemFromMainPuppet",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "gameItemID",
+          "name": "itemToAdd",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ReevaluateArmsVisibility;",
+      "shortName": "ReevaluateArmsVisibility",
+      "flags": 32900
+    },
+    {
+      "fullName": "RemoveAllItems;script_ref<array<SEquipArea>>",
+      "shortName": "RemoveAllItems",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:array:gameSEquipArea",
+          "name": "areas",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetMuzzleEffectEnabled;Bool",
+      "shortName": "SetMuzzleEffectEnabled",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "enabled",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetupInventory;Bool",
+      "shortName": "SetupInventory",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "isCurrentPlayerObjectCustomizable",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetupUnderwear;",
+      "shortName": "SetupUnderwear",
+      "flags": 32900
+    },
+    {
+      "fullName": "StopWeaponShootEffects;",
+      "shortName": "StopWeaponShootEffects",
+      "flags": 33284
+    },
+    {
+      "fullName": "SwitchWardrobeSet;Int32",
+      "shortName": "SwitchWardrobeSet",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "wardrobeSet",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UnequipCyberwareArms;",
+      "shortName": "UnequipCyberwareArms",
+      "flags": 32900
+    },
+    {
+      "fullName": "UnequipHolsteredArms;",
+      "shortName": "UnequipHolsteredArms",
+      "flags": 32900
+    }
+  ]
+}

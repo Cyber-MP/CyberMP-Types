@@ -1,0 +1,325 @@
+{
+  "parent": "IScriptable",
+  "name": "AISubActionCover_Record_Implementation",
+  "flags": 5,
+  "funcs": [
+    {
+      "fullName": "AISubActionCover_Record_Implementation::Activate;ScriptExecutionContextAISubActionCover_Record",
+      "shortName": "Activate",
+      "flags": 34310,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gamedataAISubActionCover_Record",
+          "name": "record",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AISubActionCover_Record_Implementation::CalculateCoverExposureMethod;ScriptedPuppetUint64AISubActionCover_RecordGameObjectFloatscript_ref<TrackedLocation>script_ref<array<AICoverExposureMethod>>",
+      "shortName": "CalculateCoverExposureMethod",
+      "return": {
+        "type": "AICoverExposureMethod",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:ScriptedPuppet",
+          "name": "puppet",
+          "flags": 128
+        },
+        {
+          "type": "Uint64",
+          "name": "coverID",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gamedataAISubActionCover_Record",
+          "name": "record",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameObject",
+          "name": "target",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "lineOfSightTolerance",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:AITrackedLocation",
+          "name": "trackedLocation",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:array:AICoverExposureMethod",
+          "name": "exposureMethods",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AISubActionCover_Record_Implementation::Deactivate;ScriptExecutionContextAISubActionCover_RecordFloatBool",
+      "shortName": "Deactivate",
+      "flags": 34310,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gamedataAISubActionCover_Record",
+          "name": "record",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "duration",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "interrupted",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AISubActionCover_Record_Implementation::EvaluateShootingSpot;ScriptedPuppetGameObjectCoverManagerUint64",
+      "shortName": "EvaluateShootingSpot",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:ScriptedPuppet",
+          "name": "puppet",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameObject",
+          "name": "target",
+          "flags": 128
+        },
+        {
+          "type": "whandle:AISmartCoverManager",
+          "name": "cm",
+          "flags": 128
+        },
+        {
+          "type": "Uint64",
+          "name": "consideredCoverID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AISubActionCover_Record_Implementation::GetAnimVariation;ScriptExecutionContextAISubActionCover_Record",
+      "shortName": "GetAnimVariation",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 34310,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gamedataAISubActionCover_Record",
+          "name": "record",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AISubActionCover_Record_Implementation::GetInvalidCoverID;",
+      "shortName": "GetInvalidCoverID",
+      "return": {
+        "type": "Uint64",
+        "flags": 64
+      },
+      "flags": 33286
+    },
+    {
+      "fullName": "AISubActionCover_Record_Implementation::SelectCover;ScriptExecutionContextAIActionCooldown_RecordUint64gamedataAIRingTypegamedataAIRingTypeBool",
+      "shortName": "SelectCover",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamedataAIActionCooldown_Record",
+          "name": "cooldown",
+          "flags": 128
+        },
+        {
+          "type": "Uint64",
+          "name": "consideredCoverID",
+          "flags": 128
+        },
+        {
+          "type": "gamedataAIRingType",
+          "name": "consideredRing",
+          "flags": 128
+        },
+        {
+          "type": "gamedataAIRingType",
+          "name": "currentRing",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "compareRings",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AISubActionCover_Record_Implementation::SetCoverData;ScriptExecutionContextAISubActionCover_Record",
+      "shortName": "SetCoverData",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gamedataAISubActionCover_Record",
+          "name": "record",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AISubActionCover_Record_Implementation::SetCoverExposureAnim;ScriptExecutionContextScriptedPuppetUint64AISubActionCover_RecordGameObjectFloat",
+      "shortName": "SetCoverExposureAnim",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "whandle:ScriptedPuppet",
+          "name": "puppet",
+          "flags": 128
+        },
+        {
+          "type": "Uint64",
+          "name": "coverID",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gamedataAISubActionCover_Record",
+          "name": "record",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameObject",
+          "name": "target",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "lineOfSightTolerance",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AISubActionCover_Record_Implementation::SetCurrentCover;ScriptExecutionContext",
+      "shortName": "SetCurrentCover",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AISubActionCover_Record_Implementation::SetDesiredCover;ScriptExecutionContextAISubActionCover_Record",
+      "shortName": "SetDesiredCover",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gamedataAISubActionCover_Record",
+          "name": "record",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AISubActionCover_Record_Implementation::SetInitialCoverData;ScriptedPuppetUint64",
+      "shortName": "SetInitialCoverData",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:ScriptedPuppet",
+          "name": "puppet",
+          "flags": 128
+        },
+        {
+          "type": "Uint64",
+          "name": "coverID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AISubActionCover_Record_Implementation::Update;ScriptExecutionContextAISubActionCover_RecordFloat",
+      "shortName": "Update",
+      "return": {
+        "type": "AIbehaviorUpdateOutcome",
+        "flags": 64
+      },
+      "flags": 34310,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gamedataAISubActionCover_Record",
+          "name": "record",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "duration",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

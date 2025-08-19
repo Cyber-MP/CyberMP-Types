@@ -1,0 +1,107 @@
+{
+  "parent": "BaseItemAction",
+  "name": "ConsumeAction",
+  "flags": 4,
+  "funcs": [
+    {
+      "fullName": "CompleteAction;GameInstance",
+      "shortName": "CompleteAction",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "gameInstance",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsVisible;script_ref<GetActionsContext>gameObjectActionsCallbackController",
+      "shortName": "IsVisible",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33280,
+      "params": [
+        {
+          "type": "script_ref:gameGetActionsContext",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameObjectActionsCallbackController",
+          "name": "objectActionsCallbackController",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "NotifyAutocraftSystem;GameInstance",
+      "shortName": "NotifyAutocraftSystem",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "gameInstance",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessPermanentFood;GameInstance",
+      "shortName": "ProcessPermanentFood",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "gameInstance",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessStatusEffects;script_ref<array<ObjectActionEffect_Record>>GameInstance",
+      "shortName": "ProcessStatusEffects",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "script_ref:array:whandle:gamedataObjectActionEffect_Record",
+          "name": "actionEffects",
+          "flags": 128
+        },
+        {
+          "type": "ScriptGameInstance",
+          "name": "gameInstance",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RemoveConsumableItem;GameInstance",
+      "shortName": "RemoveConsumableItem",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "gameInstance",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ShouldEquipAnotherConsumable;",
+      "shortName": "ShouldEquipAnotherConsumable",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "TryToEquipSameTypeConsumable;",
+      "shortName": "TryToEquipSameTypeConsumable",
+      "flags": 32900
+    }
+  ]
+}

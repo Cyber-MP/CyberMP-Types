@@ -1,0 +1,72 @@
+{
+  "parent": "inkWidgetLogicController",
+  "name": "InventoryItemPartDisplay",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkImageWidgetReference",
+      "name": "PartIconImage",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "Rarity",
+      "flags": 4297195553
+    },
+    {
+      "type": "CName",
+      "name": "TexturePartName",
+      "flags": 4297195553
+    },
+    {
+      "type": "handle:gameInventoryItemAttachments",
+      "name": "attachmentData",
+      "flags": 4431413280
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "InventoryItemPartDisplay::GetCorrespondingTexturePartName;WeaponPartType",
+      "shortName": "GetCorrespondingTexturePartName",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "WeaponPartType",
+          "name": "weaponPartType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetRarity;",
+      "shortName": "SetRarity",
+      "flags": 33028
+    },
+    {
+      "fullName": "Setup;InventoryItemAttachments",
+      "shortName": "Setup",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:gameInventoryItemAttachments",
+          "name": "attachmentDataArg",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateMounted;",
+      "shortName": "UpdateMounted",
+      "flags": 33028
+    },
+    {
+      "fullName": "UpdateTexture;",
+      "shortName": "UpdateTexture",
+      "flags": 33028
+    }
+  ]
+}

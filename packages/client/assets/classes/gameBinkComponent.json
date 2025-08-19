@@ -1,0 +1,170 @@
+{
+  "parent": "entIVisualComponent",
+  "name": "gameBinkComponent",
+  "flags": 2,
+  "props": [
+    {
+      "type": "handle:gameBinkMeshTargetBinding",
+      "name": "meshTargetBinding",
+      "group": "Bink video",
+      "flags": 6627016704
+    },
+    {
+      "type": "CName",
+      "name": "videoPlayerName",
+      "group": "Bink video",
+      "flags": 6627016705
+    },
+    {
+      "type": "raRef:Bink",
+      "name": "binkResource",
+      "group": "Bink video",
+      "flags": 6627016705
+    },
+    {
+      "type": "CName",
+      "name": "audioEvent",
+      "group": "Bink video",
+      "flags": 6627016705
+    },
+    {
+      "type": "Bool",
+      "name": "loopVideo",
+      "group": "Bink video",
+      "flags": 6627016705
+    },
+    {
+      "type": "Bool",
+      "name": "forceVideoFrameRate",
+      "group": "Bink video",
+      "flags": 6627016705
+    },
+    {
+      "type": "Bool",
+      "name": "isEnabled",
+      "group": "Component state",
+      "flags": 6694125569
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "ForceVideoFrameRate",
+      "shortName": "ForceVideoFrameRate",
+      "index": 11948,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "forceVideoFrameRate",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetVideoSummary",
+      "shortName": "GetVideoSummary",
+      "return": {
+        "type": "gameBinkVideoSummary",
+        "flags": 64
+      },
+      "index": 11953,
+      "flags": 1
+    },
+    {
+      "fullName": "IsPaused",
+      "shortName": "IsPaused",
+      "index": 11952,
+      "flags": 1
+    },
+    {
+      "fullName": "Pause",
+      "shortName": "Pause",
+      "index": 11951,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "pauseVideo",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Play",
+      "shortName": "Play",
+      "index": 11949,
+      "flags": 1
+    },
+    {
+      "fullName": "SetIsLooped",
+      "shortName": "SetIsLooped",
+      "index": 11947,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "loopVideo",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetVideoPath",
+      "shortName": "SetVideoPath",
+      "index": 11946,
+      "flags": 1,
+      "params": [
+        {
+          "type": "redResourceReferenceScriptToken",
+          "name": "videoPath",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetVideoPlayerName",
+      "shortName": "SetVideoPlayerName",
+      "index": 11945,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "videoPlayerName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SkipFramePercentage",
+      "shortName": "SkipFramePercentage",
+      "index": 11955,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "percentage",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SkipFrames",
+      "shortName": "SkipFrames",
+      "index": 11954,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "numberOfFrames",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Stop",
+      "shortName": "Stop",
+      "index": 11950,
+      "flags": 1
+    }
+  ]
+}

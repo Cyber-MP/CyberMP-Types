@@ -1,0 +1,81 @@
+{
+  "parent": "gamedataTweakDBRecord",
+  "name": "gamedataUICharacterCreationAttributesPreset_Record",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "Attributes",
+      "shortName": "Attributes",
+      "index": 8131,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataUICharacterCreationAttribute_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "AttributesContains",
+      "shortName": "AttributesContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 8135,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataUICharacterCreationAttribute_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetAttributesCount",
+      "shortName": "GetAttributesCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 8132,
+      "flags": 1
+    },
+    {
+      "fullName": "GetAttributesItem",
+      "shortName": "GetAttributesItem",
+      "return": {
+        "type": "whandle:gamedataUICharacterCreationAttribute_Record",
+        "flags": 64
+      },
+      "index": 8133,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetAttributesItemHandle",
+      "shortName": "GetAttributesItemHandle",
+      "return": {
+        "type": "handle:gamedataUICharacterCreationAttribute_Record",
+        "flags": 64
+      },
+      "index": 8134,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

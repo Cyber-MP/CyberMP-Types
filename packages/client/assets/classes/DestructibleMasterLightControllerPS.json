@@ -1,0 +1,59 @@
+{
+  "parent": "DestructibleMasterDeviceControllerPS",
+  "name": "DestructibleMasterLightControllerPS",
+  "flags": 1028,
+  "funcs": [
+    {
+      "fullName": "OnInstantiated",
+      "shortName": "OnInstantiated",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "GameAttached;",
+      "shortName": "GameAttached",
+      "flags": 33024
+    },
+    {
+      "fullName": "GetActions;array<DeviceAction>GetActionsContext",
+      "shortName": "GetActions",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33280,
+      "params": [
+        {
+          "type": "array:handle:gamedeviceAction",
+          "name": "actions",
+          "flags": 640
+        },
+        {
+          "type": "gameGetActionsContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "InitializeCLS;",
+      "shortName": "InitializeCLS",
+      "flags": 32900
+    },
+    {
+      "fullName": "UpdateStateOnCLS;EDeviceStatus",
+      "shortName": "UpdateStateOnCLS",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "EDeviceStatus",
+          "name": "state",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

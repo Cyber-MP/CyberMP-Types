@@ -1,0 +1,320 @@
+{
+  "parent": "inkButtonController",
+  "name": "DeviceButtonLogicControllerBase",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkWidgetReference",
+      "name": "targetWidgetRef",
+      "group": "Widget Refs",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "displayNameWidget",
+      "group": "Widget Refs",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "iconWidget",
+      "group": "Widget Refs",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "toggleSwitchWidget",
+      "group": "Widget Refs",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "sizeProviderWidget",
+      "group": "Widget Refs",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "selectionMarkerWidget",
+      "group": "Widget Refs",
+      "flags": 4297195553
+    },
+    {
+      "type": "handle:WidgetAnimationManager",
+      "name": "onReleaseAnimations",
+      "group": "Animations",
+      "flags": 4431413285
+    },
+    {
+      "type": "handle:WidgetAnimationManager",
+      "name": "onPressAnimations",
+      "group": "Animations",
+      "flags": 4431413285
+    },
+    {
+      "type": "handle:WidgetAnimationManager",
+      "name": "onHoverOverAnimations",
+      "group": "Animations",
+      "flags": 4431413285
+    },
+    {
+      "type": "handle:WidgetAnimationManager",
+      "name": "onHoverOutAnimations",
+      "group": "Animations",
+      "flags": 4431413285
+    },
+    {
+      "type": "redResourceReferenceScriptToken",
+      "name": "defaultStyle",
+      "group": "Style Overrides",
+      "flags": 4297195553
+    },
+    {
+      "type": "redResourceReferenceScriptToken",
+      "name": "selectionStyle",
+      "group": "Style Overrides",
+      "flags": 4297195553
+    },
+    {
+      "type": "SSoundData",
+      "name": "soundData",
+      "flags": 4297195553
+    },
+    {
+      "type": "Bool",
+      "name": "isInitialized",
+      "flags": 4297195552
+    },
+    {
+      "type": "whandle:inkWidget",
+      "name": "targetWidget",
+      "flags": 4297195552
+    },
+    {
+      "type": "Bool",
+      "name": "isSelected",
+      "flags": 4297195552
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnHoverOut",
+      "shortName": "OnHoverOut",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnHoverOver",
+      "shortName": "OnHoverOver",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnPress",
+      "shortName": "OnPress",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRelease",
+      "shortName": "OnRelease",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ATUI_GetButtonDisplayText;",
+      "shortName": "ATUI_GetButtonDisplayText",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "GetOnHoverOutKeySfxName;",
+      "shortName": "GetOnHoverOutKeySfxName",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "GetOnHoverOverKeySfxName;",
+      "shortName": "GetOnHoverOverKeySfxName",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "GetOnPressKeySfxName;",
+      "shortName": "GetOnPressKeySfxName",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "GetOnReleaseKeySfxName;",
+      "shortName": "GetOnReleaseKeySfxName",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "GetWidgetAudioName;",
+      "shortName": "GetWidgetAudioName",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "IsInitialized;",
+      "shortName": "IsInitialized",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "RegisterAudioCallbacks;inkGameController",
+      "shortName": "RegisterAudioCallbacks",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:gameuiWidgetGameController",
+          "name": "gameController",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterBaseInputCallbacks;",
+      "shortName": "RegisterBaseInputCallbacks",
+      "flags": 33280
+    },
+    {
+      "fullName": "ResolveSelection;",
+      "shortName": "ResolveSelection",
+      "flags": 33280
+    },
+    {
+      "fullName": "ResolveWidgetState;EWidgetState",
+      "shortName": "ResolveWidgetState",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "EWidgetState",
+          "name": "state",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetButtonSize;FloatFloat",
+      "shortName": "SetButtonSize",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Float",
+          "name": "x",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "y",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ToggleSelection;Bool",
+      "shortName": "ToggleSelection",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "isSelected",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TriggerOnHoverOutAnimations;",
+      "shortName": "TriggerOnHoverOutAnimations",
+      "flags": 32900
+    },
+    {
+      "fullName": "TriggerOnHoverOverAnimations;",
+      "shortName": "TriggerOnHoverOverAnimations",
+      "flags": 32900
+    },
+    {
+      "fullName": "TriggerOnPressAnimations;",
+      "shortName": "TriggerOnPressAnimations",
+      "flags": 32900
+    },
+    {
+      "fullName": "TriggerOnReleaseAnimations;",
+      "shortName": "TriggerOnReleaseAnimations",
+      "flags": 32900
+    }
+  ]
+}

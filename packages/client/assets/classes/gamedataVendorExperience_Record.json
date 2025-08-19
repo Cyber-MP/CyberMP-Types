@@ -1,0 +1,101 @@
+{
+  "parent": "gamedataVendorWare_Record",
+  "name": "gamedataVendorExperience_Record",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "GetPricePerPointCount",
+      "shortName": "GetPricePerPointCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 4633,
+      "flags": 1
+    },
+    {
+      "fullName": "GetPricePerPointItem",
+      "shortName": "GetPricePerPointItem",
+      "return": {
+        "type": "whandle:gamedataStatModifier_Record",
+        "flags": 64
+      },
+      "index": 4634,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetPricePerPointItemHandle",
+      "shortName": "GetPricePerPointItemHandle",
+      "return": {
+        "type": "handle:gamedataStatModifier_Record",
+        "flags": 64
+      },
+      "index": 4635,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PricePerPoint",
+      "shortName": "PricePerPoint",
+      "index": 4632,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataStatModifier_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "PricePerPointContains",
+      "shortName": "PricePerPointContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 4636,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataStatModifier_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Proficiency",
+      "shortName": "Proficiency",
+      "return": {
+        "type": "whandle:gamedataProficiency_Record",
+        "flags": 64
+      },
+      "index": 4630,
+      "flags": 1
+    },
+    {
+      "fullName": "ProficiencyHandle",
+      "shortName": "ProficiencyHandle",
+      "return": {
+        "type": "handle:gamedataProficiency_Record",
+        "flags": 64
+      },
+      "index": 4631,
+      "flags": 1
+    }
+  ]
+}

@@ -1,0 +1,254 @@
+{
+  "parent": "InteractiveDevice",
+  "name": "InteractiveMasterDevice",
+  "flags": 4,
+  "funcs": [
+    {
+      "fullName": "OnCleanPasswordEvent",
+      "shortName": "OnCleanPasswordEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:CleanPasswordEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnDeviceWidgetUpdate",
+      "shortName": "OnDeviceWidgetUpdate",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:RequestDeviceWidgetUpdateEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPerformedAction",
+      "shortName": "OnPerformedAction",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:PerformedAction",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRequestSlaveDevicesWidgetsUpdate",
+      "shortName": "OnRequestSlaveDevicesWidgetsUpdate",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:RequestDeviceWidgetsUpdateEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRequestSlaveThumbnailWidgetsUpdate",
+      "shortName": "OnRequestSlaveThumbnailWidgetsUpdate",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:RequestThumbnailWidgetsUpdateEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSetAsQuestImportantEvent",
+      "shortName": "OnSetAsQuestImportantEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameSetAsQuestImportantEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSlaveStateChanged",
+      "shortName": "OnSlaveStateChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gamePSDeviceChangedEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CreateBlackboard;",
+      "shortName": "CreateBlackboard",
+      "flags": 33024
+    },
+    {
+      "fullName": "GetBlackboardDef;",
+      "shortName": "GetBlackboardDef",
+      "return": {
+        "type": "handle:MasterDeviceBaseBlackboardDef",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "GetBroadcastGlitchVideoPath;",
+      "shortName": "GetBroadcastGlitchVideoPath",
+      "return": {
+        "type": "redResourceReferenceScriptToken",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "GetController;",
+      "shortName": "GetController",
+      "return": {
+        "type": "handle:MasterController",
+        "flags": 64
+      },
+      "flags": 41216
+    },
+    {
+      "fullName": "GetDefaultGlitchVideoPath;",
+      "shortName": "GetDefaultGlitchVideoPath",
+      "return": {
+        "type": "redResourceReferenceScriptToken",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "GetDevicePS;",
+      "shortName": "GetDevicePS",
+      "return": {
+        "type": "handle:MasterControllerPS",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "NotifyConnectionHighlightSystem;BoolBool",
+      "shortName": "NotifyConnectionHighlightSystem",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33024,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "IsHighlightON",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "IsHighlightedByMasterDevice",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RequestDeviceWidgetsUpdate;IBlackboardscript_ref<array<PersistentID>>",
+      "shortName": "RequestDeviceWidgetsUpdate",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gameIBlackboard",
+          "name": "blackboard",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:array:gamePersistentID",
+          "name": "devices",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RequestDeviceWidgetsUpdate;IBlackboardPersistentID",
+      "shortName": "RequestDeviceWidgetsUpdate",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gameIBlackboard",
+          "name": "blackboard",
+          "flags": 128
+        },
+        {
+          "type": "gamePersistentID",
+          "name": "deviceID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RequestThumbnailWidgetsUpdate;IBlackboard",
+      "shortName": "RequestThumbnailWidgetsUpdate",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "handle:gameIBlackboard",
+          "name": "blackboard",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ShouldAlwaysUpdateDeviceWidgets;",
+      "shortName": "ShouldAlwaysUpdateDeviceWidgets",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33280
+    },
+    {
+      "fullName": "ShouldShowTerminalTitle;",
+      "shortName": "ShouldShowTerminalTitle",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41472
+    }
+  ]
+}

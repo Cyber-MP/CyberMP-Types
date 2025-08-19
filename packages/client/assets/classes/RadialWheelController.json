@@ -1,0 +1,932 @@
+{
+  "parent": "gameuiHUDGameController",
+  "name": "RadialWheelController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "array:handle:WeaponRadialSlot",
+      "name": "radialWeapons",
+      "flags": 6583025701
+    },
+    {
+      "type": "handle:RadialSlot",
+      "name": "inputHintController",
+      "flags": 4431347749
+    },
+    {
+      "type": "handle:RadialSlot",
+      "name": "activeSlotTooltip",
+      "flags": 4431347749
+    },
+    {
+      "type": "handle:RadialSlot",
+      "name": "activeWeaponSlotTooltip",
+      "flags": 4431347749
+    },
+    {
+      "type": "handle:RadialSlot",
+      "name": "statusEffects",
+      "flags": 4431347749
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "pointerRef",
+      "flags": 4297130017
+    },
+    {
+      "type": "handle:WeaponRadialSlot",
+      "name": "activeSlot",
+      "flags": 4431347744
+    },
+    {
+      "type": "whandle:PointerController",
+      "name": "pointer",
+      "flags": 4297130016
+    },
+    {
+      "type": "Int32",
+      "name": "activeIndex",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "initialized",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isActive",
+      "flags": 4297130016
+    },
+    {
+      "type": "Int32",
+      "name": "pendingRadialSlotAsyncSpawnCount",
+      "flags": 4297130016
+    },
+    {
+      "type": "gameInventoryItemData",
+      "name": "consSlotCachedData",
+      "flags": 4297130016
+    },
+    {
+      "type": "gameInventoryItemData",
+      "name": "gadgetSlotCachedData",
+      "flags": 4297130016
+    },
+    {
+      "type": "CName",
+      "name": "cyclingActionRegistered",
+      "flags": 4297130016
+    },
+    {
+      "type": "array:gameuiInputHintData",
+      "name": "registeredInputHints",
+      "flags": 6583025696
+    },
+    {
+      "type": "gameuiInputHintData",
+      "name": "applyInputHint",
+      "flags": 4297130016
+    },
+    {
+      "type": "gameuiInputHintData",
+      "name": "cycleInputHintDataLeft",
+      "flags": 4297130016
+    },
+    {
+      "type": "gameuiInputHintData",
+      "name": "cycleInputHintDataRight",
+      "flags": 4297130016
+    },
+    {
+      "type": "ERadialMode",
+      "name": "radialMode",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:InventoryDataManagerV2",
+      "name": "inventoryManager",
+      "flags": 4431347744
+    },
+    {
+      "type": "whandle:EquipmentSystem",
+      "name": "equipmentSystem",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:gameTransactionSystem",
+      "name": "transactionSystem",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:gameIBlackboard",
+      "name": "quickSlotBlackboard",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:UI_QuickSlotsDataDef",
+      "name": "QuickSlotBlackboardDef",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "axisInputCallbackID",
+      "flags": 4431347744
+    },
+    {
+      "type": "whandle:gameIBlackboard",
+      "name": "UISystemBB",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:UI_SystemDef",
+      "name": "UISystemDef",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "isInMenuCallbackID",
+      "flags": 4431347744
+    },
+    {
+      "type": "whandle:gameIBlackboard",
+      "name": "equipmentUIBlackboard",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:UI_EquipmentDef",
+      "name": "EquipmentBlackboardDef",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "equipmentUICallbackID",
+      "flags": 4431347744
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnAction",
+      "shortName": "OnAction",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "gameinputScriptListenerAction",
+          "name": "action",
+          "flags": 128
+        },
+        {
+          "type": "gameinputScriptListenerActionConsumer",
+          "name": "consumer",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnEquipmentChanged",
+      "shortName": "OnEquipmentChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Variant",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnForceRadialWheelRebuild",
+      "shortName": "OnForceRadialWheelRebuild",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:ForceRadialWheelRebuild",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnForceRadialWheelShutdown",
+      "shortName": "OnForceRadialWheelShutdown",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:ForceRadialWheelShutdown",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnIsInMenuChanged",
+      "shortName": "OnIsInMenuChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "param",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnLateInit",
+      "shortName": "OnLateInit",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:LateInit",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnOpenWheelRequest",
+      "shortName": "OnOpenWheelRequest",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:QuickSlotButtonHoldStartEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRadialAngleChanged",
+      "shortName": "OnRadialAngleChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Vector4",
+          "name": "v",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSlotWidgetSpawned",
+      "shortName": "OnSlotWidgetSpawned",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkWidget",
+          "name": "widget",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "userData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "AddInputHint;script_ref<InputHintData>Bool",
+      "shortName": "AddInputHint",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:gameuiInputHintData",
+          "name": "inputHint",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "add",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ApplySlot;RadialSlot",
+      "shortName": "ApplySlot",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:RadialSlot",
+          "name": "slot",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "BindItem;CyclableRadialSlotEHotkeyRequestType",
+      "shortName": "BindItem",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:CyclableRadialSlot",
+          "name": "slot",
+          "flags": 128
+        },
+        {
+          "type": "EHotkeyRequestType",
+          "name": "requestType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CacheData;",
+      "shortName": "CacheData",
+      "flags": 32900
+    },
+    {
+      "fullName": "CacheInputHintData;",
+      "shortName": "CacheInputHintData",
+      "flags": 32900
+    },
+    {
+      "fullName": "CanPlayerCycleCyberware;",
+      "shortName": "CanPlayerCycleCyberware",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "CanPlayerCycleMisc;CyclableRadialSlot",
+      "shortName": "CanPlayerCycleMisc",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:CyclableRadialSlot",
+          "name": "cyclableSlot",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CanPlayerCycleSlot;CyclableRadialSlot",
+      "shortName": "CanPlayerCycleSlot",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:CyclableRadialSlot",
+          "name": "slot",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ClearInputHints;",
+      "shortName": "ClearInputHints",
+      "flags": 32900
+    },
+    {
+      "fullName": "ConvertMarginToVector;inkMargin",
+      "shortName": "ConvertMarginToVector",
+      "return": {
+        "type": "Vector2",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "inkMargin",
+          "name": "margin",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ConvertVectorToAngle;Vector4",
+      "shortName": "ConvertVectorToAngle",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Vector4",
+          "name": "input",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CycleCyberware;CyclableRadialSlot",
+      "shortName": "CycleCyberware",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:CyclableRadialSlot",
+          "name": "cyclableSlot",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CycleHotkeys;CyclableRadialSlotBool",
+      "shortName": "CycleHotkeys",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:CyclableRadialSlot",
+          "name": "cyclableSlot",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "next",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CycleSlot;CyclableRadialSlotCName",
+      "shortName": "CycleSlot",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:CyclableRadialSlot",
+          "name": "cyclableSlot",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "actionName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "DetermineActiveSlot;Float",
+      "shortName": "DetermineActiveSlot",
+      "return": {
+        "type": "handle:WeaponRadialSlot",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Float",
+          "name": "angle",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "DisarmPlayer;",
+      "shortName": "DisarmPlayer",
+      "flags": 32900
+    },
+    {
+      "fullName": "DrawItem;RadialSlot",
+      "shortName": "DrawItem",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:RadialSlot",
+          "name": "slot",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetBaseFists;",
+      "shortName": "GetBaseFists",
+      "return": {
+        "type": "gameInventoryItemData",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "GetController;RadialSlot",
+      "shortName": "GetController",
+      "return": {
+        "type": "handle:InventoryItemDisplayController",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:RadialSlot",
+          "name": "slot",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetEquipmentSystem;",
+      "shortName": "GetEquipmentSystem",
+      "return": {
+        "type": "whandle:EquipmentSystem",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "GetInventoryItemData;RadialSlot",
+      "shortName": "GetInventoryItemData",
+      "return": {
+        "type": "gameInventoryItemData",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:RadialSlot",
+          "name": "slot",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetItemData;ItemID",
+      "shortName": "GetItemData",
+      "return": {
+        "type": "whandle:gameItemData",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "gameItemID",
+          "name": "itemID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetItemID;RadialSlot",
+      "shortName": "GetItemID",
+      "return": {
+        "type": "gameItemID",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:RadialSlot",
+          "name": "slot",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetPlayer;",
+      "shortName": "GetPlayer",
+      "return": {
+        "type": "handle:gameObject",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "GetValidCombatCyberware;",
+      "shortName": "GetValidCombatCyberware",
+      "return": {
+        "type": "gameInventoryItemData",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "GetValidItemsForMiscSlot;CyclableRadialSlot",
+      "shortName": "GetValidItemsForMiscSlot",
+      "return": {
+        "type": "array:gameInventoryItemData",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:CyclableRadialSlot",
+          "name": "cyclableSlot",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetValidNeighbouringIndex;script_ref<array<InventoryItemData>>Int32Bool",
+      "shortName": "GetValidNeighbouringIndex",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:array:gameInventoryItemData",
+          "name": "arr",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "fromIndex",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "searchNext",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetWeapons;",
+      "shortName": "GetWeapons",
+      "return": {
+        "type": "array:whandle:gameItemData",
+        "flags": 64
+      },
+      "flags": 33028
+    },
+    {
+      "fullName": "HandleEquipmentChange;script_ref<SPaperdollEquipData>",
+      "shortName": "HandleEquipmentChange",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:SPaperdollEquipData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HandleEquipmentChangeByTask;script_ref<SPaperdollEquipData>",
+      "shortName": "HandleEquipmentChangeByTask",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "script_ref:SPaperdollEquipData",
+          "name": "eqData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HandleEquipmentChangeTask;ScriptTaskData",
+      "shortName": "HandleEquipmentChangeTask",
+      "flags": 34052,
+      "params": [
+        {
+          "type": "handle:gameScriptTaskData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsGadgetOrConsumableSlot;WeaponRadialSlot",
+      "shortName": "IsGadgetOrConsumableSlot",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:WeaponRadialSlot",
+          "name": "slot",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RefreshCyberware;",
+      "shortName": "RefreshCyberware",
+      "flags": 32900
+    },
+    {
+      "fullName": "RefreshHotkey;CyclableRadialSlot",
+      "shortName": "RefreshHotkey",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:CyclableRadialSlot",
+          "name": "slot",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RefreshHotkeys;",
+      "shortName": "RefreshHotkeys",
+      "flags": 32900
+    },
+    {
+      "fullName": "RefreshSlots;",
+      "shortName": "RefreshSlots",
+      "flags": 32900
+    },
+    {
+      "fullName": "RefreshWeapons;",
+      "shortName": "RefreshWeapons",
+      "flags": 32900
+    },
+    {
+      "fullName": "RegisterBlackboards;Bool",
+      "shortName": "RegisterBlackboards",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "shouldRegister",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RestoreCachedSlots;",
+      "shortName": "RestoreCachedSlots",
+      "flags": 32900
+    },
+    {
+      "fullName": "SendInputHintEvent;script_ref<InputHintData>Bool",
+      "shortName": "SendInputHintEvent",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:gameuiInputHintData",
+          "name": "inputHint",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "show",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SendPSMRadialCloseRequest;",
+      "shortName": "SendPSMRadialCloseRequest",
+      "flags": 32900
+    },
+    {
+      "fullName": "SetActiveSlot;WeaponRadialSlot",
+      "shortName": "SetActiveSlot",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:WeaponRadialSlot",
+          "name": "newActiveSlot",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetupWidgetForSlot;inkWidgetRadialSlot",
+      "shortName": "SetupWidgetForSlot",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:inkWidget",
+          "name": "widget",
+          "flags": 128
+        },
+        {
+          "type": "handle:RadialSlot",
+          "name": "slot",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Shutdown;",
+      "shortName": "Shutdown",
+      "flags": 32900
+    },
+    {
+      "fullName": "SpawnRadialWeapons;",
+      "shortName": "SpawnRadialWeapons",
+      "flags": 32900
+    },
+    {
+      "fullName": "SpawnSlotWidget;RadialSlot",
+      "shortName": "SpawnSlotWidget",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:RadialSlot",
+          "name": "slot",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateActiveTooltip;",
+      "shortName": "UpdateActiveTooltip",
+      "flags": 32900
+    },
+    {
+      "fullName": "UpdateInputHints;",
+      "shortName": "UpdateInputHints",
+      "flags": 32900
+    },
+    {
+      "fullName": "UpdatePointer;Vector4Float",
+      "shortName": "UpdatePointer",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Vector4",
+          "name": "rawInputVector",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "rawAngle",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateRequired;",
+      "shortName": "UpdateRequired",
+      "flags": 33280
+    },
+    {
+      "fullName": "UpdateStatusEffects;",
+      "shortName": "UpdateStatusEffects",
+      "flags": 32900
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "parent": "userSettingsVarListener",
+  "name": "CyberdeckTooltipSettingsListener",
+  "flags": 4,
+  "props": [
+    {
+      "type": "whandle:CyberdeckTooltip",
+      "name": "ctrl",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:CyberdeckStatController",
+      "name": "statctrl",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnVarModified",
+      "shortName": "OnVarModified",
+      "flags": 34304,
+      "params": [
+        {
+          "type": "CName",
+          "name": "groupPath",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "varName",
+          "flags": 128
+        },
+        {
+          "type": "InGameConfigVarType",
+          "name": "varType",
+          "flags": 128
+        },
+        {
+          "type": "InGameConfigChangeReason",
+          "name": "reason",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterController;CyberdeckTooltip",
+      "shortName": "RegisterController",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:CyberdeckTooltip",
+          "name": "ctrl",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterStatController;CyberdeckStatController",
+      "shortName": "RegisterStatController",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:CyberdeckStatController",
+          "name": "ctrl",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

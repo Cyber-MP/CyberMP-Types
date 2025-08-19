@@ -1,0 +1,71 @@
+{
+  "parent": "gameICommunitySystem",
+  "name": "gameCommunitySystem",
+  "flags": 2,
+  "funcs": [
+    {
+      "fullName": "ChangeDensityModifier",
+      "shortName": "ChangeDensityModifier",
+      "index": 13998,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Float",
+          "name": "modiefier",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "DisableCrowdNullArea",
+      "shortName": "DisableCrowdNullArea",
+      "index": 13997,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Uint64",
+          "name": "areaId",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "EnableDynamicCrowdNullArea",
+      "shortName": "EnableDynamicCrowdNullArea",
+      "return": {
+        "type": "Uint64",
+        "flags": 64
+      },
+      "index": 13996,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Box",
+          "name": "areaLocalBBox",
+          "flags": 128
+        },
+        {
+          "type": "WorldTransform",
+          "name": "areaLocalToWorld",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "savable",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "duration",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ResetDensityModifier",
+      "shortName": "ResetDensityModifier",
+      "index": 13999,
+      "flags": 1
+    }
+  ]
+}

@@ -1,0 +1,840 @@
+{
+  "parent": "gameIWorkspotGameSystem",
+  "name": "gameWorkspotGameSystem",
+  "flags": 2,
+  "funcs": [
+    {
+      "fullName": "GetDeviceUser",
+      "shortName": "GetDeviceUser",
+      "return": {
+        "type": "handle:gameObject",
+        "flags": 64
+      },
+      "index": 12311,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "deviceID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetExtendedInfo",
+      "shortName": "GetExtendedInfo",
+      "return": {
+        "type": "handle:gameExtendedWorkspotInfo",
+        "flags": 64
+      },
+      "index": 12321,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "actor",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetIdOfExitAnim",
+      "shortName": "GetIdOfExitAnim",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 12322,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "actor",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "animName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HardResetPlaybackToStart",
+      "shortName": "HardResetPlaybackToStart",
+      "index": 12338,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "actor",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HasExitNodes",
+      "shortName": "HasExitNodes",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12336,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "actor",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "fastExit",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "slowExit",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "performNavmeshChecks",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "IsActorInWorkspot",
+      "shortName": "IsActorInWorkspot",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12316,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "actor",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsInVehicleWorkspot",
+      "shortName": "IsInVehicleWorkspot",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12315,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "vehicle",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameObject",
+          "name": "child",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "slotName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsReactionAvailable",
+      "shortName": "IsReactionAvailable",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12335,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "actor",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "reactionName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsWorkspotEnabled",
+      "shortName": "IsWorkspotEnabled",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12339,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "actor",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "MountToVehicle",
+      "shortName": "MountToVehicle",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12312,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "parent",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameObject",
+          "name": "child",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "slideTime",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "animDelay",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "workspotResourceContainer",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "slotName",
+          "flags": 128
+        },
+        {
+          "type": "array:entEntityID",
+          "name": "syncronizedObjects",
+          "flags": 1152
+        },
+        {
+          "type": "CName",
+          "name": "entrySlotName",
+          "flags": 1152
+        },
+        {
+          "type": "array:CName",
+          "name": "animVariables",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "PlayInDevice",
+      "shortName": "PlayInDevice",
+      "index": 12309,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "device",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameObject",
+          "name": "actor",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "workspotStateFlavourName",
+          "flags": 1152
+        },
+        {
+          "type": "CName",
+          "name": "actorDataCompName",
+          "flags": 1152
+        },
+        {
+          "type": "CName",
+          "name": "deviceDataCompName",
+          "flags": 1152
+        },
+        {
+          "type": "CName",
+          "name": "syncSlotName",
+          "flags": 1152
+        },
+        {
+          "type": "Float",
+          "name": "slideTime",
+          "flags": 1152
+        },
+        {
+          "type": "gameWorkspotSlidingBehaviour",
+          "name": "slideBehaviour",
+          "flags": 1152
+        },
+        {
+          "type": "handle:entEntity",
+          "name": "callbackEventRecipient",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "PlayInDeviceSimple",
+      "shortName": "PlayInDeviceSimple",
+      "index": 12308,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "device",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameObject",
+          "name": "actor",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "allowCameraMov",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "actorDataCompName",
+          "flags": 1152
+        },
+        {
+          "type": "CName",
+          "name": "deviceDataCompName",
+          "flags": 1152
+        },
+        {
+          "type": "CName",
+          "name": "syncSlotName",
+          "flags": 1152
+        },
+        {
+          "type": "Float",
+          "name": "slideTime",
+          "flags": 1152
+        },
+        {
+          "type": "gameWorkspotSlidingBehaviour",
+          "name": "slideBehaviour",
+          "flags": 1152
+        },
+        {
+          "type": "handle:entEntity",
+          "name": "callbackEventRecipient",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "PlayNpcInWorkspot",
+      "shortName": "PlayNpcInWorkspot",
+      "index": 12326,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "npc",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameObject",
+          "name": "master",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameObject",
+          "name": "referenceEntity",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "actorDataCompName",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "syncSlotName",
+          "flags": 1152
+        },
+        {
+          "type": "Float",
+          "name": "slideTime",
+          "flags": 1152
+        },
+        {
+          "type": "CName",
+          "name": "syncOffsetSourceCompName",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "ResetPlaybackToStart",
+      "shortName": "ResetPlaybackToStart",
+      "index": 12337,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "actor",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SendDebugCommand",
+      "shortName": "SendDebugCommand",
+      "index": 12317,
+      "flags": 1,
+      "params": [
+        {
+          "type": "workWorkspotDebugMode",
+          "name": "mode",
+          "flags": 128
+        },
+        {
+          "type": "String",
+          "name": "entId",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SendDebugCommandEnt",
+      "shortName": "SendDebugCommandEnt",
+      "index": 12318,
+      "flags": 1,
+      "params": [
+        {
+          "type": "workWorkspotDebugMode",
+          "name": "mode",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameObject",
+          "name": "obj",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SendDebugCommandFunctionalTests",
+      "shortName": "SendDebugCommandFunctionalTests",
+      "index": 12319,
+      "flags": 1,
+      "params": [
+        {
+          "type": "workWorkspotDebugMode",
+          "name": "mode",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameObject",
+          "name": "obj",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "redscript",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SendDynamicSyncBindSignal",
+      "shortName": "SendDynamicSyncBindSignal",
+      "index": 12330,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "actor",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameObject",
+          "name": "master",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SendDynamicSyncUnbindSignal",
+      "shortName": "SendDynamicSyncUnbindSignal",
+      "index": 12331,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "actor",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SendEventToConnectedSpots",
+      "shortName": "SendEventToConnectedSpots",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12329,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "actor",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "eventName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SendFastExitSignal",
+      "shortName": "SendFastExitSignal",
+      "index": 12325,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "actor",
+          "flags": 128
+        },
+        {
+          "type": "Vector3",
+          "name": "dirLS",
+          "flags": 1152
+        },
+        {
+          "type": "Bool",
+          "name": "stayInWorkspotIfFailed",
+          "flags": 1152
+        },
+        {
+          "type": "Bool",
+          "name": "playSlowExitIfFailed",
+          "flags": 1152
+        },
+        {
+          "type": "Bool",
+          "name": "instant",
+          "flags": 1152
+        },
+        {
+          "type": "Bool",
+          "name": "tryBlendToWalk",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "SendForwardSignal",
+      "shortName": "SendForwardSignal",
+      "index": 12333,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "actor",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SendJumpCommandEnt",
+      "shortName": "SendJumpCommandEnt",
+      "index": 12320,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "actor",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "entryId",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "instant",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SendJumpToAnimEnt",
+      "shortName": "SendJumpToAnimEnt",
+      "index": 12323,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "actor",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "animName",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "instant",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SendJumpToTagCommandEnt",
+      "shortName": "SendJumpToTagCommandEnt",
+      "index": 12324,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "actor",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "entryTag",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "instant",
+          "flags": 128
+        },
+        {
+          "type": "entEntityID",
+          "name": "deviceId",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "SendPlaySignal",
+      "shortName": "SendPlaySignal",
+      "index": 12332,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "actor",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SendReactionSignal",
+      "shortName": "SendReactionSignal",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12334,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "actor",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "reactionName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SendSlowExitSignal",
+      "shortName": "SendSlowExitSignal",
+      "index": 12328,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "actor",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "animationName",
+          "flags": 1152
+        },
+        {
+          "type": "Bool",
+          "name": "dontWaitForCurrentAnimationToFinish",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "StopInDevice",
+      "shortName": "StopInDevice",
+      "index": 12310,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "actor",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "posDelta",
+          "flags": 1152
+        },
+        {
+          "type": "Quaternion",
+          "name": "orientDelta",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "StopNpcInWorkspot",
+      "shortName": "StopNpcInWorkspot",
+      "index": 12327,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "actor",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SwitchSeatVehicle",
+      "shortName": "SwitchSeatVehicle",
+      "index": 12314,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "parent",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameObject",
+          "name": "child",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "workspotResourceContainer",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "slotName",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "exitSlotName",
+          "flags": 1152
+        },
+        {
+          "type": "array:CName",
+          "name": "activateAnimVariables",
+          "flags": 1152
+        },
+        {
+          "type": "array:CName",
+          "name": "deactivateAnimVariables",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "SynchronizeItemWithOwner",
+      "shortName": "SynchronizeItemWithOwner",
+      "index": 12340,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameItemObject",
+          "name": "item",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameObject",
+          "name": "owner",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UnmountFromVehicle",
+      "shortName": "UnmountFromVehicle",
+      "index": 12313,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "parent",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameObject",
+          "name": "child",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "instant",
+          "flags": 1152
+        },
+        {
+          "type": "Vector4",
+          "name": "posDelta",
+          "flags": 1152
+        },
+        {
+          "type": "Quaternion",
+          "name": "orientDelta",
+          "flags": 1152
+        },
+        {
+          "type": "CName",
+          "name": "exitSlotName",
+          "flags": 1152
+        }
+      ]
+    }
+  ]
+}

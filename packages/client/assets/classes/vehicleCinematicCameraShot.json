@@ -1,0 +1,214 @@
+{
+  "parent": "IScriptable",
+  "name": "vehicleCinematicCameraShot",
+  "flags": 2,
+  "props": [
+    {
+      "type": "String",
+      "name": "name",
+      "flags": 6627016705
+    },
+    {
+      "type": "Bool",
+      "name": "enabled",
+      "flags": 6627016705
+    },
+    {
+      "type": "Int32",
+      "name": "probability",
+      "flags": 6627016705
+    },
+    {
+      "type": "Float",
+      "name": "duration",
+      "flags": 6627016705
+    },
+    {
+      "type": "Bool",
+      "name": "scaleForVehicle",
+      "flags": 6627016705
+    },
+    {
+      "type": "handle:vehicleCinematicCameraShotRoot",
+      "name": "root",
+      "flags": 6627016709
+    },
+    {
+      "type": "array:handle:vehicleCinematicCameraShotEffect",
+      "name": "effects",
+      "flags": 6631211013
+    },
+    {
+      "type": "array:handle:vehicleCinematicCameraShotStopCondition",
+      "name": "stopConditions",
+      "flags": 6631211013
+    },
+    {
+      "type": "CinematicCameraData",
+      "name": "runtimeData",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "CreateCinematicCameraDataFromContext;vehicleCinematicCameraShotUpdateContext",
+      "shortName": "CreateCinematicCameraDataFromContext",
+      "return": {
+        "type": "CinematicCameraData",
+        "flags": 64
+      },
+      "flags": 41092,
+      "params": [
+        {
+          "type": "vehicleCinematicCameraShotUpdateContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetCanBeSelectedFromContext;vehicleCinematicCameraShotUpdateContext",
+      "shortName": "GetCanBeSelectedFromContext",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476,
+      "params": [
+        {
+          "type": "vehicleCinematicCameraShotUpdateContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetRootTransformFromContext;vehicleCinematicCameraShotUpdateContext",
+      "shortName": "GetRootTransformFromContext",
+      "return": {
+        "type": "WorldTransform",
+        "flags": 64
+      },
+      "flags": 41476,
+      "params": [
+        {
+          "type": "vehicleCinematicCameraShotUpdateContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetShotProbabilityFromContext;vehicleCinematicCameraShotUpdateContext",
+      "shortName": "GetShotProbabilityFromContext",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 41476,
+      "params": [
+        {
+          "type": "vehicleCinematicCameraShotUpdateContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetZoneRelativeToVehicle;WorldPositionvehicleCinematicCameraShotUpdateContext",
+      "shortName": "GetZoneRelativeToVehicle",
+      "return": {
+        "type": "ZoneRelativeToVehicle",
+        "flags": 64
+      },
+      "flags": 41092,
+      "params": [
+        {
+          "type": "WorldPosition",
+          "name": "worldPosition",
+          "flags": 128
+        },
+        {
+          "type": "vehicleCinematicCameraShotUpdateContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsStaticCameraShot;",
+      "shortName": "IsStaticCameraShot",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "Reset;",
+      "shortName": "Reset",
+      "flags": 33284
+    },
+    {
+      "fullName": "ShouldStop;WorldTransform",
+      "shortName": "ShouldStop",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "WorldTransform",
+          "name": "finalTransform",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Start;vehicleCinematicCameraShotUpdateContext",
+      "shortName": "Start",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "vehicleCinematicCameraShotUpdateContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Update;vehicleCinematicCameraShotUpdateContext",
+      "shortName": "Update",
+      "return": {
+        "type": "WorldTransform",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "vehicleCinematicCameraShotUpdateContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateCinematicCameraData;script_ref<CinematicCameraData>vehicleCinematicCameraShotUpdateContext",
+      "shortName": "UpdateCinematicCameraData",
+      "flags": 41092,
+      "params": [
+        {
+          "type": "script_ref:CinematicCameraData",
+          "name": "data",
+          "flags": 128
+        },
+        {
+          "type": "vehicleCinematicCameraShotUpdateContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

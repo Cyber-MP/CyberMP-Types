@@ -1,0 +1,81 @@
+{
+  "parent": "gamedataTweakDBRecord",
+  "name": "gamedataTankLevelObjectID_Record",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "GetObjectListCount",
+      "shortName": "GetObjectListCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 8816,
+      "flags": 1
+    },
+    {
+      "fullName": "GetObjectListItem",
+      "shortName": "GetObjectListItem",
+      "return": {
+        "type": "whandle:gamedataArcadeSpawnableID_Record",
+        "flags": 64
+      },
+      "index": 8817,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetObjectListItemHandle",
+      "shortName": "GetObjectListItemHandle",
+      "return": {
+        "type": "handle:gamedataArcadeSpawnableID_Record",
+        "flags": 64
+      },
+      "index": 8818,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ObjectList",
+      "shortName": "ObjectList",
+      "index": 8815,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataArcadeSpawnableID_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "ObjectListContains",
+      "shortName": "ObjectListContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 8819,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataArcadeSpawnableID_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

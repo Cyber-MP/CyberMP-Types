@@ -1,0 +1,113 @@
+{
+  "name": "VehicleVisualCustomizationTemplate",
+  "flags": 8,
+  "props": [
+    {
+      "type": "Bool",
+      "name": "hasUniqueTemplate",
+      "flags": 4295229472
+    },
+    {
+      "type": "GenericTemplatePersistentData",
+      "name": "genericData",
+      "flags": 4295229472
+    },
+    {
+      "type": "UniqueTemplateData",
+      "name": "uniqueData",
+      "flags": 4295229472
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "VehicleVisualCustomizationTemplate::Equals;VehicleVisualCustomizationTemplateVehicleVisualCustomizationTemplate",
+      "shortName": "Equals",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "VehicleVisualCustomizationTemplate",
+          "name": "templateA",
+          "flags": 128
+        },
+        {
+          "type": "VehicleVisualCustomizationTemplate",
+          "name": "templateB",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "VehicleVisualCustomizationTemplate::FromRecord;VehicleColorTemplate_RecordCName",
+      "shortName": "FromRecord",
+      "return": {
+        "type": "VehicleVisualCustomizationTemplate",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gamedataVehicleColorTemplate_Record",
+          "name": "templateRecord",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "twintoneModelName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "VehicleVisualCustomizationTemplate::GetType;VehicleVisualCustomizationTemplate",
+      "shortName": "GetType",
+      "return": {
+        "type": "VehicleVisualCustomizationType",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "VehicleVisualCustomizationTemplate",
+          "name": "template",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "VehicleVisualCustomizationTemplate::IsLightsOnly;VehicleVisualCustomizationTemplate",
+      "shortName": "IsLightsOnly",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "VehicleVisualCustomizationTemplate",
+          "name": "template",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "VehicleVisualCustomizationTemplate::IsValid;VehicleVisualCustomizationTemplate",
+      "shortName": "IsValid",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "VehicleVisualCustomizationTemplate",
+          "name": "template",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

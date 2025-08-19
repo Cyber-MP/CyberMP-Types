@@ -1,0 +1,95 @@
+{
+  "parent": "ScriptableDeviceAction",
+  "name": "ActionBool",
+  "flags": 5,
+  "funcs": [
+    {
+      "fullName": "CreateActionWidgetPackage;array<DeviceAction>",
+      "shortName": "CreateActionWidgetPackage",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "array:handle:gamedeviceAction",
+          "name": "actions",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "CreateCustomInteraction;array<DeviceAction>script_ref<String>script_ref<String>TweakDBIDTweakDBID",
+      "shortName": "CreateCustomInteraction",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "array:handle:gamedeviceAction",
+          "name": "actions",
+          "flags": 1152
+        },
+        {
+          "type": "script_ref:String",
+          "name": "customName1",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:String",
+          "name": "customName2",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "customID1",
+          "flags": 1152
+        },
+        {
+          "type": "TweakDBID",
+          "name": "customID2",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "GetCurrentDisplayString",
+      "shortName": "GetCurrentDisplayString",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "GetProperties",
+      "shortName": "GetProperties",
+      "return": {
+        "type": "array:handle:gamedeviceActionProperty",
+        "flags": 64
+      },
+      "flags": 34304
+    },
+    {
+      "fullName": "GetValue;",
+      "shortName": "GetValue",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "OverrideInteractionRecord;TweakDBIDTweakDBID",
+      "shortName": "OverrideInteractionRecord",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "TweakDBID",
+          "name": "newRecordforTrue",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "newRecordForFalse",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

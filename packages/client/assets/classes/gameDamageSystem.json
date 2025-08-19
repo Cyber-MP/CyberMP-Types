@@ -1,0 +1,1744 @@
+{
+  "parent": "gameIDamageSystem",
+  "name": "gameDamageSystem",
+  "flags": 2,
+  "props": [
+    {
+      "type": "previewTargetStruct",
+      "name": "previewTarget",
+      "flags": 4297326624
+    },
+    {
+      "type": "Bool",
+      "name": "previewLock",
+      "flags": 4297326624
+    },
+    {
+      "type": "ScriptReentrantRWLock",
+      "name": "previewRWLockTemp",
+      "flags": 4297326624
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "GetDamageModFromCurve",
+      "shortName": "GetDamageModFromCurve",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 13490,
+      "flags": 3,
+      "params": [
+        {
+          "type": "CName",
+          "name": "curve",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameDamageSystem::GetEffectiveRangeModifierForWeapon;AttackDataVector4StatsSystem",
+      "shortName": "GetEffectiveRangeModifierForWeapon",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gamedamageAttackData",
+          "name": "attackData",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "hitPosition",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameStatsSystem",
+          "name": "statsSystem",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameDamageSystem::GetMantisBladesCripplingRandStatusEffectID;",
+      "shortName": "GetMantisBladesCripplingRandStatusEffectID",
+      "return": {
+        "type": "TweakDBID",
+        "flags": 64
+      },
+      "flags": 32902
+    },
+    {
+      "fullName": "gameDamageSystem::GetRandomOffset;Vector3Vector3",
+      "shortName": "GetRandomOffset",
+      "return": {
+        "type": "Vector3",
+        "flags": 64
+      },
+      "flags": 32902,
+      "params": [
+        {
+          "type": "Vector3",
+          "name": "minOffset",
+          "flags": 128
+        },
+        {
+          "type": "Vector3",
+          "name": "maxOffset",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gameDamageSystem::HasGrandFinaleStatFlag;StateGameScriptInterface",
+      "shortName": "HasGrandFinaleStatFlag",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33030,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessSyncStageCallbacks",
+      "shortName": "ProcessSyncStageCallbacks",
+      "index": 13481,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gameDamagePipelineStage",
+          "name": "stage",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        },
+        {
+          "type": "gameDamageListenerPipelineType",
+          "name": "damagePipelineType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessSyncStageMissCallbacks",
+      "shortName": "ProcessSyncStageMissCallbacks",
+      "index": 13482,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameeventsMissEvent",
+          "name": "missEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "QueueHitEvent",
+      "shortName": "QueueHitEvent",
+      "index": 13483,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "evt",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameObject",
+          "name": "receiver",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "QueueMissEvent",
+      "shortName": "QueueMissEvent",
+      "index": 13484,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameeventsMissEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterListener",
+      "shortName": "RegisterListener",
+      "index": 13485,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameScriptedDamageSystemListener",
+          "name": "damageListener",
+          "flags": 128
+        },
+        {
+          "type": "entEntityID",
+          "name": "registereeID",
+          "flags": 128
+        },
+        {
+          "type": "gameDamageCallbackType",
+          "name": "callbackType",
+          "flags": 128
+        },
+        {
+          "type": "gameDamageListenerPipelineType",
+          "name": "damagePipelineType",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterSyncListener",
+      "shortName": "RegisterSyncListener",
+      "index": 13486,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameScriptedDamageSystemListener",
+          "name": "damageListener",
+          "flags": 128
+        },
+        {
+          "type": "entEntityID",
+          "name": "registereeID",
+          "flags": 128
+        },
+        {
+          "type": "gameDamageCallbackType",
+          "name": "callbackType",
+          "flags": 128
+        },
+        {
+          "type": "gameDamagePipelineStage",
+          "name": "stage",
+          "flags": 128
+        },
+        {
+          "type": "gameDamageListenerPipelineType",
+          "name": "damagePipelineType",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "StartProjectionPipeline",
+      "shortName": "StartProjectionPipeline",
+      "index": 13487,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameeventsProjectedHitEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UnregisterListener",
+      "shortName": "UnregisterListener",
+      "index": 13488,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameScriptedDamageSystemListener",
+          "name": "damageListener",
+          "flags": 128
+        },
+        {
+          "type": "entEntityID",
+          "name": "registereeID",
+          "flags": 128
+        },
+        {
+          "type": "gameDamageCallbackType",
+          "name": "callbackType",
+          "flags": 128
+        },
+        {
+          "type": "gameDamageListenerPipelineType",
+          "name": "damagePipelineType",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "UnregisterSyncListener",
+      "shortName": "UnregisterSyncListener",
+      "index": 13489,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameScriptedDamageSystemListener",
+          "name": "damageListener",
+          "flags": 128
+        },
+        {
+          "type": "entEntityID",
+          "name": "registereeID",
+          "flags": 128
+        },
+        {
+          "type": "gameDamageCallbackType",
+          "name": "callbackType",
+          "flags": 128
+        },
+        {
+          "type": "gameDamagePipelineStage",
+          "name": "stage",
+          "flags": 128
+        },
+        {
+          "type": "gameDamageListenerPipelineType",
+          "name": "damagePipelineType",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "AllowWeaponCrit;AttackData",
+      "shortName": "AllowWeaponCrit",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gamedamageAttackData",
+          "name": "attackData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ApplyStatusEffectByApplicationRate;gameHitEventgamedataStatTypeTweakDBID",
+      "shortName": "ApplyStatusEffectByApplicationRate",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        },
+        {
+          "type": "gamedataStatType",
+          "name": "statType",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "effect",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CacheLocalVars;gameHitEventCacheData",
+      "shortName": "CacheLocalVars",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamedamageCacheData",
+          "name": "cache",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CalculateDamageVariants;gameHitEvent",
+      "shortName": "CalculateDamageVariants",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CalculateGlobalModifiers;gameHitEventCacheData",
+      "shortName": "CalculateGlobalModifiers",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamedamageCacheData",
+          "name": "cache",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CalculateSourceModifiers;gameHitEventCacheData",
+      "shortName": "CalculateSourceModifiers",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamedamageCacheData",
+          "name": "cache",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CalculateSourceVsTargetModifiers;gameHitEvent",
+      "shortName": "CalculateSourceVsTargetModifiers",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CalculateTargetModifiers;gameHitEvent",
+      "shortName": "CalculateTargetModifiers",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CalculateVehicleTargetMeleeDamage;WeaponObjectgamedataAttackTypeBoolStatsSystem",
+      "shortName": "CalculateVehicleTargetMeleeDamage",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameweaponObject",
+          "name": "weaponObject",
+          "flags": 128
+        },
+        {
+          "type": "gamedataAttackType",
+          "name": "attackType",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "isBodySlam",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameStatsSystem",
+          "name": "statSystem",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CalculateVehicleTargetRangedDamage;WeaponObjectFloatStatsSystem",
+      "shortName": "CalculateVehicleTargetRangedDamage",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameweaponObject",
+          "name": "weaponObject",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "chargeDamageMultiplier",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameStatsSystem",
+          "name": "statSystem",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CheckForQuickExit;gameHitEventCacheData",
+      "shortName": "CheckForQuickExit",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamedamageCacheData",
+          "name": "cache",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CheckProjectionPipelineTargetConditions;gameProjectedHitEvent",
+      "shortName": "CheckProjectionPipelineTargetConditions",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsProjectedHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ClearPreviewTargetStruct;",
+      "shortName": "ClearPreviewTargetStruct",
+      "flags": 33284
+    },
+    {
+      "fullName": "ConvertDPSToHitDamage;gameHitEvent",
+      "shortName": "ConvertDPSToHitDamage",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ConvertHitDataToDamageInfo;gameHitEvent",
+      "shortName": "ConvertHitDataToDamageInfo",
+      "return": {
+        "type": "array:gameuiDamageInfo",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CreateDebugDataName;GameObject",
+      "shortName": "CreateDebugDataName",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "gameObject",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "DEBUG_InvulnerabilityCheckForVehicle;gameHitEvent",
+      "shortName": "DEBUG_InvulnerabilityCheckForVehicle",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "DealDamages;gameHitEvent",
+      "shortName": "DealDamages",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "DeathCheck;gameHitEvent",
+      "shortName": "DeathCheck",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "DebugDraw_VehicleHit;GameInstanceVector4Vector4Float",
+      "shortName": "DebugDraw_VehicleHit",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "gameInstance",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "hitPosition",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "hitDirection",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "hitMagnitude",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "FillInDamageBlackboard;gameHitEvent",
+      "shortName": "FillInDamageBlackboard",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GatherDebugData;gameHitEventCacheDataHitDebugData",
+      "shortName": "GatherDebugData",
+      "flags": 33924,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamedamageCacheData",
+          "name": "cache",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamedamageHitDebugData",
+          "name": "hitDebugData",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "GatherServerData;gameHitEventCacheDataServerHitData",
+      "shortName": "GatherServerData",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamedamageCacheData",
+          "name": "cache",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamedamageServerHitData",
+          "name": "serverHitData",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "GetArmorPenetrationValue;WeaponObjectgameHitEvent",
+      "shortName": "GetArmorPenetrationValue",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gameweaponObject",
+          "name": "weapon",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetCritDamageModifier;StatsSystemAttackData",
+      "shortName": "GetCritDamageModifier",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gameStatsSystem",
+          "name": "statSystem",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamedamageAttackData",
+          "name": "attackData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetHeadshotDamageModifier;StatsSystemAttackData",
+      "shortName": "GetHeadshotDamageModifier",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gameStatsSystem",
+          "name": "statSystem",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamedamageAttackData",
+          "name": "attackData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetHitReactionZone;gameProjectedHitEvent",
+      "shortName": "GetHitReactionZone",
+      "return": {
+        "type": "EHitReactionZone",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsProjectedHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetSubAttackSubType;AttackData",
+      "shortName": "GetSubAttackSubType",
+      "return": {
+        "type": "gamedataAttackSubtype",
+        "flags": 64
+      },
+      "flags": 41092,
+      "params": [
+        {
+          "type": "handle:gamedamageAttackData",
+          "name": "attackData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetVehiclePerksDamageMultiplier;AttackData",
+      "shortName": "GetVehiclePerksDamageMultiplier",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gamedamageAttackData",
+          "name": "attackData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetWeakspotDamageModifier;StatsSystemAttackData",
+      "shortName": "GetWeakspotDamageModifier",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gameStatsSystem",
+          "name": "statSystem",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamedamageAttackData",
+          "name": "attackData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ImmortalityCheck;gameHitEventCacheData",
+      "shortName": "ImmortalityCheck",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamedamageCacheData",
+          "name": "cache",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "InvulnerabilityCheck;gameHitEventCacheData",
+      "shortName": "InvulnerabilityCheck",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamedamageCacheData",
+          "name": "cache",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsImmune;GameObjectTweakDBIDAttackData",
+      "shortName": "IsImmune",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "target",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "statusEffectID",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamedamageAttackData",
+          "name": "attackData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsOverridenExplosionVsVehicleHit;gameHitEvent",
+      "shortName": "IsOverridenExplosionVsVehicleHit",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsTargetImmortal;CacheData",
+      "shortName": "IsTargetImmortal",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gamedamageCacheData",
+          "name": "cache",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsTargetInvulnerable;CacheData",
+      "shortName": "IsTargetInvulnerable",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gamedamageCacheData",
+          "name": "cache",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ModifyHitData;gameHitEvent",
+      "shortName": "ModifyHitData",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ModifyHitFlagsForPlayer;gameHitEventCacheData",
+      "shortName": "ModifyHitFlagsForPlayer",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamedamageCacheData",
+          "name": "cache",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PostProcess;gameHitEvent",
+      "shortName": "PostProcess",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PreProcess;gameHitEventCacheData",
+      "shortName": "PreProcess",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamedamageCacheData",
+          "name": "cache",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PreProcessVehicleTarget;gameHitEvent",
+      "shortName": "PreProcessVehicleTarget",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Process;gameHitEventCacheData",
+      "shortName": "Process",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamedamageCacheData",
+          "name": "cache",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessArmor;gameHitEvent",
+      "shortName": "ProcessArmor",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessBikeMelee;gameHitEvent",
+      "shortName": "ProcessBikeMelee",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessBlockAndDeflect;gameHitEvent",
+      "shortName": "ProcessBlockAndDeflect",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessBulletBlockAndDeflect;gameHitEvent",
+      "shortName": "ProcessBulletBlockAndDeflect",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessBulletDeflect;gameHitEventBoolItemObject",
+      "shortName": "ProcessBulletDeflect",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "isBulletTimeActive",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameItemObject",
+          "name": "blockingItem",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessChargeAttack;gameHitEventCacheData",
+      "shortName": "ProcessChargeAttack",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamedamageCacheData",
+          "name": "cache",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessClientHit;ServerHitData",
+      "shortName": "ProcessClientHit",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gamedamageServerHitData",
+          "name": "serverHitData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessClientKill;ServerKillData",
+      "shortName": "ProcessClientKill",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gamedamageServerKillData",
+          "name": "serverKillData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessCriticalHit;gameHitEvent",
+      "shortName": "ProcessCriticalHit",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessCrowdTarget;gameHitEvent",
+      "shortName": "ProcessCrowdTarget",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessCyberwareModifiers;gameHitEvent",
+      "shortName": "ProcessCyberwareModifiers",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessDamageMultipliers;gameHitEvent",
+      "shortName": "ProcessDamageMultipliers",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessDamageReduction;gameHitEvent",
+      "shortName": "ProcessDamageReduction",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessDeviceExplosionDamageToTierNPC;gameHitEvent",
+      "shortName": "ProcessDeviceExplosionDamageToTierNPC",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessDeviceTarget;gameHitEvent",
+      "shortName": "ProcessDeviceTarget",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessDodge;gameHitEvent",
+      "shortName": "ProcessDodge",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessEffectiveRange;gameHitEvent",
+      "shortName": "ProcessEffectiveRange",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessEvasion;gameHitEvent",
+      "shortName": "ProcessEvasion",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessGrenadeExplosionDamageToPlayer;gameHitEvent",
+      "shortName": "ProcessGrenadeExplosionDamageToPlayer",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessHitReaction;gameHitEvent",
+      "shortName": "ProcessHitReaction",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessInstantKill;gameHitEvent",
+      "shortName": "ProcessInstantKill",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessLevelDifference;gameHitEvent",
+      "shortName": "ProcessLevelDifference",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessLocalizedDamage;gameHitEvent",
+      "shortName": "ProcessLocalizedDamage",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessMissPipeline;gameMissEvent",
+      "shortName": "ProcessMissPipeline",
+      "flags": 33924,
+      "params": [
+        {
+          "type": "handle:gameeventsMissEvent",
+          "name": "missEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessMitigation;gameHitEvent",
+      "shortName": "ProcessMitigation",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessNPCPassengerVehicleCollision;gameHitEvent",
+      "shortName": "ProcessNPCPassengerVehicleCollision",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessOnVehicleMitigation;gameHitEvent",
+      "shortName": "ProcessOnVehicleMitigation",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessOneShotProtection;gameHitEvent",
+      "shortName": "ProcessOneShotProtection",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessPierceAttack;gameHitEvent",
+      "shortName": "ProcessPierceAttack",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessPipeline;gameHitEventCacheData",
+      "shortName": "ProcessPipeline",
+      "flags": 33924,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamedamageCacheData",
+          "name": "cache",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessPlayerFixedPercentageOverride;gameHitEvent",
+      "shortName": "ProcessPlayerFixedPercentageOverride",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessPlayerIncomingDamageMultiplier;gameHitEvent",
+      "shortName": "ProcessPlayerIncomingDamageMultiplier",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessProjectionPipeline;gameProjectedHitEventCacheData",
+      "shortName": "ProcessProjectionPipeline",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsProjectedHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamedamageCacheData",
+          "name": "cache",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessQuickHackModifiers;gameHitEvent",
+      "shortName": "ProcessQuickHackModifiers",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessRagdollHit;gameHitEvent",
+      "shortName": "ProcessRagdollHit",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessReturnedDamage;gameHitEvent",
+      "shortName": "ProcessReturnedDamage",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessRicochet;gameHitEvent",
+      "shortName": "ProcessRicochet",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessSpreadingMultiplier;gameHitEvent",
+      "shortName": "ProcessSpreadingMultiplier",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessStatusEffectApplicationStats;gameHitEvent",
+      "shortName": "ProcessStatusEffectApplicationStats",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessStatusEffects;gameHitEvent",
+      "shortName": "ProcessStatusEffects",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessStealthAttack;gameHitEvent",
+      "shortName": "ProcessStealthAttack",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessTurretAttack;gameHitEvent",
+      "shortName": "ProcessTurretAttack",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessTurretDamageTakenFromMelee;gameHitEvent",
+      "shortName": "ProcessTurretDamageTakenFromMelee",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessVehicleHit;gameHitEvent",
+      "shortName": "ProcessVehicleHit",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessVehicleTarget;gameHitEventCacheData",
+      "shortName": "ProcessVehicleTarget",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamedamageCacheData",
+          "name": "cache",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessVehicleVsExplosion;gameHitEvent",
+      "shortName": "ProcessVehicleVsExplosion",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ScalePlayerDamage;gameHitEvent",
+      "shortName": "ScalePlayerDamage",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SendDamageEvents;gameHitEventscript_ref<array<SDamageDealt>>",
+      "shortName": "SendDamageEvents",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:array:SDamageDealt",
+          "name": "resourcesLost",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SendDamageRequestToPreventionSystem;gameHitEvent",
+      "shortName": "SendDamageRequestToPreventionSystem",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SendVehicleImpactTelemetryIfValid;gameHitEvent",
+      "shortName": "SendVehicleImpactTelemetryIfValid",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetPreviewLock;Bool",
+      "shortName": "SetPreviewLock",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "newState",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetPreviewTargetStruct;GameObjectEHitReactionZoneBool",
+      "shortName": "SetPreviewTargetStruct",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "trackedTarget",
+          "flags": 128
+        },
+        {
+          "type": "EHitReactionZone",
+          "name": "bodyPart",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "hittingBreach",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetTutorialFact;CName",
+      "shortName": "SetTutorialFact",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "CName",
+          "name": "factName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ShouldProcessStatusEffectsOnVehicleDriver;gameHitEventEntityID",
+      "shortName": "ShouldProcessStatusEffectsOnVehicleDriver",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        },
+        {
+          "type": "entEntityID",
+          "name": "driverEntityID",
+          "flags": 640
+        }
+      ]
+    }
+  ]
+}

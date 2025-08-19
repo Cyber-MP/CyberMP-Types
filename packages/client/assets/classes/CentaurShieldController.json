@@ -1,0 +1,199 @@
+{
+  "parent": "AICustomComponents",
+  "name": "CentaurShieldController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "Bool",
+      "name": "startWithShieldActive",
+      "flags": 4297130017
+    },
+    {
+      "type": "CName",
+      "name": "animFeatureName",
+      "flags": 4297130016
+    },
+    {
+      "type": "CName",
+      "name": "shieldDestroyedModifierName",
+      "flags": 4297130016
+    },
+    {
+      "type": "ECentaurShieldState",
+      "name": "shieldState",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:gameIBlackboard",
+      "name": "centaurBlackboard",
+      "flags": 4431347744
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "CentaurShieldController::ChangeShieldState;GameObjectECentaurShieldState",
+      "shortName": "ChangeShieldState",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "obj",
+          "flags": 128
+        },
+        {
+          "type": "ECentaurShieldState",
+          "name": "newState",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnEventReceived",
+      "shortName": "OnEventReceived",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:senseStimuliEvent",
+          "name": "stimEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnHitShield",
+      "shortName": "OnHitShield",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:HitShieldEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnShieldStateChange",
+      "shortName": "OnShieldStateChange",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:CentaurShieldStateChangeEvent",
+          "name": "stateChangeEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnStatusEffectApplied",
+      "shortName": "OnStatusEffectApplied",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameeventsApplyStatusEffectEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ApplyShieldDestroyedStats;",
+      "shortName": "ApplyShieldDestroyedStats",
+      "flags": 32900
+    },
+    {
+      "fullName": "ChangeShieldState;ECentaurShieldState",
+      "shortName": "ChangeShieldState",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "ECentaurShieldState",
+          "name": "newState",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetFloatFromCharacterTweak;script_ref<String>Float",
+      "shortName": "GetFloatFromCharacterTweak",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:String",
+          "name": "varName",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "defaultValue",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "GetStringFromCharacterTweak;script_ref<String>String",
+      "shortName": "GetStringFromCharacterTweak",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:String",
+          "name": "varName",
+          "flags": 128
+        },
+        {
+          "type": "String",
+          "name": "defaultValue",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "OnGameAttach;",
+      "shortName": "OnGameAttach",
+      "flags": 32900
+    },
+    {
+      "fullName": "PlayShieldDestroyedVoiceOver;",
+      "shortName": "PlayShieldDestroyedVoiceOver",
+      "flags": 32900
+    },
+    {
+      "fullName": "TriggerShieldControllerExplosion;",
+      "shortName": "TriggerShieldControllerExplosion",
+      "flags": 32900
+    },
+    {
+      "fullName": "UpdateAnimFeature;",
+      "shortName": "UpdateAnimFeature",
+      "flags": 32900
+    },
+    {
+      "fullName": "UpdateBlackbaord;",
+      "shortName": "UpdateBlackbaord",
+      "flags": 32900
+    }
+  ]
+}

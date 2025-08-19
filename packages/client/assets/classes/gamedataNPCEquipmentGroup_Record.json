@@ -1,0 +1,81 @@
+{
+  "parent": "gamedataTweakDBRecord",
+  "name": "gamedataNPCEquipmentGroup_Record",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "EquipmentItems",
+      "shortName": "EquipmentItems",
+      "index": 5665,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataNPCEquipmentGroupEntry_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "EquipmentItemsContains",
+      "shortName": "EquipmentItemsContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 5669,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataNPCEquipmentGroupEntry_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetEquipmentItemsCount",
+      "shortName": "GetEquipmentItemsCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 5666,
+      "flags": 1
+    },
+    {
+      "fullName": "GetEquipmentItemsItem",
+      "shortName": "GetEquipmentItemsItem",
+      "return": {
+        "type": "whandle:gamedataNPCEquipmentGroupEntry_Record",
+        "flags": 64
+      },
+      "index": 5667,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetEquipmentItemsItemHandle",
+      "shortName": "GetEquipmentItemsItemHandle",
+      "return": {
+        "type": "handle:gamedataNPCEquipmentGroupEntry_Record",
+        "flags": 64
+      },
+      "index": 5668,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

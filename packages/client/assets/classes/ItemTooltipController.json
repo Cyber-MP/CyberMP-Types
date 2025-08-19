@@ -1,0 +1,874 @@
+{
+  "parent": "AGenericTooltipControllerWithDebug",
+  "name": "ItemTooltipController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkTextWidgetReference",
+      "name": "itemNameText",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "itemRarityText",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "progressBar",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "recipeStatsTitle",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "categoriesWrapper",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "backgroundContainer",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "topContainer",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "headerContainer",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "headerWeaponContainer",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "headerItemContainer",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "headerGrenadeContainer",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "headerArmorContainer",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "primmaryStatsContainer",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "secondaryStatsContainer",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "recipeStatsContainer",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "recipeDamageTypesContainer",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "modsContainer",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "dedicatedModsContainer",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "descriptionContainer",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "craftedItemContainer",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "bottomContainer",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "primmaryStatsList",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "secondaryStatsList",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "recipeStatsTypesList",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "recipeDamageTypesList",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "modsList",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "dedicatedModsList",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "requiredLevelContainer",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "priceContainer",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "descriptionText",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "requireLevelText",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "priceText",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "dpsWrapper",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "dpsArrow",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "dpsText",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "nonLethalText",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "damagePerHitValue",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "attacksPerSecondValue",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "silencerPartWrapper",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "scopePartWrapper",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "craftedItemIcon",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "grenadeDamageTypeWrapper",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "grenadeDamageTypeIcon",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "grenadeRangeValue",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "grenadeRangeText",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "grenadeDeliveryLabel",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "grenadeDeliveryIcon",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "grenadeDamageStatWrapper",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "grenadeDamageStatLabel",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "grenadeDamageStatValue",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "armorStatArrow",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "armorStatLabel",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "quickhackStatWrapper",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "quickhackCostValue",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "quickhackDuration",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "quickhackCooldown",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "quickhackUpload",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "damageTypeWrapper",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "damageTypeIcon",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "equipedWrapper",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "itemTypeText",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "itemPreviewWrapper",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "itemPreviewIcon",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "itemPreviewIconicLines",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "itemWeightWrapper",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "itemWeightText",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "itemAmmoWrapper",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "itemAmmoText",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "itemRequirements",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "itemLevelRequirements",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "itemStrenghtRequirements",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "itemAttributeRequirements",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "itemSmartGunLinkRequirements",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "itemLevelRequirementsValue",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "itemStrenghtRequirementsValue",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "itemAttributeRequirementsText",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "weaponEvolutionWrapper",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "weaponEvolutionIcon",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "weaponEvolutionName",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "weaponEvolutionDescription",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "DEBUG_iconErrorWrapper",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "DEBUG_iconErrorText",
+      "flags": 4297195553
+    },
+    {
+      "type": "handle:InventoryTooltipData",
+      "name": "data",
+      "flags": 4431413280
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "animProxy",
+      "flags": 4431347744
+    },
+    {
+      "type": "Bool",
+      "name": "playAnimation",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnIconCallback",
+      "shortName": "OnIconCallback",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkCallbackData",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "DEBUG_UpdateDebugInfo;",
+      "shortName": "DEBUG_UpdateDebugInfo",
+      "flags": 33024
+    },
+    {
+      "fullName": "FilterArmorStat;script_ref<array<InventoryTooltipData_StatData>>",
+      "shortName": "FilterArmorStat",
+      "return": {
+        "type": "array:InventoryTooltipData_StatData",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:array:InventoryTooltipData_StatData",
+          "name": "stats",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "FilterGrenadeStats;script_ref<array<InventoryTooltipData_StatData>>",
+      "shortName": "FilterGrenadeStats",
+      "return": {
+        "type": "array:InventoryTooltipData_StatData",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:array:InventoryTooltipData_StatData",
+          "name": "stats",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "FilterStatsWithValue;script_ref<array<InventoryTooltipData_StatData>>",
+      "shortName": "FilterStatsWithValue",
+      "return": {
+        "type": "array:InventoryTooltipData_StatData",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:array:InventoryTooltipData_StatData",
+          "name": "stats",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "FixLines;",
+      "shortName": "FixLines",
+      "flags": 33028
+    },
+    {
+      "fullName": "ForceNoEquipped;",
+      "shortName": "ForceNoEquipped",
+      "flags": 33284
+    },
+    {
+      "fullName": "GetArmorStatFromSecondaryStats;",
+      "shortName": "GetArmorStatFromSecondaryStats",
+      "return": {
+        "type": "InventoryTooltipData_StatData",
+        "flags": 64
+      },
+      "flags": 33028
+    },
+    {
+      "fullName": "GetArrowWrapperState;Float",
+      "shortName": "GetArrowWrapperState",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 33028,
+      "params": [
+        {
+          "type": "Float",
+          "name": "diffValue",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetDamageStatsFromSecondayStats;",
+      "shortName": "GetDamageStatsFromSecondayStats",
+      "return": {
+        "type": "array:InventoryTooltipData_StatData",
+        "flags": 64
+      },
+      "flags": 33028
+    },
+    {
+      "fullName": "GetDoTEffects;Attack_Record",
+      "shortName": "GetDoTEffects",
+      "return": {
+        "type": "array:handle:DamageEffectUIEntry",
+        "flags": 64
+      },
+      "flags": 33028,
+      "params": [
+        {
+          "type": "whandle:gamedataAttack_Record",
+          "name": "attackRecord",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetGranadeDamageFromStats;",
+      "shortName": "GetGranadeDamageFromStats",
+      "return": {
+        "type": "InventoryTooltipData_StatData",
+        "flags": 64
+      },
+      "flags": 33028
+    },
+    {
+      "fullName": "GetItemType;",
+      "shortName": "GetItemType",
+      "return": {
+        "type": "gamedataItemType",
+        "flags": 64
+      },
+      "flags": 33028
+    },
+    {
+      "fullName": "GetSecondaryStatsData;InventoryTooltipData",
+      "shortName": "GetSecondaryStatsData",
+      "return": {
+        "type": "array:InventoryTooltipData_StatData",
+        "flags": 64
+      },
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:InventoryTooltipData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsDamageStat;gamedataStatType",
+      "shortName": "IsDamageStat",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "gamedataStatType",
+          "name": "stat",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessDoTEffects;StatusEffect_Record",
+      "shortName": "ProcessDoTEffects",
+      "return": {
+        "type": "array:handle:DamageEffectUIEntry",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "whandle:gamedataStatusEffect_Record",
+          "name": "effects",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetData;script_ref<ItemViewData>",
+      "shortName": "SetData",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "script_ref:gameItemViewData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetData;ATooltipData",
+      "shortName": "SetData",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "handle:ATooltipData",
+          "name": "tooltipData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ShouldDisplayGrenadeStat;script_ref<InventoryTooltipData_StatData>",
+      "shortName": "ShouldDisplayGrenadeStat",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:InventoryTooltipData_StatData",
+          "name": "stat",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Show;",
+      "shortName": "Show",
+      "flags": 33280
+    },
+    {
+      "fullName": "UpdateAmmo;",
+      "shortName": "UpdateAmmo",
+      "flags": 33028
+    },
+    {
+      "fullName": "UpdateArmor;",
+      "shortName": "UpdateArmor",
+      "flags": 33028
+    },
+    {
+      "fullName": "UpdateAttachments;",
+      "shortName": "UpdateAttachments",
+      "flags": 33028
+    },
+    {
+      "fullName": "UpdateCraftedIcon;",
+      "shortName": "UpdateCraftedIcon",
+      "flags": 33028
+    },
+    {
+      "fullName": "UpdateDPS;",
+      "shortName": "UpdateDPS",
+      "flags": 33028
+    },
+    {
+      "fullName": "UpdateDamageType;",
+      "shortName": "UpdateDamageType",
+      "flags": 33028
+    },
+    {
+      "fullName": "UpdateDedicatedMods;script_ref<array<InventoryItemAttachments>>",
+      "shortName": "UpdateDedicatedMods",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "script_ref:array:handle:gameInventoryItemAttachments",
+          "name": "mods",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateDescription;",
+      "shortName": "UpdateDescription",
+      "flags": 33028
+    },
+    {
+      "fullName": "UpdateEquipped;",
+      "shortName": "UpdateEquipped",
+      "flags": 33028
+    },
+    {
+      "fullName": "UpdateEvolutionDescription;",
+      "shortName": "UpdateEvolutionDescription",
+      "flags": 33028
+    },
+    {
+      "fullName": "UpdateGrenadeDamage;Grenade_Record",
+      "shortName": "UpdateGrenadeDamage",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gamedataGrenade_Record",
+          "name": "tweakRecord",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateGrenadeDelivery;Grenade_Record",
+      "shortName": "UpdateGrenadeDelivery",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gamedataGrenade_Record",
+          "name": "tweakRecord",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateGrenadeRange;Grenade_Record",
+      "shortName": "UpdateGrenadeRange",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gamedataGrenade_Record",
+          "name": "tweakRecord",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateGrenadeStats;",
+      "shortName": "UpdateGrenadeStats",
+      "flags": 33028
+    },
+    {
+      "fullName": "UpdateHeader;",
+      "shortName": "UpdateHeader",
+      "flags": 33028
+    },
+    {
+      "fullName": "UpdateIcon;",
+      "shortName": "UpdateIcon",
+      "flags": 33024
+    },
+    {
+      "fullName": "UpdateItemType;",
+      "shortName": "UpdateItemType",
+      "flags": 33028
+    },
+    {
+      "fullName": "UpdateLayout;",
+      "shortName": "UpdateLayout",
+      "flags": 33028
+    },
+    {
+      "fullName": "UpdateMods;script_ref<array<InventoryItemAttachments>>",
+      "shortName": "UpdateMods",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "script_ref:array:handle:gameInventoryItemAttachments",
+          "name": "mods",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateName;",
+      "shortName": "UpdateName",
+      "flags": 33028
+    },
+    {
+      "fullName": "UpdateParts;",
+      "shortName": "UpdateParts",
+      "flags": 33028
+    },
+    {
+      "fullName": "UpdatePrice;",
+      "shortName": "UpdatePrice",
+      "flags": 33028
+    },
+    {
+      "fullName": "UpdatePrimmaryStats;",
+      "shortName": "UpdatePrimmaryStats",
+      "flags": 33028
+    },
+    {
+      "fullName": "UpdateProgressBar;",
+      "shortName": "UpdateProgressBar",
+      "flags": 33028
+    },
+    {
+      "fullName": "UpdateQuickhackState;",
+      "shortName": "UpdateQuickhackState",
+      "flags": 33028
+    },
+    {
+      "fullName": "UpdateRarity;",
+      "shortName": "UpdateRarity",
+      "flags": 33028
+    },
+    {
+      "fullName": "UpdateRecipeIcon;",
+      "shortName": "UpdateRecipeIcon",
+      "flags": 33024
+    },
+    {
+      "fullName": "UpdateRequiredLevel;",
+      "shortName": "UpdateRequiredLevel",
+      "flags": 33028
+    },
+    {
+      "fullName": "UpdateRequirements;",
+      "shortName": "UpdateRequirements",
+      "flags": 33028
+    },
+    {
+      "fullName": "UpdateSecondaryStats;",
+      "shortName": "UpdateSecondaryStats",
+      "flags": 33028
+    },
+    {
+      "fullName": "UpdateWeight;",
+      "shortName": "UpdateWeight",
+      "flags": 33028
+    },
+    {
+      "fullName": "UpdatemRecipeDamageTypes;",
+      "shortName": "UpdatemRecipeDamageTypes",
+      "flags": 33028
+    },
+    {
+      "fullName": "UpdatemRecipeProperties;",
+      "shortName": "UpdatemRecipeProperties",
+      "flags": 33028
+    }
+  ]
+}

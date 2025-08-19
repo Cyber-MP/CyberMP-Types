@@ -1,0 +1,60 @@
+{
+  "parent": "gameuiGenericNotificationGameController",
+  "name": "UIInGameNotificationQueue",
+  "flags": 4,
+  "props": [
+    {
+      "type": "Float",
+      "name": "duration",
+      "flags": 4297130017
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnUINotification",
+      "shortName": "OnUINotification",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:UIInGameNotificationEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUINotificationRemove",
+      "shortName": "OnUINotificationRemove",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:UIInGameNotificationRemoveEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AdjustScreenPosition;",
+      "shortName": "AdjustScreenPosition",
+      "flags": 32900
+    },
+    {
+      "fullName": "GetShouldSaveState;",
+      "shortName": "GetShouldSaveState",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 34304
+    }
+  ]
+}
