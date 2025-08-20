@@ -15835,6 +15835,8 @@ interface MpClasses {
 interface MpFuncs {
     /** Method to retrieve input events */
     "onInputKeyEvent"(callback: ((action: EInputAction, key: EInputKey) => void)): void;
+    /** Event when game is started */
+    "onGameLoaded"(callback: (() => void)): void;
     "AIInstantiateObject"(): any;
     "AIInstantiatePrototype"(): any;
     "AIReleaseObject"(): any;
