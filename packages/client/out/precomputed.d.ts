@@ -1,3 +1,7 @@
+/// <reference path="./enums.d.ts" />
+/// <reference path="./bitfields.d.ts" />
+/// <reference path="./index.d.ts" />
+
 declare interface MpEvents {
   /**
    * Register a custom event listener.
@@ -151,4 +155,31 @@ declare interface MpGlobalPrecomputed {
    * Returns time in ms since game start.
    */
   getGameTimer(): number;
+}
+
+declare interface MpGamePrecomputed {
+  /**
+   * Method to retrieve input events
+   */
+  onInputKeyEvent(
+    callback: (
+      action: CyberEnums.EInputAction,
+      key: CyberEnums.EInputKey
+    ) => void
+  ): void;
+
+  /**
+   * Event when game is started
+   */
+  onGameLoaded(callback: () => void): void;
+
+  /**
+   * Get singleton
+   */
+  getSingleton<T extends keyof MpClasses>(name: T): MpClasses[T];
+
+  /**
+   * Add something to inventory
+   */
+  AddToInventory(itemName: string, count: number): void;
 }

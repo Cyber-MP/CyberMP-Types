@@ -15833,12 +15833,6 @@ interface MpClasses {
 }
 
 interface MpFuncs {
-    /** Method to retrieve input events */
-    "onInputKeyEvent"(callback: ((action: CyberEnums.EInputAction, key: CyberEnums.EInputKey) => void)): void;
-    /** Event when game is started */
-    "onGameLoaded"(callback: (() => void)): void;
-    /** Add something to inventory */
-    "AddToInventory"(itemName: string, count: number): void;
     "AIInstantiateObject"(): any;
     "AIInstantiatePrototype"(): any;
     "AIReleaseObject"(): any;
@@ -16144,7 +16138,7 @@ interface MpFuncs {
     "VectorToString"(vec: Vector4): string;
 }
 
-interface MpGame extends MpFuncs, MpClasses {
+interface MpGame extends MpGamePrecomputed, MpFuncs, MpClasses {
 }
 
 interface Mp extends MpGlobalPrecomputed {

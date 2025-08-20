@@ -34,7 +34,7 @@ export class IndexGenerator extends BaseGenerator {
 
     sourceFile.addInterface({
       name: "MpGame",
-      extends: ["MpFuncs", "MpClasses"],
+      extends: ["MpGamePrecomputed", "MpFuncs", "MpClasses"],
     });
 
     sourceFile.addInterface({

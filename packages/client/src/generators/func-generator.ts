@@ -3,7 +3,6 @@ import { uniqueBy } from "../utils/file-utils";
 import { getFunctionParams, resolveType } from "../utils/type-resolver";
 import { Project, SourceFile } from "ts-morph";
 import { funcs as globalFuncs } from "../../assets/globals.json";
-import { funcs as customFuncs } from "../../assets/custom-globals.json";
 import { Logger } from "../utils/logger";
 import { defsIndex } from "src/config/constants";
 
@@ -13,7 +12,7 @@ export class FuncGenerator extends BaseGenerator<[SourceFile]> {
   constructor(project: Project) {
     super(project);
 
-    const funcs = [...(customFuncs as any[]), ...globalFuncs];
+    const funcs = [...globalFuncs];
 
     this.funcs = uniqueBy(
       funcs.filter((o) => !o.shortName.includes(";")),
