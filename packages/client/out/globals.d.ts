@@ -1,0 +1,20 @@
+// THIS CODE IS GENERATED, PLEASE DO NOT EDIT THIS
+type CName = string;
+type Handle<T = any> = T;
+type WeakHandle<T = any> = T;
+type ScriptRef<T = any> = T;
+type NodeRef<T = any> = T;
+type TweakDBID = string;
+type CRUID = any;
+type CGUID = any;
+type Variant = any;
+type LocalizationString = string;
+type Uint16 = number;
+type Uint8 = number;
+type Int8 = number;
+type Int16 = number;
+type DataBuffer = any;
+type serializationDeferredDataBuffer = any;
+type SharedDataBuffer = any;
+type EditorObjectID = any;
+type MessageResourcePath = any;
