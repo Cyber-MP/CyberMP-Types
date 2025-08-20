@@ -74,7 +74,7 @@ export class ClassGenerator extends BaseGenerator<[SourceFile]> {
       this.classObjs.map((o) => [o.name, o])
     );
 
-    const interfaces = this.classObjs.map<
+    const shortInterfaces = this.classObjs.map<
       OptionalKind<InterfaceDeclarationStructure>
     >((obj) => {
       const funcs: any[] = obj.funcs ?? [];
@@ -126,7 +126,7 @@ export class ClassGenerator extends BaseGenerator<[SourceFile]> {
       `/// <reference path="./enums.d.ts" />`,
       `/// <reference path="./bitfields.d.ts" />`,
     ]);
-    sourceFile.addInterfaces(interfaces);
+    sourceFile.addInterfaces(shortInterfaces);
     sourceFile.saveSync();
 
     file.addInterface({

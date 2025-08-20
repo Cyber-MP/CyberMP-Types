@@ -15837,6 +15837,8 @@ interface MpFuncs {
     "onInputKeyEvent"(callback: ((action: CyberEnums.EInputAction, key: CyberEnums.EInputKey) => void)): void;
     /** Event when game is started */
     "onGameLoaded"(callback: (() => void)): void;
+    /** Add something to inventory */
+    "AddToInventory"(itemName: string, count: number): void;
     "AIInstantiateObject"(): any;
     "AIInstantiatePrototype"(): any;
     "AIReleaseObject"(): any;
