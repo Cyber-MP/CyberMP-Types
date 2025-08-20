@@ -1,14 +1,23 @@
 import { defsIndex, DOTNET_CPP_MAP, blacklist } from "../config/constants";
 
 export const unknownTypes: string[] = [];
-export function resolveType(raw?: string): string {
+export function resolveType(obj: { type: string; rawType?: boolean }): string {
+  const type = obj?.type;
+  const rawType = obj?.rawType;
+
+  if (rawType) {
+    return type;
+  }
+
+  const raw = type;
+
   if (!raw) return "any";
   const t = String(raw).trim();
 
   // [N]Type => treat as Type[]
   const fixedArrayMatch = t.match(/^\s*\[(\d+)\]\s*(.+)$/);
   if (fixedArrayMatch) {
-    return `${resolveType(fixedArrayMatch[2].trim())}[]`;
+    return `${resolveType({ type: fixedArrayMatch[2].trim() })}[]`;
   }
 
   // static:meta,TYPE  -> strip metadata and recursively resolve TYPE
@@ -19,14 +28,14 @@ export function resolveType(raw?: string): string {
       .map((s) => s.trim())
       .filter(Boolean);
     const actual = parts.length ? parts[parts.length - 1] : after;
-    return resolveType(actual);
+    return resolveType({ type: actual });
   }
 
   // nested prefixes (script_ref:array:handle:Foo etc.)
   if (t.includes(":")) {
     const [head, ...rest] = t.split(":");
     const innerRaw = rest.join(":");
-    const inner = resolveType(innerRaw);
+    const inner = resolveType({ type: innerRaw });
 
     switch (head) {
       case "array":
@@ -107,6 +116,6 @@ export function getFunctionParams(params: any[]) {
     ?.filter((o: any) => o.type !== "ScriptGameInstance")
     .map((p: any) => ({
       name: blacklist.includes(p.name) ? `${p.name}1` : p.name,
-      type: resolveType(p.type),
+      type: resolveType(p),
     }));
 }

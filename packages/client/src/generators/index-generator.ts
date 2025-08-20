@@ -16,7 +16,9 @@ export class IndexGenerator extends BaseGenerator {
   }
 
   generate() {
-    const sourceFile = this.createSourceFile("./out/index.d.ts");
+    const sourceFile = this.project.createSourceFile("./out/index.d.ts", "", {
+      overwrite: true,
+    });
 
     this.addHeader(sourceFile);
     sourceFile.addStatements([
@@ -24,6 +26,7 @@ export class IndexGenerator extends BaseGenerator {
       `/// <reference path="./enums.d.ts" />`,
       `/// <reference path="./bitfields.d.ts" />`,
       `/// <reference path="./classes.d.ts" />`,
+      `/// <reference path="./precomputed.d.ts" />`,
     ]);
 
     this.classGenerator.generate(sourceFile);
@@ -36,7 +39,11 @@ export class IndexGenerator extends BaseGenerator {
 
     sourceFile.addInterface({
       name: "Mp",
-      properties: [{ name: "game", type: "MpGame" }],
+      properties: [
+        { name: "game", type: "MpGame" },
+        { name: "events", type: "MpEvents" },
+      ],
+      extends: ["MpGlobalPrecomputed"],
     });
 
     sourceFile.addVariableStatement({

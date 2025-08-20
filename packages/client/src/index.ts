@@ -6,6 +6,11 @@ import { defsIndex, project } from "./config/constants";
 import { unknownTypes } from "./utils/type-resolver";
 import { GenericGenerator } from "./generators/generic-generator";
 import { rimraf } from "rimraf";
+import fs from "fs";
+
+const copyPrecomputedFiles = () => {
+  fs.copyFileSync("./src/precomputed.d.ts", "./out/precomputed.d.ts");
+};
 
 async function main() {
   await rimraf("./out");
@@ -20,6 +25,8 @@ async function main() {
   enumGenerator.generate();
   bitfieldGenerator.generate();
   indexGenerator.generate();
+
+  copyPrecomputedFiles();
 
   Logger.info("Generation process completed.");
   console.log(Object.values(defsIndex).map((o) => o.size));

@@ -3,6 +3,7 @@
 /// <reference path="./enums.d.ts" />
 /// <reference path="./bitfields.d.ts" />
 /// <reference path="./classes.d.ts" />
+/// <reference path="./precomputed.d.ts" />
 interface MpClasses {
     ABaseQuestObjectiveWrapper: { new(): ABaseQuestObjectiveWrapper };
     ABaseWrapper: { new(): ABaseWrapper };
@@ -15832,6 +15833,8 @@ interface MpClasses {
 }
 
 interface MpFuncs {
+    /** Method to retrieve input events */
+    "onInputKeyEvent"(callback: ((action: EInputAction, key: EInputKey) => void)): void;
     "AIInstantiateObject"(): any;
     "AIInstantiatePrototype"(): any;
     "AIReleaseObject"(): any;
@@ -16140,8 +16143,9 @@ interface MpFuncs {
 interface MpGame extends MpFuncs, MpClasses {
 }
 
-interface Mp {
+interface Mp extends MpGlobalPrecomputed {
     game: MpGame;
+    events: MpEvents;
 }
 
 declare const mp: Mp;

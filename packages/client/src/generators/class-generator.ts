@@ -98,13 +98,13 @@ export class ClassGenerator extends BaseGenerator<[SourceFile]> {
       const properties: OptionalKind<PropertySignatureStructure>[] =
         filteredProps.map((p: any) => ({
           name: `"${p.name}"`,
-          type: resolveType(p.type),
+          type: resolveType(p),
         }));
 
       const methods: OptionalKind<MethodSignatureStructure>[] = funcs.map(
         (fn: any) => ({
           name: `"${fn.shortName}"`,
-          returnType: resolveType(fn.return?.type),
+          returnType: resolveType(fn.return),
           parameters: getFunctionParams(fn.params),
         })
       );
