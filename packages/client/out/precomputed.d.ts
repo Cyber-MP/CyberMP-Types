@@ -157,6 +157,8 @@ declare interface MpGlobalPrecomputed {
   getGameTimer(): number;
 }
 
+type UnwrapMpClass<T> = T extends { new (): infer U } ? U : T;
+
 declare interface MpGamePrecomputed {
   /**
    * Method to retrieve input events
@@ -176,7 +178,7 @@ declare interface MpGamePrecomputed {
   /**
    * Get singleton
    */
-  getSingleton<T extends keyof MpClasses>(name: T): MpClasses[T];
+  getSingleton<T extends keyof MpClasses>(name: T): UnwrapMpClass<MpClasses[T]>;
 
   /**
    * Add something to inventory
