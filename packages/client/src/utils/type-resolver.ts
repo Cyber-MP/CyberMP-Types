@@ -10,9 +10,10 @@ export function resolveType(obj: { type: string; rawType?: boolean }): string {
   }
 
   const raw = type;
-
   if (!raw) return "any";
+
   const t = String(raw).trim();
+  const low = t.toLowerCase();
 
   // [N]Type => treat as Type[]
   const fixedArrayMatch = t.match(/^\s*\[(\d+)\]\s*(.+)$/);
@@ -20,7 +21,7 @@ export function resolveType(obj: { type: string; rawType?: boolean }): string {
     return `${resolveType({ type: fixedArrayMatch[2].trim() })}[]`;
   }
 
-  // static:meta,TYPE  -> strip metadata and recursively resolve TYPE
+  // static:meta,TYPE -> strip metadata and recursively resolve TYPE
   if (t.startsWith("static:")) {
     const after = t.slice("static:".length);
     const parts = after
@@ -47,17 +48,14 @@ export function resolveType(obj: { type: string; rawType?: boolean }): string {
       case "script_ref":
         return `ScriptRef<${inner}>`;
       default:
-        // unknown prefix: just return resolved inner
         return inner;
     }
   }
 
-  const low = t.toLowerCase();
-
-  // direct map (DOTNET_CPP_MAP uses lowercase keys)
+  // direct map
   if (DOTNET_CPP_MAP[low]) return DOTNET_CPP_MAP[low];
 
-  // numeric types like Int8, Uint16, Int32, Float, Double => number
+  // numbers
   if (
     /^(u?int|uint)?\d+$/i.test(t) ||
     /^(int|uint)(8|16|32|64)$/i.test(t) ||
@@ -67,46 +65,58 @@ export function resolveType(obj: { type: string; rawType?: boolean }): string {
     return "number";
   }
 
-  // boolean-like
+  // booleans
   if (/^(bool|boolean|ebool)$/i.test(t)) return "boolean";
 
-  // string-like
+  // strings
   if (/^(string|cname|tweakdbid|noderef|nodeRef|guid)$/i.test(t))
     return "string";
 
-  // time-like
+  // dates/times
   if (/(time|Date)$/i.test(t)) return "Date";
 
-  // known enums/bitfields (exact match or case-insensitive fallback)
-  if (defsIndex.enums.has(t) || defsIndex.bitfields.has(t)) return t;
-  // try case-insensitive search as fallback (useful if defsIndex keys are different-cased)
-  {
-    const lowerSet = new Set<string>(
-      [
-        ...(defsIndex.enums ? Array.from(defsIndex.enums) : []),
-        ...(defsIndex.bitfields ? Array.from(defsIndex.bitfields) : []),
-      ].map((s) => s.toLowerCase())
-    );
-    if (lowerSet.has(low)) {
-      // return original casing from defsIndex if available
-      const found =
-        Array.from(
-          (defsIndex.enums ? defsIndex.enums : new Set<string>()).values()
-        ).find((s) => s.toLowerCase() === low) ??
-        Array.from(
-          (defsIndex.bitfields
-            ? defsIndex.bitfields
-            : new Set<string>()
-          ).values()
-        ).find((s) => s.toLowerCase() === low);
-      if (found) return found;
-      return t;
-    }
+  // --- defsIndex lookups ---
+  // enums / bitfields
+  if (defsIndex.enums.has(t)) {
+    return `CyberEnums.${t}`;
   }
 
-  // fallback: return the identifier as-is (preserve original)
+  if (defsIndex.bitfields.has(t)) {
+    return `CyberEnums.BitFields.${t}`;
+  }
+
+  // classes
+  if (defsIndex.classes?.has(t)) return t;
+
+  // funcs (if you want them treated as types, e.g. callable references)
+  if (defsIndex.funcs?.has(t)) return t;
+
+  // case-insensitive fallback search across all defsIndex sets
+  const lowerSets = [
+    ...(defsIndex.enums ?? []),
+    ...(defsIndex.bitfields ?? []),
+    ...(defsIndex.classes ?? []),
+    ...(defsIndex.funcs ?? []),
+  ].map((s) => s.toLowerCase());
+
+  if (lowerSets.includes(low)) {
+    const allSets = [
+      ...(defsIndex.enums ?? []),
+      ...(defsIndex.bitfields ?? []),
+      ...(defsIndex.classes ?? []),
+      ...(defsIndex.funcs ?? []),
+    ];
+
+    const found = allSets.find((s) => s.toLowerCase() === low);
+    if (found) return found;
+    return t;
+  }
+
+  unknownTypes.push(t);
+  // fallback: original type name
   return t || "any";
 }
+
 export function getFunctionParams(params: any[]) {
   if (!params || !params.length) {
     return [];

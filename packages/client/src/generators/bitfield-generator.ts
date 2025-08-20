@@ -1,6 +1,6 @@
 import { BaseGenerator } from "./base-generator";
 import { readJsonFiles, uniqueBy } from "../utils/file-utils";
-import { OptionalKind, EnumDeclarationStructure, Project } from "ts-morph";
+import { Project, ModuleDeclarationKind } from "ts-morph";
 import { Logger } from "../utils/logger";
 import { defsIndex } from "src/config/constants";
 
@@ -17,23 +17,23 @@ export class BitfieldGenerator extends BaseGenerator {
   generate() {
     const sourceFile = this.createSourceFile("./out/bitfields.d.ts");
 
-    const bitfields = this.bitfields.map<
-      OptionalKind<EnumDeclarationStructure>
-    >((obj) => ({
-      ...obj,
-      isConst: true,
-      hasDeclareKeyword: true,
-      members: uniqueBy<any>(obj.members, (m) => m.name).map(
-        ({ bit, ...rest }) => ({
-          ...rest,
-          name: `"${rest.name}"`,
-          value: 1 << bit,
-        })
-      ),
-    }));
+    const bitfieldDecls: string[] = this.bitfields.map((obj) => {
+      const enumMembers = uniqueBy(obj.members, (m: any) => m.name)
+        .map(({ bit, name }) => `  "${name}" = ${1 << bit},`)
+        .join("\n");
+
+      return `declare const enum ${obj.name} {\n${enumMembers}\n}`;
+    });
 
     this.addHeader(sourceFile);
-    sourceFile.addEnums(bitfields);
+
+    sourceFile.addModule({
+      name: "CyberEnums.BitFields",
+      hasDeclareKeyword: true,
+      declarationKind: ModuleDeclarationKind.Namespace,
+      statements: bitfieldDecls,
+    });
+
     sourceFile.saveSync();
 
     Logger.success("Bitfields generated successfully");
