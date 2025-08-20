@@ -105,7 +105,7 @@ export class ClassGenerator extends BaseGenerator<[SourceFile]> {
         (fn: any) => ({
           name: `"${fn.shortName}"`,
           returnType: resolveType(fn.return?.type),
-          parameters: getFunctionParams(fn),
+          parameters: getFunctionParams(fn.params),
         })
       );
 
@@ -134,7 +134,10 @@ export class ClassGenerator extends BaseGenerator<[SourceFile]> {
       properties: this.classObjs.map<OptionalKind<PropertySignatureStructure>>(
         (obj) => ({
           name: obj.name,
-          type: obj.name,
+          type:
+            obj.parent === "gameIGameSystem"
+              ? obj.name
+              : `{ new(): ${obj.name} }`,
         })
       ),
     });

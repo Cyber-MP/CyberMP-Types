@@ -1,11 +1,15 @@
 {
-  "name": "client",
+  "name": "@cybermp/client-types",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./out/index.d.ts",
+  "files": [
+    "./out"
+  ],
   "scripts": {
     "start": "tsx ./src",
-    "dev": "tsx watch ./src"
+    "dev": "tsx watch ./src",
+    "build": "npm run start"
   },
   "keywords": [],
   "author": "",
@@ -13,5 +17,11 @@
   "packageManager": "pnpm@10.14.0",
   "devDependencies": {
     "ts-morph": "^26.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "rimraf": "^6.0.1"
   }
 }

@@ -5,8 +5,11 @@ import { IndexGenerator } from "./generators/index-generator";
 import { defsIndex, project } from "./config/constants";
 import { unknownTypes } from "./utils/type-resolver";
 import { GenericGenerator } from "./generators/generic-generator";
+import { rimraf } from "rimraf";
 
-function main() {
+async function main() {
+  await rimraf("./out");
+
   Logger.info("Starting generation process...");
   const genericGenerator = new GenericGenerator(project);
   const enumGenerator = new EnumGenerator(project);
@@ -23,4 +26,4 @@ function main() {
   console.log(unknownTypes.length);
 }
 
-main();
+void main();

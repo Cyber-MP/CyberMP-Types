@@ -16,7 +16,7 @@ export class IndexGenerator extends BaseGenerator {
   }
 
   generate() {
-    const sourceFile = this.createSourceFile("./out/index.ts");
+    const sourceFile = this.createSourceFile("./out/index.d.ts");
 
     this.addHeader(sourceFile);
     sourceFile.addStatements([
