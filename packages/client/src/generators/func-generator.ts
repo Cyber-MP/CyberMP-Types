@@ -1,34 +1,54 @@
 import { BaseGenerator } from "./base-generator";
 import { uniqueBy } from "../utils/file-utils";
-import { getFunctionParams, resolveType } from "../utils/type-resolver";
-import { Project, SourceFile } from "ts-morph";
-import { funcs as globalFuncs } from "../../assets/globals.json";
+import {
+  MethodSignatureStructure,
+  OptionalKind,
+  Project,
+  SourceFile,
+} from "ts-morph";
+import globalFuncs from "../../assets/globals.json";
 import { Logger } from "../utils/logger";
 import { defsIndex } from "src/config/constants";
+import { RedFunctionAst } from "src/red-ast/red-function.ast";
+import { RedTypeAst } from "src/red-ast/red-type.ast";
+import { getFunctionParams, resolveType } from "src/utils/type-resolver";
 
 export class FuncGenerator extends BaseGenerator<[SourceFile]> {
-  private funcs: typeof globalFuncs;
+  private funcs: RedFunctionAst[];
 
   constructor(project: Project) {
     super(project);
 
-    const funcs = [...globalFuncs];
+    const functions: RedFunctionAst[] = globalFuncs.map((json) =>
+      RedFunctionAst.fromJson(json)
+    );
+
+    functions.sort(RedFunctionAst.sort);
 
     this.funcs = uniqueBy(
-      funcs.filter((o) => !o.shortName.includes(";")),
-      (m) => m.shortName
+      functions.filter((item) => {
+        return (
+          !item.name.startsWith("Operator") && !item.name.startsWith("Cast")
+        );
+      }),
+      (m) => m.name
     );
-    defsIndex.funcs = new Set<string>(this.funcs.map((o) => o.shortName));
+    defsIndex.funcs = new Set<string>([...this.funcs.map((o) => o.name)]);
   }
 
   generate(file: SourceFile) {
     file.addInterface({
       name: "MpFuncs",
-      methods: this.funcs.map((fn) => ({
-        name: `"${fn.shortName}"`,
-        returnType: resolveType(fn.return),
-        parameters: getFunctionParams(fn.params),
-        docs: (fn as any).docs,
+      methods: this.funcs.map<OptionalKind<MethodSignatureStructure>>((fn) => ({
+        name: `"${fn.name}"`,
+        returnType: resolveType({
+          type: fn.returnType ? RedTypeAst.toLuadoc(fn?.returnType) : "any",
+          rawType: false,
+        }),
+        parameters: getFunctionParams(fn.arguments),
+        // returnType: resolveType(fn.return),
+        // parameters: getFunctionParams(fn.params),
+        // docs: (fn as any).docs,
       })),
     });
 

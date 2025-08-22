@@ -13,6 +13,7 @@ type Uint16 = number;
 type Uint8 = number;
 type Int8 = number;
 type Int16 = number;
+type Int32 = number;
 type DataBuffer = any;
 type serializationDeferredDataBuffer = any;
 type SharedDataBuffer = any;

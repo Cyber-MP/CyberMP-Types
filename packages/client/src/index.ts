@@ -1,12 +1,12 @@
 import { Logger } from "./utils/logger";
 import { EnumGenerator } from "./generators/enum-generator";
-import { BitfieldGenerator } from "./generators/bitfield-generator";
-import { IndexGenerator } from "./generators/index-generator";
 import { defsIndex, project } from "./config/constants";
 import { unknownTypes } from "./utils/type-resolver";
 import { GenericGenerator } from "./generators/generic-generator";
 import { rimraf } from "rimraf";
 import fs from "fs";
+import { BitfieldGenerator } from "./generators/bitfield-generator";
+import { IndexGenerator } from "./generators/index-generator";
 
 const copyPrecomputedFiles = () => {
   fs.copyFileSync("./src/precomputed.d.ts", "./out/precomputed.d.ts");

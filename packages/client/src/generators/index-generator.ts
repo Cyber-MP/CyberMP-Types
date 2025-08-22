@@ -29,8 +29,8 @@ export class IndexGenerator extends BaseGenerator {
       `/// <reference path="./precomputed.d.ts" />`,
     ]);
 
-    this.classGenerator.generate(sourceFile);
     this.funcGenerator.generate(sourceFile);
+    this.classGenerator.generate(sourceFile);
 
     sourceFile.addInterface({
       name: "MpGame",

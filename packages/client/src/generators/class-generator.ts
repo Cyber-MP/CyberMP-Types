@@ -1,5 +1,4 @@
 import { BaseGenerator } from "./base-generator";
-import { readJsonFiles } from "../utils/file-utils";
 import {
   OptionalKind,
   ClassDeclarationStructure,
@@ -7,12 +6,17 @@ import {
   SourceFile,
   Project,
   Scope,
-  InterfaceDeclarationStructure,
-  MethodSignatureStructure,
+  PropertyDeclarationStructure,
+  MethodDeclarationStructure,
 } from "ts-morph";
-import { getFunctionParams, resolveType } from "../utils/type-resolver";
 import { Logger } from "../utils/logger";
 import { defsIndex } from "src/config/constants";
+import classes from "../../assets/classes.json";
+import { RedClassAst } from "src/red-ast/red-class.ast";
+import { RedPropertyAst } from "src/red-ast/red-property.ast";
+import { RedFunctionAst } from "src/red-ast/red-function.ast";
+import { getFunctionParams, resolveType } from "src/utils/type-resolver";
+import { RedTypeAst } from "src/red-ast/red-type.ast";
 
 enum RedFunctionFlags {
   isPrivate,
@@ -38,12 +42,20 @@ function getScopeFromFunctionFlags(flags: number): Scope {
 }
 
 export class ClassGenerator extends BaseGenerator<[SourceFile]> {
-  private classObjs: any[];
+  private classObjs: RedClassAst[];
 
   constructor(project: Project) {
     super(project);
 
-    this.classObjs = readJsonFiles<any>("./assets/classes");
+    const objects: RedClassAst[] = (classes as any[]).map(RedClassAst.fromJson);
+
+    objects.sort(RedClassAst.sort);
+    objects.forEach((object) => {
+      object.properties.sort(RedPropertyAst.sort);
+      object.functions.sort(RedFunctionAst.sort);
+    });
+
+    this.classObjs = objects;
     defsIndex.classes = new Set<string>(this.classObjs.map((o) => o.name));
   }
 
@@ -74,51 +86,56 @@ export class ClassGenerator extends BaseGenerator<[SourceFile]> {
       this.classObjs.map((o) => [o.name, o])
     );
 
-    const shortInterfaces = this.classObjs.map<
-      OptionalKind<InterfaceDeclarationStructure>
-    >((obj) => {
-      const funcs: any[] = obj.funcs ?? [];
-      const propsList: any[] = obj.props ?? [];
+    const classes = this.classObjs.map<OptionalKind<ClassDeclarationStructure>>(
+      (obj) => {
+        const funcs: RedFunctionAst[] = obj.functions ?? [];
+        const propsList: RedPropertyAst[] = obj.properties ?? [];
 
-      // method names set
-      const methodNames = new Set<string>(
-        funcs.map((f) => String(f.shortName))
-      );
+        // method names set
+        const methodNames = new Set<string>(funcs.map((f) => String(f.name)));
 
-      // filter out properties that collide with method names (delete duplicates)
-      const filteredProps = propsList.filter((p) => {
-        const propName = String(p.name);
-        if (methodNames.has(propName)) {
-          // removed because method with same name exists
-          return false;
-        }
-        return true;
-      });
+        // filter out properties that collide with method names (delete duplicates)
+        const filteredProps = propsList.filter((p) => {
+          const propName = String(p.name);
+          if (methodNames.has(propName)) {
+            // removed because method with same name exists
+            return false;
+          }
+          return true;
+        });
 
-      const properties: OptionalKind<PropertySignatureStructure>[] =
-        filteredProps.map((p: any) => ({
-          name: `"${p.name}"`,
-          type: resolveType(p),
-        }));
+        const properties: OptionalKind<PropertyDeclarationStructure>[] =
+          filteredProps.map((p) => ({
+            name: `"${p.name}"`,
+            type: resolveType({
+              type: RedTypeAst.toLuadoc(p.type),
+              rawType: false,
+            }),
+          }));
 
-      const methods: OptionalKind<MethodSignatureStructure>[] = funcs.map(
-        (fn: any) => ({
-          name: `"${fn.shortName}"`,
-          returnType: resolveType(fn.return),
-          parameters: getFunctionParams(fn.params),
-        })
-      );
+        const methods: OptionalKind<MethodDeclarationStructure>[] = funcs.map(
+          (fn) => ({
+            name: `"${fn.name}"`,
+            returnType: resolveType({
+              type: fn.returnType ? RedTypeAst.toLuadoc(fn?.returnType) : "any",
+              rawType: false,
+            }),
+            parameters: getFunctionParams(fn.arguments),
+            isStatic: fn.isStatic,
+            // returnType: resolveType(fn.return),
+            // parameters: getFunctionParams(fn.params),
+          })
+        );
 
-      const extendsArr = obj.parent ? [obj.parent] : undefined;
-
-      return {
-        name: obj.name,
-        extends: extendsArr,
-        hasDeclareKeyword: true,
-        properties,
-        methods,
-      };
-    });
+        return {
+          name: obj.name,
+          extends: obj.parent,
+          hasDeclareKeyword: true,
+          properties,
+          methods,
+        };
+      }
+    );
 
     this.addHeader(sourceFile);
     sourceFile.addStatements([
@@ -126,7 +143,7 @@ export class ClassGenerator extends BaseGenerator<[SourceFile]> {
       `/// <reference path="./enums.d.ts" />`,
       `/// <reference path="./bitfields.d.ts" />`,
     ]);
-    sourceFile.addInterfaces(shortInterfaces);
+    sourceFile.addClasses(classes);
     sourceFile.saveSync();
 
     file.addInterface({
@@ -135,9 +152,7 @@ export class ClassGenerator extends BaseGenerator<[SourceFile]> {
         (obj) => ({
           name: obj.name,
           type:
-            obj.parent === "gameIGameSystem"
-              ? obj.name
-              : `{ new(): ${obj.name} }`,
+            obj.parent === "gameIGameSystem" ? obj.name : `typeof ${obj.name}`,
         })
       ),
     });

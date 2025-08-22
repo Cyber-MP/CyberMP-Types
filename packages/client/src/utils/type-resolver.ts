@@ -1,4 +1,7 @@
+import { RedFunctionAst } from "src/red-ast/red-function.ast";
 import { defsIndex, DOTNET_CPP_MAP, blacklist } from "../config/constants";
+import { RedTypeAst } from "src/red-ast/red-type.ast";
+import { OptionalKind, ParameterDeclarationStructure } from "ts-morph";
 
 export const unknownTypes: string[] = [];
 export function resolveType(obj: { type: string; rawType?: boolean }): string {
@@ -117,15 +120,18 @@ export function resolveType(obj: { type: string; rawType?: boolean }): string {
   return t || "any";
 }
 
-export function getFunctionParams(params: any[]) {
+export function getFunctionParams(
+  params: RedFunctionAst["arguments"]
+): OptionalKind<ParameterDeclarationStructure>[] {
   if (!params || !params.length) {
     return [];
   }
 
   return params
-    ?.filter((o: any) => o.type !== "ScriptGameInstance")
-    .map((p: any) => ({
+    ?.filter((o) => RedTypeAst.toLuadoc(o.type) !== "ScriptGameInstance")
+    .map((p) => ({
       name: blacklist.includes(p.name) ? `${p.name}1` : p.name,
-      type: resolveType(p),
+      type: resolveType({ type: RedTypeAst.toLuadoc(p.type) }),
+      hasQuestionToken: p.isOptional,
     }));
 }

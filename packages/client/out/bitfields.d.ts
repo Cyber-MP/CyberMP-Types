@@ -1,10 +1,5 @@
 // THIS CODE IS GENERATED, PLEASE DO NOT EDIT THIS
 declare namespace CyberEnums.BitFields {
-    declare const enum animMuteAnimEvents {
-      "STANDARD" = 1,
-      "FACE_ANIMS" = 2,
-    }
-
     declare const enum CensorshipFlags {
       "Censor_Nudity" = 1,
       "Censor_OverSexualised" = 2,
@@ -38,6 +33,53 @@ declare namespace CyberEnums.BitFields {
       "MCR_IsRayTracedEmissive" = 256,
       "MCR_PrefabProxy" = 2048,
       "MCR_Cascades" = 4096,
+    }
+
+    declare const enum ETextureChannel {
+      "TextureChannel_R" = 1,
+      "TextureChannel_G" = 2,
+      "TextureChannel_B" = 4,
+      "TextureChannel_A" = 8,
+    }
+
+    declare const enum RenderSceneLayerMask {
+      "Default" = 1,
+      "Cyberspace" = 2,
+      "WorldMap" = 4,
+    }
+
+    declare const enum TriggerChannel {
+      "TC_Default" = 1,
+      "TC_Player" = 2,
+      "TC_Camera" = 4,
+      "TC_Human" = 8,
+      "TC_SoundReverbArea" = 16,
+      "TC_SoundAmbientArea" = 32,
+      "TC_Quest" = 64,
+      "TC_Projectiles" = 128,
+      "TC_Vehicle" = 256,
+      "TC_Environment" = 512,
+      "TC_WaterNullArea" = 1024,
+      "TC_Custom0" = 65536,
+      "TC_Custom1" = 131072,
+      "TC_Custom2" = 262144,
+      "TC_Custom3" = 524288,
+      "TC_Custom4" = 1048576,
+      "TC_Custom5" = 2097152,
+      "TC_Custom6" = 4194304,
+      "TC_Custom7" = 8388608,
+      "TC_Custom8" = 16777216,
+      "TC_Custom9" = 33554432,
+      "TC_Custom10" = 67108864,
+      "TC_Custom11" = 134217728,
+      "TC_Custom12" = 268435456,
+      "TC_Custom13" = 536870912,
+      "TC_Custom14" = 1073741824,
+    }
+
+    declare const enum animMuteAnimEvents {
+      "STANDARD" = 1,
+      "FACE_ANIMS" = 2,
     }
 
     declare const enum entdismembermentGoreTypeE {
@@ -76,13 +118,6 @@ declare namespace CyberEnums.BitFields {
       "CLEAN" = 1,
       "COARSE" = 2,
       "HOLE" = 64,
-    }
-
-    declare const enum ETextureChannel {
-      "TextureChannel_R" = 1,
-      "TextureChannel_G" = 2,
-      "TextureChannel_B" = 4,
-      "TextureChannel_A" = 8,
     }
 
     declare const enum gameEItemDynamicTags {
@@ -184,12 +219,6 @@ declare namespace CyberEnums.BitFields {
       "BODY" = 8192,
     }
 
-    declare const enum RenderSceneLayerMask {
-      "Default" = 1,
-      "Cyberspace" = 2,
-      "WorldMap" = 4,
-    }
-
     declare const enum rendLightChannel {
       "LC_Channel1" = 1,
       "LC_Channel2" = 2,
@@ -208,35 +237,6 @@ declare namespace CyberEnums.BitFields {
     declare const enum scnChoiceNodeNsChoiceNodeBitFlags {
       "IsFocusClue" = 1,
       "IsValidInteractionFailsafeDisabled" = 2,
-    }
-
-    declare const enum TriggerChannel {
-      "TC_Default" = 1,
-      "TC_Player" = 2,
-      "TC_Camera" = 4,
-      "TC_Human" = 8,
-      "TC_SoundReverbArea" = 16,
-      "TC_SoundAmbientArea" = 32,
-      "TC_Quest" = 64,
-      "TC_Projectiles" = 128,
-      "TC_Vehicle" = 256,
-      "TC_Environment" = 512,
-      "TC_WaterNullArea" = 1024,
-      "TC_Custom0" = 65536,
-      "TC_Custom1" = 131072,
-      "TC_Custom2" = 262144,
-      "TC_Custom3" = 524288,
-      "TC_Custom4" = 1048576,
-      "TC_Custom5" = 2097152,
-      "TC_Custom6" = 4194304,
-      "TC_Custom7" = 8388608,
-      "TC_Custom8" = 16777216,
-      "TC_Custom9" = 33554432,
-      "TC_Custom10" = 67108864,
-      "TC_Custom11" = 134217728,
-      "TC_Custom12" = 268435456,
-      "TC_Custom13" = 536870912,
-      "TC_Custom14" = 1073741824,
     }
 
     declare const enum workWorkspotItemPolicy {

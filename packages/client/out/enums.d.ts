@@ -4,71 +4,6 @@ declare namespace CyberEnums {
 
     }
 
-    declare const enum ActiveBaseContext {
-      "None" = 0,
-      "Locomotion" = 1,
-      "Ladder" = 2,
-      "Swimming" = 3,
-      "BodyCarring" = 4,
-      "MeleeWeapon" = 5,
-      "RangedWeapon" = 6,
-      "BodyCarringWithRangedWeapon" = 7,
-    }
-
-    declare const enum ActiveMode {
-      "UNINITIALIZED" = 0,
-      "CLEAR" = 1,
-      "SEMI" = 2,
-      "COMBAT" = 3,
-      "FOCUS" = 4,
-    }
-
-    declare const enum ActorVisibilityStatus {
-      "OUTSIDE_CAMERA" = 0,
-      "IN_CAMERA" = 1,
-      "VISIBLE" = 2,
-      "LOOKEDAT" = 3,
-    }
-
-    declare const enum AdvertisementFormat {
-      "Format_0_7x1" = 0,
-      "Format_1x1" = 1,
-      "Format_1x0_7" = 2,
-      "Format_1x1_5" = 3,
-      "Format_1x2" = 4,
-      "Format_1x3_3" = 5,
-      "Format_1_5x1" = 6,
-      "Format_2x1" = 7,
-      "Format_3_3x1" = 8,
-      "Format_3x4" = 9,
-      "Format_4x3" = 10,
-      "Format_9x16" = 11,
-      "Format_9x21" = 12,
-      "Format_16x9" = 13,
-      "Format_21x9" = 14,
-      "Format_a" = 15,
-      "Format_b" = 16,
-      "Format_c" = 17,
-      "Format_d" = 18,
-      "Format_e" = 19,
-      "Format_f" = 20,
-      "Format_i" = 21,
-      "Format_o" = 22,
-      "Format_k" = 23,
-    }
-
-    declare const enum AdvertisementLoadMode {
-      "TweakDB" = 0,
-      "Override" = 1,
-    }
-
-    declare const enum AIactionParamsPackageTypes {
-      "Default" = 0,
-      "Reaction" = 1,
-      "StatusEffect" = 2,
-      "Undefined" = 3,
-    }
-
     declare const enum AIArgumentType {
       "Bool" = 0,
       "Int" = 1,
@@ -84,115 +19,6 @@ declare namespace CyberEnums {
       "PuppetRef" = 11,
       "Serializable" = 12,
       "TweakDBID" = 13,
-    }
-
-    declare const enum AIbehaviorActivationStatus {
-      "NOT_ACTIVATED" = 0,
-      "ACTIVATING" = 1,
-      "ACTIVATED" = 2,
-      "DEACTIVATING" = 3,
-    }
-
-    declare const enum AIbehaviorCombatModes {
-      "Default" = 0,
-      "LowFPS" = 1,
-      "Background" = 2,
-    }
-
-    declare const enum AIbehaviorCompletionStatus {
-      "FAILURE" = 0,
-      "SUCCESS" = 1,
-    }
-
-    declare const enum AIbehaviorConditionOutcomes {
-      "True" = 0,
-      "False" = 1,
-      "Failure" = 2,
-    }
-
-    declare const enum AIbehaviorDebugNodeStatus {
-      "Undefined" = 0,
-      "NotRunning" = 1,
-      "ForceStopped" = 2,
-      "Running" = 3,
-      "Success" = 4,
-      "Failure" = 5,
-    }
-
-    declare const enum AIbehaviorEdgeConditionAction {
-      "None" = 0,
-      "Toggle" = 1,
-      "TurnOn" = 2,
-      "TurnOff" = 3,
-    }
-
-    declare const enum AIbehaviorEntityLODConditions {
-      "Crowd" = 0,
-      "Cinematic" = 1,
-      "WorkspotStatic" = 2,
-    }
-
-    declare const enum AIbehaviorMaybeNodeAction {
-      "Succeed" = 0,
-      "Fail" = 1,
-      "RepeatChild" = 2,
-    }
-
-    declare const enum AIbehaviorMovementPolicyTaskFunctions {
-      "SetMovementType" = 0,
-      "SetTargetObject" = 1,
-      "UseFollowSlots" = 2,
-      "SetLocalTargetOffset" = 3,
-      "SetIgnoreNavigation" = 4,
-      "SetStrafingTarget" = 5,
-    }
-
-    declare const enum AIbehaviorNaryExpressionOperators {
-      "LogicalAnd" = 0,
-      "LogicalOr" = 1,
-    }
-
-    declare const enum AIbehaviorParallelNodeChildState {
-      "Inactive" = 0,
-      "Active" = 1,
-      "Completed" = 2,
-    }
-
-    declare const enum AIbehaviorParallelNodeWaitFor {
-      "LeftChild" = 0,
-      "RightChild" = 1,
-      "AllChildren" = 2,
-      "BothChildren" = 2,
-      "AnyChild" = 3,
-    }
-
-    declare const enum AIbehaviorSignalConditionModes {
-      "CurrentValue" = 0,
-      "StartOfFrameValue" = 1,
-      "RisingEdge" = 2,
-      "FallingEdge" = 3,
-      "AnyEdge" = 4,
-    }
-
-    declare const enum AIbehaviorStateCompletionStatus {
-      "ForwardBehaviorStatus" = 0,
-      "Failure" = 1,
-      "Success" = 2,
-    }
-
-    declare const enum AIbehaviorStoryActionType {
-      "Setup" = 0,
-      "Stop" = 1,
-    }
-
-    declare const enum AIbehaviorSystemVariableExpressionTypes {
-      "IsFPSLow" = 0,
-    }
-
-    declare const enum AIbehaviorUpdateOutcome {
-      "IN_PROGRESS" = 0,
-      "SUCCESS" = 1,
-      "FAILURE" = 2,
     }
 
     declare const enum AICombatSectorType {
@@ -309,51 +135,10 @@ declare namespace CyberEnums {
       "AboveDeath" = 3,
     }
 
-    declare const enum AIinfluenceEBumpPolicy {
-      "Static" = 0,
-      "Lean" = 1,
-      "Move" = 2,
-    }
-
     declare const enum AIIWorkspotManagerSpotUsageState {
       "Reserved" = 0,
       "Occupied" = 1,
       "None" = 2,
-    }
-
-    declare const enum AimAssistSettingConfig {
-      "Default" = 0,
-      "Scanning" = 1,
-      "LeftHandCyberwareCharge" = 2,
-      "LeftHandCyberware" = 3,
-      "MeleeCombat" = 4,
-      "MeleeCombatIdle" = 5,
-      "AimingLimbCyber" = 6,
-      "AimingLimbCyberZoomLevel1" = 7,
-      "AimingLimbCyberZoomLevel2" = 8,
-      "Aiming" = 9,
-      "QuickMelee" = 10,
-      "VehicleCombat" = 11,
-      "Sprinting" = 12,
-      "LimbCyber" = 13,
-      "Vehicle" = 14,
-      "DriverCombat" = 15,
-      "DriverCombatAiming" = 16,
-      "DriverCombatTPP" = 17,
-      "DriverCombatMissiles" = 18,
-      "DriverCombatMissilesAiming" = 19,
-      "DriverCombatMeleeTPP" = 20,
-      "ZoomLevel1" = 21,
-      "ZoomLevel2" = 22,
-      "Exhausted" = 23,
-      "Off" = 24,
-      "Count" = 25,
-    }
-
-    declare const enum aimTypeEnum {
-      "AimIn" = 0,
-      "AimOut" = 1,
-      "Invalid" = 2,
     }
 
     declare const enum AIParameterizationType {
@@ -424,668 +209,218 @@ declare namespace CyberEnums {
       "Count" = 4,
     }
 
-    declare const enum animAimState {
-      "Unaimed" = 0,
-      "Aimed" = 1,
+    declare const enum AIactionParamsPackageTypes {
+      "Default" = 0,
+      "Reaction" = 1,
+      "StatusEffect" = 2,
+      "Undefined" = 3,
     }
 
-    declare const enum animAnimationType {
-      "Normal" = 0,
-      "AdditiveFromRefPose" = 1,
-      "AdditiveFromFirstFrame" = 2,
-      "Additive" = 3,
-      "AdditiveWithoutFirstFrame" = 4,
+    declare const enum AIbehaviorActivationStatus {
+      "NOT_ACTIVATED" = 0,
+      "ACTIVATING" = 1,
+      "ACTIVATED" = 2,
+      "DEACTIVATING" = 3,
     }
 
-    declare const enum animAnimEventGenderAlt {
+    declare const enum AIbehaviorCombatModes {
+      "Default" = 0,
+      "LowFPS" = 1,
+      "Background" = 2,
+    }
+
+    declare const enum AIbehaviorCompletionStatus {
+      "FAILURE" = 0,
+      "SUCCESS" = 1,
+    }
+
+    declare const enum AIbehaviorConditionOutcomes {
+      "True" = 0,
+      "False" = 1,
+      "Failure" = 2,
+    }
+
+    declare const enum AIbehaviorDebugNodeStatus {
+      "Undefined" = 0,
+      "NotRunning" = 1,
+      "ForceStopped" = 2,
+      "Running" = 3,
+      "Success" = 4,
+      "Failure" = 5,
+    }
+
+    declare const enum AIbehaviorEdgeConditionAction {
       "None" = 0,
-      "Female" = 1,
-      "Male" = 2,
+      "Toggle" = 1,
+      "TurnOn" = 2,
+      "TurnOff" = 3,
     }
 
-    declare const enum animAnimNode_SetDrivenKey_InternalsEChannelType {
-      "FloatTrack" = 0,
-      "TransX" = 1,
-      "TransY" = 2,
-      "TransZ" = 3,
-      "RotEulZ_Pitch" = 4,
-      "RotEulX_Roll" = 5,
-      "RotEulY_Yaw" = 6,
-      "ScaleX" = 7,
-      "ScaleY" = 8,
-      "ScaleZ" = 9,
-      "RotQuatX" = 10,
-      "RotQuatY" = 11,
-      "RotQuatZ" = 12,
-      "RotQuatW" = 13,
+    declare const enum AIbehaviorEntityLODConditions {
+      "Crowd" = 0,
+      "Cinematic" = 1,
+      "WorkspotStatic" = 2,
     }
 
-    declare const enum animAnimStateInterpolationType {
-      "Linear" = 0,
-      "EaseIn" = 1,
-      "EaseOut" = 2,
-      "EaseInOut" = 3,
+    declare const enum AIbehaviorMaybeNodeAction {
+      "Succeed" = 0,
+      "Fail" = 1,
+      "RepeatChild" = 2,
     }
 
-    declare const enum animAxis {
-      "X" = 0,
-      "Y" = 1,
-      "Z" = 2,
-      "NegativeX" = 3,
-      "NegativeY" = 4,
-      "NegativeZ" = 5,
+    declare const enum AIbehaviorMovementPolicyTaskFunctions {
+      "SetMovementType" = 0,
+      "SetTargetObject" = 1,
+      "UseFollowSlots" = 2,
+      "SetLocalTargetOffset" = 3,
+      "SetIgnoreNavigation" = 4,
+      "SetStrafingTarget" = 5,
     }
 
-    declare const enum animClampType {
-      "None" = 0,
-      "Clamp" = 1,
-      "WrappedClamp" = 2,
+    declare const enum AIbehaviorNaryExpressionOperators {
+      "LogicalAnd" = 0,
+      "LogicalOr" = 1,
     }
 
-    declare const enum animCompareFunc {
-      "Equal" = 0,
-      "NotEqual" = 1,
-      "Less" = 2,
-      "LessEqual" = 3,
-      "Greater" = 4,
-      "GreaterEqual" = 5,
+    declare const enum AIbehaviorParallelNodeChildState {
+      "Inactive" = 0,
+      "Active" = 1,
+      "Completed" = 2,
     }
 
-    declare const enum animcompressionBufferTypePreset {
-      "Spline" = 0,
-      "SIMD" = 1,
-      "TestRaw" = 2,
+    declare const enum AIbehaviorParallelNodeWaitFor {
+      "LeftChild" = 0,
+      "RightChild" = 1,
+      "AllChildren" = 2,
+      "BothChildren" = 2,
+      "AnyChild" = 3,
     }
 
-    declare const enum animcompressionFrameratePreset {
-      "USE_30_HZ" = 0,
-      "USE_15_HZ" = 1,
-      "USE_10_HZ" = 2,
+    declare const enum AIbehaviorSignalConditionModes {
+      "CurrentValue" = 0,
+      "StartOfFrameValue" = 1,
+      "RisingEdge" = 2,
+      "FallingEdge" = 3,
+      "AnyEdge" = 4,
     }
 
-    declare const enum animcompressionQualityPreset {
-      "CINEMATIC_HIGH" = 3,
-      "HIGH" = 0,
-      "MID" = 1,
-      "LOW" = 2,
+    declare const enum AIbehaviorStateCompletionStatus {
+      "ForwardBehaviorStatus" = 0,
+      "Failure" = 1,
+      "Success" = 2,
     }
 
-    declare const enum animConstraintWeightMode {
+    declare const enum AIbehaviorStoryActionType {
+      "Setup" = 0,
+      "Stop" = 1,
+    }
+
+    declare const enum AIbehaviorSystemVariableExpressionTypes {
+      "IsFPSLow" = 0,
+    }
+
+    declare const enum AIbehaviorUpdateOutcome {
+      "IN_PROGRESS" = 0,
+      "SUCCESS" = 1,
+      "FAILURE" = 2,
+    }
+
+    declare const enum AIinfluenceEBumpPolicy {
       "Static" = 0,
-      "FloatTrack" = 1,
+      "Lean" = 1,
+      "Move" = 2,
     }
 
-    declare const enum animCoverAction {
-      "NoAction" = 0,
-      "LeanLeft" = 1,
-      "LeanRight" = 2,
-      "StepOutLeft" = 3,
-      "StepOutRight" = 4,
-      "LeanOver" = 5,
-      "StepUp" = 6,
-      "EnterCover" = 7,
-      "SlideTo" = 8,
-      "Vault" = 9,
-      "LeaveCover" = 10,
-      "BlindfireLeft" = 11,
-      "BlindfireRight" = 12,
-      "BlindfireOver" = 13,
-      "OverheadStepOutLeft" = 14,
-      "OverheadStepOutRight" = 15,
-      "OverheadStepUp" = 16,
+    declare const enum ATUIComputerTestStepMode {
+      "SINGLE_ACTION" = 0,
+      "ROLLING" = 1,
     }
 
-    declare const enum animCoverBehavior {
-      "Idle" = 0,
-      "PreAction" = 1,
-      "DoAction" = 2,
-      "PostAction" = 3,
-    }
-
-    declare const enum animCoverStance {
+    declare const enum ActiveBaseContext {
       "None" = 0,
-      "LowLeft" = 1,
-      "HighLeft" = 2,
-      "LowRight" = 3,
-      "HighRight" = 4,
+      "Locomotion" = 1,
+      "Ladder" = 2,
+      "Swimming" = 3,
+      "BodyCarring" = 4,
+      "MeleeWeapon" = 5,
+      "RangedWeapon" = 6,
+      "BodyCarringWithRangedWeapon" = 7,
     }
 
-    declare const enum animCoverState {
-      "LowCover" = 1,
-      "HighCover" = 2,
+    declare const enum ActiveMode {
+      "UNINITIALIZED" = 0,
+      "CLEAR" = 1,
+      "SEMI" = 2,
+      "COMBAT" = 3,
+      "FOCUS" = 4,
     }
 
-    declare const enum animDyngConstraintLinkType {
-      "KeepFixedDistance" = 0,
-      "KeepVariableDistance" = 1,
-      "Greater" = 2,
-      "Closer" = 3,
+    declare const enum ActorVisibilityStatus {
+      "OUTSIDE_CAMERA" = 0,
+      "IN_CAMERA" = 1,
+      "VISIBLE" = 2,
+      "LOOKEDAT" = 3,
     }
 
-    declare const enum animDyngParticleProjectionType {
-      "Disabled" = 0,
-      "ShortestPath" = 1,
-      "Directed" = 2,
+    declare const enum AdvertisementFormat {
+      "Format_0_7x1" = 0,
+      "Format_1x1" = 1,
+      "Format_1x0_7" = 2,
+      "Format_1x1_5" = 3,
+      "Format_1x2" = 4,
+      "Format_1x3_3" = 5,
+      "Format_1_5x1" = 6,
+      "Format_2x1" = 7,
+      "Format_3_3x1" = 8,
+      "Format_3x4" = 9,
+      "Format_4x3" = 10,
+      "Format_9x16" = 11,
+      "Format_9x21" = 12,
+      "Format_16x9" = 13,
+      "Format_21x9" = 14,
+      "Format_a" = 15,
+      "Format_b" = 16,
+      "Format_c" = 17,
+      "Format_d" = 18,
+      "Format_e" = 19,
+      "Format_f" = 20,
+      "Format_i" = 21,
+      "Format_o" = 22,
+      "Format_k" = 23,
     }
 
-    declare const enum animEAnimGraphAdditiveType {
-      "AGAT_Local" = 0,
-      "AGAT_Ref" = 1,
+    declare const enum AdvertisementLoadMode {
+      "TweakDB" = 0,
+      "Override" = 1,
     }
 
-    declare const enum animEAnimGraphCompareFunc {
-      "AGCF_Equal" = 0,
-      "AGCF_NotEqual" = 1,
-      "AGCF_Less" = 2,
-      "AGCF_LessEqual" = 3,
-      "AGCF_Greater" = 4,
-      "AGCF_GreaterEqual" = 5,
-    }
-
-    declare const enum animEAnimGraphLogicOp {
-      "AGLO_Or" = 0,
-      "AGLO_And" = 1,
-    }
-
-    declare const enum animEAnimGraphMathInterpolation {
-      "AGMI_LINEAR" = 0,
-      "AGMI_SIN" = 1,
-      "AGMI_BEZIER" = 2,
-    }
-
-    declare const enum animEAnimGraphMathOp {
-      "AGMO_Add" = 0,
-      "AGMO_Subtract" = 1,
-      "AGMO_Multiply" = 2,
-      "AGMO_Divide" = 3,
-      "AGMO_SafeDivide" = 4,
-      "AGMO_ATan" = 5,
-      "AGMO_AngleDiff" = 6,
-      "AGMO_Length" = 7,
-      "AGMO_Abs" = 8,
-    }
-
-    declare const enum animEBlendFromPoseMode {
-      "BFPM_AlwaysOnActivation" = 0,
-      "BFPM_RequestedByTag" = 1,
-    }
-
-    declare const enum animEBlendTracksMode {
-      "AGBT_BasePose" = 0,
-      "AGBT_Interpolate" = 1,
-      "AGBT_Add" = 2,
-    }
-
-    declare const enum animEBlendTypeLBC {
-      "Linear" = 0,
-      "Smoothstep" = 1,
-      "CustomCurve" = 2,
-    }
-
-    declare const enum animEDirectionToEuler {
-      "Pitch" = 0,
-      "Yaw" = 1,
-      "Roll" = 2,
-    }
-
-    declare const enum animEFootPhase {
-      "RightUp" = 0,
-      "RightForward" = 1,
-      "LeftUp" = 2,
-      "LeftForward" = 3,
-      "NotConsidered" = 4,
-    }
-
-    declare const enum animEInterpolationType {
-      "Lerp" = 0,
-      "Slerp" = 1,
-    }
-
-    declare const enum animEMotionExtractionCompressionType {
-      "EMECT_LINEAR" = 6,
-      "EMECT_SPLINE_LOW" = 4,
-      "EMECT_SPLINE_MID" = 2,
-      "EMECT_SPLINE_HIGH" = 5,
-      "EMECT_UNCOMPRESSED" = 0,
-      "EMECT_UNCOMPRESSED_ALL_ANGLES" = 3,
-      "EMECT_UNCOMPRESSED_2D" = 7,
-      "EMECT_UNCOMPRESSED_3D_FALLBACKING" = 8,
-      "EMECT_UNCOMPRESSED_ALL_ANGLES_FALLBACKING" = 9,
-    }
-
-    declare const enum animEResetTypeNode {
-      "RT_Reference" = 0,
-      "RT_Indentity" = 1,
-    }
-
-    declare const enum animESpace {
-      "Local" = 0,
-      "Model" = 1,
-      "World" = 2,
-    }
-
-    declare const enum animESpaceMW {
-      "Model" = 0,
-      "World" = 1,
-    }
-
-    declare const enum animETransformAxis {
-      "X_Axis" = 1,
-      "Y_Axis" = 2,
-      "Z_Axis" = 4,
-    }
-
-    declare const enum animEVectorWsToMsType {
-      "Position" = 0,
-      "Direction" = 1,
-    }
-
-    declare const enum animEventFilterType {
+    declare const enum AimAssistSettingConfig {
       "Default" = 0,
-      "AlwaysCollect" = 1,
-      "Solo" = 2,
-      "Mute" = 3,
-    }
-
-    declare const enum animEventSide {
-      "Left" = 0,
-      "Right" = 1,
-    }
-
-    declare const enum animFacialEmotionTransitionType {
-      "Natural" = 0,
-      "Fast" = 1,
-      "Blend" = 2,
-      "Instant" = 3,
-      "Custom" = 4,
-    }
-
-    declare const enum animFloatTrackOperationType {
-      "Override" = 0,
-      "Multiply" = 1,
-      "Add" = 2,
-      "Subtract" = 3,
-      "SubtractSwapped" = 4,
-      "WeightComplement" = 5,
-    }
-
-    declare const enum animHitReactionType {
-      "None" = 0,
-      "Twitch" = 1,
-      "Impact" = 2,
-      "Stagger" = 3,
-      "Pain" = 4,
-      "Knockdown" = 5,
-      "Ragdoll" = 6,
-      "Death" = 7,
-      "Block" = 8,
-      "GuardBreak" = 9,
-      "Parry" = 10,
-      "Bump" = 11,
-    }
-
-    declare const enum animLeg {
-      "Left" = 0,
-      "Right" = 1,
-    }
-
-    declare const enum animLocomotionDecision {
-      "LD_None" = 0,
-      "LD_Stop" = 1,
-      "LD_MoveTo" = 2,
-      "LD_Move" = 3,
-    }
-
-    declare const enum animLocomotion_AnimType {
-      "None" = 0,
-      "idle_stand" = 1,
-      "idle_to_idle_0" = 2,
-      "idle_to_idle_090" = 3,
-      "idle_to_idle_270" = 4,
-      "idle_to_idle_180_l" = 5,
-      "idle_to_idle_180_r" = 6,
-      "walk_0" = 7,
-      "walk_left" = 8,
-      "walk_right" = 9,
-      "jog_0" = 10,
-      "jog_left" = 11,
-      "jog_right" = 12,
-      "sprint_0" = 13,
-      "sprint_left" = 14,
-      "sprint_right" = 15,
-      "idle_to_walk_0" = 16,
-      "idle_to_jog_0" = 17,
-      "idle_to_sprint_0" = 18,
-      "walk_to_idle_0" = 19,
-      "jog_to_idle_0" = 20,
-      "sprint_to_idle_0" = 21,
-      "walk_to_idle_0_l_hard" = 22,
-      "walk_to_idle_0_r_hard" = 23,
-      "jog_to_idle_0_l_hard" = 24,
-      "jog_to_idle_0_r_hard" = 25,
-      "sprint_to_idle_0_l_hard" = 26,
-      "sprint_to_idle_0_r_hard" = 27,
-      "walk_to_jog_0" = 28,
-      "walk_to_sprint_0" = 29,
-      "jog_to_walk_0" = 30,
-      "jog_to_sprint_0" = 31,
-      "sprint_to_walk_0" = 32,
-      "sprint_to_jog_0" = 33,
-      "idle_turn_to_walk_090" = 34,
-      "idle_turn_to_walk_180_l" = 35,
-      "idle_turn_to_walk_180_r" = 36,
-      "idle_turn_to_walk_270" = 37,
-      "idle_turn_to_jog_090" = 38,
-      "idle_turn_to_jog_180_l" = 39,
-      "idle_turn_to_jog_180_r" = 40,
-      "idle_turn_to_jog_270" = 41,
-      "idle_turn_to_sprint_090" = 42,
-      "idle_turn_to_sprint_180_l" = 43,
-      "idle_turn_to_sprint_180_r" = 44,
-      "idle_turn_to_sprint_270" = 45,
-      "walk_180" = 46,
-      "jog_180" = 47,
-      "walk_0_to_walk_180_l" = 48,
-      "walk_0_to_walk_180_r" = 49,
-      "walk_180_to_walk_0_l" = 50,
-      "walk_180_to_walk_0_r" = 51,
-      "idle_to_walk_180" = 52,
-      "idle_to_jog_180" = 53,
-      "walk_to_idle_180" = 54,
-      "jog_to_idle_180" = 55,
-      "jog_0_to_jog_180_l" = 56,
-      "jog_0_to_jog_180_r" = 57,
-      "jog_180_to_jog_0_l" = 58,
-      "jog_180_to_jog_0_r" = 59,
-      "jog_to_sprint_180" = 60,
-      "walk_to_jog_180" = 61,
-      "jog_to_walk_180" = 62,
-      "idle_to_walk_090" = 63,
-      "idle_to_walk_270" = 64,
-      "walk_090" = 65,
-      "walk_270" = 66,
-      "walk_to_idle_090" = 67,
-      "walk_to_idle_270" = 68,
-      "walk_0_to_walk_090" = 69,
-      "walk_0_to_walk_270" = 70,
-      "walk_180_to_walk_090" = 71,
-      "walk_180_to_walk_270" = 72,
-      "walk_090_to_walk_0" = 73,
-      "walk_270_to_walk_0" = 74,
-      "walk_090_to_walk_180" = 75,
-      "walk_270_to_walk_180" = 76,
-      "walk_090_to_walk_270_l" = 77,
-      "walk_090_to_walk_270_r" = 78,
-      "walk_270_to_walk_090_l" = 79,
-      "walk_270_to_walk_090_r" = 80,
-      "walk_0_down_stairs" = 81,
-      "walk_0_up_stairs" = 82,
-      "walk_0_down_slope" = 83,
-      "walk_0_up_slope" = 84,
-      "jog_0_down_stairs" = 85,
-      "jog_0_up_stairs" = 86,
-      "jog_0_down_slope" = 87,
-      "jog_0_up_slope" = 88,
-      "sprint_0_down_stairs" = 89,
-      "sprint_0_up_stairs" = 90,
-      "sprint_0_down_slope" = 91,
-      "sprint_0_up_slope" = 92,
-      "walk_090_up_stairs" = 93,
-      "walk_090_down_stairs" = 94,
-      "walk_270_up_stairs" = 95,
-      "walk_270_down_stairs" = 96,
-      "walk_180_up_stairs" = 97,
-      "walk_180_down_stairs" = 98,
-      "idle_step_single_0" = 99,
-      "idle_step_single_090" = 100,
-      "idle_step_single_180" = 101,
-      "idle_step_single_270" = 102,
-    }
-
-    declare const enum animLocomotion_Style {
-      "LS_Idle" = 0,
-      "LS_Rotation" = 1,
-      "LS_Walk" = 2,
-      "LS_Jog" = 3,
-      "LS_Sprint" = 4,
-      "LS_Any" = 5,
-    }
-
-    declare const enum animLocoStateType {
-      "LS_Pre" = 0,
-      "LS_Loop" = 1,
-    }
-
-    declare const enum animLookAtChestMode {
-      "Default" = 0,
-      "NoHips" = 1,
-      "Horizontal" = 2,
-      "HorizontalNoHips" = 3,
-      "ENUM_SIZE" = 4,
-    }
-
-    declare const enum animLookAtEyesMode {
-      "Default" = 0,
-      "Horizontal" = 1,
-      "ENUM_SIZE" = 2,
-    }
-
-    declare const enum animLookAtHeadMode {
-      "Default" = 0,
-      "Horizontal" = 1,
-      "ENUM_SIZE" = 2,
-    }
-
-    declare const enum animLookAtLeftHandedMode {
-      "Default" = 0,
-      "Horizontal" = 1,
-      "ENUM_SIZE" = 2,
-    }
-
-    declare const enum animLookAtLimitDegreesType {
-      "Narrow" = 0,
-      "Normal" = 1,
-      "Wide" = 2,
-      "None" = 3,
-    }
-
-    declare const enum animLookAtLimitDistanceType {
-      "Short" = 0,
-      "Normal" = 1,
-      "Long" = 2,
-      "None" = 3,
-    }
-
-    declare const enum animLookAtRightHandedMode {
-      "Default" = 0,
-      "Horizontal" = 1,
-      "ENUM_SIZE" = 2,
-    }
-
-    declare const enum animLookAtStatus {
-      "Active" = 2,
-      "LimitReached" = 4,
-      "TransitionInProgress" = 8,
-    }
-
-    declare const enum animLookAtStyle {
-      "VerySlow" = 0,
-      "Slow" = 1,
-      "Normal" = 2,
-      "Fast" = 3,
-      "VeryFast" = 4,
-    }
-
-    declare const enum animLookAtTwoHandedMode {
-      "Default" = 0,
-      "Horizontal" = 1,
-      "ENUM_SIZE" = 2,
-    }
-
-    declare const enum animMotionTableAction {
-      "MTA_None" = 0,
-      "MTA_Start" = 1,
-      "MTA_Stop" = 2,
-      "MTA_Move" = 3,
-      "MTA_TurnInPlace" = 4,
-      "MTA_TransitionToBackward" = 5,
-      "MTA_BackwardMove" = 6,
-      "MTA_TransitionFromBackward" = 7,
-      "MTA_StrafeLeft" = 8,
-      "MTA_StrafeRight" = 9,
-      "MTA_ForwardToStrafeLeft" = 10,
-      "MTA_ForwardToStrafeRight" = 11,
-      "MTA_StrafeLeftToForward" = 12,
-      "MTA_StrafeRightToForward" = 13,
-      "MTA_BackwardToStrafeLeft" = 14,
-      "MTA_BackwardToStrafeRight" = 15,
-      "MTA_StrafeLeftToBackward" = 16,
-      "MTA_StrafeRightToBackward" = 17,
-      "MTA_BackwardStart" = 18,
-      "MTA_BackwardStop" = 19,
-      "MTA_StrafeLeftStart" = 20,
-      "MTA_StrafeLeftStop" = 21,
-      "MTA_StrafeRightStart" = 22,
-      "MTA_StrafeRightStop" = 23,
-      "MTA_ForwardToWalk" = 24,
-      "MTA_ForwardToJog" = 25,
-      "MTA_ForwardToSprint" = 26,
-      "MTA_HardStopLeftLeg" = 27,
-      "MTA_HardStopRightLeg" = 28,
-      "MTA_RepositionForward" = 29,
-      "MTA_RepositionLeft" = 30,
-      "MTA_RepositionRight" = 31,
-      "MTA_RepositionBackward" = 32,
-      "MTA_Custom" = 33,
-      "MTA_CrowdMove" = 34,
-      "MTA_CrowdMoveSlopes" = 35,
-      "MTA_CrowdMoveStairs" = 36,
-      "MTA_StrafeLeftToStrafeRight" = 37,
-      "MTA_StrafeRightToStrafeLeft" = 38,
-      "MTA_CrowdRelaxedStop" = 39,
-      "MTA_CrowdHardStop" = 40,
-      "MTA_CrowdSprintStop" = 41,
-      "MTA_CrowdFleeStopFront" = 42,
-      "MTA_CrowdFleeStopBack" = 43,
-      "MTA_CrowdRelaxedStart" = 44,
-      "MTA_CrowdFleeStartIdle" = 45,
-      "MTA_CrowdFleeStartMotion" = 46,
-      "MTA_CrowdDirectionalStartFast" = 47,
-    }
-
-    declare const enum animMotionTableType {
-      "MTT_None" = 0,
-      "MTT_Walk" = 1,
-      "MTT_Jog" = 2,
-      "MTT_Sprint" = 3,
-      "MTT_Custom" = 4,
-    }
-
-    declare const enum animMotionTag {
-      "MT_Invalid" = 0,
-      "Walk" = 1,
-      "Jog" = 2,
-      "Sprint" = 3,
-    }
-
-    declare const enum animNodeProfileTimerMode {
-      "Begin" = 0,
-      "End" = 1,
-    }
-
-    declare const enum animNPCVehicleDeathType {
-      "Default" = 0,
-      "Relaxed" = 1,
-      "Combat" = 2,
-      "Ragdoll" = 3,
-    }
-
-    declare const enum animParentStaticSwitchBranch {
-      "None" = 0,
-      "TrueBranch" = 1,
-      "FalseBranch" = 2,
-    }
-
-    declare const enum animPendulumConstraintType {
-      "Cone" = 0,
-      "HingePlane" = 1,
-      "HalfCone" = 2,
-    }
-
-    declare const enum animPendulumProjectionType {
-      "Disabled" = 0,
-      "ShortestPathRotational" = 1,
-      "DirectedRotational" = 2,
-    }
-
-    declare const enum animPositionProjectionType {
-      "Disabled" = 0,
-      "ShortestPath" = 1,
-      "Directional" = 2,
-    }
-
-    declare const enum animQuaternionInterpolationType {
-      "Linear" = 0,
-      "Spherical" = 1,
-    }
-
-    declare const enum animSetBoneTransformEntry_SetMethod {
-      "NoSnapping" = 0,
-      "WholeTransform" = 1,
-      "TranslationOnly" = 2,
-      "RotationOnly" = 3,
-    }
-
-    declare const enum animSpringProjectionType {
-      "Disabled" = 0,
-      "ShortestPath" = 1,
-    }
-
-    declare const enum animStackTransformsExtender_SnapToBoneMethod {
-      "NoSnapping" = 0,
-      "WholeTransform" = 1,
-      "TranslationOnly" = 2,
-      "RotationOnly" = 3,
-    }
-
-    declare const enum animStanceState {
-      "Stand" = 0,
-      "Crouch" = 1,
-      "Kneel" = 2,
-      "Cover" = 3,
-      "Swim" = 4,
-      "Crawl" = 5,
-    }
-
-    declare const enum animStateTag {
-      "ST_Invalid" = 0,
-      "Idle" = 1,
-      "Cover" = 2,
-    }
-
-    declare const enum animTransformChannel {
-      "PosX" = 0,
-      "PosY" = 1,
-      "PosZ" = 2,
-      "RotX" = 3,
-      "RotY" = 4,
-      "RotZ" = 5,
-      "ScaleX" = 6,
-      "ScaleY" = 7,
-      "ScaleZ" = 8,
-    }
-
-    declare const enum animVectorCoordinateType {
-      "X" = 0,
-      "Y" = 1,
-      "Z" = 2,
-      "W" = 3,
-    }
-
-    declare const enum animWeaponOwnerType {
-      "Player" = 0,
-      "NPC" = 1,
-      "None" = 2,
+      "Scanning" = 1,
+      "LeftHandCyberwareCharge" = 2,
+      "LeftHandCyberware" = 3,
+      "MeleeCombat" = 4,
+      "MeleeCombatIdle" = 5,
+      "AimingLimbCyber" = 6,
+      "AimingLimbCyberZoomLevel1" = 7,
+      "AimingLimbCyberZoomLevel2" = 8,
+      "Aiming" = 9,
+      "QuickMelee" = 10,
+      "VehicleCombat" = 11,
+      "Sprinting" = 12,
+      "LimbCyber" = 13,
+      "Vehicle" = 14,
+      "DriverCombat" = 15,
+      "DriverCombatAiming" = 16,
+      "DriverCombatTPP" = 17,
+      "DriverCombatMissiles" = 18,
+      "DriverCombatMissilesAiming" = 19,
+      "DriverCombatMeleeTPP" = 20,
+      "ZoomLevel1" = 21,
+      "ZoomLevel2" = 22,
+      "Exhausted" = 23,
+      "Off" = 24,
+      "Count" = 25,
     }
 
     declare const enum ArcadeMachineType {
@@ -1123,580 +458,6 @@ declare namespace CyberEnums {
       "Hover" = 1,
     }
 
-    declare const enum ATUIComputerTestStepMode {
-      "SINGLE_ACTION" = 0,
-      "ROLLING" = 1,
-    }
-
-    declare const enum audioAdvertIndoorFilter {
-      "Always" = 0,
-      "OnlyIndoor" = 1,
-      "OnlyOutdoor" = 2,
-    }
-
-    declare const enum audioAmbientGroupingVariant {
-      "AllEntities" = 0,
-      "IndoorEntities" = 1,
-      "OutdoorEntities" = 2,
-      "AllEntitiesAllDirections" = 3,
-      "IndoorAllDirections" = 4,
-      "OutdoorAllDirections" = 5,
-      "SameRoomEntities" = 6,
-      "DifferentRoomEntities" = 7,
-      "DistanceExclusion" = 8,
-    }
-
-    declare const enum audioAudioEventFlags {
-      "NoEventFlags" = 0,
-      "SloMoOnly" = 1,
-      "Music" = 2,
-      "Unique" = 4,
-      "Metadata" = 8,
-    }
-
-    declare const enum audioAudioVehicleCurve {
-      "ThrottleInput" = 0,
-      "RPM" = 1,
-      "Gear" = 2,
-    }
-
-    declare const enum audiobreathingEventTag {
-      "Walk" = 0,
-      "Jog" = 1,
-      "Run" = 2,
-      "Sneak" = 3,
-      "Cloth" = 4,
-      "FootStepRegular" = 5,
-      "FootStepSprint" = 6,
-      "LandingRegular" = 7,
-      "LandingHard" = 8,
-      "LandingVeryHard" = 9,
-      "Climb" = 10,
-      "Jump" = 11,
-      "Player" = 12,
-      "Stop" = 13,
-      "Drop_Body" = 14,
-      "Pick_Up_Body" = 15,
-      "Standing_Event" = 16,
-    }
-
-    declare const enum audiobreathingLoopBehavior {
-      "TimedBreathing" = 0,
-      "BreathEvery2ndStep" = 1,
-      "BreathEveryStep" = 2,
-      "HoldingBreath" = 3,
-    }
-
-    declare const enum audioBreathingTransitionComparator {
-      "Less" = 0,
-      "Equal" = 1,
-      "Greater" = 2,
-    }
-
-    declare const enum audioBreathingTransitionType {
-      "PlayerSpeed" = 0,
-      "Event" = 1,
-      "AllEventTags" = 2,
-      "AnyEventTag" = 3,
-    }
-
-    declare const enum audioClassificationMethod {
-      "HasAnyTag" = 0,
-      "HasAllTags" = 1,
-      "NameEquals" = 2,
-      "EventNameEquals" = 3,
-      "HasAllEventTags" = 4,
-    }
-
-    declare const enum audioConversationSavingStrategy {
-      "Default" = 0,
-      "Save" = 1,
-      "DontSave" = 2,
-    }
-
-    declare const enum audioDynamicReverbType {
-      "Dynamic" = 0,
-      "StaticSmall" = 1,
-      "EnvironmentSmallStaticMedium" = 2,
-      "DynamicSource" = 3,
-    }
-
-    declare const enum audioEchoPositionType {
-      "DynamicEnvironment" = 0,
-      "Simple" = 1,
-    }
-
-    declare const enum audioEnemyState {
-      "InCombat" = 0,
-      "Alerted" = 1,
-      "Afraid" = 2,
-      "Alive" = 3,
-      "Dead" = 4,
-    }
-
-    declare const enum audioEntityEmitterContextType {
-      "Entity Emitter" = 0,
-      "Radio Emitter" = 2,
-    }
-
-    declare const enum audioESoundCurveType {
-      "Log3" = 0,
-      "Sine" = 1,
-      "InversedSCurve" = 3,
-      "Linear" = 4,
-      "SCurve" = 5,
-      "Exp1" = 6,
-      "ReciprocalOfSineCurve" = 7,
-      "Exp3" = 8,
-    }
-
-    declare const enum audioEventActionType {
-      "Play" = 0,
-      "PlayAnimation" = 1,
-      "SetParameter" = 2,
-      "StopSound" = 3,
-      "SetSwitch" = 4,
-      "StopTagged" = 5,
-      "PlayExternal" = 6,
-      "Tag" = 7,
-      "Untag" = 8,
-      "SetAppearanceName" = 9,
-      "SetEntityName" = 10,
-      "AddContainerStreamingPrefetch" = 11,
-      "RemoveContainerStreamingPrefetch" = 12,
-    }
-
-    declare const enum audioFoleyActionType {
-      "FastHeavy" = 0,
-      "FastMedium" = 1,
-      "FastLight" = 2,
-      "NormalHeavy" = 3,
-      "NormalMedium" = 4,
-      "NormalLight" = 5,
-      "SlowHeavy" = 6,
-      "SlowMedium" = 7,
-      "SlowLight" = 8,
-      "Walk" = 9,
-      "Run" = 10,
-    }
-
-    declare const enum audioFoleyItemPriority {
-      "P0" = 0,
-      "P1" = 1,
-      "P2" = 2,
-      "P3" = 3,
-      "P4" = 4,
-      "P5" = 5,
-      "P6" = 6,
-    }
-
-    declare const enum audioFoleyItemType {
-      "Jacket" = 0,
-      "Top" = 1,
-      "Bottom" = 2,
-      "Jewelry" = 3,
-    }
-
-    declare const enum audioGameplayTier {
-      "Undefined" = 0,
-      "Tier1_FullGameplay" = 1,
-      "Tier2_StagedGameplay" = 2,
-      "Tier3_LimitedGameplay" = 3,
-      "Tier4_FPPCinematic" = 4,
-      "Tier5_Cinematic" = 5,
-    }
-
-    declare const enum audioLimitedSoundType {
-      "Locomotion" = 0,
-      "Footsteps" = 1,
-      "Impact" = 2,
-      "Ragdoll" = 3,
-      "Physics" = 4,
-      "Destructibles" = 5,
-      "Ono" = 6,
-      "VO" = 7,
-    }
-
-    declare const enum audioMaterialHardnessOverride {
-      "None" = 0,
-      "SetAsSoft" = 1,
-      "SetAsSolid" = 2,
-      "SetAsHard" = 3,
-    }
-
-    declare const enum audioMeleeHitPerMaterialType {
-      "Light" = 0,
-      "Light_Hard" = 1,
-      "Light_Soft" = 2,
-      "Light_Solid" = 3,
-      "Light_Flesh" = 4,
-      "Light_Flesh_Head" = 5,
-      "Light_Robot" = 6,
-      "Light_Robot_Head" = 7,
-      "Light_Android" = 8,
-      "Light_Android_Head" = 9,
-      "Light_Mech" = 10,
-      "Light_Mech_Head" = 11,
-      "Light_Water" = 12,
-      "Normal" = 13,
-      "Normal_Hard" = 14,
-      "Normal_Soft" = 15,
-      "Normal_Solid" = 16,
-      "Normal_Flesh" = 17,
-      "Normal_Flesh_Head" = 18,
-      "Normal_Robot" = 19,
-      "Normal_Robot_Head" = 20,
-      "Normal_Android" = 21,
-      "Normal_Android_Head" = 22,
-      "Normal_Mech" = 23,
-      "Normal_Mech_Head" = 24,
-      "Normal_Water" = 25,
-      "Heavy" = 26,
-      "Heavy_Hard" = 27,
-      "Heavy_Soft" = 28,
-      "Heavy_Solid" = 29,
-      "Heavy_Flesh" = 30,
-      "Heavy_Flesh_Head" = 31,
-      "Heavy_Robot" = 32,
-      "Heavy_Robot_Head" = 33,
-      "Heavy_Android" = 34,
-      "Heavy_Android_Head" = 35,
-      "Heavy_Mech" = 36,
-      "Heavy_Mech_Head" = 37,
-      "Heavy_Water" = 38,
-      "Slash" = 39,
-      "Slash_Hard" = 40,
-      "Slash_Soft" = 41,
-      "Slash_Solid" = 42,
-      "Slash_Flesh" = 43,
-      "Slash_Flesh_Head" = 44,
-      "Slash_Robot" = 45,
-      "Slash_Robot_Head" = 46,
-      "Slash_Android" = 47,
-      "Slash_Android_Head" = 48,
-      "Slash_Mech" = 49,
-      "Slash_Mech_Head" = 50,
-      "Slash_Water" = 51,
-      "Cut" = 52,
-      "Cut_Hard" = 53,
-      "Cut_Soft" = 54,
-      "Cut_Solid" = 55,
-      "Cut_Flesh" = 56,
-      "Cut_Flesh_Head" = 57,
-      "Cut_Robot" = 58,
-      "Cut_Robot_Head" = 59,
-      "Cut_Android" = 60,
-      "Cut_Android_Head" = 61,
-      "Cut_Mech" = 62,
-      "Cut_Mech_Head" = 63,
-      "Cut_Water" = 64,
-      "Stab" = 65,
-      "Stab_Hard" = 66,
-      "Stab_Soft" = 67,
-      "Stab_Solid" = 68,
-      "Stab_Flesh" = 69,
-      "Stab_Flesh_Head" = 70,
-      "Stab_Robot" = 71,
-      "Stab_Robot_Head" = 72,
-      "Stab_Android" = 73,
-      "Stab_Android_Head" = 74,
-      "Stab_Mech" = 75,
-      "Stab_Mech_Head" = 76,
-      "Stab_Water" = 77,
-      "Finisher" = 78,
-      "Finisher_Hard" = 79,
-      "Finisher_Soft" = 80,
-      "Finisher_Solid" = 81,
-      "Finisher_Flesh" = 82,
-      "Finisher_Flesh_Head" = 83,
-      "Finisher_Robot" = 84,
-      "Finisher_Robot_Head" = 85,
-      "Finisher_Android" = 86,
-      "Finisher_Android_Head" = 87,
-      "Finisher_Mech" = 88,
-      "Finisher_Mech_Head" = 89,
-      "Finisher_Water" = 90,
-      "Weak" = 91,
-      "Weak_Hard" = 92,
-      "Weak_Soft" = 93,
-      "Weak_Solid" = 94,
-      "Weak_Flesh" = 95,
-      "Weak_Flesh_Head" = 96,
-      "Weak_Robot" = 97,
-      "Weak_Robot_Head" = 98,
-      "Weak_Android" = 99,
-      "Weak_Android_Head" = 100,
-      "Weak_Mech" = 101,
-      "Weak_Mech_Head" = 102,
-      "Weak_Water" = 103,
-      "Throw" = 104,
-      "Throw_Hard" = 105,
-      "Throw_Soft" = 106,
-      "Throw_Solid" = 107,
-      "Throw_Flesh" = 108,
-      "Throw_Flesh_Head" = 109,
-      "Throw_Robot" = 110,
-      "Throw_Robot_Head" = 111,
-      "Throw_Android" = 112,
-      "Throw_Android_Head" = 113,
-      "Throw_Mech" = 114,
-      "Throw_Mech_Head" = 115,
-      "Throw_Water" = 116,
-    }
-
-    declare const enum audioMeleeHitType {
-      "Light" = 0,
-      "Normal" = 1,
-      "Heavy" = 2,
-      "Slash" = 3,
-      "Cut" = 4,
-      "Stab" = 5,
-      "Finisher" = 6,
-      "Weak" = 7,
-      "Throw" = 8,
-    }
-
-    declare const enum audioMeleeMaterialType {
-      "Hard" = 0,
-      "Soft" = 1,
-      "Solid" = 2,
-      "Flesh" = 3,
-      "Robot" = 4,
-      "Android" = 5,
-      "Mech" = 6,
-      "Water" = 7,
-    }
-
-    declare const enum audioMixingActionType {
-      "VoContext" = 0,
-      "EmitterTag" = 1,
-      "SoundTag" = 2,
-      "ActorName" = 3,
-      "DisableCombatVo" = 4,
-      "GlobalParameter" = 5,
-    }
-
-    declare const enum audioMixParamsAction {
-      "Mull" = 0,
-      "MullPercent" = 1,
-      "MullComplemtement" = 2,
-      "MullComplemtementPercent" = 3,
-      "Add" = 4,
-    }
-
-    declare const enum audioMusicSyncType {
-      "Beat" = 1,
-      "Bar" = 0,
-      "Grid" = 2,
-      "User" = 3,
-      "EntryCue" = 5,
-      "ExitCue" = 6,
-      "Transition" = 4,
-    }
-
-    declare const enum audioNumberComparer {
-      "Equal" = 0,
-      "NotEqual" = 1,
-      "Greater" = 2,
-      "GreaterOrEqual" = 3,
-      "Lower" = 4,
-      "LowerOrEqual" = 5,
-    }
-
-    declare const enum audioNumberOperation {
-      "SetEqual" = 0,
-      "Add" = 1,
-      "Subtract" = 2,
-      "MultiplyBy" = 3,
-      "DivideBy" = 4,
-    }
-
-    declare const enum audioObstructionTestPattern {
-      "Direct" = 0,
-      "Cone" = 1,
-    }
-
-    declare const enum audioObstructionTestType {
-      "SingleShot" = 0,
-      "Continuous" = 1,
-    }
-
-    declare const enum audioRadioSoundType {
-      "Song" = 0,
-      "AnnouncementScene" = 1,
-    }
-
-    declare const enum audioRadioSpeakerType {
-      "Stanley" = 0,
-      "MaximumMike" = 1,
-      "PoliceDispatch" = 2,
-      "Kurtz" = 3,
-      "Ash" = 4,
-      "None" = 5,
-    }
-
-    declare const enum audioReflectionVariant {
-      "WorldSpaceFixedDrections" = 0,
-      "LocalSpaceFixedDirections" = 1,
-      "FindingMaximumFaceAlignemnt" = 2,
-      "LocalSpaceSideDirections" = 3,
-      "FindingMaximumFaceAligment2Sides" = 4,
-    }
-
-    declare const enum audioTrafficVehicleAudioAction {
-      "StartEngine" = 0,
-      "StopEngine" = 1,
-      "StartWheel" = 2,
-      "StopWheel" = 3,
-      "StartRainLoop" = 4,
-      "StopRainLoop" = 5,
-      "Horn" = 6,
-      "HornForced" = 7,
-      "DisableAbilityToPlayRadio" = 8,
-      "StartBrakeLoop" = 9,
-      "EndBrakeLoop" = 10,
-      "ApplyBrake" = 11,
-      "ReleaseBrake" = 12,
-    }
-
-    declare const enum audioTriggerEffectMode {
-      "Off" = 0,
-      "Feedback" = 1,
-      "Weapon" = 2,
-      "Vibration" = 3,
-    }
-
-    declare const enum audioTriggerEffectTarget {
-      "L2" = 0,
-      "R2" = 1,
-      "Both" = 2,
-    }
-
-    declare const enum audiottsvoicesFemale {
-      "Olivia" = 7,
-      "Emily" = 8,
-      "Jessica" = 9,
-      "Sophie" = 10,
-      "Elizabeth" = 11,
-      "Carolina" = 12,
-      "Sarah" = 13,
-    }
-
-    declare const enum audiottsvoicesMale {
-      "Andrew" = 0,
-      "Oliver" = 1,
-      "Jack" = 2,
-      "Harry" = 3,
-      "Simon" = 4,
-      "Charlie" = 5,
-      "Thomas" = 6,
-    }
-
-    declare const enum audiottsvoicesPolishFemale {
-      "Iwona" = 16,
-      "Paulina" = 17,
-    }
-
-    declare const enum audiottsvoicesPolishMale {
-      "Mateusz" = 14,
-      "Pawel" = 15,
-    }
-
-    declare const enum audioVoBarkType {
-      "None" = 0,
-      "Curse" = 1,
-      "Morale" = 2,
-      "Combat_Aggro" = 3,
-      "Combat_Despair" = 4,
-      "Stealth_Curious" = 5,
-    }
-
-    declare const enum audioVoCpoCharacter {
-      "None" = 0,
-      "Solo" = 1,
-      "Assassin" = 2,
-      "Techie" = 3,
-      "Netrunner" = 4,
-    }
-
-    declare const enum audioVoGruntInterruptMode {
-      "DontInterrupt" = 0,
-      "PlayOnlyOnInterrupt" = 1,
-      "CanInterrupt" = 2,
-    }
-
-    declare const enum audioVoGruntType {
-      "None" = -1,
-      "PainShort" = 23,
-      "PainLong" = 0,
-      "AgroShort" = 1,
-      "AgroLong" = 2,
-      "Effort" = 25,
-      "LongFall" = 3,
-      "Death" = 4,
-      "SilentDeath" = 5,
-      "Grapple" = 6,
-      "GrappleMovement" = 7,
-      "EnvironmentalKnockdown" = 8,
-      "Bump" = 9,
-      "Curious" = 10,
-      "Fear" = 11,
-      "Jump" = 12,
-      "EffortLong" = 13,
-      "DeathShort" = 14,
-      "Greet" = 15,
-      "LaughHard" = 16,
-      "LaughSoft" = 17,
-      "Phone" = 18,
-      "BraindanceExcited" = 19,
-      "BraindanceFearful" = 20,
-      "BraindanceNeutral" = 21,
-      "BraindanceSexual" = 22,
-    }
-
-    declare const enum audioWeaponBulletType {
-      "standard" = 0,
-      "sniper" = 1,
-      "shot" = 2,
-      "rail" = 3,
-      "automatic" = 4,
-      "smart" = 5,
-      "smart_sniper" = 6,
-      "hmg" = 7,
-    }
-
-    declare const enum audioWeaponShellCasingDirection {
-      "rightFront" = 0,
-      "rightBack" = 1,
-      "leftFront" = 2,
-      "leftBack" = 3,
-    }
-
-    declare const enum audioWeaponShellCasingMode {
-      "none" = 0,
-      "onShoot" = 1,
-      "onReload" = 2,
-    }
-
-    declare const enum audioWeaponShellCasingType {
-      "standard" = 0,
-      "large" = 1,
-      "cartridge" = 2,
-    }
-
-    declare const enum audioWeaponTailEnvironment {
-      "InteriorDefault" = 0,
-      "InteriorWide" = 1,
-      "ExteriorWide" = 2,
-      "ExteriorUrbanNarrow" = 3,
-      "ExteriorUrbanStreet" = 4,
-      "ExteriorUrbanStreetWide" = 5,
-      "ExteriorUrbanOpen" = 6,
-      "ExteriorUrbanEnclosed" = 7,
-      "ExteriorBadlandsOpen" = 8,
-      "ExteriorBadlandsCanyon" = 9,
-    }
-
     declare const enum AutoDriveDriveType {
       "GoToDestination" = 0,
       "FreeRoam" = 1,
@@ -1713,12 +474,6 @@ declare namespace CyberEnums {
       "TRESPASSING" = 1,
       "REPRIMAND" = 2,
       "COMBAT" = 3,
-    }
-
-    declare const enum braindanceVisionMode {
-      "Default" = 0,
-      "Audio" = 1,
-      "Thermal" = 2,
     }
 
     declare const enum BunkerSystems {
@@ -1842,44 +597,6 @@ declare namespace CyberEnums {
       "Character" = 1,
     }
 
-    declare const enum communityECommunitySpawnTime {
-      "Morning" = 0,
-      "Day" = 1,
-      "Evening" = 2,
-      "Night" = 3,
-      "Midnight" = 4,
-      "1:00" = 5,
-      "2:00" = 6,
-      "3:00" = 7,
-      "4:00" = 8,
-      "5:00" = 9,
-      "6:00" = 10,
-      "7:00" = 11,
-      "8:00" = 12,
-      "9:00" = 13,
-      "10:00" = 14,
-      "11:00" = 15,
-      "12:00 - Noon" = 16,
-      "13:00" = 17,
-      "14:00" = 18,
-      "15:00" = 19,
-      "16:00" = 20,
-      "17:00" = 21,
-      "18:00" = 22,
-      "19:00" = 23,
-      "20:00" = 24,
-      "21:00" = 25,
-      "22:00" = 26,
-      "23:00" = 27,
-    }
-
-    declare const enum communityESquadType {
-      "Global" = 0,
-      "Community" = 1,
-      "Security" = 2,
-      "Unknown" = 3,
-    }
-
     declare const enum ConfigGraphicsQualityLevel {
       "Low" = 0,
       "Medium" = 1,
@@ -1938,12 +655,6 @@ declare namespace CyberEnums {
       "ByName" = 1,
     }
 
-    declare const enum coverLeanDirection {
-      "Top" = 0,
-      "Left" = 1,
-      "Right" = 2,
-    }
-
     declare const enum CoverState {
       "Open" = 0,
       "Closed" = 1,
@@ -1980,20 +691,6 @@ declare namespace CyberEnums {
       "Outro" = 3,
     }
 
-    declare const enum curveEInterpolationType {
-      "EIT_Constant" = 0,
-      "EIT_Linear" = 1,
-      "EIT_BezierQuadratic" = 2,
-      "EIT_BezierCubic" = 3,
-      "EIT_Hermite" = 4,
-    }
-
-    declare const enum curveESegmentsLinkType {
-      "ESLT_Normal" = 0,
-      "ESLT_Smooth" = 1,
-      "ESLT_SmoothSymmetric" = 2,
-    }
-
     declare const enum CustomButtonType {
       "UnlockAllVehicles" = 0,
       "ShowAllPoiMappins" = 1,
@@ -2015,12 +712,6 @@ declare namespace CyberEnums {
       "Flat" = 0,
       "TargetHealth" = 1,
       "Invalid" = -1,
-    }
-
-    declare const enum damageSystemLogFlags {
-      "GENERAL" = 1,
-      "ASSERT" = 2,
-      "WEAKSPOTS" = 4,
     }
 
     declare const enum DelamainTaxiState {
@@ -2068,6 +759,12 @@ declare namespace CyberEnums {
       "Combat" = 1,
     }
 
+    declare const enum DropPointPackageStatus {
+      "NOT_ACTIVE" = 0,
+      "ACTIVE" = 1,
+      "COLLECTED" = 2,
+    }
+
     declare const enum DropdownDisplayContext {
       "NotSet" = 0,
       "Default" = 1,
@@ -2080,12 +777,6 @@ declare namespace CyberEnums {
       "Up" = 2,
     }
 
-    declare const enum DropPointPackageStatus {
-      "NOT_ACTIVE" = 0,
-      "ACTIVE" = 1,
-      "COLLECTED" = 2,
-    }
-
     declare const enum DynamicTextureDataFormat {
       "R_Uint8" = 0,
       "R_Float16" = 1,
@@ -2096,43 +787,6 @@ declare namespace CyberEnums {
       "RGBA_Uint8_SRGB" = 6,
       "RGBA_Float16" = 7,
       "RGBA_Float32" = 8,
-    }
-
-    declare const enum EActionContext {
-      "None" = -1,
-      "Direct" = 0,
-      "QHack" = 1,
-      "Master" = 2,
-      "Spiderbot" = 3,
-    }
-
-    declare const enum EActionInactivityReson {
-      "Ready" = 0,
-      "Locked" = 1,
-      "Recompilation" = 2,
-      "OutOfMemory" = 3,
-      "IsQuickHacked" = 4,
-      "Invalid" = 5,
-    }
-
-    declare const enum EActionsSequencerMode {
-      "REGULAR_INTERVALS" = 0,
-      "ACCELERATING_INTERVALS_TODO" = 1,
-      "DECELERATING_INTEVALS_TODO" = 2,
-      "RANDOM_INTERVALS_TODO" = 3,
-      "AT_THE_SAME_TIME_TODO" = 4,
-    }
-
-    declare const enum EActionType {
-      "QuickAction" = 0,
-      "ChargeAction" = 1,
-      "None" = 2,
-    }
-
-    declare const enum EActivationState {
-      "NONE" = 0,
-      "ACTIVATED" = 1,
-      "DEACTIVATED" = 2,
     }
 
     declare const enum EAIActionPhase {
@@ -2273,13 +927,6 @@ declare namespace CyberEnums {
       "Knockdown" = 3,
     }
 
-    declare const enum EAimAssistLevel {
-      "Off" = 0,
-      "Light" = 1,
-      "Standard" = 2,
-      "Heavy" = 3,
-    }
-
     declare const enum EAIPlayerSquadOrder {
       "Takedown" = 0,
       "Invalid" = 1,
@@ -2402,6 +1049,50 @@ declare namespace CyberEnums {
       "OrderRevoked" = 4,
     }
 
+    declare const enum EActionContext {
+      "None" = -1,
+      "Direct" = 0,
+      "QHack" = 1,
+      "Master" = 2,
+      "Spiderbot" = 3,
+    }
+
+    declare const enum EActionInactivityReson {
+      "Ready" = 0,
+      "Locked" = 1,
+      "Recompilation" = 2,
+      "OutOfMemory" = 3,
+      "IsQuickHacked" = 4,
+      "Invalid" = 5,
+    }
+
+    declare const enum EActionType {
+      "QuickAction" = 0,
+      "ChargeAction" = 1,
+      "None" = 2,
+    }
+
+    declare const enum EActionsSequencerMode {
+      "REGULAR_INTERVALS" = 0,
+      "ACCELERATING_INTERVALS_TODO" = 1,
+      "DECELERATING_INTEVALS_TODO" = 2,
+      "RANDOM_INTERVALS_TODO" = 3,
+      "AT_THE_SAME_TIME_TODO" = 4,
+    }
+
+    declare const enum EActivationState {
+      "NONE" = 0,
+      "ACTIVATED" = 1,
+      "DEACTIVATED" = 2,
+    }
+
+    declare const enum EAimAssistLevel {
+      "Off" = 0,
+      "Light" = 1,
+      "Standard" = 2,
+      "Heavy" = 3,
+    }
+
     declare const enum EAllowedTo {
       "UNDEFINED" = 0,
       "TRESSPASSING" = 1,
@@ -2446,6 +1137,12 @@ declare namespace CyberEnums {
       "Z" = 2,
     }
 
+    declare const enum EBOOL {
+      "UNINITIALZED" = 0,
+      "FALSE" = 1,
+      "TRUE" = 2,
+    }
+
     declare const enum EBarkList {
       "vo_enemy_reaction_surprised_combat_start" = 0,
       "vo_enemy_reaction_generic_cursing" = 1,
@@ -2486,12 +1183,6 @@ declare namespace CyberEnums {
       "RESUME" = 3,
     }
 
-    declare const enum EBOOL {
-      "UNINITIALZED" = 0,
-      "FALSE" = 1,
-      "TRUE" = 2,
-    }
-
     declare const enum EBreachOrigin {
       "LOCAL" = 0,
       "EXTERNAL" = 1,
@@ -2504,6 +1195,12 @@ declare namespace CyberEnums {
       "Direct" = 2,
       "Remove" = 3,
       "Single" = 4,
+    }
+
+    declare const enum ECLSForcedState {
+      "DEFAULT" = 0,
+      "ForcedON" = 1,
+      "ForcedOFF" = 2,
     }
 
     declare const enum ECallbackExpressionActions {
@@ -2560,12 +1257,6 @@ declare namespace CyberEnums {
       "Grenade" = 0,
       "HealingItems" = 1,
       "ProjectileLauncher" = 2,
-    }
-
-    declare const enum ECLSForcedState {
-      "DEFAULT" = 0,
-      "ForcedON" = 1,
-      "ForcedOFF" = 2,
     }
 
     declare const enum EColorChannel {
@@ -2718,6 +1409,28 @@ declare namespace CyberEnums {
       "ECMP_CustomParam6" = 64,
     }
 
+    declare const enum EDPadSlot {
+      "Left" = 0,
+      "Up" = 1,
+      "Right" = 2,
+      "Down" = 3,
+      "LeftDouble" = 4,
+      "UpDouble" = 5,
+      "RightDouble" = 6,
+      "DownDouble" = 7,
+      "WeaponsWheel" = 8,
+      "VehicleWheel" = 9,
+      "GadgetWheel" = 10,
+      "InteractionWheel" = 11,
+      "Phone" = 12,
+      "CallVehicle" = 13,
+      "CycleObjective" = 14,
+      "VehicleInsideWheel" = 15,
+      "ConsumableWheel" = 16,
+      "PocketRadio" = 17,
+      "VehicleVisualCustomization" = 18,
+    }
+
     declare const enum EDeathType {
       "Ground" = 0,
       "Air" = 1,
@@ -2834,28 +1547,6 @@ declare namespace CyberEnums {
       "Finished" = 1,
       "Defeated" = 2,
       "Unconscious" = 3,
-    }
-
-    declare const enum EDPadSlot {
-      "Left" = 0,
-      "Up" = 1,
-      "Right" = 2,
-      "Down" = 3,
-      "LeftDouble" = 4,
-      "UpDouble" = 5,
-      "RightDouble" = 6,
-      "DownDouble" = 7,
-      "WeaponsWheel" = 8,
-      "VehicleWheel" = 9,
-      "GadgetWheel" = 10,
-      "InteractionWheel" = 11,
-      "Phone" = 12,
-      "CallVehicle" = 13,
-      "CycleObjective" = 14,
-      "VehicleInsideWheel" = 15,
-      "ConsumableWheel" = 16,
-      "PocketRadio" = 17,
-      "VehicleVisualCustomization" = 18,
     }
 
     declare const enum EDrillMachineRewireState {
@@ -3152,6 +1843,18 @@ declare namespace CyberEnums {
       "FVA_Four" = 4,
     }
 
+    declare const enum EGOGMenuState {
+      "None" = 0,
+      "LoadGame" = 1,
+      "MainMenu" = 2,
+    }
+
+    declare const enum EGameSessionDataType {
+      "NONE" = 0,
+      "CameraDeadBody" = 1,
+      "CameraTagLimit" = 2,
+    }
+
     declare const enum EGameplayChallengeLevel {
       "NONE" = 0,
       "TRIVIAL" = 1,
@@ -3196,12 +1899,6 @@ declare namespace CyberEnums {
       "SmartFrame" = 31,
     }
 
-    declare const enum EGameSessionDataType {
-      "NONE" = 0,
-      "CameraDeadBody" = 1,
-      "CameraTagLimit" = 2,
-    }
-
     declare const enum EGenericNotificationPriority {
       "Default" = 0,
       "Low" = 1,
@@ -3213,12 +1910,6 @@ declare namespace CyberEnums {
       "NONE" = 0,
       "DEFAULT" = 1,
       "SUBLIMINAL_MESSAGE" = 2,
-    }
-
-    declare const enum EGOGMenuState {
-      "None" = 0,
-      "LoadGame" = 1,
-      "MainMenu" = 2,
     }
 
     declare const enum EGravityType {
@@ -3671,15 +2362,15 @@ declare namespace CyberEnums {
       "Heavy" = 3,
     }
 
-    declare const enum ELauncherActionType {
-      "QuickAction" = 0,
-      "ChargeAction" = 1,
-      "None" = 2,
-    }
-
     declare const enum ELaunchMode {
       "Primary" = 0,
       "Secondary" = 1,
+      "None" = 2,
+    }
+
+    declare const enum ELauncherActionType {
+      "QuickAction" = 0,
+      "ChargeAction" = 1,
       "None" = 2,
     }
 
@@ -3749,15 +2440,15 @@ declare namespace CyberEnums {
       "INVALID" = 3,
     }
 
-    declare const enum ELogicOperator {
-      "OR" = 0,
-      "AND" = 1,
-    }
-
     declare const enum ELogType {
       "DEFAULT" = 0,
       "WARNING" = 1,
       "ERROR" = 2,
+    }
+
+    declare const enum ELogicOperator {
+      "OR" = 0,
+      "AND" = 1,
     }
 
     declare const enum EMagazineAmmoState {
@@ -3936,16 +2627,6 @@ declare namespace CyberEnums {
       "MAX" = 37,
     }
 
-    declare const enum EMeleeAttacks {
-      "Invalid" = 0,
-      "LightAtk_Left" = 1,
-      "LightAtk_Right" = 2,
-      "ComboAtk_3hits_Part1" = 3,
-      "ComboAtk_3hits_Part2" = 4,
-      "ComboAtk_3hits_Part3" = 5,
-      "ChargeAttack" = 6,
-    }
-
     declare const enum EMeleeAttackType {
       "Combo" = 0,
       "Strong" = 1,
@@ -3960,6 +2641,16 @@ declare namespace CyberEnums {
       "Throw" = 10,
       "Dodge" = 11,
       "Equip" = 12,
+    }
+
+    declare const enum EMeleeAttacks {
+      "Invalid" = 0,
+      "LightAtk_Left" = 1,
+      "LightAtk_Right" = 2,
+      "ComboAtk_3hits_Part1" = 3,
+      "ComboAtk_3hits_Part2" = 4,
+      "ComboAtk_3hits_Part3" = 5,
+      "ChargeAttack" = 6,
     }
 
     declare const enum EMenuType {
@@ -4053,6 +2744,25 @@ declare namespace CyberEnums {
       "back" = 5,
     }
 
+    declare const enum ENPCPhaseState {
+      "Phase1" = 0,
+      "Phase2" = 1,
+      "Phase3" = 2,
+      "Phase4" = 3,
+      "Phase5" = 4,
+      "Invalid" = 5,
+    }
+
+    declare const enum ENPCTelemetryData {
+      "HitByLightAttack" = 0,
+      "HitByStrongAttack" = 1,
+      "HitByFinalComboAttack" = 2,
+      "HitByBlockAttack" = 3,
+      "BlockedAttack" = 4,
+      "DeflectedAttack" = 5,
+      "WasGuardBreaked" = 6,
+    }
+
     declare const enum ENcartDistricts {
       "WATSON" = 0,
       "CITY_CENTER" = 1,
@@ -4103,186 +2813,6 @@ declare namespace CyberEnums {
       "NT_Random" = 0,
       "NT_Simplex2D" = 1,
       "NT_Simplex3D" = 2,
-    }
-
-    declare const enum ENPCPhaseState {
-      "Phase1" = 0,
-      "Phase2" = 1,
-      "Phase3" = 2,
-      "Phase4" = 3,
-      "Phase5" = 4,
-      "Invalid" = 5,
-    }
-
-    declare const enum ENPCTelemetryData {
-      "HitByLightAttack" = 0,
-      "HitByStrongAttack" = 1,
-      "HitByFinalComboAttack" = 2,
-      "HitByBlockAttack" = 3,
-      "BlockedAttack" = 4,
-      "DeflectedAttack" = 5,
-      "WasGuardBreaked" = 6,
-    }
-
-    declare const enum entAnimParamSlotFunction {
-      "RenderingPlane" = 0,
-      "Visibility" = 1,
-    }
-
-    declare const enum entAppearanceStatus {
-      "None" = 0,
-      "Proxy" = 1,
-      "Appearance" = 2,
-    }
-
-    declare const enum entAttachmentTarget {
-      "Transform" = 0,
-      "TargetPosition" = 1,
-    }
-
-    declare const enum entAudioDismembermentPart {
-      "Head" = 0,
-      "Leg" = 1,
-      "Arm" = 2,
-    }
-
-    declare const enum entDebug_ShapeType {
-      "Sphere" = 0,
-      "Box" = 1,
-      "Capsule" = 2,
-      "Cylinder" = 3,
-    }
-
-    declare const enum entdismembermentResourceSetE {
-      "NONE" = 16,
-      "BARE" = 0,
-      "BARE1" = 1,
-      "BARE2" = 2,
-      "BARE3" = 3,
-      "GARMENT" = 4,
-      "GARMENT1" = 5,
-      "GARMENT2" = 6,
-      "GARMENT3" = 7,
-      "CYBER" = 8,
-      "CYBER1" = 9,
-      "CYBER2" = 10,
-      "CYBER3" = 11,
-      "MIXED" = 12,
-      "MIXED1" = 13,
-      "MIXED2" = 14,
-      "MIXED3" = 15,
-    }
-
-    declare const enum entdismembermentSimulationTypeE {
-      "NONE" = 0,
-      "DANGLE" = 128,
-    }
-
-    declare const enum entEBindingDirection {
-      "BindToSource" = 0,
-      "BindToDestination" = 1,
-    }
-
-    declare const enum entEntitySpawnPriority {
-      "Background" = 0,
-      "Normal" = 1,
-      "Immediate" = 2,
-      "Paramount" = 3,
-      "Critical" = 4,
-    }
-
-    declare const enum entEntityUserComponentResolutionMode {
-      "Select" = 0,
-      "Suppress" = 1,
-    }
-
-    declare const enum entForcedLodDistance {
-      "Default" = 0,
-      "Background" = 1,
-      "Regular" = 2,
-      "Cinematic" = 3,
-      "Vehicle" = 4,
-      "CinematicVehicle" = 5,
-      "VehicleInterior" = 6,
-      "VehicleDecoration" = 7,
-      "ConsoleLOD" = 8,
-    }
-
-    declare const enum EntityNotificationType {
-      "DoNotNotifyEntity" = 0,
-      "SendThisEventToEntity" = 1,
-      "SendPSChangedEventToEntity" = 2,
-    }
-
-    declare const enum entMeshComponentLODMode {
-      "AlwaysVisible" = 0,
-      "Appearance" = 1,
-      "AppearanceProxy" = 2,
-    }
-
-    declare const enum entragdollActivationRequestType {
-      "Default" = 0,
-      "Animated" = 1,
-      "Forced" = 2,
-    }
-
-    declare const enum entRenderToTextureFeaturesPlatform {
-      "RTFP_All" = 0,
-      "RTFP_PC" = 1,
-      "RTFP_PC_PS5_XSX" = 2,
-      "RTFP_Consoles" = 3,
-      "RTFP_None" = 4,
-    }
-
-    declare const enum entRenderToTextureMode {
-      "Shaded" = 0,
-      "GBufferOnly" = 1,
-    }
-
-    declare const enum entRepellingShape {
-      "Sphere" = 0,
-      "Capsule" = 1,
-    }
-
-    declare const enum entRepellingType {
-      "Debris" = 0,
-      "BigObjects" = 1,
-      "WindImpulse" = 2,
-      "WaterImpulse" = 3,
-    }
-
-    declare const enum entTemplateComponentResolveMode {
-      "AutoSelect" = 0,
-      "Select" = 1,
-      "Suppress" = 2,
-    }
-
-    declare const enum entVertexAnimationMapperSourceType {
-      "FloatTrack" = 0,
-      "TranslationX" = 1,
-      "TranslationY" = 2,
-      "TranslationZ" = 3,
-      "RotationQuatX" = 4,
-      "RotationQuatY" = 5,
-      "RotationQuatZ" = 6,
-      "RotationQuatW" = 7,
-    }
-
-    declare const enum entVisibilityParamSource {
-      "PhantomEntitySystem" = 7,
-    }
-
-    declare const enum envUtilsNeighborMode {
-      "eCLOSEST" = 0,
-      "eONLY_GLOBAL" = 1,
-      "eONLY_SELF" = 2,
-      "eFILL_SURROUNDING" = 3,
-    }
-
-    declare const enum envUtilsReflectionProbeAmbientContributionMode {
-      "eNO_AMBIENT_CONTRIBUTION" = 0,
-      "eALLOW_AMBIENT_CONTRIBUTION" = 1,
-      "eOVERRIDE_GI_AMBIENT" = 2,
     }
 
     declare const enum EOperationClassType {
@@ -4440,60 +2970,6 @@ declare namespace CyberEnums {
       "ALLOW_ALL" = 3,
     }
 
-    declare const enum EquipmentManipulationAction {
-      "Undefined" = 0,
-      "RequestActiveMeleeware" = 1,
-      "RequestActiveWeapon" = 2,
-      "RequestSlotActiveWeapon" = 3,
-      "RequestLastUsedWeapon" = 4,
-      "RequestFirstMeleeWeapon" = 5,
-      "RequestLastUsedMeleeWeapon" = 6,
-      "RequestLastUsedOrFirstAvailableWeapon" = 7,
-      "RequestLastUsedOrFirstAvailableRangedWeapon" = 8,
-      "RequestLastUsedOrFirstAvailableMeleeWeapon" = 9,
-      "RequestLastUsedOrFirstAvailableOneHandedRangedWeapon" = 10,
-      "RequestLastUsedOrFirstAvailableDriverCombatRangedWeapon" = 11,
-      "RequestLastUsedOrFirstAvailableDriverCombatBikeWeapon" = 12,
-      "RequestHeavyWeapon" = 13,
-      "CycleWeaponWheelItem" = 14,
-      "CycleNextWeaponWheelItem" = 15,
-      "CyclePreviousWeaponWheelItem" = 16,
-      "RequestConsumable" = 17,
-      "RequestGadget" = 18,
-      "RequestFists" = 19,
-      "RequestLeftHandCyberware" = 20,
-      "UnequipWeapon" = 21,
-      "UnequipConsumable" = 22,
-      "UnequipGadget" = 23,
-      "UnequipLeftHandCyberware" = 24,
-      "UnequipAll" = 25,
-      "ReequipWeapon" = 26,
-      "RequestWeaponSlot1" = 27,
-      "RequestWeaponSlot2" = 28,
-      "RequestWeaponSlot3" = 29,
-      "RequestWeaponSlot4" = 30,
-      "RequestNextThrowableWeapon" = 31,
-    }
-
-    declare const enum EquipmentManipulationRequestSlot {
-      "Undefined" = 0,
-      "Right" = 1,
-      "Left" = 2,
-      "Both" = 3,
-    }
-
-    declare const enum EquipmentManipulationRequestType {
-      "Undefined" = 0,
-      "Equip" = 1,
-      "Unequip" = 2,
-    }
-
-    declare const enum EquipmentPriority {
-      "Primary" = 0,
-      "Secondary" = 1,
-      "All" = 2,
-    }
-
     declare const enum ERadialMode {
       "ApplyOnlyActiveSlot" = 0,
       "ApplyActiveSlotAndConsumables" = 1,
@@ -4516,17 +2992,17 @@ declare namespace CyberEnums {
       "IMPULSE_FM" = 13,
     }
 
-    declare const enum EReactionValue {
-      "Fear" = 0,
-      "Aggressive" = 1,
-    }
-
     declare const enum EReactLogSource {
       "Undefined" = 0,
       "Detected" = 1,
       "StimEvent" = 2,
       "BehaviorCombatCheck" = 3,
       "BehaviorCombatTrigger" = 4,
+    }
+
+    declare const enum EReactionValue {
+      "Fear" = 0,
+      "Aggressive" = 1,
     }
 
     declare const enum ERenderDynamicDecalAtlas {
@@ -4541,21 +3017,6 @@ declare namespace CyberEnums {
     declare const enum ERenderDynamicDecalProjection {
       "RDDP_Ortho" = 0,
       "RDDP_Sphere" = 1,
-    }
-
-    declare const enum ERenderingMode {
-      "RM_HitProxies" = 2,
-      "RM_Shaded" = 0,
-      "RM_Shaded_NoAmbient" = 1,
-      "RM_GBufferOnly" = 3,
-      "RM_SafeMode" = 4,
-      "RM_OverlayOnly" = 5,
-    }
-
-    declare const enum ERenderingPlane {
-      "RPl_Scene" = 0,
-      "RPl_Background" = 1,
-      "RPl_Weapon" = 2,
     }
 
     declare const enum ERenderMaterialType {
@@ -4619,6 +3080,21 @@ declare namespace CyberEnums {
       "RPT_LightBlocker" = 16,
     }
 
+    declare const enum ERenderingMode {
+      "RM_HitProxies" = 2,
+      "RM_Shaded" = 0,
+      "RM_Shaded_NoAmbient" = 1,
+      "RM_GBufferOnly" = 3,
+      "RM_SafeMode" = 4,
+      "RM_OverlayOnly" = 5,
+    }
+
+    declare const enum ERenderingPlane {
+      "RPl_Scene" = 0,
+      "RPl_Background" = 1,
+      "RPl_Weapon" = 2,
+    }
+
     declare const enum ERentStatus {
       "PAID" = 0,
       "OVERDUE" = 1,
@@ -4648,6 +3124,14 @@ declare namespace CyberEnums {
       "STARTED" = 0,
       "CONTINUE" = 1,
       "STOPPED" = 2,
+    }
+
+    declare const enum ESSAOQualityLevel {
+      "SSAOQUALITY_VeryLow" = 0,
+      "SSAOQUALITY_Low" = 1,
+      "SSAOQUALITY_Medium" = 2,
+      "SSAOQUALITY_High" = 3,
+      "SSAOQUALITY_VeryHigh" = 4,
     }
 
     declare const enum ESaveFormat {
@@ -4795,14 +3279,6 @@ declare namespace CyberEnums {
       "JustifyCenter" = 2,
     }
 
-    declare const enum ESSAOQualityLevel {
-      "SSAOQUALITY_VeryLow" = 0,
-      "SSAOQUALITY_Low" = 1,
-      "SSAOQUALITY_Medium" = 2,
-      "SSAOQUALITY_High" = 3,
-      "SSAOQUALITY_VeryHigh" = 4,
-    }
-
     declare const enum EStarState {
       "Default" = 0,
       "Active" = 1,
@@ -4840,12 +3316,6 @@ declare namespace CyberEnums {
       "NetwatcherHackStage2" = 19,
       "NetwatcherHackStage3" = 20,
       "Count" = 21,
-    }
-
-    declare const enum EstatusEffectsState {
-      "Deactivated" = 0,
-      "Activating" = 1,
-      "Activated" = 2,
     }
 
     declare const enum ESurveillanceCameraState {
@@ -4910,6 +3380,15 @@ declare namespace CyberEnums {
       "MaintenanceSystem" = 3,
       "PersonnelSystem" = 4,
       "SurveillanceSystem" = 5,
+    }
+
+    declare const enum ETVChannel {
+      "CH1" = 0,
+      "CH2" = 1,
+      "CH3" = 2,
+      "CH4" = 3,
+      "CH5" = 4,
+      "INVALID" = 5,
     }
 
     declare const enum ETakedownActionType {
@@ -5114,15 +3593,6 @@ declare namespace CyberEnums {
       "EXIT" = 1,
     }
 
-    declare const enum ETVChannel {
-      "CH1" = 0,
-      "CH2" = 1,
-      "CH3" = 2,
-      "CH4" = 3,
-      "CH5" = 4,
-      "INVALID" = 5,
-    }
-
     declare const enum ETweakAINodeType {
       "Action" = 0,
       "Selector" = 1,
@@ -5258,6 +3728,72 @@ declare namespace CyberEnums {
       "DismemberedBothLegs" = 9,
     }
 
+    declare const enum EntityNotificationType {
+      "DoNotNotifyEntity" = 0,
+      "SendThisEventToEntity" = 1,
+      "SendPSChangedEventToEntity" = 2,
+    }
+
+    declare const enum EquipmentManipulationAction {
+      "Undefined" = 0,
+      "RequestActiveMeleeware" = 1,
+      "RequestActiveWeapon" = 2,
+      "RequestSlotActiveWeapon" = 3,
+      "RequestLastUsedWeapon" = 4,
+      "RequestFirstMeleeWeapon" = 5,
+      "RequestLastUsedMeleeWeapon" = 6,
+      "RequestLastUsedOrFirstAvailableWeapon" = 7,
+      "RequestLastUsedOrFirstAvailableRangedWeapon" = 8,
+      "RequestLastUsedOrFirstAvailableMeleeWeapon" = 9,
+      "RequestLastUsedOrFirstAvailableOneHandedRangedWeapon" = 10,
+      "RequestLastUsedOrFirstAvailableDriverCombatRangedWeapon" = 11,
+      "RequestLastUsedOrFirstAvailableDriverCombatBikeWeapon" = 12,
+      "RequestHeavyWeapon" = 13,
+      "CycleWeaponWheelItem" = 14,
+      "CycleNextWeaponWheelItem" = 15,
+      "CyclePreviousWeaponWheelItem" = 16,
+      "RequestConsumable" = 17,
+      "RequestGadget" = 18,
+      "RequestFists" = 19,
+      "RequestLeftHandCyberware" = 20,
+      "UnequipWeapon" = 21,
+      "UnequipConsumable" = 22,
+      "UnequipGadget" = 23,
+      "UnequipLeftHandCyberware" = 24,
+      "UnequipAll" = 25,
+      "ReequipWeapon" = 26,
+      "RequestWeaponSlot1" = 27,
+      "RequestWeaponSlot2" = 28,
+      "RequestWeaponSlot3" = 29,
+      "RequestWeaponSlot4" = 30,
+      "RequestNextThrowableWeapon" = 31,
+    }
+
+    declare const enum EquipmentManipulationRequestSlot {
+      "Undefined" = 0,
+      "Right" = 1,
+      "Left" = 2,
+      "Both" = 3,
+    }
+
+    declare const enum EquipmentManipulationRequestType {
+      "Undefined" = 0,
+      "Equip" = 1,
+      "Unequip" = 2,
+    }
+
+    declare const enum EquipmentPriority {
+      "Primary" = 0,
+      "Secondary" = 1,
+      "All" = 2,
+    }
+
+    declare const enum EstatusEffectsState {
+      "Deactivated" = 0,
+      "Activating" = 1,
+      "Activated" = 2,
+    }
+
     declare const enum ExpansionErrorType {
       "PurchaseFailed" = 0,
       "PurchaseDisabled" = 1,
@@ -5367,9 +3903,3083 @@ declare namespace CyberEnums {
       "EmptyContainer" = 12,
     }
 
-    declare const enum gameAggregationType {
-      "AND" = 0,
-      "OR" = 1,
+    declare const enum GIGIOverrideType {
+      "Default" = 0,
+      "Override_True" = 1,
+      "Override_False" = 2,
+    }
+
+    declare const enum GameplayTier {
+      "Undefined" = 0,
+      "Tier1_FullGameplay" = 1,
+      "Tier2_StagedGameplay" = 2,
+      "Tier3_LimitedGameplay" = 3,
+      "Tier4_FPPCinematic" = 4,
+      "Tier5_Cinematic" = 5,
+    }
+
+    declare const enum GenericMessageNotificationResult {
+      "Cancel" = 0,
+      "Confirm" = 1,
+      "OK" = 2,
+      "Yes" = 3,
+      "No" = 4,
+    }
+
+    declare const enum GenericMessageNotificationType {
+      "OK" = 0,
+      "Confirm" = 1,
+      "Cancel" = 2,
+      "ConfirmCancel" = 3,
+      "YesNo" = 4,
+    }
+
+    declare const enum GenericNotificationType {
+      "Generic" = 0,
+      "JournalNotification" = 1,
+      "LevelUpNotification" = 2,
+      "VendorNotification" = 3,
+      "ZoneNotification" = 4,
+      "ProgressionNotification" = 5,
+      "CraftingNotification" = 6,
+      "InventoryNotification" = 7,
+      "PhoneNotification" = 8,
+    }
+
+    declare const enum GogPopupScreenType {
+      "Default" = 0,
+      "Rewards" = 1,
+      "Invalid" = -1,
+    }
+
+    declare const enum GpuApieBufferUsageType {
+      "BUT_Default" = 0,
+      "BUT_Immutable" = 1,
+      "BUT_Readback" = 2,
+      "BUT_Dynamic_Legacy" = 3,
+      "BUT_Transient" = 4,
+      "BUT_Mapped" = 5,
+      "BUT_MAX" = 6,
+    }
+
+    declare const enum GpuWrapApiBufferGroup {
+      "System" = 0,
+      "MeshResource" = 1,
+      "MeshCustom" = 2,
+      "AutoSpawner" = 3,
+      "Debug" = 4,
+      "DPL" = 5,
+      "Weather" = 6,
+      "ReflectionProbe" = 7,
+      "Skinning" = 8,
+      "Lights" = 9,
+      "Video" = 10,
+      "Particles" = 11,
+      "GIManagerLitProbes" = 12,
+      "GIManagerLookup" = 13,
+      "GIManagerInterpolation" = 14,
+      "GIManagerLitBricks" = 15,
+      "GIManagerLights" = 16,
+      "GIManagerEnvVolume" = 17,
+      "GIProxyBrick" = 18,
+      "GIProxySurfel" = 19,
+      "GIProxyProbes" = 20,
+      "GIProxyFactors" = 21,
+      "GIProxyAcceleration" = 22,
+      "Raytracing" = 23,
+      "RaytracingUpload" = 24,
+      "RaytracingAS" = 25,
+      "RaytracingOMM" = 26,
+      "Decals" = 27,
+      "Instances" = 28,
+      "Materials" = 29,
+      "Multilayer" = 30,
+      "FrameResources" = 31,
+      "Misc" = 32,
+      "MorphTargets" = 33,
+      "MAX" = 34,
+    }
+
+    declare const enum GpuWrapApiVertexPackingEStreamType {
+      "ST_Invalid" = -1,
+      "ST_PerVertex" = 0,
+      "ST_PerInstance" = 1,
+      "ST_Max" = 2,
+    }
+
+    declare const enum GpuWrapApiVertexPackingePackingType {
+      "PT_Invalid" = -1,
+      "PT_Float1" = 0,
+      "PT_Float2" = 1,
+      "PT_Float3" = 2,
+      "PT_Float4" = 3,
+      "PT_Float16_2" = 4,
+      "PT_Float16_4" = 5,
+      "PT_UShort1" = 6,
+      "PT_UShort2" = 7,
+      "PT_UShort4" = 8,
+      "PT_UShort4N" = 9,
+      "PT_Short1" = 10,
+      "PT_Short2" = 11,
+      "PT_Short4" = 12,
+      "PT_Short4N" = 13,
+      "PT_UInt1" = 14,
+      "PT_UInt2" = 15,
+      "PT_UInt3" = 16,
+      "PT_UInt4" = 17,
+      "PT_Int1" = 18,
+      "PT_Int2" = 19,
+      "PT_Int3" = 20,
+      "PT_Int4" = 21,
+      "PT_Color" = 22,
+      "PT_UByte1" = 23,
+      "PT_UByte1F" = 24,
+      "PT_UByte4" = 25,
+      "PT_UByte4N" = 26,
+      "PT_Byte4N" = 27,
+      "PT_Dec4" = 28,
+      "PT_Index16" = 29,
+      "PT_Index32" = 30,
+      "PT_Max" = 31,
+    }
+
+    declare const enum GpuWrapApiVertexPackingePackingUsage {
+      "PS_Invalid" = -1,
+      "PS_SysPosition" = 0,
+      "PS_Position" = 1,
+      "PS_Normal" = 2,
+      "PS_Tangent" = 3,
+      "PS_Binormal" = 4,
+      "PS_TexCoord" = 5,
+      "PS_Color" = 6,
+      "PS_SkinIndices" = 7,
+      "PS_SkinWeights" = 8,
+      "PS_DestructionIndices" = 9,
+      "PS_MultilayerPaint" = 10,
+      "PS_InstanceTransform" = 11,
+      "PS_InstanceLODParams" = 12,
+      "PS_InstanceSkinningData" = 13,
+      "PS_PatchSize" = 14,
+      "PS_PatchBias" = 15,
+      "PS_ExtraData" = 16,
+      "PS_VehicleDmgNormal" = 17,
+      "PS_VehicleDmgPosition" = 18,
+      "PS_PositionDelta" = 19,
+      "PS_LightBlockerIntensity" = 20,
+      "PS_BoneIndex" = 21,
+      "PS_Padding" = 22,
+      "PS_PatchOffset" = 23,
+      "PS_Max" = 24,
+    }
+
+    declare const enum GpuWrapApieBufferChunkCategory {
+      "BCC_Staging" = 0,
+      "BCC_Vertex" = 1,
+      "BCC_VertexUAV" = 2,
+      "BCC_Index16Bit" = 3,
+      "BCC_Index32Bit" = 4,
+      "BCC_VertexIndex16Bit" = 5,
+      "BCC_Constant" = 6,
+      "BCC_TypedUAV" = 7,
+      "BCC_Structured" = 8,
+      "BCC_StructuredUAV" = 9,
+      "BCC_StructuredAppendUAV" = 10,
+      "BCC_IndirectUAV" = 11,
+      "BCC_Index16BitUAV" = 12,
+      "BCC_Raw" = 13,
+      "BCC_ShaderTable" = 14,
+      "BCC_Invalid" = 15,
+    }
+
+    declare const enum GpuWrapApieIndexBufferChunkType {
+      "IBCT_IndexUInt" = 0,
+      "IBCT_IndexUShort" = 1,
+      "IBCT_Max" = 2,
+    }
+
+    declare const enum GpuWrapApieTextureFormat {
+      "TEXFMT_A8_Unorm" = 0,
+      "TEXFMT_R8_Unorm" = 1,
+      "TEXFMT_L8_Unorm" = 2,
+      "TEXFMT_R8G8_Unorm" = 3,
+      "TEXFMT_R8G8B8X8_Unorm" = 4,
+      "TEXFMT_R8G8B8A8_Unorm" = 5,
+      "TEXFMT_R8G8B8A8_Unorm_SRGB" = 40,
+      "TEXFMT_R8G8B8A8_Snorm" = 6,
+      "TEXFMT_B8G8R8A8" = 50,
+      "TEXFMT_B8G8R8A8_SRGB" = 51,
+      "TEXFMT_R16_Unorm" = 7,
+      "TEXFMT_R16_Snorm" = 49,
+      "TEXFMT_R16_Uint" = 8,
+      "TEXFMT_R32_Uint" = 9,
+      "TEXFMT_R32G32B32A32_Uint" = 10,
+      "TEXFMT_R32G32_Uint" = 11,
+      "TEXFMT_R16G16B16A16_Unorm" = 12,
+      "TEXFMT_R16G16B16A16_Uint" = 14,
+      "TEXFMT_R16G16_Uint" = 15,
+      "TEXFMT_R10G10B10A2_Unorm" = 16,
+      "TEXFMT_R16G16B16A16_Float" = 17,
+      "TEXFMT_R11G11B10_Float" = 18,
+      "TEXFMT_R16G16_Float" = 19,
+      "TEXFMT_R32G32_Float" = 20,
+      "TEXFMT_R32G32B32A32_Float" = 21,
+      "TEXFMT_R32_Float" = 22,
+      "TEXFMT_R16_Float" = 23,
+      "TEXFMT_D24S8" = 24,
+      "TEXFMT_D32FS8" = 25,
+      "TEXFMT_D32F" = 27,
+      "TEXFMT_D16U" = 28,
+      "TEXFMT_BC1" = 29,
+      "TEXFMT_BC1_SRGB" = 41,
+      "TEXFMT_BC2" = 30,
+      "TEXFMT_BC2_SRGB" = 42,
+      "TEXFMT_BC3" = 31,
+      "TEXFMT_BC3_SRGB" = 43,
+      "TEXFMT_BC4" = 32,
+      "TEXFMT_BC5" = 33,
+      "TEXFMT_BC6H_UNSIGNED" = 34,
+      "TEXFMT_BC6H_SIGNED" = 35,
+      "TEXFMT_BC7" = 36,
+      "TEXFMT_BC7_SRGB" = 37,
+      "TEXFMT_R8_Uint" = 38,
+      "TEXFMT_R16G16_Unorm" = 44,
+      "TEXFMT_R16G16_Sint" = 45,
+      "TEXFMT_R16G16_Snorm" = 46,
+      "TEXFMT_B5G6R5_Unorm" = 47,
+      "TEXFMT_A8" = 0,
+      "TEXFMT_R8" = 1,
+      "TEXFMT_L8" = 2,
+      "TEXFMT_R8G8" = 3,
+      "TEXFMT_R8G8B8X8" = 4,
+      "TEXFMT_R8G8B8A8" = 5,
+      "TEXFMT_Uint_16_norm" = 7,
+      "TEXFMT_Uint_16" = 8,
+      "TEXFMT_Uint_32" = 9,
+      "TEXFMT_Uint_R32G32B32A32" = 10,
+      "TEXFMT_R10G10B10A2" = 16,
+      "TEXFMT_Float_R16G16B16A16" = 17,
+      "TEXFMT_Float_R11G11B10" = 18,
+      "TEXFMT_Float_R16G16" = 19,
+      "TEXFMT_Float_R32G32" = 20,
+      "TEXFMT_Float_R32G32B32A32" = 21,
+      "TEXFMT_Float_R32" = 22,
+      "TEXFMT_Float_R16" = 23,
+      "TEXFMT_BC6H" = 34,
+    }
+
+    declare const enum GpuWrapApieTextureGroup {
+      "TEXG_Generic_Color" = 1,
+      "TEXG_Generic_Grayscale" = 2,
+      "TEXG_Generic_Normal" = 3,
+      "TEXG_Generic_Data" = 4,
+      "TEXG_Generic_UI" = 5,
+      "TEXG_Generic_Font" = 6,
+      "TEXG_Generic_LUT" = 7,
+      "TEXG_Generic_MorphBlend" = 8,
+      "TEXG_Multilayer_Color" = 9,
+      "TEXG_Multilayer_Normal" = 10,
+      "TEXG_Multilayer_Grayscale" = 11,
+      "TEXG_Multilayer_Microblend" = 12,
+    }
+
+    declare const enum GpuWrapApieTextureType {
+      "TEXTYPE_2D" = 0,
+      "TEXTYPE_CUBE" = 1,
+      "TEXTYPE_ARRAY" = 2,
+      "TEXTYPE_3D" = 3,
+    }
+
+    declare const enum GrenadeDamageType {
+      "Normal" = 0,
+      "DoT" = 1,
+      "None" = 2,
+    }
+
+    declare const enum HUDActorStatus {
+      "UNINITIALIZED" = 0,
+      "REGISTERED" = 1,
+      "ACTIVE" = 2,
+    }
+
+    declare const enum HUDActorType {
+      "UNINITIALIZED" = 0,
+      "GAME_OBJECT" = 1,
+      "VEHICLE" = 2,
+      "DEVICE" = 3,
+      "BODY_DISPOSAL_DEVICE" = 4,
+      "PUPPET" = 5,
+      "ITEM" = 6,
+    }
+
+    declare const enum HUDContext {
+      "DEFAULT" = 0,
+      "FOCUS" = 1,
+      "LOOKEDAT" = 2,
+    }
+
+    declare const enum HUDState {
+      "UNINITIALIZED" = 0,
+      "DEACTIVATED" = 1,
+      "ACTIVATED" = 2,
+    }
+
+    declare const enum HighlightContext {
+      "DEFAULT" = 0,
+      "OUTLINE" = 1,
+      "FILL" = 2,
+      "FULL" = 3,
+    }
+
+    declare const enum HighlightMode {
+      "Row" = 0,
+      "Column" = 1,
+    }
+
+    declare const enum HitShape_Type {
+      "Normal" = 0,
+      "InternalWeakSpot" = 1,
+      "ExternalWeakSpot" = 2,
+      "ProtectionLayer" = 3,
+    }
+
+    declare const enum HoverStatus {
+      "DEFAULT" = 0,
+      "HOVER" = 1,
+    }
+
+    declare const enum HubMenuCharacterItems {
+      "Skills" = 0,
+      "Stats" = 1,
+    }
+
+    declare const enum HubMenuCraftingItems {
+      "Crafting" = 0,
+      "Upgrade" = 1,
+    }
+
+    declare const enum HubMenuDatabaseItems {
+      "Codex" = 0,
+      "Tarot" = 1,
+      "Shards" = 2,
+      "Gallery" = 3,
+    }
+
+    declare const enum HubMenuInventoryItems {
+      "Gear" = 0,
+      "Cyberware" = 1,
+      "Backpack" = 2,
+    }
+
+    declare const enum HubMenuItems {
+      "None" = -1,
+      "Default" = 0,
+      "Crafting" = 1,
+      "Character" = 2,
+      "Inventory" = 3,
+      "Map" = 4,
+      "Journal" = 5,
+      "Phone" = 6,
+      "Database" = 7,
+      "Stats" = 8,
+      "Backpack" = 9,
+      "HubMenuItems" = 10,
+      "Codex" = 11,
+      "Shards" = 12,
+      "Gallery" = 13,
+      "Tarot" = 14,
+      "Gear" = 15,
+      "Cyberware" = 16,
+      "VisualSets" = 17,
+      "Count" = 18,
+    }
+
+    declare const enum HubVendorMenuItems {
+      "Trade" = 0,
+      "Cyberware" = 1,
+    }
+
+    declare const enum IMaterialDataProviderDescEParameterType {
+      "PT_None" = 0,
+      "PT_Texture" = 1,
+      "PT_Color" = 2,
+      "PT_Cube" = 3,
+      "PT_Vector" = 4,
+      "PT_Scalar" = 5,
+      "PT_Bool" = 6,
+      "PT_TextureArray" = 7,
+      "PT_StructBuffer" = 8,
+      "PT_Cpu_NameU64" = 9,
+      "PT_SkinProfile" = 10,
+      "PT_MultilayerSetup" = 11,
+      "PT_MultilayerMask" = 12,
+      "PT_HairProfile" = 13,
+      "PT_FoliageProfile" = 14,
+      "PT_TerrainSetup" = 15,
+      "PT_Gradient" = 16,
+      "PT_DynamicTexture" = 17,
+      "PT_MAX" = 18,
+    }
+
+    declare const enum InGameConfigChangeReason {
+      "Invalid" = -1,
+      "Accepted" = 0,
+      "Rejected" = 1,
+      "NeedsConfirmation" = 2,
+      "NeedsRestart" = 3,
+    }
+
+    declare const enum InGameConfigNotificationType {
+      "RestartRequiredConfirmed" = 0,
+      "RestartRequiredRejected" = 1,
+      "ChangesApplied" = 2,
+      "ChangesRejected" = 3,
+      "ChangesLoadLastCheckpointApplied" = 4,
+      "ChangesLoadLastCheckpointRejected" = 5,
+      "Saved" = 6,
+      "ErrorSaving" = 7,
+      "Loaded" = 8,
+      "LoadCanceled" = 9,
+      "LoadInternalError" = 10,
+      "Refresh" = 11,
+      "LanguagePackInstalled" = 12,
+    }
+
+    declare const enum InGameConfigUserSettingsLoadStatus {
+      "NotLoaded" = 0,
+      "InternalError" = 1,
+      "FileIsMissing" = 2,
+      "FileIsCorrupted" = 3,
+      "Loaded" = 4,
+      "ImportedFromOldVersion" = 5,
+    }
+
+    declare const enum InGameConfigUserSettingsSaveStatus {
+      "NotSaved" = 0,
+      "InternalError" = 1,
+      "Saved" = 2,
+    }
+
+    declare const enum InGameConfigVarType {
+      "Bool" = 0,
+      "Int" = 1,
+      "Float" = 2,
+      "Name" = 3,
+      "IntList" = 4,
+      "FloatList" = 5,
+      "StringList" = 6,
+      "NameList" = 7,
+    }
+
+    declare const enum InGameConfigVarUpdatePolicy {
+      "Disabled" = 0,
+      "Immediately" = 1,
+      "ConfirmationRequired" = 2,
+      "RestartRequired" = 3,
+      "LoadLastCheckpointRequired" = 4,
+    }
+
+    declare const enum InnerBunkerCoreStage {
+      "Normal" = 0,
+      "Malfunction" = 1,
+      "Shutdown" = 2,
+    }
+
+    declare const enum InnerBunkerCoreStatus {
+      "Online" = 0,
+      "Offline" = 1,
+      "Unresponsive" = 2,
+    }
+
+    declare const enum InstanceState {
+      "DISABLED" = 0,
+      "HIDDEN" = 1,
+      "RUNNING" = 2,
+      "MALFUNCTIONING" = 3,
+      "ON" = 4,
+    }
+
+    declare const enum IntercomStatus {
+      "DEFAULT" = 0,
+      "CALLING" = 1,
+      "TALKING" = 2,
+      "CALL_MISSED" = 3,
+      "CALL_ENDED" = 4,
+    }
+
+    declare const enum InventoryModes {
+      "Default" = 0,
+      "Item" = 1,
+    }
+
+    declare const enum InventoryPaperdollZoomArea {
+      "Default" = 0,
+      "Weapon" = 1,
+      "Legs" = 2,
+      "Feet" = 3,
+      "Cyberware" = 4,
+      "QuickSlot" = 5,
+      "Consumable" = 6,
+      "Outfit" = 7,
+      "Head" = 8,
+      "Face" = 9,
+      "InnerChest" = 10,
+      "OuterChest" = 11,
+    }
+
+    declare const enum InventoryTooltipDisplayContext {
+      "Default" = 0,
+      "Attachment" = 1,
+      "Crafting" = 2,
+      "Upgrading" = 3,
+      "HUD" = 4,
+      "Vendor" = 5,
+    }
+
+    declare const enum ItemAdditionalInfoType {
+      "NONE" = 0,
+      "PRICE" = 1,
+      "TYPE" = 2,
+    }
+
+    declare const enum ItemDisplayNotificationMessage {
+      "Default" = 0,
+      "AddRef" = 1,
+      "RemoveRef" = 2,
+    }
+
+    declare const enum ItemDisplayType {
+      "Item" = 0,
+      "Weapon" = 1,
+    }
+
+    declare const enum ItemFilterCategory {
+      "RangedWeapons" = 0,
+      "MeleeWeapons" = 1,
+      "Clothes" = 2,
+      "Consumables" = 3,
+      "Grenades" = 4,
+      "SoftwareMods" = 5,
+      "Attachments" = 6,
+      "Programs" = 7,
+      "Cyberware" = 8,
+      "Junk" = 9,
+      "BaseCount" = 10,
+      "Quest" = 11,
+      "NewWardrobeAppearances" = 12,
+      "Buyback" = 13,
+      "AllItems" = 14,
+      "AllCount" = 15,
+      "Invalid" = -1,
+    }
+
+    declare const enum ItemFilterType {
+      "All" = 0,
+      "Weapons" = 1,
+      "Clothes" = 2,
+      "Consumables" = 3,
+      "Cyberware" = 4,
+      "Attachments" = 5,
+      "Quest" = 6,
+      "Buyback" = 7,
+      "LightWeapons" = 8,
+      "HeavyWeapons" = 9,
+      "MeleeWeapons" = 10,
+      "Hacks" = 11,
+    }
+
+    declare const enum ItemLabelType {
+      "New" = 0,
+      "Quest" = 1,
+      "Money" = 2,
+      "Equipped" = 3,
+      "Owned" = 4,
+      "Buyback" = 5,
+      "DLCNew" = 6,
+    }
+
+    declare const enum ItemModeGridSize {
+      "Default" = 0,
+      "Outfit" = 1,
+    }
+
+    declare const enum ItemSortMode {
+      "Default" = 0,
+      "NewItems" = 1,
+      "NameAsc" = 2,
+      "NameDesc" = 3,
+      "QualityAsc" = 4,
+      "QualityDesc" = 5,
+      "WeightAsc" = 6,
+      "WeightDesc" = 7,
+      "PriceAsc" = 8,
+      "PriceDesc" = 9,
+      "ItemType" = 10,
+      "DpsAsc" = 11,
+      "DpsDesc" = 12,
+    }
+
+    declare const enum ItemViewModes {
+      "Item" = 0,
+      "Mod" = 1,
+    }
+
+    declare const enum JournalNotificationMode {
+      "Default" = 0,
+      "Menu" = 1,
+      "HUD" = 2,
+    }
+
+    declare const enum LadderCameraParams {
+      "None" = 0,
+      "Enter" = 1,
+      "Default" = 2,
+      "CameraReset" = 3,
+      "Exit" = 4,
+    }
+
+    declare const enum LandingType {
+      "Off" = 0,
+      "Regular" = 1,
+      "Hard" = 2,
+      "VeryHard" = 3,
+      "Superhero" = 4,
+      "Death" = 5,
+    }
+
+    declare const enum LaserTargettingState {
+      "Start" = 0,
+      "Update" = 1,
+      "End" = 2,
+    }
+
+    declare const enum LibTreeEParameterType {
+      "PARAM_Bool" = 0,
+      "PARAM_Int32" = 1,
+      "PARAM_Enum" = 2,
+      "PARAM_Float" = 3,
+      "PARAM_CName" = 4,
+      "PARAM_TreeRef" = 5,
+      "PARAM_TreeRefList" = 6,
+      "PARAM_NodeRef" = 7,
+      "PARAM_Vector" = 9,
+    }
+
+    declare const enum LifetimeStatus {
+      "Base" = 0,
+      "Near" = 1,
+      "Disengaging" = 2,
+    }
+
+    declare const enum MechanicalScanType {
+      "None" = 0,
+      "Short" = 1,
+      "Long" = 2,
+      "Danger" = 3,
+    }
+
+    declare const enum MessageHash {
+      "Invalid" = 0,
+      "Fake" = -1,
+    }
+
+    declare const enum MessageViewType {
+      "Sent" = 0,
+      "Received" = 1,
+    }
+
+    declare const enum MessengerContactType {
+      "SingleThread" = 0,
+      "MultiThread" = 1,
+      "Contact" = 2,
+      "Fake_ShowAll" = 3,
+    }
+
+    declare const enum MinigameActionType {
+      "Device" = 0,
+      "NPC" = 1,
+      "Both" = 2,
+      "AccessPoint" = 3,
+    }
+
+    declare const enum ModuleState {
+      "DISABLED" = 0,
+      "HIDDEN" = 1,
+      "ASLEEP" = 2,
+      "MALFUNCTIONING" = 3,
+      "ON" = 4,
+    }
+
+    declare const enum MorphTargetsDiffTextureSize {
+      "TEXTURE_SIZE_1024x1024" = 0,
+      "TEXTURE_SIZE_512x512" = 1,
+      "TEXTURE_SIZE_256x256" = 2,
+    }
+
+    declare const enum MorphTargetsFaceRegion {
+      "FACE_REGION_EYES" = 0,
+      "FACE_REGION_NOSE" = 1,
+      "FACE_REGION_MOUTH" = 2,
+      "FACE_REGION_JAW" = 3,
+      "FACE_REGION_EARS" = 4,
+      "FACE_REGION_NONE" = 255,
+    }
+
+    declare const enum MountType {
+      "Hijack" = 0,
+      "Regular" = 1,
+    }
+
+    declare const enum MuramasaOption {
+      "WheelCover" = 0,
+      "WheelRims" = 1,
+      "Branding" = 2,
+      "BackRest" = 3,
+    }
+
+    declare const enum NavGenAgentSize {
+      "Human" = 0,
+      "Vehicle" = 1,
+      "AgentSize_Count" = 2,
+    }
+
+    declare const enum NavGenNavmeshImpact {
+      "Ignored" = 1,
+      "Walkable" = 0,
+      "Blocking" = 2,
+      "Road" = 3,
+      "Stairs" = 4,
+      "Drones" = 5,
+      "Terrain" = 6,
+      "CrowdWalkable" = 0,
+    }
+
+    declare const enum NavGenSamplingDensity {
+      "None" = 0,
+      "Sparse" = 1,
+      "Dense" = 2,
+      "Very dense" = 3,
+    }
+
+    declare const enum NewPeksActiveScreen {
+      "Categories" = 0,
+      "Perks" = 1,
+      "Espionage" = 2,
+      "Skills" = 3,
+      "Count" = 4,
+      "Invalid" = -1,
+    }
+
+    declare const enum NewPerkCellAnimationType {
+      "Bought" = 0,
+      "Maxed" = 1,
+      "Locked" = 2,
+      "HoverOver" = 3,
+      "HoverOut" = 4,
+      "Sold" = 5,
+      "Reminder" = 6,
+      "SellLocked" = 7,
+      "InsufficientPoints" = 8,
+      "MaxedLocked" = 9,
+      "COUNT" = 10,
+      "INVALID" = -1,
+    }
+
+    declare const enum NewPerkTabsArrowDirection {
+      "Left" = 0,
+      "Right" = 1,
+      "Invalid" = 2,
+    }
+
+    declare const enum NewPerksCyberwareDetailsMenu {
+      "MantisBlades" = 0,
+      "GorillaArms" = 1,
+      "ProjectileLauncher" = 2,
+      "Monowire" = 3,
+      "COUNT" = 4,
+    }
+
+    declare const enum NewPerksWireState {
+      "Default" = 0,
+      "Available" = 1,
+      "Bought" = 2,
+      "Count" = 3,
+      "All" = 4,
+      "Invalid" = -1,
+    }
+
+    declare const enum ObjectToCheck {
+      "Player" = 0,
+      "Weapon" = 1,
+    }
+
+    declare const enum OpeningGateScreenState {
+      "Unknown" = 0,
+      "Idle" = 1,
+      "Loop" = 2,
+      "Open" = 3,
+      "Result" = 4,
+    }
+
+    declare const enum OutcomeMessage {
+      "Success" = 0,
+      "Failure" = 1,
+    }
+
+    declare const enum PSODescBlendModeFactor {
+      "FAC_Zero" = 0,
+      "FAC_One" = 1,
+      "FAC_SrcColor" = 2,
+      "FAC_InvSrcColor" = 3,
+      "FAC_SrcAlpha" = 4,
+      "FAC_InvSrcAlpha" = 5,
+      "FAC_DestColor" = 6,
+      "FAC_InvDestColor" = 7,
+      "FAC_DestAlpha" = 8,
+      "FAC_InvDestAlpha" = 9,
+      "FAC_BlendFactor" = 10,
+      "FAC_InvBlendFactor" = 11,
+      "FAC_Src1Color" = 12,
+      "FAC_InvSrc1Color" = 13,
+      "FAC_Src1Alpha" = 14,
+      "FAC_InvSrc1Alpha" = 15,
+    }
+
+    declare const enum PSODescBlendModeOp {
+      "OP_Add" = 0,
+      "OP_Subtract" = 1,
+      "OP_RevSub" = 2,
+      "OP_Min" = 3,
+      "OP_Max" = 4,
+      "OP_Or" = 5,
+      "OP_And" = 6,
+      "OP_Xor" = 7,
+      "OP_nOr" = 9,
+      "OP_nAnd" = 8,
+    }
+
+    declare const enum PSODescBlendModeWriteMask {
+      "MASK_None" = 0,
+      "MASK_R" = 1,
+      "MASK_G" = 2,
+      "MASK_B" = 4,
+      "MASK_A" = 8,
+      "MASK_RG" = 3,
+      "MASK_RB" = 5,
+      "MASK_RA" = 9,
+      "MASK_GB" = 6,
+      "MASK_GA" = 10,
+      "MASK_BA" = 12,
+      "MASK_RGB" = 7,
+      "MASK_RGA" = 11,
+      "MASK_RBA" = 13,
+      "MASK_GBA" = 14,
+      "MASK_RGBA" = 15,
+    }
+
+    declare const enum PSODescDepthStencilModeComparisonMode {
+      "COMPARISON_Never" = 0,
+      "COMPARISON_Less" = 1,
+      "COMPARISON_Equal" = 2,
+      "COMPARISON_LessEqual" = 3,
+      "COMPARISON_Greater" = 4,
+      "COMPARISON_NotEqual" = 5,
+      "COMPARISON_GreaterEqual" = 6,
+      "COMPARISON_Always" = 7,
+    }
+
+    declare const enum PSODescDepthStencilModeStencilOpMode {
+      "STENCILOP_Keep" = 0,
+      "STENCILOP_Zero" = 1,
+      "STENCILOP_Replace" = 2,
+      "STENCILOP_IncreaseSaturate" = 3,
+      "STENCILOP_DecreaseSaturate" = 4,
+      "STENCILOP_Invert" = 5,
+      "STENCILOP_Increase" = 6,
+      "STENCILOP_Decrease" = 7,
+    }
+
+    declare const enum PSODescPrimitiveTopologyType {
+      "Invalid" = 0,
+      "Point" = 1,
+      "Line" = 2,
+      "Triangle" = 3,
+      "Patch" = 4,
+    }
+
+    declare const enum PSODescRasterizerModeCullMode {
+      "CULL_None" = 0,
+      "CULL_Front" = 1,
+      "CULL_Back" = 2,
+    }
+
+    declare const enum PSODescRasterizerModeFrontFaceWinding {
+      "FRONTFACE_CCW" = 0,
+      "FRONTFACE_CW" = 1,
+    }
+
+    declare const enum PSODescRasterizerModeOffsetMode {
+      "OFFSET_None" = 0,
+      "OFFSET_NormalBias" = 1,
+      "OFFSET_ShadowBias" = 2,
+      "OFFSET_DecalBias" = 3,
+    }
+
+    declare const enum PackageStatus {
+      "UNINITIALIZED" = 0,
+      "ON_HOLD" = 1,
+      "FOR_IMMEDIATE_TRIGGER" = 2,
+      "TRIGGERED" = 3,
+    }
+
+    declare const enum PaperdollPositionAnimation {
+      "Center" = 0,
+      "Left" = 1,
+      "Right" = 2,
+      "LeftFullBody" = 3,
+    }
+
+    declare const enum PauseMenuAction {
+      "OpenSubMenu" = 0,
+      "QuickSave" = 1,
+      "Save" = 2,
+      "ExitGame" = 3,
+      "ExitToMainMenu" = 4,
+      "QuickLoad" = 5,
+    }
+
+    declare const enum PaymentStatus {
+      "DEFAULT" = 0,
+      "IN_PROGRESS" = 1,
+      "NO_MONEY" = 2,
+    }
+
+    declare const enum PerkMenuAttribute {
+      "Body" = 0,
+      "Reflex" = 1,
+      "Technical_Ability" = 2,
+      "Cool" = 3,
+      "Intelligence" = 4,
+      "Espionage" = 5,
+      "Johnny" = 6,
+      "Count" = 7,
+      "Invalid" = -1,
+    }
+
+    declare const enum PhoneDialerTabs {
+      "Unread" = 0,
+      "Contacts" = 1,
+    }
+
+    declare const enum PhoneScreenType {
+      "Unread" = 0,
+      "Contacts" = 1,
+    }
+
+    declare const enum PlayerChangeCameraAndLeaveVehiclePhase {
+      "ToggleCamera" = 0,
+      "ExitVehicle" = 1,
+      "Done" = 2,
+    }
+
+    declare const enum PlayerCombatControllerRefreshPolicyEnum {
+      "Persistent" = 0,
+      "Eventful" = 1,
+    }
+
+    declare const enum PlayerCombatState {
+      "Invalid" = 0,
+      "InCombat" = 1,
+      "OutOfCombat" = 2,
+      "Stealth" = 3,
+    }
+
+    declare const enum PlayerVisionModeControllerRefreshPolicyEnum {
+      "Persistent" = 0,
+      "Eventful" = 1,
+    }
+
+    declare const enum PocketRadioRestrictions {
+      "SceneTier" = 0,
+      "UpperBodyState" = 1,
+      "QuestContentLock" = 2,
+      "InDaClub" = 3,
+      "BlockFastTravel" = 4,
+      "VehicleScene" = 5,
+      "VehicleBlockPocketRadio" = 6,
+      "PhoneCall" = 7,
+      "PhoneNoTexting" = 8,
+      "PhoneNoCalling" = 9,
+      "FastForward" = 10,
+      "FastForwardHintActive" = 11,
+      "PocketRadioRestrictionCount" = 12,
+    }
+
+    declare const enum ProgramEffect {
+      "GrantAccess" = 0,
+      "BlockAccess" = 1,
+      "UnlockQuestFact" = 2,
+    }
+
+    declare const enum ProgramType {
+      "BasicAccess" = 0,
+      "ExtraPlayerProgram" = 1,
+      "ExtraServerProgram" = 2,
+      "EnemyProgram" = 3,
+      "EnemyLockNetwork" = 4,
+    }
+
+    declare const enum QuantityPickerActionType {
+      "Buy" = 0,
+      "Sell" = 1,
+      "TransferToStorage" = 2,
+      "TransferToPlayer" = 3,
+      "Drop" = 4,
+      "Disassembly" = 5,
+      "Craft" = 6,
+    }
+
+    declare const enum QuestListItemType {
+      "MainQuest" = 0,
+      "SideQuest" = 1,
+      "Gig" = 2,
+      "Cyberpsycho" = 3,
+      "NCPDQuest" = 4,
+      "Apartment" = 5,
+      "Courier" = 6,
+      "Finished" = 7,
+      "Count" = 8,
+      "All" = 9,
+      "Invalid" = -1,
+    }
+
+    declare const enum QuestListSortType {
+      "Updated" = 0,
+      "Distance" = 1,
+      "Size" = 2,
+    }
+
+    declare const enum QuickSlotActionType {
+      "Undefined" = 0,
+      "SelectItem" = 1,
+      "HideWeapon" = 2,
+      "OpenPhone" = 3,
+      "SummonCar" = 4,
+      "SummonBike" = 5,
+      "ToggleRadio" = 6,
+      "SelectRadioStation" = 7,
+      "TurnOffRadio" = 8,
+      "CycleTrackedQuest" = 9,
+      "SummonVehicle" = 10,
+      "SetActiveVehicle" = 11,
+      "QuickHack" = 12,
+      "ToggleSummonMode" = 13,
+      "EquipFists" = 14,
+    }
+
+    declare const enum QuickSlotItemType {
+      "Undefined" = 0,
+      "Vehicle" = 1,
+      "Gadget" = 2,
+      "Consumable" = 3,
+      "Cyberware" = 4,
+      "Weapon" = 5,
+      "Interaction" = 6,
+    }
+
+    declare const enum RadialHubMenuElement {
+      "None" = 0,
+      "Inventory" = 1,
+      "Map" = 2,
+      "Character" = 3,
+      "Journal" = 4,
+    }
+
+    declare const enum RarityItemType {
+      "Item" = 0,
+      "Cyberdeck" = 1,
+      "Program" = 2,
+      "Count" = 3,
+      "Invalid" = 4,
+    }
+
+    declare const enum ReactionZones_Humanoid_Side {
+      "Head" = 0,
+      "ChestLeft" = 1,
+      "ArmLeft" = 2,
+      "HandLeft" = 3,
+      "ChestRight" = 4,
+      "ArmRight" = 5,
+      "HandRight" = 6,
+      "Abdomen" = 7,
+      "LegLeft" = 8,
+      "LegRight" = 9,
+    }
+
+    declare const enum RenderDecalNormalsBlendingMode {
+      "AlphaBlending" = 0,
+      "Reorient" = 1,
+    }
+
+    declare const enum RenderDecalOrderPriority {
+      "Priority0" = 0,
+      "Priority1" = 1,
+      "Priority2" = 2,
+      "Priority3" = 3,
+    }
+
+    declare const enum RenderSceneLayer {
+      "Default" = 0,
+      "Cyberspace" = 1,
+      "WorldMap" = 2,
+    }
+
+    declare const enum RequestType {
+      "INSTANTLY_TRIGGER" = 0,
+      "MANUALLY_TRIGGERED" = 1,
+    }
+
+    declare const enum RipperdocFilter {
+      "All" = 0,
+      "Vendor" = 1,
+      "Player" = 2,
+      "Buyback" = 3,
+    }
+
+    declare const enum RipperdocHoverState {
+      "None" = 0,
+      "BarCapacity" = 1,
+      "BarArmor" = 2,
+      "SlotSkeleton" = 3,
+      "SlotHands" = 4,
+    }
+
+    declare const enum RipperdocModes {
+      "Default" = 0,
+      "Item" = 1,
+    }
+
+    declare const enum RoboticArmStateType {
+      "Idle" = 0,
+      "Work" = 1,
+      "Distract" = 2,
+    }
+
+    declare const enum SAnimationBufferBitwiseCompression {
+      "ABBC_None" = 0,
+      "ABBC_24b" = 1,
+      "ABBC_16b" = 2,
+    }
+
+    declare const enum SAnimationBufferBitwiseCompressionPreset {
+      "ABBCP_Custom" = 0,
+      "ABBCP_VeryHighQuality" = 1,
+      "ABBCP_HighQuality" = 2,
+      "ABBCP_NormalQuality" = 3,
+      "ABBCP_LowQuality" = 4,
+      "ABBCP_VeryLowQuality" = 5,
+      "ABBCP_Raw" = 6,
+    }
+
+    declare const enum SAnimationBufferDataCompressionMethod {
+      "ABDCM_Invalid" = 0,
+      "ABDCM_Plain" = 1,
+      "ABDCM_Quaternion" = 2,
+      "ABDCM_QuaternionXYZSignedW" = 3,
+      "ABDCM_QuaternionXYZSignedWLastBit" = 4,
+      "ABDCM_Quaternion48b" = 5,
+      "ABDCM_Quaternion40b" = 6,
+      "ABDCM_Quaternion32b" = 7,
+      "ABDCM_Quaternion64bW" = 8,
+      "ABDCM_Quaternion48bW" = 9,
+      "ABDCM_Quaternion40bW" = 10,
+    }
+
+    declare const enum SAnimationBufferOrientationCompressionMethod {
+      "ABOCM_PackIn64bitsW" = 0,
+      "ABOCM_PackIn48bitsW" = 1,
+      "ABOCM_PackIn40bitsW" = 2,
+      "ABOCM_AsFloat_XYZW" = 3,
+      "ABOCM_AsFloat_XYZSignedW" = 4,
+      "ABOCM_AsFloat_XYZSignedWInLastBit" = 5,
+      "ABOCM_PackIn48bits" = 6,
+      "ABOCM_PackIn40bits" = 7,
+      "ABOCM_PackIn32bits" = 8,
+    }
+
+    declare const enum SAnimationBufferStreamingOption {
+      "ABSO_NonStreamable" = 0,
+      "ABSO_PartiallyStreamable" = 1,
+      "ABSO_FullyStreamable" = 2,
+    }
+
+    declare const enum Sample_Replicated_Enum {
+      "One" = 0,
+      "Two" = 1,
+      "Three" = 2,
+    }
+
+    declare const enum ScannerDataType {
+      "None" = 0,
+      "Name" = 1,
+      "Level" = 2,
+      "Health" = 3,
+      "Rarity" = 4,
+      "WeaponBasic" = 5,
+      "WeaponDetailed" = 6,
+      "BountySystem" = 7,
+      "Vulnerabilities" = 8,
+      "Faction" = 9,
+      "Attitude" = 10,
+      "SquadInfo" = 11,
+      "Resistances" = 12,
+      "Abilities" = 13,
+      "Requirements" = 14,
+      "Description" = 15,
+      "DeviceStatus" = 16,
+      "NetworkStatus" = 17,
+      "NetworkLevel" = 18,
+      "DeviceConnections" = 19,
+      "QuestEntry" = 20,
+      "VehicleName" = 21,
+      "VehicleManufacturer" = 22,
+      "VehicleProductionYears" = 23,
+      "VehicleDriveLayout" = 24,
+      "VehicleHorsepower" = 25,
+      "VehicleMass" = 26,
+      "VehicleState" = 27,
+      "VehicleInfo" = 28,
+      "QuickHackDescription" = 29,
+      "VehicleCustomizationTemplate" = 30,
+    }
+
+    declare const enum ScannerDetailTab {
+      "Data" = 0,
+      "Hacking" = 1,
+      "TwinTone" = 2,
+    }
+
+    declare const enum ScannerNetworkState {
+      "NOT_CONNECTED" = 0,
+      "NOT_BREACHED" = 1,
+      "TIER1" = 2,
+      "TIER2" = 3,
+      "TIER3" = 4,
+      "BREACHED" = 5,
+    }
+
+    declare const enum ScannerObjectType {
+      "INVALID" = 0,
+      "PUPPET" = 1,
+      "VEHICLE" = 2,
+      "DEVICE" = 3,
+      "GENERIC" = 4,
+    }
+
+    declare const enum ScreenDisplayContext {
+      "Default" = 0,
+      "Vendor" = 1,
+      "Storage" = 2,
+    }
+
+    declare const enum SecurityEventScopeSettings {
+      "GLOBAL" = 0,
+      "AREA_WHERE_PLAYER_IS" = 1,
+      "SPECIFIC_AGENTS_ONLY" = 2,
+    }
+
+    declare const enum ServerState {
+      "Inactive" = 0,
+      "Active" = 1,
+      "Damaged" = 2,
+      "Destroyed" = 3,
+    }
+
+    declare const enum SettingsType {
+      "Slider" = 0,
+      "Toggle" = 1,
+      "DropdownList" = 2,
+    }
+
+    declare const enum SignShape {
+      "RECTANGLE" = 0,
+      "ARROWLEFT" = 1,
+      "ARROWRIGHT" = 2,
+      "SQUARE" = 3,
+    }
+
+    declare const enum SignType {
+      "INFORMATION" = 0,
+      "ATTENTION" = 1,
+      "WARNING" = 2,
+    }
+
+    declare const enum SignalType {
+      "DEFAULT" = 0,
+      "REGISTRATION" = 1,
+      "UNREGISTRATION" = 2,
+    }
+
+    declare const enum SlotType {
+      "DEFAULT" = 0,
+      "HOLSTER" = 1,
+      "WEAPON" = 2,
+      "COMBAT_CYBERWARE" = 3,
+      "TOOLTIP" = 4,
+      "MISC" = 5,
+    }
+
+    declare const enum StaticShaderInputLayout {
+      "DebugVertexBase" = 0,
+      "DebugVertexUV" = 1,
+      "DebugVertexUV_Fullscreen" = 2,
+      "NoBuffers_Fullscreen" = 3,
+      "NoBuffers_PointList" = 4,
+    }
+
+    declare const enum TakeOverControlSystemInputHintSortPriority {
+      "Shoot" = 0,
+      "SpiderNextAim" = 1,
+      "Scanner" = 2,
+      "NextDevice" = 3,
+      "PreviousDevice" = 4,
+      "ZoomIn" = 5,
+      "ZoomOut" = 6,
+      "SpiderNestView" = 7,
+      "Exit" = 8,
+    }
+
+    declare const enum TestCasePhase {
+      "Setup" = 0,
+      "Body" = 1,
+      "Wrapup" = 2,
+    }
+
+    declare const enum ThrowType {
+      "Quick" = 0,
+      "Charge" = 1,
+    }
+
+    declare const enum Tier2WalkType {
+      "Undefined" = 0,
+      "Slow" = 1,
+      "Normal" = 2,
+      "Fast" = 3,
+    }
+
+    declare const enum TrafficGenDynamicImpact {
+      "Ignored" = 0,
+      "Blocking" = 1,
+    }
+
+    declare const enum TrafficGenMeshImpact {
+      "UseNavigation" = 0,
+      "ForceIgnored" = 1,
+      "ForceBlocking" = 2,
+    }
+
+    declare const enum TransferSaveAction {
+      "Export" = 0,
+      "Import" = 1,
+    }
+
+    declare const enum TransferSaveState {
+      "ExportConfirmation" = 0,
+      "ExportSpinner" = 1,
+      "ExportSuccess" = 2,
+      "ExportFailed" = 3,
+      "ImportSpinner" = 4,
+      "ImportLoading" = 5,
+      "ImportNoSave" = 6,
+      "ImportFailed" = 7,
+      "ImportNotEnoughSpace" = 8,
+    }
+
+    declare const enum TransmogSlots {
+      "Head" = 0,
+      "Face" = 1,
+      "InnerChest" = 2,
+      "OuterChest" = 3,
+      "Legs" = 4,
+      "Feet" = 5,
+    }
+
+    declare const enum TweakWeaponPose {
+      "Nothing" = 0,
+      "Position" = 1,
+      "Rotation" = 2,
+    }
+
+    declare const enum UIGameContext {
+      "Default" = 0,
+      "QuickHack" = 1,
+      "Scanning" = 2,
+      "DeviceZoom" = 3,
+      "BraindanceEditor" = 4,
+      "BraindancePlayback" = 5,
+      "VehicleMounted" = 6,
+      "ModalPopup" = 7,
+      "RadialWheel" = 8,
+      "VehicleRace" = 9,
+      "Berserk" = 10,
+      "CinematicCamera" = 11,
+      "Empty" = 12,
+      "DelamainTaxi" = 13,
+    }
+
+    declare const enum UIInGameNotificationType {
+      "ActionRestriction" = 0,
+      "CombatRestriction" = 1,
+      "CantSaveActionRestriction" = 2,
+      "CantSaveCombatRestriction" = 3,
+      "CantSaveQuestRestriction" = 4,
+      "CantSaveDeathRestriction" = 5,
+      "NotEnoughSlotsSaveResctriction" = 6,
+      "NotEnoughSpaceSaveResctriction" = 7,
+      "PhotoModeDisabledRestriction" = 8,
+      "SandevistanInCallRestriction" = 9,
+      "ExpansionInstalled" = 10,
+      "GenericNotification" = 11,
+    }
+
+    declare const enum UIInventoryItemWeaponBarsType {
+      "Ranged" = 0,
+      "Melee" = 1,
+      "Throwable" = 2,
+      "CyberwareWeapon" = 3,
+      "CyberwareRangedWeapon" = 4,
+      "InjectorHealing" = 5,
+      "InhalerHealing" = 6,
+    }
+
+    declare const enum UIItemCategory {
+      "Default" = 0,
+      "Weapon" = 1,
+      "Clothing" = 2,
+      "Grenade" = 3,
+      "Cyberware" = 4,
+      "CyberwareWeapon" = 5,
+      "Cyberdeck" = 6,
+      "Program" = 7,
+    }
+
+    declare const enum UIMenuNotificationType {
+      "VendorNotEnoughMoney" = 0,
+      "VNotEnoughMoney" = 1,
+      "VendorRequirementsNotMet" = 2,
+      "InventoryActionBlocked" = 3,
+      "CraftingNoPerks" = 4,
+      "CraftingNotEnoughMaterial" = 5,
+      "UpgradingLevelToLow" = 6,
+      "NoPerksPoints" = 7,
+      "PerksLocked" = 8,
+      "MaxLevelPerks" = 9,
+      "NoAttributePoints" = 10,
+      "InCombat" = 11,
+      "InCombatExplicit" = 12,
+      "CraftingQuickhack" = 13,
+      "CraftingAmmoCap" = 14,
+      "PlayerReqLevelToLow" = 15,
+      "InventoryNoFreeSlot" = 16,
+      "FaceUnequipBlocked" = 17,
+      "TutorialUnequipBlocked" = 18,
+      "NoJunkToDisassemble" = 19,
+    }
+
+    declare const enum UIObjectiveEntryType {
+      "Invalid" = 0,
+      "Quest" = 1,
+      "Objective" = 2,
+      "SubObjective" = 3,
+    }
+
+    declare const enum UpdateBucketEnum {
+      "Vehicle" = 0,
+      "Character" = 1,
+      "AttachedObject" = 2,
+    }
+
+    declare const enum VehicleQuestEngineLockState {
+      "DontToggleIfLocked" = 0,
+      "Lock" = 1,
+      "Unlock" = 2,
+    }
+
+    declare const enum VehicleVisualCustomizationType {
+      "Generic" = 0,
+      "Unique" = 1,
+    }
+
+    declare const enum VehicleVisualCustomizationWidgetCarPart {
+      "Default" = 0,
+      "Body" = 1,
+      "Hood" = 2,
+      "Door" = 3,
+      "Bumper" = 4,
+      "Spoiler" = 5,
+      "SpoilerHidden" = 6,
+    }
+
+    declare const enum VendorConfirmationPopupType {
+      "Default" = 0,
+      "ExpensiveItem" = 1,
+      "EquippedItem" = 2,
+      "StashEquippedItem" = 3,
+      "BuyAndEquipCyberware" = 4,
+      "BuyNotEquipableCyberware" = 5,
+      "SellCyberware" = 6,
+      "DisassembeIconic" = 7,
+    }
+
+    declare const enum VendorSellJunkActionType {
+      "Sell" = 0,
+      "Disassemble" = 1,
+    }
+
+    declare const enum VisualState {
+      "OFF" = 0,
+      "RUNNING" = 1,
+      "MALFUNCTIONING" = 2,
+      "ON" = 3,
+    }
+
+    declare const enum WeaponBarType {
+      "AttackSpeed" = 0,
+      "DamagePerHit" = 1,
+      "ReloadSpeed" = 2,
+      "Range" = 3,
+      "Handling" = 4,
+      "Stamina" = 5,
+      "RangedCount" = 6,
+      "MeleeAttackSpeed" = 7,
+      "MeleeDamagePerHit" = 8,
+      "MeleeStamina" = 9,
+      "ThrowableEffectiveRange" = 10,
+      "ThrowableReturnTime" = 11,
+      "MeleeCount" = 12,
+      "CyberwareAttackSpeed" = 13,
+      "CyberwareDamagePerHit" = 14,
+      "CyberwareCount" = 15,
+      "Healing" = 16,
+      "HealingOverTime" = 17,
+      "HealingCount" = 18,
+      "Invalid" = -1,
+    }
+
+    declare const enum WeaponBarTypeGroup {
+      "AttackSpeed" = 0,
+      "DamagePerHit" = 1,
+      "Range" = 2,
+      "ReloadSpeed" = 3,
+      "Stamina" = 4,
+      "Handling" = 5,
+      "ReturnTime" = 6,
+      "Healing" = 7,
+      "HealingOverTime" = 8,
+      "Invalid" = -1,
+    }
+
+    declare const enum WeaponPartType {
+      "Scope" = 0,
+      "Magazine" = 1,
+      "Silencer" = 2,
+    }
+
+    declare const enum WeaponType {
+      "Ranged" = 0,
+      "Melee" = 1,
+      "Count" = 2,
+      "Invalid" = -1,
+    }
+
+    declare const enum WorkspotConditionOperators {
+      "OR" = 0,
+      "AND" = 1,
+    }
+
+    declare const enum WorkspotWeaponConditionEnum {
+      "None" = 0,
+      "Any" = 1,
+      "Ranged" = 2,
+      "OneHandedRanged" = 3,
+      "Melee" = 4,
+      "MeleeCyberware" = 5,
+      "LMG" = 6,
+      "HMG" = 7,
+    }
+
+    declare const enum WorldMapTooltipType {
+      "Default" = 0,
+      "Police" = 1,
+    }
+
+    declare const enum ZoneRelativeToVehicle {
+      "Right" = 0,
+      "Left" = 1,
+      "Middle" = 2,
+    }
+
+    declare const enum aimTypeEnum {
+      "AimIn" = 0,
+      "AimOut" = 1,
+      "Invalid" = 2,
+    }
+
+    declare const enum animAimState {
+      "Unaimed" = 0,
+      "Aimed" = 1,
+    }
+
+    declare const enum animAnimEventGenderAlt {
+      "None" = 0,
+      "Female" = 1,
+      "Male" = 2,
+    }
+
+    declare const enum animAnimNode_SetDrivenKey_InternalsEChannelType {
+      "FloatTrack" = 0,
+      "TransX" = 1,
+      "TransY" = 2,
+      "TransZ" = 3,
+      "RotEulZ_Pitch" = 4,
+      "RotEulX_Roll" = 5,
+      "RotEulY_Yaw" = 6,
+      "ScaleX" = 7,
+      "ScaleY" = 8,
+      "ScaleZ" = 9,
+      "RotQuatX" = 10,
+      "RotQuatY" = 11,
+      "RotQuatZ" = 12,
+      "RotQuatW" = 13,
+    }
+
+    declare const enum animAnimStateInterpolationType {
+      "Linear" = 0,
+      "EaseIn" = 1,
+      "EaseOut" = 2,
+      "EaseInOut" = 3,
+    }
+
+    declare const enum animAnimationType {
+      "Normal" = 0,
+      "AdditiveFromRefPose" = 1,
+      "AdditiveFromFirstFrame" = 2,
+      "Additive" = 3,
+      "AdditiveWithoutFirstFrame" = 4,
+    }
+
+    declare const enum animAxis {
+      "X" = 0,
+      "Y" = 1,
+      "Z" = 2,
+      "NegativeX" = 3,
+      "NegativeY" = 4,
+      "NegativeZ" = 5,
+    }
+
+    declare const enum animClampType {
+      "None" = 0,
+      "Clamp" = 1,
+      "WrappedClamp" = 2,
+    }
+
+    declare const enum animCompareFunc {
+      "Equal" = 0,
+      "NotEqual" = 1,
+      "Less" = 2,
+      "LessEqual" = 3,
+      "Greater" = 4,
+      "GreaterEqual" = 5,
+    }
+
+    declare const enum animConstraintWeightMode {
+      "Static" = 0,
+      "FloatTrack" = 1,
+    }
+
+    declare const enum animCoverAction {
+      "NoAction" = 0,
+      "LeanLeft" = 1,
+      "LeanRight" = 2,
+      "StepOutLeft" = 3,
+      "StepOutRight" = 4,
+      "LeanOver" = 5,
+      "StepUp" = 6,
+      "EnterCover" = 7,
+      "SlideTo" = 8,
+      "Vault" = 9,
+      "LeaveCover" = 10,
+      "BlindfireLeft" = 11,
+      "BlindfireRight" = 12,
+      "BlindfireOver" = 13,
+      "OverheadStepOutLeft" = 14,
+      "OverheadStepOutRight" = 15,
+      "OverheadStepUp" = 16,
+    }
+
+    declare const enum animCoverBehavior {
+      "Idle" = 0,
+      "PreAction" = 1,
+      "DoAction" = 2,
+      "PostAction" = 3,
+    }
+
+    declare const enum animCoverStance {
+      "None" = 0,
+      "LowLeft" = 1,
+      "HighLeft" = 2,
+      "LowRight" = 3,
+      "HighRight" = 4,
+    }
+
+    declare const enum animCoverState {
+      "LowCover" = 1,
+      "HighCover" = 2,
+    }
+
+    declare const enum animDyngConstraintLinkType {
+      "KeepFixedDistance" = 0,
+      "KeepVariableDistance" = 1,
+      "Greater" = 2,
+      "Closer" = 3,
+    }
+
+    declare const enum animDyngParticleProjectionType {
+      "Disabled" = 0,
+      "ShortestPath" = 1,
+      "Directed" = 2,
+    }
+
+    declare const enum animEAnimGraphAdditiveType {
+      "AGAT_Local" = 0,
+      "AGAT_Ref" = 1,
+    }
+
+    declare const enum animEAnimGraphCompareFunc {
+      "AGCF_Equal" = 0,
+      "AGCF_NotEqual" = 1,
+      "AGCF_Less" = 2,
+      "AGCF_LessEqual" = 3,
+      "AGCF_Greater" = 4,
+      "AGCF_GreaterEqual" = 5,
+    }
+
+    declare const enum animEAnimGraphLogicOp {
+      "AGLO_Or" = 0,
+      "AGLO_And" = 1,
+    }
+
+    declare const enum animEAnimGraphMathInterpolation {
+      "AGMI_LINEAR" = 0,
+      "AGMI_SIN" = 1,
+      "AGMI_BEZIER" = 2,
+    }
+
+    declare const enum animEAnimGraphMathOp {
+      "AGMO_Add" = 0,
+      "AGMO_Subtract" = 1,
+      "AGMO_Multiply" = 2,
+      "AGMO_Divide" = 3,
+      "AGMO_SafeDivide" = 4,
+      "AGMO_ATan" = 5,
+      "AGMO_AngleDiff" = 6,
+      "AGMO_Length" = 7,
+      "AGMO_Abs" = 8,
+    }
+
+    declare const enum animEBlendFromPoseMode {
+      "BFPM_AlwaysOnActivation" = 0,
+      "BFPM_RequestedByTag" = 1,
+    }
+
+    declare const enum animEBlendTracksMode {
+      "AGBT_BasePose" = 0,
+      "AGBT_Interpolate" = 1,
+      "AGBT_Add" = 2,
+    }
+
+    declare const enum animEBlendTypeLBC {
+      "Linear" = 0,
+      "Smoothstep" = 1,
+      "CustomCurve" = 2,
+    }
+
+    declare const enum animEDirectionToEuler {
+      "Pitch" = 0,
+      "Yaw" = 1,
+      "Roll" = 2,
+    }
+
+    declare const enum animEFootPhase {
+      "RightUp" = 0,
+      "RightForward" = 1,
+      "LeftUp" = 2,
+      "LeftForward" = 3,
+      "NotConsidered" = 4,
+    }
+
+    declare const enum animEInterpolationType {
+      "Lerp" = 0,
+      "Slerp" = 1,
+    }
+
+    declare const enum animEMotionExtractionCompressionType {
+      "EMECT_LINEAR" = 6,
+      "EMECT_SPLINE_LOW" = 4,
+      "EMECT_SPLINE_MID" = 2,
+      "EMECT_SPLINE_HIGH" = 5,
+      "EMECT_UNCOMPRESSED" = 0,
+      "EMECT_UNCOMPRESSED_ALL_ANGLES" = 3,
+      "EMECT_UNCOMPRESSED_2D" = 7,
+      "EMECT_UNCOMPRESSED_3D_FALLBACKING" = 8,
+      "EMECT_UNCOMPRESSED_ALL_ANGLES_FALLBACKING" = 9,
+    }
+
+    declare const enum animEResetTypeNode {
+      "RT_Reference" = 0,
+      "RT_Indentity" = 1,
+    }
+
+    declare const enum animESpace {
+      "Local" = 0,
+      "Model" = 1,
+      "World" = 2,
+    }
+
+    declare const enum animESpaceMW {
+      "Model" = 0,
+      "World" = 1,
+    }
+
+    declare const enum animETransformAxis {
+      "X_Axis" = 1,
+      "Y_Axis" = 2,
+      "Z_Axis" = 4,
+    }
+
+    declare const enum animEVectorWsToMsType {
+      "Position" = 0,
+      "Direction" = 1,
+    }
+
+    declare const enum animEventFilterType {
+      "Default" = 0,
+      "AlwaysCollect" = 1,
+      "Solo" = 2,
+      "Mute" = 3,
+    }
+
+    declare const enum animEventSide {
+      "Left" = 0,
+      "Right" = 1,
+    }
+
+    declare const enum animFacialEmotionTransitionType {
+      "Natural" = 0,
+      "Fast" = 1,
+      "Blend" = 2,
+      "Instant" = 3,
+      "Custom" = 4,
+    }
+
+    declare const enum animFloatTrackOperationType {
+      "Override" = 0,
+      "Multiply" = 1,
+      "Add" = 2,
+      "Subtract" = 3,
+      "SubtractSwapped" = 4,
+      "WeightComplement" = 5,
+    }
+
+    declare const enum animHitReactionType {
+      "None" = 0,
+      "Twitch" = 1,
+      "Impact" = 2,
+      "Stagger" = 3,
+      "Pain" = 4,
+      "Knockdown" = 5,
+      "Ragdoll" = 6,
+      "Death" = 7,
+      "Block" = 8,
+      "GuardBreak" = 9,
+      "Parry" = 10,
+      "Bump" = 11,
+    }
+
+    declare const enum animLeg {
+      "Left" = 0,
+      "Right" = 1,
+    }
+
+    declare const enum animLocoStateType {
+      "LS_Pre" = 0,
+      "LS_Loop" = 1,
+    }
+
+    declare const enum animLocomotionDecision {
+      "LD_None" = 0,
+      "LD_Stop" = 1,
+      "LD_MoveTo" = 2,
+      "LD_Move" = 3,
+    }
+
+    declare const enum animLocomotion_AnimType {
+      "None" = 0,
+      "idle_stand" = 1,
+      "idle_to_idle_0" = 2,
+      "idle_to_idle_090" = 3,
+      "idle_to_idle_270" = 4,
+      "idle_to_idle_180_l" = 5,
+      "idle_to_idle_180_r" = 6,
+      "walk_0" = 7,
+      "walk_left" = 8,
+      "walk_right" = 9,
+      "jog_0" = 10,
+      "jog_left" = 11,
+      "jog_right" = 12,
+      "sprint_0" = 13,
+      "sprint_left" = 14,
+      "sprint_right" = 15,
+      "idle_to_walk_0" = 16,
+      "idle_to_jog_0" = 17,
+      "idle_to_sprint_0" = 18,
+      "walk_to_idle_0" = 19,
+      "jog_to_idle_0" = 20,
+      "sprint_to_idle_0" = 21,
+      "walk_to_idle_0_l_hard" = 22,
+      "walk_to_idle_0_r_hard" = 23,
+      "jog_to_idle_0_l_hard" = 24,
+      "jog_to_idle_0_r_hard" = 25,
+      "sprint_to_idle_0_l_hard" = 26,
+      "sprint_to_idle_0_r_hard" = 27,
+      "walk_to_jog_0" = 28,
+      "walk_to_sprint_0" = 29,
+      "jog_to_walk_0" = 30,
+      "jog_to_sprint_0" = 31,
+      "sprint_to_walk_0" = 32,
+      "sprint_to_jog_0" = 33,
+      "idle_turn_to_walk_090" = 34,
+      "idle_turn_to_walk_180_l" = 35,
+      "idle_turn_to_walk_180_r" = 36,
+      "idle_turn_to_walk_270" = 37,
+      "idle_turn_to_jog_090" = 38,
+      "idle_turn_to_jog_180_l" = 39,
+      "idle_turn_to_jog_180_r" = 40,
+      "idle_turn_to_jog_270" = 41,
+      "idle_turn_to_sprint_090" = 42,
+      "idle_turn_to_sprint_180_l" = 43,
+      "idle_turn_to_sprint_180_r" = 44,
+      "idle_turn_to_sprint_270" = 45,
+      "walk_180" = 46,
+      "jog_180" = 47,
+      "walk_0_to_walk_180_l" = 48,
+      "walk_0_to_walk_180_r" = 49,
+      "walk_180_to_walk_0_l" = 50,
+      "walk_180_to_walk_0_r" = 51,
+      "idle_to_walk_180" = 52,
+      "idle_to_jog_180" = 53,
+      "walk_to_idle_180" = 54,
+      "jog_to_idle_180" = 55,
+      "jog_0_to_jog_180_l" = 56,
+      "jog_0_to_jog_180_r" = 57,
+      "jog_180_to_jog_0_l" = 58,
+      "jog_180_to_jog_0_r" = 59,
+      "jog_to_sprint_180" = 60,
+      "walk_to_jog_180" = 61,
+      "jog_to_walk_180" = 62,
+      "idle_to_walk_090" = 63,
+      "idle_to_walk_270" = 64,
+      "walk_090" = 65,
+      "walk_270" = 66,
+      "walk_to_idle_090" = 67,
+      "walk_to_idle_270" = 68,
+      "walk_0_to_walk_090" = 69,
+      "walk_0_to_walk_270" = 70,
+      "walk_180_to_walk_090" = 71,
+      "walk_180_to_walk_270" = 72,
+      "walk_090_to_walk_0" = 73,
+      "walk_270_to_walk_0" = 74,
+      "walk_090_to_walk_180" = 75,
+      "walk_270_to_walk_180" = 76,
+      "walk_090_to_walk_270_l" = 77,
+      "walk_090_to_walk_270_r" = 78,
+      "walk_270_to_walk_090_l" = 79,
+      "walk_270_to_walk_090_r" = 80,
+      "walk_0_down_stairs" = 81,
+      "walk_0_up_stairs" = 82,
+      "walk_0_down_slope" = 83,
+      "walk_0_up_slope" = 84,
+      "jog_0_down_stairs" = 85,
+      "jog_0_up_stairs" = 86,
+      "jog_0_down_slope" = 87,
+      "jog_0_up_slope" = 88,
+      "sprint_0_down_stairs" = 89,
+      "sprint_0_up_stairs" = 90,
+      "sprint_0_down_slope" = 91,
+      "sprint_0_up_slope" = 92,
+      "walk_090_up_stairs" = 93,
+      "walk_090_down_stairs" = 94,
+      "walk_270_up_stairs" = 95,
+      "walk_270_down_stairs" = 96,
+      "walk_180_up_stairs" = 97,
+      "walk_180_down_stairs" = 98,
+      "idle_step_single_0" = 99,
+      "idle_step_single_090" = 100,
+      "idle_step_single_180" = 101,
+      "idle_step_single_270" = 102,
+    }
+
+    declare const enum animLocomotion_Style {
+      "LS_Idle" = 0,
+      "LS_Rotation" = 1,
+      "LS_Walk" = 2,
+      "LS_Jog" = 3,
+      "LS_Sprint" = 4,
+      "LS_Any" = 5,
+    }
+
+    declare const enum animLookAtChestMode {
+      "Default" = 0,
+      "NoHips" = 1,
+      "Horizontal" = 2,
+      "HorizontalNoHips" = 3,
+      "ENUM_SIZE" = 4,
+    }
+
+    declare const enum animLookAtEyesMode {
+      "Default" = 0,
+      "Horizontal" = 1,
+      "ENUM_SIZE" = 2,
+    }
+
+    declare const enum animLookAtHeadMode {
+      "Default" = 0,
+      "Horizontal" = 1,
+      "ENUM_SIZE" = 2,
+    }
+
+    declare const enum animLookAtLeftHandedMode {
+      "Default" = 0,
+      "Horizontal" = 1,
+      "ENUM_SIZE" = 2,
+    }
+
+    declare const enum animLookAtLimitDegreesType {
+      "Narrow" = 0,
+      "Normal" = 1,
+      "Wide" = 2,
+      "None" = 3,
+    }
+
+    declare const enum animLookAtLimitDistanceType {
+      "Short" = 0,
+      "Normal" = 1,
+      "Long" = 2,
+      "None" = 3,
+    }
+
+    declare const enum animLookAtRightHandedMode {
+      "Default" = 0,
+      "Horizontal" = 1,
+      "ENUM_SIZE" = 2,
+    }
+
+    declare const enum animLookAtStatus {
+      "Active" = 2,
+      "LimitReached" = 4,
+      "TransitionInProgress" = 8,
+    }
+
+    declare const enum animLookAtStyle {
+      "VerySlow" = 0,
+      "Slow" = 1,
+      "Normal" = 2,
+      "Fast" = 3,
+      "VeryFast" = 4,
+    }
+
+    declare const enum animLookAtTwoHandedMode {
+      "Default" = 0,
+      "Horizontal" = 1,
+      "ENUM_SIZE" = 2,
+    }
+
+    declare const enum animMotionTableAction {
+      "MTA_None" = 0,
+      "MTA_Start" = 1,
+      "MTA_Stop" = 2,
+      "MTA_Move" = 3,
+      "MTA_TurnInPlace" = 4,
+      "MTA_TransitionToBackward" = 5,
+      "MTA_BackwardMove" = 6,
+      "MTA_TransitionFromBackward" = 7,
+      "MTA_StrafeLeft" = 8,
+      "MTA_StrafeRight" = 9,
+      "MTA_ForwardToStrafeLeft" = 10,
+      "MTA_ForwardToStrafeRight" = 11,
+      "MTA_StrafeLeftToForward" = 12,
+      "MTA_StrafeRightToForward" = 13,
+      "MTA_BackwardToStrafeLeft" = 14,
+      "MTA_BackwardToStrafeRight" = 15,
+      "MTA_StrafeLeftToBackward" = 16,
+      "MTA_StrafeRightToBackward" = 17,
+      "MTA_BackwardStart" = 18,
+      "MTA_BackwardStop" = 19,
+      "MTA_StrafeLeftStart" = 20,
+      "MTA_StrafeLeftStop" = 21,
+      "MTA_StrafeRightStart" = 22,
+      "MTA_StrafeRightStop" = 23,
+      "MTA_ForwardToWalk" = 24,
+      "MTA_ForwardToJog" = 25,
+      "MTA_ForwardToSprint" = 26,
+      "MTA_HardStopLeftLeg" = 27,
+      "MTA_HardStopRightLeg" = 28,
+      "MTA_RepositionForward" = 29,
+      "MTA_RepositionLeft" = 30,
+      "MTA_RepositionRight" = 31,
+      "MTA_RepositionBackward" = 32,
+      "MTA_Custom" = 33,
+      "MTA_CrowdMove" = 34,
+      "MTA_CrowdMoveSlopes" = 35,
+      "MTA_CrowdMoveStairs" = 36,
+      "MTA_StrafeLeftToStrafeRight" = 37,
+      "MTA_StrafeRightToStrafeLeft" = 38,
+      "MTA_CrowdRelaxedStop" = 39,
+      "MTA_CrowdHardStop" = 40,
+      "MTA_CrowdSprintStop" = 41,
+      "MTA_CrowdFleeStopFront" = 42,
+      "MTA_CrowdFleeStopBack" = 43,
+      "MTA_CrowdRelaxedStart" = 44,
+      "MTA_CrowdFleeStartIdle" = 45,
+      "MTA_CrowdFleeStartMotion" = 46,
+      "MTA_CrowdDirectionalStartFast" = 47,
+    }
+
+    declare const enum animMotionTableType {
+      "MTT_None" = 0,
+      "MTT_Walk" = 1,
+      "MTT_Jog" = 2,
+      "MTT_Sprint" = 3,
+      "MTT_Custom" = 4,
+    }
+
+    declare const enum animMotionTag {
+      "MT_Invalid" = 0,
+      "Walk" = 1,
+      "Jog" = 2,
+      "Sprint" = 3,
+    }
+
+    declare const enum animNPCVehicleDeathType {
+      "Default" = 0,
+      "Relaxed" = 1,
+      "Combat" = 2,
+      "Ragdoll" = 3,
+    }
+
+    declare const enum animNodeProfileTimerMode {
+      "Begin" = 0,
+      "End" = 1,
+    }
+
+    declare const enum animParentStaticSwitchBranch {
+      "None" = 0,
+      "TrueBranch" = 1,
+      "FalseBranch" = 2,
+    }
+
+    declare const enum animPendulumConstraintType {
+      "Cone" = 0,
+      "HingePlane" = 1,
+      "HalfCone" = 2,
+    }
+
+    declare const enum animPendulumProjectionType {
+      "Disabled" = 0,
+      "ShortestPathRotational" = 1,
+      "DirectedRotational" = 2,
+    }
+
+    declare const enum animPositionProjectionType {
+      "Disabled" = 0,
+      "ShortestPath" = 1,
+      "Directional" = 2,
+    }
+
+    declare const enum animQuaternionInterpolationType {
+      "Linear" = 0,
+      "Spherical" = 1,
+    }
+
+    declare const enum animSetBoneTransformEntry_SetMethod {
+      "NoSnapping" = 0,
+      "WholeTransform" = 1,
+      "TranslationOnly" = 2,
+      "RotationOnly" = 3,
+    }
+
+    declare const enum animSpringProjectionType {
+      "Disabled" = 0,
+      "ShortestPath" = 1,
+    }
+
+    declare const enum animStackTransformsExtender_SnapToBoneMethod {
+      "NoSnapping" = 0,
+      "WholeTransform" = 1,
+      "TranslationOnly" = 2,
+      "RotationOnly" = 3,
+    }
+
+    declare const enum animStanceState {
+      "Stand" = 0,
+      "Crouch" = 1,
+      "Kneel" = 2,
+      "Cover" = 3,
+      "Swim" = 4,
+      "Crawl" = 5,
+    }
+
+    declare const enum animStateTag {
+      "ST_Invalid" = 0,
+      "Idle" = 1,
+      "Cover" = 2,
+    }
+
+    declare const enum animTransformChannel {
+      "PosX" = 0,
+      "PosY" = 1,
+      "PosZ" = 2,
+      "RotX" = 3,
+      "RotY" = 4,
+      "RotZ" = 5,
+      "ScaleX" = 6,
+      "ScaleY" = 7,
+      "ScaleZ" = 8,
+    }
+
+    declare const enum animVectorCoordinateType {
+      "X" = 0,
+      "Y" = 1,
+      "Z" = 2,
+      "W" = 3,
+    }
+
+    declare const enum animWeaponOwnerType {
+      "Player" = 0,
+      "NPC" = 1,
+      "None" = 2,
+    }
+
+    declare const enum animcompressionBufferTypePreset {
+      "Spline" = 0,
+      "SIMD" = 1,
+      "TestRaw" = 2,
+    }
+
+    declare const enum animcompressionFrameratePreset {
+      "USE_30_HZ" = 0,
+      "USE_15_HZ" = 1,
+      "USE_10_HZ" = 2,
+    }
+
+    declare const enum animcompressionQualityPreset {
+      "CINEMATIC_HIGH" = 3,
+      "HIGH" = 0,
+      "MID" = 1,
+      "LOW" = 2,
+    }
+
+    declare const enum audioAdvertIndoorFilter {
+      "Always" = 0,
+      "OnlyIndoor" = 1,
+      "OnlyOutdoor" = 2,
+    }
+
+    declare const enum audioAmbientGroupingVariant {
+      "AllEntities" = 0,
+      "IndoorEntities" = 1,
+      "OutdoorEntities" = 2,
+      "AllEntitiesAllDirections" = 3,
+      "IndoorAllDirections" = 4,
+      "OutdoorAllDirections" = 5,
+      "SameRoomEntities" = 6,
+      "DifferentRoomEntities" = 7,
+      "DistanceExclusion" = 8,
+    }
+
+    declare const enum audioAudioEventFlags {
+      "NoEventFlags" = 0,
+      "SloMoOnly" = 1,
+      "Music" = 2,
+      "Unique" = 4,
+      "Metadata" = 8,
+    }
+
+    declare const enum audioAudioVehicleCurve {
+      "ThrottleInput" = 0,
+      "RPM" = 1,
+      "Gear" = 2,
+    }
+
+    declare const enum audioBreathingTransitionComparator {
+      "Less" = 0,
+      "Equal" = 1,
+      "Greater" = 2,
+    }
+
+    declare const enum audioBreathingTransitionType {
+      "PlayerSpeed" = 0,
+      "Event" = 1,
+      "AllEventTags" = 2,
+      "AnyEventTag" = 3,
+    }
+
+    declare const enum audioClassificationMethod {
+      "HasAnyTag" = 0,
+      "HasAllTags" = 1,
+      "NameEquals" = 2,
+      "EventNameEquals" = 3,
+      "HasAllEventTags" = 4,
+    }
+
+    declare const enum audioConversationSavingStrategy {
+      "Default" = 0,
+      "Save" = 1,
+      "DontSave" = 2,
+    }
+
+    declare const enum audioDynamicReverbType {
+      "Dynamic" = 0,
+      "StaticSmall" = 1,
+      "EnvironmentSmallStaticMedium" = 2,
+      "DynamicSource" = 3,
+    }
+
+    declare const enum audioESoundCurveType {
+      "Log3" = 0,
+      "Sine" = 1,
+      "InversedSCurve" = 3,
+      "Linear" = 4,
+      "SCurve" = 5,
+      "Exp1" = 6,
+      "ReciprocalOfSineCurve" = 7,
+      "Exp3" = 8,
+    }
+
+    declare const enum audioEchoPositionType {
+      "DynamicEnvironment" = 0,
+      "Simple" = 1,
+    }
+
+    declare const enum audioEnemyState {
+      "InCombat" = 0,
+      "Alerted" = 1,
+      "Afraid" = 2,
+      "Alive" = 3,
+      "Dead" = 4,
+    }
+
+    declare const enum audioEntityEmitterContextType {
+      "Entity Emitter" = 0,
+      "Radio Emitter" = 2,
+    }
+
+    declare const enum audioEventActionType {
+      "Play" = 0,
+      "PlayAnimation" = 1,
+      "SetParameter" = 2,
+      "StopSound" = 3,
+      "SetSwitch" = 4,
+      "StopTagged" = 5,
+      "PlayExternal" = 6,
+      "Tag" = 7,
+      "Untag" = 8,
+      "SetAppearanceName" = 9,
+      "SetEntityName" = 10,
+      "AddContainerStreamingPrefetch" = 11,
+      "RemoveContainerStreamingPrefetch" = 12,
+    }
+
+    declare const enum audioFoleyActionType {
+      "FastHeavy" = 0,
+      "FastMedium" = 1,
+      "FastLight" = 2,
+      "NormalHeavy" = 3,
+      "NormalMedium" = 4,
+      "NormalLight" = 5,
+      "SlowHeavy" = 6,
+      "SlowMedium" = 7,
+      "SlowLight" = 8,
+      "Walk" = 9,
+      "Run" = 10,
+    }
+
+    declare const enum audioFoleyItemPriority {
+      "P0" = 0,
+      "P1" = 1,
+      "P2" = 2,
+      "P3" = 3,
+      "P4" = 4,
+      "P5" = 5,
+      "P6" = 6,
+    }
+
+    declare const enum audioFoleyItemType {
+      "Jacket" = 0,
+      "Top" = 1,
+      "Bottom" = 2,
+      "Jewelry" = 3,
+    }
+
+    declare const enum audioGameplayTier {
+      "Undefined" = 0,
+      "Tier1_FullGameplay" = 1,
+      "Tier2_StagedGameplay" = 2,
+      "Tier3_LimitedGameplay" = 3,
+      "Tier4_FPPCinematic" = 4,
+      "Tier5_Cinematic" = 5,
+    }
+
+    declare const enum audioLimitedSoundType {
+      "Locomotion" = 0,
+      "Footsteps" = 1,
+      "Impact" = 2,
+      "Ragdoll" = 3,
+      "Physics" = 4,
+      "Destructibles" = 5,
+      "Ono" = 6,
+      "VO" = 7,
+    }
+
+    declare const enum audioMaterialHardnessOverride {
+      "None" = 0,
+      "SetAsSoft" = 1,
+      "SetAsSolid" = 2,
+      "SetAsHard" = 3,
+    }
+
+    declare const enum audioMeleeHitPerMaterialType {
+      "Light" = 0,
+      "Light_Hard" = 1,
+      "Light_Soft" = 2,
+      "Light_Solid" = 3,
+      "Light_Flesh" = 4,
+      "Light_Flesh_Head" = 5,
+      "Light_Robot" = 6,
+      "Light_Robot_Head" = 7,
+      "Light_Android" = 8,
+      "Light_Android_Head" = 9,
+      "Light_Mech" = 10,
+      "Light_Mech_Head" = 11,
+      "Light_Water" = 12,
+      "Normal" = 13,
+      "Normal_Hard" = 14,
+      "Normal_Soft" = 15,
+      "Normal_Solid" = 16,
+      "Normal_Flesh" = 17,
+      "Normal_Flesh_Head" = 18,
+      "Normal_Robot" = 19,
+      "Normal_Robot_Head" = 20,
+      "Normal_Android" = 21,
+      "Normal_Android_Head" = 22,
+      "Normal_Mech" = 23,
+      "Normal_Mech_Head" = 24,
+      "Normal_Water" = 25,
+      "Heavy" = 26,
+      "Heavy_Hard" = 27,
+      "Heavy_Soft" = 28,
+      "Heavy_Solid" = 29,
+      "Heavy_Flesh" = 30,
+      "Heavy_Flesh_Head" = 31,
+      "Heavy_Robot" = 32,
+      "Heavy_Robot_Head" = 33,
+      "Heavy_Android" = 34,
+      "Heavy_Android_Head" = 35,
+      "Heavy_Mech" = 36,
+      "Heavy_Mech_Head" = 37,
+      "Heavy_Water" = 38,
+      "Slash" = 39,
+      "Slash_Hard" = 40,
+      "Slash_Soft" = 41,
+      "Slash_Solid" = 42,
+      "Slash_Flesh" = 43,
+      "Slash_Flesh_Head" = 44,
+      "Slash_Robot" = 45,
+      "Slash_Robot_Head" = 46,
+      "Slash_Android" = 47,
+      "Slash_Android_Head" = 48,
+      "Slash_Mech" = 49,
+      "Slash_Mech_Head" = 50,
+      "Slash_Water" = 51,
+      "Cut" = 52,
+      "Cut_Hard" = 53,
+      "Cut_Soft" = 54,
+      "Cut_Solid" = 55,
+      "Cut_Flesh" = 56,
+      "Cut_Flesh_Head" = 57,
+      "Cut_Robot" = 58,
+      "Cut_Robot_Head" = 59,
+      "Cut_Android" = 60,
+      "Cut_Android_Head" = 61,
+      "Cut_Mech" = 62,
+      "Cut_Mech_Head" = 63,
+      "Cut_Water" = 64,
+      "Stab" = 65,
+      "Stab_Hard" = 66,
+      "Stab_Soft" = 67,
+      "Stab_Solid" = 68,
+      "Stab_Flesh" = 69,
+      "Stab_Flesh_Head" = 70,
+      "Stab_Robot" = 71,
+      "Stab_Robot_Head" = 72,
+      "Stab_Android" = 73,
+      "Stab_Android_Head" = 74,
+      "Stab_Mech" = 75,
+      "Stab_Mech_Head" = 76,
+      "Stab_Water" = 77,
+      "Finisher" = 78,
+      "Finisher_Hard" = 79,
+      "Finisher_Soft" = 80,
+      "Finisher_Solid" = 81,
+      "Finisher_Flesh" = 82,
+      "Finisher_Flesh_Head" = 83,
+      "Finisher_Robot" = 84,
+      "Finisher_Robot_Head" = 85,
+      "Finisher_Android" = 86,
+      "Finisher_Android_Head" = 87,
+      "Finisher_Mech" = 88,
+      "Finisher_Mech_Head" = 89,
+      "Finisher_Water" = 90,
+      "Weak" = 91,
+      "Weak_Hard" = 92,
+      "Weak_Soft" = 93,
+      "Weak_Solid" = 94,
+      "Weak_Flesh" = 95,
+      "Weak_Flesh_Head" = 96,
+      "Weak_Robot" = 97,
+      "Weak_Robot_Head" = 98,
+      "Weak_Android" = 99,
+      "Weak_Android_Head" = 100,
+      "Weak_Mech" = 101,
+      "Weak_Mech_Head" = 102,
+      "Weak_Water" = 103,
+      "Throw" = 104,
+      "Throw_Hard" = 105,
+      "Throw_Soft" = 106,
+      "Throw_Solid" = 107,
+      "Throw_Flesh" = 108,
+      "Throw_Flesh_Head" = 109,
+      "Throw_Robot" = 110,
+      "Throw_Robot_Head" = 111,
+      "Throw_Android" = 112,
+      "Throw_Android_Head" = 113,
+      "Throw_Mech" = 114,
+      "Throw_Mech_Head" = 115,
+      "Throw_Water" = 116,
+    }
+
+    declare const enum audioMeleeHitType {
+      "Light" = 0,
+      "Normal" = 1,
+      "Heavy" = 2,
+      "Slash" = 3,
+      "Cut" = 4,
+      "Stab" = 5,
+      "Finisher" = 6,
+      "Weak" = 7,
+      "Throw" = 8,
+    }
+
+    declare const enum audioMeleeMaterialType {
+      "Hard" = 0,
+      "Soft" = 1,
+      "Solid" = 2,
+      "Flesh" = 3,
+      "Robot" = 4,
+      "Android" = 5,
+      "Mech" = 6,
+      "Water" = 7,
+    }
+
+    declare const enum audioMixParamsAction {
+      "Mull" = 0,
+      "MullPercent" = 1,
+      "MullComplemtement" = 2,
+      "MullComplemtementPercent" = 3,
+      "Add" = 4,
+    }
+
+    declare const enum audioMixingActionType {
+      "VoContext" = 0,
+      "EmitterTag" = 1,
+      "SoundTag" = 2,
+      "ActorName" = 3,
+      "DisableCombatVo" = 4,
+      "GlobalParameter" = 5,
+    }
+
+    declare const enum audioMusicSyncType {
+      "Beat" = 1,
+      "Bar" = 0,
+      "Grid" = 2,
+      "User" = 3,
+      "EntryCue" = 5,
+      "ExitCue" = 6,
+      "Transition" = 4,
+    }
+
+    declare const enum audioNumberComparer {
+      "Equal" = 0,
+      "NotEqual" = 1,
+      "Greater" = 2,
+      "GreaterOrEqual" = 3,
+      "Lower" = 4,
+      "LowerOrEqual" = 5,
+    }
+
+    declare const enum audioNumberOperation {
+      "SetEqual" = 0,
+      "Add" = 1,
+      "Subtract" = 2,
+      "MultiplyBy" = 3,
+      "DivideBy" = 4,
+    }
+
+    declare const enum audioObstructionTestPattern {
+      "Direct" = 0,
+      "Cone" = 1,
+    }
+
+    declare const enum audioObstructionTestType {
+      "SingleShot" = 0,
+      "Continuous" = 1,
+    }
+
+    declare const enum audioRadioSoundType {
+      "Song" = 0,
+      "AnnouncementScene" = 1,
+    }
+
+    declare const enum audioRadioSpeakerType {
+      "Stanley" = 0,
+      "MaximumMike" = 1,
+      "PoliceDispatch" = 2,
+      "Kurtz" = 3,
+      "Ash" = 4,
+      "None" = 5,
+    }
+
+    declare const enum audioReflectionVariant {
+      "WorldSpaceFixedDrections" = 0,
+      "LocalSpaceFixedDirections" = 1,
+      "FindingMaximumFaceAlignemnt" = 2,
+      "LocalSpaceSideDirections" = 3,
+      "FindingMaximumFaceAligment2Sides" = 4,
+    }
+
+    declare const enum audioTrafficVehicleAudioAction {
+      "StartEngine" = 0,
+      "StopEngine" = 1,
+      "StartWheel" = 2,
+      "StopWheel" = 3,
+      "StartRainLoop" = 4,
+      "StopRainLoop" = 5,
+      "Horn" = 6,
+      "HornForced" = 7,
+      "DisableAbilityToPlayRadio" = 8,
+      "StartBrakeLoop" = 9,
+      "EndBrakeLoop" = 10,
+      "ApplyBrake" = 11,
+      "ReleaseBrake" = 12,
+    }
+
+    declare const enum audioTriggerEffectMode {
+      "Off" = 0,
+      "Feedback" = 1,
+      "Weapon" = 2,
+      "Vibration" = 3,
+    }
+
+    declare const enum audioTriggerEffectTarget {
+      "L2" = 0,
+      "R2" = 1,
+      "Both" = 2,
+    }
+
+    declare const enum audioVoBarkType {
+      "None" = 0,
+      "Curse" = 1,
+      "Morale" = 2,
+      "Combat_Aggro" = 3,
+      "Combat_Despair" = 4,
+      "Stealth_Curious" = 5,
+    }
+
+    declare const enum audioVoCpoCharacter {
+      "None" = 0,
+      "Solo" = 1,
+      "Assassin" = 2,
+      "Techie" = 3,
+      "Netrunner" = 4,
+    }
+
+    declare const enum audioVoGruntInterruptMode {
+      "DontInterrupt" = 0,
+      "PlayOnlyOnInterrupt" = 1,
+      "CanInterrupt" = 2,
+    }
+
+    declare const enum audioVoGruntType {
+      "None" = -1,
+      "PainShort" = 23,
+      "PainLong" = 0,
+      "AgroShort" = 1,
+      "AgroLong" = 2,
+      "Effort" = 25,
+      "LongFall" = 3,
+      "Death" = 4,
+      "SilentDeath" = 5,
+      "Grapple" = 6,
+      "GrappleMovement" = 7,
+      "EnvironmentalKnockdown" = 8,
+      "Bump" = 9,
+      "Curious" = 10,
+      "Fear" = 11,
+      "Jump" = 12,
+      "EffortLong" = 13,
+      "DeathShort" = 14,
+      "Greet" = 15,
+      "LaughHard" = 16,
+      "LaughSoft" = 17,
+      "Phone" = 18,
+      "BraindanceExcited" = 19,
+      "BraindanceFearful" = 20,
+      "BraindanceNeutral" = 21,
+      "BraindanceSexual" = 22,
+    }
+
+    declare const enum audioWeaponBulletType {
+      "standard" = 0,
+      "sniper" = 1,
+      "shot" = 2,
+      "rail" = 3,
+      "automatic" = 4,
+      "smart" = 5,
+      "smart_sniper" = 6,
+      "hmg" = 7,
+    }
+
+    declare const enum audioWeaponShellCasingDirection {
+      "rightFront" = 0,
+      "rightBack" = 1,
+      "leftFront" = 2,
+      "leftBack" = 3,
+    }
+
+    declare const enum audioWeaponShellCasingMode {
+      "none" = 0,
+      "onShoot" = 1,
+      "onReload" = 2,
+    }
+
+    declare const enum audioWeaponShellCasingType {
+      "standard" = 0,
+      "large" = 1,
+      "cartridge" = 2,
+    }
+
+    declare const enum audioWeaponTailEnvironment {
+      "InteriorDefault" = 0,
+      "InteriorWide" = 1,
+      "ExteriorWide" = 2,
+      "ExteriorUrbanNarrow" = 3,
+      "ExteriorUrbanStreet" = 4,
+      "ExteriorUrbanStreetWide" = 5,
+      "ExteriorUrbanOpen" = 6,
+      "ExteriorUrbanEnclosed" = 7,
+      "ExteriorBadlandsOpen" = 8,
+      "ExteriorBadlandsCanyon" = 9,
+    }
+
+    declare const enum audiobreathingEventTag {
+      "Walk" = 0,
+      "Jog" = 1,
+      "Run" = 2,
+      "Sneak" = 3,
+      "Cloth" = 4,
+      "FootStepRegular" = 5,
+      "FootStepSprint" = 6,
+      "LandingRegular" = 7,
+      "LandingHard" = 8,
+      "LandingVeryHard" = 9,
+      "Climb" = 10,
+      "Jump" = 11,
+      "Player" = 12,
+      "Stop" = 13,
+      "Drop_Body" = 14,
+      "Pick_Up_Body" = 15,
+      "Standing_Event" = 16,
+    }
+
+    declare const enum audiobreathingLoopBehavior {
+      "TimedBreathing" = 0,
+      "BreathEvery2ndStep" = 1,
+      "BreathEveryStep" = 2,
+      "HoldingBreath" = 3,
+    }
+
+    declare const enum audiottsvoicesFemale {
+      "Olivia" = 7,
+      "Emily" = 8,
+      "Jessica" = 9,
+      "Sophie" = 10,
+      "Elizabeth" = 11,
+      "Carolina" = 12,
+      "Sarah" = 13,
+    }
+
+    declare const enum audiottsvoicesMale {
+      "Andrew" = 0,
+      "Oliver" = 1,
+      "Jack" = 2,
+      "Harry" = 3,
+      "Simon" = 4,
+      "Charlie" = 5,
+      "Thomas" = 6,
+    }
+
+    declare const enum audiottsvoicesPolishFemale {
+      "Iwona" = 16,
+      "Paulina" = 17,
+    }
+
+    declare const enum audiottsvoicesPolishMale {
+      "Mateusz" = 14,
+      "Pawel" = 15,
+    }
+
+    declare const enum braindanceVisionMode {
+      "Default" = 0,
+      "Audio" = 1,
+      "Thermal" = 2,
+    }
+
+    declare const enum communityECommunitySpawnTime {
+      "Morning" = 0,
+      "Day" = 1,
+      "Evening" = 2,
+      "Night" = 3,
+      "Midnight" = 4,
+      "1:00" = 5,
+      "2:00" = 6,
+      "3:00" = 7,
+      "4:00" = 8,
+      "5:00" = 9,
+      "6:00" = 10,
+      "7:00" = 11,
+      "8:00" = 12,
+      "9:00" = 13,
+      "10:00" = 14,
+      "11:00" = 15,
+      "12:00 - Noon" = 16,
+      "13:00" = 17,
+      "14:00" = 18,
+      "15:00" = 19,
+      "16:00" = 20,
+      "17:00" = 21,
+      "18:00" = 22,
+      "19:00" = 23,
+      "20:00" = 24,
+      "21:00" = 25,
+      "22:00" = 26,
+      "23:00" = 27,
+    }
+
+    declare const enum communityESquadType {
+      "Global" = 0,
+      "Community" = 1,
+      "Security" = 2,
+      "Unknown" = 3,
+    }
+
+    declare const enum coverLeanDirection {
+      "Top" = 0,
+      "Left" = 1,
+      "Right" = 2,
+    }
+
+    declare const enum curveEInterpolationType {
+      "EIT_Constant" = 0,
+      "EIT_Linear" = 1,
+      "EIT_BezierQuadratic" = 2,
+      "EIT_BezierCubic" = 3,
+      "EIT_Hermite" = 4,
+    }
+
+    declare const enum curveESegmentsLinkType {
+      "ESLT_Normal" = 0,
+      "ESLT_Smooth" = 1,
+      "ESLT_SmoothSymmetric" = 2,
+    }
+
+    declare const enum damageSystemLogFlags {
+      "GENERAL" = 1,
+      "ASSERT" = 2,
+      "WEAKSPOTS" = 4,
+    }
+
+    declare const enum entAnimParamSlotFunction {
+      "RenderingPlane" = 0,
+      "Visibility" = 1,
+    }
+
+    declare const enum entAppearanceStatus {
+      "None" = 0,
+      "Proxy" = 1,
+      "Appearance" = 2,
+    }
+
+    declare const enum entAttachmentTarget {
+      "Transform" = 0,
+      "TargetPosition" = 1,
+    }
+
+    declare const enum entAudioDismembermentPart {
+      "Head" = 0,
+      "Leg" = 1,
+      "Arm" = 2,
+    }
+
+    declare const enum entDebug_ShapeType {
+      "Sphere" = 0,
+      "Box" = 1,
+      "Capsule" = 2,
+      "Cylinder" = 3,
+    }
+
+    declare const enum entEBindingDirection {
+      "BindToSource" = 0,
+      "BindToDestination" = 1,
+    }
+
+    declare const enum entEntitySpawnPriority {
+      "Background" = 0,
+      "Normal" = 1,
+      "Immediate" = 2,
+      "Paramount" = 3,
+      "Critical" = 4,
+    }
+
+    declare const enum entEntityUserComponentResolutionMode {
+      "Select" = 0,
+      "Suppress" = 1,
+    }
+
+    declare const enum entForcedLodDistance {
+      "Default" = 0,
+      "Background" = 1,
+      "Regular" = 2,
+      "Cinematic" = 3,
+      "Vehicle" = 4,
+      "CinematicVehicle" = 5,
+      "VehicleInterior" = 6,
+      "VehicleDecoration" = 7,
+      "ConsoleLOD" = 8,
+    }
+
+    declare const enum entMeshComponentLODMode {
+      "AlwaysVisible" = 0,
+      "Appearance" = 1,
+      "AppearanceProxy" = 2,
+    }
+
+    declare const enum entRenderToTextureFeaturesPlatform {
+      "RTFP_All" = 0,
+      "RTFP_PC" = 1,
+      "RTFP_PC_PS5_XSX" = 2,
+      "RTFP_Consoles" = 3,
+      "RTFP_None" = 4,
+    }
+
+    declare const enum entRenderToTextureMode {
+      "Shaded" = 0,
+      "GBufferOnly" = 1,
+    }
+
+    declare const enum entRepellingShape {
+      "Sphere" = 0,
+      "Capsule" = 1,
+    }
+
+    declare const enum entRepellingType {
+      "Debris" = 0,
+      "BigObjects" = 1,
+      "WindImpulse" = 2,
+      "WaterImpulse" = 3,
+    }
+
+    declare const enum entTemplateComponentResolveMode {
+      "AutoSelect" = 0,
+      "Select" = 1,
+      "Suppress" = 2,
+    }
+
+    declare const enum entVertexAnimationMapperSourceType {
+      "FloatTrack" = 0,
+      "TranslationX" = 1,
+      "TranslationY" = 2,
+      "TranslationZ" = 3,
+      "RotationQuatX" = 4,
+      "RotationQuatY" = 5,
+      "RotationQuatZ" = 6,
+      "RotationQuatW" = 7,
+    }
+
+    declare const enum entVisibilityParamSource {
+      "PhantomEntitySystem" = 7,
+    }
+
+    declare const enum entdismembermentResourceSetE {
+      "NONE" = 16,
+      "BARE" = 0,
+      "BARE1" = 1,
+      "BARE2" = 2,
+      "BARE3" = 3,
+      "GARMENT" = 4,
+      "GARMENT1" = 5,
+      "GARMENT2" = 6,
+      "GARMENT3" = 7,
+      "CYBER" = 8,
+      "CYBER1" = 9,
+      "CYBER2" = 10,
+      "CYBER3" = 11,
+      "MIXED" = 12,
+      "MIXED1" = 13,
+      "MIXED2" = 14,
+      "MIXED3" = 15,
+    }
+
+    declare const enum entdismembermentSimulationTypeE {
+      "NONE" = 0,
+      "DANGLE" = 128,
+    }
+
+    declare const enum entragdollActivationRequestType {
+      "Default" = 0,
+      "Animated" = 1,
+      "Forced" = 2,
+    }
+
+    declare const enum envUtilsNeighborMode {
+      "eCLOSEST" = 0,
+      "eONLY_GLOBAL" = 1,
+      "eONLY_SELF" = 2,
+      "eFILL_SURROUNDING" = 3,
+    }
+
+    declare const enum envUtilsReflectionProbeAmbientContributionMode {
+      "eNO_AMBIENT_CONTRIBUTION" = 0,
+      "eALLOW_AMBIENT_CONTRIBUTION" = 1,
+      "eOVERRIDE_GI_AMBIENT" = 2,
     }
 
     declare const enum gameAIDirectorTensionEventType {
@@ -5378,6 +6988,11 @@ declare namespace CyberEnums {
       "DealingDamage" = 2,
       "TakingDamage" = 3,
       "Kill" = 4,
+    }
+
+    declare const enum gameAggregationType {
+      "AND" = 0,
+      "OR" = 1,
     }
 
     declare const enum gameAlwaysSpawnedState {
@@ -5394,12 +7009,6 @@ declare namespace CyberEnums {
       "TweakDBRecord" = 4,
       "VisualTag" = 5,
       "Invalid" = 7,
-    }
-
-    declare const enum gameaudioeventsSurfaceDirection {
-      "Normal" = 0,
-      "WallLeft" = 1,
-      "WallRight" = 2,
     }
 
     declare const enum gameAutodriveDestinationType {
@@ -5450,17 +7059,6 @@ declare namespace CyberEnums {
       "PivotOffsetXOfTurnCoeff" = 9,
       "PivotOffsetZOfTurnCoeff" = 10,
       "COUNT" = 11,
-    }
-
-    declare const enum gamecheatsystemFlag {
-      "God_Immortal" = 1,
-      "God_Invulnerable" = 2,
-      "Resurrect" = 4,
-      "IgnoreTimeDilation" = 8,
-      "BypassMagazine" = 16,
-      "InfiniteAmmo" = 32,
-      "Kill" = 64,
-      "Invisible" = 128,
     }
 
     declare const enum gameCityAreaType {
@@ -5539,113 +7137,1367 @@ declare namespace CyberEnums {
       "INVALID" = 5,
     }
 
-    declare const enum gamedataAchievement {
-      "AllThePresidentsMen" = 0,
-      "Bladerunner" = 1,
-      "BornToBeWild" = 2,
-      "Breathtaking" = 3,
-      "BushidoAndChill" = 4,
-      "Cyberjunkie" = 5,
-      "Denied" = 6,
-      "DirtyWork" = 7,
-      "DogtownLaw" = 8,
-      "EasyComeEasyGo" = 9,
-      "FollowingTheRiver" = 10,
-      "Fortuneteller" = 11,
-      "Gearhead" = 12,
-      "GetMeThereScottie" = 13,
-      "GunKata" = 14,
-      "Gunslinger" = 15,
-      "HandyMan" = 16,
-      "HydraIsDead" = 17,
-      "IAmMaxTac" = 18,
-      "IHateSpider" = 19,
-      "KingOfTheCups" = 20,
-      "KingOfThePentacles" = 21,
-      "KingOfTheSwords" = 22,
-      "KingOfTheWands" = 23,
-      "Kingmaker" = 24,
-      "LikeFatherLikeSon" = 25,
-      "LittleTokyo" = 26,
-      "MasterRunner" = 27,
-      "MaxPain" = 28,
-      "MustBeTheRats" = 29,
-      "NeverFadeAway" = 30,
-      "NoMansLand" = 31,
-      "NotTheMobile" = 32,
-      "QueenOfTheHighway" = 33,
-      "RelicMaster" = 34,
-      "Roleplayer" = 35,
-      "Specialist" = 36,
-      "Temperance" = 37,
-      "ThatIsSoHardForTheKnees" = 38,
-      "TheDevil" = 39,
-      "TheFool" = 40,
-      "TheHermit" = 41,
-      "TheHightPriestess" = 42,
-      "TheLovers" = 43,
-      "TheStar" = 44,
-      "TheSun" = 45,
-      "TheTower" = 46,
-      "TheWheelOfFortune" = 47,
-      "TheWorld" = 48,
-      "ThisIsPacifica" = 49,
-      "TradeUnion" = 50,
-      "TrueSoldier" = 51,
-      "TrueWarrior" = 52,
-      "TwoHeadsOneBullet" = 53,
-      "UnderPressure" = 54,
-      "VForVendetta" = 55,
-      "YipMan" = 56,
-      "YouKnowWhoIAm" = 57,
-      "Count" = 58,
-      "Invalid" = 59,
+    declare const enum gameDebugViewETextAlignment {
+      "Left" = -1,
+      "Center" = 0,
+      "Right" = 1,
     }
 
-    declare const enum gamedataAffiliation {
-      "AfterlifeMercs" = 0,
-      "Aldecaldos" = 1,
-      "Animals" = 2,
-      "Arasaka" = 3,
-      "Barghest" = 4,
-      "Biotechnica" = 5,
-      "CityCouncil" = 6,
-      "Civilian" = 7,
-      "Classified" = 8,
-      "KangTao" = 9,
-      "Maelstrom" = 10,
-      "MaelstromAndroid" = 11,
-      "Militech" = 12,
-      "NCPD" = 13,
-      "NUSA" = 14,
-      "NetWatch" = 15,
-      "News54" = 16,
-      "OA" = 17,
-      "RecordingAgency" = 18,
-      "SSI" = 19,
-      "Scavengers" = 20,
-      "ScavengersAndroid" = 21,
-      "SixthStreet" = 22,
-      "SixthStreetAndroid" = 23,
-      "SouthCalifornia" = 24,
-      "TheMox" = 25,
-      "TraumaTeam" = 26,
-      "TygerClaws" = 27,
-      "Unaffiliated" = 28,
-      "UnaffiliatedCorpo" = 29,
-      "Unknown" = 30,
-      "Valentinos" = 31,
-      "VoodooBoys" = 32,
-      "Wraiths" = 33,
-      "WraithsAndroid" = 34,
-      "Zetatech" = 35,
-      "corpbud" = 36,
-      "crimson_harvest" = 37,
-      "growl" = 38,
-      "highriders" = 39,
-      "private_press" = 40,
-      "Count" = 41,
-      "Invalid" = 42,
+    declare const enum gameDelayContext {
+      "Standard_TD" = 1,
+      "Standard_ND" = 2,
+      "Quest_TD" = 4,
+      "SpawnManager_ND" = 8,
+    }
+
+    declare const enum gameDifficulty {
+      "Easy" = 0,
+      "Hard" = 1,
+      "VeryHard" = 2,
+      "Story" = 3,
+    }
+
+    declare const enum gameDismBodyPart {
+      "LEFT_LEG" = 896,
+      "RIGHT_LEG" = 7168,
+      "LEFT_ARM" = 14,
+      "RIGHT_ARM" = 112,
+      "HEAD" = 1,
+      "BODY" = 8192,
+    }
+
+    declare const enum gameDismWoundType {
+      "CLEAN" = 1,
+      "COARSE" = 2,
+      "HOLE" = 64,
+    }
+
+    declare const enum gameDynamicVehicleType {
+      "None" = 0,
+      "Car" = 1,
+      "AV" = 2,
+      "RoadBlockade" = 3,
+      "RoadBlockadeWithAV" = 4,
+    }
+
+    declare const enum gameEActionFlags {
+      "NONE" = 0,
+      "USE_ANIMATION" = 1,
+      "USE_MOVEMENT" = 2,
+    }
+
+    declare const enum gameEActionStatus {
+      "STATUS_INVALID" = 0,
+      "STATUS_BOUND" = 1,
+      "STATUS_READY" = 2,
+      "STATUS_PROGRESS" = 3,
+      "STATUS_COMPLETE" = 4,
+      "STATUS_FAILURE" = 5,
+    }
+
+    declare const enum gameEAreaShape {
+      "NONE" = 0,
+      "SPHERE" = 1,
+      "CUBE" = 2,
+      "COUNT" = 3,
+    }
+
+    declare const enum gameEAreaType {
+      "NONE" = 0,
+      "LOCATION" = 1,
+      "AFFILIATION" = 2,
+      "COUNT" = 3,
+    }
+
+    declare const enum gameECharacterStance {
+      "Stance_Stand" = 0,
+      "Stance_Crouch" = 1,
+      "Stance_Kneel" = 2,
+      "Stance_Cover" = 3,
+      "Stance_Standing_Cover" = 4,
+      "Stance_Crouching_Cover" = 5,
+    }
+
+    declare const enum gameEContinuousMode {
+      "None" = 0,
+      "Start" = 1,
+      "Stop" = 2,
+    }
+
+    declare const enum gameEEquipmentManagerState {
+      "InfiniteAmmo" = 1,
+    }
+
+    declare const enum gameEHotkey {
+      "INVALID" = -1,
+      "DPAD_UP" = 0,
+      "DPAD_DOWN" = 1,
+      "DPAD_RIGHT" = 2,
+      "RB" = 3,
+      "LBRB" = 4,
+    }
+
+    declare const enum gameEInventoryFlags {
+      "MustSave" = 1,
+    }
+
+    declare const enum gameEItemIDFlag {
+      "Preview" = 1,
+    }
+
+    declare const enum gameELootGenerationType {
+      "DropChance" = 0,
+      "NumberBased" = 1,
+      "Weights" = 2,
+      "Count" = 3,
+    }
+
+    declare const enum gameEMaterialZone {
+      "Zero" = 0,
+      "One" = 1,
+      "Two" = 2,
+      "Three" = 3,
+    }
+
+    declare const enum gameEPowerDifferential {
+      "IMPOSSIBLE" = -6,
+      "HARD" = -3,
+      "NORMAL" = 2,
+      "EASY" = 4,
+      "TRASH" = 5,
+    }
+
+    declare const enum gameEPrerequisiteType {
+      "None" = 0,
+      "NestedPrereq" = 1,
+      "StatValue" = 2,
+      "StatPoolValue" = 3,
+      "HealthAbsolute" = 4,
+      "HealthPercent" = 5,
+      "ItemInInventory" = 6,
+      "ItemEquipped" = 7,
+      "ItemCount" = 8,
+      "QuestAchieved" = 9,
+      "WasScanned" = 10,
+      "Attitude" = 11,
+      "Count" = 12,
+    }
+
+    declare const enum gameESlotState {
+      "Taken" = 0,
+      "Empty" = 1,
+      "Available" = 2,
+    }
+
+    declare const enum gameEStatFlags {
+      "Bool" = 1,
+      "EquipOnPlayer" = 2,
+      "EquipOnNPC" = 4,
+      "ExcludeRootCombination" = 8,
+    }
+
+    declare const enum gameEStatProviderDataSource {
+      "gameItemData" = 0,
+      "InventoryItemData" = 1,
+      "InnerItemData" = 2,
+      "Invalid" = 3,
+    }
+
+    declare const enum gameEffectAction_KillFXAction {
+      "Stop" = 0,
+      "BreakLoop" = 1,
+    }
+
+    declare const enum gameEffectExecutor_AnimFeatureApplyTo {
+      "Target" = 0,
+      "Instigator" = 1,
+    }
+
+    declare const enum gameEffectHitDataType {
+      "Entity" = 0,
+      "Node" = 1,
+      "Static" = 2,
+    }
+
+    declare const enum gameEffectObjectFilter_AxisRangeAxis {
+      "X" = 0,
+      "Y" = 1,
+      "Z" = 2,
+    }
+
+    declare const enum gameEffectObjectFilter_EntityTypeEntityTypeFilter {
+      "Puppet" = 0,
+      "Device" = 1,
+    }
+
+    declare const enum gameEffectObjectFilter_HitTypeAction {
+      "Accept" = 0,
+      "Reject" = 1,
+    }
+
+    declare const enum gameEffectTriggerPositioningType {
+      "PlayerRoot" = 0,
+      "CameraRoot" = 1,
+      "AtSpawn" = 2,
+      "XYCameraZPlayer" = 3,
+      "XYPlayerZCamera" = 4,
+      "XYCameraZTerrain" = 5,
+      "XYPlayerZTerrain" = 6,
+    }
+
+    declare const enum gameEffectTriggerRotationType {
+      "None" = 0,
+      "AtSpawn" = 1,
+      "Continuous" = 2,
+    }
+
+    declare const enum gameEnemyStealthAwarenessState {
+      "Relaxed" = 0,
+      "Aware" = 1,
+      "Alerted" = 2,
+      "Combat" = 3,
+    }
+
+    declare const enum gameEntityReferenceType {
+      "EntityRef" = 0,
+      "Tag" = 1,
+      "SlotID" = 2,
+      "SceneActorContextName" = 3,
+    }
+
+    declare const enum gameEntitySpawnerEventType {
+      "Spawn" = 2,
+      "Despawn" = 3,
+      "Death" = 4,
+    }
+
+    declare const enum gameEntityStubClass {
+      "Other" = 0,
+      "Puppet" = 1,
+      "Vehicle" = 2,
+    }
+
+    declare const enum gameEquipAnimationType {
+      "Default" = 0,
+      "Instant" = 1,
+      "FirstEquip" = 2,
+      "HACK_ForceInstantEquip" = 3,
+    }
+
+    declare const enum gameEquipmentSetType {
+      "Offensive" = 0,
+      "Defensive" = 1,
+      "Cyberware" = 2,
+    }
+
+    declare const enum gameFearStage {
+      "Relaxed" = 0,
+      "Stressed" = 1,
+      "Alarmed" = 2,
+      "Panic" = 3,
+    }
+
+    declare const enum gameGameVersion {
+      "CP77_Initial" = 0,
+      "CP77_Development" = 1,
+      "CP77_GoldMaster" = 2,
+      "CP77_ActualGoldMaster" = 3,
+      "CP77_AlmostPatchDay0" = 4,
+      "CP77_PatchDay0" = 5,
+      "CP77_PatchDay0_Hotfix1" = 6,
+      "CP77_PatchDay0_Hotfix2" = 7,
+      "CP77_PatchDay0_Hotfix2_V2" = 8,
+      "CP77_PatchDay0_Hotfix3" = 9,
+      "CP77_PatchDay0_ChristmasHotfix" = 10,
+      "CP77_PatchDay0_Hotfix4_Internal" = 11,
+      "CP77_Patch_1_Internal" = 12,
+      "CP77_Patch_1_1" = 1100,
+      "CP77_Patch_1_1_Hotfix1" = 1110,
+      "CP77_Patch_1_1_Hotfix2" = 1120,
+      "CP77_Patch_1_2" = 1200,
+      "CP77_Patch_1_2_Hotfix1" = 1210,
+      "CP77_Patch_1_2_Hotfix2" = 1220,
+      "CP77_Patch_1_2_Hotfix3" = 1230,
+      "CP77_Patch_1_2_Hotfix4_dlc1" = 1240,
+      "CP77_Patch_1_3" = 1300,
+      "CP77_Patch_1_3_Hotfix1" = 1301,
+      "CP77_Patch_1_3_Development" = 1399,
+      "CP77_Patch_1_4" = 1310,
+      "CP77_Patch_1_5" = 1500,
+      "CP77_Patch_1_5_Hotfix1" = 1510,
+      "CP77_Patch_1_5_Actual_Hotfix1" = 1520,
+      "CP77_Patch_1_5_Development" = 1599,
+      "CP77_Patch_1_6" = 1600,
+      "CP77_Patch_1_6_Hotfix1" = 1610,
+      "CP77_Patch_1_6_Hotfix2" = 1620,
+      "CP77_Patch_1_6_Hotfix3" = 1630,
+      "CP77_Patch_2_0" = 2000,
+      "CP77_Patch_2_0_Hotfix1" = 2010,
+      "CP77_Patch_2_0_Hotfix2" = 2020,
+      "CP77_Patch_2_1" = 2100,
+      "CP77_Patch_2_1_Hotfix1" = 2110,
+      "CP77_Patch_2_1_Hotfix2" = 2120,
+      "CP77_Patch_2_1_Hotfix3" = 2137,
+      "CP77_Patch_2_2" = 2200,
+      "CP77_Patch_2_2_Hotfix1" = 2210,
+      "CP77_Patch_2_3" = 2300,
+      "Current" = 2300,
+    }
+
+    declare const enum gameGameplayEventFlag {
+      "Ai" = 1,
+      "Trigger" = 2,
+      "Component" = 4,
+      "Script" = 8,
+    }
+
+    declare const enum gameGlobalTierSubtype {
+      "Quest" = 0,
+      "Supervisor" = 1,
+    }
+
+    declare const enum gameGodModeType {
+      "Immortal" = 1,
+      "Invulnerable" = 0,
+      "Mortal" = 2,
+    }
+
+    declare const enum gameGrenadeThrowStartType {
+      "Invalid" = 0,
+      "LeftSide" = 1,
+      "RightSide" = 2,
+      "Top" = 3,
+      "Count" = 4,
+    }
+
+    declare const enum gameInitalChoiceStage {
+      "None" = 0,
+      "Difficulty" = 1,
+      "LifePath" = 2,
+      "Gender" = 3,
+      "Customizations" = 4,
+      "Attributes" = 5,
+      "Finished" = 6,
+    }
+
+    declare const enum gameInventoryItemAttachmentType {
+      "Generic" = 0,
+      "Dedicated" = 1,
+    }
+
+    declare const enum gameInventoryItemShape {
+      "SingleSlot" = 0,
+      "DoubleSlot" = 1,
+    }
+
+    declare const enum gameItemComparisonState {
+      "Default" = 0,
+      "NoChange" = 1,
+      "Better" = 2,
+      "Worse" = 3,
+    }
+
+    declare const enum gameItemDisplayContext {
+      "None" = 0,
+      "Vendor" = 1,
+      "Tooltip" = 2,
+      "VendorPlayer" = 3,
+      "GearPanel" = 4,
+      "Backpack" = 5,
+      "DPAD_RADIAL" = 6,
+      "Attachment" = 7,
+      "Ripperdoc" = 8,
+      "Crafting" = 9,
+    }
+
+    declare const enum gameItemEquipContexts {
+      "LastWeaponEquipped" = 0,
+      "LastUsedMeleeWeapon" = 1,
+      "LastUsedRangedWeapon" = 2,
+      "Gadget" = 3,
+      "MeleeCyberware" = 4,
+      "LauncherCyberware" = 5,
+      "Fists" = 6,
+      "TutorialCyberware" = 7,
+    }
+
+    declare const enum gameItemIconGender {
+      "Female" = 0,
+      "Male" = 1,
+    }
+
+    declare const enum gameItemUnequipContexts {
+      "AllWeapons" = 0,
+      "HeadClothing" = 1,
+      "FaceClothing" = 2,
+      "OuterChestClothing" = 3,
+      "InnerChestClothing" = 4,
+      "LegClothing" = 5,
+      "FootClothing" = 6,
+      "AllClothing" = 7,
+      "RightHandWeapon" = 8,
+      "LeftHandWeapon" = 9,
+      "AllQuestItems" = 10,
+      "AllItems" = 11,
+    }
+
+    declare const enum gameJournalBriefingContentType {
+      "MapLocation" = 0,
+      "VideoContent" = 1,
+      "Paperdoll" = 2,
+    }
+
+    declare const enum gameJournalCallbackOption {
+      "DoNotFire" = 0,
+      "Fire" = 1,
+    }
+
+    declare const enum gameJournalChangeType {
+      "Undefined" = 0,
+      "Direct" = 1,
+      "Indirect" = 2,
+      "IndirectDependent" = 3,
+    }
+
+    declare const enum gameJournalEntryState {
+      "Undefined" = 0,
+      "Inactive" = 1,
+      "Active" = 2,
+      "Succeeded" = 3,
+      "Failed" = 4,
+    }
+
+    declare const enum gameJournalEntryUserState {
+      "Undefined" = 0,
+      "Inactive" = 1,
+      "Active" = 2,
+      "Succeeded" = 3,
+      "Failed" = 4,
+      "Read" = 5,
+      "Open" = 6,
+    }
+
+    declare const enum gameJournalListenerType {
+      "State" = 0,
+      "Visited" = 1,
+      "Tracked" = 2,
+      "Untracked" = 3,
+      "Counter" = 4,
+      "StateDelay" = 5,
+      "ObjectiveOptional" = 6,
+      "ChoiceEntry" = 7,
+    }
+
+    declare const enum gameJournalNotifyOption {
+      "Undefined" = 0,
+      "DoNotNotify" = 1,
+      "Notify" = 2,
+    }
+
+    declare const enum gameJournalQuestType {
+      "MainQuest" = 0,
+      "SideQuest" = 1,
+      "MinorQuest" = 2,
+      "StreetStory" = 3,
+      "CyberPsycho" = 4,
+      "Contract" = 5,
+      "VehicleQuest" = 6,
+      "ApartmentQuest" = 7,
+      "CourierQuest" = 8,
+      "CourierSideQuest" = 9,
+    }
+
+    declare const enum gameKillType {
+      "Normal" = 0,
+      "Defeat" = 1,
+    }
+
+    declare const enum gameLoSMode {
+      "Invalid" = 0,
+      "Keep" = 1,
+      "Avoid" = 2,
+    }
+
+    declare const enum gameLootItemType {
+      "Default" = 0,
+      "Quest" = 1,
+      "Shard" = 2,
+    }
+
+    declare const enum gameMessageSender {
+      "NPC" = 0,
+      "Player" = 1,
+    }
+
+    declare const enum gameMountDescriptorMountType {
+      "Unmounted" = 0,
+      "KeepState" = 1,
+      "Vehicle" = 3,
+      "MovingPlatform" = 4,
+    }
+
+    declare const enum gameMountingObjectSubType {
+      "Invalid" = -1,
+      "Car" = 0,
+      "Bike" = 1,
+    }
+
+    declare const enum gameMountingObjectType {
+      "Invalid" = -1,
+      "Object" = 0,
+      "Vehicle" = 1,
+      "Puppet" = 2,
+      "Platform" = 3,
+    }
+
+    declare const enum gameMountingRelationshipType {
+      "Invalid" = -1,
+      "Parent" = 0,
+      "Child" = 1,
+    }
+
+    declare const enum gameMountingSlotRole {
+      "Invalid" = -1,
+      "Driver" = 0,
+      "Passenger" = 1,
+      "Passenger_FR" = 2,
+      "Passenger_BL" = 3,
+      "Passenger_BR" = 4,
+    }
+
+    declare const enum gameMovingPlatformLoopType {
+      "NoLooping" = 0,
+      "Bounce" = 1,
+      "Repeat" = 2,
+    }
+
+    declare const enum gameMovingPlatformMovementInitializationType {
+      "Time" = 0,
+      "Speed" = 1,
+    }
+
+    declare const enum gameMuppetComparisonReportItemType {
+      "Different" = 0,
+      "WithinTolerance" = 1,
+      "Equal" = 2,
+    }
+
+    declare const enum gameMuppetDebugCommand {
+      "None" = 0,
+      "Kill" = 1,
+      "KillAll" = 2,
+    }
+
+    declare const enum gameMuppetInputActionType {
+      "Unknown" = 0,
+      "Impulse" = 1,
+      "Press" = 2,
+    }
+
+    declare const enum gameMuppetMoveStyle {
+      "Invalid" = 0,
+      "Walk" = 1,
+      "Sprint" = 2,
+      "Crouch" = 3,
+      "WalkAim" = 4,
+      "GravityOnly" = 5,
+    }
+
+    declare const enum gameOnlineSystemErrors {
+      "None" = 0,
+      "RequestFailed" = 1,
+      "TemporaryFailure" = 2,
+      "NoInternetConnection" = 3,
+      "NotSignedInGalaxy" = 4,
+      "NotSignedInLauncher" = 5,
+      "NotSignedInGame" = 6,
+    }
+
+    declare const enum gameOnlineSystemStatus {
+      "Uninitialized" = 0,
+      "GeneratingCPID" = 1,
+      "CheckingRegistrationStatus" = 2,
+      "RegistrationPending" = 3,
+      "Registered" = 4,
+      "Error" = 5,
+    }
+
+    declare const enum gamePSMBodyCarrying {
+      "Any" = -1,
+      "Default" = 0,
+      "PickUp" = 1,
+      "Carry" = 2,
+      "Dispose" = 3,
+      "Drop" = 4,
+      "Aim" = 5,
+      "Throw" = 6,
+    }
+
+    declare const enum gamePSMBodyCarryingLocomotion {
+      "Default" = 0,
+      "Jump" = 1,
+      "Crouch" = 2,
+      "Sprint" = 3,
+      "Fall" = 4,
+      "Land" = 5,
+      "DropBody" = 6,
+    }
+
+    declare const enum gamePSMBodyCarryingStyle {
+      "Any" = 0,
+      "Default" = 1,
+      "Friendly" = 2,
+      "Strong" = 3,
+      "WoundedSoldier" = 4,
+    }
+
+    declare const enum gamePSMCombat {
+      "Any" = -1,
+      "Default" = 0,
+      "InCombat" = 1,
+      "OutOfCombat" = 2,
+      "Stealth" = 3,
+    }
+
+    declare const enum gamePSMCombatGadget {
+      "Default" = 0,
+      "EquipRequest" = 1,
+      "Equipped" = 2,
+      "Charging" = 3,
+      "Throwing" = 4,
+      "WaitForUnequip" = 5,
+      "QuickThrow" = 6,
+    }
+
+    declare const enum gamePSMCover {
+      "Any" = -1,
+      "Default" = 0,
+      "InCover" = 1,
+      "Peek" = 2,
+      "Lean" = 3,
+      "OutOfCover" = 4,
+    }
+
+    declare const enum gamePSMCrosshairStates {
+      "Default" = 0,
+      "Safe" = 1,
+      "Scanning" = 2,
+      "GrenadeCharging" = 3,
+      "Aim" = 4,
+      "Reload" = 5,
+      "ReloadDriverCombatMountedWeapons" = 6,
+      "Sprint" = 7,
+      "HipFire" = 8,
+      "LeftHandCyberware" = 9,
+      "QuickHack" = 10,
+    }
+
+    declare const enum gamePSMDetailedBodyDisposal {
+      "Default" = 0,
+      "Dispose" = 1,
+      "Lethal" = 2,
+      "NonLethal" = 3,
+    }
+
+    declare const enum gamePSMDetailedLocomotionStates {
+      "NotInBaseLocomotion" = 0,
+      "Stand" = 1,
+      "AimWalk" = 2,
+      "Crouch" = 3,
+      "Sprint" = 4,
+      "Slide" = 5,
+      "SlideFall" = 6,
+      "Dodge" = 7,
+      "Climb" = 8,
+      "Vault" = 9,
+      "Ladder" = 10,
+      "LadderSprint" = 11,
+      "LadderSlide" = 12,
+      "LadderJump" = 13,
+      "Fall" = 14,
+      "AirThrusters" = 15,
+      "AirHover" = 16,
+      "SuperheroFall" = 17,
+      "Jump" = 18,
+      "DoubleJump" = 19,
+      "ChargeJump" = 20,
+      "HoverJump" = 21,
+      "DodgeAir" = 22,
+      "RegularLand" = 23,
+      "HardLand" = 24,
+      "VeryHardLand" = 25,
+      "DeathLand" = 26,
+      "SuperheroLand" = 27,
+      "SuperheroLandRecovery" = 28,
+      "Knockdown" = 29,
+      "CrouchSprint" = 30,
+      "Felled" = 31,
+    }
+
+    declare const enum gamePSMFallStates {
+      "Default" = 0,
+      "RegularFall" = 1,
+      "SafeFall" = 2,
+      "FastFall" = 3,
+      "VeryFastFall" = 4,
+      "DeathFall" = 5,
+    }
+
+    declare const enum gamePSMHighLevel {
+      "Any" = -1,
+      "Default" = 0,
+      "SceneTier1" = 1,
+      "SceneTier2" = 2,
+      "SceneTier3" = 3,
+      "SceneTier4" = 4,
+      "SceneTier5" = 5,
+      "Swimming" = 6,
+    }
+
+    declare const enum gamePSMLandingState {
+      "Default" = 0,
+      "RegularLand" = 1,
+      "HardLand" = 2,
+      "VeryHardLand" = 3,
+      "DeathLand" = 4,
+      "SuperheroLand" = 5,
+      "SuperheroLandRecovery" = 6,
+    }
+
+    declare const enum gamePSMLeftHandCyberware {
+      "Default" = 0,
+      "Safe" = 1,
+      "EquipRequest" = 2,
+      "Idle" = 3,
+      "Equipped" = 4,
+      "Charge" = 5,
+      "Loop" = 6,
+      "Catch" = 7,
+      "QuickAction" = 8,
+      "ChargeAction" = 9,
+      "CatchAction" = 10,
+      "StartUnequip" = 11,
+      "Unequip" = 12,
+    }
+
+    declare const enum gamePSMLocomotionStates {
+      "Any" = -1,
+      "Default" = 0,
+      "Crouch" = 1,
+      "Sprint" = 2,
+      "Kereznikov" = 3,
+      "Jump" = 5,
+      "Vault" = 6,
+      "Dodge" = 7,
+      "DodgeAir" = 8,
+      "Workspot" = 9,
+      "Slide" = 10,
+      "SlideFall" = 11,
+      "CrouchSprint" = 12,
+      "CrouchDodge" = 13,
+    }
+
+    declare const enum gamePSMMelee {
+      "Any" = -1,
+      "Default" = 0,
+      "Attack" = 1,
+      "Block" = 2,
+    }
+
+    declare const enum gamePSMMeleeWeapon {
+      "NotReady" = 0,
+      "Equipping" = 1,
+      "Idle" = 2,
+      "Safe" = 3,
+      "PublicSafe" = 4,
+      "Parried" = 5,
+      "Hold" = 6,
+      "ChargedHold" = 7,
+      "Block" = 8,
+      "Targeting" = 9,
+      "Deflect" = 10,
+      "ComboAttack" = 11,
+      "FinalAttack" = 12,
+      "StrongAttack" = 13,
+      "SafeAttack" = 14,
+      "BlockAttack" = 15,
+      "SprintAttack" = 16,
+      "CrouchAttack" = 17,
+      "JumpAttack" = 18,
+      "ThrowAttack" = 19,
+      "DeflectAttack" = 20,
+      "EquipAttack" = 21,
+      "Default" = 22,
+    }
+
+    declare const enum gamePSMNanoWireLaunchMode {
+      "Default" = 0,
+      "Primary" = 1,
+      "Secondary" = 2,
+    }
+
+    declare const enum gamePSMRangedWeaponStates {
+      "Any" = -1,
+      "Default" = 0,
+      "Charging" = 1,
+      "Reload" = 2,
+      "QuickMelee" = 3,
+      "NoAmmo" = 4,
+      "Ready" = 5,
+      "Safe" = 6,
+      "Overheat" = 7,
+      "Shoot" = 8,
+    }
+
+    declare const enum gamePSMReaction {
+      "Default" = 0,
+      "Stagger" = 1,
+    }
+
+    declare const enum gamePSMStamina {
+      "Rested" = 0,
+      "Fatigued" = 1,
+      "Exhausted" = 2,
+    }
+
+    declare const enum gamePSMSwimming {
+      "Any" = -1,
+      "Default" = 0,
+      "Surface" = 1,
+      "Diving" = 2,
+      "Climbing" = 3,
+    }
+
+    declare const enum gamePSMTakedown {
+      "Any" = -1,
+      "Default" = 0,
+      "EnteringGrapple" = 1,
+      "Grapple" = 2,
+      "Leap" = 3,
+      "Takedown" = 4,
+    }
+
+    declare const enum gamePSMTimeDilation {
+      "Any" = -1,
+      "Default" = 0,
+      "Sandevistan" = 1,
+    }
+
+    declare const enum gamePSMUIState {
+      "None" = 0,
+      "WeaponSelect" = 1,
+    }
+
+    declare const enum gamePSMUpperBodyStates {
+      "Any" = -1,
+      "Default" = 0,
+      "SwitchItems" = 1,
+      "SwitchCyberware" = 2,
+      "Reload" = 3,
+      "Aim" = 6,
+      "TemporaryUnequip" = 4,
+      "ForceEmptyHands" = 5,
+    }
+
+    declare const enum gamePSMVehicle {
+      "Any" = -1,
+      "Default" = 0,
+      "Driving" = 1,
+      "Combat" = 2,
+      "Passenger" = 3,
+      "Transition" = 4,
+      "Turret" = 5,
+      "DriverCombat" = 6,
+      "Scene" = 7,
+    }
+
+    declare const enum gamePSMVision {
+      "Any" = -1,
+      "Default" = 0,
+      "Focus" = 1,
+    }
+
+    declare const enum gamePSMVisionDebug {
+      "Default" = 0,
+      "VisionToggle" = 1,
+    }
+
+    declare const enum gamePSMVitals {
+      "Alive" = 0,
+      "Dead" = 1,
+      "Resurrecting" = 2,
+    }
+
+    declare const enum gamePSMWeaponStates {
+      "Any" = -1,
+      "Default" = 0,
+      "NoAmmo" = 1,
+      "Ready" = 2,
+      "Safe" = 3,
+    }
+
+    declare const enum gamePSMWhip {
+      "Default" = 0,
+      "Charging" = 1,
+      "Pulling" = 2,
+    }
+
+    declare const enum gamePSMWorkspotState {
+      "Default" = 0,
+      "Workspot" = 1,
+    }
+
+    declare const enum gamePSMZones {
+      "Any" = -1,
+      "Default" = 0,
+      "Public" = 1,
+      "Safe" = 2,
+      "Restricted" = 3,
+      "Dangerous" = 4,
+    }
+
+    declare const enum gamePhantomEntityState {
+      "RootMotion" = 0,
+      "Workspot" = 1,
+      "MoveOnSpline" = 2,
+    }
+
+    declare const enum gamePlatformMovementState {
+      "Stopped" = 0,
+      "Paused" = 1,
+      "MovingUp" = 2,
+      "MovingDown" = 3,
+    }
+
+    declare const enum gamePlayerCoverDirection {
+      "None" = -1,
+      "Up" = 0,
+      "Left" = 1,
+      "Right" = 2,
+    }
+
+    declare const enum gamePlayerCoverMode {
+      "None" = 0,
+      "Auto" = 1,
+      "Manual" = 2,
+    }
+
+    declare const enum gamePlayerObstacleSystemQueryType {
+      "Climb_Vault" = 0,
+      "Covers" = 1,
+      "AverageNormal" = 2,
+    }
+
+    declare const enum gamePlayerStateMachine {
+      "Locomotion" = 0,
+      "UpperBody" = 1,
+      "Weapon" = 2,
+      "HighLevel" = 3,
+      "Projectile" = 4,
+      "Vision" = 5,
+      "TimeDilation" = 6,
+      "CoverAction" = 7,
+      "IconicItem" = 8,
+      "Combat" = 9,
+      "Vehicle" = 10,
+      "Takedown" = 11,
+    }
+
+    declare const enum gamePopulationEntityPriority {
+      "Quest" = 0,
+      "Community" = 1,
+      "Crowd" = 2,
+    }
+
+    declare const enum gamePopupPosition {
+      "Undefined" = 0,
+      "UpperRight" = 1,
+      "UpperLeft" = 2,
+      "LowerLeft" = 3,
+      "LowerRight" = 4,
+      "Center" = 5,
+    }
+
+    declare const enum gamePuppetVehicleState {
+      "IdleMounted" = 0,
+      "IdleStand" = 1,
+      "CombatSeated" = 3,
+      "CombatWindowed" = 2,
+      "Turret" = 4,
+      "GunnerSlot" = 5,
+    }
+
+    declare const enum gameQuestGuidanceMarkerPathfindingType {
+      "Auto" = 0,
+      "Navmesh" = 1,
+      "Traffic" = 2,
+    }
+
+    declare const enum gameRegular1v1FinisherScenarioPivotSetting {
+      "AttackerSlidesAndRotates_TargetStandsStill" = 0,
+      "AttackerStandsStill_TargetSlidesAndRotates" = 1,
+    }
+
+    declare const enum gameReprimandMappinAnimationState {
+      "None" = 0,
+      "Normal" = 1,
+      "Fast" = 2,
+    }
+
+    declare const enum gameSaveLockReason {
+      "Nothing" = 0,
+      "Combat" = 1,
+      "Scene" = 2,
+      "Quest" = 3,
+      "Script" = 4,
+      "Boundary" = 5,
+      "MainMenu" = 6,
+      "LoadingScreen" = 7,
+      "PlayerStateMachine" = 8,
+      "PlayerState" = 9,
+      "Tier" = 10,
+      "NotEnoughSlots" = 11,
+      "NotEnoughSpace" = 12,
+      "PlayerOnMovingPlatform" = 13,
+    }
+
+    declare const enum gameScanningMode {
+      "Inactive" = 0,
+      "Light" = 1,
+      "Heavy" = 2,
+    }
+
+    declare const enum gameScanningState {
+      "Default" = 0,
+      "Started" = 1,
+      "Stopped" = 2,
+      "Complete" = 3,
+      "ShallowComplete" = 4,
+      "Reset" = 5,
+    }
+
+    declare const enum gameSceneAnimationMotionActionParamsEasingType {
+      "Linear" = 0,
+      "SinusoidalEaseInOut" = 1,
+      "QuadraticEaseIn" = 2,
+      "QuadraticEaseOut" = 3,
+      "CubicEaseInOut" = 4,
+      "CubicEaseIn" = 5,
+      "CubicEaseOut" = 6,
+    }
+
+    declare const enum gameSceneAnimationMotionActionParamsMotionType {
+      "Rid" = 0,
+      "Anim" = 1,
+    }
+
+    declare const enum gameSceneAnimationMotionActionParamsPlacementMode {
+      "Blend" = 0,
+      "TeleportToStart" = 1,
+      "PlayAtActorPosition" = 2,
+    }
+
+    declare const enum gameScriptTaskExecutionStage {
+      "Any" = 0,
+      "PostPhysics" = 1,
+    }
+
+    declare const enum gameScriptedBlackboardStorage {
+      "Default" = 0,
+    }
+
+    declare const enum gameSharedInventoryTag {
+      "None" = 0,
+      "PlayerStash" = 1000000,
+    }
+
+    declare const enum gameSimpleMessageType {
+      "Undefined" = 0,
+      "Negative" = 1,
+      "Neutral" = 2,
+      "Vehicle" = 3,
+      "Apartment" = 4,
+      "Relic" = 5,
+      "Money" = 6,
+      "Reveal" = 7,
+      "Boss" = 8,
+      "Twintone" = 9,
+      "Police" = 10,
+      "Autodrive" = 11,
+      "TwintoneNegative" = 12,
+      "Connection" = 13,
+      "DelamainTaxi" = 14,
+    }
+
+    declare const enum gameSmartObjectInstanceEntryType {
+      "UseEntryAnimation" = 0,
+      "UseLocomotion" = 1,
+    }
+
+    declare const enum gameSmartObjectPointType {
+      "Entry" = 0,
+      "Exit" = 1,
+      "Action" = 2,
+    }
+
+    declare const enum gameSmartObjectType {
+      "Default" = 0,
+      "LadderUp" = 1,
+      "LadderDown" = 2,
+      "JumpOnSameLevel" = 3,
+      "Jump3mUp" = 4,
+      "Jump3mDown" = 5,
+      "Climb110cmUp" = 6,
+      "Climb110cmDown" = 7,
+      "Climb200cmUp" = 8,
+      "Climb200cmDown" = 9,
+      "Climb300cmUp" = 10,
+      "Climb300cmDown" = 11,
+      "Vault10cm" = 12,
+      "Vault40cm" = 13,
+      "Vault100cm" = 14,
+      "ChargedJump400cmUp" = 15,
+      "ChargedJump400cmDown" = 16,
+      "ChargedJump600cmUp" = 17,
+      "ChargedJump600cmDown" = 18,
+      "ChargedJump800cmUp" = 19,
+      "ChargedJump800cmDown" = 20,
+      "ThrusterJumpUp" = 21,
+      "ThrusterJumpDown" = 22,
+      "Climb400cmDown" = 23,
+      "Jump4mDown" = 24,
+      "VaultJump7mDown" = 25,
+    }
+
+    declare const enum gameSpawnInViewState {
+      "default (true)" = 0,
+      "true" = 1,
+      "false" = 2,
+    }
+
+    declare const enum gameStatIDType {
+      "EntityID" = 0,
+      "ItemID" = 1,
+      "Invalid" = 2,
+    }
+
+    declare const enum gameStatModifierType {
+      "Additive" = 0,
+      "AdditiveMultiplier" = 1,
+      "Multiplier" = 2,
+      "Count" = 3,
+      "Invalid" = 4,
+    }
+
+    declare const enum gameStatObjectsRelation {
+      "Self" = 0,
+      "Owner" = 1,
+      "Root" = 2,
+      "Parent" = 3,
+      "Target" = 4,
+      "Player" = 5,
+      "Instigator" = 6,
+      "Count" = 7,
+      "Invalid" = 9,
+    }
+
+    declare const enum gameStatPoolDataBonusType {
+      "None" = 0,
+      "Persistent" = 1,
+      "NonPersistent" = 2,
+    }
+
+    declare const enum gameStatPoolDataStatPoolModificationStatus {
+      "Regeneration" = 0,
+      "Decay" = 1,
+      "NoModification" = 2,
+    }
+
+    declare const enum gameStatPoolDataValueChangeMode {
+      "Normal" = 0,
+      "IncreasingOnly" = 1,
+      "DecreasingOnly" = 2,
+      "NonZero" = 3,
+    }
+
+    declare const enum gameStatPoolModificationTypes {
+      "Regeneration" = 0,
+      "Decay" = 1,
+    }
+
+    declare const enum gameStatPoolModifierProperty {
+      "RangeBegin" = 0,
+      "RangeEnd" = 1,
+      "StartDelay" = 2,
+      "ValuePerSec" = 3,
+      "Enabled" = 4,
+      "DelayOnChange" = 5,
+      "Count" = 6,
+    }
+
+    declare const enum gameStatsBundleOwnerType {
+      "None" = 0,
+      "Cleared" = 1,
+      "UniqueItem" = 2,
+      "StackableItem" = 3,
+      "InnerItem" = 4,
+      "Entity" = 5,
+      "Stub" = 6,
+      "Reinitialized" = 7,
+      "Count" = 8,
+      "Invalid" = 9,
+    }
+
+    declare const enum gameStoryTier {
+      "Gameplay" = 0,
+      "Cinematic" = 1,
+    }
+
+    declare const enum gameStubMappinType {
+      "None" = 0,
+      "Police" = 1,
+      "PoliceVehicle" = 2,
+      "Vehicle" = 3,
+    }
+
+    declare const enum gameTStatModifier {
+      "Constant" = 0,
+      "Random" = 1,
+      "Curve" = 2,
+      "Combined" = 3,
+      "Count" = 4,
+      "Invalid" = 5,
+    }
+
+    declare const enum gameTargetingSet {
+      "Visible" = 0,
+      "ClearlyVisible" = 1,
+      "Frustum" = 2,
+      "Complete" = 3,
+      "None" = 4,
+    }
+
+    declare const enum gameTelemetryDamageSituation {
+      "Irrelevant" = 0,
+      "EnemyToPlayer" = 1,
+      "EnemyToCompanion" = 2,
+      "PlayerToEnemy" = 3,
+      "CompanionToEnemy" = 4,
+      "PlayerToPlayer" = 5,
+    }
+
+    declare const enum gameTelemetryHitDefenseType {
+      "Block" = 0,
+      "Deflect" = 1,
+    }
+
+    declare const enum gameTelemetryMilestoneType {
+      "StartFact" = 0,
+      "ImportantFact" = 1,
+      "Reward" = 2,
+      "EndFact" = 4,
+      "EndReward" = 3,
+      "Invalid" = 5,
+    }
+
+    declare const enum gameTelemetryMovementType {
+      "Jump" = 0,
+      "DoubleJump" = 1,
+      "ChargedJump" = 2,
+      "Dodge" = 3,
+      "AirDodge" = 4,
+    }
+
+    declare const enum gameTickableEventState {
+      "Idle" = 0,
+      "FirstTick" = 1,
+      "NormalTick" = 2,
+      "LastTick" = 3,
+      "Canceled" = 4,
+    }
+
+    declare const enum gameTransformAnimation_MoveOnSplineRotationMode {
+      "Disabled" = 0,
+      "Yaw" = 1,
+      "PitchAndYaw" = 2,
+    }
+
+    declare const enum gameTransformAnimation_RotateOnAxisAxis {
+      "X" = 0,
+      "Y" = 1,
+      "Z" = 2,
+    }
+
+    declare const enum gameTutorialBracketType {
+      "WidgetArea" = 0,
+      "CustomArea" = 1,
+    }
+
+    declare const enum gameVehicleCommonCurve {
+      "RPMLimit" = 0,
+      "ForcedBrakeForce" = 1,
+      "COUNT" = 2,
+    }
+
+    declare const enum gameVehicleCurve {
+      "SpeedToWheelMaxTurn" = 0,
+      "InputToWheelMaxTurn" = 1,
+      "SpeedToWheelTurnSpeed" = 2,
+      "InputToWheelTurnSpeed" = 3,
+      "COUNT" = 4,
+    }
+
+    declare const enum gameVideoType {
+      "Tutorial_720x405" = 0,
+      "Tutorial_1024x576" = 1,
+      "Tutorial_1280x720" = 2,
+      "Tutorial_1360x768" = 3,
+      "Unknown" = 4,
+    }
+
+    declare const enum gameVisionModePatternType {
+      "Default" = 0,
+      "Netrunner" = 1,
+    }
+
+    declare const enum gameVisionModeType {
+      "Default" = 0,
+      "Focus" = 1,
+    }
+
+    declare const enum gameWardrobeClothingSetIndex {
+      "Slot1" = 0,
+      "Slot2" = 1,
+      "Slot3" = 2,
+      "Slot4" = 3,
+      "Slot5" = 4,
+      "Slot6" = 5,
+      "Slot7" = 6,
+      "COUNT" = 7,
+      "INVALID" = 8,
+    }
+
+    declare const enum gameWorkspotSlidingBehaviour {
+      "PlayAtResourcePosition" = 1,
+      "DontPlayAtResourcePosition" = 0,
+      "SlideActorAndRotateDevice" = 2,
+    }
+
+    declare const enum gameaudioeventsSurfaceDirection {
+      "Normal" = 0,
+      "WallLeft" = 1,
+      "WallRight" = 2,
+    }
+
+    declare const enum gamecheatsystemFlag {
+      "God_Immortal" = 1,
+      "God_Invulnerable" = 2,
+      "Resurrect" = 4,
+      "IgnoreTimeDilation" = 8,
+      "BypassMagazine" = 16,
+      "InfiniteAmmo" = 32,
+      "Kill" = 64,
+      "Invisible" = 128,
     }
 
     declare const enum gamedataAIActionSecurityAreaType {
@@ -5795,24 +8647,6 @@ declare namespace CyberEnums {
       "Invalid" = 4,
     }
 
-    declare const enum gamedataAimAssistType {
-      "BreachTarget" = 0,
-      "ChestTarget" = 1,
-      "DriverCombat" = 2,
-      "HeadTarget" = 3,
-      "LegTarget" = 4,
-      "MechanicalTarget" = 5,
-      "Melee" = 6,
-      "None" = 7,
-      "QuickHack" = 8,
-      "Scanning" = 9,
-      "Shooting" = 10,
-      "ShootingLimbCyber" = 11,
-      "WeakSpotTarget" = 12,
-      "Count" = 13,
-      "Invalid" = 14,
-    }
-
     declare const enum gamedataAIRingType {
       "Approach" = 0,
       "Close" = 1,
@@ -5951,6 +8785,133 @@ declare namespace CyberEnums {
       "TauntBackground" = 58,
       "Count" = 59,
       "Invalid" = 60,
+    }
+
+    declare const enum gamedataAchievement {
+      "AllThePresidentsMen" = 0,
+      "Bladerunner" = 1,
+      "BornToBeWild" = 2,
+      "Breathtaking" = 3,
+      "BushidoAndChill" = 4,
+      "Cyberjunkie" = 5,
+      "Denied" = 6,
+      "DirtyWork" = 7,
+      "DogtownLaw" = 8,
+      "EasyComeEasyGo" = 9,
+      "FollowingTheRiver" = 10,
+      "Fortuneteller" = 11,
+      "Gearhead" = 12,
+      "GetMeThereScottie" = 13,
+      "GunKata" = 14,
+      "Gunslinger" = 15,
+      "HandyMan" = 16,
+      "HydraIsDead" = 17,
+      "IAmMaxTac" = 18,
+      "IHateSpider" = 19,
+      "KingOfTheCups" = 20,
+      "KingOfThePentacles" = 21,
+      "KingOfTheSwords" = 22,
+      "KingOfTheWands" = 23,
+      "Kingmaker" = 24,
+      "LikeFatherLikeSon" = 25,
+      "LittleTokyo" = 26,
+      "MasterRunner" = 27,
+      "MaxPain" = 28,
+      "MustBeTheRats" = 29,
+      "NeverFadeAway" = 30,
+      "NoMansLand" = 31,
+      "NotTheMobile" = 32,
+      "QueenOfTheHighway" = 33,
+      "RelicMaster" = 34,
+      "Roleplayer" = 35,
+      "Specialist" = 36,
+      "Temperance" = 37,
+      "ThatIsSoHardForTheKnees" = 38,
+      "TheDevil" = 39,
+      "TheFool" = 40,
+      "TheHermit" = 41,
+      "TheHightPriestess" = 42,
+      "TheLovers" = 43,
+      "TheStar" = 44,
+      "TheSun" = 45,
+      "TheTower" = 46,
+      "TheWheelOfFortune" = 47,
+      "TheWorld" = 48,
+      "ThisIsPacifica" = 49,
+      "TradeUnion" = 50,
+      "TrueSoldier" = 51,
+      "TrueWarrior" = 52,
+      "TwoHeadsOneBullet" = 53,
+      "UnderPressure" = 54,
+      "VForVendetta" = 55,
+      "YipMan" = 56,
+      "YouKnowWhoIAm" = 57,
+      "Count" = 58,
+      "Invalid" = 59,
+    }
+
+    declare const enum gamedataAffiliation {
+      "AfterlifeMercs" = 0,
+      "Aldecaldos" = 1,
+      "Animals" = 2,
+      "Arasaka" = 3,
+      "Barghest" = 4,
+      "Biotechnica" = 5,
+      "CityCouncil" = 6,
+      "Civilian" = 7,
+      "Classified" = 8,
+      "KangTao" = 9,
+      "Maelstrom" = 10,
+      "MaelstromAndroid" = 11,
+      "Militech" = 12,
+      "NCPD" = 13,
+      "NUSA" = 14,
+      "NetWatch" = 15,
+      "News54" = 16,
+      "OA" = 17,
+      "RecordingAgency" = 18,
+      "SSI" = 19,
+      "Scavengers" = 20,
+      "ScavengersAndroid" = 21,
+      "SixthStreet" = 22,
+      "SixthStreetAndroid" = 23,
+      "SouthCalifornia" = 24,
+      "TheMox" = 25,
+      "TraumaTeam" = 26,
+      "TygerClaws" = 27,
+      "Unaffiliated" = 28,
+      "UnaffiliatedCorpo" = 29,
+      "Unknown" = 30,
+      "Valentinos" = 31,
+      "VoodooBoys" = 32,
+      "Wraiths" = 33,
+      "WraithsAndroid" = 34,
+      "Zetatech" = 35,
+      "corpbud" = 36,
+      "crimson_harvest" = 37,
+      "growl" = 38,
+      "highriders" = 39,
+      "private_press" = 40,
+      "Count" = 41,
+      "Invalid" = 42,
+    }
+
+    declare const enum gamedataAimAssistType {
+      "BreachTarget" = 0,
+      "ChestTarget" = 1,
+      "DriverCombat" = 2,
+      "HeadTarget" = 3,
+      "LegTarget" = 4,
+      "MechanicalTarget" = 5,
+      "Melee" = 6,
+      "None" = 7,
+      "QuickHack" = 8,
+      "Scanning" = 9,
+      "Shooting" = 10,
+      "ShootingLimbCyber" = 11,
+      "WeakSpotTarget" = 12,
+      "Count" = 13,
+      "Invalid" = 14,
     }
 
     declare const enum gamedataArchetypeType {
@@ -6978,6 +9939,96 @@ declare namespace CyberEnums {
       "Invalid" = 5,
     }
 
+    declare const enum gamedataNPCBehaviorState {
+      "State1" = 0,
+      "State2" = 1,
+      "State3" = 2,
+      "State4" = 3,
+      "State5" = 4,
+      "Count" = 5,
+      "Invalid" = 6,
+    }
+
+    declare const enum gamedataNPCHighLevelState {
+      "Alerted" = 0,
+      "Any" = 1,
+      "Combat" = 2,
+      "Dead" = 3,
+      "Fear" = 4,
+      "Relaxed" = 5,
+      "Stealth" = 6,
+      "Unconscious" = 7,
+      "Wounded" = 8,
+      "Count" = 9,
+      "Invalid" = 10,
+    }
+
+    declare const enum gamedataNPCQuestAffiliation {
+      "General" = 0,
+      "MainQuest" = 1,
+      "MinorActivity" = 2,
+      "MinorQuest" = 3,
+      "SideQuest" = 4,
+      "StreetStory" = 5,
+      "Count" = 6,
+      "Invalid" = 7,
+    }
+
+    declare const enum gamedataNPCRarity {
+      "Boss" = 0,
+      "Elite" = 1,
+      "MaxTac" = 2,
+      "Normal" = 3,
+      "Officer" = 4,
+      "Rare" = 5,
+      "Trash" = 6,
+      "Weak" = 7,
+      "Count" = 8,
+      "Invalid" = 9,
+    }
+
+    declare const enum gamedataNPCStanceState {
+      "Any" = 0,
+      "Cover" = 1,
+      "Crouch" = 2,
+      "Stand" = 3,
+      "Swim" = 4,
+      "Vehicle" = 5,
+      "VehicleWindow" = 6,
+      "Count" = 7,
+      "Invalid" = 8,
+    }
+
+    declare const enum gamedataNPCType {
+      "Android" = 0,
+      "Any" = 1,
+      "Cerberus" = 2,
+      "Chimera" = 3,
+      "Device" = 4,
+      "Drone" = 5,
+      "Human" = 6,
+      "Mech" = 7,
+      "Spiderbot" = 8,
+      "Count" = 9,
+      "Invalid" = 10,
+    }
+
+    declare const enum gamedataNPCUpperBodyState {
+      "Aim" = 0,
+      "Any" = 1,
+      "Attack" = 2,
+      "ChargedAttack" = 3,
+      "Defend" = 4,
+      "Equip" = 5,
+      "Normal" = 6,
+      "Parry" = 7,
+      "Reload" = 8,
+      "Shoot" = 9,
+      "Taunt" = 10,
+      "Count" = 11,
+      "Invalid" = 12,
+    }
+
     declare const enum gamedataNewPerkCategoryType {
       "MasterNewPerkCategory" = 0,
       "MilestoneNewPerkCategory" = 1,
@@ -7256,96 +10307,6 @@ declare namespace CyberEnums {
       "Tech_Right_Perk_3_4" = 188,
       "Count" = 189,
       "Invalid" = 190,
-    }
-
-    declare const enum gamedataNPCBehaviorState {
-      "State1" = 0,
-      "State2" = 1,
-      "State3" = 2,
-      "State4" = 3,
-      "State5" = 4,
-      "Count" = 5,
-      "Invalid" = 6,
-    }
-
-    declare const enum gamedataNPCHighLevelState {
-      "Alerted" = 0,
-      "Any" = 1,
-      "Combat" = 2,
-      "Dead" = 3,
-      "Fear" = 4,
-      "Relaxed" = 5,
-      "Stealth" = 6,
-      "Unconscious" = 7,
-      "Wounded" = 8,
-      "Count" = 9,
-      "Invalid" = 10,
-    }
-
-    declare const enum gamedataNPCQuestAffiliation {
-      "General" = 0,
-      "MainQuest" = 1,
-      "MinorActivity" = 2,
-      "MinorQuest" = 3,
-      "SideQuest" = 4,
-      "StreetStory" = 5,
-      "Count" = 6,
-      "Invalid" = 7,
-    }
-
-    declare const enum gamedataNPCRarity {
-      "Boss" = 0,
-      "Elite" = 1,
-      "MaxTac" = 2,
-      "Normal" = 3,
-      "Officer" = 4,
-      "Rare" = 5,
-      "Trash" = 6,
-      "Weak" = 7,
-      "Count" = 8,
-      "Invalid" = 9,
-    }
-
-    declare const enum gamedataNPCStanceState {
-      "Any" = 0,
-      "Cover" = 1,
-      "Crouch" = 2,
-      "Stand" = 3,
-      "Swim" = 4,
-      "Vehicle" = 5,
-      "VehicleWindow" = 6,
-      "Count" = 7,
-      "Invalid" = 8,
-    }
-
-    declare const enum gamedataNPCType {
-      "Android" = 0,
-      "Any" = 1,
-      "Cerberus" = 2,
-      "Chimera" = 3,
-      "Device" = 4,
-      "Drone" = 5,
-      "Human" = 6,
-      "Mech" = 7,
-      "Spiderbot" = 8,
-      "Count" = 9,
-      "Invalid" = 10,
-    }
-
-    declare const enum gamedataNPCUpperBodyState {
-      "Aim" = 0,
-      "Any" = 1,
-      "Attack" = 2,
-      "ChargedAttack" = 3,
-      "Defend" = 4,
-      "Equip" = 5,
-      "Normal" = 6,
-      "Parry" = 7,
-      "Reload" = 8,
-      "Shoot" = 9,
-      "Taunt" = 10,
-      "Count" = 11,
-      "Invalid" = 12,
     }
 
     declare const enum gamedataObjectActionReference {
@@ -11219,19 +14180,6 @@ declare namespace CyberEnums {
       "Invalid" = 22,
     }
 
-    declare const enum gameDebugViewETextAlignment {
-      "Left" = -1,
-      "Center" = 0,
-      "Right" = 1,
-    }
-
-    declare const enum gameDelayContext {
-      "Standard_TD" = 1,
-      "Standard_ND" = 2,
-      "Quest_TD" = 4,
-      "SpawnManager_ND" = 8,
-    }
-
     declare const enum gamedeviceActionPropertyFlags {
       "None" = 0,
       "IsUsedByQuest" = 1,
@@ -11245,332 +14193,12 @@ declare namespace CyberEnums {
       "Internal" = 4,
     }
 
-    declare const enum gameDifficulty {
-      "Easy" = 0,
-      "Hard" = 1,
-      "VeryHard" = 2,
-      "Story" = 3,
-    }
-
-    declare const enum gameDismBodyPart {
-      "LEFT_LEG" = 896,
-      "RIGHT_LEG" = 7168,
-      "LEFT_ARM" = 14,
-      "RIGHT_ARM" = 112,
-      "HEAD" = 1,
-      "BODY" = 8192,
-    }
-
-    declare const enum gameDismWoundType {
-      "CLEAN" = 1,
-      "COARSE" = 2,
-      "HOLE" = 64,
-    }
-
-    declare const enum gameDynamicVehicleType {
-      "None" = 0,
-      "Car" = 1,
-      "AV" = 2,
-      "RoadBlockade" = 3,
-      "RoadBlockadeWithAV" = 4,
-    }
-
-    declare const enum gameEActionFlags {
-      "NONE" = 0,
-      "USE_ANIMATION" = 1,
-      "USE_MOVEMENT" = 2,
-    }
-
-    declare const enum gameEActionStatus {
-      "STATUS_INVALID" = 0,
-      "STATUS_BOUND" = 1,
-      "STATUS_READY" = 2,
-      "STATUS_PROGRESS" = 3,
-      "STATUS_COMPLETE" = 4,
-      "STATUS_FAILURE" = 5,
-    }
-
-    declare const enum gameEAreaShape {
-      "NONE" = 0,
-      "SPHERE" = 1,
-      "CUBE" = 2,
-      "COUNT" = 3,
-    }
-
-    declare const enum gameEAreaType {
-      "NONE" = 0,
-      "LOCATION" = 1,
-      "AFFILIATION" = 2,
-      "COUNT" = 3,
-    }
-
-    declare const enum gameECharacterStance {
-      "Stance_Stand" = 0,
-      "Stance_Crouch" = 1,
-      "Stance_Kneel" = 2,
-      "Stance_Cover" = 3,
-      "Stance_Standing_Cover" = 4,
-      "Stance_Crouching_Cover" = 5,
-    }
-
-    declare const enum gameEContinuousMode {
-      "None" = 0,
-      "Start" = 1,
-      "Stop" = 2,
-    }
-
-    declare const enum gameEEquipmentManagerState {
-      "InfiniteAmmo" = 1,
-    }
-
-    declare const enum gameEffectAction_KillFXAction {
-      "Stop" = 0,
-      "BreakLoop" = 1,
-    }
-
-    declare const enum gameEffectExecutor_AnimFeatureApplyTo {
-      "Target" = 0,
-      "Instigator" = 1,
-    }
-
-    declare const enum gameEffectHitDataType {
-      "Entity" = 0,
-      "Node" = 1,
-      "Static" = 2,
-    }
-
-    declare const enum gameEffectObjectFilter_AxisRangeAxis {
-      "X" = 0,
-      "Y" = 1,
-      "Z" = 2,
-    }
-
-    declare const enum gameEffectObjectFilter_EntityTypeEntityTypeFilter {
-      "Puppet" = 0,
-      "Device" = 1,
-    }
-
-    declare const enum gameEffectObjectFilter_HitTypeAction {
-      "Accept" = 0,
-      "Reject" = 1,
-    }
-
-    declare const enum gameEffectTriggerPositioningType {
-      "PlayerRoot" = 0,
-      "CameraRoot" = 1,
-      "AtSpawn" = 2,
-      "XYCameraZPlayer" = 3,
-      "XYPlayerZCamera" = 4,
-      "XYCameraZTerrain" = 5,
-      "XYPlayerZTerrain" = 6,
-    }
-
-    declare const enum gameEffectTriggerRotationType {
-      "None" = 0,
-      "AtSpawn" = 1,
-      "Continuous" = 2,
-    }
-
-    declare const enum gameEHotkey {
-      "INVALID" = -1,
-      "DPAD_UP" = 0,
-      "DPAD_DOWN" = 1,
-      "DPAD_RIGHT" = 2,
-      "RB" = 3,
-      "LBRB" = 4,
-    }
-
-    declare const enum gameEInventoryFlags {
-      "MustSave" = 1,
-    }
-
-    declare const enum gameEItemIDFlag {
-      "Preview" = 1,
-    }
-
-    declare const enum gameELootGenerationType {
-      "DropChance" = 0,
-      "NumberBased" = 1,
-      "Weights" = 2,
-      "Count" = 3,
-    }
-
-    declare const enum gameEMaterialZone {
-      "Zero" = 0,
-      "One" = 1,
-      "Two" = 2,
-      "Three" = 3,
-    }
-
-    declare const enum gameEnemyStealthAwarenessState {
-      "Relaxed" = 0,
-      "Aware" = 1,
-      "Alerted" = 2,
-      "Combat" = 3,
-    }
-
-    declare const enum gameEntityReferenceType {
-      "EntityRef" = 0,
-      "Tag" = 1,
-      "SlotID" = 2,
-      "SceneActorContextName" = 3,
-    }
-
-    declare const enum gameEntitySpawnerEventType {
-      "Spawn" = 2,
-      "Despawn" = 3,
-      "Death" = 4,
-    }
-
-    declare const enum gameEntityStubClass {
-      "Other" = 0,
-      "Puppet" = 1,
-      "Vehicle" = 2,
-    }
-
-    declare const enum gameEPowerDifferential {
-      "IMPOSSIBLE" = -6,
-      "HARD" = -3,
-      "NORMAL" = 2,
-      "EASY" = 4,
-      "TRASH" = 5,
-    }
-
-    declare const enum gameEPrerequisiteType {
-      "None" = 0,
-      "NestedPrereq" = 1,
-      "StatValue" = 2,
-      "StatPoolValue" = 3,
-      "HealthAbsolute" = 4,
-      "HealthPercent" = 5,
-      "ItemInInventory" = 6,
-      "ItemEquipped" = 7,
-      "ItemCount" = 8,
-      "QuestAchieved" = 9,
-      "WasScanned" = 10,
-      "Attitude" = 11,
-      "Count" = 12,
-    }
-
-    declare const enum gameEquipAnimationType {
-      "Default" = 0,
-      "Instant" = 1,
-      "FirstEquip" = 2,
-      "HACK_ForceInstantEquip" = 3,
-    }
-
-    declare const enum gameEquipmentSetType {
-      "Offensive" = 0,
-      "Defensive" = 1,
-      "Cyberware" = 2,
-    }
-
-    declare const enum gameESlotState {
-      "Taken" = 0,
-      "Empty" = 1,
-      "Available" = 2,
-    }
-
-    declare const enum gameEStatFlags {
-      "Bool" = 1,
-      "EquipOnPlayer" = 2,
-      "EquipOnNPC" = 4,
-      "ExcludeRootCombination" = 8,
-    }
-
-    declare const enum gameEStatProviderDataSource {
-      "gameItemData" = 0,
-      "InventoryItemData" = 1,
-      "InnerItemData" = 2,
-      "Invalid" = 3,
-    }
-
     declare const enum gameeventsDeathDirection {
       "Undefined" = 0,
       "Left" = 1,
       "Backward" = 2,
       "Right" = 3,
       "Forward" = 4,
-    }
-
-    declare const enum gameFearStage {
-      "Relaxed" = 0,
-      "Stressed" = 1,
-      "Alarmed" = 2,
-      "Panic" = 3,
-    }
-
-    declare const enum gameGameplayEventFlag {
-      "Ai" = 1,
-      "Trigger" = 2,
-      "Component" = 4,
-      "Script" = 8,
-    }
-
-    declare const enum gameGameVersion {
-      "CP77_Initial" = 0,
-      "CP77_Development" = 1,
-      "CP77_GoldMaster" = 2,
-      "CP77_ActualGoldMaster" = 3,
-      "CP77_AlmostPatchDay0" = 4,
-      "CP77_PatchDay0" = 5,
-      "CP77_PatchDay0_Hotfix1" = 6,
-      "CP77_PatchDay0_Hotfix2" = 7,
-      "CP77_PatchDay0_Hotfix2_V2" = 8,
-      "CP77_PatchDay0_Hotfix3" = 9,
-      "CP77_PatchDay0_ChristmasHotfix" = 10,
-      "CP77_PatchDay0_Hotfix4_Internal" = 11,
-      "CP77_Patch_1_Internal" = 12,
-      "CP77_Patch_1_1" = 1100,
-      "CP77_Patch_1_1_Hotfix1" = 1110,
-      "CP77_Patch_1_1_Hotfix2" = 1120,
-      "CP77_Patch_1_2" = 1200,
-      "CP77_Patch_1_2_Hotfix1" = 1210,
-      "CP77_Patch_1_2_Hotfix2" = 1220,
-      "CP77_Patch_1_2_Hotfix3" = 1230,
-      "CP77_Patch_1_2_Hotfix4_dlc1" = 1240,
-      "CP77_Patch_1_3" = 1300,
-      "CP77_Patch_1_3_Hotfix1" = 1301,
-      "CP77_Patch_1_3_Development" = 1399,
-      "CP77_Patch_1_4" = 1310,
-      "CP77_Patch_1_5" = 1500,
-      "CP77_Patch_1_5_Hotfix1" = 1510,
-      "CP77_Patch_1_5_Actual_Hotfix1" = 1520,
-      "CP77_Patch_1_5_Development" = 1599,
-      "CP77_Patch_1_6" = 1600,
-      "CP77_Patch_1_6_Hotfix1" = 1610,
-      "CP77_Patch_1_6_Hotfix2" = 1620,
-      "CP77_Patch_1_6_Hotfix3" = 1630,
-      "CP77_Patch_2_0" = 2000,
-      "CP77_Patch_2_0_Hotfix1" = 2010,
-      "CP77_Patch_2_0_Hotfix2" = 2020,
-      "CP77_Patch_2_1" = 2100,
-      "CP77_Patch_2_1_Hotfix1" = 2110,
-      "CP77_Patch_2_1_Hotfix2" = 2120,
-      "CP77_Patch_2_1_Hotfix3" = 2137,
-      "CP77_Patch_2_2" = 2200,
-      "CP77_Patch_2_2_Hotfix1" = 2210,
-      "CP77_Patch_2_3" = 2300,
-      "Current" = 2300,
-    }
-
-    declare const enum gameGlobalTierSubtype {
-      "Quest" = 0,
-      "Supervisor" = 1,
-    }
-
-    declare const enum gameGodModeType {
-      "Immortal" = 1,
-      "Invulnerable" = 0,
-      "Mortal" = 2,
-    }
-
-    declare const enum gameGrenadeThrowStartType {
-      "Invalid" = 0,
-      "LeftSide" = 1,
-      "RightSide" = 2,
-      "Top" = 3,
-      "Count" = 4,
     }
 
     declare const enum gameinfluenceCollisionTestOutcome {
@@ -11588,16 +14216,6 @@ declare namespace CyberEnums {
       "Fail" = 0,
       "Success" = 1,
       "Unknown" = 2,
-    }
-
-    declare const enum gameInitalChoiceStage {
-      "None" = 0,
-      "Difficulty" = 1,
-      "LifePath" = 2,
-      "Gender" = 3,
-      "Customizations" = 4,
-      "Attributes" = 5,
-      "Finished" = 6,
     }
 
     declare const enum gameinputActionType {
@@ -11757,150 +14375,6 @@ declare namespace CyberEnums {
       "Proximity" = 1,
     }
 
-    declare const enum gameInventoryItemAttachmentType {
-      "Generic" = 0,
-      "Dedicated" = 1,
-    }
-
-    declare const enum gameInventoryItemShape {
-      "SingleSlot" = 0,
-      "DoubleSlot" = 1,
-    }
-
-    declare const enum gameItemComparisonState {
-      "Default" = 0,
-      "NoChange" = 1,
-      "Better" = 2,
-      "Worse" = 3,
-    }
-
-    declare const enum gameItemDisplayContext {
-      "None" = 0,
-      "Vendor" = 1,
-      "Tooltip" = 2,
-      "VendorPlayer" = 3,
-      "GearPanel" = 4,
-      "Backpack" = 5,
-      "DPAD_RADIAL" = 6,
-      "Attachment" = 7,
-      "Ripperdoc" = 8,
-      "Crafting" = 9,
-    }
-
-    declare const enum gameItemEquipContexts {
-      "LastWeaponEquipped" = 0,
-      "LastUsedMeleeWeapon" = 1,
-      "LastUsedRangedWeapon" = 2,
-      "Gadget" = 3,
-      "MeleeCyberware" = 4,
-      "LauncherCyberware" = 5,
-      "Fists" = 6,
-      "TutorialCyberware" = 7,
-    }
-
-    declare const enum gameItemIconGender {
-      "Female" = 0,
-      "Male" = 1,
-    }
-
-    declare const enum gameItemUnequipContexts {
-      "AllWeapons" = 0,
-      "HeadClothing" = 1,
-      "FaceClothing" = 2,
-      "OuterChestClothing" = 3,
-      "InnerChestClothing" = 4,
-      "LegClothing" = 5,
-      "FootClothing" = 6,
-      "AllClothing" = 7,
-      "RightHandWeapon" = 8,
-      "LeftHandWeapon" = 9,
-      "AllQuestItems" = 10,
-      "AllItems" = 11,
-    }
-
-    declare const enum gameJournalBriefingContentType {
-      "MapLocation" = 0,
-      "VideoContent" = 1,
-      "Paperdoll" = 2,
-    }
-
-    declare const enum gameJournalCallbackOption {
-      "DoNotFire" = 0,
-      "Fire" = 1,
-    }
-
-    declare const enum gameJournalChangeType {
-      "Undefined" = 0,
-      "Direct" = 1,
-      "Indirect" = 2,
-      "IndirectDependent" = 3,
-    }
-
-    declare const enum gameJournalEntryState {
-      "Undefined" = 0,
-      "Inactive" = 1,
-      "Active" = 2,
-      "Succeeded" = 3,
-      "Failed" = 4,
-    }
-
-    declare const enum gameJournalEntryUserState {
-      "Undefined" = 0,
-      "Inactive" = 1,
-      "Active" = 2,
-      "Succeeded" = 3,
-      "Failed" = 4,
-      "Read" = 5,
-      "Open" = 6,
-    }
-
-    declare const enum gameJournalListenerType {
-      "State" = 0,
-      "Visited" = 1,
-      "Tracked" = 2,
-      "Untracked" = 3,
-      "Counter" = 4,
-      "StateDelay" = 5,
-      "ObjectiveOptional" = 6,
-      "ChoiceEntry" = 7,
-    }
-
-    declare const enum gameJournalNotifyOption {
-      "Undefined" = 0,
-      "DoNotNotify" = 1,
-      "Notify" = 2,
-    }
-
-    declare const enum gameJournalQuestType {
-      "MainQuest" = 0,
-      "SideQuest" = 1,
-      "MinorQuest" = 2,
-      "StreetStory" = 3,
-      "CyberPsycho" = 4,
-      "Contract" = 5,
-      "VehicleQuest" = 6,
-      "ApartmentQuest" = 7,
-      "CourierQuest" = 8,
-      "CourierSideQuest" = 9,
-    }
-
-    declare const enum gameKillType {
-      "Normal" = 0,
-      "Defeat" = 1,
-    }
-
-    declare const enum gameLootItemType {
-      "Default" = 0,
-      "Quest" = 1,
-      "Shard" = 2,
-    }
-
-    declare const enum gameLoSMode {
-      "Invalid" = 0,
-      "Keep" = 1,
-      "Avoid" = 2,
-    }
-
     declare const enum gamemappinsMappinTargetType {
       "World" = 0,
       "Minimap" = 1,
@@ -11911,175 +14385,6 @@ declare namespace CyberEnums {
       "Above" = 0,
       "Same" = 1,
       "Below" = 2,
-    }
-
-    declare const enum gameMessageSender {
-      "NPC" = 0,
-      "Player" = 1,
-    }
-
-    declare const enum gameMountDescriptorMountType {
-      "Unmounted" = 0,
-      "KeepState" = 1,
-      "Vehicle" = 3,
-      "MovingPlatform" = 4,
-    }
-
-    declare const enum gameMountingObjectSubType {
-      "Invalid" = -1,
-      "Car" = 0,
-      "Bike" = 1,
-    }
-
-    declare const enum gameMountingObjectType {
-      "Invalid" = -1,
-      "Object" = 0,
-      "Vehicle" = 1,
-      "Puppet" = 2,
-      "Platform" = 3,
-    }
-
-    declare const enum gameMountingRelationshipType {
-      "Invalid" = -1,
-      "Parent" = 0,
-      "Child" = 1,
-    }
-
-    declare const enum gameMountingSlotRole {
-      "Invalid" = -1,
-      "Driver" = 0,
-      "Passenger" = 1,
-      "Passenger_FR" = 2,
-      "Passenger_BL" = 3,
-      "Passenger_BR" = 4,
-    }
-
-    declare const enum gameMovingPlatformLoopType {
-      "NoLooping" = 0,
-      "Bounce" = 1,
-      "Repeat" = 2,
-    }
-
-    declare const enum gameMovingPlatformMovementInitializationType {
-      "Time" = 0,
-      "Speed" = 1,
-    }
-
-    declare const enum gameMuppetComparisonReportItemType {
-      "Different" = 0,
-      "WithinTolerance" = 1,
-      "Equal" = 2,
-    }
-
-    declare const enum gameMuppetDebugCommand {
-      "None" = 0,
-      "Kill" = 1,
-      "KillAll" = 2,
-    }
-
-    declare const enum gameMuppetInputActionType {
-      "Unknown" = 0,
-      "Impulse" = 1,
-      "Press" = 2,
-    }
-
-    declare const enum gameMuppetMoveStyle {
-      "Invalid" = 0,
-      "Walk" = 1,
-      "Sprint" = 2,
-      "Crouch" = 3,
-      "WalkAim" = 4,
-      "GravityOnly" = 5,
-    }
-
-    declare const enum gameOnlineSystemErrors {
-      "None" = 0,
-      "RequestFailed" = 1,
-      "TemporaryFailure" = 2,
-      "NoInternetConnection" = 3,
-      "NotSignedInGalaxy" = 4,
-      "NotSignedInLauncher" = 5,
-      "NotSignedInGame" = 6,
-    }
-
-    declare const enum gameOnlineSystemStatus {
-      "Uninitialized" = 0,
-      "GeneratingCPID" = 1,
-      "CheckingRegistrationStatus" = 2,
-      "RegistrationPending" = 3,
-      "Registered" = 4,
-      "Error" = 5,
-    }
-
-    declare const enum gamePhantomEntityState {
-      "RootMotion" = 0,
-      "Workspot" = 1,
-      "MoveOnSpline" = 2,
-    }
-
-    declare const enum gamePlatformMovementState {
-      "Stopped" = 0,
-      "Paused" = 1,
-      "MovingUp" = 2,
-      "MovingDown" = 3,
-    }
-
-    declare const enum gamePlayerCoverDirection {
-      "None" = -1,
-      "Up" = 0,
-      "Left" = 1,
-      "Right" = 2,
-    }
-
-    declare const enum gamePlayerCoverMode {
-      "None" = 0,
-      "Auto" = 1,
-      "Manual" = 2,
-    }
-
-    declare const enum gamePlayerObstacleSystemQueryType {
-      "Climb_Vault" = 0,
-      "Covers" = 1,
-      "AverageNormal" = 2,
-    }
-
-    declare const enum gamePlayerStateMachine {
-      "Locomotion" = 0,
-      "UpperBody" = 1,
-      "Weapon" = 2,
-      "HighLevel" = 3,
-      "Projectile" = 4,
-      "Vision" = 5,
-      "TimeDilation" = 6,
-      "CoverAction" = 7,
-      "IconicItem" = 8,
-      "Combat" = 9,
-      "Vehicle" = 10,
-      "Takedown" = 11,
-    }
-
-    declare const enum GameplayTier {
-      "Undefined" = 0,
-      "Tier1_FullGameplay" = 1,
-      "Tier2_StagedGameplay" = 2,
-      "Tier3_LimitedGameplay" = 3,
-      "Tier4_FPPCinematic" = 4,
-      "Tier5_Cinematic" = 5,
-    }
-
-    declare const enum gamePopulationEntityPriority {
-      "Quest" = 0,
-      "Community" = 1,
-      "Crowd" = 2,
-    }
-
-    declare const enum gamePopupPosition {
-      "Undefined" = 0,
-      "UpperRight" = 1,
-      "UpperLeft" = 2,
-      "LowerLeft" = 3,
-      "LowerRight" = 4,
-      "Center" = 5,
     }
 
     declare const enum gameprojectileELaunchMode {
@@ -12103,451 +14408,6 @@ declare namespace CyberEnums {
       "Accel" = 2,
     }
 
-    declare const enum gamePSMBodyCarrying {
-      "Any" = -1,
-      "Default" = 0,
-      "PickUp" = 1,
-      "Carry" = 2,
-      "Dispose" = 3,
-      "Drop" = 4,
-      "Aim" = 5,
-      "Throw" = 6,
-    }
-
-    declare const enum gamePSMBodyCarryingLocomotion {
-      "Default" = 0,
-      "Jump" = 1,
-      "Crouch" = 2,
-      "Sprint" = 3,
-      "Fall" = 4,
-      "Land" = 5,
-      "DropBody" = 6,
-    }
-
-    declare const enum gamePSMBodyCarryingStyle {
-      "Any" = 0,
-      "Default" = 1,
-      "Friendly" = 2,
-      "Strong" = 3,
-      "WoundedSoldier" = 4,
-    }
-
-    declare const enum gamePSMCombat {
-      "Any" = -1,
-      "Default" = 0,
-      "InCombat" = 1,
-      "OutOfCombat" = 2,
-      "Stealth" = 3,
-    }
-
-    declare const enum gamePSMCombatGadget {
-      "Default" = 0,
-      "EquipRequest" = 1,
-      "Equipped" = 2,
-      "Charging" = 3,
-      "Throwing" = 4,
-      "WaitForUnequip" = 5,
-      "QuickThrow" = 6,
-    }
-
-    declare const enum gamePSMCover {
-      "Any" = -1,
-      "Default" = 0,
-      "InCover" = 1,
-      "Peek" = 2,
-      "Lean" = 3,
-      "OutOfCover" = 4,
-    }
-
-    declare const enum gamePSMCrosshairStates {
-      "Default" = 0,
-      "Safe" = 1,
-      "Scanning" = 2,
-      "GrenadeCharging" = 3,
-      "Aim" = 4,
-      "Reload" = 5,
-      "ReloadDriverCombatMountedWeapons" = 6,
-      "Sprint" = 7,
-      "HipFire" = 8,
-      "LeftHandCyberware" = 9,
-      "QuickHack" = 10,
-    }
-
-    declare const enum gamePSMDetailedBodyDisposal {
-      "Default" = 0,
-      "Dispose" = 1,
-      "Lethal" = 2,
-      "NonLethal" = 3,
-    }
-
-    declare const enum gamePSMDetailedLocomotionStates {
-      "NotInBaseLocomotion" = 0,
-      "Stand" = 1,
-      "AimWalk" = 2,
-      "Crouch" = 3,
-      "Sprint" = 4,
-      "Slide" = 5,
-      "SlideFall" = 6,
-      "Dodge" = 7,
-      "Climb" = 8,
-      "Vault" = 9,
-      "Ladder" = 10,
-      "LadderSprint" = 11,
-      "LadderSlide" = 12,
-      "LadderJump" = 13,
-      "Fall" = 14,
-      "AirThrusters" = 15,
-      "AirHover" = 16,
-      "SuperheroFall" = 17,
-      "Jump" = 18,
-      "DoubleJump" = 19,
-      "ChargeJump" = 20,
-      "HoverJump" = 21,
-      "DodgeAir" = 22,
-      "RegularLand" = 23,
-      "HardLand" = 24,
-      "VeryHardLand" = 25,
-      "DeathLand" = 26,
-      "SuperheroLand" = 27,
-      "SuperheroLandRecovery" = 28,
-      "Knockdown" = 29,
-      "CrouchSprint" = 30,
-      "Felled" = 31,
-    }
-
-    declare const enum gamePSMFallStates {
-      "Default" = 0,
-      "RegularFall" = 1,
-      "SafeFall" = 2,
-      "FastFall" = 3,
-      "VeryFastFall" = 4,
-      "DeathFall" = 5,
-    }
-
-    declare const enum gamePSMHighLevel {
-      "Any" = -1,
-      "Default" = 0,
-      "SceneTier1" = 1,
-      "SceneTier2" = 2,
-      "SceneTier3" = 3,
-      "SceneTier4" = 4,
-      "SceneTier5" = 5,
-      "Swimming" = 6,
-    }
-
-    declare const enum gamePSMLandingState {
-      "Default" = 0,
-      "RegularLand" = 1,
-      "HardLand" = 2,
-      "VeryHardLand" = 3,
-      "DeathLand" = 4,
-      "SuperheroLand" = 5,
-      "SuperheroLandRecovery" = 6,
-    }
-
-    declare const enum gamePSMLeftHandCyberware {
-      "Default" = 0,
-      "Safe" = 1,
-      "EquipRequest" = 2,
-      "Idle" = 3,
-      "Equipped" = 4,
-      "Charge" = 5,
-      "Loop" = 6,
-      "Catch" = 7,
-      "QuickAction" = 8,
-      "ChargeAction" = 9,
-      "CatchAction" = 10,
-      "StartUnequip" = 11,
-      "Unequip" = 12,
-    }
-
-    declare const enum gamePSMLocomotionStates {
-      "Any" = -1,
-      "Default" = 0,
-      "Crouch" = 1,
-      "Sprint" = 2,
-      "Kereznikov" = 3,
-      "Jump" = 5,
-      "Vault" = 6,
-      "Dodge" = 7,
-      "DodgeAir" = 8,
-      "Workspot" = 9,
-      "Slide" = 10,
-      "SlideFall" = 11,
-      "CrouchSprint" = 12,
-      "CrouchDodge" = 13,
-    }
-
-    declare const enum gamePSMMelee {
-      "Any" = -1,
-      "Default" = 0,
-      "Attack" = 1,
-      "Block" = 2,
-    }
-
-    declare const enum gamePSMMeleeWeapon {
-      "NotReady" = 0,
-      "Equipping" = 1,
-      "Idle" = 2,
-      "Safe" = 3,
-      "PublicSafe" = 4,
-      "Parried" = 5,
-      "Hold" = 6,
-      "ChargedHold" = 7,
-      "Block" = 8,
-      "Targeting" = 9,
-      "Deflect" = 10,
-      "ComboAttack" = 11,
-      "FinalAttack" = 12,
-      "StrongAttack" = 13,
-      "SafeAttack" = 14,
-      "BlockAttack" = 15,
-      "SprintAttack" = 16,
-      "CrouchAttack" = 17,
-      "JumpAttack" = 18,
-      "ThrowAttack" = 19,
-      "DeflectAttack" = 20,
-      "EquipAttack" = 21,
-      "Default" = 22,
-    }
-
-    declare const enum gamePSMNanoWireLaunchMode {
-      "Default" = 0,
-      "Primary" = 1,
-      "Secondary" = 2,
-    }
-
-    declare const enum gamePSMRangedWeaponStates {
-      "Any" = -1,
-      "Default" = 0,
-      "Charging" = 1,
-      "Reload" = 2,
-      "QuickMelee" = 3,
-      "NoAmmo" = 4,
-      "Ready" = 5,
-      "Safe" = 6,
-      "Overheat" = 7,
-      "Shoot" = 8,
-    }
-
-    declare const enum gamePSMReaction {
-      "Default" = 0,
-      "Stagger" = 1,
-    }
-
-    declare const enum gamePSMStamina {
-      "Rested" = 0,
-      "Fatigued" = 1,
-      "Exhausted" = 2,
-    }
-
-    declare const enum gamePSMSwimming {
-      "Any" = -1,
-      "Default" = 0,
-      "Surface" = 1,
-      "Diving" = 2,
-      "Climbing" = 3,
-    }
-
-    declare const enum gamePSMTakedown {
-      "Any" = -1,
-      "Default" = 0,
-      "EnteringGrapple" = 1,
-      "Grapple" = 2,
-      "Leap" = 3,
-      "Takedown" = 4,
-    }
-
-    declare const enum gamePSMTimeDilation {
-      "Any" = -1,
-      "Default" = 0,
-      "Sandevistan" = 1,
-    }
-
-    declare const enum gamePSMUIState {
-      "None" = 0,
-      "WeaponSelect" = 1,
-    }
-
-    declare const enum gamePSMUpperBodyStates {
-      "Any" = -1,
-      "Default" = 0,
-      "SwitchItems" = 1,
-      "SwitchCyberware" = 2,
-      "Reload" = 3,
-      "Aim" = 6,
-      "TemporaryUnequip" = 4,
-      "ForceEmptyHands" = 5,
-    }
-
-    declare const enum gamePSMVehicle {
-      "Any" = -1,
-      "Default" = 0,
-      "Driving" = 1,
-      "Combat" = 2,
-      "Passenger" = 3,
-      "Transition" = 4,
-      "Turret" = 5,
-      "DriverCombat" = 6,
-      "Scene" = 7,
-    }
-
-    declare const enum gamePSMVision {
-      "Any" = -1,
-      "Default" = 0,
-      "Focus" = 1,
-    }
-
-    declare const enum gamePSMVisionDebug {
-      "Default" = 0,
-      "VisionToggle" = 1,
-    }
-
-    declare const enum gamePSMVitals {
-      "Alive" = 0,
-      "Dead" = 1,
-      "Resurrecting" = 2,
-    }
-
-    declare const enum gamePSMWeaponStates {
-      "Any" = -1,
-      "Default" = 0,
-      "NoAmmo" = 1,
-      "Ready" = 2,
-      "Safe" = 3,
-    }
-
-    declare const enum gamePSMWhip {
-      "Default" = 0,
-      "Charging" = 1,
-      "Pulling" = 2,
-    }
-
-    declare const enum gamePSMWorkspotState {
-      "Default" = 0,
-      "Workspot" = 1,
-    }
-
-    declare const enum gamePSMZones {
-      "Any" = -1,
-      "Default" = 0,
-      "Public" = 1,
-      "Safe" = 2,
-      "Restricted" = 3,
-      "Dangerous" = 4,
-    }
-
-    declare const enum gamePuppetVehicleState {
-      "IdleMounted" = 0,
-      "IdleStand" = 1,
-      "CombatSeated" = 3,
-      "CombatWindowed" = 2,
-      "Turret" = 4,
-      "GunnerSlot" = 5,
-    }
-
-    declare const enum gameQuestGuidanceMarkerPathfindingType {
-      "Auto" = 0,
-      "Navmesh" = 1,
-      "Traffic" = 2,
-    }
-
-    declare const enum gameRegular1v1FinisherScenarioPivotSetting {
-      "AttackerSlidesAndRotates_TargetStandsStill" = 0,
-      "AttackerStandsStill_TargetSlidesAndRotates" = 1,
-    }
-
-    declare const enum gameReprimandMappinAnimationState {
-      "None" = 0,
-      "Normal" = 1,
-      "Fast" = 2,
-    }
-
-    declare const enum gameSaveLockReason {
-      "Nothing" = 0,
-      "Combat" = 1,
-      "Scene" = 2,
-      "Quest" = 3,
-      "Script" = 4,
-      "Boundary" = 5,
-      "MainMenu" = 6,
-      "LoadingScreen" = 7,
-      "PlayerStateMachine" = 8,
-      "PlayerState" = 9,
-      "Tier" = 10,
-      "NotEnoughSlots" = 11,
-      "NotEnoughSpace" = 12,
-      "PlayerOnMovingPlatform" = 13,
-    }
-
-    declare const enum gameScanningMode {
-      "Inactive" = 0,
-      "Light" = 1,
-      "Heavy" = 2,
-    }
-
-    declare const enum gameScanningState {
-      "Default" = 0,
-      "Started" = 1,
-      "Stopped" = 2,
-      "Complete" = 3,
-      "ShallowComplete" = 4,
-      "Reset" = 5,
-    }
-
-    declare const enum gameSceneAnimationMotionActionParamsEasingType {
-      "Linear" = 0,
-      "SinusoidalEaseInOut" = 1,
-      "QuadraticEaseIn" = 2,
-      "QuadraticEaseOut" = 3,
-      "CubicEaseInOut" = 4,
-      "CubicEaseIn" = 5,
-      "CubicEaseOut" = 6,
-    }
-
-    declare const enum gameSceneAnimationMotionActionParamsMotionType {
-      "Rid" = 0,
-      "Anim" = 1,
-    }
-
-    declare const enum gameSceneAnimationMotionActionParamsPlacementMode {
-      "Blend" = 0,
-      "TeleportToStart" = 1,
-      "PlayAtActorPosition" = 2,
-    }
-
-    declare const enum gameScriptedBlackboardStorage {
-      "Default" = 0,
-    }
-
-    declare const enum gameScriptTaskExecutionStage {
-      "Any" = 0,
-      "PostPhysics" = 1,
-    }
-
-    declare const enum gameSharedInventoryTag {
-      "None" = 0,
-      "PlayerStash" = 1000000,
-    }
-
-    declare const enum gameSimpleMessageType {
-      "Undefined" = 0,
-      "Negative" = 1,
-      "Neutral" = 2,
-      "Vehicle" = 3,
-      "Apartment" = 4,
-      "Relic" = 5,
-      "Money" = 6,
-      "Reveal" = 7,
-      "Boss" = 8,
-      "Twintone" = 9,
-      "Police" = 10,
-      "Autodrive" = 11,
-      "TwintoneNegative" = 12,
-      "Connection" = 13,
-      "DelamainTaxi" = 14,
-    }
-
     declare const enum gamesmartGunTargetState {
       "Visible" = 1,
       "Targetable" = 2,
@@ -12556,149 +14416,10 @@ declare namespace CyberEnums {
       "Unlocking" = 8,
     }
 
-    declare const enum gameSmartObjectInstanceEntryType {
-      "UseEntryAnimation" = 0,
-      "UseLocomotion" = 1,
-    }
-
-    declare const enum gameSmartObjectPointType {
-      "Entry" = 0,
-      "Exit" = 1,
-      "Action" = 2,
-    }
-
-    declare const enum gameSmartObjectType {
-      "Default" = 0,
-      "LadderUp" = 1,
-      "LadderDown" = 2,
-      "JumpOnSameLevel" = 3,
-      "Jump3mUp" = 4,
-      "Jump3mDown" = 5,
-      "Climb110cmUp" = 6,
-      "Climb110cmDown" = 7,
-      "Climb200cmUp" = 8,
-      "Climb200cmDown" = 9,
-      "Climb300cmUp" = 10,
-      "Climb300cmDown" = 11,
-      "Vault10cm" = 12,
-      "Vault40cm" = 13,
-      "Vault100cm" = 14,
-      "ChargedJump400cmUp" = 15,
-      "ChargedJump400cmDown" = 16,
-      "ChargedJump600cmUp" = 17,
-      "ChargedJump600cmDown" = 18,
-      "ChargedJump800cmUp" = 19,
-      "ChargedJump800cmDown" = 20,
-      "ThrusterJumpUp" = 21,
-      "ThrusterJumpDown" = 22,
-      "Climb400cmDown" = 23,
-      "Jump4mDown" = 24,
-      "VaultJump7mDown" = 25,
-    }
-
-    declare const enum gameSpawnInViewState {
-      "default (true)" = 0,
-      "true" = 1,
-      "false" = 2,
-    }
-
     declare const enum gamestateMachineParameterAspect {
       "Temporary" = 0,
       "Permanent" = 1,
       "Conditional" = 2,
-    }
-
-    declare const enum gameStatIDType {
-      "EntityID" = 0,
-      "ItemID" = 1,
-      "Invalid" = 2,
-    }
-
-    declare const enum gameStatModifierType {
-      "Additive" = 0,
-      "AdditiveMultiplier" = 1,
-      "Multiplier" = 2,
-      "Count" = 3,
-      "Invalid" = 4,
-    }
-
-    declare const enum gameStatObjectsRelation {
-      "Self" = 0,
-      "Owner" = 1,
-      "Root" = 2,
-      "Parent" = 3,
-      "Target" = 4,
-      "Player" = 5,
-      "Instigator" = 6,
-      "Count" = 7,
-      "Invalid" = 9,
-    }
-
-    declare const enum gameStatPoolDataBonusType {
-      "None" = 0,
-      "Persistent" = 1,
-      "NonPersistent" = 2,
-    }
-
-    declare const enum gameStatPoolDataStatPoolModificationStatus {
-      "Regeneration" = 0,
-      "Decay" = 1,
-      "NoModification" = 2,
-    }
-
-    declare const enum gameStatPoolDataValueChangeMode {
-      "Normal" = 0,
-      "IncreasingOnly" = 1,
-      "DecreasingOnly" = 2,
-      "NonZero" = 3,
-    }
-
-    declare const enum gameStatPoolModificationTypes {
-      "Regeneration" = 0,
-      "Decay" = 1,
-    }
-
-    declare const enum gameStatPoolModifierProperty {
-      "RangeBegin" = 0,
-      "RangeEnd" = 1,
-      "StartDelay" = 2,
-      "ValuePerSec" = 3,
-      "Enabled" = 4,
-      "DelayOnChange" = 5,
-      "Count" = 6,
-    }
-
-    declare const enum gameStatsBundleOwnerType {
-      "None" = 0,
-      "Cleared" = 1,
-      "UniqueItem" = 2,
-      "StackableItem" = 3,
-      "InnerItem" = 4,
-      "Entity" = 5,
-      "Stub" = 6,
-      "Reinitialized" = 7,
-      "Count" = 8,
-      "Invalid" = 9,
-    }
-
-    declare const enum gameStoryTier {
-      "Gameplay" = 0,
-      "Cinematic" = 1,
-    }
-
-    declare const enum gameStubMappinType {
-      "None" = 0,
-      "Police" = 1,
-      "PoliceVehicle" = 2,
-      "Vehicle" = 3,
-    }
-
-    declare const enum gameTargetingSet {
-      "Visible" = 0,
-      "ClearlyVisible" = 1,
-      "Frustum" = 2,
-      "Complete" = 3,
-      "None" = 4,
     }
 
     declare const enum gametargetingSystemETargetFilterStatus {
@@ -12740,71 +14461,6 @@ declare namespace CyberEnums {
       "St_AliveAndActive" = 174080,
     }
 
-    declare const enum gameTelemetryDamageSituation {
-      "Irrelevant" = 0,
-      "EnemyToPlayer" = 1,
-      "EnemyToCompanion" = 2,
-      "PlayerToEnemy" = 3,
-      "CompanionToEnemy" = 4,
-      "PlayerToPlayer" = 5,
-    }
-
-    declare const enum gameTelemetryHitDefenseType {
-      "Block" = 0,
-      "Deflect" = 1,
-    }
-
-    declare const enum gameTelemetryMilestoneType {
-      "StartFact" = 0,
-      "ImportantFact" = 1,
-      "Reward" = 2,
-      "EndFact" = 4,
-      "EndReward" = 3,
-      "Invalid" = 5,
-    }
-
-    declare const enum gameTelemetryMovementType {
-      "Jump" = 0,
-      "DoubleJump" = 1,
-      "ChargedJump" = 2,
-      "Dodge" = 3,
-      "AirDodge" = 4,
-    }
-
-    declare const enum gameTickableEventState {
-      "Idle" = 0,
-      "FirstTick" = 1,
-      "NormalTick" = 2,
-      "LastTick" = 3,
-      "Canceled" = 4,
-    }
-
-    declare const enum gameTransformAnimation_MoveOnSplineRotationMode {
-      "Disabled" = 0,
-      "Yaw" = 1,
-      "PitchAndYaw" = 2,
-    }
-
-    declare const enum gameTransformAnimation_RotateOnAxisAxis {
-      "X" = 0,
-      "Y" = 1,
-      "Z" = 2,
-    }
-
-    declare const enum gameTStatModifier {
-      "Constant" = 0,
-      "Random" = 1,
-      "Curve" = 2,
-      "Combined" = 3,
-      "Count" = 4,
-      "Invalid" = 5,
-    }
-
-    declare const enum gameTutorialBracketType {
-      "WidgetArea" = 0,
-      "CustomArea" = 1,
-    }
-
     declare const enum gameuiActivePhoneElement {
       "Call" = 1,
       "IncomingCall" = 2,
@@ -12813,88 +14469,6 @@ declare namespace CyberEnums {
       "Notifications" = 16,
       "InVehicle" = 32,
       "None" = 64,
-    }
-
-    declare const enum gameuiarcadeArcadeColliderType {
-      "Body" = 0,
-      "Up" = 1,
-      "Right" = 2,
-      "Bottom" = 3,
-      "Left" = 4,
-    }
-
-    declare const enum gameuiarcadeArcadeMinigame {
-      "RoachRace" = 0,
-      "Shooter" = 1,
-      "Tank" = 2,
-    }
-
-    declare const enum gameuiarcadeArcadeParallaxPlaneControllerDisplacementAxis {
-      "Horizontal" = 0,
-      "Vertical" = 1,
-    }
-
-    declare const enum gameuiarcadeArcadeParallaxPlaneControllerLoopType {
-      "None" = 0,
-      "Repeat" = 1,
-    }
-
-    declare const enum gameuiarcadeRoachRaceObjectType {
-      "BoostObject_Apple" = 0,
-      "BoostObject_Carrot" = 1,
-      "Obstacle" = 2,
-    }
-
-    declare const enum gameuiarcadeShooterAIType {
-      "MELEE" = 0,
-      "RANGESHOOTER" = 1,
-      "RANGEGRENADE" = 2,
-      "FLYINGDRONE" = 3,
-      "SPIDERDRONE" = 4,
-      "POWERUPDRONE" = 5,
-      "TRANSPORT" = 6,
-      "VIP" = 8,
-      "VIPPLAT" = 9,
-      "LANDMINE" = 12,
-      "BARREL" = 13,
-      "NINJA" = 14,
-      "BASILISK" = 16,
-      "MEATHEAD" = 15,
-    }
-
-    declare const enum gameuiarcadeShooterLevelType {
-      "HORIZONTAL" = 0,
-      "VERTICALUP" = 1,
-      "VERTICALDOWN" = 2,
-    }
-
-    declare const enum gameuiarcadeShooterSpawnerCondition {
-      "ScreenLeft" = 0,
-      "ScreenRight" = 1,
-      "ScreenTop" = 2,
-      "ScreenBottom" = 3,
-      "EventTrigger" = 4,
-    }
-
-    declare const enum gameuiarcadeShooterTriggerType {
-      "Delay" = 0,
-      "SpawnerFinish" = 1,
-      "SpawnerObjectsDeath" = 2,
-    }
-
-    declare const enum gameuiarcadeTankEnemyMovementType {
-      "x_axis" = 0,
-      "x_axisL" = 1,
-      "x_axisR" = 2,
-      "y_axis" = 3,
-    }
-
-    declare const enum gameuiarcadeTankPickupType {
-      "Patch_Kit" = 0,
-      "AEAMS" = 1,
-      "Mini_Tank" = 2,
-      "Pile_of_Eddies" = 3,
-      "Pile_of_Guns" = 4,
     }
 
     declare const enum gameuiAuthorisationNotificationType {
@@ -13091,48 +14665,86 @@ declare namespace CyberEnums {
       "InPhotomode" = 2,
     }
 
-    declare const enum gameVehicleCommonCurve {
-      "RPMLimit" = 0,
-      "ForcedBrakeForce" = 1,
-      "COUNT" = 2,
+    declare const enum gameuiarcadeArcadeColliderType {
+      "Body" = 0,
+      "Up" = 1,
+      "Right" = 2,
+      "Bottom" = 3,
+      "Left" = 4,
     }
 
-    declare const enum gameVehicleCurve {
-      "SpeedToWheelMaxTurn" = 0,
-      "InputToWheelMaxTurn" = 1,
-      "SpeedToWheelTurnSpeed" = 2,
-      "InputToWheelTurnSpeed" = 3,
-      "COUNT" = 4,
+    declare const enum gameuiarcadeArcadeMinigame {
+      "RoachRace" = 0,
+      "Shooter" = 1,
+      "Tank" = 2,
     }
 
-    declare const enum gameVideoType {
-      "Tutorial_720x405" = 0,
-      "Tutorial_1024x576" = 1,
-      "Tutorial_1280x720" = 2,
-      "Tutorial_1360x768" = 3,
-      "Unknown" = 4,
+    declare const enum gameuiarcadeArcadeParallaxPlaneControllerDisplacementAxis {
+      "Horizontal" = 0,
+      "Vertical" = 1,
     }
 
-    declare const enum gameVisionModePatternType {
-      "Default" = 0,
-      "Netrunner" = 1,
+    declare const enum gameuiarcadeArcadeParallaxPlaneControllerLoopType {
+      "None" = 0,
+      "Repeat" = 1,
     }
 
-    declare const enum gameVisionModeType {
-      "Default" = 0,
-      "Focus" = 1,
+    declare const enum gameuiarcadeRoachRaceObjectType {
+      "BoostObject_Apple" = 0,
+      "BoostObject_Carrot" = 1,
+      "Obstacle" = 2,
     }
 
-    declare const enum gameWardrobeClothingSetIndex {
-      "Slot1" = 0,
-      "Slot2" = 1,
-      "Slot3" = 2,
-      "Slot4" = 3,
-      "Slot5" = 4,
-      "Slot6" = 5,
-      "Slot7" = 6,
-      "COUNT" = 7,
-      "INVALID" = 8,
+    declare const enum gameuiarcadeShooterAIType {
+      "MELEE" = 0,
+      "RANGESHOOTER" = 1,
+      "RANGEGRENADE" = 2,
+      "FLYINGDRONE" = 3,
+      "SPIDERDRONE" = 4,
+      "POWERUPDRONE" = 5,
+      "TRANSPORT" = 6,
+      "VIP" = 8,
+      "VIPPLAT" = 9,
+      "LANDMINE" = 12,
+      "BARREL" = 13,
+      "NINJA" = 14,
+      "BASILISK" = 16,
+      "MEATHEAD" = 15,
+    }
+
+    declare const enum gameuiarcadeShooterLevelType {
+      "HORIZONTAL" = 0,
+      "VERTICALUP" = 1,
+      "VERTICALDOWN" = 2,
+    }
+
+    declare const enum gameuiarcadeShooterSpawnerCondition {
+      "ScreenLeft" = 0,
+      "ScreenRight" = 1,
+      "ScreenTop" = 2,
+      "ScreenBottom" = 3,
+      "EventTrigger" = 4,
+    }
+
+    declare const enum gameuiarcadeShooterTriggerType {
+      "Delay" = 0,
+      "SpawnerFinish" = 1,
+      "SpawnerObjectsDeath" = 2,
+    }
+
+    declare const enum gameuiarcadeTankEnemyMovementType {
+      "x_axis" = 0,
+      "x_axisL" = 1,
+      "x_axisR" = 2,
+      "y_axis" = 3,
+    }
+
+    declare const enum gameuiarcadeTankPickupType {
+      "Patch_Kit" = 0,
+      "AEAMS" = 1,
+      "Mini_Tank" = 2,
+      "Pile_of_Eddies" = 3,
+      "Pile_of_Guns" = 4,
     }
 
     declare const enum gameweaponReloadStatus {
@@ -13140,298 +14752,9 @@ declare namespace CyberEnums {
       "Interrupted" = 1,
     }
 
-    declare const enum gameWorkspotSlidingBehaviour {
-      "PlayAtResourcePosition" = 1,
-      "DontPlayAtResourcePosition" = 0,
-      "SlideActorAndRotateDevice" = 2,
-    }
-
-    declare const enum GenericMessageNotificationResult {
-      "Cancel" = 0,
-      "Confirm" = 1,
-      "OK" = 2,
-      "Yes" = 3,
-      "No" = 4,
-    }
-
-    declare const enum GenericMessageNotificationType {
-      "OK" = 0,
-      "Confirm" = 1,
-      "Cancel" = 2,
-      "ConfirmCancel" = 3,
-      "YesNo" = 4,
-    }
-
-    declare const enum GenericNotificationType {
-      "Generic" = 0,
-      "JournalNotification" = 1,
-      "LevelUpNotification" = 2,
-      "VendorNotification" = 3,
-      "ZoneNotification" = 4,
-      "ProgressionNotification" = 5,
-      "CraftingNotification" = 6,
-      "InventoryNotification" = 7,
-      "PhoneNotification" = 8,
-    }
-
     declare const enum genLevelRandomizerDataSource {
       "Entries" = 0,
       "Markers" = 1,
-    }
-
-    declare const enum GIGIOverrideType {
-      "Default" = 0,
-      "Override_True" = 1,
-      "Override_False" = 2,
-    }
-
-    declare const enum GogPopupScreenType {
-      "Default" = 0,
-      "Rewards" = 1,
-      "Invalid" = -1,
-    }
-
-    declare const enum GpuApieBufferUsageType {
-      "BUT_Default" = 0,
-      "BUT_Immutable" = 1,
-      "BUT_Readback" = 2,
-      "BUT_Dynamic_Legacy" = 3,
-      "BUT_Transient" = 4,
-      "BUT_Mapped" = 5,
-      "BUT_MAX" = 6,
-    }
-
-    declare const enum GpuWrapApiBufferGroup {
-      "System" = 0,
-      "MeshResource" = 1,
-      "MeshCustom" = 2,
-      "AutoSpawner" = 3,
-      "Debug" = 4,
-      "DPL" = 5,
-      "Weather" = 6,
-      "ReflectionProbe" = 7,
-      "Skinning" = 8,
-      "Lights" = 9,
-      "Video" = 10,
-      "Particles" = 11,
-      "GIManagerLitProbes" = 12,
-      "GIManagerLookup" = 13,
-      "GIManagerInterpolation" = 14,
-      "GIManagerLitBricks" = 15,
-      "GIManagerLights" = 16,
-      "GIManagerEnvVolume" = 17,
-      "GIProxyBrick" = 18,
-      "GIProxySurfel" = 19,
-      "GIProxyProbes" = 20,
-      "GIProxyFactors" = 21,
-      "GIProxyAcceleration" = 22,
-      "Raytracing" = 23,
-      "RaytracingUpload" = 24,
-      "RaytracingAS" = 25,
-      "RaytracingOMM" = 26,
-      "Decals" = 27,
-      "Instances" = 28,
-      "Materials" = 29,
-      "Multilayer" = 30,
-      "FrameResources" = 31,
-      "Misc" = 32,
-      "MorphTargets" = 33,
-      "MAX" = 34,
-    }
-
-    declare const enum GpuWrapApieBufferChunkCategory {
-      "BCC_Staging" = 0,
-      "BCC_Vertex" = 1,
-      "BCC_VertexUAV" = 2,
-      "BCC_Index16Bit" = 3,
-      "BCC_Index32Bit" = 4,
-      "BCC_VertexIndex16Bit" = 5,
-      "BCC_Constant" = 6,
-      "BCC_TypedUAV" = 7,
-      "BCC_Structured" = 8,
-      "BCC_StructuredUAV" = 9,
-      "BCC_StructuredAppendUAV" = 10,
-      "BCC_IndirectUAV" = 11,
-      "BCC_Index16BitUAV" = 12,
-      "BCC_Raw" = 13,
-      "BCC_ShaderTable" = 14,
-      "BCC_Invalid" = 15,
-    }
-
-    declare const enum GpuWrapApieIndexBufferChunkType {
-      "IBCT_IndexUInt" = 0,
-      "IBCT_IndexUShort" = 1,
-      "IBCT_Max" = 2,
-    }
-
-    declare const enum GpuWrapApieTextureFormat {
-      "TEXFMT_A8_Unorm" = 0,
-      "TEXFMT_R8_Unorm" = 1,
-      "TEXFMT_L8_Unorm" = 2,
-      "TEXFMT_R8G8_Unorm" = 3,
-      "TEXFMT_R8G8B8X8_Unorm" = 4,
-      "TEXFMT_R8G8B8A8_Unorm" = 5,
-      "TEXFMT_R8G8B8A8_Unorm_SRGB" = 40,
-      "TEXFMT_R8G8B8A8_Snorm" = 6,
-      "TEXFMT_B8G8R8A8" = 50,
-      "TEXFMT_B8G8R8A8_SRGB" = 51,
-      "TEXFMT_R16_Unorm" = 7,
-      "TEXFMT_R16_Snorm" = 49,
-      "TEXFMT_R16_Uint" = 8,
-      "TEXFMT_R32_Uint" = 9,
-      "TEXFMT_R32G32B32A32_Uint" = 10,
-      "TEXFMT_R32G32_Uint" = 11,
-      "TEXFMT_R16G16B16A16_Unorm" = 12,
-      "TEXFMT_R16G16B16A16_Uint" = 14,
-      "TEXFMT_R16G16_Uint" = 15,
-      "TEXFMT_R10G10B10A2_Unorm" = 16,
-      "TEXFMT_R16G16B16A16_Float" = 17,
-      "TEXFMT_R11G11B10_Float" = 18,
-      "TEXFMT_R16G16_Float" = 19,
-      "TEXFMT_R32G32_Float" = 20,
-      "TEXFMT_R32G32B32A32_Float" = 21,
-      "TEXFMT_R32_Float" = 22,
-      "TEXFMT_R16_Float" = 23,
-      "TEXFMT_D24S8" = 24,
-      "TEXFMT_D32FS8" = 25,
-      "TEXFMT_D32F" = 27,
-      "TEXFMT_D16U" = 28,
-      "TEXFMT_BC1" = 29,
-      "TEXFMT_BC1_SRGB" = 41,
-      "TEXFMT_BC2" = 30,
-      "TEXFMT_BC2_SRGB" = 42,
-      "TEXFMT_BC3" = 31,
-      "TEXFMT_BC3_SRGB" = 43,
-      "TEXFMT_BC4" = 32,
-      "TEXFMT_BC5" = 33,
-      "TEXFMT_BC6H_UNSIGNED" = 34,
-      "TEXFMT_BC6H_SIGNED" = 35,
-      "TEXFMT_BC7" = 36,
-      "TEXFMT_BC7_SRGB" = 37,
-      "TEXFMT_R8_Uint" = 38,
-      "TEXFMT_R16G16_Unorm" = 44,
-      "TEXFMT_R16G16_Sint" = 45,
-      "TEXFMT_R16G16_Snorm" = 46,
-      "TEXFMT_B5G6R5_Unorm" = 47,
-      "TEXFMT_A8" = 0,
-      "TEXFMT_R8" = 1,
-      "TEXFMT_L8" = 2,
-      "TEXFMT_R8G8" = 3,
-      "TEXFMT_R8G8B8X8" = 4,
-      "TEXFMT_R8G8B8A8" = 5,
-      "TEXFMT_Uint_16_norm" = 7,
-      "TEXFMT_Uint_16" = 8,
-      "TEXFMT_Uint_32" = 9,
-      "TEXFMT_Uint_R32G32B32A32" = 10,
-      "TEXFMT_R10G10B10A2" = 16,
-      "TEXFMT_Float_R16G16B16A16" = 17,
-      "TEXFMT_Float_R11G11B10" = 18,
-      "TEXFMT_Float_R16G16" = 19,
-      "TEXFMT_Float_R32G32" = 20,
-      "TEXFMT_Float_R32G32B32A32" = 21,
-      "TEXFMT_Float_R32" = 22,
-      "TEXFMT_Float_R16" = 23,
-      "TEXFMT_BC6H" = 34,
-    }
-
-    declare const enum GpuWrapApieTextureGroup {
-      "TEXG_Generic_Color" = 1,
-      "TEXG_Generic_Grayscale" = 2,
-      "TEXG_Generic_Normal" = 3,
-      "TEXG_Generic_Data" = 4,
-      "TEXG_Generic_UI" = 5,
-      "TEXG_Generic_Font" = 6,
-      "TEXG_Generic_LUT" = 7,
-      "TEXG_Generic_MorphBlend" = 8,
-      "TEXG_Multilayer_Color" = 9,
-      "TEXG_Multilayer_Normal" = 10,
-      "TEXG_Multilayer_Grayscale" = 11,
-      "TEXG_Multilayer_Microblend" = 12,
-    }
-
-    declare const enum GpuWrapApieTextureType {
-      "TEXTYPE_2D" = 0,
-      "TEXTYPE_CUBE" = 1,
-      "TEXTYPE_ARRAY" = 2,
-      "TEXTYPE_3D" = 3,
-    }
-
-    declare const enum GpuWrapApiVertexPackingePackingType {
-      "PT_Invalid" = -1,
-      "PT_Float1" = 0,
-      "PT_Float2" = 1,
-      "PT_Float3" = 2,
-      "PT_Float4" = 3,
-      "PT_Float16_2" = 4,
-      "PT_Float16_4" = 5,
-      "PT_UShort1" = 6,
-      "PT_UShort2" = 7,
-      "PT_UShort4" = 8,
-      "PT_UShort4N" = 9,
-      "PT_Short1" = 10,
-      "PT_Short2" = 11,
-      "PT_Short4" = 12,
-      "PT_Short4N" = 13,
-      "PT_UInt1" = 14,
-      "PT_UInt2" = 15,
-      "PT_UInt3" = 16,
-      "PT_UInt4" = 17,
-      "PT_Int1" = 18,
-      "PT_Int2" = 19,
-      "PT_Int3" = 20,
-      "PT_Int4" = 21,
-      "PT_Color" = 22,
-      "PT_UByte1" = 23,
-      "PT_UByte1F" = 24,
-      "PT_UByte4" = 25,
-      "PT_UByte4N" = 26,
-      "PT_Byte4N" = 27,
-      "PT_Dec4" = 28,
-      "PT_Index16" = 29,
-      "PT_Index32" = 30,
-      "PT_Max" = 31,
-    }
-
-    declare const enum GpuWrapApiVertexPackingePackingUsage {
-      "PS_Invalid" = -1,
-      "PS_SysPosition" = 0,
-      "PS_Position" = 1,
-      "PS_Normal" = 2,
-      "PS_Tangent" = 3,
-      "PS_Binormal" = 4,
-      "PS_TexCoord" = 5,
-      "PS_Color" = 6,
-      "PS_SkinIndices" = 7,
-      "PS_SkinWeights" = 8,
-      "PS_DestructionIndices" = 9,
-      "PS_MultilayerPaint" = 10,
-      "PS_InstanceTransform" = 11,
-      "PS_InstanceLODParams" = 12,
-      "PS_InstanceSkinningData" = 13,
-      "PS_PatchSize" = 14,
-      "PS_PatchBias" = 15,
-      "PS_ExtraData" = 16,
-      "PS_VehicleDmgNormal" = 17,
-      "PS_VehicleDmgPosition" = 18,
-      "PS_PositionDelta" = 19,
-      "PS_LightBlockerIntensity" = 20,
-      "PS_BoneIndex" = 21,
-      "PS_Padding" = 22,
-      "PS_PatchOffset" = 23,
-      "PS_Max" = 24,
-    }
-
-    declare const enum GpuWrapApiVertexPackingEStreamType {
-      "ST_Invalid" = -1,
-      "ST_PerVertex" = 0,
-      "ST_PerInstance" = 1,
-      "ST_Max" = 2,
-    }
-
-    declare const enum GrenadeDamageType {
-      "Normal" = 0,
-      "DoT" = 1,
-      "None" = 2,
     }
 
     declare const enum grsDeathmatchStatus {
@@ -13472,18 +14795,6 @@ declare namespace CyberEnums {
       "StateError_CantLoadSave_SessionDescInvalid" = 15,
       "StateError_CantLoadSave_CantLoadCloudFile" = 16,
       "StateError_CantLoadSave_AdditionalContentIDsMismatch" = 17,
-    }
-
-    declare const enum HighlightContext {
-      "DEFAULT" = 0,
-      "OUTLINE" = 1,
-      "FILL" = 2,
-      "FULL" = 3,
-    }
-
-    declare const enum HighlightMode {
-      "Row" = 0,
-      "Column" = 1,
     }
 
     declare const enum hitFlag {
@@ -13592,228 +14903,6 @@ declare namespace CyberEnums {
       "ForceWeakspotMult25" = 100052,
     }
 
-    declare const enum HitShape_Type {
-      "Normal" = 0,
-      "InternalWeakSpot" = 1,
-      "ExternalWeakSpot" = 2,
-      "ProtectionLayer" = 3,
-    }
-
-    declare const enum HoverStatus {
-      "DEFAULT" = 0,
-      "HOVER" = 1,
-    }
-
-    declare const enum HubMenuCharacterItems {
-      "Skills" = 0,
-      "Stats" = 1,
-    }
-
-    declare const enum HubMenuCraftingItems {
-      "Crafting" = 0,
-      "Upgrade" = 1,
-    }
-
-    declare const enum HubMenuDatabaseItems {
-      "Codex" = 0,
-      "Tarot" = 1,
-      "Shards" = 2,
-      "Gallery" = 3,
-    }
-
-    declare const enum HubMenuInventoryItems {
-      "Gear" = 0,
-      "Cyberware" = 1,
-      "Backpack" = 2,
-    }
-
-    declare const enum HubMenuItems {
-      "None" = -1,
-      "Default" = 0,
-      "Crafting" = 1,
-      "Character" = 2,
-      "Inventory" = 3,
-      "Map" = 4,
-      "Journal" = 5,
-      "Phone" = 6,
-      "Database" = 7,
-      "Stats" = 8,
-      "Backpack" = 9,
-      "HubMenuItems" = 10,
-      "Codex" = 11,
-      "Shards" = 12,
-      "Gallery" = 13,
-      "Tarot" = 14,
-      "Gear" = 15,
-      "Cyberware" = 16,
-      "VisualSets" = 17,
-      "Count" = 18,
-    }
-
-    declare const enum HubVendorMenuItems {
-      "Trade" = 0,
-      "Cyberware" = 1,
-    }
-
-    declare const enum HUDActorStatus {
-      "UNINITIALIZED" = 0,
-      "REGISTERED" = 1,
-      "ACTIVE" = 2,
-    }
-
-    declare const enum HUDActorType {
-      "UNINITIALIZED" = 0,
-      "GAME_OBJECT" = 1,
-      "VEHICLE" = 2,
-      "DEVICE" = 3,
-      "BODY_DISPOSAL_DEVICE" = 4,
-      "PUPPET" = 5,
-      "ITEM" = 6,
-    }
-
-    declare const enum HUDContext {
-      "DEFAULT" = 0,
-      "FOCUS" = 1,
-      "LOOKEDAT" = 2,
-    }
-
-    declare const enum HUDState {
-      "UNINITIALIZED" = 0,
-      "DEACTIVATED" = 1,
-      "ACTIVATED" = 2,
-    }
-
-    declare const enum IMaterialDataProviderDescEParameterType {
-      "PT_None" = 0,
-      "PT_Texture" = 1,
-      "PT_Color" = 2,
-      "PT_Cube" = 3,
-      "PT_Vector" = 4,
-      "PT_Scalar" = 5,
-      "PT_Bool" = 6,
-      "PT_TextureArray" = 7,
-      "PT_StructBuffer" = 8,
-      "PT_Cpu_NameU64" = 9,
-      "PT_SkinProfile" = 10,
-      "PT_MultilayerSetup" = 11,
-      "PT_MultilayerMask" = 12,
-      "PT_HairProfile" = 13,
-      "PT_FoliageProfile" = 14,
-      "PT_TerrainSetup" = 15,
-      "PT_Gradient" = 16,
-      "PT_DynamicTexture" = 17,
-      "PT_MAX" = 18,
-    }
-
-    declare const enum InGameConfigChangeReason {
-      "Invalid" = -1,
-      "Accepted" = 0,
-      "Rejected" = 1,
-      "NeedsConfirmation" = 2,
-      "NeedsRestart" = 3,
-    }
-
-    declare const enum InGameConfigNotificationType {
-      "RestartRequiredConfirmed" = 0,
-      "RestartRequiredRejected" = 1,
-      "ChangesApplied" = 2,
-      "ChangesRejected" = 3,
-      "ChangesLoadLastCheckpointApplied" = 4,
-      "ChangesLoadLastCheckpointRejected" = 5,
-      "Saved" = 6,
-      "ErrorSaving" = 7,
-      "Loaded" = 8,
-      "LoadCanceled" = 9,
-      "LoadInternalError" = 10,
-      "Refresh" = 11,
-      "LanguagePackInstalled" = 12,
-    }
-
-    declare const enum InGameConfigUserSettingsLoadStatus {
-      "NotLoaded" = 0,
-      "InternalError" = 1,
-      "FileIsMissing" = 2,
-      "FileIsCorrupted" = 3,
-      "Loaded" = 4,
-      "ImportedFromOldVersion" = 5,
-    }
-
-    declare const enum InGameConfigUserSettingsSaveStatus {
-      "NotSaved" = 0,
-      "InternalError" = 1,
-      "Saved" = 2,
-    }
-
-    declare const enum InGameConfigVarType {
-      "Bool" = 0,
-      "Int" = 1,
-      "Float" = 2,
-      "Name" = 3,
-      "IntList" = 4,
-      "FloatList" = 5,
-      "StringList" = 6,
-      "NameList" = 7,
-    }
-
-    declare const enum InGameConfigVarUpdatePolicy {
-      "Disabled" = 0,
-      "Immediately" = 1,
-      "ConfirmationRequired" = 2,
-      "RestartRequired" = 3,
-      "LoadLastCheckpointRequired" = 4,
-    }
-
-    declare const enum inkanimEventType {
-      "OnLoaded" = 0,
-      "OnStart" = 1,
-      "OnFinish" = 2,
-      "OnPause" = 3,
-      "OnResume" = 4,
-      "OnStartLoop" = 5,
-      "OnEndLoop" = 6,
-    }
-
-    declare const enum inkanimInterpolationDirection {
-      "To" = 0,
-      "From" = 1,
-      "FromTo" = 2,
-    }
-
-    declare const enum inkanimInterpolationMode {
-      "EasyIn" = 0,
-      "EasyOut" = 1,
-      "EasyInOut" = 2,
-      "EasyOutIn" = 3,
-    }
-
-    declare const enum inkanimInterpolationType {
-      "Linear" = 0,
-      "Quadratic" = 1,
-      "Qubic" = 2,
-      "Quartic" = 3,
-      "Quintic" = 4,
-      "Sinusoidal" = 5,
-      "Exponential" = 6,
-      "Elastic" = 7,
-      "Circular" = 8,
-      "Back" = 9,
-    }
-
-    declare const enum inkanimLoopType {
-      "None" = 0,
-      "Cycle" = 1,
-      "PingPong" = 2,
-    }
-
-    declare const enum inkanimPropertyType {
-      "Size" = 0,
-      "Color" = 1,
-      "Margin" = 2,
-      "Padding" = 3,
-      "Transparency" = 4,
-      "Rotation" = 5,
-    }
-
     declare const enum inkBrushDrawType {
       "NoDraw" = 0,
       "Solid" = 1,
@@ -13912,22 +15001,6 @@ declare namespace CyberEnums {
       "JOINED" = 3,
     }
 
-    declare const enum inkEffectType {
-      "ScanlineWipe" = 0,
-      "LinearWipe" = 1,
-      "RadialWipe" = 2,
-      "LightSweep" = 3,
-      "BoxBlur" = 4,
-      "Mask" = 5,
-      "Glitch" = 6,
-      "PointCloud" = 7,
-      "ColorFill" = 8,
-      "InnerGlow" = 9,
-      "ColorCorrection" = 10,
-      "Multisampling" = 11,
-      "Blackwall" = 12,
-    }
-
     declare const enum inkEHorizontalAlign {
       "Fill" = 0,
       "Left" = 1,
@@ -14018,6 +15091,22 @@ declare namespace CyberEnums {
       "Top" = 1,
       "Center" = 2,
       "Bottom" = 3,
+    }
+
+    declare const enum inkEffectType {
+      "ScanlineWipe" = 0,
+      "LinearWipe" = 1,
+      "RadialWipe" = 2,
+      "LightSweep" = 3,
+      "BoxBlur" = 4,
+      "Mask" = 5,
+      "Glitch" = 6,
+      "PointCloud" = 7,
+      "ColorFill" = 8,
+      "InnerGlow" = 9,
+      "ColorCorrection" = 10,
+      "Multisampling" = 11,
+      "Blackwall" = 12,
     }
 
     declare const enum inkFinalConfigurationVisibility {
@@ -14243,16 +15332,16 @@ declare namespace CyberEnums {
       "NoUsage" = 2,
     }
 
-    declare const enum inkTextureType {
-      "StaticTexture" = 0,
-      "DynamicTexture" = 1,
-      "InvalidTexture" = 2,
-    }
-
     declare const enum inkTextWrappingPolicy {
       "SingleLine" = 0,
       "MultiLine" = 1,
       "MultilineNoWrap" = 2,
+    }
+
+    declare const enum inkTextureType {
+      "StaticTexture" = 0,
+      "DynamicTexture" = 1,
+      "InvalidTexture" = 2,
     }
 
     declare const enum inkVideoInstanceDoneReason {
@@ -14272,16 +15361,55 @@ declare namespace CyberEnums {
       "BrushToAtlas" = 1,
     }
 
-    declare const enum InnerBunkerCoreStage {
-      "Normal" = 0,
-      "Malfunction" = 1,
-      "Shutdown" = 2,
+    declare const enum inkanimEventType {
+      "OnLoaded" = 0,
+      "OnStart" = 1,
+      "OnFinish" = 2,
+      "OnPause" = 3,
+      "OnResume" = 4,
+      "OnStartLoop" = 5,
+      "OnEndLoop" = 6,
     }
 
-    declare const enum InnerBunkerCoreStatus {
-      "Online" = 0,
-      "Offline" = 1,
-      "Unresponsive" = 2,
+    declare const enum inkanimInterpolationDirection {
+      "To" = 0,
+      "From" = 1,
+      "FromTo" = 2,
+    }
+
+    declare const enum inkanimInterpolationMode {
+      "EasyIn" = 0,
+      "EasyOut" = 1,
+      "EasyInOut" = 2,
+      "EasyOutIn" = 3,
+    }
+
+    declare const enum inkanimInterpolationType {
+      "Linear" = 0,
+      "Quadratic" = 1,
+      "Qubic" = 2,
+      "Quartic" = 3,
+      "Quintic" = 4,
+      "Sinusoidal" = 5,
+      "Exponential" = 6,
+      "Elastic" = 7,
+      "Circular" = 8,
+      "Back" = 9,
+    }
+
+    declare const enum inkanimLoopType {
+      "None" = 0,
+      "Cycle" = 1,
+      "PingPong" = 2,
+    }
+
+    declare const enum inkanimPropertyType {
+      "Size" = 0,
+      "Color" = 1,
+      "Margin" = 2,
+      "Padding" = 3,
+      "Transparency" = 4,
+      "Rotation" = 5,
     }
 
     declare const enum inputContextType {
@@ -14314,190 +15442,16 @@ declare namespace CyberEnums {
       "PAD" = 1,
     }
 
-    declare const enum InstanceState {
-      "DISABLED" = 0,
-      "HIDDEN" = 1,
-      "RUNNING" = 2,
-      "MALFUNCTIONING" = 3,
-      "ON" = 4,
-    }
-
-    declare const enum IntercomStatus {
-      "DEFAULT" = 0,
-      "CALLING" = 1,
-      "TALKING" = 2,
-      "CALL_MISSED" = 3,
-      "CALL_ENDED" = 4,
-    }
-
-    declare const enum InventoryModes {
-      "Default" = 0,
-      "Item" = 1,
-    }
-
-    declare const enum InventoryPaperdollZoomArea {
-      "Default" = 0,
-      "Weapon" = 1,
-      "Legs" = 2,
-      "Feet" = 3,
-      "Cyberware" = 4,
-      "QuickSlot" = 5,
-      "Consumable" = 6,
-      "Outfit" = 7,
-      "Head" = 8,
-      "Face" = 9,
-      "InnerChest" = 10,
-      "OuterChest" = 11,
-    }
-
-    declare const enum InventoryTooltipDisplayContext {
-      "Default" = 0,
-      "Attachment" = 1,
-      "Crafting" = 2,
-      "Upgrading" = 3,
-      "HUD" = 4,
-      "Vendor" = 5,
-    }
-
-    declare const enum ItemAdditionalInfoType {
-      "NONE" = 0,
-      "PRICE" = 1,
-      "TYPE" = 2,
-    }
-
-    declare const enum ItemDisplayNotificationMessage {
-      "Default" = 0,
-      "AddRef" = 1,
-      "RemoveRef" = 2,
-    }
-
-    declare const enum ItemDisplayType {
-      "Item" = 0,
-      "Weapon" = 1,
-    }
-
-    declare const enum ItemFilterCategory {
-      "RangedWeapons" = 0,
-      "MeleeWeapons" = 1,
-      "Clothes" = 2,
-      "Consumables" = 3,
-      "Grenades" = 4,
-      "SoftwareMods" = 5,
-      "Attachments" = 6,
-      "Programs" = 7,
-      "Cyberware" = 8,
-      "Junk" = 9,
-      "BaseCount" = 10,
-      "Quest" = 11,
-      "NewWardrobeAppearances" = 12,
-      "Buyback" = 13,
-      "AllItems" = 14,
-      "AllCount" = 15,
-      "Invalid" = -1,
-    }
-
-    declare const enum ItemFilterType {
-      "All" = 0,
-      "Weapons" = 1,
-      "Clothes" = 2,
-      "Consumables" = 3,
-      "Cyberware" = 4,
-      "Attachments" = 5,
-      "Quest" = 6,
-      "Buyback" = 7,
-      "LightWeapons" = 8,
-      "HeavyWeapons" = 9,
-      "MeleeWeapons" = 10,
-      "Hacks" = 11,
-    }
-
-    declare const enum ItemLabelType {
-      "New" = 0,
-      "Quest" = 1,
-      "Money" = 2,
-      "Equipped" = 3,
-      "Owned" = 4,
-      "Buyback" = 5,
-      "DLCNew" = 6,
-    }
-
-    declare const enum ItemModeGridSize {
-      "Default" = 0,
-      "Outfit" = 1,
-    }
-
-    declare const enum ItemSortMode {
-      "Default" = 0,
-      "NewItems" = 1,
-      "NameAsc" = 2,
-      "NameDesc" = 3,
-      "QualityAsc" = 4,
-      "QualityDesc" = 5,
-      "WeightAsc" = 6,
-      "WeightDesc" = 7,
-      "PriceAsc" = 8,
-      "PriceDesc" = 9,
-      "ItemType" = 10,
-      "DpsAsc" = 11,
-      "DpsDesc" = 12,
-    }
-
-    declare const enum ItemViewModes {
-      "Item" = 0,
-      "Mod" = 1,
-    }
-
-    declare const enum JournalNotificationMode {
-      "Default" = 0,
-      "Menu" = 1,
-      "HUD" = 2,
-    }
-
-    declare const enum LadderCameraParams {
-      "None" = 0,
-      "Enter" = 1,
-      "Default" = 2,
-      "CameraReset" = 3,
-      "Exit" = 4,
-    }
-
-    declare const enum LandingType {
-      "Off" = 0,
-      "Regular" = 1,
-      "Hard" = 2,
-      "VeryHard" = 3,
-      "Superhero" = 4,
-      "Death" = 5,
-    }
-
-    declare const enum LaserTargettingState {
-      "Start" = 0,
-      "Update" = 1,
-      "End" = 2,
-    }
-
-    declare const enum LibTreeEParameterType {
-      "PARAM_Bool" = 0,
-      "PARAM_Int32" = 1,
-      "PARAM_Enum" = 2,
-      "PARAM_Float" = 3,
-      "PARAM_CName" = 4,
-      "PARAM_TreeRef" = 5,
-      "PARAM_TreeRefList" = 6,
-      "PARAM_NodeRef" = 7,
-      "PARAM_Vector" = 9,
-    }
-
-    declare const enum LifetimeStatus {
-      "Base" = 0,
-      "Near" = 1,
-      "Disengaging" = 2,
-    }
-
     declare const enum locHolocallActorMode {
       "Default" = 0,
       "ActorUsesHolocall" = 1,
       "ActorDoesntUseHolocall" = 2,
+    }
+
+    declare const enum locVoiceTagGender {
+      "Undefined" = 0,
+      "Male" = 1,
+      "Female" = 2,
     }
 
     declare const enum locVoiceoverContext {
@@ -14523,19 +15477,6 @@ declare namespace CyberEnums {
       "Vo_Expression_Helmet" = 11,
     }
 
-    declare const enum locVoiceTagGender {
-      "Undefined" = 0,
-      "Male" = 1,
-      "Female" = 2,
-    }
-
-    declare const enum MechanicalScanType {
-      "None" = 0,
-      "Short" = 1,
-      "Long" = 2,
-      "Danger" = 3,
-    }
-
     declare const enum meleeMoveDirection {
       "Forward" = 0,
       "Right" = 1,
@@ -14555,30 +15496,6 @@ declare namespace CyberEnums {
       "Throw" = 8,
     }
 
-    declare const enum MessageHash {
-      "Invalid" = 0,
-      "Fake" = -1,
-    }
-
-    declare const enum MessageViewType {
-      "Sent" = 0,
-      "Received" = 1,
-    }
-
-    declare const enum MessengerContactType {
-      "SingleThread" = 0,
-      "MultiThread" = 1,
-      "Contact" = 2,
-      "Fake_ShowAll" = 3,
-    }
-
-    declare const enum MinigameActionType {
-      "Device" = 0,
-      "NPC" = 1,
-      "Both" = 2,
-      "AccessPoint" = 3,
-    }
-
     declare const enum minimapuiELayerType {
       "Floor" = 0,
       "Cover" = 1,
@@ -14589,34 +15506,6 @@ declare namespace CyberEnums {
       "Road" = 6,
       "RoadNoAutodrive" = 7,
       "Count" = 8,
-    }
-
-    declare const enum ModuleState {
-      "DISABLED" = 0,
-      "HIDDEN" = 1,
-      "ASLEEP" = 2,
-      "MALFUNCTIONING" = 3,
-      "ON" = 4,
-    }
-
-    declare const enum MorphTargetsDiffTextureSize {
-      "TEXTURE_SIZE_1024x1024" = 0,
-      "TEXTURE_SIZE_512x512" = 1,
-      "TEXTURE_SIZE_256x256" = 2,
-    }
-
-    declare const enum MorphTargetsFaceRegion {
-      "FACE_REGION_EYES" = 0,
-      "FACE_REGION_NOSE" = 1,
-      "FACE_REGION_MOUTH" = 2,
-      "FACE_REGION_JAW" = 3,
-      "FACE_REGION_EARS" = 4,
-      "FACE_REGION_NONE" = 255,
-    }
-
-    declare const enum MountType {
-      "Hijack" = 0,
-      "Regular" = 1,
     }
 
     declare const enum moveCirclingDirection {
@@ -14688,37 +15577,6 @@ declare namespace CyberEnums {
       "Slope" = 2,
     }
 
-    declare const enum MuramasaOption {
-      "WheelCover" = 0,
-      "WheelRims" = 1,
-      "Branding" = 2,
-      "BackRest" = 3,
-    }
-
-    declare const enum NavGenAgentSize {
-      "Human" = 0,
-      "Vehicle" = 1,
-      "AgentSize_Count" = 2,
-    }
-
-    declare const enum NavGenNavmeshImpact {
-      "Ignored" = 1,
-      "Walkable" = 0,
-      "Blocking" = 2,
-      "Road" = 3,
-      "Stairs" = 4,
-      "Drones" = 5,
-      "Terrain" = 6,
-      "CrowdWalkable" = 0,
-    }
-
-    declare const enum NavGenSamplingDensity {
-      "None" = 0,
-      "Sparse" = 1,
-      "Dense" = 2,
-      "Very dense" = 3,
-    }
-
     declare const enum navLocomotionPathSegmentTypes {
       "Invalid" = 0,
       "Spline" = 1,
@@ -14756,82 +15614,10 @@ declare namespace CyberEnums {
       "NoPathPossible" = 4,
     }
 
-    declare const enum NewPeksActiveScreen {
-      "Categories" = 0,
-      "Perks" = 1,
-      "Espionage" = 2,
-      "Skills" = 3,
-      "Count" = 4,
-      "Invalid" = -1,
-    }
-
-    declare const enum NewPerkCellAnimationType {
-      "Bought" = 0,
-      "Maxed" = 1,
-      "Locked" = 2,
-      "HoverOver" = 3,
-      "HoverOut" = 4,
-      "Sold" = 5,
-      "Reminder" = 6,
-      "SellLocked" = 7,
-      "InsufficientPoints" = 8,
-      "MaxedLocked" = 9,
-      "COUNT" = 10,
-      "INVALID" = -1,
-    }
-
-    declare const enum NewPerksCyberwareDetailsMenu {
-      "MantisBlades" = 0,
-      "GorillaArms" = 1,
-      "ProjectileLauncher" = 2,
-      "Monowire" = 3,
-      "COUNT" = 4,
-    }
-
-    declare const enum NewPerksWireState {
-      "Default" = 0,
-      "Available" = 1,
-      "Bought" = 2,
-      "Count" = 3,
-      "All" = 4,
-      "Invalid" = -1,
-    }
-
-    declare const enum NewPerkTabsArrowDirection {
-      "Left" = 0,
-      "Right" = 1,
-      "Invalid" = 2,
-    }
-
-    declare const enum ObjectToCheck {
-      "Player" = 0,
-      "Weapon" = 1,
-    }
-
-    declare const enum OpeningGateScreenState {
-      "Unknown" = 0,
-      "Idle" = 1,
-      "Loop" = 2,
-      "Open" = 3,
-      "Result" = 4,
-    }
-
     declare const enum operationsMode {
       "PLAYER" = 0,
       "FLATHEAD" = 1,
       "TOOLBOX" = 2,
-    }
-
-    declare const enum OutcomeMessage {
-      "Success" = 0,
-      "Failure" = 1,
-    }
-
-    declare const enum PackageStatus {
-      "UNINITIALIZED" = 0,
-      "ON_HOLD" = 1,
-      "FOR_IMMEDIATE_TRIGGER" = 2,
-      "TRIGGERED" = 3,
     }
 
     declare const enum panzerBootupUI {
@@ -14839,50 +15625,6 @@ declare namespace CyberEnums {
       "BootingAttempt" = 1,
       "BootingSuccess" = 2,
       "Loop" = 3,
-    }
-
-    declare const enum PaperdollPositionAnimation {
-      "Center" = 0,
-      "Left" = 1,
-      "Right" = 2,
-      "LeftFullBody" = 3,
-    }
-
-    declare const enum PauseMenuAction {
-      "OpenSubMenu" = 0,
-      "QuickSave" = 1,
-      "Save" = 2,
-      "ExitGame" = 3,
-      "ExitToMainMenu" = 4,
-      "QuickLoad" = 5,
-    }
-
-    declare const enum PaymentStatus {
-      "DEFAULT" = 0,
-      "IN_PROGRESS" = 1,
-      "NO_MONEY" = 2,
-    }
-
-    declare const enum PerkMenuAttribute {
-      "Body" = 0,
-      "Reflex" = 1,
-      "Technical_Ability" = 2,
-      "Cool" = 3,
-      "Intelligence" = 4,
-      "Espionage" = 5,
-      "Johnny" = 6,
-      "Count" = 7,
-      "Invalid" = -1,
-    }
-
-    declare const enum PhoneDialerTabs {
-      "Unread" = 0,
-      "Contacts" = 1,
-    }
-
-    declare const enum PhoneScreenType {
-      "Unread" = 0,
-      "Contacts" = 1,
     }
 
     declare const enum physicsFilterDataSource {
@@ -15103,45 +15845,6 @@ declare namespace CyberEnums {
       "Other" = 4,
     }
 
-    declare const enum PlayerChangeCameraAndLeaveVehiclePhase {
-      "ToggleCamera" = 0,
-      "ExitVehicle" = 1,
-      "Done" = 2,
-    }
-
-    declare const enum PlayerCombatControllerRefreshPolicyEnum {
-      "Persistent" = 0,
-      "Eventful" = 1,
-    }
-
-    declare const enum PlayerCombatState {
-      "Invalid" = 0,
-      "InCombat" = 1,
-      "OutOfCombat" = 2,
-      "Stealth" = 3,
-    }
-
-    declare const enum PlayerVisionModeControllerRefreshPolicyEnum {
-      "Persistent" = 0,
-      "Eventful" = 1,
-    }
-
-    declare const enum PocketRadioRestrictions {
-      "SceneTier" = 0,
-      "UpperBodyState" = 1,
-      "QuestContentLock" = 2,
-      "InDaClub" = 3,
-      "BlockFastTravel" = 4,
-      "VehicleScene" = 5,
-      "VehicleBlockPocketRadio" = 6,
-      "PhoneCall" = 7,
-      "PhoneNoTexting" = 8,
-      "PhoneNoCalling" = 9,
-      "FastForward" = 10,
-      "FastForwardHintActive" = 11,
-      "PocketRadioRestrictionCount" = 12,
-    }
-
     declare const enum populationSpawnerObjectCtrlAction {
       "Undefined" = 0,
       "Activate" = 1,
@@ -15151,129 +15854,6 @@ declare namespace CyberEnums {
       "Spawn" = 1,
       "Despawn" = 2,
       "Respawn" = 3,
-    }
-
-    declare const enum ProgramEffect {
-      "GrantAccess" = 0,
-      "BlockAccess" = 1,
-      "UnlockQuestFact" = 2,
-    }
-
-    declare const enum ProgramType {
-      "BasicAccess" = 0,
-      "ExtraPlayerProgram" = 1,
-      "ExtraServerProgram" = 2,
-      "EnemyProgram" = 3,
-      "EnemyLockNetwork" = 4,
-    }
-
-    declare const enum PSODescBlendModeFactor {
-      "FAC_Zero" = 0,
-      "FAC_One" = 1,
-      "FAC_SrcColor" = 2,
-      "FAC_InvSrcColor" = 3,
-      "FAC_SrcAlpha" = 4,
-      "FAC_InvSrcAlpha" = 5,
-      "FAC_DestColor" = 6,
-      "FAC_InvDestColor" = 7,
-      "FAC_DestAlpha" = 8,
-      "FAC_InvDestAlpha" = 9,
-      "FAC_BlendFactor" = 10,
-      "FAC_InvBlendFactor" = 11,
-      "FAC_Src1Color" = 12,
-      "FAC_InvSrc1Color" = 13,
-      "FAC_Src1Alpha" = 14,
-      "FAC_InvSrc1Alpha" = 15,
-    }
-
-    declare const enum PSODescBlendModeOp {
-      "OP_Add" = 0,
-      "OP_Subtract" = 1,
-      "OP_RevSub" = 2,
-      "OP_Min" = 3,
-      "OP_Max" = 4,
-      "OP_Or" = 5,
-      "OP_And" = 6,
-      "OP_Xor" = 7,
-      "OP_nOr" = 9,
-      "OP_nAnd" = 8,
-    }
-
-    declare const enum PSODescBlendModeWriteMask {
-      "MASK_None" = 0,
-      "MASK_R" = 1,
-      "MASK_G" = 2,
-      "MASK_B" = 4,
-      "MASK_A" = 8,
-      "MASK_RG" = 3,
-      "MASK_RB" = 5,
-      "MASK_RA" = 9,
-      "MASK_GB" = 6,
-      "MASK_GA" = 10,
-      "MASK_BA" = 12,
-      "MASK_RGB" = 7,
-      "MASK_RGA" = 11,
-      "MASK_RBA" = 13,
-      "MASK_GBA" = 14,
-      "MASK_RGBA" = 15,
-    }
-
-    declare const enum PSODescDepthStencilModeComparisonMode {
-      "COMPARISON_Never" = 0,
-      "COMPARISON_Less" = 1,
-      "COMPARISON_Equal" = 2,
-      "COMPARISON_LessEqual" = 3,
-      "COMPARISON_Greater" = 4,
-      "COMPARISON_NotEqual" = 5,
-      "COMPARISON_GreaterEqual" = 6,
-      "COMPARISON_Always" = 7,
-    }
-
-    declare const enum PSODescDepthStencilModeStencilOpMode {
-      "STENCILOP_Keep" = 0,
-      "STENCILOP_Zero" = 1,
-      "STENCILOP_Replace" = 2,
-      "STENCILOP_IncreaseSaturate" = 3,
-      "STENCILOP_DecreaseSaturate" = 4,
-      "STENCILOP_Invert" = 5,
-      "STENCILOP_Increase" = 6,
-      "STENCILOP_Decrease" = 7,
-    }
-
-    declare const enum PSODescPrimitiveTopologyType {
-      "Invalid" = 0,
-      "Point" = 1,
-      "Line" = 2,
-      "Triangle" = 3,
-      "Patch" = 4,
-    }
-
-    declare const enum PSODescRasterizerModeCullMode {
-      "CULL_None" = 0,
-      "CULL_Front" = 1,
-      "CULL_Back" = 2,
-    }
-
-    declare const enum PSODescRasterizerModeFrontFaceWinding {
-      "FRONTFACE_CCW" = 0,
-      "FRONTFACE_CW" = 1,
-    }
-
-    declare const enum PSODescRasterizerModeOffsetMode {
-      "OFFSET_None" = 0,
-      "OFFSET_NormalBias" = 1,
-      "OFFSET_ShadowBias" = 2,
-      "OFFSET_DecalBias" = 3,
-    }
-
-    declare const enum QuantityPickerActionType {
-      "Buy" = 0,
-      "Sell" = 1,
-      "TransferToStorage" = 2,
-      "TransferToPlayer" = 3,
-      "Drop" = 4,
-      "Disassembly" = 5,
-      "Craft" = 6,
     }
 
     declare const enum questAttachmentOffsetMode {
@@ -15417,11 +15997,6 @@ declare namespace CyberEnums {
       "OVERDRAW" = 12,
     }
 
-    declare const enum questElevator_ManageNPCAttachment_NodeTypeParamsAction {
-      "Attach" = 0,
-      "Detach" = 1,
-    }
-
     declare const enum questESwitchBehaviourType {
       "First Fulfilled" = 0,
       "All Fulfilled" = 1,
@@ -15449,6 +16024,11 @@ declare namespace CyberEnums {
       "Predefined_Wide" = 2,
       "TweakDB" = 3,
       "List" = 4,
+    }
+
+    declare const enum questElevator_ManageNPCAttachment_NodeTypeParamsAction {
+      "Attach" = 0,
+      "Detach" = 1,
     }
 
     declare const enum questExitType {
@@ -15511,26 +16091,6 @@ declare namespace CyberEnums {
       "VoLang" = 1,
       "SubsLang" = 2,
       "TextLang" = 3,
-    }
-
-    declare const enum QuestListItemType {
-      "MainQuest" = 0,
-      "SideQuest" = 1,
-      "Gig" = 2,
-      "Cyberpsycho" = 3,
-      "NCPDQuest" = 4,
-      "Apartment" = 5,
-      "Courier" = 6,
-      "Finished" = 7,
-      "Count" = 8,
-      "All" = 9,
-      "Invalid" = -1,
-    }
-
-    declare const enum QuestListSortType {
-      "Updated" = 0,
-      "Distance" = 1,
-      "Size" = 2,
     }
 
     declare const enum questLocationAction {
@@ -15867,63 +16427,6 @@ declare namespace CyberEnums {
       "StopAttack" = 4,
     }
 
-    declare const enum QuickSlotActionType {
-      "Undefined" = 0,
-      "SelectItem" = 1,
-      "HideWeapon" = 2,
-      "OpenPhone" = 3,
-      "SummonCar" = 4,
-      "SummonBike" = 5,
-      "ToggleRadio" = 6,
-      "SelectRadioStation" = 7,
-      "TurnOffRadio" = 8,
-      "CycleTrackedQuest" = 9,
-      "SummonVehicle" = 10,
-      "SetActiveVehicle" = 11,
-      "QuickHack" = 12,
-      "ToggleSummonMode" = 13,
-      "EquipFists" = 14,
-    }
-
-    declare const enum QuickSlotItemType {
-      "Undefined" = 0,
-      "Vehicle" = 1,
-      "Gadget" = 2,
-      "Consumable" = 3,
-      "Cyberware" = 4,
-      "Weapon" = 5,
-      "Interaction" = 6,
-    }
-
-    declare const enum RadialHubMenuElement {
-      "None" = 0,
-      "Inventory" = 1,
-      "Map" = 2,
-      "Character" = 3,
-      "Journal" = 4,
-    }
-
-    declare const enum RarityItemType {
-      "Item" = 0,
-      "Cyberdeck" = 1,
-      "Program" = 2,
-      "Count" = 3,
-      "Invalid" = 4,
-    }
-
-    declare const enum ReactionZones_Humanoid_Side {
-      "Head" = 0,
-      "ChestLeft" = 1,
-      "ArmLeft" = 2,
-      "HandLeft" = 3,
-      "ChestRight" = 4,
-      "ArmRight" = 5,
-      "HandRight" = 6,
-      "Abdomen" = 7,
-      "LegLeft" = 8,
-      "LegRight" = 9,
-    }
-
     declare const enum redTaskTextMessageType {
       "Info" = 0,
       "Error" = 1,
@@ -15940,28 +16443,6 @@ declare namespace CyberEnums {
       "CSR_CharacterOnly" = 2,
     }
 
-    declare const enum renddimEPreset {
-      "228x128" = 0,
-      "456x256" = 1,
-      "480x270" = 2,
-      "640x480" = 3,
-      "960x540" = 4,
-      "1280x720" = 5,
-      "1600x900" = 6,
-      "1920x1080" = 7,
-      "2560x1080" = 8,
-      "2560x1440" = 9,
-      "3440x1440" = 11,
-      "3840x1600" = 12,
-      "3840x2160" = 13,
-      "688x388" = 14,
-      "776x436" = 15,
-      "Console_Base" = 7,
-      "Console_Pro_Prospero_Lockhart" = 9,
-      "Console_Scorpio" = 13,
-      "Console_Anaconda" = 13,
-    }
-
     declare const enum rendEParticleSortingMode {
       "PSM_None" = 0,
       "PSM_Billboard" = 1,
@@ -15972,61 +16453,6 @@ declare namespace CyberEnums {
       "PTLU_Everywhere" = 0,
       "PTLU_OnlyInPathTracing" = 1,
       "PTLU_ExcludeFromPathTracing" = 2,
-    }
-
-    declare const enum RenderDecalNormalsBlendingMode {
-      "AlphaBlending" = 0,
-      "Reorient" = 1,
-    }
-
-    declare const enum RenderDecalOrderPriority {
-      "Priority0" = 0,
-      "Priority1" = 1,
-      "Priority2" = 2,
-      "Priority3" = 3,
-    }
-
-    declare const enum renderDevEnvProbeView {
-      "RADIANCE" = 0,
-      "ALBEDO" = 1,
-      "NORMAL" = 2,
-      "ROUGHNESS" = 3,
-      "METALNESS" = 4,
-      "EMISSIVE" = 5,
-      "SKY_MASK" = 6,
-    }
-
-    declare const enum renderDevGIProbeView {
-      "RADIANCE" = 0,
-      "SKY_VISIBILITY" = 1,
-      "ENV_ID" = 2,
-      "FLAG_0" = 3,
-      "FLAG_1" = 4,
-      "FLAG_2" = 5,
-      "CURRENT_ID" = 6,
-    }
-
-    declare const enum renderDevSurfelView {
-      "ALBEDO" = 0,
-      "NORMAL" = 1,
-      "SHADOWS" = 2,
-      "CLOSEST_PROBE" = 3,
-      "EMISSIVE" = 4,
-      "LIGHTING" = 5,
-      "BOUNCE" = 6,
-      "INSIDE" = 7,
-      "SHADOW" = 8,
-    }
-
-    declare const enum renderDevTXAADebugMode {
-      "TXAA_NoDebug" = 0,
-      "TXAA_ShowHistoryBlendFactor" = 1,
-    }
-
-    declare const enum RenderSceneLayer {
-      "Default" = 0,
-      "Cyberspace" = 1,
-      "WorldMap" = 2,
     }
 
     declare const enum rendEStreamingObserverMode {
@@ -16109,146 +16535,63 @@ declare namespace CyberEnums {
       "AP_BOTTOM" = 2,
     }
 
-    declare const enum RequestType {
-      "INSTANTLY_TRIGGER" = 0,
-      "MANUALLY_TRIGGERED" = 1,
+    declare const enum renddimEPreset {
+      "228x128" = 0,
+      "456x256" = 1,
+      "480x270" = 2,
+      "640x480" = 3,
+      "960x540" = 4,
+      "1280x720" = 5,
+      "1600x900" = 6,
+      "1920x1080" = 7,
+      "2560x1080" = 8,
+      "2560x1440" = 9,
+      "3440x1440" = 11,
+      "3840x1600" = 12,
+      "3840x2160" = 13,
+      "688x388" = 14,
+      "776x436" = 15,
+      "Console_Base" = 7,
+      "Console_Pro_Prospero_Lockhart" = 9,
+      "Console_Scorpio" = 13,
+      "Console_Anaconda" = 13,
     }
 
-    declare const enum RipperdocFilter {
-      "All" = 0,
-      "Vendor" = 1,
-      "Player" = 2,
-      "Buyback" = 3,
+    declare const enum renderDevEnvProbeView {
+      "RADIANCE" = 0,
+      "ALBEDO" = 1,
+      "NORMAL" = 2,
+      "ROUGHNESS" = 3,
+      "METALNESS" = 4,
+      "EMISSIVE" = 5,
+      "SKY_MASK" = 6,
     }
 
-    declare const enum RipperdocHoverState {
-      "None" = 0,
-      "BarCapacity" = 1,
-      "BarArmor" = 2,
-      "SlotSkeleton" = 3,
-      "SlotHands" = 4,
+    declare const enum renderDevGIProbeView {
+      "RADIANCE" = 0,
+      "SKY_VISIBILITY" = 1,
+      "ENV_ID" = 2,
+      "FLAG_0" = 3,
+      "FLAG_1" = 4,
+      "FLAG_2" = 5,
+      "CURRENT_ID" = 6,
     }
 
-    declare const enum RipperdocModes {
-      "Default" = 0,
-      "Item" = 1,
+    declare const enum renderDevSurfelView {
+      "ALBEDO" = 0,
+      "NORMAL" = 1,
+      "SHADOWS" = 2,
+      "CLOSEST_PROBE" = 3,
+      "EMISSIVE" = 4,
+      "LIGHTING" = 5,
+      "BOUNCE" = 6,
+      "INSIDE" = 7,
+      "SHADOW" = 8,
     }
 
-    declare const enum RoboticArmStateType {
-      "Idle" = 0,
-      "Work" = 1,
-      "Distract" = 2,
-    }
-
-    declare const enum Sample_Replicated_Enum {
-      "One" = 0,
-      "Two" = 1,
-      "Three" = 2,
-    }
-
-    declare const enum SAnimationBufferBitwiseCompression {
-      "ABBC_None" = 0,
-      "ABBC_24b" = 1,
-      "ABBC_16b" = 2,
-    }
-
-    declare const enum SAnimationBufferBitwiseCompressionPreset {
-      "ABBCP_Custom" = 0,
-      "ABBCP_VeryHighQuality" = 1,
-      "ABBCP_HighQuality" = 2,
-      "ABBCP_NormalQuality" = 3,
-      "ABBCP_LowQuality" = 4,
-      "ABBCP_VeryLowQuality" = 5,
-      "ABBCP_Raw" = 6,
-    }
-
-    declare const enum SAnimationBufferDataCompressionMethod {
-      "ABDCM_Invalid" = 0,
-      "ABDCM_Plain" = 1,
-      "ABDCM_Quaternion" = 2,
-      "ABDCM_QuaternionXYZSignedW" = 3,
-      "ABDCM_QuaternionXYZSignedWLastBit" = 4,
-      "ABDCM_Quaternion48b" = 5,
-      "ABDCM_Quaternion40b" = 6,
-      "ABDCM_Quaternion32b" = 7,
-      "ABDCM_Quaternion64bW" = 8,
-      "ABDCM_Quaternion48bW" = 9,
-      "ABDCM_Quaternion40bW" = 10,
-    }
-
-    declare const enum SAnimationBufferOrientationCompressionMethod {
-      "ABOCM_PackIn64bitsW" = 0,
-      "ABOCM_PackIn48bitsW" = 1,
-      "ABOCM_PackIn40bitsW" = 2,
-      "ABOCM_AsFloat_XYZW" = 3,
-      "ABOCM_AsFloat_XYZSignedW" = 4,
-      "ABOCM_AsFloat_XYZSignedWInLastBit" = 5,
-      "ABOCM_PackIn48bits" = 6,
-      "ABOCM_PackIn40bits" = 7,
-      "ABOCM_PackIn32bits" = 8,
-    }
-
-    declare const enum SAnimationBufferStreamingOption {
-      "ABSO_NonStreamable" = 0,
-      "ABSO_PartiallyStreamable" = 1,
-      "ABSO_FullyStreamable" = 2,
-    }
-
-    declare const enum ScannerDataType {
-      "None" = 0,
-      "Name" = 1,
-      "Level" = 2,
-      "Health" = 3,
-      "Rarity" = 4,
-      "WeaponBasic" = 5,
-      "WeaponDetailed" = 6,
-      "BountySystem" = 7,
-      "Vulnerabilities" = 8,
-      "Faction" = 9,
-      "Attitude" = 10,
-      "SquadInfo" = 11,
-      "Resistances" = 12,
-      "Abilities" = 13,
-      "Requirements" = 14,
-      "Description" = 15,
-      "DeviceStatus" = 16,
-      "NetworkStatus" = 17,
-      "NetworkLevel" = 18,
-      "DeviceConnections" = 19,
-      "QuestEntry" = 20,
-      "VehicleName" = 21,
-      "VehicleManufacturer" = 22,
-      "VehicleProductionYears" = 23,
-      "VehicleDriveLayout" = 24,
-      "VehicleHorsepower" = 25,
-      "VehicleMass" = 26,
-      "VehicleState" = 27,
-      "VehicleInfo" = 28,
-      "QuickHackDescription" = 29,
-      "VehicleCustomizationTemplate" = 30,
-    }
-
-    declare const enum ScannerDetailTab {
-      "Data" = 0,
-      "Hacking" = 1,
-      "TwinTone" = 2,
-    }
-
-    declare const enum ScannerNetworkState {
-      "NOT_CONNECTED" = 0,
-      "NOT_BREACHED" = 1,
-      "TIER1" = 2,
-      "TIER2" = 3,
-      "TIER3" = 4,
-      "BREACHED" = 5,
-    }
-
-    declare const enum ScannerObjectType {
-      "INVALID" = 0,
-      "PUPPET" = 1,
-      "VEHICLE" = 2,
-      "DEVICE" = 3,
-      "GENERIC" = 4,
+    declare const enum renderDevTXAADebugMode {
+      "TXAA_NoDebug" = 0,
+      "TXAA_ShowHistoryBlendFactor" = 1,
     }
 
     declare const enum scnAdditionalSpeakerRole {
@@ -16261,17 +16604,17 @@ declare namespace CyberEnums {
       "Holocall" = 1,
     }
 
-    declare const enum scnAnimationCategory {
-      "Body" = 0,
-      "Facial" = 1,
-      "Cyberware" = 2,
-    }
-
     declare const enum scnAnimNameType {
       "direct" = 0,
       "reference" = 1,
       "container" = 2,
       "dynamic" = 3,
+    }
+
+    declare const enum scnAnimationCategory {
+      "Body" = 0,
+      "Facial" = 1,
+      "Cyberware" = 2,
     }
 
     declare const enum scnAudioFastForwardSupport {
@@ -16282,12 +16625,6 @@ declare namespace CyberEnums {
     declare const enum scnAudioPlaybackDirectionSupportFlag {
       "Forward" = 1,
       "Backward" = 2,
-    }
-
-    declare const enum scnblocLocaleId {
-      "db_db" = 0,
-      "pl_pl" = 1,
-      "en_us" = 2,
     }
 
     declare const enum scnBraindanceLayer {
@@ -16355,12 +16692,6 @@ declare namespace CyberEnums {
       "Voice" = 2,
       "SpecificVoicetagHolder" = 3,
       "ContextActorName" = 4,
-    }
-
-    declare const enum scndevEventType {
-      "NodeFailed" = 1,
-      "DebugMessage" = 0,
-      "NodeProgressSet" = 2,
     }
 
     declare const enum scnDialogLineLanguage {
@@ -16440,26 +16771,6 @@ declare namespace CyberEnums {
       "findInNode" = 8,
     }
 
-    declare const enum scneventsRidCameraPlacement {
-      "SceneOrigin" = 0,
-      "Actual" = 1,
-      "Player" = 2,
-    }
-
-    declare const enum scneventsUIAnimActionType {
-      "Play" = 0,
-      "Update" = 1,
-      "Resume" = 2,
-      "Pause" = 3,
-      "Stop" = 4,
-    }
-
-    declare const enum scneventsVFXActionType {
-      "Play" = 0,
-      "Break" = 1,
-      "Kill" = 2,
-    }
-
     declare const enum scnEventType {
 
     }
@@ -16479,24 +16790,16 @@ declare namespace CyberEnums {
       "block_on_end_if_activator_matched" = 6,
     }
 
-    declare const enum scnfppBlendOverride {
-      "Centering" = 0,
-      "CopyPitch_CenteringYaw" = 1,
-      "CopyPitch_CopyYaw" = 2,
-      "Custom_PitchYaw" = 3,
-    }
-
-    declare const enum scnfppParallaxSpace {
-      "Default" = 0,
-      "Camera" = 1,
-      "Trajectory" = 2,
-      "Chest" = 3,
-    }
-
     declare const enum scnInterruptCapability {
       "None" = 0,
       "Interruptable" = 1,
       "NotInterruptable" = 2,
+    }
+
+    declare const enum scnInterruptReturnLinesBehavior {
+      "Default" = 0,
+      "Vehicle" = 1,
+      "Holocall" = 2,
     }
 
     declare const enum scnInterruptionPhase {
@@ -16523,18 +16826,6 @@ declare namespace CyberEnums {
       "PostReturnSignalTimeDelay" = 20,
       "ProcessTalkInteraction" = 21,
       "ClearCommands" = 22,
-    }
-
-    declare const enum scnInterruptReturnLinesBehavior {
-      "Default" = 0,
-      "Vehicle" = 1,
-      "Holocall" = 2,
-    }
-
-    declare const enum scnlocLocaleId {
-      "db_db" = 0,
-      "pl_pl" = 1,
-      "en_us" = 2,
     }
 
     declare const enum scnLookAtTargetType {
@@ -16628,13 +16919,6 @@ declare namespace CyberEnums {
       "Equal" = 1,
     }
 
-    declare const enum scnscreenplayItemType {
-      "invalid" = 0,
-      "dialogLine" = 1,
-      "choiceOption" = 2,
-      "standaloneComment" = 3,
-    }
-
     declare const enum scnSectionInternalsActorBehaviorMode {
       "OnlyIfAlive" = 0,
       "EvenIfDead" = 1,
@@ -16645,16 +16929,63 @@ declare namespace CyberEnums {
       "NodeRef" = 1,
     }
 
-    declare const enum ScreenDisplayContext {
-      "Default" = 0,
-      "Vendor" = 1,
-      "Storage" = 2,
+    declare const enum scnblocLocaleId {
+      "db_db" = 0,
+      "pl_pl" = 1,
+      "en_us" = 2,
     }
 
-    declare const enum SecurityEventScopeSettings {
-      "GLOBAL" = 0,
-      "AREA_WHERE_PLAYER_IS" = 1,
-      "SPECIFIC_AGENTS_ONLY" = 2,
+    declare const enum scndevEventType {
+      "NodeFailed" = 1,
+      "DebugMessage" = 0,
+      "NodeProgressSet" = 2,
+    }
+
+    declare const enum scneventsRidCameraPlacement {
+      "SceneOrigin" = 0,
+      "Actual" = 1,
+      "Player" = 2,
+    }
+
+    declare const enum scneventsUIAnimActionType {
+      "Play" = 0,
+      "Update" = 1,
+      "Resume" = 2,
+      "Pause" = 3,
+      "Stop" = 4,
+    }
+
+    declare const enum scneventsVFXActionType {
+      "Play" = 0,
+      "Break" = 1,
+      "Kill" = 2,
+    }
+
+    declare const enum scnfppBlendOverride {
+      "Centering" = 0,
+      "CopyPitch_CenteringYaw" = 1,
+      "CopyPitch_CopyYaw" = 2,
+      "Custom_PitchYaw" = 3,
+    }
+
+    declare const enum scnfppParallaxSpace {
+      "Default" = 0,
+      "Camera" = 1,
+      "Trajectory" = 2,
+      "Chest" = 3,
+    }
+
+    declare const enum scnlocLocaleId {
+      "db_db" = 0,
+      "pl_pl" = 1,
+      "en_us" = 2,
+    }
+
+    declare const enum scnscreenplayItemType {
+      "invalid" = 0,
+      "dialogLine" = 1,
+      "choiceOption" = 2,
+      "standaloneComment" = 3,
     }
 
     declare const enum senseAdditionalTraceType {
@@ -16680,25 +17011,12 @@ declare namespace CyberEnums {
       "Highest" = 5,
     }
 
-    declare const enum ServerState {
-      "Inactive" = 0,
-      "Active" = 1,
-      "Damaged" = 2,
-      "Destroyed" = 3,
-    }
-
     declare const enum servicesCloudSavesQueryStatus {
       "NotFetched" = 0,
       "FetchedSuccessfully" = 1,
       "CloudSavesDisabled" = 2,
       "NotLoggedIn" = 3,
       "FetchFailed" = 4,
-    }
-
-    declare const enum SettingsType {
-      "Slider" = 0,
-      "Toggle" = 1,
-      "DropdownList" = 2,
     }
 
     declare const enum shadowsShadowCastingMode {
@@ -16721,54 +17039,6 @@ declare namespace CyberEnums {
       "Separator" = 3,
     }
 
-    declare const enum SignalType {
-      "DEFAULT" = 0,
-      "REGISTRATION" = 1,
-      "UNREGISTRATION" = 2,
-    }
-
-    declare const enum SignShape {
-      "RECTANGLE" = 0,
-      "ARROWLEFT" = 1,
-      "ARROWRIGHT" = 2,
-      "SQUARE" = 3,
-    }
-
-    declare const enum SignType {
-      "INFORMATION" = 0,
-      "ATTENTION" = 1,
-      "WARNING" = 2,
-    }
-
-    declare const enum SlotType {
-      "DEFAULT" = 0,
-      "HOLSTER" = 1,
-      "WEAPON" = 2,
-      "COMBAT_CYBERWARE" = 3,
-      "TOOLTIP" = 4,
-      "MISC" = 5,
-    }
-
-    declare const enum StaticShaderInputLayout {
-      "DebugVertexBase" = 0,
-      "DebugVertexUV" = 1,
-      "DebugVertexUV_Fullscreen" = 2,
-      "NoBuffers_Fullscreen" = 3,
-      "NoBuffers_PointList" = 4,
-    }
-
-    declare const enum TakeOverControlSystemInputHintSortPriority {
-      "Shoot" = 0,
-      "SpiderNextAim" = 1,
-      "Scanner" = 2,
-      "NextDevice" = 3,
-      "PreviousDevice" = 4,
-      "ZoomIn" = 5,
-      "ZoomOut" = 6,
-      "SpiderNestView" = 7,
-      "Exit" = 8,
-    }
-
     declare const enum telemetryLevelGainReason {
       "Ignore" = 0,
       "Gameplay" = 1,
@@ -16779,12 +17049,6 @@ declare namespace CyberEnums {
       "Undefined" = 0,
       "Add" = 1,
       "Remove" = 2,
-    }
-
-    declare const enum TestCasePhase {
-      "Setup" = 0,
-      "Body" = 1,
-      "Wrapup" = 2,
     }
 
     declare const enum textHorizontalAlignment {
@@ -16843,18 +17107,6 @@ declare namespace CyberEnums {
       "PerCharacter" = 1,
     }
 
-    declare const enum ThrowType {
-      "Quick" = 0,
-      "Charge" = 1,
-    }
-
-    declare const enum Tier2WalkType {
-      "Undefined" = 0,
-      "Slow" = 1,
-      "Normal" = 2,
-      "Fast" = 3,
-    }
-
     declare const enum toolsMessageSeverity {
       "Success" = 0,
       "Info" = 1,
@@ -16871,138 +17123,6 @@ declare namespace CyberEnums {
     declare const enum toolsMessageVerbosity {
       "Normal" = 0,
       "Verbose" = 1,
-    }
-
-    declare const enum TrafficGenDynamicImpact {
-      "Ignored" = 0,
-      "Blocking" = 1,
-    }
-
-    declare const enum TrafficGenMeshImpact {
-      "UseNavigation" = 0,
-      "ForceIgnored" = 1,
-      "ForceBlocking" = 2,
-    }
-
-    declare const enum TransferSaveAction {
-      "Export" = 0,
-      "Import" = 1,
-    }
-
-    declare const enum TransferSaveState {
-      "ExportConfirmation" = 0,
-      "ExportSpinner" = 1,
-      "ExportSuccess" = 2,
-      "ExportFailed" = 3,
-      "ImportSpinner" = 4,
-      "ImportLoading" = 5,
-      "ImportNoSave" = 6,
-      "ImportFailed" = 7,
-      "ImportNotEnoughSpace" = 8,
-    }
-
-    declare const enum TransmogSlots {
-      "Head" = 0,
-      "Face" = 1,
-      "InnerChest" = 2,
-      "OuterChest" = 3,
-      "Legs" = 4,
-      "Feet" = 5,
-    }
-
-    declare const enum TweakWeaponPose {
-      "Nothing" = 0,
-      "Position" = 1,
-      "Rotation" = 2,
-    }
-
-    declare const enum UIGameContext {
-      "Default" = 0,
-      "QuickHack" = 1,
-      "Scanning" = 2,
-      "DeviceZoom" = 3,
-      "BraindanceEditor" = 4,
-      "BraindancePlayback" = 5,
-      "VehicleMounted" = 6,
-      "ModalPopup" = 7,
-      "RadialWheel" = 8,
-      "VehicleRace" = 9,
-      "Berserk" = 10,
-      "CinematicCamera" = 11,
-      "Empty" = 12,
-      "DelamainTaxi" = 13,
-    }
-
-    declare const enum UIInGameNotificationType {
-      "ActionRestriction" = 0,
-      "CombatRestriction" = 1,
-      "CantSaveActionRestriction" = 2,
-      "CantSaveCombatRestriction" = 3,
-      "CantSaveQuestRestriction" = 4,
-      "CantSaveDeathRestriction" = 5,
-      "NotEnoughSlotsSaveResctriction" = 6,
-      "NotEnoughSpaceSaveResctriction" = 7,
-      "PhotoModeDisabledRestriction" = 8,
-      "SandevistanInCallRestriction" = 9,
-      "ExpansionInstalled" = 10,
-      "GenericNotification" = 11,
-    }
-
-    declare const enum UIInventoryItemWeaponBarsType {
-      "Ranged" = 0,
-      "Melee" = 1,
-      "Throwable" = 2,
-      "CyberwareWeapon" = 3,
-      "CyberwareRangedWeapon" = 4,
-      "InjectorHealing" = 5,
-      "InhalerHealing" = 6,
-    }
-
-    declare const enum UIItemCategory {
-      "Default" = 0,
-      "Weapon" = 1,
-      "Clothing" = 2,
-      "Grenade" = 3,
-      "Cyberware" = 4,
-      "CyberwareWeapon" = 5,
-      "Cyberdeck" = 6,
-      "Program" = 7,
-    }
-
-    declare const enum UIMenuNotificationType {
-      "VendorNotEnoughMoney" = 0,
-      "VNotEnoughMoney" = 1,
-      "VendorRequirementsNotMet" = 2,
-      "InventoryActionBlocked" = 3,
-      "CraftingNoPerks" = 4,
-      "CraftingNotEnoughMaterial" = 5,
-      "UpgradingLevelToLow" = 6,
-      "NoPerksPoints" = 7,
-      "PerksLocked" = 8,
-      "MaxLevelPerks" = 9,
-      "NoAttributePoints" = 10,
-      "InCombat" = 11,
-      "InCombatExplicit" = 12,
-      "CraftingQuickhack" = 13,
-      "CraftingAmmoCap" = 14,
-      "PlayerReqLevelToLow" = 15,
-      "InventoryNoFreeSlot" = 16,
-      "FaceUnequipBlocked" = 17,
-      "TutorialUnequipBlocked" = 18,
-      "NoJunkToDisassemble" = 19,
-    }
-
-    declare const enum UIObjectiveEntryType {
-      "Invalid" = 0,
-      "Quest" = 1,
-      "Objective" = 2,
-      "SubObjective" = 3,
-    }
-
-    declare const enum UpdateBucketEnum {
-      "Vehicle" = 0,
-      "Character" = 1,
-      "AttachedObject" = 2,
     }
 
     declare const enum vehicleAIPathTrafficDeletionMode {
@@ -17228,12 +17348,6 @@ declare namespace CyberEnums {
       "Count" = 8,
     }
 
-    declare const enum VehicleQuestEngineLockState {
-      "DontToggleIfLocked" = 0,
-      "Lock" = 1,
-      "Unlock" = 2,
-    }
-
     declare const enum vehicleQuestUIEnable {
       "Gameplay" = 0,
       "ForceEnable" = 1,
@@ -17304,37 +17418,6 @@ declare namespace CyberEnums {
       "NONE" = 3,
     }
 
-    declare const enum VehicleVisualCustomizationType {
-      "Generic" = 0,
-      "Unique" = 1,
-    }
-
-    declare const enum VehicleVisualCustomizationWidgetCarPart {
-      "Default" = 0,
-      "Body" = 1,
-      "Hood" = 2,
-      "Door" = 3,
-      "Bumper" = 4,
-      "Spoiler" = 5,
-      "SpoilerHidden" = 6,
-    }
-
-    declare const enum VendorConfirmationPopupType {
-      "Default" = 0,
-      "ExpensiveItem" = 1,
-      "EquippedItem" = 2,
-      "StashEquippedItem" = 3,
-      "BuyAndEquipCyberware" = 4,
-      "BuyNotEquipableCyberware" = 5,
-      "SellCyberware" = 6,
-      "DisassembeIconic" = 7,
-    }
-
-    declare const enum VendorSellJunkActionType {
-      "Sell" = 0,
-      "Disassemble" = 1,
-    }
-
     declare const enum vgEStyleAttributeType {
       "FillColor" = 0,
       "StrokeColor" = 1,
@@ -17342,13 +17425,6 @@ declare namespace CyberEnums {
       "StrokeMiterLimit" = 3,
       "FontFamily" = 4,
       "FontSize" = 5,
-    }
-
-    declare const enum VisualState {
-      "OFF" = 0,
-      "RUNNING" = 1,
-      "MALFUNCTIONING" = 2,
-      "ON" = 3,
     }
 
     declare const enum visWorldOccluderType {
@@ -17360,55 +17436,6 @@ declare namespace CyberEnums {
       "Exterior" = 5,
     }
 
-    declare const enum WeaponBarType {
-      "AttackSpeed" = 0,
-      "DamagePerHit" = 1,
-      "ReloadSpeed" = 2,
-      "Range" = 3,
-      "Handling" = 4,
-      "Stamina" = 5,
-      "RangedCount" = 6,
-      "MeleeAttackSpeed" = 7,
-      "MeleeDamagePerHit" = 8,
-      "MeleeStamina" = 9,
-      "ThrowableEffectiveRange" = 10,
-      "ThrowableReturnTime" = 11,
-      "MeleeCount" = 12,
-      "CyberwareAttackSpeed" = 13,
-      "CyberwareDamagePerHit" = 14,
-      "CyberwareCount" = 15,
-      "Healing" = 16,
-      "HealingOverTime" = 17,
-      "HealingCount" = 18,
-      "Invalid" = -1,
-    }
-
-    declare const enum WeaponBarTypeGroup {
-      "AttackSpeed" = 0,
-      "DamagePerHit" = 1,
-      "Range" = 2,
-      "ReloadSpeed" = 3,
-      "Stamina" = 4,
-      "Handling" = 5,
-      "ReturnTime" = 6,
-      "Healing" = 7,
-      "HealingOverTime" = 8,
-      "Invalid" = -1,
-    }
-
-    declare const enum WeaponPartType {
-      "Scope" = 0,
-      "Magazine" = 1,
-      "Silencer" = 2,
-    }
-
-    declare const enum WeaponType {
-      "Ranged" = 0,
-      "Melee" = 1,
-      "Count" = 2,
-      "Invalid" = -1,
-    }
-
     declare const enum workLogicalOperation {
       "AND" = 0,
       "OR" = 1,
@@ -17418,22 +17445,6 @@ declare namespace CyberEnums {
       "BonePosition" = 0,
       "RelativePosition" = 1,
       "Custom" = 2,
-    }
-
-    declare const enum WorkspotConditionOperators {
-      "OR" = 0,
-      "AND" = 1,
-    }
-
-    declare const enum WorkspotWeaponConditionEnum {
-      "None" = 0,
-      "Any" = 1,
-      "Ranged" = 2,
-      "OneHandedRanged" = 3,
-      "Melee" = 4,
-      "MeleeCyberware" = 5,
-      "LMG" = 6,
-      "HMG" = 7,
     }
 
     declare const enum workWeaponType {
@@ -17502,51 +17513,11 @@ declare namespace CyberEnums {
       "Road" = 4,
     }
 
-    declare const enum worldenvUtilsEBlendParamsType {
-      "EBPS_Tick" = 0,
-      "EBPS_Game" = 1,
-      "EBPS_Frame" = 2,
-    }
-
     declare const enum worldFindLaneFilter {
       "None" = 0,
       "Road" = 1,
       "PatrolRoute" = 2,
       "Pavement" = 3,
-    }
-
-    declare const enum worldgeometryaverageNormalDetectionHelperQueryStatus {
-      "Finished" = 0,
-      "NoGeometry" = 1,
-    }
-
-    declare const enum worldgeometryDescriptionQueryFlags {
-      "DistanceVector" = 1,
-      "CollisionNormal" = 2,
-      "ObstacleDepth" = 4,
-      "UpExtent" = 8,
-      "DownExtent" = 16,
-      "TopExtent" = 32,
-      "TopPoint" = 64,
-      "BehindPoint" = 128,
-    }
-
-    declare const enum worldgeometryDescriptionQueryStatus {
-      "OK" = 0,
-      "NoGeometry" = 1,
-      "UpVectorSameAsDirection" = 2,
-    }
-
-    declare const enum worldgeometryProbingStatus {
-      "None" = 0,
-      "StillInObstacle" = 1,
-      "GeometryDiverged" = 2,
-      "Failure" = 3,
-    }
-
-    declare const enum WorldMapTooltipType {
-      "Default" = 0,
-      "Police" = 1,
     }
 
     declare const enum worldNavigationRequestStatus {
@@ -17872,15 +17843,44 @@ declare namespace CyberEnums {
       "Both" = 2,
     }
 
+    declare const enum worldenvUtilsEBlendParamsType {
+      "EBPS_Tick" = 0,
+      "EBPS_Game" = 1,
+      "EBPS_Frame" = 2,
+    }
+
+    declare const enum worldgeometryDescriptionQueryFlags {
+      "DistanceVector" = 1,
+      "CollisionNormal" = 2,
+      "ObstacleDepth" = 4,
+      "UpExtent" = 8,
+      "DownExtent" = 16,
+      "TopExtent" = 32,
+      "TopPoint" = 64,
+      "BehindPoint" = 128,
+    }
+
+    declare const enum worldgeometryDescriptionQueryStatus {
+      "OK" = 0,
+      "NoGeometry" = 1,
+      "UpVectorSameAsDirection" = 2,
+    }
+
+    declare const enum worldgeometryProbingStatus {
+      "None" = 0,
+      "StillInObstacle" = 1,
+      "GeometryDiverged" = 2,
+      "Failure" = 3,
+    }
+
+    declare const enum worldgeometryaverageNormalDetectionHelperQueryStatus {
+      "Finished" = 0,
+      "NoGeometry" = 1,
+    }
+
     declare const enum worlduiEntryVisibility {
       "TierVisibility" = 0,
       "ForceShow" = 1,
       "ForceHide" = 2,
-    }
-
-    declare const enum ZoneRelativeToVehicle {
-      "Right" = 0,
-      "Left" = 1,
-      "Middle" = 2,
     }
 }

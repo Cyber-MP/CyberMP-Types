@@ -82,6 +82,11 @@ export class GenericGenerator extends BaseGenerator {
     });
 
     sourceFile.addTypeAlias({
+      name: "Int32",
+      type: "number",
+    });
+
+    sourceFile.addTypeAlias({
       name: "DataBuffer",
       type: "any",
     });
