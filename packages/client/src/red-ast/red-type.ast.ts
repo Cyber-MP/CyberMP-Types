@@ -2,7 +2,7 @@ import { RedNodeAst, RedNodeKind } from "./red-node.ast";
 import { cyrb53 } from "../utils/string";
 import { RedPrimitiveDef, RedTemplateDef } from "./red-definitions.ast";
 import { CodeSyntax } from "./red-definitions.ast";
-import { LuaPrimitiveDef } from "src/config/constants";
+import { defsIndex, LuaPrimitiveDef } from "src/config/constants";
 
 export interface RedTypeJson {
   readonly a?: number; // flag
@@ -24,6 +24,113 @@ export class RedTypeAst {
       type.flag >= RedPrimitiveDef.Void &&
       type.flag <= RedPrimitiveDef.Variant
     );
+  }
+
+  static toTypescript(type: RedTypeAst): string {
+    if (!type) return "any";
+
+    // Use aliasName when available (similar to toLuadoc)
+    let baseName = type.name ?? "any";
+
+    if (defsIndex.enums.has(baseName)) {
+      baseName = `CyberEnums.${baseName}`;
+    } else if (defsIndex.bitfields.has(baseName)) {
+      baseName = `CyberEnums.BitFields.${baseName}`;
+    }
+
+    // Primitive mapping
+    if (this.isPrimitive(type)) {
+      switch (type.flag as RedPrimitiveDef) {
+        case RedPrimitiveDef.Void:
+          return "void";
+        case RedPrimitiveDef.Bool:
+          return "boolean";
+        case RedPrimitiveDef.Int8:
+        case RedPrimitiveDef.Uint8:
+        case RedPrimitiveDef.Int16:
+        case RedPrimitiveDef.Uint16:
+        case RedPrimitiveDef.Int32:
+        case RedPrimitiveDef.Uint32:
+        case RedPrimitiveDef.Int64:
+        case RedPrimitiveDef.Uint64:
+        case RedPrimitiveDef.Float:
+        case RedPrimitiveDef.Double:
+          return "number";
+        case RedPrimitiveDef.String:
+        case RedPrimitiveDef.LocalizationString:
+        case RedPrimitiveDef.CName:
+        case RedPrimitiveDef.TweakDBID:
+        case RedPrimitiveDef.NodeRef:
+        case RedPrimitiveDef.CGUID:
+        case RedPrimitiveDef.CRUID:
+        case RedPrimitiveDef.EditorObjectID:
+        case RedPrimitiveDef.MessageResourcePath:
+          return "string";
+        case RedPrimitiveDef.DataBuffer:
+        case RedPrimitiveDef.serializationDeferredDataBuffer:
+        case RedPrimitiveDef.SharedDataBuffer:
+          // you can change to Uint8Array if you prefer
+          return "ArrayBuffer";
+        case RedPrimitiveDef.CDateTime:
+          return "Date";
+        case RedPrimitiveDef.Variant:
+        default:
+          return "any";
+      }
+    }
+
+    // Template mapping (templates normally have innerType)
+    if (this.isTemplate(type)) {
+      let innerTs = type.innerType
+        ? RedTypeAst.toTypescript(type.innerType)
+        : "any";
+
+      if (defsIndex.enums.has(innerTs)) {
+        innerTs = `CyberEnums.${innerTs}`;
+      } else if (defsIndex.bitfields.has(innerTs)) {
+        innerTs = `CyberEnums.BitFields.${innerTs}`;
+      }
+
+      switch (type.flag as RedTemplateDef) {
+        case RedTemplateDef.array:
+          // static sized arrays still map to T[]
+          return `${innerTs}[]`;
+        case RedTemplateDef.ref:
+          return `Handle<${innerTs}>`;
+        case RedTemplateDef.wref:
+          return `WeakHandle<${innerTs}>`;
+        case RedTemplateDef.script_ref:
+          return `ScriptRef<${innerTs}>`;
+        case RedTemplateDef.ResRef:
+          return `ResRef<${innerTs}>`;
+        case RedTemplateDef.ResAsyncRef:
+          return `ResAsyncRef<${innerTs}>`;
+        case RedTemplateDef.curveData:
+          return `CurveData<${innerTs}>`;
+        case RedTemplateDef.multiChannelCurve:
+          return `MultiChannelCurve<${innerTs}>`;
+        default:
+          // fallback: represent as generic-like `Name<Inner>`
+          const tmplName =
+            RedTypeAst.templateToString(type.flag as RedTemplateDef) ??
+            baseName;
+          // If templateToString returned a simple token (e.g. "handle") avoid duplicating
+          return `${tmplName}<${innerTs}>`;
+      }
+    }
+
+    // If there's an innerType but it's not flagged as template (some nodes encode generics differently)
+    if (type.innerType) {
+      const innerTs = RedTypeAst.toTypescript(type.innerType);
+      return `${baseName}<${innerTs}>`;
+    }
+
+    if (defsIndex.classes.has(baseName) || defsIndex.funcs.has(baseName)) {
+      return baseName;
+    }
+
+    // TODO: FOR AROUND HERE FOR ARRAY AND SMTH LIEK THAT
+    return "any";
   }
 
   static isTemplate(type: RedTypeAst): boolean {

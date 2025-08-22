@@ -15,8 +15,12 @@ import classes from "../../assets/classes.json";
 import { RedClassAst } from "src/red-ast/red-class.ast";
 import { RedPropertyAst } from "src/red-ast/red-property.ast";
 import { RedFunctionAst } from "src/red-ast/red-function.ast";
-import { getFunctionParams, resolveType } from "src/utils/type-resolver";
+import {
+  getFunctionParams,
+  getFunctionReturnType,
+} from "src/utils/type-resolver";
 import { RedTypeAst } from "src/red-ast/red-type.ast";
+import { RedVisibilityDef } from "src/red-ast/red-definitions.ast";
 
 enum RedFunctionFlags {
   isPrivate,
@@ -31,15 +35,11 @@ enum RedFunctionFlags {
   isTimer,
 }
 
-function getScopeFromFunctionFlags(flags: number): Scope {
-  if (((flags >> RedFunctionFlags.isPrivate) & 1) !== 0) {
-    return Scope.Private;
-  } else if (((flags >> RedFunctionFlags.isProtected) & 1) !== 0) {
-    return Scope.Protected;
-  } else {
-    return Scope.Public;
-  }
-}
+const visibilityToScope: Record<RedVisibilityDef, Scope> = {
+  [RedVisibilityDef.private]: Scope.Private,
+  [RedVisibilityDef.protected]: Scope.Protected,
+  [RedVisibilityDef.public]: Scope.Public,
+};
 
 export class ClassGenerator extends BaseGenerator<[SourceFile]> {
   private classObjs: RedClassAst[];
@@ -107,21 +107,16 @@ export class ClassGenerator extends BaseGenerator<[SourceFile]> {
         const properties: OptionalKind<PropertyDeclarationStructure>[] =
           filteredProps.map((p) => ({
             name: `"${p.name}"`,
-            type: resolveType({
-              type: RedTypeAst.toLuadoc(p.type),
-              rawType: false,
-            }),
+            type: RedTypeAst.toTypescript(p.type),
           }));
 
         const methods: OptionalKind<MethodDeclarationStructure>[] = funcs.map(
           (fn) => ({
             name: `"${fn.name}"`,
-            returnType: resolveType({
-              type: fn.returnType ? RedTypeAst.toLuadoc(fn?.returnType) : "any",
-              rawType: false,
-            }),
+            returnType: getFunctionReturnType(fn),
             parameters: getFunctionParams(fn.arguments),
             isStatic: fn.isStatic,
+            scope: visibilityToScope[fn.visibility],
             // returnType: resolveType(fn.return),
             // parameters: getFunctionParams(fn.params),
           })
@@ -139,7 +134,7 @@ export class ClassGenerator extends BaseGenerator<[SourceFile]> {
 
     this.addHeader(sourceFile);
     sourceFile.addStatements([
-      `/// <reference path="./globals.d.ts" />`,
+      `/// <reference path="./precomputed.d.ts" />`,
       `/// <reference path="./enums.d.ts" />`,
       `/// <reference path="./bitfields.d.ts" />`,
     ]);

@@ -11,7 +11,7 @@ import { Logger } from "../utils/logger";
 import { defsIndex } from "src/config/constants";
 import { RedFunctionAst } from "src/red-ast/red-function.ast";
 import { RedTypeAst } from "src/red-ast/red-type.ast";
-import { getFunctionParams, resolveType } from "src/utils/type-resolver";
+import { getFunctionParams } from "src/utils/type-resolver";
 
 export class FuncGenerator extends BaseGenerator<[SourceFile]> {
   private funcs: RedFunctionAst[];
@@ -41,17 +41,15 @@ export class FuncGenerator extends BaseGenerator<[SourceFile]> {
       name: "MpFuncs",
       methods: this.funcs.map<OptionalKind<MethodSignatureStructure>>((fn) => ({
         name: `"${fn.name}"`,
-        returnType: resolveType({
-          type: fn.returnType ? RedTypeAst.toLuadoc(fn?.returnType) : "any",
-          rawType: false,
-        }),
+        returnType: fn.returnType
+          ? RedTypeAst.toTypescript(fn?.returnType)
+          : "any",
         parameters: getFunctionParams(fn.arguments),
         // returnType: resolveType(fn.return),
         // parameters: getFunctionParams(fn.params),
         // docs: (fn as any).docs,
       })),
     });
-
     Logger.success("Funcs generated successfully");
   }
 }

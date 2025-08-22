@@ -13,7 +13,7 @@ export const defsIndex = {
 
 export const blacklist = ["with", "debugger"];
 
-export const DOTNET_CPP_MAP: Record<string, string> = {
+export const TYPES_MAP: Record<string, string> = {
   int: "number",
   int32: "number",
   int16: "number",
