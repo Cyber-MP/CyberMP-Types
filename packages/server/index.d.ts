@@ -81,6 +81,8 @@ interface MpEvents {
  * Main MP API interface.
  */
 interface Mp {
+  events: MpEvents;
+
   /**
    * Starts a specific resource by name.
    * @param resourceName Name of the resource to start.
