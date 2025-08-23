@@ -16,7 +16,9 @@ export function getFunctionParams(
     )
     .map((p) => ({
       name: blacklist.includes(p.name) ? `${p.name}1` : p.name,
-      type: RedTypeAst.toTypescript(p.type),
+      type: p.isOptional
+        ? `${RedTypeAst.toTypescript(p.type)} | undefined`
+        : RedTypeAst.toTypescript(p.type),
     }));
 }
 
