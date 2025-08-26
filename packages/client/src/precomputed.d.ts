@@ -206,9 +206,19 @@ declare interface MpGamePrecomputed {
   ): void;
 
   /**
-   * Event when game is started.
+   * Event when the game is started.
    */
   onGameLoaded(callback: () => void): void;
+
+  /**
+   * Event when tweaks is loaded.
+   */
+  onTweak(callback: () => void): void;
+
+  /**
+   * Event when local player has been spawned.
+   */
+  onLocalPlayerSpawned(callback: () => void): void;
 
   /**
    * Get singleton.
