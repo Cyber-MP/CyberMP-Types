@@ -45,6 +45,7 @@ declare interface MpEvents {
 
   /**
    * Emit a previously registered custom event.
+   *
    * @param eventName Name of the event.
    * @param args Arguments to pass.
    */
@@ -71,6 +72,16 @@ declare interface MpEvents {
    * @param func Callback function.
    */
   onCef(eventName: string, func: (...args: any[]) => void): void;
+
+  /**
+   * Register a command in the client scope.
+   * @param commandName Command name without "/".
+   * @param func Callback with id and args.
+   */
+  addCommand(
+      commandName: string,
+      func: (id: number, args: string[]) => void,
+  ): void;
 }
 
 declare interface MpGlobalPrecomputed {
@@ -97,11 +108,11 @@ declare interface MpGlobalPrecomputed {
    * Local player spawning API.
    */
   setSpawnDataLocalPlayer(
-    modelHash: number,
-    x: number,
-    y: number,
-    z: number,
-    yaw: number
+      modelHash: number,
+      x: number,
+      y: number,
+      z: number,
+      yaw: number
   ): void;
 
   spawnLocalPlayer(): boolean;
@@ -110,37 +121,37 @@ declare interface MpGlobalPrecomputed {
    * Spawn local-only entities (not synced).
    */
   spawnLocalPed(
-    skinHash: number,
-    appHash: number,
-    x: number,
-    y: number,
-    z: number,
-    yaw: number,
-    streaming: boolean
+      skinHash: number,
+      appHash: number,
+      x: number,
+      y: number,
+      z: number,
+      yaw: number,
+      streaming: boolean
   ): number;
 
   spawnLocalVehicle(
-    skinHash: number,
-    appHash: number,
-    x: number,
-    y: number,
-    z: number,
-    roll: number,
-    pitch: number,
-    yaw: number,
-    streaming: boolean
+      skinHash: number,
+      appHash: number,
+      x: number,
+      y: number,
+      z: number,
+      roll: number,
+      pitch: number,
+      yaw: number,
+      streaming: boolean
   ): number;
 
   spawnLocalObject(
-    skinHash: bigint | number,
-    appHash: bigint | number,
-    x: number,
-    y: number,
-    z: number,
-    roll: number,
-    pitch: number,
-    yaw: number,
-    streaming: boolean
+      skinHash: bigint | number,
+      appHash: bigint | number,
+      x: number,
+      y: number,
+      z: number,
+      roll: number,
+      pitch: number,
+      yaw: number,
+      streaming: boolean
   ): number;
 
   despawnLocalPed(hash: number): void;
@@ -185,27 +196,45 @@ declare interface MpGlobalPrecomputed {
 
 declare interface MpGamePrecomputed {
   /**
-   * Method to retrieve input events
+   * Method to retrieve input events.
    */
   onInputKeyEvent(
-    callback: (
-      action: CyberEnums.EInputAction,
-      key: CyberEnums.EInputKey
-    ) => void
+      callback: (
+          action: CyberEnums.EInputAction,
+          key: CyberEnums.EInputKey
+      ) => void
   ): void;
 
   /**
-   * Event when game is started
+   * Event when the game is started.
    */
   onGameLoaded(callback: () => void): void;
 
   /**
-   * Get singleton
+   * Event when tweaks is loaded.
+   */
+  onTweak(callback: () => void): void;
+
+  /**
+   * Event when local player has been spawned.
+   */
+  onLocalPlayerSpawned(callback: () => void): void;
+
+  /**
+   * Get singleton.
    */
   getSingleton<T extends keyof MpClasses>(name: T): UnwrapMpClass<MpClasses[T]>;
 
   /**
-   * Add something to inventory
+   * Add something to inventory.
    */
   AddToInventory(itemName: string, count: number): void;
+
+  /**
+   * Returns model hash convertable to number.
+   * @param name Model name
+   * @param type Model name type
+   * @returns Model hash
+   */
+  getHashFromName(name: string, type: 'tweakdbid' | 'cname'): string;
 }
