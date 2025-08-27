@@ -76,6 +76,13 @@ interface MpEvents {
     on(eventName: 'onLiftChangeStateEvent', callback: (playerId: string, data: OnLiftChangeStateEvent) => void): void;
 
     /**
+     * Listen for a client-side event on the server.
+     * @param eventName The name of the event.
+     * @param callback Function triggered when the event is received.
+     */
+    onClient(eventName: string, callback: (...args: any[]) => void): void;
+
+    /**
      * Unregister a custom event listener.
      * @param eventName Name of the event.
      * @param callback Callback function.
@@ -90,17 +97,20 @@ interface MpEvents {
     emit(eventName: string, ...args: any[]): void;
 
     /**
-     * Listen for a client-side event on the server.
-     * @param eventName The name of the event.
-     * @param callback Function triggered when the event is received.
-     */
-    onClient(eventName: string, callback: (...args: any[]) => void): void;
-
-    /**
      * Emit a client-side event from the server.
      * @param eventName Resource name to emit from.
      * @param playerId Target player entity/network ID.
      * @param args Arguments to send with the event.
      */
     emitClient(eventName: string, playerId: number, ...args: any[]): void;
+
+    /**
+     * Register a command in the server scope.
+     * @param commandName Command name without "/".
+     * @param callback Callback with id and args.
+     */
+    addCommand(
+        commandName: string,
+        callback: (id: number, args: string[]) => void
+    ): void;
 }
