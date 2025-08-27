@@ -75,6 +75,16 @@ interface MpEvents {
    * @param args Arguments to pass to the handler.
    */
   emit(eventName: string, ...args: any[]): void;
+
+  /**
+   * Register a command in the server scope.
+   * @param commandName Command name without "/".
+   * @param func Callback with id and args.
+   */
+  addCommand(
+    commandName: string,
+    func: (id: number, args: string[]) => void
+  ): void;
 }
 
 /**
@@ -543,16 +553,6 @@ interface Mp {
    * @returns Uptime in milliseconds.
    */
   getGameTimer(): number;
-
-  /**
-   * Register a command in the server scope.
-   * @param commandName Command name without "/".
-   * @param func Callback with id and args.
-   */
-  addCommand(
-      commandName: string,
-      func: (id: number, args: string[]) => void,
-  ): void;
 }
 
 declare const mp: Mp;
