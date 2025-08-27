@@ -1,3 +1,5 @@
+/// <reference path="./events.d.ts" />
+
 /**
  * Represents an in-game entity.
  */
@@ -34,47 +36,6 @@ declare const enum VehicleSeat {
   Passenger = 1,
   RearLeft = 2,
   RearRight = 3,
-}
-
-/**
- * Main MP events interface.
- */
-interface MpEvents {
-  /**
-   * Listen for a client-side event on the server.
-   * @param eventName The name of the event.
-   * @param callback Function triggered when the event is received.
-   */
-  onClient(eventName: string, callback: (...args: any[]) => void): void;
-
-  /**
-   * Emit a client-side event from the server.
-   * @param eventName Resource name to emit from.
-   * @param playerId Target player entity/network ID.
-   * @param args Arguments to send with the event.
-   */
-  emitClient(eventName: string, playerId: number, ...args: any[]): void;
-
-  /**
-   * Listen for a shared (server or client) custom event.
-   * @param eventName The name of the custom event.
-   * @param callback The callback to run when triggered.
-   */
-  on(eventName: string, callback: (...args: any[]) => void): void;
-
-  /**
-   * Unregister a custom event listener.
-   * @param eventName Name of the event.
-   * @param func Callback function.
-   */
-  off(eventName: string, func: (...args: any[]) => void): void;
-
-  /**
-   * Emit a shared custom event.
-   * @param eventName The event name to emit.
-   * @param args Arguments to pass to the handler.
-   */
-  emit(eventName: string, ...args: any[]): void;
 }
 
 /**
