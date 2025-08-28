@@ -24,7 +24,7 @@ export class BitfieldGenerator extends BaseGenerator {
         .map(({ key, value }) => `  "${key}" = ${1 << value},`)
         .join("\n");
 
-      return `declare const enum ${obj.name} {\n${enumMembers}\n}`;
+      return `const enum ${obj.name} {\n${enumMembers}\n}`;
     });
 
     this.addHeader(sourceFile);
