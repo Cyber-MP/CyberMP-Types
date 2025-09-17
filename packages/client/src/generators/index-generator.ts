@@ -39,10 +39,7 @@ export class IndexGenerator extends BaseGenerator {
 
     sourceFile.addInterface({
       name: "Mp",
-      properties: [
-        { name: "game", type: "MpGame" },
-        { name: "events", type: "MpEvents" },
-      ],
+      properties: [{ name: "game", type: "MpGame" }],
       extends: ["MpGlobalPrecomputed"],
     });
 

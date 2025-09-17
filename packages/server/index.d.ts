@@ -87,11 +87,21 @@ interface MpEvents {
   ): void;
 }
 
+interface MpMeta {
+  setGlobalMeta(key: string, value: any): void;
+  getGlobalMeta<T = any>(key: string): T;
+  setPlayerMeta(playerId: number, key: string, value: any): void;
+  getPlayerMeta<T = any>(playerId: number, key: string): T;
+  setEntityMeta(netId: number, key: string, value: any): void;
+  getEntityMeta<T = any>(netId: number, key: string): T;
+}
+
 /**
  * Main MP API interface.
  */
 interface Mp {
   events: MpEvents;
+  meta: MpMeta;
 
   /**
    * Starts a specific resource by name.
