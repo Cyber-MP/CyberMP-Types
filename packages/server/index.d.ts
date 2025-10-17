@@ -79,11 +79,11 @@ interface MpEvents {
   /**
    * Register a command in the server scope.
    * @param commandName Command name without "/".
-   * @param func Callback with id and args.
+   * @param callback Callback with id and args.
    */
   addCommand(
     commandName: string,
-    func: (id: number, args: string[]) => void
+    callback: (id: number, args: string[]) => void
   ): void;
 }
 
