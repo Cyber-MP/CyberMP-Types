@@ -94,11 +94,32 @@ declare interface MpEvents {
   ): void;
 }
 
+declare interface MpMeta {
+  setGlobalMeta(key: string, value: any, sync?: boolean): void;
+  getGlobalMeta<T = any>(key: string): T;
+  setPlayerMeta(
+    playerId: number,
+    key: string,
+    value: any,
+    sync?: boolean
+  ): void;
+  getPlayerMeta<T = any>(playerId: number, key: string): T;
+  setEntityMeta(netId: number, key: string, value: any, sync?: boolean): void;
+  getEntityMeta<T = any>(netId: number, key: string): T;
+  setLocalPlayerMeta(key: string, value: any): void;
+  getLocalPlayerMeta<T = any>(key: string): T;
+}
+
 declare interface MpGlobalPrecomputed {
+  events: MpEvents;
+  meta: MpMeta;
+
   /**
    * Focus or unfocus CEF view.
    */
   setCefInFocusState(justFocus: boolean, withMouse: boolean): void;
+
+  isInCefFocusState(): boolean;
 
   /**
    * Mapping between network and game IDs.

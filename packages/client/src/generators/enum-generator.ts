@@ -24,7 +24,7 @@ export class EnumGenerator extends BaseGenerator {
         .map((m) => `  "${m.key}" = ${m.value},`)
         .join("\n");
 
-      return `declare const enum ${obj.name} {\n${members}\n}`;
+      return `const enum ${obj.name} {\n${members}\n}`;
     });
 
     this.addHeader(sourceFile);

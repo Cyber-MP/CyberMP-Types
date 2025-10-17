@@ -1,12 +1,12 @@
 /**
  * Represents an in-game entity.
  */
-type Entity = number;
+declare type Entity = number;
 
 /**
  * Represents a network ID associated with an entity.
  */
-type NetID = number;
+declare type NetID = number;
 
 /**
  * Entity types.
@@ -35,6 +35,10 @@ declare const enum VehicleSeat {
   RearLeft = 2,
   RearRight = 3,
 }
+
+declare type Vector3 = [number, number, number];
+
+declare type Vector4 = [number, number, number, number];
 
 /**
  * Main MP events interface.
@@ -87,11 +91,26 @@ interface MpEvents {
   ): void;
 }
 
+interface MpMeta {
+  setGlobalMeta(key: string, value: any, sync?: boolean): void;
+  getGlobalMeta<T = any>(key: string): T;
+  setPlayerMeta(
+    playerId: number,
+    key: string,
+    value: any,
+    sync?: boolean
+  ): void;
+  getPlayerMeta<T = any>(playerId: number, key: string): T;
+  setEntityMeta(netId: number, key: string, value: any, sync?: boolean): void;
+  getEntityMeta<T = any>(netId: number, key: string): T;
+}
+
 /**
  * Main MP API interface.
  */
 interface Mp {
   events: MpEvents;
+  meta: MpMeta;
 
   /**
    * Starts a specific resource by name.
@@ -166,28 +185,28 @@ interface Mp {
    * @param entity The entity.
    * @returns [X, Y, Z] coordinates.
    */
-  getEntityPos(entity: Entity): [number, number, number];
+  getEntityPos(entity: Entity): Vector3;
 
   /**
    * Gets the linear velocity of an entity.
    * @param entity The entity.
    * @returns [X, Y, Z] velocity components.
    */
-  getEntityVelocity(entity: Entity): [number, number, number];
+  getEntityVelocity(entity: Entity): Vector3;
 
   /**
    * Gets the angular velocity of a vehicle.
    * @param entity The vehicle entity.
    * @returns [X, Y, Z] angular velocity.
    */
-  getEntityAngularVelocity(entity: Entity): [number, number, number];
+  getEntityAngularVelocity(entity: Entity): Vector3;
 
   /**
    * Gets the rotation of an entity.
    * @param entity The entity.
    * @returns [Pitch, Roll, Yaw] rotation.
    */
-  getEntityRotation(entity: Entity): [number, number, number];
+  getEntityRotation(entity: Entity): Vector3;
 
   /**
    * Gets the yaw angle of an entity.
