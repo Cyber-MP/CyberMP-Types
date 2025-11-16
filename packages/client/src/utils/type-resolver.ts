@@ -1,10 +1,10 @@
 import { RedFunctionAst } from "src/red-ast/red-function.ast";
-import { blacklist } from "../config/constants";
 import { RedTypeAst } from "src/red-ast/red-type.ast";
 import { OptionalKind, ParameterDeclarationStructure } from "ts-morph";
+import { blacklist } from "../config/constants";
 
 export function getFunctionParams(
-  params: RedFunctionAst["arguments"]
+  params: RedFunctionAst["arguments"],
 ): OptionalKind<ParameterDeclarationStructure>[] {
   if (!params || !params.length) {
     return [];
@@ -12,13 +12,12 @@ export function getFunctionParams(
 
   return params
     ?.filter(
-      (o) => !o.isOut && RedTypeAst.toLuadoc(o.type) !== "ScriptGameInstance"
+      (o) => !o.isOut && RedTypeAst.toLuadoc(o.type) !== "ScriptGameInstance",
     )
     .map((p) => ({
       name: blacklist.includes(p.name) ? `${p.name}1` : p.name,
-      type: p.isOptional
-        ? `${RedTypeAst.toTypescript(p.type)} | undefined`
-        : RedTypeAst.toTypescript(p.type),
+      type: RedTypeAst.toTypescript(p.type),
+      hasQuestionToken: p.isOptional,
     }));
 }
 
@@ -30,7 +29,7 @@ export function getFunctionReturnType(fn: RedFunctionAst) {
   const candidateOut = fn.arguments.find((o) => o.isOut);
   if (candidateOut) {
     return `[${RedTypeAst.toTypescript(
-      fn.returnType
+      fn.returnType,
     )}, ${RedTypeAst.toTypescript(candidateOut.type)}]`;
   }
 
