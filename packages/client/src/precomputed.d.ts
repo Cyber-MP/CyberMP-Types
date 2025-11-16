@@ -29,19 +29,29 @@ type ResRef<T> = T;
 type MultiChannelCurve<T> = T;
 
 declare interface MpEvents {
+  on(
+    eventName: "onResourceStarted",
+    callback: (resourceName: string) => void
+  ): void;
+
+  on(
+    eventName: "onResourceStopped",
+    callback: (resourceName: string) => void
+  ): void;
+
   /**
    * Register a custom event listener.
    * @param eventName Name of the event.
-   * @param func Callback function.
+   * @param callback Callback function.
    */
-  on(eventName: string, func: (...args: any[]) => void): void;
+  on(eventName: string, callback: (...args: any[]) => void): void;
 
   /**
    * UnRegister a custom event listener.
    * @param eventName Name of the event.
-   * @param func Callback function.
+   * @param callback Callback function.
    */
-  off(eventName: string, func: (...args: any[]) => void): void;
+  off(eventName: string, callback: (...args: any[]) => void): void;
 
   /**
    * Emit a previously registered custom event.
@@ -69,18 +79,18 @@ declare interface MpEvents {
   /**
    * Register a custom cef event listener.
    * @param eventName Name of the event.
-   * @param func Callback function.
+   * @param callback Callback function.
    */
-  onCef(eventName: string, func: (...args: any[]) => void): void;
+  onCef(eventName: string, callback: (...args: any[]) => void): void;
 
   /**
    * Register a command in the client scope.
    * @param commandName Command name without "/".
-   * @param func Callback with id and args.
+   * @param callback Callback with id and args.
    */
   addCommand(
     commandName: string,
-    func: (id: number, args: string[]) => void
+    callback: (id: number, args: string[]) => void
   ): void;
 }
 
@@ -115,14 +125,19 @@ declare interface MpGlobalPrecomputed {
    * Mapping between network and game IDs.
    */
   getVehicleGameIdByNetworkId(id: number): number;
+
   getPlayerGameIdByNetworkId(id: number): number;
+
   getObjectGameIdByNetworkId(id: number): number;
 
   getVehicleNetworkIdByGameId(hash: number): number;
+
   getPlayerNetworkIdByGameId(hash: number): number;
+
   getObjectNetworkIdByGameId(hash: number): number;
 
   getPedNetworkIdByGameId(hash: number): number;
+
   getPedGameIdByNetworkId(hash: number): number;
 
   /**
@@ -176,7 +191,9 @@ declare interface MpGlobalPrecomputed {
   ): number;
 
   despawnLocalPed(hash: number): void;
+
   despawnLocalVehicle(hash: number): void;
+
   despawnLocalObject(hash: number): void;
 
   /**
@@ -258,4 +275,27 @@ declare interface MpGamePrecomputed {
    * @returns Model hash
    */
   getHashFromName(name: string, type: "tweakdbid" | "cname"): string;
+}
+
+declare namespace MpEnums {
+  /**
+   * See {@link worldWeatherState#name}
+   */
+  declare enum WeatherState {
+    SUNNY = "24h_weather_sunny",
+    LIGHT_CLOUDS = "24h_weather_light_clouds",
+    CLOUDY = "24h_weather_cloudy",
+    HEAVY_CLOUDS = "24h_weather_heavy_clouds",
+    FOG = "24h_weather_fog",
+    RAIN = "24h_weather_rain",
+    TOXIC_RAIN = "24h_weather_toxic_rain",
+    POLLUTION = "24h_weather_pollution",
+    SANDSTORM = "24h_weather_sandstorm",
+    DEEP_BLUE = "q302_deeb_blue",
+    LIGHT_RAIN = "q302_light_rain",
+    SQUAT_MORNING = "q302_squat_morning",
+    EPILOGUE_CLOUDY_MORNING = "q306_epilogue_cloudy_morning",
+    RAINY_NIGHT = "q306_rainy_night",
+    COURIER_CLOUDS = "sa_courier_clouds",
+  }
 }

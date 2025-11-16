@@ -83,11 +83,11 @@ interface MpEvents {
   /**
    * Register a command in the server scope.
    * @param commandName Command name without "/".
-   * @param func Callback with id and args.
+   * @param callback Callback with id and args.
    */
   addCommand(
     commandName: string,
-    func: (id: number, args: string[]) => void
+    callback: (id: number, args: string[]) => void,
   ): void;
 }
 
@@ -98,7 +98,7 @@ interface MpMeta {
     playerId: number,
     key: string,
     value: any,
-    sync?: boolean
+    sync?: boolean,
   ): void;
   getPlayerMeta<T = any>(playerId: number, key: string): T;
   setEntityMeta(netId: number, key: string, value: any, sync?: boolean): void;
@@ -421,7 +421,7 @@ interface Mp {
     x: number,
     y: number,
     z: number,
-    yaw: number
+    yaw: number,
   ): Entity;
 
   /**
@@ -442,7 +442,7 @@ interface Mp {
     y: number,
     z: number,
     health: number,
-    yaw: number
+    yaw: number,
   ): Entity;
 
   /**
@@ -461,7 +461,7 @@ interface Mp {
     y: number,
     z: number,
     yaw: number,
-    dynamic: boolean
+    dynamic: boolean,
   ): Entity;
 
   /**
@@ -480,7 +480,7 @@ interface Mp {
     y: number,
     z: number,
     health: number,
-    yaw: number
+    yaw: number,
   ): Entity;
 
   /**
@@ -516,7 +516,7 @@ interface Mp {
   getResourceMetadata(
     resourceName: string,
     keyName: string,
-    index: number
+    index: number,
   ): string;
 
   /**
