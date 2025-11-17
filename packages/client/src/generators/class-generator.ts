@@ -1,26 +1,26 @@
-import { BaseGenerator } from "./base-generator";
-import {
-  OptionalKind,
-  ClassDeclarationStructure,
-  PropertySignatureStructure,
-  SourceFile,
-  Project,
-  Scope,
-  PropertyDeclarationStructure,
-  MethodDeclarationStructure,
-} from "ts-morph";
-import { Logger } from "../utils/logger";
 import { defsIndex } from "src/config/constants";
-import classes from "../../assets/classes.json";
 import { RedClassAst } from "src/red-ast/red-class.ast";
-import { RedPropertyAst } from "src/red-ast/red-property.ast";
+import { RedVisibilityDef } from "src/red-ast/red-definitions.ast";
 import { RedFunctionAst } from "src/red-ast/red-function.ast";
+import { RedPropertyAst } from "src/red-ast/red-property.ast";
+import { RedTypeAst } from "src/red-ast/red-type.ast";
 import {
   getFunctionParams,
   getFunctionReturnType,
 } from "src/utils/type-resolver";
-import { RedTypeAst } from "src/red-ast/red-type.ast";
-import { RedVisibilityDef } from "src/red-ast/red-definitions.ast";
+import {
+  ClassDeclarationStructure,
+  MethodDeclarationStructure,
+  OptionalKind,
+  Project,
+  PropertyDeclarationStructure,
+  PropertySignatureStructure,
+  Scope,
+  SourceFile,
+} from "ts-morph";
+import classes from "../../assets/classes.json";
+import { Logger } from "../utils/logger";
+import { BaseGenerator } from "./base-generator";
 
 enum RedFunctionFlags {
   isPrivate,
@@ -60,7 +60,7 @@ export class ClassGenerator extends BaseGenerator<[SourceFile]> {
   }
 
   private sortClasses(
-    classes: OptionalKind<ClassDeclarationStructure>[]
+    classes: OptionalKind<ClassDeclarationStructure>[],
   ): OptionalKind<ClassDeclarationStructure>[] {
     const byName = new Map(classes.map((c) => [c.name!, c]));
     const visited = new Set<string>();
@@ -83,7 +83,7 @@ export class ClassGenerator extends BaseGenerator<[SourceFile]> {
     const sourceFile = this.createSourceFile("./out/classes.d.ts");
 
     const classMap = new Map<string, any>(
-      this.classObjs.map((o) => [o.name, o])
+      this.classObjs.map((o) => [o.name, o]),
     );
 
     const classes = this.classObjs.map<OptionalKind<ClassDeclarationStructure>>(
@@ -116,10 +116,10 @@ export class ClassGenerator extends BaseGenerator<[SourceFile]> {
             returnType: getFunctionReturnType(fn),
             parameters: getFunctionParams(fn.arguments),
             isStatic: fn.isStatic,
-            scope: visibilityToScope[fn.visibility],
+            // scope: visibilityToScope[fn.visibility],
             // returnType: resolveType(fn.return),
             // parameters: getFunctionParams(fn.params),
-          })
+          }),
         );
 
         return {
@@ -129,7 +129,7 @@ export class ClassGenerator extends BaseGenerator<[SourceFile]> {
           properties,
           methods,
         };
-      }
+      },
     );
 
     this.addHeader(sourceFile);
@@ -149,7 +149,7 @@ export class ClassGenerator extends BaseGenerator<[SourceFile]> {
           name: obj.name,
           type:
             obj.parent === "gameIGameSystem" ? obj.name : `typeof ${obj.name}`,
-        })
+        }),
       ),
     });
 

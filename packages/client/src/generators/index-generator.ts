@@ -1,8 +1,8 @@
-import { BaseGenerator } from "./base-generator";
 import { Project, VariableDeclarationKind } from "ts-morph";
+import { Logger } from "../utils/logger";
+import { BaseGenerator } from "./base-generator";
 import { ClassGenerator } from "./class-generator";
 import { FuncGenerator } from "./func-generator";
-import { Logger } from "../utils/logger";
 
 export class IndexGenerator extends BaseGenerator {
   private funcGenerator: FuncGenerator;
@@ -22,7 +22,6 @@ export class IndexGenerator extends BaseGenerator {
 
     this.addHeader(sourceFile);
     sourceFile.addStatements([
-      `/// <reference path="./globals.d.ts" />`,
       `/// <reference path="./enums.d.ts" />`,
       `/// <reference path="./bitfields.d.ts" />`,
       `/// <reference path="./classes.d.ts" />`,
