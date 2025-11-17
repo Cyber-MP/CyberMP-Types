@@ -1,0 +1,124 @@
+/// <reference path="./events.d.ts" />
+/// <reference path="./meta.d.ts" />
+
+declare interface MpGlobalPrecomputed {
+  events: MpEvents;
+  meta: MpMeta;
+
+  /**
+   * Focus or unfocus CEF view.
+   */
+  setCefInFocusState(justFocus: boolean, withMouse: boolean): void;
+
+  isInCefFocusState(): boolean;
+
+  /**
+   * Mapping between network and game IDs.
+   */
+  getVehicleGameIdByNetworkId(id: number): number;
+
+  getPlayerGameIdByNetworkId(id: number): number;
+
+  getObjectGameIdByNetworkId(id: number): number;
+
+  getVehicleNetworkIdByGameId(hash: number): number;
+
+  getPlayerNetworkIdByGameId(hash: number): number;
+
+  getObjectNetworkIdByGameId(hash: number): number;
+
+  getPedNetworkIdByGameId(hash: number): number;
+
+  getPedGameIdByNetworkId(hash: number): number;
+
+  /**
+   * Local player spawning API.
+   */
+  setSpawnDataLocalPlayer(
+    modelHash: number,
+    x: number,
+    y: number,
+    z: number,
+    yaw: number
+  ): void;
+
+  spawnLocalPlayer(): boolean;
+
+  /**
+   * Spawn local-only entities (not synced).
+   */
+  spawnLocalPed(
+    skinHash: number,
+    appHash: number,
+    x: number,
+    y: number,
+    z: number,
+    yaw: number,
+    streaming: boolean
+  ): number;
+
+  spawnLocalVehicle(
+    skinHash: number,
+    appHash: number,
+    x: number,
+    y: number,
+    z: number,
+    roll: number,
+    pitch: number,
+    yaw: number,
+    streaming: boolean
+  ): number;
+
+  spawnLocalObject(
+    skinHash: bigint | number,
+    appHash: bigint | number,
+    x: number,
+    y: number,
+    z: number,
+    roll: number,
+    pitch: number,
+    yaw: number,
+    streaming: boolean
+  ): number;
+
+  despawnLocalPed(hash: number): void;
+
+  despawnLocalVehicle(hash: number): void;
+
+  despawnLocalObject(hash: number): void;
+
+  /**
+   * Get Discord token via game SDK (unstable).
+   */
+  getDiscordOAuth2Token(discordAppId: string): string;
+
+  /**
+   * Get Discord auth code (preferred).
+   */
+  getDiscordCodeAuthorization(discordAppId: string, scopes: string): string;
+
+  /**
+   * Returns current server IP:PORT string.
+   */
+  getCurrentServerEndpoint(): string;
+
+  /**
+   * Get server ID from player hash.
+   */
+  getPlayerServerId(playerHash: number): number;
+
+  /**
+   * Get console variable value as string.
+   */
+  getVar(varName: string): string;
+
+  /**
+   * Get console variable value as integer.
+   */
+  getVarInt(varName: string): number;
+
+  /**
+   * Returns time in ms since game start.
+   */
+  getGameTimer(): number;
+}

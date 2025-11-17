@@ -1,3 +1,5 @@
+/// <reference path="../classes.d.ts" />
+
 declare namespace CyberEnums {
   /**
    * See {@link worldWeatherState#name}

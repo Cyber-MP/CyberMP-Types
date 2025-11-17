@@ -18,6 +18,9 @@ export class EnumGenerator extends BaseGenerator {
 
   generate() {
     const sourceFile = this.createSourceFile("./out/enums.d.ts");
+    sourceFile.addStatements([
+      `/// <reference path="./precomputed/enums.d.ts" />`,
+    ]);
 
     const enumDecls: string[] = this.enums.map((obj) => {
       const members = uniqueBy(obj.members, (m) => m.key)

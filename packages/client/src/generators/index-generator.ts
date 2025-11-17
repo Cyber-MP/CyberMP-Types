@@ -25,8 +25,7 @@ export class IndexGenerator extends BaseGenerator {
       `/// <reference path="./enums.d.ts" />`,
       `/// <reference path="./bitfields.d.ts" />`,
       `/// <reference path="./classes.d.ts" />`,
-      `/// <reference path="./precomputed.d.ts" />`,
-      `/// <reference path="./cyber.d.ts" />`,
+      `/// <reference path="./precomputed/index.d.ts" />`,
     ]);
 
     this.funcGenerator.generate(sourceFile);

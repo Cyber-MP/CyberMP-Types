@@ -7,7 +7,7 @@ import { BitfieldGenerator } from "./generators/bitfield-generator";
 import { IndexGenerator } from "./generators/index-generator";
 
 const copyPrecomputedFiles = () => {
-  fs.copyFileSync("./src/precomputed.d.ts", "./out/precomputed.d.ts");
+  fs.cpSync("./src/precomputed", "./out/precomputed", { recursive: true });
 };
 
 async function main() {
