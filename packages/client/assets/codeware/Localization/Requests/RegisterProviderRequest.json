@@ -1,0 +1,229 @@
+{
+  "items": [
+    {
+      "annotations": [],
+      "doc": [],
+      "item": {
+        "class": {
+          "extends": {
+            "args": [],
+            "kind": "named",
+            "name": "ScriptableSystemRequest"
+          },
+          "items": [
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "field": {
+                  "default": null,
+                  "name": "m_provider",
+                  "type": {
+                    "args": [
+                      {
+                        "args": [],
+                        "kind": "named",
+                        "name": "ModLocalizationProvider"
+                      }
+                    ],
+                    "kind": "named",
+                    "name": "ref"
+                  }
+                },
+                "kind": "let"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "private"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "expr": {
+                              "kind": "this"
+                            },
+                            "kind": "member",
+                            "member": "m_provider"
+                          },
+                          "kind": "return"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "GetProvider",
+                  "params": [],
+                  "return_type": {
+                    "args": [
+                      {
+                        "args": [],
+                        "kind": "named",
+                        "name": "ModLocalizationProvider"
+                      }
+                    ],
+                    "kind": "named",
+                    "name": "ref"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "kind": "let",
+                          "name": "self",
+                          "type": null,
+                          "value": {
+                            "args": [],
+                            "kind": "new",
+                            "type": {
+                              "args": [],
+                              "kind": "named",
+                              "name": "RegisterProviderRequest"
+                            }
+                          }
+                        },
+                        {
+                          "expr": {
+                            "kind": "assign",
+                            "lhs": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "self"
+                              },
+                              "kind": "member",
+                              "member": "m_provider"
+                            },
+                            "rhs": {
+                              "kind": "ident",
+                              "name": "provider"
+                            }
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "kind": "ident",
+                            "name": "self"
+                          },
+                          "kind": "return"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "Create",
+                  "params": [
+                    {
+                      "name": "provider",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [
+                          {
+                            "args": [],
+                            "kind": "named",
+                            "name": "ModLocalizationProvider"
+                          }
+                        ],
+                        "kind": "named",
+                        "name": "ref"
+                      }
+                    }
+                  ],
+                  "return_type": {
+                    "args": [
+                      {
+                        "args": [],
+                        "kind": "named",
+                        "name": "RegisterProviderRequest"
+                      }
+                    ],
+                    "kind": "named",
+                    "name": "ref"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": true
+              },
+              "visibility": "public"
+            }
+          ],
+          "name": "RegisterProviderRequest",
+          "type_params": []
+        },
+        "kind": "class"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "public"
+    }
+  ],
+  "path": [
+    "Codeware",
+    "Localization"
+  ]
+}

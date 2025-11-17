@@ -1,0 +1,327 @@
+{
+  "items": [
+    {
+      "annotations": [],
+      "doc": [],
+      "item": {
+        "class": {
+          "extends": null,
+          "items": [
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "kind": "let",
+                          "name": "settings",
+                          "type": null,
+                          "value": {
+                            "args": [
+                              {
+                                "kind": "ident",
+                                "name": "game"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "GameInstance"
+                              },
+                              "kind": "member",
+                              "member": "GetSettingsSystem"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          }
+                        },
+                        {
+                          "kind": "let",
+                          "name": "configVar",
+                          "type": null,
+                          "value": {
+                            "expr": {
+                              "args": [
+                                {
+                                  "constant": {
+                                    "kind": "cname",
+                                    "value": "/video/display"
+                                  },
+                                  "kind": "constant"
+                                },
+                                {
+                                  "constant": {
+                                    "kind": "cname",
+                                    "value": "Resolution"
+                                  },
+                                  "kind": "constant"
+                                }
+                              ],
+                              "expr": {
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "settings"
+                                },
+                                "kind": "member",
+                                "member": "GetVar"
+                              },
+                              "kind": "call",
+                              "type_args": []
+                            },
+                            "kind": "dyn_cast",
+                            "type": {
+                              "args": [],
+                              "kind": "named",
+                              "name": "ConfigVarListString"
+                            }
+                          }
+                        },
+                        {
+                          "expr": {
+                            "args": [],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "configVar"
+                              },
+                              "kind": "member",
+                              "member": "GetValue"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "return"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "GetResolution",
+                  "params": [
+                    {
+                      "name": "game",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "GameInstance"
+                      }
+                    }
+                  ],
+                  "return_type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "String"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": true
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "kind": "let",
+                          "name": "resolution",
+                          "type": null,
+                          "value": {
+                            "args": [
+                              {
+                                "kind": "ident",
+                                "name": "game"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "ScreenHelper"
+                              },
+                              "kind": "member",
+                              "member": "GetResolution"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          }
+                        },
+                        {
+                          "kind": "let",
+                          "name": "dimensions",
+                          "type": null,
+                          "value": {
+                            "args": [
+                              {
+                                "kind": "ident",
+                                "name": "resolution"
+                              },
+                              {
+                                "constant": {
+                                  "kind": "string",
+                                  "value": "x"
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "kind": "ident",
+                              "name": "StrSplit"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          }
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "args": [
+                                  {
+                                    "expr": {
+                                      "kind": "ident",
+                                      "name": "dimensions"
+                                    },
+                                    "index": {
+                                      "constant": {
+                                        "kind": "i32",
+                                        "value": 0
+                                      },
+                                      "kind": "constant"
+                                    },
+                                    "kind": "index"
+                                  }
+                                ],
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "StringToFloat"
+                                },
+                                "kind": "call",
+                                "type_args": []
+                              },
+                              {
+                                "args": [
+                                  {
+                                    "expr": {
+                                      "kind": "ident",
+                                      "name": "dimensions"
+                                    },
+                                    "index": {
+                                      "constant": {
+                                        "kind": "i32",
+                                        "value": 1
+                                      },
+                                      "kind": "constant"
+                                    },
+                                    "kind": "index"
+                                  }
+                                ],
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "StringToFloat"
+                                },
+                                "kind": "call",
+                                "type_args": []
+                              }
+                            ],
+                            "expr": {
+                              "kind": "ident",
+                              "name": "Vector2"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "return"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "GetScreenSize",
+                  "params": [
+                    {
+                      "name": "game",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "GameInstance"
+                      }
+                    }
+                  ],
+                  "return_type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Vector2"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": true
+              },
+              "visibility": "public"
+            }
+          ],
+          "name": "ScreenHelper",
+          "type_params": []
+        },
+        "kind": "class"
+      },
+      "qualifiers": {
+        "abstract": true,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "public"
+    }
+  ],
+  "path": [
+    "Codeware",
+    "UI"
+  ]
+}

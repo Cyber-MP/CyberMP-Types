@@ -1,0 +1,142 @@
+{
+  "items": [
+    {
+      "annotations": [],
+      "doc": [],
+      "item": {
+        "class": {
+          "extends": null,
+          "items": [],
+          "name": "ScriptableService",
+          "type_params": []
+        },
+        "kind": "class"
+      },
+      "qualifiers": {
+        "abstract": true,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": true,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "public"
+    },
+    {
+      "annotations": [],
+      "doc": [],
+      "item": {
+        "class": {
+          "extends": {
+            "args": [],
+            "kind": "named",
+            "name": "ScriptableService"
+          },
+          "items": [
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "expr": {
+                      "args": [
+                        {
+                          "kind": "ident",
+                          "name": "name"
+                        }
+                      ],
+                      "expr": {
+                        "expr": {
+                          "args": [],
+                          "expr": {
+                            "expr": {
+                              "kind": "ident",
+                              "name": "GameInstance"
+                            },
+                            "kind": "member",
+                            "member": "GetScriptableServiceContainer"
+                          },
+                          "kind": "call",
+                          "type_args": []
+                        },
+                        "kind": "member",
+                        "member": "GetService"
+                      },
+                      "kind": "call",
+                      "type_args": []
+                    },
+                    "kind": "inline"
+                  },
+                  "name": "Get",
+                  "params": [
+                    {
+                      "name": "name",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "CName"
+                      }
+                    }
+                  ],
+                  "return_type": {
+                    "args": [
+                      {
+                        "args": [],
+                        "kind": "named",
+                        "name": "ScriptableService"
+                      }
+                    ],
+                    "kind": "named",
+                    "name": "ref"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": true,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": true
+              },
+              "visibility": "public"
+            }
+          ],
+          "name": "ScriptableEnv",
+          "type_params": []
+        },
+        "kind": "class"
+      },
+      "qualifiers": {
+        "abstract": true,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "public"
+    }
+  ],
+  "path": null
+}

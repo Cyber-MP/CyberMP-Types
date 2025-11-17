@@ -1,0 +1,607 @@
+{
+  "items": [
+    {
+      "annotations": [],
+      "doc": [],
+      "item": {
+        "kind": "struct",
+        "struct": {
+          "extends": null,
+          "items": [
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "field": {
+                  "default": null,
+                  "name": "movementType",
+                  "type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "AIMovementTypeSpec"
+                  }
+                },
+                "kind": "let"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": true,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "field": {
+                  "default": null,
+                  "name": "facingTargetRef",
+                  "type": {
+                    "args": [
+                      {
+                        "args": [],
+                        "kind": "named",
+                        "name": "questUniversalRef"
+                      }
+                    ],
+                    "kind": "named",
+                    "name": "ref"
+                  }
+                },
+                "kind": "let"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": true,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "field": {
+                  "default": null,
+                  "name": "rotateEntityTowardsFacingTarget",
+                  "type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Bool"
+                  }
+                },
+                "kind": "let"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": true,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "field": {
+                  "default": null,
+                  "name": "snapToTerrain",
+                  "type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Bool"
+                  }
+                },
+                "kind": "let"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": true,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "field": {
+                  "default": null,
+                  "name": "shootingTargetRef",
+                  "type": {
+                    "args": [
+                      {
+                        "args": [],
+                        "kind": "named",
+                        "name": "questUniversalRef"
+                      }
+                    ],
+                    "kind": "named",
+                    "name": "ref"
+                  }
+                },
+                "kind": "let"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": true,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "field": {
+                  "default": null,
+                  "name": "companionRef",
+                  "type": {
+                    "args": [
+                      {
+                        "args": [],
+                        "kind": "named",
+                        "name": "questUniversalRef"
+                      }
+                    ],
+                    "kind": "named",
+                    "name": "ref"
+                  }
+                },
+                "kind": "let"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": true,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "field": {
+                  "default": null,
+                  "name": "companionDistancePreset",
+                  "type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "gamedataCompanionDistancePreset"
+                  }
+                },
+                "kind": "let"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": true,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "field": {
+                  "default": null,
+                  "name": "companionPosition",
+                  "type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "questCompanionPositions"
+                  }
+                },
+                "kind": "let"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": true,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "field": {
+                  "default": null,
+                  "name": "catchUpWithCompanion",
+                  "type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Bool"
+                  }
+                },
+                "kind": "let"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": true,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "field": {
+                  "default": null,
+                  "name": "teleportToCompanion",
+                  "type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Bool"
+                  }
+                },
+                "kind": "let"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": true,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "field": {
+                  "default": null,
+                  "name": "useMatchForSpeedForPlayer",
+                  "type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Bool"
+                  }
+                },
+                "kind": "let"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": true,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "field": {
+                  "default": null,
+                  "name": "ignoreNavigation",
+                  "type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Bool"
+                  }
+                },
+                "kind": "let"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": true,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "field": {
+                  "default": null,
+                  "name": "ignoreLineOfSightCheck",
+                  "type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Bool"
+                  }
+                },
+                "kind": "let"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": true,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "field": {
+                  "default": null,
+                  "name": "useOffMeshLinkReservation",
+                  "type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Bool"
+                  }
+                },
+                "kind": "let"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": true,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "field": {
+                  "default": null,
+                  "name": "lookAtTargetRef",
+                  "type": {
+                    "args": [
+                      {
+                        "args": [],
+                        "kind": "named",
+                        "name": "questUniversalRef"
+                      }
+                    ],
+                    "kind": "named",
+                    "name": "ref"
+                  }
+                },
+                "kind": "let"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": true,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "field": {
+                  "default": null,
+                  "name": "minSearchAngle",
+                  "type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Float"
+                  }
+                },
+                "kind": "let"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": true,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "field": {
+                  "default": null,
+                  "name": "maxSearchAngle",
+                  "type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Float"
+                  }
+                },
+                "kind": "let"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": true,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "field": {
+                  "default": null,
+                  "name": "interruptCapability",
+                  "type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "scnInterruptCapability"
+                  }
+                },
+                "kind": "let"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": true,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "field": {
+                  "default": null,
+                  "name": "maxCompanionDistanceOnSpline",
+                  "type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Float"
+                  }
+                },
+                "kind": "let"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": true,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            }
+          ],
+          "name": "questWithCompanionMoveOnSplineParams",
+          "type_params": []
+        }
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": true,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "public"
+    }
+  ],
+  "path": null
+}

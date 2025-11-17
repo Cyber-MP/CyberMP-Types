@@ -1,0 +1,229 @@
+{
+  "items": [
+    {
+      "annotations": [],
+      "doc": [],
+      "item": {
+        "class": {
+          "extends": {
+            "args": [],
+            "kind": "named",
+            "name": "inkEvent"
+          },
+          "items": [
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "field": {
+                  "default": null,
+                  "name": "m_state",
+                  "type": {
+                    "args": [
+                      {
+                        "args": [],
+                        "kind": "named",
+                        "name": "VirtualResolutionData"
+                      }
+                    ],
+                    "kind": "named",
+                    "name": "ref"
+                  }
+                },
+                "kind": "let"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "protected"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "expr": {
+                              "kind": "this"
+                            },
+                            "kind": "member",
+                            "member": "m_state"
+                          },
+                          "kind": "return"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "GetState",
+                  "params": [],
+                  "return_type": {
+                    "args": [
+                      {
+                        "args": [],
+                        "kind": "named",
+                        "name": "VirtualResolutionData"
+                      }
+                    ],
+                    "kind": "named",
+                    "name": "wref"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "kind": "let",
+                          "name": "event",
+                          "type": null,
+                          "value": {
+                            "args": [],
+                            "kind": "new",
+                            "type": {
+                              "args": [],
+                              "kind": "named",
+                              "name": "VirtualResolutionChangeEvent"
+                            }
+                          }
+                        },
+                        {
+                          "expr": {
+                            "kind": "assign",
+                            "lhs": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "event"
+                              },
+                              "kind": "member",
+                              "member": "m_state"
+                            },
+                            "rhs": {
+                              "kind": "ident",
+                              "name": "state"
+                            }
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "kind": "ident",
+                            "name": "event"
+                          },
+                          "kind": "return"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "Create",
+                  "params": [
+                    {
+                      "name": "state",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [
+                          {
+                            "args": [],
+                            "kind": "named",
+                            "name": "VirtualResolutionData"
+                          }
+                        ],
+                        "kind": "named",
+                        "name": "ref"
+                      }
+                    }
+                  ],
+                  "return_type": {
+                    "args": [
+                      {
+                        "args": [],
+                        "kind": "named",
+                        "name": "VirtualResolutionChangeEvent"
+                      }
+                    ],
+                    "kind": "named",
+                    "name": "ref"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": true
+              },
+              "visibility": "public"
+            }
+          ],
+          "name": "VirtualResolutionChangeEvent",
+          "type_params": []
+        },
+        "kind": "class"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "public"
+    }
+  ],
+  "path": [
+    "Codeware",
+    "UI"
+  ]
+}

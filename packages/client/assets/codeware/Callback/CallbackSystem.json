@@ -1,0 +1,574 @@
+{
+  "items": [
+    {
+      "annotations": [],
+      "doc": [],
+      "item": {
+        "class": {
+          "extends": {
+            "args": [],
+            "kind": "named",
+            "name": "IGameSystem"
+          },
+          "items": [
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": null,
+                  "name": "RegisterCallback",
+                  "params": [
+                    {
+                      "name": "eventName",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "CName"
+                      }
+                    },
+                    {
+                      "name": "target",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [
+                          {
+                            "args": [],
+                            "kind": "named",
+                            "name": "IScriptable"
+                          }
+                        ],
+                        "kind": "named",
+                        "name": "ref"
+                      }
+                    },
+                    {
+                      "name": "function",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "CName"
+                      }
+                    },
+                    {
+                      "name": "sticky",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": true,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "Bool"
+                      }
+                    }
+                  ],
+                  "return_type": {
+                    "args": [
+                      {
+                        "args": [],
+                        "kind": "named",
+                        "name": "CallbackSystemHandler"
+                      }
+                    ],
+                    "kind": "named",
+                    "name": "ref"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": true,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": null,
+                  "name": "RegisterStaticCallback",
+                  "params": [
+                    {
+                      "name": "eventName",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "CName"
+                      }
+                    },
+                    {
+                      "name": "target",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "CName"
+                      }
+                    },
+                    {
+                      "name": "function",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "CName"
+                      }
+                    },
+                    {
+                      "name": "sticky",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": true,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "Bool"
+                      }
+                    }
+                  ],
+                  "return_type": {
+                    "args": [
+                      {
+                        "args": [],
+                        "kind": "named",
+                        "name": "CallbackSystemHandler"
+                      }
+                    ],
+                    "kind": "named",
+                    "name": "ref"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": true,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": null,
+                  "name": "UnregisterCallback",
+                  "params": [
+                    {
+                      "name": "eventName",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "CName"
+                      }
+                    },
+                    {
+                      "name": "target",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [
+                          {
+                            "args": [],
+                            "kind": "named",
+                            "name": "IScriptable"
+                          }
+                        ],
+                        "kind": "named",
+                        "name": "ref"
+                      }
+                    },
+                    {
+                      "name": "function",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": true,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "CName"
+                      }
+                    }
+                  ],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": true,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": null,
+                  "name": "UnregisterStaticCallback",
+                  "params": [
+                    {
+                      "name": "eventName",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "CName"
+                      }
+                    },
+                    {
+                      "name": "target",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "CName"
+                      }
+                    },
+                    {
+                      "name": "function",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": true,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "CName"
+                      }
+                    }
+                  ],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": true,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": null,
+                  "name": "RegisterEvent",
+                  "params": [
+                    {
+                      "name": "eventName",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "CName"
+                      }
+                    },
+                    {
+                      "name": "eventType",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": true,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "CName"
+                      }
+                    }
+                  ],
+                  "return_type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Bool"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": true,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": null,
+                  "name": "DispatchEvent",
+                  "params": [
+                    {
+                      "name": "eventObject",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [
+                          {
+                            "args": [],
+                            "kind": "named",
+                            "name": "CallbackSystemEvent"
+                          }
+                        ],
+                        "kind": "named",
+                        "name": "ref"
+                      }
+                    }
+                  ],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": true,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": null,
+                  "name": "DispatchEventAs",
+                  "params": [
+                    {
+                      "name": "eventName",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "CName"
+                      }
+                    },
+                    {
+                      "name": "eventObject",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [
+                          {
+                            "args": [],
+                            "kind": "named",
+                            "name": "CallbackSystemEvent"
+                          }
+                        ],
+                        "kind": "named",
+                        "name": "ref"
+                      }
+                    }
+                  ],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": true,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            }
+          ],
+          "name": "CallbackSystem",
+          "type_params": []
+        },
+        "kind": "class"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": true,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "public"
+    },
+    {
+      "annotations": [
+        {
+          "args": [
+            {
+              "kind": "ident",
+              "name": "GameInstance"
+            }
+          ],
+          "name": "addMethod"
+        }
+      ],
+      "doc": [],
+      "item": {
+        "function": {
+          "body": null,
+          "name": "GetCallbackSystem",
+          "params": [],
+          "return_type": {
+            "args": [
+              {
+                "args": [],
+                "kind": "named",
+                "name": "CallbackSystem"
+              }
+            ],
+            "kind": "named",
+            "name": "ref"
+          },
+          "type_params": []
+        },
+        "kind": "function"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": true,
+        "persistent": false,
+        "quest": false,
+        "static": true
+      },
+      "visibility": "public"
+    }
+  ],
+  "path": null
+}

@@ -1,0 +1,298 @@
+{
+  "items": [
+    {
+      "annotations": [],
+      "doc": [],
+      "item": {
+        "class": {
+          "extends": null,
+          "items": [
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": null,
+                  "name": "GetClassName",
+                  "params": [],
+                  "return_type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "CName"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": true,
+                "import_only": false,
+                "native": true,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": null,
+                  "name": "IsA",
+                  "params": [
+                    {
+                      "name": "className",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "CName"
+                      }
+                    }
+                  ],
+                  "return_type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Bool"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": true,
+                "import_only": false,
+                "native": true,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": null,
+                  "name": "IsExactlyA",
+                  "params": [
+                    {
+                      "name": "className",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "CName"
+                      }
+                    }
+                  ],
+                  "return_type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Bool"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": true,
+                "import_only": false,
+                "native": true,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": null,
+                  "name": "Clone",
+                  "params": [],
+                  "return_type": {
+                    "args": [
+                      {
+                        "args": [],
+                        "kind": "named",
+                        "name": "ISerializable"
+                      }
+                    ],
+                    "kind": "named",
+                    "name": "ref"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": true,
+                "import_only": false,
+                "native": true,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": null,
+                  "name": "ProcessPostLoad",
+                  "params": [
+                    {
+                      "name": "disablePreInitialization",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": true,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "Bool"
+                      }
+                    }
+                  ],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": true,
+                "import_only": false,
+                "native": true,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "kind": "ident",
+                                "name": "disablePreInitialization"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "ProcessPostLoad"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "RefreshResource",
+                  "params": [
+                    {
+                      "name": "disablePreInitialization",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": true,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "Bool"
+                      }
+                    }
+                  ],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": true,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            }
+          ],
+          "name": "ISerializable",
+          "type_params": []
+        },
+        "kind": "class"
+      },
+      "qualifiers": {
+        "abstract": true,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": true,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "public"
+    }
+  ],
+  "path": null
+}

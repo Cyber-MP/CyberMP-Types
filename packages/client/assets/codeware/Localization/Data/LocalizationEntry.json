@@ -1,0 +1,296 @@
+{
+  "items": [
+    {
+      "annotations": [],
+      "doc": [],
+      "item": {
+        "class": {
+          "extends": null,
+          "items": [
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "field": {
+                  "default": null,
+                  "name": "m_key",
+                  "type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "String"
+                  }
+                },
+                "kind": "let"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "private"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "expr": {
+                              "kind": "this"
+                            },
+                            "kind": "member",
+                            "member": "m_key"
+                          },
+                          "kind": "return"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "GetKey",
+                  "params": [],
+                  "return_type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "String"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": null,
+                  "name": "GetVariant",
+                  "params": [
+                    {
+                      "name": "gender",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "PlayerGender"
+                      }
+                    }
+                  ],
+                  "return_type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "String"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": null,
+                  "name": "SetVariant",
+                  "params": [
+                    {
+                      "name": "gender",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "PlayerGender"
+                      }
+                    },
+                    {
+                      "name": "value",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "String"
+                      }
+                    }
+                  ],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "args": [
+                                  {
+                                    "kind": "ident",
+                                    "name": "str"
+                                  }
+                                ],
+                                "expr": {
+                                  "expr": {
+                                    "kind": "ident",
+                                    "name": "TDBID"
+                                  },
+                                  "kind": "member",
+                                  "member": "Create"
+                                },
+                                "kind": "call",
+                                "type_args": []
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "TDBID"
+                              },
+                              "kind": "member",
+                              "member": "ToNumber"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "return"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "Hash",
+                  "params": [
+                    {
+                      "name": "str",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "String"
+                      }
+                    }
+                  ],
+                  "return_type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Uint64"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": true
+              },
+              "visibility": "public"
+            }
+          ],
+          "name": "LocalizationEntry",
+          "type_params": []
+        },
+        "kind": "class"
+      },
+      "qualifiers": {
+        "abstract": true,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "public"
+    }
+  ],
+  "path": [
+    "Codeware",
+    "Localization"
+  ]
+}

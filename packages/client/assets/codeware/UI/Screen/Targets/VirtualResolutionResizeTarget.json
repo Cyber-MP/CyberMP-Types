@@ -1,0 +1,348 @@
+{
+  "items": [
+    {
+      "annotations": [],
+      "doc": [],
+      "item": {
+        "class": {
+          "extends": {
+            "args": [],
+            "kind": "named",
+            "name": "VirtualResolutionTarget"
+          },
+          "items": [
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "field": {
+                  "default": null,
+                  "name": "m_size",
+                  "type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Vector2"
+                  }
+                },
+                "kind": "let"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "protected"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "kind": "let",
+                          "name": "scale",
+                          "type": {
+                            "args": [],
+                            "kind": "named",
+                            "name": "Vector2"
+                          },
+                          "value": {
+                            "args": [],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "state"
+                              },
+                              "kind": "member",
+                              "member": "GetSmartScale"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          }
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "args": [
+                                  {
+                                    "kind": "bin_op",
+                                    "lhs": {
+                                      "expr": {
+                                        "expr": {
+                                          "kind": "this"
+                                        },
+                                        "kind": "member",
+                                        "member": "m_size"
+                                      },
+                                      "kind": "member",
+                                      "member": "X"
+                                    },
+                                    "op": "*",
+                                    "rhs": {
+                                      "expr": {
+                                        "kind": "ident",
+                                        "name": "scale"
+                                      },
+                                      "kind": "member",
+                                      "member": "X"
+                                    }
+                                  },
+                                  {
+                                    "kind": "bin_op",
+                                    "lhs": {
+                                      "expr": {
+                                        "expr": {
+                                          "kind": "this"
+                                        },
+                                        "kind": "member",
+                                        "member": "m_size"
+                                      },
+                                      "kind": "member",
+                                      "member": "Y"
+                                    },
+                                    "op": "*",
+                                    "rhs": {
+                                      "expr": {
+                                        "kind": "ident",
+                                        "name": "scale"
+                                      },
+                                      "kind": "member",
+                                      "member": "Y"
+                                    }
+                                  }
+                                ],
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "Vector2"
+                                },
+                                "kind": "call",
+                                "type_args": []
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "expr": {
+                                  "kind": "this"
+                                },
+                                "kind": "member",
+                                "member": "m_widget"
+                              },
+                              "kind": "member",
+                              "member": "SetSize"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "ApplyState",
+                  "params": [
+                    {
+                      "name": "state",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [
+                          {
+                            "args": [],
+                            "kind": "named",
+                            "name": "VirtualResolutionData"
+                          }
+                        ],
+                        "kind": "named",
+                        "name": "ref"
+                      }
+                    }
+                  ],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "kind": "let",
+                          "name": "target",
+                          "type": null,
+                          "value": {
+                            "args": [],
+                            "kind": "new",
+                            "type": {
+                              "args": [],
+                              "kind": "named",
+                              "name": "VirtualResolutionResizeTarget"
+                            }
+                          }
+                        },
+                        {
+                          "expr": {
+                            "kind": "assign",
+                            "lhs": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "target"
+                              },
+                              "kind": "member",
+                              "member": "m_widget"
+                            },
+                            "rhs": {
+                              "kind": "ident",
+                              "name": "widget"
+                            }
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "kind": "assign",
+                            "lhs": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "target"
+                              },
+                              "kind": "member",
+                              "member": "m_size"
+                            },
+                            "rhs": {
+                              "args": [],
+                              "expr": {
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "widget"
+                                },
+                                "kind": "member",
+                                "member": "GetSize"
+                              },
+                              "kind": "call",
+                              "type_args": []
+                            }
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "kind": "ident",
+                            "name": "target"
+                          },
+                          "kind": "return"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "Create",
+                  "params": [
+                    {
+                      "name": "widget",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [
+                          {
+                            "args": [],
+                            "kind": "named",
+                            "name": "inkWidget"
+                          }
+                        ],
+                        "kind": "named",
+                        "name": "wref"
+                      }
+                    }
+                  ],
+                  "return_type": {
+                    "args": [
+                      {
+                        "args": [],
+                        "kind": "named",
+                        "name": "VirtualResolutionResizeTarget"
+                      }
+                    ],
+                    "kind": "named",
+                    "name": "ref"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": true
+              },
+              "visibility": "public"
+            }
+          ],
+          "name": "VirtualResolutionResizeTarget",
+          "type_params": []
+        },
+        "kind": "class"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "public"
+    }
+  ],
+  "path": [
+    "Codeware",
+    "UI"
+  ]
+}

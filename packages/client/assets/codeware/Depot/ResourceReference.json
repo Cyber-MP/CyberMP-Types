@@ -1,0 +1,1551 @@
+{
+  "items": [
+    {
+      "annotations": [],
+      "doc": [],
+      "item": {
+        "kind": "struct",
+        "struct": {
+          "extends": null,
+          "items": [
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": null,
+                  "name": "LoadPath",
+                  "params": [
+                    {
+                      "name": "self",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [
+                          {
+                            "args": [],
+                            "kind": "named",
+                            "name": "ResourceRef"
+                          }
+                        ],
+                        "kind": "named",
+                        "name": "script_ref"
+                      }
+                    },
+                    {
+                      "name": "path",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "ResRef"
+                      }
+                    }
+                  ],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": true,
+                "persistent": false,
+                "quest": false,
+                "static": true
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": null,
+                  "name": "GetPath",
+                  "params": [
+                    {
+                      "name": "self",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [
+                          {
+                            "args": [],
+                            "kind": "named",
+                            "name": "ResourceRef"
+                          }
+                        ],
+                        "kind": "named",
+                        "name": "script_ref"
+                      }
+                    }
+                  ],
+                  "return_type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "ResRef"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": true,
+                "persistent": false,
+                "quest": false,
+                "static": true
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": null,
+                  "name": "GetHash",
+                  "params": [
+                    {
+                      "name": "self",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [
+                          {
+                            "args": [],
+                            "kind": "named",
+                            "name": "ResourceRef"
+                          }
+                        ],
+                        "kind": "named",
+                        "name": "script_ref"
+                      }
+                    }
+                  ],
+                  "return_type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Uint64"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": true,
+                "persistent": false,
+                "quest": false,
+                "static": true
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": null,
+                  "name": "GetToken",
+                  "params": [
+                    {
+                      "name": "self",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [
+                          {
+                            "args": [],
+                            "kind": "named",
+                            "name": "ResourceRef"
+                          }
+                        ],
+                        "kind": "named",
+                        "name": "script_ref"
+                      }
+                    }
+                  ],
+                  "return_type": {
+                    "args": [
+                      {
+                        "args": [],
+                        "kind": "named",
+                        "name": "ResourceToken"
+                      }
+                    ],
+                    "kind": "named",
+                    "name": "ref"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": true,
+                "persistent": false,
+                "quest": false,
+                "static": true
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": null,
+                  "name": "GetResource",
+                  "params": [
+                    {
+                      "name": "self",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [
+                          {
+                            "args": [],
+                            "kind": "named",
+                            "name": "ResourceRef"
+                          }
+                        ],
+                        "kind": "named",
+                        "name": "script_ref"
+                      }
+                    }
+                  ],
+                  "return_type": {
+                    "args": [
+                      {
+                        "args": [],
+                        "kind": "named",
+                        "name": "CResource"
+                      }
+                    ],
+                    "kind": "named",
+                    "name": "ref"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": true,
+                "persistent": false,
+                "quest": false,
+                "static": true
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": null,
+                  "name": "IsEmpty",
+                  "params": [
+                    {
+                      "name": "self",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [
+                          {
+                            "args": [],
+                            "kind": "named",
+                            "name": "ResourceRef"
+                          }
+                        ],
+                        "kind": "named",
+                        "name": "script_ref"
+                      }
+                    }
+                  ],
+                  "return_type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Bool"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": true,
+                "persistent": false,
+                "quest": false,
+                "static": true
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": null,
+                  "name": "IsLoaded",
+                  "params": [
+                    {
+                      "name": "self",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [
+                          {
+                            "args": [],
+                            "kind": "named",
+                            "name": "ResourceRef"
+                          }
+                        ],
+                        "kind": "named",
+                        "name": "script_ref"
+                      }
+                    }
+                  ],
+                  "return_type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Bool"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": true,
+                "persistent": false,
+                "quest": false,
+                "static": true
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": null,
+                  "name": "IsFailed",
+                  "params": [
+                    {
+                      "name": "self",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [
+                          {
+                            "args": [],
+                            "kind": "named",
+                            "name": "ResourceRef"
+                          }
+                        ],
+                        "kind": "named",
+                        "name": "script_ref"
+                      }
+                    }
+                  ],
+                  "return_type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Bool"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": true,
+                "persistent": false,
+                "quest": false,
+                "static": true
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": null,
+                  "name": "ToVariant",
+                  "params": [
+                    {
+                      "name": "self",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [
+                          {
+                            "args": [],
+                            "kind": "named",
+                            "name": "ResourceRef"
+                          }
+                        ],
+                        "kind": "named",
+                        "name": "script_ref"
+                      }
+                    },
+                    {
+                      "name": "type",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "CName"
+                      }
+                    }
+                  ],
+                  "return_type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Variant"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": true,
+                "persistent": false,
+                "quest": false,
+                "static": true
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": null,
+                  "name": "FromVariant",
+                  "params": [
+                    {
+                      "name": "variant",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "Variant"
+                      }
+                    }
+                  ],
+                  "return_type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "ResourceRef"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": true,
+                "persistent": false,
+                "quest": false,
+                "static": true
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "kind": "let",
+                          "name": "reference",
+                          "type": {
+                            "args": [],
+                            "kind": "named",
+                            "name": "ResourceRef"
+                          },
+                          "value": null
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "kind": "ident",
+                                "name": "reference"
+                              },
+                              {
+                                "kind": "ident",
+                                "name": "path"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "ResourceRef"
+                              },
+                              "kind": "member",
+                              "member": "LoadPath"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "kind": "ident",
+                            "name": "reference"
+                          },
+                          "kind": "return"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "FromPath",
+                  "params": [
+                    {
+                      "name": "path",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "ResRef"
+                      }
+                    }
+                  ],
+                  "return_type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "ResourceRef"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": true
+              },
+              "visibility": "public"
+            }
+          ],
+          "name": "ResourceRef",
+          "type_params": []
+        }
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": true,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "public"
+    },
+    {
+      "annotations": [],
+      "doc": [],
+      "item": {
+        "kind": "struct",
+        "struct": {
+          "extends": null,
+          "items": [
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": null,
+                  "name": "SetPath",
+                  "params": [
+                    {
+                      "name": "self",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [
+                          {
+                            "args": [],
+                            "kind": "named",
+                            "name": "ResourceAsyncRef"
+                          }
+                        ],
+                        "kind": "named",
+                        "name": "script_ref"
+                      }
+                    },
+                    {
+                      "name": "path",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "ResRef"
+                      }
+                    }
+                  ],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": true,
+                "persistent": false,
+                "quest": false,
+                "static": true
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": null,
+                  "name": "GetPath",
+                  "params": [
+                    {
+                      "name": "self",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [
+                          {
+                            "args": [],
+                            "kind": "named",
+                            "name": "ResourceAsyncRef"
+                          }
+                        ],
+                        "kind": "named",
+                        "name": "script_ref"
+                      }
+                    }
+                  ],
+                  "return_type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "ResRef"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": true,
+                "persistent": false,
+                "quest": false,
+                "static": true
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": null,
+                  "name": "GetHash",
+                  "params": [
+                    {
+                      "name": "self",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [
+                          {
+                            "args": [],
+                            "kind": "named",
+                            "name": "ResourceAsyncRef"
+                          }
+                        ],
+                        "kind": "named",
+                        "name": "script_ref"
+                      }
+                    }
+                  ],
+                  "return_type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Uint64"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": true,
+                "persistent": false,
+                "quest": false,
+                "static": true
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": null,
+                  "name": "IsEmpty",
+                  "params": [
+                    {
+                      "name": "self",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [
+                          {
+                            "args": [],
+                            "kind": "named",
+                            "name": "ResourceAsyncRef"
+                          }
+                        ],
+                        "kind": "named",
+                        "name": "script_ref"
+                      }
+                    }
+                  ],
+                  "return_type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Bool"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": true,
+                "persistent": false,
+                "quest": false,
+                "static": true
+              },
+              "visibility": "public"
+            }
+          ],
+          "name": "ResourceAsyncRef",
+          "type_params": []
+        }
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": true,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "public"
+    },
+    {
+      "annotations": [],
+      "doc": [],
+      "item": {
+        "function": {
+          "body": {
+            "block": {
+              "statements": [
+                {
+                  "expr": {
+                    "args": [
+                      {
+                        "kind": "ident",
+                        "name": "res"
+                      },
+                      {
+                        "kind": "ident",
+                        "name": "path"
+                      }
+                    ],
+                    "expr": {
+                      "expr": {
+                        "kind": "ident",
+                        "name": "ResourceRef"
+                      },
+                      "kind": "member",
+                      "member": "LoadPath"
+                    },
+                    "kind": "call",
+                    "type_args": []
+                  },
+                  "kind": "expr"
+                }
+              ]
+            },
+            "kind": "block"
+          },
+          "name": "OperatorAssignMultiply",
+          "params": [
+            {
+              "name": "res",
+              "qualifiers": {
+                "const": false,
+                "optional": false,
+                "out": true
+              },
+              "type": {
+                "args": [],
+                "kind": "named",
+                "name": "ResourceRef"
+              }
+            },
+            {
+              "name": "path",
+              "qualifiers": {
+                "const": false,
+                "optional": false,
+                "out": false
+              },
+              "type": {
+                "args": [],
+                "kind": "named",
+                "name": "ResRef"
+              }
+            }
+          ],
+          "return_type": null,
+          "type_params": []
+        },
+        "kind": "function"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "public"
+    },
+    {
+      "annotations": [],
+      "doc": [],
+      "item": {
+        "function": {
+          "body": {
+            "block": {
+              "statements": [
+                {
+                  "expr": {
+                    "args": [
+                      {
+                        "kind": "ident",
+                        "name": "res"
+                      },
+                      {
+                        "kind": "ident",
+                        "name": "path"
+                      }
+                    ],
+                    "expr": {
+                      "expr": {
+                        "kind": "ident",
+                        "name": "ResourceAsyncRef"
+                      },
+                      "kind": "member",
+                      "member": "SetPath"
+                    },
+                    "kind": "call",
+                    "type_args": []
+                  },
+                  "kind": "expr"
+                }
+              ]
+            },
+            "kind": "block"
+          },
+          "name": "OperatorAssignMultiply",
+          "params": [
+            {
+              "name": "res",
+              "qualifiers": {
+                "const": false,
+                "optional": false,
+                "out": true
+              },
+              "type": {
+                "args": [],
+                "kind": "named",
+                "name": "ResourceAsyncRef"
+              }
+            },
+            {
+              "name": "path",
+              "qualifiers": {
+                "const": false,
+                "optional": false,
+                "out": false
+              },
+              "type": {
+                "args": [],
+                "kind": "named",
+                "name": "ResRef"
+              }
+            }
+          ],
+          "return_type": null,
+          "type_params": []
+        },
+        "kind": "function"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "public"
+    },
+    {
+      "annotations": [
+        {
+          "args": [
+            {
+              "kind": "ident",
+              "name": "ResRef"
+            }
+          ],
+          "name": "addMethod"
+        }
+      ],
+      "doc": [],
+      "item": {
+        "function": {
+          "body": null,
+          "name": "GetHash",
+          "params": [
+            {
+              "name": "self",
+              "qualifiers": {
+                "const": false,
+                "optional": false,
+                "out": false
+              },
+              "type": {
+                "args": [],
+                "kind": "named",
+                "name": "ResRef"
+              }
+            }
+          ],
+          "return_type": {
+            "args": [],
+            "kind": "named",
+            "name": "Uint64"
+          },
+          "type_params": []
+        },
+        "kind": "function"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": true,
+        "persistent": false,
+        "quest": false,
+        "static": true
+      },
+      "visibility": "public"
+    },
+    {
+      "annotations": [
+        {
+          "args": [
+            {
+              "kind": "ident",
+              "name": "ResRef"
+            }
+          ],
+          "name": "addMethod"
+        }
+      ],
+      "doc": [],
+      "item": {
+        "function": {
+          "body": null,
+          "name": "ToString",
+          "params": [
+            {
+              "name": "self",
+              "qualifiers": {
+                "const": false,
+                "optional": false,
+                "out": false
+              },
+              "type": {
+                "args": [],
+                "kind": "named",
+                "name": "ResRef"
+              }
+            }
+          ],
+          "return_type": {
+            "args": [],
+            "kind": "named",
+            "name": "String"
+          },
+          "type_params": []
+        },
+        "kind": "function"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": true,
+        "persistent": false,
+        "quest": false,
+        "static": true
+      },
+      "visibility": "public"
+    },
+    {
+      "annotations": [],
+      "doc": [],
+      "item": {
+        "function": {
+          "body": {
+            "block": {
+              "statements": [
+                {
+                  "expr": {
+                    "args": [
+                      {
+                        "args": [
+                          {
+                            "kind": "ident",
+                            "name": "lhs"
+                          }
+                        ],
+                        "expr": {
+                          "expr": {
+                            "kind": "ident",
+                            "name": "ResourceAsyncRef"
+                          },
+                          "kind": "member",
+                          "member": "GetPath"
+                        },
+                        "kind": "call",
+                        "type_args": []
+                      },
+                      {
+                        "kind": "ident",
+                        "name": "rhs"
+                      }
+                    ],
+                    "expr": {
+                      "kind": "ident",
+                      "name": "Equals"
+                    },
+                    "kind": "call",
+                    "type_args": []
+                  },
+                  "kind": "return"
+                }
+              ]
+            },
+            "kind": "block"
+          },
+          "name": "OperatorEqual",
+          "params": [
+            {
+              "name": "lhs",
+              "qualifiers": {
+                "const": false,
+                "optional": false,
+                "out": false
+              },
+              "type": {
+                "args": [],
+                "kind": "named",
+                "name": "ResourceAsyncRef"
+              }
+            },
+            {
+              "name": "rhs",
+              "qualifiers": {
+                "const": false,
+                "optional": false,
+                "out": false
+              },
+              "type": {
+                "args": [],
+                "kind": "named",
+                "name": "ResRef"
+              }
+            }
+          ],
+          "return_type": {
+            "args": [],
+            "kind": "named",
+            "name": "Bool"
+          },
+          "type_params": []
+        },
+        "kind": "function"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "public"
+    },
+    {
+      "annotations": [],
+      "doc": [],
+      "item": {
+        "function": {
+          "body": {
+            "block": {
+              "statements": [
+                {
+                  "expr": {
+                    "args": [
+                      {
+                        "args": [
+                          {
+                            "kind": "ident",
+                            "name": "lhs"
+                          }
+                        ],
+                        "expr": {
+                          "expr": {
+                            "kind": "ident",
+                            "name": "ResourceAsyncRef"
+                          },
+                          "kind": "member",
+                          "member": "GetPath"
+                        },
+                        "kind": "call",
+                        "type_args": []
+                      },
+                      {
+                        "kind": "ident",
+                        "name": "rhs"
+                      }
+                    ],
+                    "expr": {
+                      "kind": "ident",
+                      "name": "NotEquals"
+                    },
+                    "kind": "call",
+                    "type_args": []
+                  },
+                  "kind": "return"
+                }
+              ]
+            },
+            "kind": "block"
+          },
+          "name": "OperatorNotEqual",
+          "params": [
+            {
+              "name": "lhs",
+              "qualifiers": {
+                "const": false,
+                "optional": false,
+                "out": false
+              },
+              "type": {
+                "args": [],
+                "kind": "named",
+                "name": "ResourceAsyncRef"
+              }
+            },
+            {
+              "name": "rhs",
+              "qualifiers": {
+                "const": false,
+                "optional": false,
+                "out": false
+              },
+              "type": {
+                "args": [],
+                "kind": "named",
+                "name": "ResRef"
+              }
+            }
+          ],
+          "return_type": {
+            "args": [],
+            "kind": "named",
+            "name": "Bool"
+          },
+          "type_params": []
+        },
+        "kind": "function"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "public"
+    },
+    {
+      "annotations": [],
+      "doc": [],
+      "item": {
+        "function": {
+          "body": {
+            "block": {
+              "statements": [
+                {
+                  "expr": {
+                    "args": [
+                      {
+                        "kind": "ident",
+                        "name": "lhs"
+                      },
+                      {
+                        "kind": "ident",
+                        "name": "rhs"
+                      }
+                    ],
+                    "expr": {
+                      "kind": "ident",
+                      "name": "Equals"
+                    },
+                    "kind": "call",
+                    "type_args": []
+                  },
+                  "kind": "return"
+                }
+              ]
+            },
+            "kind": "block"
+          },
+          "name": "OperatorEqual",
+          "params": [
+            {
+              "name": "lhs",
+              "qualifiers": {
+                "const": false,
+                "optional": false,
+                "out": false
+              },
+              "type": {
+                "args": [],
+                "kind": "named",
+                "name": "ResRef"
+              }
+            },
+            {
+              "name": "rhs",
+              "qualifiers": {
+                "const": false,
+                "optional": false,
+                "out": false
+              },
+              "type": {
+                "args": [],
+                "kind": "named",
+                "name": "ResRef"
+              }
+            }
+          ],
+          "return_type": {
+            "args": [],
+            "kind": "named",
+            "name": "Bool"
+          },
+          "type_params": []
+        },
+        "kind": "function"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "public"
+    },
+    {
+      "annotations": [],
+      "doc": [],
+      "item": {
+        "function": {
+          "body": {
+            "block": {
+              "statements": [
+                {
+                  "expr": {
+                    "args": [
+                      {
+                        "kind": "ident",
+                        "name": "lhs"
+                      },
+                      {
+                        "kind": "ident",
+                        "name": "rhs"
+                      }
+                    ],
+                    "expr": {
+                      "kind": "ident",
+                      "name": "NotEquals"
+                    },
+                    "kind": "call",
+                    "type_args": []
+                  },
+                  "kind": "return"
+                }
+              ]
+            },
+            "kind": "block"
+          },
+          "name": "OperatorNotEqual",
+          "params": [
+            {
+              "name": "lhs",
+              "qualifiers": {
+                "const": false,
+                "optional": false,
+                "out": false
+              },
+              "type": {
+                "args": [],
+                "kind": "named",
+                "name": "ResRef"
+              }
+            },
+            {
+              "name": "rhs",
+              "qualifiers": {
+                "const": false,
+                "optional": false,
+                "out": false
+              },
+              "type": {
+                "args": [],
+                "kind": "named",
+                "name": "ResRef"
+              }
+            }
+          ],
+          "return_type": {
+            "args": [],
+            "kind": "named",
+            "name": "Bool"
+          },
+          "type_params": []
+        },
+        "kind": "function"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "public"
+    }
+  ],
+  "path": null
+}

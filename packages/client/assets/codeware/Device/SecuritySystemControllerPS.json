@@ -1,0 +1,900 @@
+{
+  "items": [
+    {
+      "annotations": [
+        {
+          "args": [
+            {
+              "kind": "ident",
+              "name": "SecuritySystemControllerPS"
+            }
+          ],
+          "name": "addMethod"
+        }
+      ],
+      "doc": [],
+      "item": {
+        "function": {
+          "body": {
+            "block": {
+              "statements": [
+                {
+                  "kind": "let",
+                  "name": "attitudeGroup",
+                  "type": null,
+                  "value": {
+                    "expr": {
+                      "kind": "this"
+                    },
+                    "kind": "member",
+                    "member": "m_attitudeGroup"
+                  }
+                },
+                {
+                  "expr": {
+                    "kind": "assign",
+                    "lhs": {
+                      "expr": {
+                        "kind": "this"
+                      },
+                      "kind": "member",
+                      "member": "m_attitudeGroup"
+                    },
+                    "rhs": {
+                      "args": [],
+                      "expr": {
+                        "expr": {
+                          "kind": "ident",
+                          "name": "TDBID"
+                        },
+                        "kind": "member",
+                        "member": "None"
+                      },
+                      "kind": "call",
+                      "type_args": []
+                    }
+                  },
+                  "kind": "expr"
+                },
+                {
+                  "expr": {
+                    "args": [
+                      {
+                        "kind": "ident",
+                        "name": "attitudeGroup"
+                      }
+                    ],
+                    "expr": {
+                      "expr": {
+                        "kind": "this"
+                      },
+                      "kind": "member",
+                      "member": "SetSecuritySystemAttitudeGroup"
+                    },
+                    "kind": "call",
+                    "type_args": []
+                  },
+                  "kind": "expr"
+                }
+              ]
+            },
+            "kind": "block"
+          },
+          "name": "ReinitializeSecuritySystemAttitudeGroup",
+          "params": [],
+          "return_type": null,
+          "type_params": []
+        },
+        "kind": "function"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": true,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "protected"
+    },
+    {
+      "annotations": [
+        {
+          "args": [
+            {
+              "kind": "ident",
+              "name": "SecuritySystemControllerPS"
+            }
+          ],
+          "name": "addMethod"
+        }
+      ],
+      "doc": [],
+      "item": {
+        "function": {
+          "body": {
+            "block": {
+              "statements": [
+                {
+                  "blocks": [
+                    {
+                      "body": {
+                        "statements": [
+                          {
+                            "expr": {
+                              "args": [
+                                {
+                                  "args": [
+                                    {
+                                      "args": [],
+                                      "expr": {
+                                        "expr": {
+                                          "kind": "this"
+                                        },
+                                        "kind": "member",
+                                        "member": "GetID"
+                                      },
+                                      "kind": "call",
+                                      "type_args": []
+                                    }
+                                  ],
+                                  "expr": {
+                                    "expr": {
+                                      "kind": "ident",
+                                      "name": "PersistentID"
+                                    },
+                                    "kind": "member",
+                                    "member": "ExtractEntityID"
+                                  },
+                                  "kind": "call",
+                                  "type_args": []
+                                },
+                                {
+                                  "kind": "ident",
+                                  "name": "evt"
+                                }
+                              ],
+                              "expr": {
+                                "expr": {
+                                  "kind": "this"
+                                },
+                                "kind": "member",
+                                "member": "QueueEntityEvent"
+                              },
+                              "kind": "call",
+                              "type_args": []
+                            },
+                            "kind": "expr"
+                          }
+                        ]
+                      },
+                      "condition": {
+                        "expr": {
+                          "kind": "ident",
+                          "name": "self"
+                        },
+                        "kind": "expr"
+                      }
+                    }
+                  ],
+                  "else": null,
+                  "kind": "if"
+                },
+                {
+                  "blocks": [
+                    {
+                      "body": {
+                        "statements": [
+                          {
+                            "body": {
+                              "statements": [
+                                {
+                                  "expr": {
+                                    "args": [
+                                      {
+                                        "args": [
+                                          {
+                                            "args": [],
+                                            "expr": {
+                                              "expr": {
+                                                "args": [
+                                                  {
+                                                    "expr": {
+                                                      "kind": "ident",
+                                                      "name": "agent"
+                                                    },
+                                                    "kind": "member",
+                                                    "member": "link"
+                                                  }
+                                                ],
+                                                "expr": {
+                                                  "expr": {
+                                                    "kind": "this"
+                                                  },
+                                                  "kind": "member",
+                                                  "member": "GetPS"
+                                                },
+                                                "kind": "call",
+                                                "type_args": []
+                                              },
+                                              "kind": "member",
+                                              "member": "GetID"
+                                            },
+                                            "kind": "call",
+                                            "type_args": []
+                                          }
+                                        ],
+                                        "expr": {
+                                          "expr": {
+                                            "kind": "ident",
+                                            "name": "PersistentID"
+                                          },
+                                          "kind": "member",
+                                          "member": "ExtractEntityID"
+                                        },
+                                        "kind": "call",
+                                        "type_args": []
+                                      },
+                                      {
+                                        "kind": "ident",
+                                        "name": "evt"
+                                      }
+                                    ],
+                                    "expr": {
+                                      "expr": {
+                                        "kind": "this"
+                                      },
+                                      "kind": "member",
+                                      "member": "QueueEntityEvent"
+                                    },
+                                    "kind": "call",
+                                    "type_args": []
+                                  },
+                                  "kind": "expr"
+                                }
+                              ]
+                            },
+                            "iter": {
+                              "args": [],
+                              "expr": {
+                                "expr": {
+                                  "expr": {
+                                    "kind": "this"
+                                  },
+                                  "kind": "member",
+                                  "member": "m_agentsRegistry"
+                                },
+                                "kind": "member",
+                                "member": "GetAgents"
+                              },
+                              "kind": "call",
+                              "type_args": []
+                            },
+                            "kind": "for_in",
+                            "name": "agent"
+                          }
+                        ]
+                      },
+                      "condition": {
+                        "expr": {
+                          "args": [
+                            {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "m_agentsRegistry"
+                            }
+                          ],
+                          "expr": {
+                            "kind": "ident",
+                            "name": "IsDefined"
+                          },
+                          "kind": "call",
+                          "type_args": []
+                        },
+                        "kind": "expr"
+                      }
+                    }
+                  ],
+                  "else": null,
+                  "kind": "if"
+                }
+              ]
+            },
+            "kind": "block"
+          },
+          "name": "QueueSystemEvent",
+          "params": [
+            {
+              "name": "evt",
+              "qualifiers": {
+                "const": false,
+                "optional": false,
+                "out": false
+              },
+              "type": {
+                "args": [
+                  {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Event"
+                  }
+                ],
+                "kind": "named",
+                "name": "ref"
+              }
+            },
+            {
+              "name": "self",
+              "qualifiers": {
+                "const": false,
+                "optional": true,
+                "out": false
+              },
+              "type": {
+                "args": [],
+                "kind": "named",
+                "name": "Bool"
+              }
+            }
+          ],
+          "return_type": null,
+          "type_params": []
+        },
+        "kind": "function"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "protected"
+    },
+    {
+      "annotations": [
+        {
+          "args": [
+            {
+              "kind": "ident",
+              "name": "SecuritySystemControllerPS"
+            }
+          ],
+          "name": "addMethod"
+        }
+      ],
+      "doc": [],
+      "item": {
+        "function": {
+          "body": {
+            "block": {
+              "statements": [
+                {
+                  "blocks": [
+                    {
+                      "body": {
+                        "statements": [
+                          {
+                            "expr": {
+                              "args": [
+                                {
+                                  "kind": "this"
+                                },
+                                {
+                                  "kind": "ident",
+                                  "name": "evt"
+                                }
+                              ],
+                              "expr": {
+                                "expr": {
+                                  "kind": "this"
+                                },
+                                "kind": "member",
+                                "member": "QueuePSEvent"
+                              },
+                              "kind": "call",
+                              "type_args": []
+                            },
+                            "kind": "expr"
+                          }
+                        ]
+                      },
+                      "condition": {
+                        "expr": {
+                          "kind": "ident",
+                          "name": "self"
+                        },
+                        "kind": "expr"
+                      }
+                    }
+                  ],
+                  "else": null,
+                  "kind": "if"
+                },
+                {
+                  "blocks": [
+                    {
+                      "body": {
+                        "statements": [
+                          {
+                            "body": {
+                              "statements": [
+                                {
+                                  "expr": {
+                                    "args": [
+                                      {
+                                        "args": [
+                                          {
+                                            "expr": {
+                                              "kind": "ident",
+                                              "name": "agent"
+                                            },
+                                            "kind": "member",
+                                            "member": "link"
+                                          }
+                                        ],
+                                        "expr": {
+                                          "expr": {
+                                            "kind": "this"
+                                          },
+                                          "kind": "member",
+                                          "member": "GetPS"
+                                        },
+                                        "kind": "call",
+                                        "type_args": []
+                                      },
+                                      {
+                                        "kind": "ident",
+                                        "name": "evt"
+                                      }
+                                    ],
+                                    "expr": {
+                                      "expr": {
+                                        "kind": "this"
+                                      },
+                                      "kind": "member",
+                                      "member": "QueuePSEvent"
+                                    },
+                                    "kind": "call",
+                                    "type_args": []
+                                  },
+                                  "kind": "expr"
+                                }
+                              ]
+                            },
+                            "iter": {
+                              "args": [],
+                              "expr": {
+                                "expr": {
+                                  "expr": {
+                                    "kind": "this"
+                                  },
+                                  "kind": "member",
+                                  "member": "m_agentsRegistry"
+                                },
+                                "kind": "member",
+                                "member": "GetAgents"
+                              },
+                              "kind": "call",
+                              "type_args": []
+                            },
+                            "kind": "for_in",
+                            "name": "agent"
+                          }
+                        ]
+                      },
+                      "condition": {
+                        "expr": {
+                          "args": [
+                            {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "m_agentsRegistry"
+                            }
+                          ],
+                          "expr": {
+                            "kind": "ident",
+                            "name": "IsDefined"
+                          },
+                          "kind": "call",
+                          "type_args": []
+                        },
+                        "kind": "expr"
+                      }
+                    }
+                  ],
+                  "else": null,
+                  "kind": "if"
+                }
+              ]
+            },
+            "kind": "block"
+          },
+          "name": "QueueSystemPSEvent",
+          "params": [
+            {
+              "name": "evt",
+              "qualifiers": {
+                "const": false,
+                "optional": false,
+                "out": false
+              },
+              "type": {
+                "args": [
+                  {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Event"
+                  }
+                ],
+                "kind": "named",
+                "name": "ref"
+              }
+            },
+            {
+              "name": "self",
+              "qualifiers": {
+                "const": false,
+                "optional": true,
+                "out": false
+              },
+              "type": {
+                "args": [],
+                "kind": "named",
+                "name": "Bool"
+              }
+            }
+          ],
+          "return_type": null,
+          "type_params": []
+        },
+        "kind": "function"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "protected"
+    },
+    {
+      "annotations": [
+        {
+          "args": [
+            {
+              "kind": "ident",
+              "name": "SecuritySystemControllerPS"
+            }
+          ],
+          "name": "addMethod"
+        }
+      ],
+      "doc": [],
+      "item": {
+        "function": {
+          "body": {
+            "block": {
+              "statements": [
+                {
+                  "blocks": [
+                    {
+                      "body": {
+                        "statements": [
+                          {
+                            "expr": {
+                              "args": [],
+                              "expr": {
+                                "expr": {
+                                  "kind": "this"
+                                },
+                                "kind": "member",
+                                "member": "CompileSecurityAgentRegistry"
+                              },
+                              "kind": "call",
+                              "type_args": []
+                            },
+                            "kind": "expr"
+                          }
+                        ]
+                      },
+                      "condition": {
+                        "expr": {
+                          "expr": {
+                            "args": [],
+                            "expr": {
+                              "expr": {
+                                "expr": {
+                                  "kind": "this"
+                                },
+                                "kind": "member",
+                                "member": "m_agentsRegistry"
+                              },
+                              "kind": "member",
+                              "member": "IsReady"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "un_op",
+                          "op": "!"
+                        },
+                        "kind": "expr"
+                      }
+                    }
+                  ],
+                  "else": null,
+                  "kind": "if"
+                },
+                {
+                  "expr": {
+                    "args": [
+                      {
+                        "args": [],
+                        "expr": {
+                          "expr": {
+                            "kind": "this"
+                          },
+                          "kind": "member",
+                          "member": "ActionQuestForceDisabled"
+                        },
+                        "kind": "call",
+                        "type_args": []
+                      }
+                    ],
+                    "expr": {
+                      "expr": {
+                        "kind": "this"
+                      },
+                      "kind": "member",
+                      "member": "QueueSystemPSEvent"
+                    },
+                    "kind": "call",
+                    "type_args": []
+                  },
+                  "kind": "expr"
+                },
+                {
+                  "expr": {
+                    "args": [
+                      {
+                        "args": [],
+                        "expr": {
+                          "expr": {
+                            "kind": "this"
+                          },
+                          "kind": "member",
+                          "member": "ActionQuestResetDeviceToInitialState"
+                        },
+                        "kind": "call",
+                        "type_args": []
+                      }
+                    ],
+                    "expr": {
+                      "expr": {
+                        "kind": "this"
+                      },
+                      "kind": "member",
+                      "member": "QueueSystemPSEvent"
+                    },
+                    "kind": "call",
+                    "type_args": []
+                  },
+                  "kind": "expr"
+                },
+                {
+                  "expr": {
+                    "args": [],
+                    "expr": {
+                      "expr": {
+                        "kind": "this"
+                      },
+                      "kind": "member",
+                      "member": "ReinitializeSecuritySystemAttitudeGroup"
+                    },
+                    "kind": "call",
+                    "type_args": []
+                  },
+                  "kind": "expr"
+                },
+                {
+                  "expr": {
+                    "args": [
+                      {
+                        "args": [],
+                        "expr": {
+                          "expr": {
+                            "kind": "this"
+                          },
+                          "kind": "member",
+                          "member": "ActionQuestRestoreQuickHacks"
+                        },
+                        "kind": "call",
+                        "type_args": []
+                      }
+                    ],
+                    "expr": {
+                      "expr": {
+                        "kind": "this"
+                      },
+                      "kind": "member",
+                      "member": "QueueSystemPSEvent"
+                    },
+                    "kind": "call",
+                    "type_args": []
+                  },
+                  "kind": "expr"
+                },
+                {
+                  "expr": {
+                    "args": [
+                      {
+                        "args": [],
+                        "expr": {
+                          "expr": {
+                            "kind": "this"
+                          },
+                          "kind": "member",
+                          "member": "ActionQuestForceEnabled"
+                        },
+                        "kind": "call",
+                        "type_args": []
+                      }
+                    ],
+                    "expr": {
+                      "expr": {
+                        "kind": "this"
+                      },
+                      "kind": "member",
+                      "member": "QueueSystemPSEvent"
+                    },
+                    "kind": "call",
+                    "type_args": []
+                  },
+                  "kind": "expr"
+                },
+                {
+                  "expr": {
+                    "args": [
+                      {
+                        "args": [],
+                        "expr": {
+                          "expr": {
+                            "kind": "this"
+                          },
+                          "kind": "member",
+                          "member": "ActionQuestForceON"
+                        },
+                        "kind": "call",
+                        "type_args": []
+                      }
+                    ],
+                    "expr": {
+                      "expr": {
+                        "kind": "this"
+                      },
+                      "kind": "member",
+                      "member": "OnQuestForceON"
+                    },
+                    "kind": "call",
+                    "type_args": []
+                  },
+                  "kind": "expr"
+                },
+                {
+                  "expr": {
+                    "args": [
+                      {
+                        "args": [],
+                        "expr": {
+                          "expr": {
+                            "kind": "this"
+                          },
+                          "kind": "member",
+                          "member": "ActionQuestResetPerfomedActionsStorage"
+                        },
+                        "kind": "call",
+                        "type_args": []
+                      },
+                      {
+                        "constant": {
+                          "kind": "bool",
+                          "value": true
+                        },
+                        "kind": "constant"
+                      }
+                    ],
+                    "expr": {
+                      "expr": {
+                        "kind": "this"
+                      },
+                      "kind": "member",
+                      "member": "QueueSystemPSEvent"
+                    },
+                    "kind": "call",
+                    "type_args": []
+                  },
+                  "kind": "expr"
+                },
+                {
+                  "expr": {
+                    "expr": {
+                      "kind": "ident",
+                      "name": "EntityNotificationType"
+                    },
+                    "kind": "member",
+                    "member": "SendThisEventToEntity"
+                  },
+                  "kind": "return"
+                }
+              ]
+            },
+            "kind": "block"
+          },
+          "name": "OnResetSecuritySystemNetwork",
+          "params": [
+            {
+              "name": "evt",
+              "qualifiers": {
+                "const": false,
+                "optional": false,
+                "out": false
+              },
+              "type": {
+                "args": [
+                  {
+                    "args": [],
+                    "kind": "named",
+                    "name": "ResetSecuritySystemNetwork"
+                  }
+                ],
+                "kind": "named",
+                "name": "ref"
+              }
+            }
+          ],
+          "return_type": {
+            "args": [],
+            "kind": "named",
+            "name": "EntityNotificationType"
+          },
+          "type_params": []
+        },
+        "kind": "function"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "protected"
+    }
+  ],
+  "path": null
+}

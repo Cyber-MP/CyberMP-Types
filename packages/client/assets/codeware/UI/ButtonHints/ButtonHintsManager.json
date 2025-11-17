@@ -1,0 +1,1271 @@
+{
+  "items": [
+    {
+      "annotations": [],
+      "doc": [],
+      "item": {
+        "class": {
+          "extends": {
+            "args": [],
+            "kind": "named",
+            "name": "ScriptableService"
+          },
+          "items": [
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "field": {
+                  "default": null,
+                  "name": "m_buttonHints",
+                  "type": {
+                    "args": [
+                      {
+                        "args": [],
+                        "kind": "named",
+                        "name": "inkWidget"
+                      }
+                    ],
+                    "kind": "named",
+                    "name": "ref"
+                  }
+                },
+                "kind": "let"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "private"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "field": {
+                  "default": null,
+                  "name": "m_inputHint",
+                  "type": {
+                    "args": [
+                      {
+                        "args": [],
+                        "kind": "named",
+                        "name": "inkInputDisplayController"
+                      }
+                    ],
+                    "kind": "named",
+                    "name": "wref"
+                  }
+                },
+                "kind": "let"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "private"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "kind": "assign",
+                            "lhs": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "m_buttonHints"
+                            },
+                            "rhs": {
+                              "kind": "null"
+                            }
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "kind": "assign",
+                            "lhs": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "m_inputHint"
+                            },
+                            "rhs": {
+                              "kind": "null"
+                            }
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "OnUninitialize",
+                  "params": [],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": true,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "private"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "expr": {
+                                  "kind": "this"
+                                },
+                                "kind": "member",
+                                "member": "m_buttonHints"
+                              }
+                            ],
+                            "expr": {
+                              "kind": "ident",
+                              "name": "IsDefined"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "return"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "IsInitialized",
+                  "params": [],
+                  "return_type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Bool"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "kind": "assign",
+                            "lhs": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "m_buttonHints"
+                            },
+                            "rhs": {
+                              "kind": "ident",
+                              "name": "buttonHints"
+                            }
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "Initialize",
+                  "params": [
+                    {
+                      "name": "buttonHints",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [
+                          {
+                            "args": [],
+                            "kind": "named",
+                            "name": "inkWidget"
+                          }
+                        ],
+                        "kind": "named",
+                        "name": "ref"
+                      }
+                    }
+                  ],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "kind": "assign",
+                            "lhs": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "m_buttonHints"
+                            },
+                            "rhs": {
+                              "args": [],
+                              "expr": {
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "buttonHints"
+                                },
+                                "kind": "member",
+                                "member": "GetRootWidget"
+                              },
+                              "kind": "call",
+                              "type_args": []
+                            }
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "Initialize",
+                  "params": [
+                    {
+                      "name": "buttonHints",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [
+                          {
+                            "args": [],
+                            "kind": "named",
+                            "name": "ButtonHints"
+                          }
+                        ],
+                        "kind": "named",
+                        "name": "ref"
+                      }
+                    }
+                  ],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "kind": "let",
+                          "name": "rootWidget",
+                          "type": null,
+                          "value": {
+                            "args": [],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "parent"
+                              },
+                              "kind": "member",
+                              "member": "GetRootCompoundWidget"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          }
+                        },
+                        {
+                          "kind": "let",
+                          "name": "buttonHints",
+                          "type": null,
+                          "value": {
+                            "args": [
+                              {
+                                "kind": "ident",
+                                "name": "rootWidget"
+                              },
+                              {
+                                "constant": {
+                                  "kind": "resource",
+                                  "value": "base\\gameplay\\gui\\common\\buttonhints.inkwidget"
+                                },
+                                "kind": "constant"
+                              },
+                              {
+                                "constant": {
+                                  "kind": "cname",
+                                  "value": "Root"
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "parent"
+                              },
+                              "kind": "member",
+                              "member": "SpawnFromExternal"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          }
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "kind": "ident",
+                                "name": "buttonHints"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "Initialize"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "kind": "ident",
+                                "name": "buttonHints"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "rootWidget"
+                              },
+                              "kind": "member",
+                              "member": "RemoveChild"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "Initialize",
+                  "params": [
+                    {
+                      "name": "parent",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [
+                          {
+                            "args": [],
+                            "kind": "named",
+                            "name": "inkGameController"
+                          }
+                        ],
+                        "kind": "named",
+                        "name": "ref"
+                      }
+                    }
+                  ],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "args": [
+                                  {
+                                    "kind": "ident",
+                                    "name": "parentWidget"
+                                  },
+                                  {
+                                    "constant": {
+                                      "kind": "cname",
+                                      "value": "Root"
+                                    },
+                                    "kind": "constant"
+                                  }
+                                ],
+                                "expr": {
+                                  "expr": {
+                                    "args": [],
+                                    "expr": {
+                                      "expr": {
+                                        "expr": {
+                                          "kind": "this"
+                                        },
+                                        "kind": "member",
+                                        "member": "m_buttonHints"
+                                      },
+                                      "kind": "member",
+                                      "member": "GetController"
+                                    },
+                                    "kind": "call",
+                                    "type_args": []
+                                  },
+                                  "kind": "member",
+                                  "member": "SpawnFromLocal"
+                                },
+                                "kind": "call",
+                                "type_args": []
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "ButtonHintsEx"
+                              },
+                              "kind": "member",
+                              "member": "Wrap"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "return"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "SpawnButtonHints",
+                  "params": [
+                    {
+                      "name": "parentWidget",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [
+                          {
+                            "args": [],
+                            "kind": "named",
+                            "name": "inkWidget"
+                          }
+                        ],
+                        "kind": "named",
+                        "name": "wref"
+                      }
+                    }
+                  ],
+                  "return_type": {
+                    "args": [
+                      {
+                        "args": [],
+                        "kind": "named",
+                        "name": "ButtonHintsEx"
+                      }
+                    ],
+                    "kind": "named",
+                    "name": "ref"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "blocks": [
+                            {
+                              "body": {
+                                "statements": [
+                                  {
+                                    "kind": "let",
+                                    "name": "buttonHints",
+                                    "type": null,
+                                    "value": {
+                                      "expr": {
+                                        "args": [],
+                                        "expr": {
+                                          "expr": {
+                                            "expr": {
+                                              "kind": "this"
+                                            },
+                                            "kind": "member",
+                                            "member": "m_buttonHints"
+                                          },
+                                          "kind": "member",
+                                          "member": "GetController"
+                                        },
+                                        "kind": "call",
+                                        "type_args": []
+                                      },
+                                      "kind": "dyn_cast",
+                                      "type": {
+                                        "args": [],
+                                        "kind": "named",
+                                        "name": "ButtonHints"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "expr": {
+                                      "args": [],
+                                      "expr": {
+                                        "expr": {
+                                          "kind": "ident",
+                                          "name": "buttonHints"
+                                        },
+                                        "kind": "member",
+                                        "member": "ClearButtonHints"
+                                      },
+                                      "kind": "call",
+                                      "type_args": []
+                                    },
+                                    "kind": "expr"
+                                  },
+                                  {
+                                    "expr": {
+                                      "args": [
+                                        {
+                                          "kind": "ident",
+                                          "name": "action"
+                                        },
+                                        {
+                                          "constant": {
+                                            "kind": "string",
+                                            "value": ""
+                                          },
+                                          "kind": "constant"
+                                        }
+                                      ],
+                                      "expr": {
+                                        "expr": {
+                                          "kind": "ident",
+                                          "name": "buttonHints"
+                                        },
+                                        "kind": "member",
+                                        "member": "AddButtonHint"
+                                      },
+                                      "kind": "call",
+                                      "type_args": []
+                                    },
+                                    "kind": "expr"
+                                  },
+                                  {
+                                    "expr": {
+                                      "kind": "assign",
+                                      "lhs": {
+                                        "expr": {
+                                          "kind": "this"
+                                        },
+                                        "kind": "member",
+                                        "member": "m_inputHint"
+                                      },
+                                      "rhs": {
+                                        "expr": {
+                                          "args": [
+                                            {
+                                              "kind": "ident",
+                                              "name": "action"
+                                            }
+                                          ],
+                                          "expr": {
+                                            "expr": {
+                                              "kind": "ident",
+                                              "name": "buttonHints"
+                                            },
+                                            "kind": "member",
+                                            "member": "CheckForPreExisting"
+                                          },
+                                          "kind": "call",
+                                          "type_args": []
+                                        },
+                                        "kind": "member",
+                                        "member": "m_buttonHint"
+                                      }
+                                    },
+                                    "kind": "expr"
+                                  }
+                                ]
+                              },
+                              "condition": {
+                                "expr": {
+                                  "expr": {
+                                    "args": [
+                                      {
+                                        "expr": {
+                                          "kind": "this"
+                                        },
+                                        "kind": "member",
+                                        "member": "m_inputHint"
+                                      }
+                                    ],
+                                    "expr": {
+                                      "kind": "ident",
+                                      "name": "IsDefined"
+                                    },
+                                    "kind": "call",
+                                    "type_args": []
+                                  },
+                                  "kind": "un_op",
+                                  "op": "!"
+                                },
+                                "kind": "expr"
+                              }
+                            }
+                          ],
+                          "else": null,
+                          "kind": "if"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "kind": "ident",
+                                "name": "action"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "expr": {
+                                  "kind": "this"
+                                },
+                                "kind": "member",
+                                "member": "m_inputHint"
+                              },
+                              "kind": "member",
+                              "member": "SetInputAction"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "kind": "let",
+                          "name": "icon",
+                          "type": null,
+                          "value": {
+                            "expr": {
+                              "args": [
+                                {
+                                  "constant": {
+                                    "kind": "cname",
+                                    "value": "inputRoot/inputIcon"
+                                  },
+                                  "kind": "constant"
+                                }
+                              ],
+                              "expr": {
+                                "expr": {
+                                  "expr": {
+                                    "kind": "this"
+                                  },
+                                  "kind": "member",
+                                  "member": "m_inputHint"
+                                },
+                                "kind": "member",
+                                "member": "GetWidget"
+                              },
+                              "kind": "call",
+                              "type_args": []
+                            },
+                            "kind": "dyn_cast",
+                            "type": {
+                              "args": [],
+                              "kind": "named",
+                              "name": "inkImage"
+                            }
+                          }
+                        },
+                        {
+                          "kind": "let",
+                          "name": "part",
+                          "type": null,
+                          "value": {
+                            "args": [],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "icon"
+                              },
+                              "kind": "member",
+                              "member": "GetTexturePart"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          }
+                        },
+                        {
+                          "kind": "let",
+                          "name": "key",
+                          "type": null,
+                          "value": {
+                            "args": [
+                              {
+                                "kind": "ident",
+                                "name": "part"
+                              }
+                            ],
+                            "expr": {
+                              "kind": "ident",
+                              "name": "NameToString"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          }
+                        },
+                        {
+                          "expr": {
+                            "kind": "ident",
+                            "name": "key"
+                          },
+                          "kind": "return"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "GetActionKey",
+                  "params": [
+                    {
+                      "name": "action",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "CName"
+                      }
+                    }
+                  ],
+                  "return_type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "String"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "expr": {
+                              "args": [
+                                {
+                                  "constant": {
+                                    "kind": "cname",
+                                    "value": "Codeware.UI.ButtonHintsManager"
+                                  },
+                                  "kind": "constant"
+                                }
+                              ],
+                              "expr": {
+                                "expr": {
+                                  "args": [],
+                                  "expr": {
+                                    "expr": {
+                                      "kind": "ident",
+                                      "name": "GameInstance"
+                                    },
+                                    "kind": "member",
+                                    "member": "GetScriptableServiceContainer"
+                                  },
+                                  "kind": "call",
+                                  "type_args": []
+                                },
+                                "kind": "member",
+                                "member": "GetService"
+                              },
+                              "kind": "call",
+                              "type_args": []
+                            },
+                            "kind": "dyn_cast",
+                            "type": {
+                              "args": [],
+                              "kind": "named",
+                              "name": "ButtonHintsManager"
+                            }
+                          },
+                          "kind": "return"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "GetInstance",
+                  "params": [],
+                  "return_type": {
+                    "args": [
+                      {
+                        "args": [],
+                        "kind": "named",
+                        "name": "ButtonHintsManager"
+                      }
+                    ],
+                    "kind": "named",
+                    "name": "ref"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": true
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "kind": "ident",
+                                "name": "controller"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "args": [],
+                                "expr": {
+                                  "expr": {
+                                    "kind": "ident",
+                                    "name": "ButtonHintsManager"
+                                  },
+                                  "kind": "member",
+                                  "member": "GetInstance"
+                                },
+                                "kind": "call",
+                                "type_args": []
+                              },
+                              "kind": "member",
+                              "member": "Initialize"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "InitializeFromController",
+                  "params": [
+                    {
+                      "name": "controller",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [
+                          {
+                            "args": [],
+                            "kind": "named",
+                            "name": "inkGameController"
+                          }
+                        ],
+                        "kind": "named",
+                        "name": "ref"
+                      }
+                    }
+                  ],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": true
+              },
+              "visibility": "public"
+            }
+          ],
+          "name": "ButtonHintsManager",
+          "type_params": []
+        },
+        "kind": "class"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "public"
+    },
+    {
+      "annotations": [
+        {
+          "args": [
+            {
+              "kind": "ident",
+              "name": "SingleplayerMenuGameController"
+            }
+          ],
+          "name": "wrapMethod"
+        }
+      ],
+      "doc": [],
+      "item": {
+        "function": {
+          "body": {
+            "block": {
+              "statements": [
+                {
+                  "expr": {
+                    "args": [],
+                    "expr": {
+                      "kind": "ident",
+                      "name": "wrappedMethod"
+                    },
+                    "kind": "call",
+                    "type_args": []
+                  },
+                  "kind": "expr"
+                },
+                {
+                  "expr": {
+                    "args": [
+                      {
+                        "kind": "this"
+                      }
+                    ],
+                    "expr": {
+                      "expr": {
+                        "kind": "ident",
+                        "name": "ButtonHintsManager"
+                      },
+                      "kind": "member",
+                      "member": "InitializeFromController"
+                    },
+                    "kind": "call",
+                    "type_args": []
+                  },
+                  "kind": "expr"
+                }
+              ]
+            },
+            "kind": "block"
+          },
+          "name": "OnInitialize",
+          "params": [],
+          "return_type": {
+            "args": [],
+            "kind": "named",
+            "name": "Bool"
+          },
+          "type_params": []
+        },
+        "kind": "function"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": true,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "protected"
+    },
+    {
+      "annotations": [
+        {
+          "args": [
+            {
+              "kind": "ident",
+              "name": "DpadWheelGameController"
+            }
+          ],
+          "name": "wrapMethod"
+        }
+      ],
+      "doc": [],
+      "item": {
+        "function": {
+          "body": {
+            "block": {
+              "statements": [
+                {
+                  "expr": {
+                    "args": [],
+                    "expr": {
+                      "kind": "ident",
+                      "name": "wrappedMethod"
+                    },
+                    "kind": "call",
+                    "type_args": []
+                  },
+                  "kind": "expr"
+                },
+                {
+                  "expr": {
+                    "args": [
+                      {
+                        "kind": "this"
+                      }
+                    ],
+                    "expr": {
+                      "expr": {
+                        "kind": "ident",
+                        "name": "ButtonHintsManager"
+                      },
+                      "kind": "member",
+                      "member": "InitializeFromController"
+                    },
+                    "kind": "call",
+                    "type_args": []
+                  },
+                  "kind": "expr"
+                }
+              ]
+            },
+            "kind": "block"
+          },
+          "name": "OnInitialize",
+          "params": [],
+          "return_type": {
+            "args": [],
+            "kind": "named",
+            "name": "Bool"
+          },
+          "type_params": []
+        },
+        "kind": "function"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": true,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "protected"
+    }
+  ],
+  "path": [
+    "Codeware",
+    "UI"
+  ]
+}

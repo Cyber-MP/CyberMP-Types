@@ -1,0 +1,2368 @@
+{
+  "items": [
+    {
+      "annotations": [],
+      "doc": [],
+      "item": {
+        "import": {
+          "path": [
+            "Codeware",
+            "UI",
+            "inkCustomController"
+          ],
+          "type": "exact"
+        },
+        "kind": "import"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": null
+    },
+    {
+      "annotations": [],
+      "doc": [],
+      "item": {
+        "class": {
+          "extends": {
+            "args": [],
+            "kind": "named",
+            "name": "inkCustomController"
+          },
+          "items": [
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "field": {
+                  "default": null,
+                  "name": "m_selection",
+                  "type": {
+                    "args": [
+                      {
+                        "args": [],
+                        "kind": "named",
+                        "name": "inkRectangle"
+                      }
+                    ],
+                    "kind": "named",
+                    "name": "wref"
+                  }
+                },
+                "kind": "let"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "protected"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "field": {
+                  "default": null,
+                  "name": "m_startPosition",
+                  "type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Int32"
+                  }
+                },
+                "kind": "let"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "protected"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "field": {
+                  "default": null,
+                  "name": "m_endPosition",
+                  "type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Int32"
+                  }
+                },
+                "kind": "let"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "protected"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "field": {
+                  "default": null,
+                  "name": "m_maxPosition",
+                  "type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Int32"
+                  }
+                },
+                "kind": "let"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "protected"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "field": {
+                  "default": null,
+                  "name": "m_fontSize",
+                  "type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Float"
+                  }
+                },
+                "kind": "let"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "protected"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "field": {
+                  "default": null,
+                  "name": "m_padSize",
+                  "type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Float"
+                  }
+                },
+                "kind": "let"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "protected"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "args": [],
+                            "expr": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "InitializeProps"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [],
+                            "expr": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "CreateWidgets"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "OnCreate",
+                  "params": [],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": true,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "protected"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "args": [],
+                            "expr": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "InitializeLayout"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "OnInitialize",
+                  "params": [],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": true,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "protected"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "kind": "assign",
+                            "lhs": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "m_startPosition"
+                            },
+                            "rhs": {
+                              "expr": {
+                                "constant": {
+                                  "kind": "i32",
+                                  "value": 1
+                                },
+                                "kind": "constant"
+                              },
+                              "kind": "un_op",
+                              "op": "-"
+                            }
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "kind": "assign",
+                            "lhs": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "m_endPosition"
+                            },
+                            "rhs": {
+                              "expr": {
+                                "constant": {
+                                  "kind": "i32",
+                                  "value": 1
+                                },
+                                "kind": "constant"
+                              },
+                              "kind": "un_op",
+                              "op": "-"
+                            }
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "kind": "assign",
+                            "lhs": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "m_padSize"
+                            },
+                            "rhs": {
+                              "constant": {
+                                "kind": "f32",
+                                "value": 6.0
+                              },
+                              "kind": "constant"
+                            }
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "InitializeProps",
+                  "params": [],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "protected"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "kind": "let",
+                          "name": "selection",
+                          "type": {
+                            "args": [
+                              {
+                                "args": [],
+                                "kind": "named",
+                                "name": "inkRectangle"
+                              }
+                            ],
+                            "kind": "named",
+                            "name": "ref"
+                          },
+                          "value": {
+                            "args": [],
+                            "kind": "new",
+                            "type": {
+                              "args": [],
+                              "kind": "named",
+                              "name": "inkRectangle"
+                            }
+                          }
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "cname",
+                                  "value": "selection"
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "selection"
+                              },
+                              "kind": "member",
+                              "member": "SetName"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "bool",
+                                  "value": false
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "selection"
+                              },
+                              "kind": "member",
+                              "member": "SetVisible"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "f32",
+                                  "value": 0.20000000298023224
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "selection"
+                              },
+                              "kind": "member",
+                              "member": "SetOpacity"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "resource",
+                                  "value": "base\\gameplay\\gui\\common\\main_colors.inkstyle"
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "selection"
+                              },
+                              "kind": "member",
+                              "member": "SetStyle"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "cname",
+                                  "value": "tintColor"
+                                },
+                                "kind": "constant"
+                              },
+                              {
+                                "constant": {
+                                  "kind": "cname",
+                                  "value": "MainColors.Blue"
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "selection"
+                              },
+                              "kind": "member",
+                              "member": "BindProperty"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "args": [
+                                  {
+                                    "constant": {
+                                      "kind": "f32",
+                                      "value": 0.0
+                                    },
+                                    "kind": "constant"
+                                  },
+                                  {
+                                    "constant": {
+                                      "kind": "f32",
+                                      "value": 0.0
+                                    },
+                                    "kind": "constant"
+                                  }
+                                ],
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "Vector2"
+                                },
+                                "kind": "call",
+                                "type_args": []
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "selection"
+                              },
+                              "kind": "member",
+                              "member": "SetRenderTransformPivot"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "kind": "assign",
+                            "lhs": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "m_selection"
+                            },
+                            "rhs": {
+                              "kind": "ident",
+                              "name": "selection"
+                            }
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "expr": {
+                                  "kind": "this"
+                                },
+                                "kind": "member",
+                                "member": "m_selection"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "SetRootWidget"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "CreateWidgets",
+                  "params": [],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "protected"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "kind": "bin_op",
+                                "lhs": {
+                                  "expr": {
+                                    "kind": "this"
+                                  },
+                                  "kind": "member",
+                                  "member": "m_fontSize"
+                                },
+                                "op": "+",
+                                "rhs": {
+                                  "kind": "bin_op",
+                                  "lhs": {
+                                    "expr": {
+                                      "kind": "this"
+                                    },
+                                    "kind": "member",
+                                    "member": "m_padSize"
+                                  },
+                                  "op": "*",
+                                  "rhs": {
+                                    "constant": {
+                                      "kind": "f32",
+                                      "value": 2.0
+                                    },
+                                    "kind": "constant"
+                                  }
+                                }
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "expr": {
+                                  "kind": "this"
+                                },
+                                "kind": "member",
+                                "member": "m_selection"
+                              },
+                              "kind": "member",
+                              "member": "SetHeight"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "InitializeLayout",
+                  "params": [],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "protected"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "expr": {
+                                  "kind": "this"
+                                },
+                                "kind": "member",
+                                "member": "m_fontSize"
+                              }
+                            ],
+                            "expr": {
+                              "kind": "ident",
+                              "name": "Cast"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "return"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "GetFontSize",
+                  "params": [],
+                  "return_type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Int32"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "kind": "assign",
+                            "lhs": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "m_fontSize"
+                            },
+                            "rhs": {
+                              "args": [
+                                {
+                                  "kind": "ident",
+                                  "name": "fontSize"
+                                }
+                              ],
+                              "expr": {
+                                "kind": "ident",
+                                "name": "Cast"
+                              },
+                              "kind": "call",
+                              "type_args": []
+                            }
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [],
+                            "expr": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "InitializeLayout"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "SetFontSize",
+                  "params": [
+                    {
+                      "name": "fontSize",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "Int32"
+                      }
+                    }
+                  ],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "args": [],
+                            "expr": {
+                              "expr": {
+                                "expr": {
+                                  "kind": "this"
+                                },
+                                "kind": "member",
+                                "member": "m_selection"
+                              },
+                              "kind": "member",
+                              "member": "GetTintColor"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "return"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "GetTintColor",
+                  "params": [],
+                  "return_type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "HDRColor"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "kind": "ident",
+                                "name": "color"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "expr": {
+                                  "kind": "this"
+                                },
+                                "kind": "member",
+                                "member": "m_selection"
+                              },
+                              "kind": "member",
+                              "member": "SetTintColor"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "SetTintColor",
+                  "params": [
+                    {
+                      "name": "color",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "HDRColor"
+                      }
+                    }
+                  ],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "args": [],
+                            "expr": {
+                              "expr": {
+                                "expr": {
+                                  "kind": "this"
+                                },
+                                "kind": "member",
+                                "member": "m_selection"
+                              },
+                              "kind": "member",
+                              "member": "GetOpacity"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "return"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "GetOpacity",
+                  "params": [],
+                  "return_type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Float"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "kind": "ident",
+                                "name": "opacity"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "expr": {
+                                  "kind": "this"
+                                },
+                                "kind": "member",
+                                "member": "m_selection"
+                              },
+                              "kind": "member",
+                              "member": "SetOpacity"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "SetOpacity",
+                  "params": [
+                    {
+                      "name": "opacity",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "Float"
+                      }
+                    }
+                  ],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "expr": {
+                              "kind": "this"
+                            },
+                            "kind": "member",
+                            "member": "m_maxPosition"
+                          },
+                          "kind": "return"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "GetMaxPosition",
+                  "params": [],
+                  "return_type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Int32"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "kind": "assign",
+                            "lhs": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "m_maxPosition"
+                            },
+                            "rhs": {
+                              "kind": "ident",
+                              "name": "max"
+                            }
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "SetMaxPosition",
+                  "params": [
+                    {
+                      "name": "max",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "Int32"
+                      }
+                    }
+                  ],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "expr": {
+                              "kind": "this"
+                            },
+                            "kind": "member",
+                            "member": "m_startPosition"
+                          },
+                          "kind": "return"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "GetStartPosition",
+                  "params": [],
+                  "return_type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Int32"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "kind": "assign",
+                            "lhs": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "m_startPosition"
+                            },
+                            "rhs": {
+                              "kind": "ident",
+                              "name": "value"
+                            }
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "SetStartPosition",
+                  "params": [
+                    {
+                      "name": "value",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "Int32"
+                      }
+                    }
+                  ],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "expr": {
+                              "kind": "this"
+                            },
+                            "kind": "member",
+                            "member": "m_endPosition"
+                          },
+                          "kind": "return"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "GetEndPosition",
+                  "params": [],
+                  "return_type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Int32"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "kind": "assign",
+                            "lhs": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "m_endPosition"
+                            },
+                            "rhs": {
+                              "kind": "ident",
+                              "name": "value"
+                            }
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "SetEndPosition",
+                  "params": [
+                    {
+                      "name": "value",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "Int32"
+                      }
+                    }
+                  ],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "kind": "assign",
+                            "lhs": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "m_startPosition"
+                            },
+                            "rhs": {
+                              "constant": {
+                                "kind": "i32",
+                                "value": 0
+                              },
+                              "kind": "constant"
+                            }
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "kind": "assign",
+                            "lhs": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "m_endPosition"
+                            },
+                            "rhs": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "m_maxPosition"
+                            }
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "SelectAll",
+                  "params": [],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "kind": "assign",
+                            "lhs": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "m_startPosition"
+                            },
+                            "rhs": {
+                              "expr": {
+                                "constant": {
+                                  "kind": "i32",
+                                  "value": 1
+                                },
+                                "kind": "constant"
+                              },
+                              "kind": "un_op",
+                              "op": "-"
+                            }
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "kind": "assign",
+                            "lhs": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "m_endPosition"
+                            },
+                            "rhs": {
+                              "expr": {
+                                "constant": {
+                                  "kind": "i32",
+                                  "value": 1
+                                },
+                                "kind": "constant"
+                              },
+                              "kind": "un_op",
+                              "op": "-"
+                            }
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "Clear",
+                  "params": [],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "expr": {
+                                  "kind": "this"
+                                },
+                                "kind": "member",
+                                "member": "m_startPosition"
+                              },
+                              {
+                                "expr": {
+                                  "kind": "this"
+                                },
+                                "kind": "member",
+                                "member": "m_endPosition"
+                              }
+                            ],
+                            "expr": {
+                              "kind": "ident",
+                              "name": "Min"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "return"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "GetLeftPosition",
+                  "params": [],
+                  "return_type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Int32"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "expr": {
+                                  "kind": "this"
+                                },
+                                "kind": "member",
+                                "member": "m_startPosition"
+                              },
+                              {
+                                "expr": {
+                                  "kind": "this"
+                                },
+                                "kind": "member",
+                                "member": "m_endPosition"
+                              }
+                            ],
+                            "expr": {
+                              "kind": "ident",
+                              "name": "Max"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "return"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "GetRightPosition",
+                  "params": [],
+                  "return_type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Int32"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "args": [
+                                  {
+                                    "args": [],
+                                    "expr": {
+                                      "expr": {
+                                        "kind": "this"
+                                      },
+                                      "kind": "member",
+                                      "member": "GetLeftPosition"
+                                    },
+                                    "kind": "call",
+                                    "type_args": []
+                                  }
+                                ],
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "Cast"
+                                },
+                                "kind": "call",
+                                "type_args": []
+                              },
+                              {
+                                "constant": {
+                                  "kind": "f32",
+                                  "value": 0.0
+                                },
+                                "kind": "constant"
+                              },
+                              {
+                                "args": [
+                                  {
+                                    "args": [],
+                                    "expr": {
+                                      "expr": {
+                                        "kind": "this"
+                                      },
+                                      "kind": "member",
+                                      "member": "GetRightPosition"
+                                    },
+                                    "kind": "call",
+                                    "type_args": []
+                                  }
+                                ],
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "Cast"
+                                },
+                                "kind": "call",
+                                "type_args": []
+                              },
+                              {
+                                "constant": {
+                                  "kind": "f32",
+                                  "value": 0.0
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "kind": "ident",
+                              "name": "RectF"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "return"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "GetRange",
+                  "params": [],
+                  "return_type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "RectF"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "kind": "bin_op",
+                            "lhs": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "m_startPosition"
+                            },
+                            "op": "==",
+                            "rhs": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "m_endPosition"
+                            }
+                          },
+                          "kind": "return"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "IsEmpty",
+                  "params": [],
+                  "return_type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Bool"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "blocks": [
+                            {
+                              "body": {
+                                "statements": [
+                                  {
+                                    "expr": {
+                                      "args": [
+                                        {
+                                          "constant": {
+                                            "kind": "bool",
+                                            "value": true
+                                          },
+                                          "kind": "constant"
+                                        }
+                                      ],
+                                      "expr": {
+                                        "expr": {
+                                          "expr": {
+                                            "kind": "this"
+                                          },
+                                          "kind": "member",
+                                          "member": "m_selection"
+                                        },
+                                        "kind": "member",
+                                        "member": "SetVisible"
+                                      },
+                                      "kind": "call",
+                                      "type_args": []
+                                    },
+                                    "kind": "expr"
+                                  },
+                                  {
+                                    "kind": "let",
+                                    "name": "selectionWidth",
+                                    "type": null,
+                                    "value": {
+                                      "kind": "bin_op",
+                                      "lhs": {
+                                        "expr": {
+                                          "kind": "ident",
+                                          "name": "selectedBounds"
+                                        },
+                                        "kind": "member",
+                                        "member": "Right"
+                                      },
+                                      "op": "-",
+                                      "rhs": {
+                                        "expr": {
+                                          "kind": "ident",
+                                          "name": "selectedBounds"
+                                        },
+                                        "kind": "member",
+                                        "member": "Left"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "kind": "let",
+                                    "name": "selectionPos",
+                                    "type": null,
+                                    "value": {
+                                      "args": [
+                                        {
+                                          "expr": {
+                                            "kind": "ident",
+                                            "name": "selectedBounds"
+                                          },
+                                          "kind": "member",
+                                          "member": "Left"
+                                        },
+                                        {
+                                          "kind": "bin_op",
+                                          "lhs": {
+                                            "kind": "bin_op",
+                                            "lhs": {
+                                              "expr": {
+                                                "kind": "this"
+                                              },
+                                              "kind": "member",
+                                              "member": "m_fontSize"
+                                            },
+                                            "op": "-",
+                                            "rhs": {
+                                              "args": [],
+                                              "expr": {
+                                                "expr": {
+                                                  "expr": {
+                                                    "kind": "this"
+                                                  },
+                                                  "kind": "member",
+                                                  "member": "m_selection"
+                                                },
+                                                "kind": "member",
+                                                "member": "GetHeight"
+                                              },
+                                              "kind": "call",
+                                              "type_args": []
+                                            }
+                                          },
+                                          "op": "/",
+                                          "rhs": {
+                                            "constant": {
+                                              "kind": "f32",
+                                              "value": 2.0
+                                            },
+                                            "kind": "constant"
+                                          }
+                                        }
+                                      ],
+                                      "expr": {
+                                        "kind": "ident",
+                                        "name": "Vector2"
+                                      },
+                                      "kind": "call",
+                                      "type_args": []
+                                    }
+                                  },
+                                  {
+                                    "expr": {
+                                      "args": [
+                                        {
+                                          "kind": "ident",
+                                          "name": "selectionWidth"
+                                        }
+                                      ],
+                                      "expr": {
+                                        "expr": {
+                                          "expr": {
+                                            "kind": "this"
+                                          },
+                                          "kind": "member",
+                                          "member": "m_selection"
+                                        },
+                                        "kind": "member",
+                                        "member": "SetWidth"
+                                      },
+                                      "kind": "call",
+                                      "type_args": []
+                                    },
+                                    "kind": "expr"
+                                  },
+                                  {
+                                    "expr": {
+                                      "args": [
+                                        {
+                                          "kind": "ident",
+                                          "name": "selectionPos"
+                                        }
+                                      ],
+                                      "expr": {
+                                        "expr": {
+                                          "expr": {
+                                            "kind": "this"
+                                          },
+                                          "kind": "member",
+                                          "member": "m_selection"
+                                        },
+                                        "kind": "member",
+                                        "member": "SetTranslation"
+                                      },
+                                      "kind": "call",
+                                      "type_args": []
+                                    },
+                                    "kind": "expr"
+                                  }
+                                ]
+                              },
+                              "condition": {
+                                "expr": {
+                                  "kind": "bin_op",
+                                  "lhs": {
+                                    "kind": "ident",
+                                    "name": "isFocused"
+                                  },
+                                  "op": "&&",
+                                  "rhs": {
+                                    "expr": {
+                                      "args": [],
+                                      "expr": {
+                                        "expr": {
+                                          "kind": "this"
+                                        },
+                                        "kind": "member",
+                                        "member": "IsEmpty"
+                                      },
+                                      "kind": "call",
+                                      "type_args": []
+                                    },
+                                    "kind": "un_op",
+                                    "op": "!"
+                                  }
+                                },
+                                "kind": "expr"
+                              }
+                            }
+                          ],
+                          "else": {
+                            "statements": [
+                              {
+                                "expr": {
+                                  "args": [
+                                    {
+                                      "constant": {
+                                        "kind": "bool",
+                                        "value": false
+                                      },
+                                      "kind": "constant"
+                                    }
+                                  ],
+                                  "expr": {
+                                    "expr": {
+                                      "expr": {
+                                        "kind": "this"
+                                      },
+                                      "kind": "member",
+                                      "member": "m_selection"
+                                    },
+                                    "kind": "member",
+                                    "member": "SetVisible"
+                                  },
+                                  "kind": "call",
+                                  "type_args": []
+                                },
+                                "kind": "expr"
+                              }
+                            ]
+                          },
+                          "kind": "if"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "UpdateState",
+                  "params": [
+                    {
+                      "name": "isFocused",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "Bool"
+                      }
+                    },
+                    {
+                      "name": "selectedBounds",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "RectF"
+                      }
+                    }
+                  ],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "kind": "let",
+                          "name": "self",
+                          "type": {
+                            "args": [
+                              {
+                                "args": [],
+                                "kind": "named",
+                                "name": "Selection"
+                              }
+                            ],
+                            "kind": "named",
+                            "name": "ref"
+                          },
+                          "value": {
+                            "args": [],
+                            "kind": "new",
+                            "type": {
+                              "args": [],
+                              "kind": "named",
+                              "name": "Selection"
+                            }
+                          }
+                        },
+                        {
+                          "expr": {
+                            "args": [],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "self"
+                              },
+                              "kind": "member",
+                              "member": "CreateInstance"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "kind": "ident",
+                            "name": "self"
+                          },
+                          "kind": "return"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "Create",
+                  "params": [],
+                  "return_type": {
+                    "args": [
+                      {
+                        "args": [],
+                        "kind": "named",
+                        "name": "Selection"
+                      }
+                    ],
+                    "kind": "named",
+                    "name": "ref"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": true
+              },
+              "visibility": "public"
+            }
+          ],
+          "name": "Selection",
+          "type_params": []
+        },
+        "kind": "class"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "public"
+    }
+  ],
+  "path": [
+    "Codeware",
+    "UI",
+    "TextInput"
+  ]
+}

@@ -1,0 +1,363 @@
+{
+  "items": [
+    {
+      "annotations": [],
+      "doc": [],
+      "item": {
+        "class": {
+          "extends": {
+            "args": [],
+            "kind": "named",
+            "name": "ConfigVarListener"
+          },
+          "items": [
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "field": {
+                  "default": null,
+                  "name": "m_game",
+                  "type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "GameInstance"
+                  }
+                },
+                "kind": "let"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "private"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "kind": "assign",
+                            "lhs": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "m_game"
+                            },
+                            "rhs": {
+                              "kind": "ident",
+                              "name": "game"
+                            }
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "Initialize",
+                  "params": [
+                    {
+                      "name": "game",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "GameInstance"
+                      }
+                    }
+                  ],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "cname",
+                                  "value": "/language"
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "Register"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "Start",
+                  "params": [],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "blocks": [
+                            {
+                              "body": {
+                                "statements": [
+                                  {
+                                    "expr": {
+                                      "args": [
+                                        {
+                                          "args": [
+                                            {
+                                              "kind": "ident",
+                                              "name": "varName"
+                                            }
+                                          ],
+                                          "expr": {
+                                            "expr": {
+                                              "kind": "ident",
+                                              "name": "UpdateLocaleRequest"
+                                            },
+                                            "kind": "member",
+                                            "member": "Create"
+                                          },
+                                          "kind": "call",
+                                          "type_args": []
+                                        }
+                                      ],
+                                      "expr": {
+                                        "expr": {
+                                          "args": [
+                                            {
+                                              "expr": {
+                                                "kind": "this"
+                                              },
+                                              "kind": "member",
+                                              "member": "m_game"
+                                            }
+                                          ],
+                                          "expr": {
+                                            "expr": {
+                                              "kind": "ident",
+                                              "name": "GameInstance"
+                                            },
+                                            "kind": "member",
+                                            "member": "GetScriptableSystemsContainer"
+                                          },
+                                          "kind": "call",
+                                          "type_args": []
+                                        },
+                                        "kind": "member",
+                                        "member": "QueueRequest"
+                                      },
+                                      "kind": "call",
+                                      "type_args": []
+                                    },
+                                    "kind": "expr"
+                                  }
+                                ]
+                              },
+                              "condition": {
+                                "expr": {
+                                  "args": [
+                                    {
+                                      "kind": "ident",
+                                      "name": "reason"
+                                    },
+                                    {
+                                      "expr": {
+                                        "kind": "ident",
+                                        "name": "ConfigChangeReason"
+                                      },
+                                      "kind": "member",
+                                      "member": "Accepted"
+                                    }
+                                  ],
+                                  "expr": {
+                                    "kind": "ident",
+                                    "name": "Equals"
+                                  },
+                                  "kind": "call",
+                                  "type_args": []
+                                },
+                                "kind": "expr"
+                              }
+                            }
+                          ],
+                          "else": null,
+                          "kind": "if"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "OnVarModified",
+                  "params": [
+                    {
+                      "name": "groupPath",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "CName"
+                      }
+                    },
+                    {
+                      "name": "varName",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "CName"
+                      }
+                    },
+                    {
+                      "name": "varType",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "ConfigVarType"
+                      }
+                    },
+                    {
+                      "name": "reason",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "ConfigChangeReason"
+                      }
+                    }
+                  ],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": true,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "protected"
+            }
+          ],
+          "name": "LanguageSettingsWatcher",
+          "type_params": []
+        },
+        "kind": "class"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "public"
+    }
+  ],
+  "path": [
+    "Codeware",
+    "Localization"
+  ]
+}

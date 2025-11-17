@@ -1,0 +1,4103 @@
+{
+  "items": [
+    {
+      "annotations": [],
+      "doc": [],
+      "item": {
+        "class": {
+          "extends": {
+            "args": [],
+            "kind": "named",
+            "name": "CustomButton"
+          },
+          "items": [
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "field": {
+                  "default": null,
+                  "name": "m_isFlipped",
+                  "type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Bool"
+                  }
+                },
+                "kind": "let"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "protected"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "field": {
+                  "default": null,
+                  "name": "m_bg",
+                  "type": {
+                    "args": [
+                      {
+                        "args": [],
+                        "kind": "named",
+                        "name": "inkImage"
+                      }
+                    ],
+                    "kind": "named",
+                    "name": "wref"
+                  }
+                },
+                "kind": "let"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "protected"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "field": {
+                  "default": null,
+                  "name": "m_frame",
+                  "type": {
+                    "args": [
+                      {
+                        "args": [],
+                        "kind": "named",
+                        "name": "inkImage"
+                      }
+                    ],
+                    "kind": "named",
+                    "name": "wref"
+                  }
+                },
+                "kind": "let"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "protected"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "field": {
+                  "default": null,
+                  "name": "m_input",
+                  "type": {
+                    "args": [
+                      {
+                        "args": [],
+                        "kind": "named",
+                        "name": "inkInputDisplayController"
+                      }
+                    ],
+                    "kind": "named",
+                    "name": "wref"
+                  }
+                },
+                "kind": "let"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "protected"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "kind": "let",
+                          "name": "root",
+                          "type": null,
+                          "value": {
+                            "args": [],
+                            "kind": "new",
+                            "type": {
+                              "args": [],
+                              "kind": "named",
+                              "name": "inkFlex"
+                            }
+                          }
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "cname",
+                                  "value": "button"
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "root"
+                              },
+                              "kind": "member",
+                              "member": "SetName"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "bool",
+                                  "value": true
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "root"
+                              },
+                              "kind": "member",
+                              "member": "SetInteractive"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "args": [
+                                  {
+                                    "constant": {
+                                      "kind": "f32",
+                                      "value": 0.0
+                                    },
+                                    "kind": "constant"
+                                  },
+                                  {
+                                    "constant": {
+                                      "kind": "f32",
+                                      "value": 20.0
+                                    },
+                                    "kind": "constant"
+                                  },
+                                  {
+                                    "constant": {
+                                      "kind": "f32",
+                                      "value": 0.0
+                                    },
+                                    "kind": "constant"
+                                  },
+                                  {
+                                    "constant": {
+                                      "kind": "f32",
+                                      "value": 0.0
+                                    },
+                                    "kind": "constant"
+                                  }
+                                ],
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "inkMargin"
+                                },
+                                "kind": "call",
+                                "type_args": []
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "root"
+                              },
+                              "kind": "member",
+                              "member": "SetMargin"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "inkEHorizontalAlign"
+                                },
+                                "kind": "member",
+                                "member": "Right"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "root"
+                              },
+                              "kind": "member",
+                              "member": "SetHAlign"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "inkEVerticalAlign"
+                                },
+                                "kind": "member",
+                                "member": "Top"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "root"
+                              },
+                              "kind": "member",
+                              "member": "SetVAlign"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "args": [
+                                  {
+                                    "constant": {
+                                      "kind": "f32",
+                                      "value": 100.0
+                                    },
+                                    "kind": "constant"
+                                  },
+                                  {
+                                    "constant": {
+                                      "kind": "f32",
+                                      "value": 100.0
+                                    },
+                                    "kind": "constant"
+                                  }
+                                ],
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "Vector2"
+                                },
+                                "kind": "call",
+                                "type_args": []
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "root"
+                              },
+                              "kind": "member",
+                              "member": "SetSize"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "kind": "let",
+                          "name": "minSize",
+                          "type": null,
+                          "value": {
+                            "args": [],
+                            "kind": "new",
+                            "type": {
+                              "args": [],
+                              "kind": "named",
+                              "name": "inkRectangle"
+                            }
+                          }
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "cname",
+                                  "value": "minSize"
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "minSize"
+                              },
+                              "kind": "member",
+                              "member": "SetName"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "bool",
+                                  "value": false
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "minSize"
+                              },
+                              "kind": "member",
+                              "member": "SetVisible"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "bool",
+                                  "value": true
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "minSize"
+                              },
+                              "kind": "member",
+                              "member": "SetAffectsLayoutWhenHidden"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "inkEHorizontalAlign"
+                                },
+                                "kind": "member",
+                                "member": "Left"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "minSize"
+                              },
+                              "kind": "member",
+                              "member": "SetHAlign"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "inkEVerticalAlign"
+                                },
+                                "kind": "member",
+                                "member": "Top"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "minSize"
+                              },
+                              "kind": "member",
+                              "member": "SetVAlign"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "args": [
+                                  {
+                                    "constant": {
+                                      "kind": "f32",
+                                      "value": 326.0
+                                    },
+                                    "kind": "constant"
+                                  },
+                                  {
+                                    "constant": {
+                                      "kind": "f32",
+                                      "value": 80.0
+                                    },
+                                    "kind": "constant"
+                                  }
+                                ],
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "Vector2"
+                                },
+                                "kind": "call",
+                                "type_args": []
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "minSize"
+                              },
+                              "kind": "member",
+                              "member": "SetSize"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "kind": "ident",
+                                "name": "root"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "minSize"
+                              },
+                              "kind": "member",
+                              "member": "Reparent"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "kind": "let",
+                          "name": "background",
+                          "type": null,
+                          "value": {
+                            "args": [],
+                            "kind": "new",
+                            "type": {
+                              "args": [],
+                              "kind": "named",
+                              "name": "inkImage"
+                            }
+                          }
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "cname",
+                                  "value": "background"
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "background"
+                              },
+                              "kind": "member",
+                              "member": "SetName"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "resource",
+                                  "value": "base\\gameplay\\gui\\common\\shapes\\atlas_shapes_sync.inkatlas"
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "background"
+                              },
+                              "kind": "member",
+                              "member": "SetAtlasResource"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "cname",
+                                  "value": "cell_bg"
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "background"
+                              },
+                              "kind": "member",
+                              "member": "SetTexturePart"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "bool",
+                                  "value": true
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "background"
+                              },
+                              "kind": "member",
+                              "member": "SetNineSliceScale"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "args": [
+                                  {
+                                    "constant": {
+                                      "kind": "f32",
+                                      "value": 0.5
+                                    },
+                                    "kind": "constant"
+                                  },
+                                  {
+                                    "constant": {
+                                      "kind": "f32",
+                                      "value": 0.5
+                                    },
+                                    "kind": "constant"
+                                  }
+                                ],
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "Vector2"
+                                },
+                                "kind": "call",
+                                "type_args": []
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "background"
+                              },
+                              "kind": "member",
+                              "member": "SetAnchorPoint"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "args": [
+                                  {
+                                    "constant": {
+                                      "kind": "f32",
+                                      "value": 326.0
+                                    },
+                                    "kind": "constant"
+                                  },
+                                  {
+                                    "constant": {
+                                      "kind": "f32",
+                                      "value": 80.0
+                                    },
+                                    "kind": "constant"
+                                  }
+                                ],
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "Vector2"
+                                },
+                                "kind": "call",
+                                "type_args": []
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "background"
+                              },
+                              "kind": "member",
+                              "member": "SetSize"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "resource",
+                                  "value": "base\\gameplay\\gui\\common\\dialogs_popups.inkstyle"
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "background"
+                              },
+                              "kind": "member",
+                              "member": "SetStyle"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "cname",
+                                  "value": "tintColor"
+                                },
+                                "kind": "constant"
+                              },
+                              {
+                                "constant": {
+                                  "kind": "cname",
+                                  "value": "PopupButton.bgColor"
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "background"
+                              },
+                              "kind": "member",
+                              "member": "BindProperty"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "cname",
+                                  "value": "opacity"
+                                },
+                                "kind": "constant"
+                              },
+                              {
+                                "constant": {
+                                  "kind": "cname",
+                                  "value": "PopupButton.bgOpacity"
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "background"
+                              },
+                              "kind": "member",
+                              "member": "BindProperty"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "kind": "ident",
+                                "name": "root"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "background"
+                              },
+                              "kind": "member",
+                              "member": "Reparent"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "kind": "let",
+                          "name": "frame",
+                          "type": null,
+                          "value": {
+                            "args": [],
+                            "kind": "new",
+                            "type": {
+                              "args": [],
+                              "kind": "named",
+                              "name": "inkImage"
+                            }
+                          }
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "cname",
+                                  "value": "frame"
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "frame"
+                              },
+                              "kind": "member",
+                              "member": "SetName"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "resource",
+                                  "value": "base\\gameplay\\gui\\common\\shapes\\atlas_shapes_sync.inkatlas"
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "frame"
+                              },
+                              "kind": "member",
+                              "member": "SetAtlasResource"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "cname",
+                                  "value": "cell_fg"
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "frame"
+                              },
+                              "kind": "member",
+                              "member": "SetTexturePart"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "bool",
+                                  "value": true
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "frame"
+                              },
+                              "kind": "member",
+                              "member": "SetNineSliceScale"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "inkEVerticalAlign"
+                                },
+                                "kind": "member",
+                                "member": "Top"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "frame"
+                              },
+                              "kind": "member",
+                              "member": "SetVAlign"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "args": [
+                                  {
+                                    "constant": {
+                                      "kind": "f32",
+                                      "value": 0.5
+                                    },
+                                    "kind": "constant"
+                                  },
+                                  {
+                                    "constant": {
+                                      "kind": "f32",
+                                      "value": 0.5
+                                    },
+                                    "kind": "constant"
+                                  }
+                                ],
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "Vector2"
+                                },
+                                "kind": "call",
+                                "type_args": []
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "frame"
+                              },
+                              "kind": "member",
+                              "member": "SetAnchorPoint"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "args": [
+                                  {
+                                    "constant": {
+                                      "kind": "f32",
+                                      "value": 326.0
+                                    },
+                                    "kind": "constant"
+                                  },
+                                  {
+                                    "constant": {
+                                      "kind": "f32",
+                                      "value": 80.0
+                                    },
+                                    "kind": "constant"
+                                  }
+                                ],
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "Vector2"
+                                },
+                                "kind": "call",
+                                "type_args": []
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "frame"
+                              },
+                              "kind": "member",
+                              "member": "SetSize"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "resource",
+                                  "value": "base\\gameplay\\gui\\common\\dialogs_popups.inkstyle"
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "frame"
+                              },
+                              "kind": "member",
+                              "member": "SetStyle"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "cname",
+                                  "value": "tintColor"
+                                },
+                                "kind": "constant"
+                              },
+                              {
+                                "constant": {
+                                  "kind": "cname",
+                                  "value": "PopupButton.frameColor"
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "frame"
+                              },
+                              "kind": "member",
+                              "member": "BindProperty"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "cname",
+                                  "value": "opacity"
+                                },
+                                "kind": "constant"
+                              },
+                              {
+                                "constant": {
+                                  "kind": "cname",
+                                  "value": "PopupButton.frameOpacity"
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "frame"
+                              },
+                              "kind": "member",
+                              "member": "BindProperty"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "kind": "ident",
+                                "name": "root"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "frame"
+                              },
+                              "kind": "member",
+                              "member": "Reparent"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "kind": "let",
+                          "name": "content",
+                          "type": null,
+                          "value": {
+                            "args": [],
+                            "kind": "new",
+                            "type": {
+                              "args": [],
+                              "kind": "named",
+                              "name": "inkHorizontalPanel"
+                            }
+                          }
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "cname",
+                                  "value": "content"
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "content"
+                              },
+                              "kind": "member",
+                              "member": "SetName"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "bool",
+                                  "value": true
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "content"
+                              },
+                              "kind": "member",
+                              "member": "SetFitToContent"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "args": [
+                                  {
+                                    "constant": {
+                                      "kind": "f32",
+                                      "value": 15.0
+                                    },
+                                    "kind": "constant"
+                                  },
+                                  {
+                                    "constant": {
+                                      "kind": "f32",
+                                      "value": 0.0
+                                    },
+                                    "kind": "constant"
+                                  },
+                                  {
+                                    "constant": {
+                                      "kind": "f32",
+                                      "value": 0.0
+                                    },
+                                    "kind": "constant"
+                                  },
+                                  {
+                                    "constant": {
+                                      "kind": "f32",
+                                      "value": 0.0
+                                    },
+                                    "kind": "constant"
+                                  }
+                                ],
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "inkMargin"
+                                },
+                                "kind": "call",
+                                "type_args": []
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "content"
+                              },
+                              "kind": "member",
+                              "member": "SetMargin"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "inkEHorizontalAlign"
+                                },
+                                "kind": "member",
+                                "member": "Left"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "content"
+                              },
+                              "kind": "member",
+                              "member": "SetHAlign"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "kind": "ident",
+                                "name": "root"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "content"
+                              },
+                              "kind": "member",
+                              "member": "Reparent"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "kind": "let",
+                          "name": "inputDisplay",
+                          "type": null,
+                          "value": {
+                            "args": [],
+                            "kind": "new",
+                            "type": {
+                              "args": [],
+                              "kind": "named",
+                              "name": "inkHorizontalPanel"
+                            }
+                          }
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "cname",
+                                  "value": "inputDisplay"
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "inputDisplay"
+                              },
+                              "kind": "member",
+                              "member": "SetName"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "bool",
+                                  "value": true
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "inputDisplay"
+                              },
+                              "kind": "member",
+                              "member": "SetFitToContent"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "args": [
+                                  {
+                                    "constant": {
+                                      "kind": "f32",
+                                      "value": 0.0
+                                    },
+                                    "kind": "constant"
+                                  },
+                                  {
+                                    "constant": {
+                                      "kind": "f32",
+                                      "value": 0.0
+                                    },
+                                    "kind": "constant"
+                                  },
+                                  {
+                                    "constant": {
+                                      "kind": "f32",
+                                      "value": 12.0
+                                    },
+                                    "kind": "constant"
+                                  },
+                                  {
+                                    "constant": {
+                                      "kind": "f32",
+                                      "value": 0.0
+                                    },
+                                    "kind": "constant"
+                                  }
+                                ],
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "inkMargin"
+                                },
+                                "kind": "call",
+                                "type_args": []
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "inputDisplay"
+                              },
+                              "kind": "member",
+                              "member": "SetMargin"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "inkEHorizontalAlign"
+                                },
+                                "kind": "member",
+                                "member": "Left"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "inputDisplay"
+                              },
+                              "kind": "member",
+                              "member": "SetHAlign"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "inkEVerticalAlign"
+                                },
+                                "kind": "member",
+                                "member": "Center"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "inputDisplay"
+                              },
+                              "kind": "member",
+                              "member": "SetVAlign"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "args": [
+                                  {
+                                    "constant": {
+                                      "kind": "f32",
+                                      "value": 40.0
+                                    },
+                                    "kind": "constant"
+                                  },
+                                  {
+                                    "constant": {
+                                      "kind": "f32",
+                                      "value": 32.0
+                                    },
+                                    "kind": "constant"
+                                  }
+                                ],
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "Vector2"
+                                },
+                                "kind": "call",
+                                "type_args": []
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "inputDisplay"
+                              },
+                              "kind": "member",
+                              "member": "SetSize"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "kind": "ident",
+                                "name": "content"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "inputDisplay"
+                              },
+                              "kind": "member",
+                              "member": "Reparent"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "kind": "let",
+                          "name": "inputRoot",
+                          "type": null,
+                          "value": {
+                            "args": [],
+                            "kind": "new",
+                            "type": {
+                              "args": [],
+                              "kind": "named",
+                              "name": "inkCanvas"
+                            }
+                          }
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "cname",
+                                  "value": "inputRoot"
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "inputRoot"
+                              },
+                              "kind": "member",
+                              "member": "SetName"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "inkEHorizontalAlign"
+                                },
+                                "kind": "member",
+                                "member": "Left"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "inputRoot"
+                              },
+                              "kind": "member",
+                              "member": "SetHAlign"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "inkEVerticalAlign"
+                                },
+                                "kind": "member",
+                                "member": "Top"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "inputRoot"
+                              },
+                              "kind": "member",
+                              "member": "SetVAlign"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "args": [
+                                  {
+                                    "constant": {
+                                      "kind": "f32",
+                                      "value": 64.0
+                                    },
+                                    "kind": "constant"
+                                  },
+                                  {
+                                    "constant": {
+                                      "kind": "f32",
+                                      "value": 64.0
+                                    },
+                                    "kind": "constant"
+                                  }
+                                ],
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "Vector2"
+                                },
+                                "kind": "call",
+                                "type_args": []
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "inputRoot"
+                              },
+                              "kind": "member",
+                              "member": "SetSize"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "kind": "ident",
+                                "name": "inputDisplay"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "inputRoot"
+                              },
+                              "kind": "member",
+                              "member": "Reparent"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "kind": "let",
+                          "name": "inputIcon",
+                          "type": null,
+                          "value": {
+                            "args": [],
+                            "kind": "new",
+                            "type": {
+                              "args": [],
+                              "kind": "named",
+                              "name": "inkImage"
+                            }
+                          }
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "cname",
+                                  "value": "inputIcon"
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "inputIcon"
+                              },
+                              "kind": "member",
+                              "member": "SetName"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "resource",
+                                  "value": "base\\gameplay\\gui\\common\\input\\icons_keyboard.inkatlas"
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "inputIcon"
+                              },
+                              "kind": "member",
+                              "member": "SetAtlasResource"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "cname",
+                                  "value": "kb_enter"
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "inputIcon"
+                              },
+                              "kind": "member",
+                              "member": "SetTexturePart"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "bool",
+                                  "value": true
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "inputIcon"
+                              },
+                              "kind": "member",
+                              "member": "SetAffectsLayoutWhenHidden"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "inkEHorizontalAlign"
+                                },
+                                "kind": "member",
+                                "member": "Center"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "inputIcon"
+                              },
+                              "kind": "member",
+                              "member": "SetHAlign"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "inkEVerticalAlign"
+                                },
+                                "kind": "member",
+                                "member": "Center"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "inputIcon"
+                              },
+                              "kind": "member",
+                              "member": "SetVAlign"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "inkEAnchor"
+                                },
+                                "kind": "member",
+                                "member": "Centered"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "inputIcon"
+                              },
+                              "kind": "member",
+                              "member": "SetAnchor"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "args": [
+                                  {
+                                    "constant": {
+                                      "kind": "f32",
+                                      "value": 0.5
+                                    },
+                                    "kind": "constant"
+                                  },
+                                  {
+                                    "constant": {
+                                      "kind": "f32",
+                                      "value": 0.5
+                                    },
+                                    "kind": "constant"
+                                  }
+                                ],
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "Vector2"
+                                },
+                                "kind": "call",
+                                "type_args": []
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "inputIcon"
+                              },
+                              "kind": "member",
+                              "member": "SetAnchorPoint"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "args": [
+                                  {
+                                    "constant": {
+                                      "kind": "f32",
+                                      "value": 64.0
+                                    },
+                                    "kind": "constant"
+                                  },
+                                  {
+                                    "constant": {
+                                      "kind": "f32",
+                                      "value": 64.0
+                                    },
+                                    "kind": "constant"
+                                  }
+                                ],
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "Vector2"
+                                },
+                                "kind": "call",
+                                "type_args": []
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "inputIcon"
+                              },
+                              "kind": "member",
+                              "member": "SetSize"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "resource",
+                                  "value": "base\\gameplay\\gui\\common\\dialogs_popups.inkstyle"
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "inputIcon"
+                              },
+                              "kind": "member",
+                              "member": "SetStyle"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "cname",
+                                  "value": "tintColor"
+                                },
+                                "kind": "constant"
+                              },
+                              {
+                                "constant": {
+                                  "kind": "cname",
+                                  "value": "PopupButton.iconColor"
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "inputIcon"
+                              },
+                              "kind": "member",
+                              "member": "BindProperty"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "cname",
+                                  "value": "opacity"
+                                },
+                                "kind": "constant"
+                              },
+                              {
+                                "constant": {
+                                  "kind": "cname",
+                                  "value": "PopupButton.iconOpacity"
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "inputIcon"
+                              },
+                              "kind": "member",
+                              "member": "BindProperty"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "kind": "ident",
+                                "name": "inputRoot"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "inputIcon"
+                              },
+                              "kind": "member",
+                              "member": "Reparent"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "kind": "let",
+                          "name": "inputText",
+                          "type": null,
+                          "value": {
+                            "args": [],
+                            "kind": "new",
+                            "type": {
+                              "args": [],
+                              "kind": "named",
+                              "name": "inkText"
+                            }
+                          }
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "cname",
+                                  "value": "inputText"
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "inputText"
+                              },
+                              "kind": "member",
+                              "member": "SetName"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "bool",
+                                  "value": false
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "inputText"
+                              },
+                              "kind": "member",
+                              "member": "SetVisible"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "string",
+                                  "value": "base\\gameplay\\gui\\fonts\\raj\\raj.inkfontfamily"
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "inputText"
+                              },
+                              "kind": "member",
+                              "member": "SetFontFamily"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "cname",
+                                  "value": "Regular"
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "inputText"
+                              },
+                              "kind": "member",
+                              "member": "SetFontStyle"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "i32",
+                                  "value": 45
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "inputText"
+                              },
+                              "kind": "member",
+                              "member": "SetFontSize"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "bool",
+                                  "value": true
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "inputText"
+                              },
+                              "kind": "member",
+                              "member": "SetFitToContent"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "inkEAnchor"
+                                },
+                                "kind": "member",
+                                "member": "Centered"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "inputText"
+                              },
+                              "kind": "member",
+                              "member": "SetAnchor"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "args": [
+                                  {
+                                    "constant": {
+                                      "kind": "f32",
+                                      "value": 0.5
+                                    },
+                                    "kind": "constant"
+                                  },
+                                  {
+                                    "constant": {
+                                      "kind": "f32",
+                                      "value": 0.5
+                                    },
+                                    "kind": "constant"
+                                  }
+                                ],
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "Vector2"
+                                },
+                                "kind": "call",
+                                "type_args": []
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "inputText"
+                              },
+                              "kind": "member",
+                              "member": "SetAnchorPoint"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "resource",
+                                  "value": "base\\gameplay\\gui\\common\\dialogs_popups.inkstyle"
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "inputText"
+                              },
+                              "kind": "member",
+                              "member": "SetStyle"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "cname",
+                                  "value": "tintColor"
+                                },
+                                "kind": "constant"
+                              },
+                              {
+                                "constant": {
+                                  "kind": "cname",
+                                  "value": "PopupButton.iconColor"
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "inputText"
+                              },
+                              "kind": "member",
+                              "member": "BindProperty"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "cname",
+                                  "value": "opacity"
+                                },
+                                "kind": "constant"
+                              },
+                              {
+                                "constant": {
+                                  "kind": "cname",
+                                  "value": "PopupButton.iconOpacity"
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "inputText"
+                              },
+                              "kind": "member",
+                              "member": "BindProperty"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "kind": "ident",
+                                "name": "inputRoot"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "inputText"
+                              },
+                              "kind": "member",
+                              "member": "Reparent"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "kind": "let",
+                          "name": "inputController",
+                          "type": null,
+                          "value": {
+                            "args": [],
+                            "kind": "new",
+                            "type": {
+                              "args": [],
+                              "kind": "named",
+                              "name": "inkInputDisplayController"
+                            }
+                          }
+                        },
+                        {
+                          "expr": {
+                            "kind": "assign",
+                            "lhs": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "inputController"
+                              },
+                              "kind": "member",
+                              "member": "fixedIconHeight"
+                            },
+                            "rhs": {
+                              "constant": {
+                                "kind": "i32",
+                                "value": 64
+                              },
+                              "kind": "constant"
+                            }
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "kind": "assign",
+                            "lhs": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "inputController"
+                              },
+                              "kind": "member",
+                              "member": "iconRef"
+                            },
+                            "rhs": {
+                              "args": [
+                                {
+                                  "kind": "ident",
+                                  "name": "inputIcon"
+                                }
+                              ],
+                              "expr": {
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "inkWidgetRef"
+                                },
+                                "kind": "member",
+                                "member": "Create"
+                              },
+                              "kind": "call",
+                              "type_args": []
+                            }
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "kind": "assign",
+                            "lhs": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "inputController"
+                              },
+                              "kind": "member",
+                              "member": "nameRef"
+                            },
+                            "rhs": {
+                              "args": [
+                                {
+                                  "kind": "ident",
+                                  "name": "inputText"
+                                }
+                              ],
+                              "expr": {
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "inkWidgetRef"
+                                },
+                                "kind": "member",
+                                "member": "Create"
+                              },
+                              "kind": "call",
+                              "type_args": []
+                            }
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "kind": "assign",
+                            "lhs": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "inputController"
+                              },
+                              "kind": "member",
+                              "member": "canvasRef"
+                            },
+                            "rhs": {
+                              "args": [
+                                {
+                                  "kind": "ident",
+                                  "name": "inputRoot"
+                                }
+                              ],
+                              "expr": {
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "inkWidgetRef"
+                                },
+                                "kind": "member",
+                                "member": "Create"
+                              },
+                              "kind": "call",
+                              "type_args": []
+                            }
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "kind": "ident",
+                                "name": "inputController"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "inputDisplay"
+                              },
+                              "kind": "member",
+                              "member": "AttachController"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "kind": "let",
+                          "name": "label",
+                          "type": null,
+                          "value": {
+                            "args": [],
+                            "kind": "new",
+                            "type": {
+                              "args": [],
+                              "kind": "named",
+                              "name": "inkText"
+                            }
+                          }
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "cname",
+                                  "value": "label"
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "label"
+                              },
+                              "kind": "member",
+                              "member": "SetName"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "string",
+                                  "value": "base\\gameplay\\gui\\fonts\\raj\\raj.inkfontfamily"
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "label"
+                              },
+                              "kind": "member",
+                              "member": "SetFontFamily"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "textLetterCase"
+                                },
+                                "kind": "member",
+                                "member": "UpperCase"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "label"
+                              },
+                              "kind": "member",
+                              "member": "SetLetterCase"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "f32",
+                                  "value": 0.8999999761581421
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "label"
+                              },
+                              "kind": "member",
+                              "member": "SetLineHeight"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "textHorizontalAlignment"
+                                },
+                                "kind": "member",
+                                "member": "Center"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "label"
+                              },
+                              "kind": "member",
+                              "member": "SetHorizontalAlignment"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "textVerticalAlignment"
+                                },
+                                "kind": "member",
+                                "member": "Center"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "label"
+                              },
+                              "kind": "member",
+                              "member": "SetVerticalAlignment"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "inkEHorizontalAlign"
+                                },
+                                "kind": "member",
+                                "member": "Center"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "label"
+                              },
+                              "kind": "member",
+                              "member": "SetContentHAlign"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "inkEVerticalAlign"
+                                },
+                                "kind": "member",
+                                "member": "Center"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "label"
+                              },
+                              "kind": "member",
+                              "member": "SetContentVAlign"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "textOverflowPolicy"
+                                },
+                                "kind": "member",
+                                "member": "AdjustToSize"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "label"
+                              },
+                              "kind": "member",
+                              "member": "SetOverflowPolicy"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "bool",
+                                  "value": true
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "label"
+                              },
+                              "kind": "member",
+                              "member": "SetFitToContent"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "inkEVerticalAlign"
+                                },
+                                "kind": "member",
+                                "member": "Center"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "label"
+                              },
+                              "kind": "member",
+                              "member": "SetVAlign"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "args": [
+                                  {
+                                    "constant": {
+                                      "kind": "f32",
+                                      "value": 100.0
+                                    },
+                                    "kind": "constant"
+                                  },
+                                  {
+                                    "constant": {
+                                      "kind": "f32",
+                                      "value": 32.0
+                                    },
+                                    "kind": "constant"
+                                  }
+                                ],
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "Vector2"
+                                },
+                                "kind": "call",
+                                "type_args": []
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "label"
+                              },
+                              "kind": "member",
+                              "member": "SetSize"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "resource",
+                                  "value": "base\\gameplay\\gui\\common\\dialogs_popups.inkstyle"
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "label"
+                              },
+                              "kind": "member",
+                              "member": "SetStyle"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "cname",
+                                  "value": "fontStyle"
+                                },
+                                "kind": "constant"
+                              },
+                              {
+                                "constant": {
+                                  "kind": "cname",
+                                  "value": "MainColors.BodyFontWeight"
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "label"
+                              },
+                              "kind": "member",
+                              "member": "BindProperty"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "cname",
+                                  "value": "fontSize"
+                                },
+                                "kind": "constant"
+                              },
+                              {
+                                "constant": {
+                                  "kind": "cname",
+                                  "value": "MainColors.ReadableMedium"
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "label"
+                              },
+                              "kind": "member",
+                              "member": "BindProperty"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "cname",
+                                  "value": "tintColor"
+                                },
+                                "kind": "constant"
+                              },
+                              {
+                                "constant": {
+                                  "kind": "cname",
+                                  "value": "PopupButton.textColor"
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "label"
+                              },
+                              "kind": "member",
+                              "member": "BindProperty"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "cname",
+                                  "value": "opacity"
+                                },
+                                "kind": "constant"
+                              },
+                              {
+                                "constant": {
+                                  "kind": "cname",
+                                  "value": "PopupButton.textOpacity"
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "label"
+                              },
+                              "kind": "member",
+                              "member": "BindProperty"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "kind": "ident",
+                                "name": "content"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "label"
+                              },
+                              "kind": "member",
+                              "member": "Reparent"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "kind": "assign",
+                            "lhs": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "m_root"
+                            },
+                            "rhs": {
+                              "kind": "ident",
+                              "name": "root"
+                            }
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "kind": "assign",
+                            "lhs": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "m_label"
+                            },
+                            "rhs": {
+                              "kind": "ident",
+                              "name": "label"
+                            }
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "kind": "assign",
+                            "lhs": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "m_bg"
+                            },
+                            "rhs": {
+                              "kind": "ident",
+                              "name": "background"
+                            }
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "kind": "assign",
+                            "lhs": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "m_frame"
+                            },
+                            "rhs": {
+                              "kind": "ident",
+                              "name": "frame"
+                            }
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "kind": "assign",
+                            "lhs": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "m_input"
+                            },
+                            "rhs": {
+                              "kind": "ident",
+                              "name": "inputController"
+                            }
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "kind": "ident",
+                                "name": "root"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "SetRootWidget"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [],
+                            "expr": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "ApplyFlippedState"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [],
+                            "expr": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "ApplyInputState"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "CreateWidgets",
+                  "params": [],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "protected"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "cond": {
+                                  "expr": {
+                                    "kind": "this"
+                                  },
+                                  "kind": "member",
+                                  "member": "m_isFlipped"
+                                },
+                                "else": {
+                                  "constant": {
+                                    "kind": "cname",
+                                    "value": "cell_bg"
+                                  },
+                                  "kind": "constant"
+                                },
+                                "kind": "conditional",
+                                "then": {
+                                  "constant": {
+                                    "kind": "cname",
+                                    "value": "cell_flip_bg"
+                                  },
+                                  "kind": "constant"
+                                }
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "expr": {
+                                  "kind": "this"
+                                },
+                                "kind": "member",
+                                "member": "m_bg"
+                              },
+                              "kind": "member",
+                              "member": "SetTexturePart"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "cond": {
+                                  "expr": {
+                                    "kind": "this"
+                                  },
+                                  "kind": "member",
+                                  "member": "m_isFlipped"
+                                },
+                                "else": {
+                                  "constant": {
+                                    "kind": "cname",
+                                    "value": "cell_fg"
+                                  },
+                                  "kind": "constant"
+                                },
+                                "kind": "conditional",
+                                "then": {
+                                  "constant": {
+                                    "kind": "cname",
+                                    "value": "cell_flip_fg"
+                                  },
+                                  "kind": "constant"
+                                }
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "expr": {
+                                  "kind": "this"
+                                },
+                                "kind": "member",
+                                "member": "m_frame"
+                              },
+                              "kind": "member",
+                              "member": "SetTexturePart"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "ApplyFlippedState",
+                  "params": [],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "protected"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "blocks": [
+                            {
+                              "body": {
+                                "statements": [
+                                  {
+                                    "expr": {
+                                      "args": [
+                                        {
+                                          "constant": {
+                                            "kind": "bool",
+                                            "value": true
+                                          },
+                                          "kind": "constant"
+                                        }
+                                      ],
+                                      "expr": {
+                                        "expr": {
+                                          "expr": {
+                                            "kind": "this"
+                                          },
+                                          "kind": "member",
+                                          "member": "m_input"
+                                        },
+                                        "kind": "member",
+                                        "member": "SetVisible"
+                                      },
+                                      "kind": "call",
+                                      "type_args": []
+                                    },
+                                    "kind": "expr"
+                                  },
+                                  {
+                                    "expr": {
+                                      "args": [
+                                        {
+                                          "args": [
+                                            {
+                                              "constant": {
+                                                "kind": "f32",
+                                                "value": 0.0
+                                              },
+                                              "kind": "constant"
+                                            },
+                                            {
+                                              "constant": {
+                                                "kind": "f32",
+                                                "value": 0.0
+                                              },
+                                              "kind": "constant"
+                                            },
+                                            {
+                                              "constant": {
+                                                "kind": "f32",
+                                                "value": 20.0
+                                              },
+                                              "kind": "constant"
+                                            },
+                                            {
+                                              "constant": {
+                                                "kind": "f32",
+                                                "value": 0.0
+                                              },
+                                              "kind": "constant"
+                                            }
+                                          ],
+                                          "expr": {
+                                            "kind": "ident",
+                                            "name": "inkMargin"
+                                          },
+                                          "kind": "call",
+                                          "type_args": []
+                                        }
+                                      ],
+                                      "expr": {
+                                        "expr": {
+                                          "expr": {
+                                            "kind": "this"
+                                          },
+                                          "kind": "member",
+                                          "member": "m_label"
+                                        },
+                                        "kind": "member",
+                                        "member": "SetMargin"
+                                      },
+                                      "kind": "call",
+                                      "type_args": []
+                                    },
+                                    "kind": "expr"
+                                  }
+                                ]
+                              },
+                              "condition": {
+                                "expr": {
+                                  "args": [
+                                    {
+                                      "args": [],
+                                      "expr": {
+                                        "expr": {
+                                          "expr": {
+                                            "kind": "this"
+                                          },
+                                          "kind": "member",
+                                          "member": "m_input"
+                                        },
+                                        "kind": "member",
+                                        "member": "GetInputAction"
+                                      },
+                                      "kind": "call",
+                                      "type_args": []
+                                    },
+                                    {
+                                      "constant": {
+                                        "kind": "cname",
+                                        "value": ""
+                                      },
+                                      "kind": "constant"
+                                    }
+                                  ],
+                                  "expr": {
+                                    "kind": "ident",
+                                    "name": "NotEquals"
+                                  },
+                                  "kind": "call",
+                                  "type_args": []
+                                },
+                                "kind": "expr"
+                              }
+                            }
+                          ],
+                          "else": {
+                            "statements": [
+                              {
+                                "expr": {
+                                  "args": [
+                                    {
+                                      "constant": {
+                                        "kind": "bool",
+                                        "value": false
+                                      },
+                                      "kind": "constant"
+                                    }
+                                  ],
+                                  "expr": {
+                                    "expr": {
+                                      "expr": {
+                                        "kind": "this"
+                                      },
+                                      "kind": "member",
+                                      "member": "m_input"
+                                    },
+                                    "kind": "member",
+                                    "member": "SetVisible"
+                                  },
+                                  "kind": "call",
+                                  "type_args": []
+                                },
+                                "kind": "expr"
+                              },
+                              {
+                                "expr": {
+                                  "args": [
+                                    {
+                                      "args": [
+                                        {
+                                          "constant": {
+                                            "kind": "f32",
+                                            "value": 10.0
+                                          },
+                                          "kind": "constant"
+                                        },
+                                        {
+                                          "constant": {
+                                            "kind": "f32",
+                                            "value": 0.0
+                                          },
+                                          "kind": "constant"
+                                        },
+                                        {
+                                          "constant": {
+                                            "kind": "f32",
+                                            "value": 20.0
+                                          },
+                                          "kind": "constant"
+                                        },
+                                        {
+                                          "constant": {
+                                            "kind": "f32",
+                                            "value": 0.0
+                                          },
+                                          "kind": "constant"
+                                        }
+                                      ],
+                                      "expr": {
+                                        "kind": "ident",
+                                        "name": "inkMargin"
+                                      },
+                                      "kind": "call",
+                                      "type_args": []
+                                    }
+                                  ],
+                                  "expr": {
+                                    "expr": {
+                                      "expr": {
+                                        "kind": "this"
+                                      },
+                                      "kind": "member",
+                                      "member": "m_label"
+                                    },
+                                    "kind": "member",
+                                    "member": "SetMargin"
+                                  },
+                                  "kind": "call",
+                                  "type_args": []
+                                },
+                                "kind": "expr"
+                              }
+                            ]
+                          },
+                          "kind": "if"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "ApplyInputState",
+                  "params": [],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "protected"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "cond": {
+                                  "expr": {
+                                    "kind": "this"
+                                  },
+                                  "kind": "member",
+                                  "member": "m_isHovered"
+                                },
+                                "else": {
+                                  "constant": {
+                                    "kind": "cname",
+                                    "value": "Default"
+                                  },
+                                  "kind": "constant"
+                                },
+                                "kind": "conditional",
+                                "then": {
+                                  "constant": {
+                                    "kind": "cname",
+                                    "value": "Hover"
+                                  },
+                                  "kind": "constant"
+                                }
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "expr": {
+                                  "kind": "this"
+                                },
+                                "kind": "member",
+                                "member": "m_root"
+                              },
+                              "kind": "member",
+                              "member": "SetState"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "ApplyHoveredState",
+                  "params": [],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "protected"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "kind": "assign",
+                            "lhs": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "m_isFlipped"
+                            },
+                            "rhs": {
+                              "kind": "ident",
+                              "name": "isFlipped"
+                            }
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [],
+                            "expr": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "ApplyFlippedState"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "SetFlipped",
+                  "params": [
+                    {
+                      "name": "isFlipped",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "Bool"
+                      }
+                    }
+                  ],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "args": [],
+                            "expr": {
+                              "expr": {
+                                "expr": {
+                                  "kind": "this"
+                                },
+                                "kind": "member",
+                                "member": "m_input"
+                              },
+                              "kind": "member",
+                              "member": "GetInputAction"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "return"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "GetInputAction",
+                  "params": [],
+                  "return_type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "CName"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "kind": "ident",
+                                "name": "action"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "expr": {
+                                  "kind": "this"
+                                },
+                                "kind": "member",
+                                "member": "m_input"
+                              },
+                              "kind": "member",
+                              "member": "SetInputAction"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [],
+                            "expr": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "ApplyInputState"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "SetInputAction",
+                  "params": [
+                    {
+                      "name": "action",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "CName"
+                      }
+                    }
+                  ],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "kind": "ident",
+                                "name": "input"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "expr": {
+                                  "kind": "this"
+                                },
+                                "kind": "member",
+                                "member": "m_input"
+                              },
+                              "kind": "member",
+                              "member": "SetInputKey"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [],
+                            "expr": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "ApplyInputState"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "SetInputKey",
+                  "params": [
+                    {
+                      "name": "input",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "inkInputKeyData"
+                      }
+                    }
+                  ],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "kind": "let",
+                          "name": "self",
+                          "type": null,
+                          "value": {
+                            "args": [],
+                            "kind": "new",
+                            "type": {
+                              "args": [],
+                              "kind": "named",
+                              "name": "PopupButton"
+                            }
+                          }
+                        },
+                        {
+                          "expr": {
+                            "args": [],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "self"
+                              },
+                              "kind": "member",
+                              "member": "CreateInstance"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "kind": "ident",
+                            "name": "self"
+                          },
+                          "kind": "return"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "Create",
+                  "params": [],
+                  "return_type": {
+                    "args": [
+                      {
+                        "args": [],
+                        "kind": "named",
+                        "name": "PopupButton"
+                      }
+                    ],
+                    "kind": "named",
+                    "name": "ref"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": true
+              },
+              "visibility": "public"
+            }
+          ],
+          "name": "PopupButton",
+          "type_params": []
+        },
+        "kind": "class"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "public"
+    }
+  ],
+  "path": [
+    "Codeware",
+    "UI"
+  ]
+}

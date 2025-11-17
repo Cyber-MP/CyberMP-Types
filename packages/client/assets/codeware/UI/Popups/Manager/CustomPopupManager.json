@@ -1,0 +1,2537 @@
+{
+  "items": [
+    {
+      "annotations": [],
+      "doc": [],
+      "item": {
+        "class": {
+          "extends": {
+            "args": [],
+            "kind": "named",
+            "name": "ScriptableService"
+          },
+          "items": [
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "field": {
+                  "default": null,
+                  "name": "m_gameController",
+                  "type": {
+                    "args": [
+                      {
+                        "args": [],
+                        "kind": "named",
+                        "name": "inkGameController"
+                      }
+                    ],
+                    "kind": "named",
+                    "name": "wref"
+                  }
+                },
+                "kind": "let"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "private"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "field": {
+                  "default": null,
+                  "name": "m_notificationsContainer",
+                  "type": {
+                    "args": [
+                      {
+                        "args": [],
+                        "kind": "named",
+                        "name": "inkCompoundWidget"
+                      }
+                    ],
+                    "kind": "named",
+                    "name": "wref"
+                  }
+                },
+                "kind": "let"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "private"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "field": {
+                  "default": null,
+                  "name": "m_bracketsContainer",
+                  "type": {
+                    "args": [
+                      {
+                        "args": [],
+                        "kind": "named",
+                        "name": "inkCompoundWidget"
+                      }
+                    ],
+                    "kind": "named",
+                    "name": "wref"
+                  }
+                },
+                "kind": "let"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "private"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "field": {
+                  "default": null,
+                  "name": "m_notificationQueues",
+                  "type": {
+                    "args": [
+                      {
+                        "args": [],
+                        "kind": "named",
+                        "name": "CName"
+                      }
+                    ],
+                    "kind": "named",
+                    "name": "array"
+                  }
+                },
+                "kind": "let"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "private"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "expr": {
+                                  "kind": "this"
+                                },
+                                "kind": "member",
+                                "member": "m_gameController"
+                              }
+                            ],
+                            "expr": {
+                              "kind": "ident",
+                              "name": "IsDefined"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "return"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "IsInitialized",
+                  "params": [],
+                  "return_type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Bool"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "kind": "assign",
+                            "lhs": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "m_gameController"
+                            },
+                            "rhs": {
+                              "kind": "ident",
+                              "name": "controller"
+                            }
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "kind": "assign",
+                            "lhs": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "m_notificationsContainer"
+                            },
+                            "rhs": {
+                              "expr": {
+                                "args": [
+                                  {
+                                    "constant": {
+                                      "kind": "cname",
+                                      "value": "NotificationsContainer"
+                                    },
+                                    "kind": "constant"
+                                  }
+                                ],
+                                "expr": {
+                                  "expr": {
+                                    "expr": {
+                                      "kind": "this"
+                                    },
+                                    "kind": "member",
+                                    "member": "m_gameController"
+                                  },
+                                  "kind": "member",
+                                  "member": "GetChildWidgetByPath"
+                                },
+                                "kind": "call",
+                                "type_args": []
+                              },
+                              "kind": "dyn_cast",
+                              "type": {
+                                "args": [],
+                                "kind": "named",
+                                "name": "inkCompoundWidget"
+                              }
+                            }
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "kind": "assign",
+                            "lhs": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "m_bracketsContainer"
+                            },
+                            "rhs": {
+                              "expr": {
+                                "args": [
+                                  {
+                                    "constant": {
+                                      "kind": "cname",
+                                      "value": "BracketsContainer"
+                                    },
+                                    "kind": "constant"
+                                  }
+                                ],
+                                "expr": {
+                                  "expr": {
+                                    "expr": {
+                                      "kind": "this"
+                                    },
+                                    "kind": "member",
+                                    "member": "m_gameController"
+                                  },
+                                  "kind": "member",
+                                  "member": "GetChildWidgetByPath"
+                                },
+                                "kind": "call",
+                                "type_args": []
+                              },
+                              "kind": "dyn_cast",
+                              "type": {
+                                "args": [],
+                                "kind": "named",
+                                "name": "inkCompoundWidget"
+                              }
+                            }
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "inkEChildOrder"
+                                },
+                                "kind": "member",
+                                "member": "Forward"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "expr": {
+                                  "kind": "this"
+                                },
+                                "kind": "member",
+                                "member": "m_notificationsContainer"
+                              },
+                              "kind": "member",
+                              "member": "SetChildOrder"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "Initialize",
+                  "params": [
+                    {
+                      "name": "controller",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [
+                          {
+                            "args": [],
+                            "kind": "named",
+                            "name": "inkGameController"
+                          }
+                        ],
+                        "kind": "named",
+                        "name": "ref"
+                      }
+                    }
+                  ],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "blocks": [
+                            {
+                              "body": {
+                                "statements": [
+                                  {
+                                    "expr": null,
+                                    "kind": "return"
+                                  }
+                                ]
+                              },
+                              "condition": {
+                                "expr": {
+                                  "kind": "bin_op",
+                                  "lhs": {
+                                    "expr": {
+                                      "args": [],
+                                      "expr": {
+                                        "expr": {
+                                          "kind": "this"
+                                        },
+                                        "kind": "member",
+                                        "member": "IsInitialized"
+                                      },
+                                      "kind": "call",
+                                      "type_args": []
+                                    },
+                                    "kind": "un_op",
+                                    "op": "!"
+                                  },
+                                  "op": "||",
+                                  "rhs": {
+                                    "expr": {
+                                      "args": [
+                                        {
+                                          "kind": "ident",
+                                          "name": "popupController"
+                                        }
+                                      ],
+                                      "expr": {
+                                        "kind": "ident",
+                                        "name": "IsDefined"
+                                      },
+                                      "kind": "call",
+                                      "type_args": []
+                                    },
+                                    "kind": "un_op",
+                                    "op": "!"
+                                  }
+                                },
+                                "kind": "expr"
+                              }
+                            }
+                          ],
+                          "else": null,
+                          "kind": "if"
+                        },
+                        {
+                          "blocks": [
+                            {
+                              "body": {
+                                "statements": [
+                                  {
+                                    "expr": null,
+                                    "kind": "return"
+                                  }
+                                ]
+                              },
+                              "condition": {
+                                "expr": {
+                                  "args": [
+                                    {
+                                      "expr": {
+                                        "kind": "this"
+                                      },
+                                      "kind": "member",
+                                      "member": "m_notificationQueues"
+                                    },
+                                    {
+                                      "args": [],
+                                      "expr": {
+                                        "expr": {
+                                          "kind": "ident",
+                                          "name": "popupController"
+                                        },
+                                        "kind": "member",
+                                        "member": "GetQueueName"
+                                      },
+                                      "kind": "call",
+                                      "type_args": []
+                                    }
+                                  ],
+                                  "expr": {
+                                    "kind": "ident",
+                                    "name": "ArrayContains"
+                                  },
+                                  "kind": "call",
+                                  "type_args": []
+                                },
+                                "kind": "expr"
+                              }
+                            }
+                          ],
+                          "else": null,
+                          "kind": "if"
+                        },
+                        {
+                          "kind": "let",
+                          "name": "notificationData",
+                          "type": null,
+                          "value": {
+                            "args": [],
+                            "kind": "new",
+                            "type": {
+                              "args": [],
+                              "kind": "named",
+                              "name": "CustomPopupNotificationData"
+                            }
+                          }
+                        },
+                        {
+                          "expr": {
+                            "kind": "assign",
+                            "lhs": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "notificationData"
+                              },
+                              "kind": "member",
+                              "member": "manager"
+                            },
+                            "rhs": {
+                              "kind": "this"
+                            }
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "kind": "assign",
+                            "lhs": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "notificationData"
+                              },
+                              "kind": "member",
+                              "member": "controller"
+                            },
+                            "rhs": {
+                              "kind": "ident",
+                              "name": "popupController"
+                            }
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "kind": "assign",
+                            "lhs": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "notificationData"
+                              },
+                              "kind": "member",
+                              "member": "notificationName"
+                            },
+                            "rhs": {
+                              "args": [],
+                              "expr": {
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "popupController"
+                                },
+                                "kind": "member",
+                                "member": "GetName"
+                              },
+                              "kind": "call",
+                              "type_args": []
+                            }
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "kind": "assign",
+                            "lhs": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "notificationData"
+                              },
+                              "kind": "member",
+                              "member": "queueName"
+                            },
+                            "rhs": {
+                              "args": [],
+                              "expr": {
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "popupController"
+                                },
+                                "kind": "member",
+                                "member": "GetQueueName"
+                              },
+                              "kind": "call",
+                              "type_args": []
+                            }
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "kind": "assign",
+                            "lhs": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "notificationData"
+                              },
+                              "kind": "member",
+                              "member": "isBlocking"
+                            },
+                            "rhs": {
+                              "args": [],
+                              "expr": {
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "popupController"
+                                },
+                                "kind": "member",
+                                "member": "IsBlocking"
+                              },
+                              "kind": "call",
+                              "type_args": []
+                            }
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "kind": "assign",
+                            "lhs": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "notificationData"
+                              },
+                              "kind": "member",
+                              "member": "useCursor"
+                            },
+                            "rhs": {
+                              "args": [],
+                              "expr": {
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "popupController"
+                                },
+                                "kind": "member",
+                                "member": "UseCursor"
+                              },
+                              "kind": "call",
+                              "type_args": []
+                            }
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "expr": {
+                                  "kind": "this"
+                                },
+                                "kind": "member",
+                                "member": "m_notificationQueues"
+                              },
+                              {
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "notificationData"
+                                },
+                                "kind": "member",
+                                "member": "queueName"
+                              }
+                            ],
+                            "expr": {
+                              "kind": "ident",
+                              "name": "ArrayPush"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "kind": "let",
+                          "name": "notificationToken",
+                          "type": null,
+                          "value": {
+                            "args": [
+                              {
+                                "kind": "ident",
+                                "name": "notificationData"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "expr": {
+                                  "kind": "this"
+                                },
+                                "kind": "member",
+                                "member": "m_gameController"
+                              },
+                              "kind": "member",
+                              "member": "ShowGameNotification"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          }
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "args": [
+                                  {
+                                    "kind": "ident",
+                                    "name": "popupController"
+                                  },
+                                  {
+                                    "kind": "ident",
+                                    "name": "notificationData"
+                                  },
+                                  {
+                                    "kind": "ident",
+                                    "name": "notificationToken"
+                                  },
+                                  {
+                                    "kind": "bin_op",
+                                    "lhs": {
+                                      "args": [
+                                        {
+                                          "expr": {
+                                            "kind": "this"
+                                          },
+                                          "kind": "member",
+                                          "member": "m_notificationQueues"
+                                        }
+                                      ],
+                                      "expr": {
+                                        "kind": "ident",
+                                        "name": "ArraySize"
+                                      },
+                                      "kind": "call",
+                                      "type_args": []
+                                    },
+                                    "op": "-",
+                                    "rhs": {
+                                      "constant": {
+                                        "kind": "i32",
+                                        "value": 1
+                                      },
+                                      "kind": "constant"
+                                    }
+                                  }
+                                ],
+                                "expr": {
+                                  "expr": {
+                                    "kind": "ident",
+                                    "name": "CustomPopupAttachRequest"
+                                  },
+                                  "kind": "member",
+                                  "member": "Create"
+                                },
+                                "kind": "call",
+                                "type_args": []
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "QueueAttachRequest"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "ShowPopup",
+                  "params": [
+                    {
+                      "name": "popupController",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [
+                          {
+                            "args": [],
+                            "kind": "named",
+                            "name": "CustomPopup"
+                          }
+                        ],
+                        "kind": "named",
+                        "name": "ref"
+                      }
+                    }
+                  ],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "kind": "let",
+                          "name": "containerWidget",
+                          "type": null,
+                          "value": {
+                            "expr": {
+                              "args": [
+                                {
+                                  "args": [],
+                                  "expr": {
+                                    "expr": {
+                                      "kind": "ident",
+                                      "name": "request"
+                                    },
+                                    "kind": "member",
+                                    "member": "GetQueueIndex"
+                                  },
+                                  "kind": "call",
+                                  "type_args": []
+                                }
+                              ],
+                              "expr": {
+                                "expr": {
+                                  "expr": {
+                                    "kind": "this"
+                                  },
+                                  "kind": "member",
+                                  "member": "m_notificationsContainer"
+                                },
+                                "kind": "member",
+                                "member": "GetWidget"
+                              },
+                              "kind": "call",
+                              "type_args": []
+                            },
+                            "kind": "dyn_cast",
+                            "type": {
+                              "args": [],
+                              "kind": "named",
+                              "name": "inkCompoundWidget"
+                            }
+                          }
+                        },
+                        {
+                          "blocks": [
+                            {
+                              "body": {
+                                "statements": [
+                                  {
+                                    "expr": {
+                                      "args": [
+                                        {
+                                          "kind": "ident",
+                                          "name": "request"
+                                        }
+                                      ],
+                                      "expr": {
+                                        "expr": {
+                                          "kind": "this"
+                                        },
+                                        "kind": "member",
+                                        "member": "QueueAttachRequest"
+                                      },
+                                      "kind": "call",
+                                      "type_args": []
+                                    },
+                                    "kind": "expr"
+                                  },
+                                  {
+                                    "expr": null,
+                                    "kind": "return"
+                                  }
+                                ]
+                              },
+                              "condition": {
+                                "expr": {
+                                  "expr": {
+                                    "args": [
+                                      {
+                                        "kind": "ident",
+                                        "name": "containerWidget"
+                                      }
+                                    ],
+                                    "expr": {
+                                      "kind": "ident",
+                                      "name": "IsDefined"
+                                    },
+                                    "kind": "call",
+                                    "type_args": []
+                                  },
+                                  "kind": "un_op",
+                                  "op": "!"
+                                },
+                                "kind": "expr"
+                              }
+                            }
+                          ],
+                          "else": null,
+                          "kind": "if"
+                        },
+                        {
+                          "kind": "let",
+                          "name": "popupController",
+                          "type": null,
+                          "value": {
+                            "args": [],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "request"
+                              },
+                              "kind": "member",
+                              "member": "GetPopupController"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          }
+                        },
+                        {
+                          "kind": "let",
+                          "name": "notificationData",
+                          "type": null,
+                          "value": {
+                            "args": [],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "request"
+                              },
+                              "kind": "member",
+                              "member": "GetNotificationData"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          }
+                        },
+                        {
+                          "kind": "let",
+                          "name": "notificationToken",
+                          "type": null,
+                          "value": {
+                            "args": [],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "request"
+                              },
+                              "kind": "member",
+                              "member": "GetNotificationToken"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          }
+                        },
+                        {
+                          "kind": "let",
+                          "name": "wrapperWidget",
+                          "type": null,
+                          "value": {
+                            "args": [],
+                            "kind": "new",
+                            "type": {
+                              "args": [],
+                              "kind": "named",
+                              "name": "inkCanvas"
+                            }
+                          }
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "args": [],
+                                "expr": {
+                                  "expr": {
+                                    "kind": "ident",
+                                    "name": "popupController"
+                                  },
+                                  "kind": "member",
+                                  "member": "GetName"
+                                },
+                                "kind": "call",
+                                "type_args": []
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "wrapperWidget"
+                              },
+                              "kind": "member",
+                              "member": "SetName"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "inkEAnchor"
+                                },
+                                "kind": "member",
+                                "member": "Fill"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "wrapperWidget"
+                              },
+                              "kind": "member",
+                              "member": "SetAnchor"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "args": [
+                                  {
+                                    "constant": {
+                                      "kind": "f32",
+                                      "value": 0.5
+                                    },
+                                    "kind": "constant"
+                                  },
+                                  {
+                                    "constant": {
+                                      "kind": "f32",
+                                      "value": 0.5
+                                    },
+                                    "kind": "constant"
+                                  }
+                                ],
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "Vector2"
+                                },
+                                "kind": "call",
+                                "type_args": []
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "wrapperWidget"
+                              },
+                              "kind": "member",
+                              "member": "SetAnchorPoint"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "args": [],
+                                "expr": {
+                                  "expr": {
+                                    "expr": {
+                                      "kind": "this"
+                                    },
+                                    "kind": "member",
+                                    "member": "m_notificationsContainer"
+                                  },
+                                  "kind": "member",
+                                  "member": "GetSize"
+                                },
+                                "kind": "call",
+                                "type_args": []
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "wrapperWidget"
+                              },
+                              "kind": "member",
+                              "member": "SetSize"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "kind": "ident",
+                                "name": "containerWidget"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "wrapperWidget"
+                              },
+                              "kind": "member",
+                              "member": "Reparent"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "kind": "let",
+                          "name": "rootWidget",
+                          "type": null,
+                          "value": {
+                            "args": [],
+                            "kind": "new",
+                            "type": {
+                              "args": [],
+                              "kind": "named",
+                              "name": "inkCanvas"
+                            }
+                          }
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "cname",
+                                  "value": "Root"
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "rootWidget"
+                              },
+                              "kind": "member",
+                              "member": "SetName"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "args": [],
+                                "expr": {
+                                  "expr": {
+                                    "expr": {
+                                      "kind": "this"
+                                    },
+                                    "kind": "member",
+                                    "member": "m_bracketsContainer"
+                                  },
+                                  "kind": "member",
+                                  "member": "GetAnchor"
+                                },
+                                "kind": "call",
+                                "type_args": []
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "rootWidget"
+                              },
+                              "kind": "member",
+                              "member": "SetAnchor"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "args": [],
+                                "expr": {
+                                  "expr": {
+                                    "expr": {
+                                      "kind": "this"
+                                    },
+                                    "kind": "member",
+                                    "member": "m_bracketsContainer"
+                                  },
+                                  "kind": "member",
+                                  "member": "GetAnchorPoint"
+                                },
+                                "kind": "call",
+                                "type_args": []
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "rootWidget"
+                              },
+                              "kind": "member",
+                              "member": "SetAnchorPoint"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "args": [],
+                                "expr": {
+                                  "expr": {
+                                    "expr": {
+                                      "kind": "this"
+                                    },
+                                    "kind": "member",
+                                    "member": "m_bracketsContainer"
+                                  },
+                                  "kind": "member",
+                                  "member": "GetSize"
+                                },
+                                "kind": "call",
+                                "type_args": []
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "rootWidget"
+                              },
+                              "kind": "member",
+                              "member": "SetSize"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "args": [],
+                                "expr": {
+                                  "expr": {
+                                    "expr": {
+                                      "kind": "this"
+                                    },
+                                    "kind": "member",
+                                    "member": "m_bracketsContainer"
+                                  },
+                                  "kind": "member",
+                                  "member": "GetScale"
+                                },
+                                "kind": "call",
+                                "type_args": []
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "rootWidget"
+                              },
+                              "kind": "member",
+                              "member": "SetScale"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "kind": "ident",
+                                "name": "wrapperWidget"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "rootWidget"
+                              },
+                              "kind": "member",
+                              "member": "Reparent"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "kind": "ident",
+                                "name": "rootWidget"
+                              },
+                              {
+                                "expr": {
+                                  "kind": "this"
+                                },
+                                "kind": "member",
+                                "member": "m_gameController"
+                              },
+                              {
+                                "kind": "ident",
+                                "name": "notificationData"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "popupController"
+                              },
+                              "kind": "member",
+                              "member": "Attach"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "kind": "this"
+                              },
+                              {
+                                "constant": {
+                                  "kind": "cname",
+                                  "value": "OnNotificationClosed"
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "notificationToken"
+                              },
+                              "kind": "member",
+                              "member": "RegisterListener"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "AttachPopup",
+                  "params": [
+                    {
+                      "name": "request",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [
+                          {
+                            "args": [],
+                            "kind": "named",
+                            "name": "CustomPopupAttachRequest"
+                          }
+                        ],
+                        "kind": "named",
+                        "name": "ref"
+                      }
+                    }
+                  ],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "blocks": [
+                            {
+                              "body": {
+                                "statements": [
+                                  {
+                                    "expr": {
+                                      "args": [],
+                                      "expr": {
+                                        "expr": {
+                                          "kind": "ident",
+                                          "name": "popupController"
+                                        },
+                                        "kind": "member",
+                                        "member": "Detach"
+                                      },
+                                      "kind": "call",
+                                      "type_args": []
+                                    },
+                                    "kind": "expr"
+                                  }
+                                ]
+                              },
+                              "condition": {
+                                "expr": {
+                                  "args": [
+                                    {
+                                      "kind": "ident",
+                                      "name": "popupController"
+                                    }
+                                  ],
+                                  "expr": {
+                                    "kind": "ident",
+                                    "name": "IsDefined"
+                                  },
+                                  "kind": "call",
+                                  "type_args": []
+                                },
+                                "kind": "expr"
+                              }
+                            }
+                          ],
+                          "else": null,
+                          "kind": "if"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "HidePopup",
+                  "params": [
+                    {
+                      "name": "popupController",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [
+                          {
+                            "args": [],
+                            "kind": "named",
+                            "name": "CustomPopup"
+                          }
+                        ],
+                        "kind": "named",
+                        "name": "ref"
+                      }
+                    }
+                  ],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "kind": "let",
+                          "name": "game",
+                          "type": null,
+                          "value": {
+                            "args": [],
+                            "expr": {
+                              "expr": {
+                                "args": [],
+                                "expr": {
+                                  "expr": {
+                                    "expr": {
+                                      "kind": "this"
+                                    },
+                                    "kind": "member",
+                                    "member": "m_gameController"
+                                  },
+                                  "kind": "member",
+                                  "member": "GetPlayerControlledObject"
+                                },
+                                "kind": "call",
+                                "type_args": []
+                              },
+                              "kind": "member",
+                              "member": "GetGame"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          }
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "args": [
+                                  {
+                                    "kind": "this"
+                                  },
+                                  {
+                                    "kind": "ident",
+                                    "name": "request"
+                                  }
+                                ],
+                                "expr": {
+                                  "expr": {
+                                    "kind": "ident",
+                                    "name": "CustomPopupAttachCallback"
+                                  },
+                                  "kind": "member",
+                                  "member": "Create"
+                                },
+                                "kind": "call",
+                                "type_args": []
+                              },
+                              {
+                                "constant": {
+                                  "kind": "i32",
+                                  "value": 0
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "args": [
+                                  {
+                                    "kind": "ident",
+                                    "name": "game"
+                                  }
+                                ],
+                                "expr": {
+                                  "expr": {
+                                    "kind": "ident",
+                                    "name": "GameInstance"
+                                  },
+                                  "kind": "member",
+                                  "member": "GetDelaySystem"
+                                },
+                                "kind": "call",
+                                "type_args": []
+                              },
+                              "kind": "member",
+                              "member": "DelayCallback"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "QueueAttachRequest",
+                  "params": [
+                    {
+                      "name": "request",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [
+                          {
+                            "args": [],
+                            "kind": "named",
+                            "name": "CustomPopupAttachRequest"
+                          }
+                        ],
+                        "kind": "named",
+                        "name": "ref"
+                      }
+                    }
+                  ],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "protected"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "kind": "let",
+                          "name": "notificationData",
+                          "type": null,
+                          "value": {
+                            "expr": {
+                              "kind": "ident",
+                              "name": "data"
+                            },
+                            "kind": "dyn_cast",
+                            "type": {
+                              "args": [],
+                              "kind": "named",
+                              "name": "CustomPopupNotificationData"
+                            }
+                          }
+                        },
+                        {
+                          "kind": "let",
+                          "name": "popupController",
+                          "type": null,
+                          "value": {
+                            "expr": {
+                              "kind": "ident",
+                              "name": "notificationData"
+                            },
+                            "kind": "member",
+                            "member": "controller"
+                          }
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "expr": {
+                                  "kind": "this"
+                                },
+                                "kind": "member",
+                                "member": "m_notificationQueues"
+                              },
+                              {
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "notificationData"
+                                },
+                                "kind": "member",
+                                "member": "queueName"
+                              }
+                            ],
+                            "expr": {
+                              "kind": "ident",
+                              "name": "ArrayRemove"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "blocks": [
+                            {
+                              "body": {
+                                "statements": [
+                                  {
+                                    "kind": "let",
+                                    "name": "wrapperWidget",
+                                    "type": null,
+                                    "value": {
+                                      "expr": {
+                                        "args": [
+                                          {
+                                            "args": [],
+                                            "expr": {
+                                              "expr": {
+                                                "kind": "ident",
+                                                "name": "popupController"
+                                              },
+                                              "kind": "member",
+                                              "member": "GetName"
+                                            },
+                                            "kind": "call",
+                                            "type_args": []
+                                          }
+                                        ],
+                                        "expr": {
+                                          "expr": {
+                                            "expr": {
+                                              "kind": "this"
+                                            },
+                                            "kind": "member",
+                                            "member": "m_notificationsContainer"
+                                          },
+                                          "kind": "member",
+                                          "member": "GetWidgetByPathName"
+                                        },
+                                        "kind": "call",
+                                        "type_args": []
+                                      },
+                                      "kind": "dyn_cast",
+                                      "type": {
+                                        "args": [],
+                                        "kind": "named",
+                                        "name": "inkCanvas"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "blocks": [
+                                      {
+                                        "body": {
+                                          "statements": [
+                                            {
+                                              "expr": {
+                                                "args": [
+                                                  {
+                                                    "kind": "ident",
+                                                    "name": "wrapperWidget"
+                                                  }
+                                                ],
+                                                "expr": {
+                                                  "expr": {
+                                                    "expr": {
+                                                      "kind": "this"
+                                                    },
+                                                    "kind": "member",
+                                                    "member": "m_notificationsContainer"
+                                                  },
+                                                  "kind": "member",
+                                                  "member": "RemoveChild"
+                                                },
+                                                "kind": "call",
+                                                "type_args": []
+                                              },
+                                              "kind": "expr"
+                                            }
+                                          ]
+                                        },
+                                        "condition": {
+                                          "expr": {
+                                            "args": [
+                                              {
+                                                "kind": "ident",
+                                                "name": "wrapperWidget"
+                                              }
+                                            ],
+                                            "expr": {
+                                              "kind": "ident",
+                                              "name": "IsDefined"
+                                            },
+                                            "kind": "call",
+                                            "type_args": []
+                                          },
+                                          "kind": "expr"
+                                        }
+                                      }
+                                    ],
+                                    "else": null,
+                                    "kind": "if"
+                                  }
+                                ]
+                              },
+                              "condition": {
+                                "expr": {
+                                  "args": [
+                                    {
+                                      "kind": "ident",
+                                      "name": "popupController"
+                                    }
+                                  ],
+                                  "expr": {
+                                    "kind": "ident",
+                                    "name": "IsDefined"
+                                  },
+                                  "kind": "call",
+                                  "type_args": []
+                                },
+                                "kind": "expr"
+                              }
+                            }
+                          ],
+                          "else": null,
+                          "kind": "if"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "OnNotificationClosed",
+                  "params": [
+                    {
+                      "name": "data",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [
+                          {
+                            "args": [],
+                            "kind": "named",
+                            "name": "inkGameNotificationData"
+                          }
+                        ],
+                        "kind": "named",
+                        "name": "ref"
+                      }
+                    }
+                  ],
+                  "return_type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Bool"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": true,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "protected"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "kind": "let",
+                          "name": "topWidget",
+                          "type": null,
+                          "value": {
+                            "args": [
+                              {
+                                "kind": "bin_op",
+                                "lhs": {
+                                  "args": [],
+                                  "expr": {
+                                    "expr": {
+                                      "expr": {
+                                        "kind": "this"
+                                      },
+                                      "kind": "member",
+                                      "member": "m_notificationsContainer"
+                                    },
+                                    "kind": "member",
+                                    "member": "GetNumChildren"
+                                  },
+                                  "kind": "call",
+                                  "type_args": []
+                                },
+                                "op": "-",
+                                "rhs": {
+                                  "constant": {
+                                    "kind": "i32",
+                                    "value": 1
+                                  },
+                                  "kind": "constant"
+                                }
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "expr": {
+                                  "kind": "this"
+                                },
+                                "kind": "member",
+                                "member": "m_notificationsContainer"
+                              },
+                              "kind": "member",
+                              "member": "GetWidget"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          }
+                        },
+                        {
+                          "kind": "let",
+                          "name": "popupWidget",
+                          "type": null,
+                          "value": {
+                            "args": [],
+                            "expr": {
+                              "expr": {
+                                "args": [],
+                                "expr": {
+                                  "expr": {
+                                    "args": [],
+                                    "expr": {
+                                      "expr": {
+                                        "kind": "ident",
+                                        "name": "popupController"
+                                      },
+                                      "kind": "member",
+                                      "member": "GetRootWidget"
+                                    },
+                                    "kind": "call",
+                                    "type_args": []
+                                  },
+                                  "kind": "member",
+                                  "member": "GetParentWidget"
+                                },
+                                "kind": "call",
+                                "type_args": []
+                              },
+                              "kind": "member",
+                              "member": "GetParentWidget"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          }
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "kind": "ident",
+                                "name": "topWidget"
+                              },
+                              {
+                                "kind": "ident",
+                                "name": "popupWidget"
+                              }
+                            ],
+                            "expr": {
+                              "kind": "ident",
+                              "name": "Equals"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "return"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "IsOnTop",
+                  "params": [
+                    {
+                      "name": "popupController",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [
+                          {
+                            "args": [],
+                            "kind": "named",
+                            "name": "CustomPopup"
+                          }
+                        ],
+                        "kind": "named",
+                        "name": "ref"
+                      }
+                    }
+                  ],
+                  "return_type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Bool"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "expr": {
+                              "args": [
+                                {
+                                  "constant": {
+                                    "kind": "cname",
+                                    "value": "Codeware.UI.CustomPopupManager"
+                                  },
+                                  "kind": "constant"
+                                }
+                              ],
+                              "expr": {
+                                "expr": {
+                                  "args": [],
+                                  "expr": {
+                                    "expr": {
+                                      "kind": "ident",
+                                      "name": "GameInstance"
+                                    },
+                                    "kind": "member",
+                                    "member": "GetScriptableServiceContainer"
+                                  },
+                                  "kind": "call",
+                                  "type_args": []
+                                },
+                                "kind": "member",
+                                "member": "GetService"
+                              },
+                              "kind": "call",
+                              "type_args": []
+                            },
+                            "kind": "dyn_cast",
+                            "type": {
+                              "args": [],
+                              "kind": "named",
+                              "name": "CustomPopupManager"
+                            }
+                          },
+                          "kind": "return"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "GetInstance",
+                  "params": [],
+                  "return_type": {
+                    "args": [
+                      {
+                        "args": [],
+                        "kind": "named",
+                        "name": "CustomPopupManager"
+                      }
+                    ],
+                    "kind": "named",
+                    "name": "ref"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": true
+              },
+              "visibility": "public"
+            }
+          ],
+          "name": "CustomPopupManager",
+          "type_params": []
+        },
+        "kind": "class"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "public"
+    },
+    {
+      "annotations": [
+        {
+          "args": [
+            {
+              "kind": "ident",
+              "name": "PopupsManager"
+            }
+          ],
+          "name": "wrapMethod"
+        }
+      ],
+      "doc": [],
+      "item": {
+        "function": {
+          "body": {
+            "block": {
+              "statements": [
+                {
+                  "expr": {
+                    "args": [
+                      {
+                        "kind": "ident",
+                        "name": "playerPuppet"
+                      }
+                    ],
+                    "expr": {
+                      "kind": "ident",
+                      "name": "wrappedMethod"
+                    },
+                    "kind": "call",
+                    "type_args": []
+                  },
+                  "kind": "expr"
+                },
+                {
+                  "expr": {
+                    "args": [
+                      {
+                        "kind": "this"
+                      }
+                    ],
+                    "expr": {
+                      "expr": {
+                        "args": [],
+                        "expr": {
+                          "expr": {
+                            "kind": "ident",
+                            "name": "CustomPopupManager"
+                          },
+                          "kind": "member",
+                          "member": "GetInstance"
+                        },
+                        "kind": "call",
+                        "type_args": []
+                      },
+                      "kind": "member",
+                      "member": "Initialize"
+                    },
+                    "kind": "call",
+                    "type_args": []
+                  },
+                  "kind": "expr"
+                }
+              ]
+            },
+            "kind": "block"
+          },
+          "name": "OnPlayerAttach",
+          "params": [
+            {
+              "name": "playerPuppet",
+              "qualifiers": {
+                "const": false,
+                "optional": false,
+                "out": false
+              },
+              "type": {
+                "args": [
+                  {
+                    "args": [],
+                    "kind": "named",
+                    "name": "GameObject"
+                  }
+                ],
+                "kind": "named",
+                "name": "ref"
+              }
+            }
+          ],
+          "return_type": {
+            "args": [],
+            "kind": "named",
+            "name": "Bool"
+          },
+          "type_params": []
+        },
+        "kind": "function"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": true,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "protected"
+    },
+    {
+      "annotations": [
+        {
+          "args": [
+            {
+              "kind": "ident",
+              "name": "PopupsManager"
+            }
+          ],
+          "name": "addMethod"
+        }
+      ],
+      "doc": [],
+      "item": {
+        "function": {
+          "body": {
+            "block": {
+              "statements": [
+                {
+                  "expr": {
+                    "args": [
+                      {
+                        "args": [],
+                        "expr": {
+                          "expr": {
+                            "kind": "ident",
+                            "name": "evt"
+                          },
+                          "kind": "member",
+                          "member": "GetPopupController"
+                        },
+                        "kind": "call",
+                        "type_args": []
+                      }
+                    ],
+                    "expr": {
+                      "expr": {
+                        "args": [],
+                        "expr": {
+                          "expr": {
+                            "kind": "ident",
+                            "name": "CustomPopupManager"
+                          },
+                          "kind": "member",
+                          "member": "GetInstance"
+                        },
+                        "kind": "call",
+                        "type_args": []
+                      },
+                      "kind": "member",
+                      "member": "ShowPopup"
+                    },
+                    "kind": "call",
+                    "type_args": []
+                  },
+                  "kind": "expr"
+                }
+              ]
+            },
+            "kind": "block"
+          },
+          "name": "OnShowCustomPopup",
+          "params": [
+            {
+              "name": "evt",
+              "qualifiers": {
+                "const": false,
+                "optional": false,
+                "out": false
+              },
+              "type": {
+                "args": [
+                  {
+                    "args": [],
+                    "kind": "named",
+                    "name": "ShowCustomPopupEvent"
+                  }
+                ],
+                "kind": "named",
+                "name": "ref"
+              }
+            }
+          ],
+          "return_type": {
+            "args": [],
+            "kind": "named",
+            "name": "Bool"
+          },
+          "type_params": []
+        },
+        "kind": "function"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": true,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "protected"
+    },
+    {
+      "annotations": [
+        {
+          "args": [
+            {
+              "kind": "ident",
+              "name": "PopupsManager"
+            }
+          ],
+          "name": "addMethod"
+        }
+      ],
+      "doc": [],
+      "item": {
+        "function": {
+          "body": {
+            "block": {
+              "statements": [
+                {
+                  "expr": {
+                    "args": [
+                      {
+                        "args": [],
+                        "expr": {
+                          "expr": {
+                            "kind": "ident",
+                            "name": "evt"
+                          },
+                          "kind": "member",
+                          "member": "GetPopupController"
+                        },
+                        "kind": "call",
+                        "type_args": []
+                      }
+                    ],
+                    "expr": {
+                      "expr": {
+                        "args": [],
+                        "expr": {
+                          "expr": {
+                            "kind": "ident",
+                            "name": "CustomPopupManager"
+                          },
+                          "kind": "member",
+                          "member": "GetInstance"
+                        },
+                        "kind": "call",
+                        "type_args": []
+                      },
+                      "kind": "member",
+                      "member": "HidePopup"
+                    },
+                    "kind": "call",
+                    "type_args": []
+                  },
+                  "kind": "expr"
+                }
+              ]
+            },
+            "kind": "block"
+          },
+          "name": "OnHideCustomPopup",
+          "params": [
+            {
+              "name": "evt",
+              "qualifiers": {
+                "const": false,
+                "optional": false,
+                "out": false
+              },
+              "type": {
+                "args": [
+                  {
+                    "args": [],
+                    "kind": "named",
+                    "name": "HideCustomPopupEvent"
+                  }
+                ],
+                "kind": "named",
+                "name": "ref"
+              }
+            }
+          ],
+          "return_type": {
+            "args": [],
+            "kind": "named",
+            "name": "Bool"
+          },
+          "type_params": []
+        },
+        "kind": "function"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": true,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "protected"
+    }
+  ],
+  "path": [
+    "Codeware",
+    "UI"
+  ]
+}

@@ -1,0 +1,2778 @@
+{
+  "items": [
+    {
+      "annotations": [],
+      "doc": [],
+      "item": {
+        "class": {
+          "extends": {
+            "args": [],
+            "kind": "named",
+            "name": "inkCustomController"
+          },
+          "items": [
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "field": {
+                  "default": null,
+                  "name": "m_root",
+                  "type": {
+                    "args": [
+                      {
+                        "args": [],
+                        "kind": "named",
+                        "name": "inkCompoundWidget"
+                      }
+                    ],
+                    "kind": "named",
+                    "name": "wref"
+                  }
+                },
+                "kind": "let"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "protected"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "field": {
+                  "default": null,
+                  "name": "m_label",
+                  "type": {
+                    "args": [
+                      {
+                        "args": [],
+                        "kind": "named",
+                        "name": "inkText"
+                      }
+                    ],
+                    "kind": "named",
+                    "name": "wref"
+                  }
+                },
+                "kind": "let"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "protected"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "field": {
+                  "default": null,
+                  "name": "m_useAnimations",
+                  "type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Bool"
+                  }
+                },
+                "kind": "let"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "protected"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "field": {
+                  "default": null,
+                  "name": "m_useSounds",
+                  "type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Bool"
+                  }
+                },
+                "kind": "let"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "protected"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "field": {
+                  "default": null,
+                  "name": "m_isDisabled",
+                  "type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Bool"
+                  }
+                },
+                "kind": "let"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "protected"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "field": {
+                  "default": null,
+                  "name": "m_isHovered",
+                  "type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Bool"
+                  }
+                },
+                "kind": "let"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "protected"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "field": {
+                  "default": null,
+                  "name": "m_isPressed",
+                  "type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Bool"
+                  }
+                },
+                "kind": "let"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "protected"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "args": [],
+                            "expr": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "CreateWidgets"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [],
+                            "expr": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "CreateAnimations"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "OnCreate",
+                  "params": [],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": true,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "protected"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "args": [],
+                            "expr": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "RegisterListeners"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [],
+                            "expr": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "ApplyDisabledState"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [],
+                            "expr": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "ApplyHoveredState"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "OnInitialize",
+                  "params": [],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": true,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "protected"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": null,
+                  "name": "CreateWidgets",
+                  "params": [],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "protected"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": []
+                    },
+                    "kind": "block"
+                  },
+                  "name": "CreateAnimations",
+                  "params": [],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "protected"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "cname",
+                                  "value": "OnEnter"
+                                },
+                                "kind": "constant"
+                              },
+                              {
+                                "kind": "this"
+                              },
+                              {
+                                "constant": {
+                                  "kind": "cname",
+                                  "value": "OnHoverOver"
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "RegisterToCallback"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "cname",
+                                  "value": "OnLeave"
+                                },
+                                "kind": "constant"
+                              },
+                              {
+                                "kind": "this"
+                              },
+                              {
+                                "constant": {
+                                  "kind": "cname",
+                                  "value": "OnHoverOut"
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "RegisterToCallback"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "cname",
+                                  "value": "OnPress"
+                                },
+                                "kind": "constant"
+                              },
+                              {
+                                "kind": "this"
+                              },
+                              {
+                                "constant": {
+                                  "kind": "cname",
+                                  "value": "OnPress"
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "RegisterToCallback"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "cname",
+                                  "value": "OnRelease"
+                                },
+                                "kind": "constant"
+                              },
+                              {
+                                "kind": "this"
+                              },
+                              {
+                                "constant": {
+                                  "kind": "cname",
+                                  "value": "OnRelease"
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "RegisterToCallback"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "RegisterListeners",
+                  "params": [],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "protected"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": []
+                    },
+                    "kind": "block"
+                  },
+                  "name": "ApplyDisabledState",
+                  "params": [],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "protected"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": []
+                    },
+                    "kind": "block"
+                  },
+                  "name": "ApplyHoveredState",
+                  "params": [],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "protected"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": []
+                    },
+                    "kind": "block"
+                  },
+                  "name": "ApplyPressedState",
+                  "params": [],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "protected"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "blocks": [
+                            {
+                              "body": {
+                                "statements": [
+                                  {
+                                    "expr": {
+                                      "kind": "assign",
+                                      "lhs": {
+                                        "expr": {
+                                          "kind": "this"
+                                        },
+                                        "kind": "member",
+                                        "member": "m_isDisabled"
+                                      },
+                                      "rhs": {
+                                        "kind": "ident",
+                                        "name": "isDisabled"
+                                      }
+                                    },
+                                    "kind": "expr"
+                                  },
+                                  {
+                                    "blocks": [
+                                      {
+                                        "body": {
+                                          "statements": [
+                                            {
+                                              "expr": {
+                                                "kind": "assign",
+                                                "lhs": {
+                                                  "expr": {
+                                                    "kind": "this"
+                                                  },
+                                                  "kind": "member",
+                                                  "member": "m_isPressed"
+                                                },
+                                                "rhs": {
+                                                  "constant": {
+                                                    "kind": "bool",
+                                                    "value": false
+                                                  },
+                                                  "kind": "constant"
+                                                }
+                                              },
+                                              "kind": "expr"
+                                            }
+                                          ]
+                                        },
+                                        "condition": {
+                                          "expr": {
+                                            "expr": {
+                                              "kind": "this"
+                                            },
+                                            "kind": "member",
+                                            "member": "m_isDisabled"
+                                          },
+                                          "kind": "expr"
+                                        }
+                                      }
+                                    ],
+                                    "else": null,
+                                    "kind": "if"
+                                  },
+                                  {
+                                    "expr": {
+                                      "args": [],
+                                      "expr": {
+                                        "expr": {
+                                          "kind": "this"
+                                        },
+                                        "kind": "member",
+                                        "member": "ApplyDisabledState"
+                                      },
+                                      "kind": "call",
+                                      "type_args": []
+                                    },
+                                    "kind": "expr"
+                                  },
+                                  {
+                                    "expr": {
+                                      "args": [],
+                                      "expr": {
+                                        "expr": {
+                                          "kind": "this"
+                                        },
+                                        "kind": "member",
+                                        "member": "ApplyHoveredState"
+                                      },
+                                      "kind": "call",
+                                      "type_args": []
+                                    },
+                                    "kind": "expr"
+                                  },
+                                  {
+                                    "expr": {
+                                      "args": [],
+                                      "expr": {
+                                        "expr": {
+                                          "kind": "this"
+                                        },
+                                        "kind": "member",
+                                        "member": "ApplyPressedState"
+                                      },
+                                      "kind": "call",
+                                      "type_args": []
+                                    },
+                                    "kind": "expr"
+                                  }
+                                ]
+                              },
+                              "condition": {
+                                "expr": {
+                                  "expr": {
+                                    "args": [
+                                      {
+                                        "expr": {
+                                          "kind": "this"
+                                        },
+                                        "kind": "member",
+                                        "member": "m_isDisabled"
+                                      },
+                                      {
+                                        "kind": "ident",
+                                        "name": "isDisabled"
+                                      }
+                                    ],
+                                    "expr": {
+                                      "kind": "ident",
+                                      "name": "Equals"
+                                    },
+                                    "kind": "call",
+                                    "type_args": []
+                                  },
+                                  "kind": "un_op",
+                                  "op": "!"
+                                },
+                                "kind": "expr"
+                              }
+                            }
+                          ],
+                          "else": null,
+                          "kind": "if"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "SetDisabledState",
+                  "params": [
+                    {
+                      "name": "isDisabled",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "Bool"
+                      }
+                    }
+                  ],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "protected"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "blocks": [
+                            {
+                              "body": {
+                                "statements": [
+                                  {
+                                    "expr": {
+                                      "kind": "assign",
+                                      "lhs": {
+                                        "expr": {
+                                          "kind": "this"
+                                        },
+                                        "kind": "member",
+                                        "member": "m_isHovered"
+                                      },
+                                      "rhs": {
+                                        "kind": "ident",
+                                        "name": "isHovered"
+                                      }
+                                    },
+                                    "kind": "expr"
+                                  },
+                                  {
+                                    "blocks": [
+                                      {
+                                        "body": {
+                                          "statements": [
+                                            {
+                                              "expr": {
+                                                "kind": "assign",
+                                                "lhs": {
+                                                  "expr": {
+                                                    "kind": "this"
+                                                  },
+                                                  "kind": "member",
+                                                  "member": "m_isPressed"
+                                                },
+                                                "rhs": {
+                                                  "constant": {
+                                                    "kind": "bool",
+                                                    "value": false
+                                                  },
+                                                  "kind": "constant"
+                                                }
+                                              },
+                                              "kind": "expr"
+                                            }
+                                          ]
+                                        },
+                                        "condition": {
+                                          "expr": {
+                                            "expr": {
+                                              "expr": {
+                                                "kind": "this"
+                                              },
+                                              "kind": "member",
+                                              "member": "m_isHovered"
+                                            },
+                                            "kind": "un_op",
+                                            "op": "!"
+                                          },
+                                          "kind": "expr"
+                                        }
+                                      }
+                                    ],
+                                    "else": null,
+                                    "kind": "if"
+                                  },
+                                  {
+                                    "blocks": [
+                                      {
+                                        "body": {
+                                          "statements": [
+                                            {
+                                              "expr": {
+                                                "args": [],
+                                                "expr": {
+                                                  "expr": {
+                                                    "kind": "this"
+                                                  },
+                                                  "kind": "member",
+                                                  "member": "ApplyHoveredState"
+                                                },
+                                                "kind": "call",
+                                                "type_args": []
+                                              },
+                                              "kind": "expr"
+                                            },
+                                            {
+                                              "expr": {
+                                                "args": [],
+                                                "expr": {
+                                                  "expr": {
+                                                    "kind": "this"
+                                                  },
+                                                  "kind": "member",
+                                                  "member": "ApplyPressedState"
+                                                },
+                                                "kind": "call",
+                                                "type_args": []
+                                              },
+                                              "kind": "expr"
+                                            }
+                                          ]
+                                        },
+                                        "condition": {
+                                          "expr": {
+                                            "expr": {
+                                              "expr": {
+                                                "kind": "this"
+                                              },
+                                              "kind": "member",
+                                              "member": "m_isDisabled"
+                                            },
+                                            "kind": "un_op",
+                                            "op": "!"
+                                          },
+                                          "kind": "expr"
+                                        }
+                                      }
+                                    ],
+                                    "else": null,
+                                    "kind": "if"
+                                  }
+                                ]
+                              },
+                              "condition": {
+                                "expr": {
+                                  "expr": {
+                                    "args": [
+                                      {
+                                        "expr": {
+                                          "kind": "this"
+                                        },
+                                        "kind": "member",
+                                        "member": "m_isHovered"
+                                      },
+                                      {
+                                        "kind": "ident",
+                                        "name": "isHovered"
+                                      }
+                                    ],
+                                    "expr": {
+                                      "kind": "ident",
+                                      "name": "Equals"
+                                    },
+                                    "kind": "call",
+                                    "type_args": []
+                                  },
+                                  "kind": "un_op",
+                                  "op": "!"
+                                },
+                                "kind": "expr"
+                              }
+                            }
+                          ],
+                          "else": null,
+                          "kind": "if"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "SetHoveredState",
+                  "params": [
+                    {
+                      "name": "isHovered",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "Bool"
+                      }
+                    }
+                  ],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "protected"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "blocks": [
+                            {
+                              "body": {
+                                "statements": [
+                                  {
+                                    "expr": {
+                                      "kind": "assign",
+                                      "lhs": {
+                                        "expr": {
+                                          "kind": "this"
+                                        },
+                                        "kind": "member",
+                                        "member": "m_isPressed"
+                                      },
+                                      "rhs": {
+                                        "kind": "ident",
+                                        "name": "isPressed"
+                                      }
+                                    },
+                                    "kind": "expr"
+                                  },
+                                  {
+                                    "blocks": [
+                                      {
+                                        "body": {
+                                          "statements": [
+                                            {
+                                              "expr": {
+                                                "args": [],
+                                                "expr": {
+                                                  "expr": {
+                                                    "kind": "this"
+                                                  },
+                                                  "kind": "member",
+                                                  "member": "ApplyPressedState"
+                                                },
+                                                "kind": "call",
+                                                "type_args": []
+                                              },
+                                              "kind": "expr"
+                                            }
+                                          ]
+                                        },
+                                        "condition": {
+                                          "expr": {
+                                            "expr": {
+                                              "expr": {
+                                                "kind": "this"
+                                              },
+                                              "kind": "member",
+                                              "member": "m_isDisabled"
+                                            },
+                                            "kind": "un_op",
+                                            "op": "!"
+                                          },
+                                          "kind": "expr"
+                                        }
+                                      }
+                                    ],
+                                    "else": null,
+                                    "kind": "if"
+                                  }
+                                ]
+                              },
+                              "condition": {
+                                "expr": {
+                                  "expr": {
+                                    "args": [
+                                      {
+                                        "expr": {
+                                          "kind": "this"
+                                        },
+                                        "kind": "member",
+                                        "member": "m_isPressed"
+                                      },
+                                      {
+                                        "kind": "ident",
+                                        "name": "isPressed"
+                                      }
+                                    ],
+                                    "expr": {
+                                      "kind": "ident",
+                                      "name": "Equals"
+                                    },
+                                    "kind": "call",
+                                    "type_args": []
+                                  },
+                                  "kind": "un_op",
+                                  "op": "!"
+                                },
+                                "kind": "expr"
+                              }
+                            }
+                          ],
+                          "else": null,
+                          "kind": "if"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "SetPressedState",
+                  "params": [
+                    {
+                      "name": "isPressed",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "Bool"
+                      }
+                    }
+                  ],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "protected"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "bool",
+                                  "value": true
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "SetHoveredState"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "OnHoverOver",
+                  "params": [
+                    {
+                      "name": "evt",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [
+                          {
+                            "args": [],
+                            "kind": "named",
+                            "name": "inkPointerEvent"
+                          }
+                        ],
+                        "kind": "named",
+                        "name": "ref"
+                      }
+                    }
+                  ],
+                  "return_type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Bool"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": true,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "protected"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "bool",
+                                  "value": false
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "SetHoveredState"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "OnHoverOut",
+                  "params": [
+                    {
+                      "name": "evt",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [
+                          {
+                            "args": [],
+                            "kind": "named",
+                            "name": "inkPointerEvent"
+                          }
+                        ],
+                        "kind": "named",
+                        "name": "ref"
+                      }
+                    }
+                  ],
+                  "return_type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Bool"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": true,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "protected"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "blocks": [
+                            {
+                              "body": {
+                                "statements": [
+                                  {
+                                    "expr": {
+                                      "args": [
+                                        {
+                                          "constant": {
+                                            "kind": "bool",
+                                            "value": true
+                                          },
+                                          "kind": "constant"
+                                        }
+                                      ],
+                                      "expr": {
+                                        "expr": {
+                                          "kind": "this"
+                                        },
+                                        "kind": "member",
+                                        "member": "SetPressedState"
+                                      },
+                                      "kind": "call",
+                                      "type_args": []
+                                    },
+                                    "kind": "expr"
+                                  }
+                                ]
+                              },
+                              "condition": {
+                                "expr": {
+                                  "args": [
+                                    {
+                                      "constant": {
+                                        "kind": "cname",
+                                        "value": "click"
+                                      },
+                                      "kind": "constant"
+                                    }
+                                  ],
+                                  "expr": {
+                                    "expr": {
+                                      "kind": "ident",
+                                      "name": "evt"
+                                    },
+                                    "kind": "member",
+                                    "member": "IsAction"
+                                  },
+                                  "kind": "call",
+                                  "type_args": []
+                                },
+                                "kind": "expr"
+                              }
+                            }
+                          ],
+                          "else": null,
+                          "kind": "if"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "OnPress",
+                  "params": [
+                    {
+                      "name": "evt",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [
+                          {
+                            "args": [],
+                            "kind": "named",
+                            "name": "inkPointerEvent"
+                          }
+                        ],
+                        "kind": "named",
+                        "name": "ref"
+                      }
+                    }
+                  ],
+                  "return_type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Bool"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": true,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "protected"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "blocks": [
+                            {
+                              "body": {
+                                "statements": [
+                                  {
+                                    "blocks": [
+                                      {
+                                        "body": {
+                                          "statements": [
+                                            {
+                                              "blocks": [
+                                                {
+                                                  "body": {
+                                                    "statements": [
+                                                      {
+                                                        "blocks": [
+                                                          {
+                                                            "body": {
+                                                              "statements": [
+                                                                {
+                                                                  "expr": {
+                                                                    "args": [
+                                                                      {
+                                                                        "constant": {
+                                                                          "kind": "cname",
+                                                                          "value": "Button"
+                                                                        },
+                                                                        "kind": "constant"
+                                                                      },
+                                                                      {
+                                                                        "constant": {
+                                                                          "kind": "cname",
+                                                                          "value": "OnPress"
+                                                                        },
+                                                                        "kind": "constant"
+                                                                      }
+                                                                    ],
+                                                                    "expr": {
+                                                                      "expr": {
+                                                                        "kind": "this"
+                                                                      },
+                                                                      "kind": "member",
+                                                                      "member": "PlaySound"
+                                                                    },
+                                                                    "kind": "call",
+                                                                    "type_args": []
+                                                                  },
+                                                                  "kind": "expr"
+                                                                }
+                                                              ]
+                                                            },
+                                                            "condition": {
+                                                              "expr": {
+                                                                "expr": {
+                                                                  "kind": "this"
+                                                                },
+                                                                "kind": "member",
+                                                                "member": "m_useSounds"
+                                                              },
+                                                              "kind": "expr"
+                                                            }
+                                                          }
+                                                        ],
+                                                        "else": null,
+                                                        "kind": "if"
+                                                      },
+                                                      {
+                                                        "expr": {
+                                                          "args": [
+                                                            {
+                                                              "constant": {
+                                                                "kind": "cname",
+                                                                "value": "OnBtnClick"
+                                                              },
+                                                              "kind": "constant"
+                                                            }
+                                                          ],
+                                                          "expr": {
+                                                            "expr": {
+                                                              "kind": "this"
+                                                            },
+                                                            "kind": "member",
+                                                            "member": "CallCustomCallback"
+                                                          },
+                                                          "kind": "call",
+                                                          "type_args": []
+                                                        },
+                                                        "kind": "expr"
+                                                      }
+                                                    ]
+                                                  },
+                                                  "condition": {
+                                                    "expr": {
+                                                      "expr": {
+                                                        "expr": {
+                                                          "kind": "this"
+                                                        },
+                                                        "kind": "member",
+                                                        "member": "m_isDisabled"
+                                                      },
+                                                      "kind": "un_op",
+                                                      "op": "!"
+                                                    },
+                                                    "kind": "expr"
+                                                  }
+                                                }
+                                              ],
+                                              "else": null,
+                                              "kind": "if"
+                                            },
+                                            {
+                                              "expr": {
+                                                "args": [
+                                                  {
+                                                    "constant": {
+                                                      "kind": "bool",
+                                                      "value": false
+                                                    },
+                                                    "kind": "constant"
+                                                  }
+                                                ],
+                                                "expr": {
+                                                  "expr": {
+                                                    "kind": "this"
+                                                  },
+                                                  "kind": "member",
+                                                  "member": "SetPressedState"
+                                                },
+                                                "kind": "call",
+                                                "type_args": []
+                                              },
+                                              "kind": "expr"
+                                            }
+                                          ]
+                                        },
+                                        "condition": {
+                                          "expr": {
+                                            "expr": {
+                                              "kind": "this"
+                                            },
+                                            "kind": "member",
+                                            "member": "m_isPressed"
+                                          },
+                                          "kind": "expr"
+                                        }
+                                      }
+                                    ],
+                                    "else": null,
+                                    "kind": "if"
+                                  }
+                                ]
+                              },
+                              "condition": {
+                                "expr": {
+                                  "args": [
+                                    {
+                                      "constant": {
+                                        "kind": "cname",
+                                        "value": "click"
+                                      },
+                                      "kind": "constant"
+                                    }
+                                  ],
+                                  "expr": {
+                                    "expr": {
+                                      "kind": "ident",
+                                      "name": "evt"
+                                    },
+                                    "kind": "member",
+                                    "member": "IsAction"
+                                  },
+                                  "kind": "call",
+                                  "type_args": []
+                                },
+                                "kind": "expr"
+                              }
+                            }
+                          ],
+                          "else": null,
+                          "kind": "if"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "OnRelease",
+                  "params": [
+                    {
+                      "name": "evt",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [
+                          {
+                            "args": [],
+                            "kind": "named",
+                            "name": "inkPointerEvent"
+                          }
+                        ],
+                        "kind": "named",
+                        "name": "ref"
+                      }
+                    }
+                  ],
+                  "return_type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Bool"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": true,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "protected"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "args": [],
+                            "expr": {
+                              "expr": {
+                                "expr": {
+                                  "kind": "this"
+                                },
+                                "kind": "member",
+                                "member": "m_root"
+                              },
+                              "kind": "member",
+                              "member": "GetName"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "return"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "GetName",
+                  "params": [],
+                  "return_type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "CName"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "blocks": [
+                            {
+                              "body": {
+                                "statements": [
+                                  {
+                                    "expr": {
+                                      "expr": {
+                                        "kind": "ident",
+                                        "name": "inkEButtonState"
+                                      },
+                                      "kind": "member",
+                                      "member": "Disabled"
+                                    },
+                                    "kind": "return"
+                                  }
+                                ]
+                              },
+                              "condition": {
+                                "expr": {
+                                  "expr": {
+                                    "kind": "this"
+                                  },
+                                  "kind": "member",
+                                  "member": "m_isDisabled"
+                                },
+                                "kind": "expr"
+                              }
+                            }
+                          ],
+                          "else": null,
+                          "kind": "if"
+                        },
+                        {
+                          "blocks": [
+                            {
+                              "body": {
+                                "statements": [
+                                  {
+                                    "expr": {
+                                      "expr": {
+                                        "kind": "ident",
+                                        "name": "inkEButtonState"
+                                      },
+                                      "kind": "member",
+                                      "member": "Press"
+                                    },
+                                    "kind": "return"
+                                  }
+                                ]
+                              },
+                              "condition": {
+                                "expr": {
+                                  "expr": {
+                                    "kind": "this"
+                                  },
+                                  "kind": "member",
+                                  "member": "m_isPressed"
+                                },
+                                "kind": "expr"
+                              }
+                            }
+                          ],
+                          "else": null,
+                          "kind": "if"
+                        },
+                        {
+                          "blocks": [
+                            {
+                              "body": {
+                                "statements": [
+                                  {
+                                    "expr": {
+                                      "expr": {
+                                        "kind": "ident",
+                                        "name": "inkEButtonState"
+                                      },
+                                      "kind": "member",
+                                      "member": "Hover"
+                                    },
+                                    "kind": "return"
+                                  }
+                                ]
+                              },
+                              "condition": {
+                                "expr": {
+                                  "expr": {
+                                    "kind": "this"
+                                  },
+                                  "kind": "member",
+                                  "member": "m_isHovered"
+                                },
+                                "kind": "expr"
+                              }
+                            }
+                          ],
+                          "else": null,
+                          "kind": "if"
+                        },
+                        {
+                          "expr": {
+                            "expr": {
+                              "kind": "ident",
+                              "name": "inkEButtonState"
+                            },
+                            "kind": "member",
+                            "member": "Normal"
+                          },
+                          "kind": "return"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "GetState",
+                  "params": [],
+                  "return_type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "inkEButtonState"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "args": [],
+                            "expr": {
+                              "expr": {
+                                "expr": {
+                                  "kind": "this"
+                                },
+                                "kind": "member",
+                                "member": "m_label"
+                              },
+                              "kind": "member",
+                              "member": "GetText"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "return"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "GetText",
+                  "params": [],
+                  "return_type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "String"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "expr": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "m_isDisabled"
+                            },
+                            "kind": "un_op",
+                            "op": "!"
+                          },
+                          "kind": "return"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "IsEnabled",
+                  "params": [],
+                  "return_type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Bool"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "expr": {
+                              "kind": "this"
+                            },
+                            "kind": "member",
+                            "member": "m_isDisabled"
+                          },
+                          "kind": "return"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "IsDisabled",
+                  "params": [],
+                  "return_type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Bool"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "kind": "bin_op",
+                            "lhs": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "m_isHovered"
+                            },
+                            "op": "&&",
+                            "rhs": {
+                              "expr": {
+                                "expr": {
+                                  "kind": "this"
+                                },
+                                "kind": "member",
+                                "member": "m_isDisabled"
+                              },
+                              "kind": "un_op",
+                              "op": "!"
+                            }
+                          },
+                          "kind": "return"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "IsHovered",
+                  "params": [],
+                  "return_type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Bool"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "kind": "bin_op",
+                            "lhs": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "m_isPressed"
+                            },
+                            "op": "&&",
+                            "rhs": {
+                              "expr": {
+                                "expr": {
+                                  "kind": "this"
+                                },
+                                "kind": "member",
+                                "member": "m_isDisabled"
+                              },
+                              "kind": "un_op",
+                              "op": "!"
+                            }
+                          },
+                          "kind": "return"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "IsPressed",
+                  "params": [],
+                  "return_type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Bool"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "kind": "ident",
+                                "name": "name"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "expr": {
+                                  "kind": "this"
+                                },
+                                "kind": "member",
+                                "member": "m_root"
+                              },
+                              "kind": "member",
+                              "member": "SetName"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "SetName",
+                  "params": [
+                    {
+                      "name": "name",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "CName"
+                      }
+                    }
+                  ],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "kind": "ident",
+                                "name": "text"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "expr": {
+                                  "kind": "this"
+                                },
+                                "kind": "member",
+                                "member": "m_label"
+                              },
+                              "kind": "member",
+                              "member": "SetText"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "SetText",
+                  "params": [
+                    {
+                      "name": "text",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "String"
+                      }
+                    }
+                  ],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "kind": "ident",
+                                "name": "x"
+                              },
+                              {
+                                "kind": "ident",
+                                "name": "y"
+                              },
+                              {
+                                "constant": {
+                                  "kind": "i32",
+                                  "value": 0
+                                },
+                                "kind": "constant"
+                              },
+                              {
+                                "constant": {
+                                  "kind": "i32",
+                                  "value": 0
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "expr": {
+                                  "kind": "this"
+                                },
+                                "kind": "member",
+                                "member": "m_root"
+                              },
+                              "kind": "member",
+                              "member": "SetMargin"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "SetPosition",
+                  "params": [
+                    {
+                      "name": "x",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "Float"
+                      }
+                    },
+                    {
+                      "name": "y",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "Float"
+                      }
+                    }
+                  ],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "kind": "ident",
+                                "name": "width"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "expr": {
+                                  "kind": "this"
+                                },
+                                "kind": "member",
+                                "member": "m_root"
+                              },
+                              "kind": "member",
+                              "member": "SetWidth"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "SetWidth",
+                  "params": [
+                    {
+                      "name": "width",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "Float"
+                      }
+                    }
+                  ],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "kind": "ident",
+                                "name": "isDisabled"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "SetDisabledState"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "SetDisabled",
+                  "params": [
+                    {
+                      "name": "isDisabled",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "Bool"
+                      }
+                    }
+                  ],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "kind": "assign",
+                            "lhs": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "m_useAnimations"
+                            },
+                            "rhs": {
+                              "kind": "ident",
+                              "name": "useAnimations"
+                            }
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [],
+                            "expr": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "CreateAnimations"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "ToggleAnimations",
+                  "params": [
+                    {
+                      "name": "useAnimations",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "Bool"
+                      }
+                    }
+                  ],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "kind": "assign",
+                            "lhs": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "m_useSounds"
+                            },
+                            "rhs": {
+                              "kind": "ident",
+                              "name": "useSounds"
+                            }
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "ToggleSounds",
+                  "params": [
+                    {
+                      "name": "useSounds",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "Bool"
+                      }
+                    }
+                  ],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            }
+          ],
+          "name": "CustomButton",
+          "type_params": []
+        },
+        "kind": "class"
+      },
+      "qualifiers": {
+        "abstract": true,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "public"
+    }
+  ],
+  "path": [
+    "Codeware",
+    "UI"
+  ]
+}

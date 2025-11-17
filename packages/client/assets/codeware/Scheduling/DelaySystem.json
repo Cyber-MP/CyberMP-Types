@@ -1,0 +1,1011 @@
+{
+  "items": [
+    {
+      "annotations": [],
+      "doc": [],
+      "item": {
+        "class": {
+          "extends": {
+            "args": [],
+            "kind": "named",
+            "name": "DelayCallback"
+          },
+          "items": [
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "field": {
+                  "default": null,
+                  "name": "controller",
+                  "type": {
+                    "args": [
+                      {
+                        "args": [],
+                        "kind": "named",
+                        "name": "IScriptable"
+                      }
+                    ],
+                    "kind": "named",
+                    "name": "wref"
+                  }
+                },
+                "kind": "let"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "field": {
+                  "default": null,
+                  "name": "event",
+                  "type": {
+                    "args": [
+                      {
+                        "args": [],
+                        "kind": "named",
+                        "name": "Event"
+                      }
+                    ],
+                    "kind": "named",
+                    "name": "ref"
+                  }
+                },
+                "kind": "let"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "blocks": [
+                            {
+                              "body": {
+                                "statements": [
+                                  {
+                                    "blocks": [
+                                      {
+                                        "body": {
+                                          "statements": [
+                                            {
+                                              "expr": {
+                                                "args": [
+                                                  {
+                                                    "expr": {
+                                                      "kind": "this"
+                                                    },
+                                                    "kind": "member",
+                                                    "member": "event"
+                                                  }
+                                                ],
+                                                "expr": {
+                                                  "expr": {
+                                                    "expr": {
+                                                      "expr": {
+                                                        "kind": "this"
+                                                      },
+                                                      "kind": "member",
+                                                      "member": "controller"
+                                                    },
+                                                    "kind": "dyn_cast",
+                                                    "type": {
+                                                      "args": [],
+                                                      "kind": "named",
+                                                      "name": "inkGameController"
+                                                    }
+                                                  },
+                                                  "kind": "member",
+                                                  "member": "QueueEvent"
+                                                },
+                                                "kind": "call",
+                                                "type_args": []
+                                              },
+                                              "kind": "expr"
+                                            },
+                                            {
+                                              "expr": null,
+                                              "kind": "return"
+                                            }
+                                          ]
+                                        },
+                                        "condition": {
+                                          "expr": {
+                                            "args": [
+                                              {
+                                                "constant": {
+                                                  "kind": "cname",
+                                                  "value": "gameuiWidgetGameController"
+                                                },
+                                                "kind": "constant"
+                                              }
+                                            ],
+                                            "expr": {
+                                              "expr": {
+                                                "expr": {
+                                                  "kind": "this"
+                                                },
+                                                "kind": "member",
+                                                "member": "controller"
+                                              },
+                                              "kind": "member",
+                                              "member": "IsA"
+                                            },
+                                            "kind": "call",
+                                            "type_args": []
+                                          },
+                                          "kind": "expr"
+                                        }
+                                      }
+                                    ],
+                                    "else": null,
+                                    "kind": "if"
+                                  },
+                                  {
+                                    "blocks": [
+                                      {
+                                        "body": {
+                                          "statements": [
+                                            {
+                                              "expr": {
+                                                "args": [
+                                                  {
+                                                    "expr": {
+                                                      "kind": "this"
+                                                    },
+                                                    "kind": "member",
+                                                    "member": "event"
+                                                  }
+                                                ],
+                                                "expr": {
+                                                  "expr": {
+                                                    "expr": {
+                                                      "expr": {
+                                                        "kind": "this"
+                                                      },
+                                                      "kind": "member",
+                                                      "member": "controller"
+                                                    },
+                                                    "kind": "dyn_cast",
+                                                    "type": {
+                                                      "args": [],
+                                                      "kind": "named",
+                                                      "name": "inkLogicController"
+                                                    }
+                                                  },
+                                                  "kind": "member",
+                                                  "member": "QueueEvent"
+                                                },
+                                                "kind": "call",
+                                                "type_args": []
+                                              },
+                                              "kind": "expr"
+                                            },
+                                            {
+                                              "expr": null,
+                                              "kind": "return"
+                                            }
+                                          ]
+                                        },
+                                        "condition": {
+                                          "expr": {
+                                            "args": [
+                                              {
+                                                "constant": {
+                                                  "kind": "cname",
+                                                  "value": "inkWidgetLogicController"
+                                                },
+                                                "kind": "constant"
+                                              }
+                                            ],
+                                            "expr": {
+                                              "expr": {
+                                                "expr": {
+                                                  "kind": "this"
+                                                },
+                                                "kind": "member",
+                                                "member": "controller"
+                                              },
+                                              "kind": "member",
+                                              "member": "IsA"
+                                            },
+                                            "kind": "call",
+                                            "type_args": []
+                                          },
+                                          "kind": "expr"
+                                        }
+                                      }
+                                    ],
+                                    "else": null,
+                                    "kind": "if"
+                                  }
+                                ]
+                              },
+                              "condition": {
+                                "expr": {
+                                  "args": [
+                                    {
+                                      "expr": {
+                                        "kind": "this"
+                                      },
+                                      "kind": "member",
+                                      "member": "controller"
+                                    }
+                                  ],
+                                  "expr": {
+                                    "kind": "ident",
+                                    "name": "IsDefined"
+                                  },
+                                  "kind": "call",
+                                  "type_args": []
+                                },
+                                "kind": "expr"
+                              }
+                            }
+                          ],
+                          "else": null,
+                          "kind": "if"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "Call",
+                  "params": [],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            }
+          ],
+          "name": "ControllerDelayCallback",
+          "type_params": []
+        },
+        "kind": "class"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "public"
+    },
+    {
+      "annotations": [
+        {
+          "args": [
+            {
+              "kind": "ident",
+              "name": "DelaySystem"
+            }
+          ],
+          "name": "addMethod"
+        }
+      ],
+      "doc": [],
+      "item": {
+        "function": {
+          "body": {
+            "block": {
+              "statements": [
+                {
+                  "kind": "let",
+                  "name": "callback",
+                  "type": null,
+                  "value": {
+                    "args": [],
+                    "kind": "new",
+                    "type": {
+                      "args": [],
+                      "kind": "named",
+                      "name": "ControllerDelayCallback"
+                    }
+                  }
+                },
+                {
+                  "expr": {
+                    "kind": "assign",
+                    "lhs": {
+                      "expr": {
+                        "kind": "ident",
+                        "name": "callback"
+                      },
+                      "kind": "member",
+                      "member": "controller"
+                    },
+                    "rhs": {
+                      "kind": "ident",
+                      "name": "controller"
+                    }
+                  },
+                  "kind": "expr"
+                },
+                {
+                  "expr": {
+                    "kind": "assign",
+                    "lhs": {
+                      "expr": {
+                        "kind": "ident",
+                        "name": "callback"
+                      },
+                      "kind": "member",
+                      "member": "event"
+                    },
+                    "rhs": {
+                      "kind": "ident",
+                      "name": "eventToDelay"
+                    }
+                  },
+                  "kind": "expr"
+                },
+                {
+                  "expr": {
+                    "args": [
+                      {
+                        "kind": "ident",
+                        "name": "callback"
+                      },
+                      {
+                        "kind": "ident",
+                        "name": "timeToDelay"
+                      },
+                      {
+                        "kind": "ident",
+                        "name": "isAffectedByTimeDilation"
+                      }
+                    ],
+                    "expr": {
+                      "expr": {
+                        "kind": "this"
+                      },
+                      "kind": "member",
+                      "member": "DelayCallback"
+                    },
+                    "kind": "call",
+                    "type_args": []
+                  },
+                  "kind": "return"
+                }
+              ]
+            },
+            "kind": "block"
+          },
+          "name": "DelayEvent",
+          "params": [
+            {
+              "name": "controller",
+              "qualifiers": {
+                "const": false,
+                "optional": false,
+                "out": false
+              },
+              "type": {
+                "args": [
+                  {
+                    "args": [],
+                    "kind": "named",
+                    "name": "inkGameController"
+                  }
+                ],
+                "kind": "named",
+                "name": "wref"
+              }
+            },
+            {
+              "name": "eventToDelay",
+              "qualifiers": {
+                "const": false,
+                "optional": false,
+                "out": false
+              },
+              "type": {
+                "args": [
+                  {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Event"
+                  }
+                ],
+                "kind": "named",
+                "name": "ref"
+              }
+            },
+            {
+              "name": "timeToDelay",
+              "qualifiers": {
+                "const": false,
+                "optional": false,
+                "out": false
+              },
+              "type": {
+                "args": [],
+                "kind": "named",
+                "name": "Float"
+              }
+            },
+            {
+              "name": "isAffectedByTimeDilation",
+              "qualifiers": {
+                "const": false,
+                "optional": true,
+                "out": false
+              },
+              "type": {
+                "args": [],
+                "kind": "named",
+                "name": "Bool"
+              }
+            }
+          ],
+          "return_type": {
+            "args": [],
+            "kind": "named",
+            "name": "DelayID"
+          },
+          "type_params": []
+        },
+        "kind": "function"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "public"
+    },
+    {
+      "annotations": [
+        {
+          "args": [
+            {
+              "kind": "ident",
+              "name": "DelaySystem"
+            }
+          ],
+          "name": "addMethod"
+        }
+      ],
+      "doc": [],
+      "item": {
+        "function": {
+          "body": {
+            "block": {
+              "statements": [
+                {
+                  "kind": "let",
+                  "name": "callback",
+                  "type": null,
+                  "value": {
+                    "args": [],
+                    "kind": "new",
+                    "type": {
+                      "args": [],
+                      "kind": "named",
+                      "name": "ControllerDelayCallback"
+                    }
+                  }
+                },
+                {
+                  "expr": {
+                    "kind": "assign",
+                    "lhs": {
+                      "expr": {
+                        "kind": "ident",
+                        "name": "callback"
+                      },
+                      "kind": "member",
+                      "member": "controller"
+                    },
+                    "rhs": {
+                      "kind": "ident",
+                      "name": "controller"
+                    }
+                  },
+                  "kind": "expr"
+                },
+                {
+                  "expr": {
+                    "kind": "assign",
+                    "lhs": {
+                      "expr": {
+                        "kind": "ident",
+                        "name": "callback"
+                      },
+                      "kind": "member",
+                      "member": "event"
+                    },
+                    "rhs": {
+                      "kind": "ident",
+                      "name": "eventToDelay"
+                    }
+                  },
+                  "kind": "expr"
+                },
+                {
+                  "expr": {
+                    "args": [
+                      {
+                        "kind": "ident",
+                        "name": "callback"
+                      }
+                    ],
+                    "expr": {
+                      "expr": {
+                        "kind": "this"
+                      },
+                      "kind": "member",
+                      "member": "DelayCallbackNextFrame"
+                    },
+                    "kind": "call",
+                    "type_args": []
+                  },
+                  "kind": "expr"
+                }
+              ]
+            },
+            "kind": "block"
+          },
+          "name": "DelayEventNextFrame",
+          "params": [
+            {
+              "name": "controller",
+              "qualifiers": {
+                "const": false,
+                "optional": false,
+                "out": false
+              },
+              "type": {
+                "args": [
+                  {
+                    "args": [],
+                    "kind": "named",
+                    "name": "inkGameController"
+                  }
+                ],
+                "kind": "named",
+                "name": "wref"
+              }
+            },
+            {
+              "name": "eventToDelay",
+              "qualifiers": {
+                "const": false,
+                "optional": false,
+                "out": false
+              },
+              "type": {
+                "args": [
+                  {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Event"
+                  }
+                ],
+                "kind": "named",
+                "name": "ref"
+              }
+            }
+          ],
+          "return_type": null,
+          "type_params": []
+        },
+        "kind": "function"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "public"
+    },
+    {
+      "annotations": [
+        {
+          "args": [
+            {
+              "kind": "ident",
+              "name": "DelaySystem"
+            }
+          ],
+          "name": "addMethod"
+        }
+      ],
+      "doc": [],
+      "item": {
+        "function": {
+          "body": {
+            "block": {
+              "statements": [
+                {
+                  "kind": "let",
+                  "name": "callback",
+                  "type": null,
+                  "value": {
+                    "args": [],
+                    "kind": "new",
+                    "type": {
+                      "args": [],
+                      "kind": "named",
+                      "name": "ControllerDelayCallback"
+                    }
+                  }
+                },
+                {
+                  "expr": {
+                    "kind": "assign",
+                    "lhs": {
+                      "expr": {
+                        "kind": "ident",
+                        "name": "callback"
+                      },
+                      "kind": "member",
+                      "member": "controller"
+                    },
+                    "rhs": {
+                      "kind": "ident",
+                      "name": "controller"
+                    }
+                  },
+                  "kind": "expr"
+                },
+                {
+                  "expr": {
+                    "kind": "assign",
+                    "lhs": {
+                      "expr": {
+                        "kind": "ident",
+                        "name": "callback"
+                      },
+                      "kind": "member",
+                      "member": "event"
+                    },
+                    "rhs": {
+                      "kind": "ident",
+                      "name": "eventToDelay"
+                    }
+                  },
+                  "kind": "expr"
+                },
+                {
+                  "expr": {
+                    "args": [
+                      {
+                        "kind": "ident",
+                        "name": "callback"
+                      },
+                      {
+                        "kind": "ident",
+                        "name": "timeToDelay"
+                      },
+                      {
+                        "kind": "ident",
+                        "name": "isAffectedByTimeDilation"
+                      }
+                    ],
+                    "expr": {
+                      "expr": {
+                        "kind": "this"
+                      },
+                      "kind": "member",
+                      "member": "DelayCallback"
+                    },
+                    "kind": "call",
+                    "type_args": []
+                  },
+                  "kind": "return"
+                }
+              ]
+            },
+            "kind": "block"
+          },
+          "name": "DelayEvent",
+          "params": [
+            {
+              "name": "controller",
+              "qualifiers": {
+                "const": false,
+                "optional": false,
+                "out": false
+              },
+              "type": {
+                "args": [
+                  {
+                    "args": [],
+                    "kind": "named",
+                    "name": "inkLogicController"
+                  }
+                ],
+                "kind": "named",
+                "name": "wref"
+              }
+            },
+            {
+              "name": "eventToDelay",
+              "qualifiers": {
+                "const": false,
+                "optional": false,
+                "out": false
+              },
+              "type": {
+                "args": [
+                  {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Event"
+                  }
+                ],
+                "kind": "named",
+                "name": "ref"
+              }
+            },
+            {
+              "name": "timeToDelay",
+              "qualifiers": {
+                "const": false,
+                "optional": false,
+                "out": false
+              },
+              "type": {
+                "args": [],
+                "kind": "named",
+                "name": "Float"
+              }
+            },
+            {
+              "name": "isAffectedByTimeDilation",
+              "qualifiers": {
+                "const": false,
+                "optional": true,
+                "out": false
+              },
+              "type": {
+                "args": [],
+                "kind": "named",
+                "name": "Bool"
+              }
+            }
+          ],
+          "return_type": {
+            "args": [],
+            "kind": "named",
+            "name": "DelayID"
+          },
+          "type_params": []
+        },
+        "kind": "function"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "public"
+    },
+    {
+      "annotations": [
+        {
+          "args": [
+            {
+              "kind": "ident",
+              "name": "DelaySystem"
+            }
+          ],
+          "name": "addMethod"
+        }
+      ],
+      "doc": [],
+      "item": {
+        "function": {
+          "body": {
+            "block": {
+              "statements": [
+                {
+                  "kind": "let",
+                  "name": "callback",
+                  "type": null,
+                  "value": {
+                    "args": [],
+                    "kind": "new",
+                    "type": {
+                      "args": [],
+                      "kind": "named",
+                      "name": "ControllerDelayCallback"
+                    }
+                  }
+                },
+                {
+                  "expr": {
+                    "kind": "assign",
+                    "lhs": {
+                      "expr": {
+                        "kind": "ident",
+                        "name": "callback"
+                      },
+                      "kind": "member",
+                      "member": "controller"
+                    },
+                    "rhs": {
+                      "kind": "ident",
+                      "name": "controller"
+                    }
+                  },
+                  "kind": "expr"
+                },
+                {
+                  "expr": {
+                    "kind": "assign",
+                    "lhs": {
+                      "expr": {
+                        "kind": "ident",
+                        "name": "callback"
+                      },
+                      "kind": "member",
+                      "member": "event"
+                    },
+                    "rhs": {
+                      "kind": "ident",
+                      "name": "eventToDelay"
+                    }
+                  },
+                  "kind": "expr"
+                },
+                {
+                  "expr": {
+                    "args": [
+                      {
+                        "kind": "ident",
+                        "name": "callback"
+                      }
+                    ],
+                    "expr": {
+                      "expr": {
+                        "kind": "this"
+                      },
+                      "kind": "member",
+                      "member": "DelayCallbackNextFrame"
+                    },
+                    "kind": "call",
+                    "type_args": []
+                  },
+                  "kind": "expr"
+                }
+              ]
+            },
+            "kind": "block"
+          },
+          "name": "DelayEventNextFrame",
+          "params": [
+            {
+              "name": "controller",
+              "qualifiers": {
+                "const": false,
+                "optional": false,
+                "out": false
+              },
+              "type": {
+                "args": [
+                  {
+                    "args": [],
+                    "kind": "named",
+                    "name": "inkLogicController"
+                  }
+                ],
+                "kind": "named",
+                "name": "wref"
+              }
+            },
+            {
+              "name": "eventToDelay",
+              "qualifiers": {
+                "const": false,
+                "optional": false,
+                "out": false
+              },
+              "type": {
+                "args": [
+                  {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Event"
+                  }
+                ],
+                "kind": "named",
+                "name": "ref"
+              }
+            }
+          ],
+          "return_type": null,
+          "type_params": []
+        },
+        "kind": "function"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "public"
+    }
+  ],
+  "path": null
+}

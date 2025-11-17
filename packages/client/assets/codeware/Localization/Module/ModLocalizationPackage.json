@@ -1,0 +1,2641 @@
+{
+  "items": [
+    {
+      "annotations": [],
+      "doc": [],
+      "item": {
+        "class": {
+          "extends": null,
+          "items": [
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "field": {
+                  "default": null,
+                  "name": "m_interfaceEntries",
+                  "type": {
+                    "args": [
+                      {
+                        "args": [],
+                        "kind": "named",
+                        "name": "inkHashMap"
+                      }
+                    ],
+                    "kind": "named",
+                    "name": "ref"
+                  }
+                },
+                "kind": "let"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "private"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "field": {
+                  "default": null,
+                  "name": "m_subtitleEntries",
+                  "type": {
+                    "args": [
+                      {
+                        "args": [],
+                        "kind": "named",
+                        "name": "inkHashMap"
+                      }
+                    ],
+                    "kind": "named",
+                    "name": "ref"
+                  }
+                },
+                "kind": "let"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "private"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "cases": [
+                            {
+                              "body": [
+                                {
+                                  "blocks": [
+                                    {
+                                      "body": {
+                                        "statements": [
+                                          {
+                                            "expr": {
+                                              "kind": "assign",
+                                              "lhs": {
+                                                "expr": {
+                                                  "kind": "this"
+                                                },
+                                                "kind": "member",
+                                                "member": "m_interfaceEntries"
+                                              },
+                                              "rhs": {
+                                                "args": [],
+                                                "kind": "new",
+                                                "type": {
+                                                  "args": [],
+                                                  "kind": "named",
+                                                  "name": "inkHashMap"
+                                                }
+                                              }
+                                            },
+                                            "kind": "expr"
+                                          },
+                                          {
+                                            "expr": {
+                                              "args": [],
+                                              "expr": {
+                                                "expr": {
+                                                  "kind": "this"
+                                                },
+                                                "kind": "member",
+                                                "member": "DefineTexts"
+                                              },
+                                              "kind": "call",
+                                              "type_args": []
+                                            },
+                                            "kind": "expr"
+                                          }
+                                        ]
+                                      },
+                                      "condition": {
+                                        "expr": {
+                                          "expr": {
+                                            "args": [
+                                              {
+                                                "expr": {
+                                                  "kind": "this"
+                                                },
+                                                "kind": "member",
+                                                "member": "m_interfaceEntries"
+                                              }
+                                            ],
+                                            "expr": {
+                                              "kind": "ident",
+                                              "name": "IsDefined"
+                                            },
+                                            "kind": "call",
+                                            "type_args": []
+                                          },
+                                          "kind": "un_op",
+                                          "op": "!"
+                                        },
+                                        "kind": "expr"
+                                      }
+                                    }
+                                  ],
+                                  "else": null,
+                                  "kind": "if"
+                                },
+                                {
+                                  "expr": {
+                                    "expr": {
+                                      "kind": "this"
+                                    },
+                                    "kind": "member",
+                                    "member": "m_interfaceEntries"
+                                  },
+                                  "kind": "return"
+                                }
+                              ],
+                              "condition": {
+                                "expr": {
+                                  "expr": {
+                                    "kind": "ident",
+                                    "name": "EntryType"
+                                  },
+                                  "kind": "member",
+                                  "member": "Interface"
+                                },
+                                "kind": "expr"
+                              }
+                            },
+                            {
+                              "body": [
+                                {
+                                  "blocks": [
+                                    {
+                                      "body": {
+                                        "statements": [
+                                          {
+                                            "expr": {
+                                              "kind": "assign",
+                                              "lhs": {
+                                                "expr": {
+                                                  "kind": "this"
+                                                },
+                                                "kind": "member",
+                                                "member": "m_subtitleEntries"
+                                              },
+                                              "rhs": {
+                                                "args": [],
+                                                "kind": "new",
+                                                "type": {
+                                                  "args": [],
+                                                  "kind": "named",
+                                                  "name": "inkHashMap"
+                                                }
+                                              }
+                                            },
+                                            "kind": "expr"
+                                          },
+                                          {
+                                            "expr": {
+                                              "args": [],
+                                              "expr": {
+                                                "expr": {
+                                                  "kind": "this"
+                                                },
+                                                "kind": "member",
+                                                "member": "DefineSubtitles"
+                                              },
+                                              "kind": "call",
+                                              "type_args": []
+                                            },
+                                            "kind": "expr"
+                                          }
+                                        ]
+                                      },
+                                      "condition": {
+                                        "expr": {
+                                          "expr": {
+                                            "args": [
+                                              {
+                                                "expr": {
+                                                  "kind": "this"
+                                                },
+                                                "kind": "member",
+                                                "member": "m_subtitleEntries"
+                                              }
+                                            ],
+                                            "expr": {
+                                              "kind": "ident",
+                                              "name": "IsDefined"
+                                            },
+                                            "kind": "call",
+                                            "type_args": []
+                                          },
+                                          "kind": "un_op",
+                                          "op": "!"
+                                        },
+                                        "kind": "expr"
+                                      }
+                                    }
+                                  ],
+                                  "else": null,
+                                  "kind": "if"
+                                },
+                                {
+                                  "expr": {
+                                    "expr": {
+                                      "kind": "this"
+                                    },
+                                    "kind": "member",
+                                    "member": "m_subtitleEntries"
+                                  },
+                                  "kind": "return"
+                                }
+                              ],
+                              "condition": {
+                                "expr": {
+                                  "expr": {
+                                    "kind": "ident",
+                                    "name": "EntryType"
+                                  },
+                                  "kind": "member",
+                                  "member": "Subtitle"
+                                },
+                                "kind": "expr"
+                              }
+                            }
+                          ],
+                          "default": [
+                            {
+                              "expr": {
+                                "kind": "null"
+                              },
+                              "kind": "return"
+                            }
+                          ],
+                          "expr": {
+                            "kind": "ident",
+                            "name": "type"
+                          },
+                          "kind": "switch"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "GetEntries",
+                  "params": [
+                    {
+                      "name": "type",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "EntryType"
+                      }
+                    }
+                  ],
+                  "return_type": {
+                    "args": [
+                      {
+                        "args": [],
+                        "kind": "named",
+                        "name": "inkHashMap"
+                      }
+                    ],
+                    "kind": "named",
+                    "name": "wref"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "kind": "let",
+                          "name": "values",
+                          "type": {
+                            "args": [
+                              {
+                                "args": [
+                                  {
+                                    "args": [],
+                                    "kind": "named",
+                                    "name": "IScriptable"
+                                  }
+                                ],
+                                "kind": "named",
+                                "name": "wref"
+                              }
+                            ],
+                            "kind": "named",
+                            "name": "array"
+                          },
+                          "value": null
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "kind": "ident",
+                                "name": "values"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "args": [
+                                  {
+                                    "kind": "ident",
+                                    "name": "type"
+                                  }
+                                ],
+                                "expr": {
+                                  "expr": {
+                                    "kind": "this"
+                                  },
+                                  "kind": "member",
+                                  "member": "GetEntries"
+                                },
+                                "kind": "call",
+                                "type_args": []
+                              },
+                              "kind": "member",
+                              "member": "GetValues"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "kind": "ident",
+                            "name": "values"
+                          },
+                          "kind": "return"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "GetEntriesList",
+                  "params": [
+                    {
+                      "name": "type",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "EntryType"
+                      }
+                    }
+                  ],
+                  "return_type": {
+                    "args": [
+                      {
+                        "args": [
+                          {
+                            "args": [],
+                            "kind": "named",
+                            "name": "IScriptable"
+                          }
+                        ],
+                        "kind": "named",
+                        "name": "wref"
+                      }
+                    ],
+                    "kind": "named",
+                    "name": "array"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": []
+                    },
+                    "kind": "block"
+                  },
+                  "name": "DefineTexts",
+                  "params": [],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "protected"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": []
+                    },
+                    "kind": "block"
+                  },
+                  "name": "DefineSubtitles",
+                  "params": [],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "protected"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "kind": "let",
+                          "name": "hash",
+                          "type": {
+                            "args": [],
+                            "kind": "named",
+                            "name": "Uint64"
+                          },
+                          "value": {
+                            "args": [
+                              {
+                                "kind": "ident",
+                                "name": "key"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "LocalizationEntry"
+                              },
+                              "kind": "member",
+                              "member": "Hash"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          }
+                        },
+                        {
+                          "kind": "let",
+                          "name": "entry",
+                          "type": {
+                            "args": [
+                              {
+                                "args": [],
+                                "kind": "named",
+                                "name": "GenderNeutralEntry"
+                              }
+                            ],
+                            "kind": "named",
+                            "name": "ref"
+                          },
+                          "value": {
+                            "expr": {
+                              "args": [
+                                {
+                                  "kind": "ident",
+                                  "name": "hash"
+                                }
+                              ],
+                              "expr": {
+                                "expr": {
+                                  "expr": {
+                                    "kind": "this"
+                                  },
+                                  "kind": "member",
+                                  "member": "m_interfaceEntries"
+                                },
+                                "kind": "member",
+                                "member": "Get"
+                              },
+                              "kind": "call",
+                              "type_args": []
+                            },
+                            "kind": "dyn_cast",
+                            "type": {
+                              "args": [],
+                              "kind": "named",
+                              "name": "GenderNeutralEntry"
+                            }
+                          }
+                        },
+                        {
+                          "blocks": [
+                            {
+                              "body": {
+                                "statements": [
+                                  {
+                                    "expr": {
+                                      "kind": "assign",
+                                      "lhs": {
+                                        "kind": "ident",
+                                        "name": "entry"
+                                      },
+                                      "rhs": {
+                                        "args": [
+                                          {
+                                            "kind": "ident",
+                                            "name": "key"
+                                          }
+                                        ],
+                                        "expr": {
+                                          "expr": {
+                                            "kind": "ident",
+                                            "name": "GenderNeutralEntry"
+                                          },
+                                          "kind": "member",
+                                          "member": "Create"
+                                        },
+                                        "kind": "call",
+                                        "type_args": []
+                                      }
+                                    },
+                                    "kind": "expr"
+                                  },
+                                  {
+                                    "expr": {
+                                      "args": [
+                                        {
+                                          "kind": "ident",
+                                          "name": "hash"
+                                        },
+                                        {
+                                          "kind": "ident",
+                                          "name": "entry"
+                                        }
+                                      ],
+                                      "expr": {
+                                        "expr": {
+                                          "expr": {
+                                            "kind": "this"
+                                          },
+                                          "kind": "member",
+                                          "member": "m_interfaceEntries"
+                                        },
+                                        "kind": "member",
+                                        "member": "Insert"
+                                      },
+                                      "kind": "call",
+                                      "type_args": []
+                                    },
+                                    "kind": "expr"
+                                  }
+                                ]
+                              },
+                              "condition": {
+                                "expr": {
+                                  "expr": {
+                                    "args": [
+                                      {
+                                        "kind": "ident",
+                                        "name": "entry"
+                                      }
+                                    ],
+                                    "expr": {
+                                      "kind": "ident",
+                                      "name": "IsDefined"
+                                    },
+                                    "kind": "call",
+                                    "type_args": []
+                                  },
+                                  "kind": "un_op",
+                                  "op": "!"
+                                },
+                                "kind": "expr"
+                              }
+                            }
+                          ],
+                          "else": null,
+                          "kind": "if"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "PlayerGender"
+                                },
+                                "kind": "member",
+                                "member": "Default"
+                              },
+                              {
+                                "kind": "ident",
+                                "name": "value"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "entry"
+                              },
+                              "kind": "member",
+                              "member": "SetVariant"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "Text",
+                  "params": [
+                    {
+                      "name": "key",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "String"
+                      }
+                    },
+                    {
+                      "name": "value",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "String"
+                      }
+                    }
+                  ],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "protected"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "kind": "let",
+                          "name": "hash",
+                          "type": {
+                            "args": [],
+                            "kind": "named",
+                            "name": "Uint64"
+                          },
+                          "value": {
+                            "args": [
+                              {
+                                "kind": "ident",
+                                "name": "key"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "LocalizationEntry"
+                              },
+                              "kind": "member",
+                              "member": "Hash"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          }
+                        },
+                        {
+                          "kind": "let",
+                          "name": "entry",
+                          "type": {
+                            "args": [
+                              {
+                                "args": [],
+                                "kind": "named",
+                                "name": "GenderSensitiveEntry"
+                              }
+                            ],
+                            "kind": "named",
+                            "name": "ref"
+                          },
+                          "value": {
+                            "expr": {
+                              "args": [
+                                {
+                                  "kind": "ident",
+                                  "name": "hash"
+                                }
+                              ],
+                              "expr": {
+                                "expr": {
+                                  "expr": {
+                                    "kind": "this"
+                                  },
+                                  "kind": "member",
+                                  "member": "m_interfaceEntries"
+                                },
+                                "kind": "member",
+                                "member": "Get"
+                              },
+                              "kind": "call",
+                              "type_args": []
+                            },
+                            "kind": "dyn_cast",
+                            "type": {
+                              "args": [],
+                              "kind": "named",
+                              "name": "GenderSensitiveEntry"
+                            }
+                          }
+                        },
+                        {
+                          "blocks": [
+                            {
+                              "body": {
+                                "statements": [
+                                  {
+                                    "expr": {
+                                      "kind": "assign",
+                                      "lhs": {
+                                        "kind": "ident",
+                                        "name": "entry"
+                                      },
+                                      "rhs": {
+                                        "args": [
+                                          {
+                                            "kind": "ident",
+                                            "name": "key"
+                                          }
+                                        ],
+                                        "expr": {
+                                          "expr": {
+                                            "kind": "ident",
+                                            "name": "GenderSensitiveEntry"
+                                          },
+                                          "kind": "member",
+                                          "member": "Create"
+                                        },
+                                        "kind": "call",
+                                        "type_args": []
+                                      }
+                                    },
+                                    "kind": "expr"
+                                  },
+                                  {
+                                    "expr": {
+                                      "args": [
+                                        {
+                                          "kind": "ident",
+                                          "name": "hash"
+                                        },
+                                        {
+                                          "kind": "ident",
+                                          "name": "entry"
+                                        }
+                                      ],
+                                      "expr": {
+                                        "expr": {
+                                          "expr": {
+                                            "kind": "this"
+                                          },
+                                          "kind": "member",
+                                          "member": "m_interfaceEntries"
+                                        },
+                                        "kind": "member",
+                                        "member": "Insert"
+                                      },
+                                      "kind": "call",
+                                      "type_args": []
+                                    },
+                                    "kind": "expr"
+                                  }
+                                ]
+                              },
+                              "condition": {
+                                "expr": {
+                                  "expr": {
+                                    "args": [
+                                      {
+                                        "kind": "ident",
+                                        "name": "entry"
+                                      }
+                                    ],
+                                    "expr": {
+                                      "kind": "ident",
+                                      "name": "IsDefined"
+                                    },
+                                    "kind": "call",
+                                    "type_args": []
+                                  },
+                                  "kind": "un_op",
+                                  "op": "!"
+                                },
+                                "kind": "expr"
+                              }
+                            }
+                          ],
+                          "else": null,
+                          "kind": "if"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "PlayerGender"
+                                },
+                                "kind": "member",
+                                "member": "Female"
+                              },
+                              {
+                                "kind": "ident",
+                                "name": "valueF"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "entry"
+                              },
+                              "kind": "member",
+                              "member": "SetVariant"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "PlayerGender"
+                                },
+                                "kind": "member",
+                                "member": "Male"
+                              },
+                              {
+                                "kind": "ident",
+                                "name": "valueM"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "entry"
+                              },
+                              "kind": "member",
+                              "member": "SetVariant"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "Text",
+                  "params": [
+                    {
+                      "name": "key",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "String"
+                      }
+                    },
+                    {
+                      "name": "valueF",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "String"
+                      }
+                    },
+                    {
+                      "name": "valueM",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "String"
+                      }
+                    }
+                  ],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "protected"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "kind": "let",
+                          "name": "hash",
+                          "type": {
+                            "args": [],
+                            "kind": "named",
+                            "name": "Uint64"
+                          },
+                          "value": {
+                            "args": [
+                              {
+                                "kind": "ident",
+                                "name": "key"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "LocalizationEntry"
+                              },
+                              "kind": "member",
+                              "member": "Hash"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          }
+                        },
+                        {
+                          "kind": "let",
+                          "name": "entry",
+                          "type": {
+                            "args": [
+                              {
+                                "args": [],
+                                "kind": "named",
+                                "name": "GenderSensitiveEntry"
+                              }
+                            ],
+                            "kind": "named",
+                            "name": "ref"
+                          },
+                          "value": {
+                            "expr": {
+                              "args": [
+                                {
+                                  "kind": "ident",
+                                  "name": "hash"
+                                }
+                              ],
+                              "expr": {
+                                "expr": {
+                                  "expr": {
+                                    "kind": "this"
+                                  },
+                                  "kind": "member",
+                                  "member": "m_interfaceEntries"
+                                },
+                                "kind": "member",
+                                "member": "Get"
+                              },
+                              "kind": "call",
+                              "type_args": []
+                            },
+                            "kind": "dyn_cast",
+                            "type": {
+                              "args": [],
+                              "kind": "named",
+                              "name": "GenderSensitiveEntry"
+                            }
+                          }
+                        },
+                        {
+                          "blocks": [
+                            {
+                              "body": {
+                                "statements": [
+                                  {
+                                    "expr": {
+                                      "kind": "assign",
+                                      "lhs": {
+                                        "kind": "ident",
+                                        "name": "entry"
+                                      },
+                                      "rhs": {
+                                        "args": [
+                                          {
+                                            "kind": "ident",
+                                            "name": "key"
+                                          }
+                                        ],
+                                        "expr": {
+                                          "expr": {
+                                            "kind": "ident",
+                                            "name": "GenderSensitiveEntry"
+                                          },
+                                          "kind": "member",
+                                          "member": "Create"
+                                        },
+                                        "kind": "call",
+                                        "type_args": []
+                                      }
+                                    },
+                                    "kind": "expr"
+                                  },
+                                  {
+                                    "expr": {
+                                      "args": [
+                                        {
+                                          "kind": "ident",
+                                          "name": "hash"
+                                        },
+                                        {
+                                          "kind": "ident",
+                                          "name": "entry"
+                                        }
+                                      ],
+                                      "expr": {
+                                        "expr": {
+                                          "expr": {
+                                            "kind": "this"
+                                          },
+                                          "kind": "member",
+                                          "member": "m_interfaceEntries"
+                                        },
+                                        "kind": "member",
+                                        "member": "Insert"
+                                      },
+                                      "kind": "call",
+                                      "type_args": []
+                                    },
+                                    "kind": "expr"
+                                  }
+                                ]
+                              },
+                              "condition": {
+                                "expr": {
+                                  "expr": {
+                                    "args": [
+                                      {
+                                        "kind": "ident",
+                                        "name": "entry"
+                                      }
+                                    ],
+                                    "expr": {
+                                      "kind": "ident",
+                                      "name": "IsDefined"
+                                    },
+                                    "kind": "call",
+                                    "type_args": []
+                                  },
+                                  "kind": "un_op",
+                                  "op": "!"
+                                },
+                                "kind": "expr"
+                              }
+                            }
+                          ],
+                          "else": null,
+                          "kind": "if"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "PlayerGender"
+                                },
+                                "kind": "member",
+                                "member": "Female"
+                              },
+                              {
+                                "kind": "ident",
+                                "name": "value"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "entry"
+                              },
+                              "kind": "member",
+                              "member": "SetVariant"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "TextF",
+                  "params": [
+                    {
+                      "name": "key",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "String"
+                      }
+                    },
+                    {
+                      "name": "value",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "String"
+                      }
+                    }
+                  ],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "protected"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "kind": "let",
+                          "name": "hash",
+                          "type": {
+                            "args": [],
+                            "kind": "named",
+                            "name": "Uint64"
+                          },
+                          "value": {
+                            "args": [
+                              {
+                                "kind": "ident",
+                                "name": "key"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "LocalizationEntry"
+                              },
+                              "kind": "member",
+                              "member": "Hash"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          }
+                        },
+                        {
+                          "kind": "let",
+                          "name": "entry",
+                          "type": {
+                            "args": [
+                              {
+                                "args": [],
+                                "kind": "named",
+                                "name": "GenderSensitiveEntry"
+                              }
+                            ],
+                            "kind": "named",
+                            "name": "ref"
+                          },
+                          "value": {
+                            "expr": {
+                              "args": [
+                                {
+                                  "kind": "ident",
+                                  "name": "hash"
+                                }
+                              ],
+                              "expr": {
+                                "expr": {
+                                  "expr": {
+                                    "kind": "this"
+                                  },
+                                  "kind": "member",
+                                  "member": "m_interfaceEntries"
+                                },
+                                "kind": "member",
+                                "member": "Get"
+                              },
+                              "kind": "call",
+                              "type_args": []
+                            },
+                            "kind": "dyn_cast",
+                            "type": {
+                              "args": [],
+                              "kind": "named",
+                              "name": "GenderSensitiveEntry"
+                            }
+                          }
+                        },
+                        {
+                          "blocks": [
+                            {
+                              "body": {
+                                "statements": [
+                                  {
+                                    "expr": {
+                                      "kind": "assign",
+                                      "lhs": {
+                                        "kind": "ident",
+                                        "name": "entry"
+                                      },
+                                      "rhs": {
+                                        "args": [
+                                          {
+                                            "kind": "ident",
+                                            "name": "key"
+                                          }
+                                        ],
+                                        "expr": {
+                                          "expr": {
+                                            "kind": "ident",
+                                            "name": "GenderSensitiveEntry"
+                                          },
+                                          "kind": "member",
+                                          "member": "Create"
+                                        },
+                                        "kind": "call",
+                                        "type_args": []
+                                      }
+                                    },
+                                    "kind": "expr"
+                                  },
+                                  {
+                                    "expr": {
+                                      "args": [
+                                        {
+                                          "kind": "ident",
+                                          "name": "hash"
+                                        },
+                                        {
+                                          "kind": "ident",
+                                          "name": "entry"
+                                        }
+                                      ],
+                                      "expr": {
+                                        "expr": {
+                                          "expr": {
+                                            "kind": "this"
+                                          },
+                                          "kind": "member",
+                                          "member": "m_interfaceEntries"
+                                        },
+                                        "kind": "member",
+                                        "member": "Insert"
+                                      },
+                                      "kind": "call",
+                                      "type_args": []
+                                    },
+                                    "kind": "expr"
+                                  }
+                                ]
+                              },
+                              "condition": {
+                                "expr": {
+                                  "expr": {
+                                    "args": [
+                                      {
+                                        "kind": "ident",
+                                        "name": "entry"
+                                      }
+                                    ],
+                                    "expr": {
+                                      "kind": "ident",
+                                      "name": "IsDefined"
+                                    },
+                                    "kind": "call",
+                                    "type_args": []
+                                  },
+                                  "kind": "un_op",
+                                  "op": "!"
+                                },
+                                "kind": "expr"
+                              }
+                            }
+                          ],
+                          "else": null,
+                          "kind": "if"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "PlayerGender"
+                                },
+                                "kind": "member",
+                                "member": "Male"
+                              },
+                              {
+                                "kind": "ident",
+                                "name": "value"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "entry"
+                              },
+                              "kind": "member",
+                              "member": "SetVariant"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "TextM",
+                  "params": [
+                    {
+                      "name": "key",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "String"
+                      }
+                    },
+                    {
+                      "name": "value",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "String"
+                      }
+                    }
+                  ],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "protected"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "kind": "let",
+                          "name": "hash",
+                          "type": {
+                            "args": [],
+                            "kind": "named",
+                            "name": "Uint64"
+                          },
+                          "value": {
+                            "args": [
+                              {
+                                "kind": "ident",
+                                "name": "key"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "LocalizationEntry"
+                              },
+                              "kind": "member",
+                              "member": "Hash"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          }
+                        },
+                        {
+                          "kind": "let",
+                          "name": "entry",
+                          "type": {
+                            "args": [
+                              {
+                                "args": [],
+                                "kind": "named",
+                                "name": "GenderNeutralEntry"
+                              }
+                            ],
+                            "kind": "named",
+                            "name": "ref"
+                          },
+                          "value": {
+                            "expr": {
+                              "args": [
+                                {
+                                  "kind": "ident",
+                                  "name": "hash"
+                                }
+                              ],
+                              "expr": {
+                                "expr": {
+                                  "expr": {
+                                    "kind": "this"
+                                  },
+                                  "kind": "member",
+                                  "member": "m_subtitleEntries"
+                                },
+                                "kind": "member",
+                                "member": "Get"
+                              },
+                              "kind": "call",
+                              "type_args": []
+                            },
+                            "kind": "dyn_cast",
+                            "type": {
+                              "args": [],
+                              "kind": "named",
+                              "name": "GenderNeutralEntry"
+                            }
+                          }
+                        },
+                        {
+                          "blocks": [
+                            {
+                              "body": {
+                                "statements": [
+                                  {
+                                    "expr": {
+                                      "kind": "assign",
+                                      "lhs": {
+                                        "kind": "ident",
+                                        "name": "entry"
+                                      },
+                                      "rhs": {
+                                        "args": [
+                                          {
+                                            "kind": "ident",
+                                            "name": "key"
+                                          }
+                                        ],
+                                        "expr": {
+                                          "expr": {
+                                            "kind": "ident",
+                                            "name": "GenderNeutralEntry"
+                                          },
+                                          "kind": "member",
+                                          "member": "Create"
+                                        },
+                                        "kind": "call",
+                                        "type_args": []
+                                      }
+                                    },
+                                    "kind": "expr"
+                                  },
+                                  {
+                                    "expr": {
+                                      "args": [
+                                        {
+                                          "kind": "ident",
+                                          "name": "hash"
+                                        },
+                                        {
+                                          "kind": "ident",
+                                          "name": "entry"
+                                        }
+                                      ],
+                                      "expr": {
+                                        "expr": {
+                                          "expr": {
+                                            "kind": "this"
+                                          },
+                                          "kind": "member",
+                                          "member": "m_subtitleEntries"
+                                        },
+                                        "kind": "member",
+                                        "member": "Insert"
+                                      },
+                                      "kind": "call",
+                                      "type_args": []
+                                    },
+                                    "kind": "expr"
+                                  }
+                                ]
+                              },
+                              "condition": {
+                                "expr": {
+                                  "expr": {
+                                    "args": [
+                                      {
+                                        "kind": "ident",
+                                        "name": "entry"
+                                      }
+                                    ],
+                                    "expr": {
+                                      "kind": "ident",
+                                      "name": "IsDefined"
+                                    },
+                                    "kind": "call",
+                                    "type_args": []
+                                  },
+                                  "kind": "un_op",
+                                  "op": "!"
+                                },
+                                "kind": "expr"
+                              }
+                            }
+                          ],
+                          "else": null,
+                          "kind": "if"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "PlayerGender"
+                                },
+                                "kind": "member",
+                                "member": "Default"
+                              },
+                              {
+                                "kind": "ident",
+                                "name": "value"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "entry"
+                              },
+                              "kind": "member",
+                              "member": "SetVariant"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "Subtitle",
+                  "params": [
+                    {
+                      "name": "key",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "String"
+                      }
+                    },
+                    {
+                      "name": "value",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "String"
+                      }
+                    }
+                  ],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "protected"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "kind": "let",
+                          "name": "hash",
+                          "type": {
+                            "args": [],
+                            "kind": "named",
+                            "name": "Uint64"
+                          },
+                          "value": {
+                            "args": [
+                              {
+                                "kind": "ident",
+                                "name": "key"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "LocalizationEntry"
+                              },
+                              "kind": "member",
+                              "member": "Hash"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          }
+                        },
+                        {
+                          "kind": "let",
+                          "name": "entry",
+                          "type": {
+                            "args": [
+                              {
+                                "args": [],
+                                "kind": "named",
+                                "name": "GenderSensitiveEntry"
+                              }
+                            ],
+                            "kind": "named",
+                            "name": "ref"
+                          },
+                          "value": {
+                            "expr": {
+                              "args": [
+                                {
+                                  "kind": "ident",
+                                  "name": "hash"
+                                }
+                              ],
+                              "expr": {
+                                "expr": {
+                                  "expr": {
+                                    "kind": "this"
+                                  },
+                                  "kind": "member",
+                                  "member": "m_subtitleEntries"
+                                },
+                                "kind": "member",
+                                "member": "Get"
+                              },
+                              "kind": "call",
+                              "type_args": []
+                            },
+                            "kind": "dyn_cast",
+                            "type": {
+                              "args": [],
+                              "kind": "named",
+                              "name": "GenderSensitiveEntry"
+                            }
+                          }
+                        },
+                        {
+                          "blocks": [
+                            {
+                              "body": {
+                                "statements": [
+                                  {
+                                    "expr": {
+                                      "kind": "assign",
+                                      "lhs": {
+                                        "kind": "ident",
+                                        "name": "entry"
+                                      },
+                                      "rhs": {
+                                        "args": [
+                                          {
+                                            "kind": "ident",
+                                            "name": "key"
+                                          }
+                                        ],
+                                        "expr": {
+                                          "expr": {
+                                            "kind": "ident",
+                                            "name": "GenderSensitiveEntry"
+                                          },
+                                          "kind": "member",
+                                          "member": "Create"
+                                        },
+                                        "kind": "call",
+                                        "type_args": []
+                                      }
+                                    },
+                                    "kind": "expr"
+                                  },
+                                  {
+                                    "expr": {
+                                      "args": [
+                                        {
+                                          "kind": "ident",
+                                          "name": "hash"
+                                        },
+                                        {
+                                          "kind": "ident",
+                                          "name": "entry"
+                                        }
+                                      ],
+                                      "expr": {
+                                        "expr": {
+                                          "expr": {
+                                            "kind": "this"
+                                          },
+                                          "kind": "member",
+                                          "member": "m_subtitleEntries"
+                                        },
+                                        "kind": "member",
+                                        "member": "Insert"
+                                      },
+                                      "kind": "call",
+                                      "type_args": []
+                                    },
+                                    "kind": "expr"
+                                  }
+                                ]
+                              },
+                              "condition": {
+                                "expr": {
+                                  "expr": {
+                                    "args": [
+                                      {
+                                        "kind": "ident",
+                                        "name": "entry"
+                                      }
+                                    ],
+                                    "expr": {
+                                      "kind": "ident",
+                                      "name": "IsDefined"
+                                    },
+                                    "kind": "call",
+                                    "type_args": []
+                                  },
+                                  "kind": "un_op",
+                                  "op": "!"
+                                },
+                                "kind": "expr"
+                              }
+                            }
+                          ],
+                          "else": null,
+                          "kind": "if"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "PlayerGender"
+                                },
+                                "kind": "member",
+                                "member": "Female"
+                              },
+                              {
+                                "kind": "ident",
+                                "name": "valueF"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "entry"
+                              },
+                              "kind": "member",
+                              "member": "SetVariant"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "PlayerGender"
+                                },
+                                "kind": "member",
+                                "member": "Male"
+                              },
+                              {
+                                "kind": "ident",
+                                "name": "valueM"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "entry"
+                              },
+                              "kind": "member",
+                              "member": "SetVariant"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "Subtitle",
+                  "params": [
+                    {
+                      "name": "key",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "String"
+                      }
+                    },
+                    {
+                      "name": "valueF",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "String"
+                      }
+                    },
+                    {
+                      "name": "valueM",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "String"
+                      }
+                    }
+                  ],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "protected"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "kind": "let",
+                          "name": "hash",
+                          "type": {
+                            "args": [],
+                            "kind": "named",
+                            "name": "Uint64"
+                          },
+                          "value": {
+                            "args": [
+                              {
+                                "kind": "ident",
+                                "name": "key"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "LocalizationEntry"
+                              },
+                              "kind": "member",
+                              "member": "Hash"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          }
+                        },
+                        {
+                          "kind": "let",
+                          "name": "entry",
+                          "type": {
+                            "args": [
+                              {
+                                "args": [],
+                                "kind": "named",
+                                "name": "GenderSensitiveEntry"
+                              }
+                            ],
+                            "kind": "named",
+                            "name": "ref"
+                          },
+                          "value": {
+                            "expr": {
+                              "args": [
+                                {
+                                  "kind": "ident",
+                                  "name": "hash"
+                                }
+                              ],
+                              "expr": {
+                                "expr": {
+                                  "expr": {
+                                    "kind": "this"
+                                  },
+                                  "kind": "member",
+                                  "member": "m_subtitleEntries"
+                                },
+                                "kind": "member",
+                                "member": "Get"
+                              },
+                              "kind": "call",
+                              "type_args": []
+                            },
+                            "kind": "dyn_cast",
+                            "type": {
+                              "args": [],
+                              "kind": "named",
+                              "name": "GenderSensitiveEntry"
+                            }
+                          }
+                        },
+                        {
+                          "blocks": [
+                            {
+                              "body": {
+                                "statements": [
+                                  {
+                                    "expr": {
+                                      "kind": "assign",
+                                      "lhs": {
+                                        "kind": "ident",
+                                        "name": "entry"
+                                      },
+                                      "rhs": {
+                                        "args": [
+                                          {
+                                            "kind": "ident",
+                                            "name": "key"
+                                          }
+                                        ],
+                                        "expr": {
+                                          "expr": {
+                                            "kind": "ident",
+                                            "name": "GenderSensitiveEntry"
+                                          },
+                                          "kind": "member",
+                                          "member": "Create"
+                                        },
+                                        "kind": "call",
+                                        "type_args": []
+                                      }
+                                    },
+                                    "kind": "expr"
+                                  },
+                                  {
+                                    "expr": {
+                                      "args": [
+                                        {
+                                          "kind": "ident",
+                                          "name": "hash"
+                                        },
+                                        {
+                                          "kind": "ident",
+                                          "name": "entry"
+                                        }
+                                      ],
+                                      "expr": {
+                                        "expr": {
+                                          "expr": {
+                                            "kind": "this"
+                                          },
+                                          "kind": "member",
+                                          "member": "m_subtitleEntries"
+                                        },
+                                        "kind": "member",
+                                        "member": "Insert"
+                                      },
+                                      "kind": "call",
+                                      "type_args": []
+                                    },
+                                    "kind": "expr"
+                                  }
+                                ]
+                              },
+                              "condition": {
+                                "expr": {
+                                  "expr": {
+                                    "args": [
+                                      {
+                                        "kind": "ident",
+                                        "name": "entry"
+                                      }
+                                    ],
+                                    "expr": {
+                                      "kind": "ident",
+                                      "name": "IsDefined"
+                                    },
+                                    "kind": "call",
+                                    "type_args": []
+                                  },
+                                  "kind": "un_op",
+                                  "op": "!"
+                                },
+                                "kind": "expr"
+                              }
+                            }
+                          ],
+                          "else": null,
+                          "kind": "if"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "PlayerGender"
+                                },
+                                "kind": "member",
+                                "member": "Female"
+                              },
+                              {
+                                "kind": "ident",
+                                "name": "value"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "entry"
+                              },
+                              "kind": "member",
+                              "member": "SetVariant"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "SubtitleF",
+                  "params": [
+                    {
+                      "name": "key",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "String"
+                      }
+                    },
+                    {
+                      "name": "value",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "String"
+                      }
+                    }
+                  ],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "protected"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "kind": "let",
+                          "name": "hash",
+                          "type": {
+                            "args": [],
+                            "kind": "named",
+                            "name": "Uint64"
+                          },
+                          "value": {
+                            "args": [
+                              {
+                                "kind": "ident",
+                                "name": "key"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "LocalizationEntry"
+                              },
+                              "kind": "member",
+                              "member": "Hash"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          }
+                        },
+                        {
+                          "kind": "let",
+                          "name": "entry",
+                          "type": {
+                            "args": [
+                              {
+                                "args": [],
+                                "kind": "named",
+                                "name": "GenderSensitiveEntry"
+                              }
+                            ],
+                            "kind": "named",
+                            "name": "ref"
+                          },
+                          "value": {
+                            "expr": {
+                              "args": [
+                                {
+                                  "kind": "ident",
+                                  "name": "hash"
+                                }
+                              ],
+                              "expr": {
+                                "expr": {
+                                  "expr": {
+                                    "kind": "this"
+                                  },
+                                  "kind": "member",
+                                  "member": "m_subtitleEntries"
+                                },
+                                "kind": "member",
+                                "member": "Get"
+                              },
+                              "kind": "call",
+                              "type_args": []
+                            },
+                            "kind": "dyn_cast",
+                            "type": {
+                              "args": [],
+                              "kind": "named",
+                              "name": "GenderSensitiveEntry"
+                            }
+                          }
+                        },
+                        {
+                          "blocks": [
+                            {
+                              "body": {
+                                "statements": [
+                                  {
+                                    "expr": {
+                                      "kind": "assign",
+                                      "lhs": {
+                                        "kind": "ident",
+                                        "name": "entry"
+                                      },
+                                      "rhs": {
+                                        "args": [
+                                          {
+                                            "kind": "ident",
+                                            "name": "key"
+                                          }
+                                        ],
+                                        "expr": {
+                                          "expr": {
+                                            "kind": "ident",
+                                            "name": "GenderSensitiveEntry"
+                                          },
+                                          "kind": "member",
+                                          "member": "Create"
+                                        },
+                                        "kind": "call",
+                                        "type_args": []
+                                      }
+                                    },
+                                    "kind": "expr"
+                                  },
+                                  {
+                                    "expr": {
+                                      "args": [
+                                        {
+                                          "kind": "ident",
+                                          "name": "hash"
+                                        },
+                                        {
+                                          "kind": "ident",
+                                          "name": "entry"
+                                        }
+                                      ],
+                                      "expr": {
+                                        "expr": {
+                                          "expr": {
+                                            "kind": "this"
+                                          },
+                                          "kind": "member",
+                                          "member": "m_subtitleEntries"
+                                        },
+                                        "kind": "member",
+                                        "member": "Insert"
+                                      },
+                                      "kind": "call",
+                                      "type_args": []
+                                    },
+                                    "kind": "expr"
+                                  }
+                                ]
+                              },
+                              "condition": {
+                                "expr": {
+                                  "expr": {
+                                    "args": [
+                                      {
+                                        "kind": "ident",
+                                        "name": "entry"
+                                      }
+                                    ],
+                                    "expr": {
+                                      "kind": "ident",
+                                      "name": "IsDefined"
+                                    },
+                                    "kind": "call",
+                                    "type_args": []
+                                  },
+                                  "kind": "un_op",
+                                  "op": "!"
+                                },
+                                "kind": "expr"
+                              }
+                            }
+                          ],
+                          "else": null,
+                          "kind": "if"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "PlayerGender"
+                                },
+                                "kind": "member",
+                                "member": "Male"
+                              },
+                              {
+                                "kind": "ident",
+                                "name": "value"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "entry"
+                              },
+                              "kind": "member",
+                              "member": "SetVariant"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "SubtitleM",
+                  "params": [
+                    {
+                      "name": "key",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "String"
+                      }
+                    },
+                    {
+                      "name": "value",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "String"
+                      }
+                    }
+                  ],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "protected"
+            }
+          ],
+          "name": "ModLocalizationPackage",
+          "type_params": []
+        },
+        "kind": "class"
+      },
+      "qualifiers": {
+        "abstract": true,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "public"
+    }
+  ],
+  "path": [
+    "Codeware",
+    "Localization"
+  ]
+}

@@ -1,0 +1,2280 @@
+{
+  "items": [
+    {
+      "annotations": [],
+      "doc": [],
+      "item": {
+        "class": {
+          "extends": {
+            "args": [],
+            "kind": "named",
+            "name": "inkCustomController"
+          },
+          "items": [
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "field": {
+                  "default": null,
+                  "name": "m_buttonHints",
+                  "type": {
+                    "args": [
+                      {
+                        "args": [],
+                        "kind": "named",
+                        "name": "ButtonHints"
+                      }
+                    ],
+                    "kind": "named",
+                    "name": "wref"
+                  }
+                },
+                "kind": "let"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "private"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "field": {
+                  "default": null,
+                  "name": "m_isLocked",
+                  "type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Bool"
+                  }
+                },
+                "kind": "let"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "private"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "field": {
+                  "default": null,
+                  "name": "m_style",
+                  "type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "CName"
+                  }
+                },
+                "kind": "let"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "private"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "blocks": [
+                            {
+                              "body": {
+                                "statements": [
+                                  {
+                                    "expr": {
+                                      "args": [
+                                        {
+                                          "kind": "ident",
+                                          "name": "action"
+                                        },
+                                        {
+                                          "kind": "ident",
+                                          "name": "label"
+                                        },
+                                        {
+                                          "kind": "ident",
+                                          "name": "holdInteraction"
+                                        }
+                                      ],
+                                      "expr": {
+                                        "expr": {
+                                          "expr": {
+                                            "kind": "this"
+                                          },
+                                          "kind": "member",
+                                          "member": "m_buttonHints"
+                                        },
+                                        "kind": "member",
+                                        "member": "AddButtonHint"
+                                      },
+                                      "kind": "call",
+                                      "type_args": []
+                                    },
+                                    "kind": "expr"
+                                  },
+                                  {
+                                    "blocks": [
+                                      {
+                                        "body": {
+                                          "statements": [
+                                            {
+                                              "expr": {
+                                                "args": [
+                                                  {
+                                                    "args": [
+                                                      {
+                                                        "kind": "ident",
+                                                        "name": "action"
+                                                      }
+                                                    ],
+                                                    "expr": {
+                                                      "expr": {
+                                                        "expr": {
+                                                          "kind": "this"
+                                                        },
+                                                        "kind": "member",
+                                                        "member": "m_buttonHints"
+                                                      },
+                                                      "kind": "member",
+                                                      "member": "CheckForPreExisting"
+                                                    },
+                                                    "kind": "call",
+                                                    "type_args": []
+                                                  }
+                                                ],
+                                                "expr": {
+                                                  "expr": {
+                                                    "kind": "this"
+                                                  },
+                                                  "kind": "member",
+                                                  "member": "ApplyItemStyle"
+                                                },
+                                                "kind": "call",
+                                                "type_args": []
+                                              },
+                                              "kind": "expr"
+                                            }
+                                          ]
+                                        },
+                                        "condition": {
+                                          "expr": {
+                                            "args": [
+                                              {
+                                                "expr": {
+                                                  "kind": "this"
+                                                },
+                                                "kind": "member",
+                                                "member": "m_style"
+                                              },
+                                              {
+                                                "constant": {
+                                                  "kind": "cname",
+                                                  "value": ""
+                                                },
+                                                "kind": "constant"
+                                              }
+                                            ],
+                                            "expr": {
+                                              "kind": "ident",
+                                              "name": "NotEquals"
+                                            },
+                                            "kind": "call",
+                                            "type_args": []
+                                          },
+                                          "kind": "expr"
+                                        }
+                                      }
+                                    ],
+                                    "else": null,
+                                    "kind": "if"
+                                  }
+                                ]
+                              },
+                              "condition": {
+                                "expr": {
+                                  "expr": {
+                                    "expr": {
+                                      "kind": "this"
+                                    },
+                                    "kind": "member",
+                                    "member": "m_isLocked"
+                                  },
+                                  "kind": "un_op",
+                                  "op": "!"
+                                },
+                                "kind": "expr"
+                              }
+                            }
+                          ],
+                          "else": null,
+                          "kind": "if"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "AddButtonHint",
+                  "params": [
+                    {
+                      "name": "action",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "CName"
+                      }
+                    },
+                    {
+                      "name": "label",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "CName"
+                      }
+                    },
+                    {
+                      "name": "holdInteraction",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "Bool"
+                      }
+                    }
+                  ],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "blocks": [
+                            {
+                              "body": {
+                                "statements": [
+                                  {
+                                    "expr": {
+                                      "args": [
+                                        {
+                                          "kind": "ident",
+                                          "name": "action"
+                                        },
+                                        {
+                                          "kind": "ident",
+                                          "name": "label"
+                                        }
+                                      ],
+                                      "expr": {
+                                        "expr": {
+                                          "expr": {
+                                            "kind": "this"
+                                          },
+                                          "kind": "member",
+                                          "member": "m_buttonHints"
+                                        },
+                                        "kind": "member",
+                                        "member": "AddButtonHint"
+                                      },
+                                      "kind": "call",
+                                      "type_args": []
+                                    },
+                                    "kind": "expr"
+                                  },
+                                  {
+                                    "blocks": [
+                                      {
+                                        "body": {
+                                          "statements": [
+                                            {
+                                              "expr": {
+                                                "args": [
+                                                  {
+                                                    "args": [
+                                                      {
+                                                        "kind": "ident",
+                                                        "name": "action"
+                                                      }
+                                                    ],
+                                                    "expr": {
+                                                      "expr": {
+                                                        "expr": {
+                                                          "kind": "this"
+                                                        },
+                                                        "kind": "member",
+                                                        "member": "m_buttonHints"
+                                                      },
+                                                      "kind": "member",
+                                                      "member": "CheckForPreExisting"
+                                                    },
+                                                    "kind": "call",
+                                                    "type_args": []
+                                                  }
+                                                ],
+                                                "expr": {
+                                                  "expr": {
+                                                    "kind": "this"
+                                                  },
+                                                  "kind": "member",
+                                                  "member": "ApplyItemStyle"
+                                                },
+                                                "kind": "call",
+                                                "type_args": []
+                                              },
+                                              "kind": "expr"
+                                            }
+                                          ]
+                                        },
+                                        "condition": {
+                                          "expr": {
+                                            "args": [
+                                              {
+                                                "expr": {
+                                                  "kind": "this"
+                                                },
+                                                "kind": "member",
+                                                "member": "m_style"
+                                              },
+                                              {
+                                                "constant": {
+                                                  "kind": "cname",
+                                                  "value": ""
+                                                },
+                                                "kind": "constant"
+                                              }
+                                            ],
+                                            "expr": {
+                                              "kind": "ident",
+                                              "name": "NotEquals"
+                                            },
+                                            "kind": "call",
+                                            "type_args": []
+                                          },
+                                          "kind": "expr"
+                                        }
+                                      }
+                                    ],
+                                    "else": null,
+                                    "kind": "if"
+                                  }
+                                ]
+                              },
+                              "condition": {
+                                "expr": {
+                                  "expr": {
+                                    "expr": {
+                                      "kind": "this"
+                                    },
+                                    "kind": "member",
+                                    "member": "m_isLocked"
+                                  },
+                                  "kind": "un_op",
+                                  "op": "!"
+                                },
+                                "kind": "expr"
+                              }
+                            }
+                          ],
+                          "else": null,
+                          "kind": "if"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "AddButtonHint",
+                  "params": [
+                    {
+                      "name": "action",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "CName"
+                      }
+                    },
+                    {
+                      "name": "label",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "CName"
+                      }
+                    }
+                  ],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "blocks": [
+                            {
+                              "body": {
+                                "statements": [
+                                  {
+                                    "expr": {
+                                      "args": [
+                                        {
+                                          "kind": "ident",
+                                          "name": "action"
+                                        },
+                                        {
+                                          "kind": "ident",
+                                          "name": "label"
+                                        }
+                                      ],
+                                      "expr": {
+                                        "expr": {
+                                          "expr": {
+                                            "kind": "this"
+                                          },
+                                          "kind": "member",
+                                          "member": "m_buttonHints"
+                                        },
+                                        "kind": "member",
+                                        "member": "AddButtonHint"
+                                      },
+                                      "kind": "call",
+                                      "type_args": []
+                                    },
+                                    "kind": "expr"
+                                  },
+                                  {
+                                    "blocks": [
+                                      {
+                                        "body": {
+                                          "statements": [
+                                            {
+                                              "expr": {
+                                                "args": [
+                                                  {
+                                                    "args": [
+                                                      {
+                                                        "kind": "ident",
+                                                        "name": "action"
+                                                      }
+                                                    ],
+                                                    "expr": {
+                                                      "expr": {
+                                                        "expr": {
+                                                          "kind": "this"
+                                                        },
+                                                        "kind": "member",
+                                                        "member": "m_buttonHints"
+                                                      },
+                                                      "kind": "member",
+                                                      "member": "CheckForPreExisting"
+                                                    },
+                                                    "kind": "call",
+                                                    "type_args": []
+                                                  }
+                                                ],
+                                                "expr": {
+                                                  "expr": {
+                                                    "kind": "this"
+                                                  },
+                                                  "kind": "member",
+                                                  "member": "ApplyItemStyle"
+                                                },
+                                                "kind": "call",
+                                                "type_args": []
+                                              },
+                                              "kind": "expr"
+                                            }
+                                          ]
+                                        },
+                                        "condition": {
+                                          "expr": {
+                                            "args": [
+                                              {
+                                                "expr": {
+                                                  "kind": "this"
+                                                },
+                                                "kind": "member",
+                                                "member": "m_style"
+                                              },
+                                              {
+                                                "constant": {
+                                                  "kind": "cname",
+                                                  "value": ""
+                                                },
+                                                "kind": "constant"
+                                              }
+                                            ],
+                                            "expr": {
+                                              "kind": "ident",
+                                              "name": "NotEquals"
+                                            },
+                                            "kind": "call",
+                                            "type_args": []
+                                          },
+                                          "kind": "expr"
+                                        }
+                                      }
+                                    ],
+                                    "else": null,
+                                    "kind": "if"
+                                  }
+                                ]
+                              },
+                              "condition": {
+                                "expr": {
+                                  "expr": {
+                                    "expr": {
+                                      "kind": "this"
+                                    },
+                                    "kind": "member",
+                                    "member": "m_isLocked"
+                                  },
+                                  "kind": "un_op",
+                                  "op": "!"
+                                },
+                                "kind": "expr"
+                              }
+                            }
+                          ],
+                          "else": null,
+                          "kind": "if"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "AddButtonHint",
+                  "params": [
+                    {
+                      "name": "action",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "CName"
+                      }
+                    },
+                    {
+                      "name": "label",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "String"
+                      }
+                    }
+                  ],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "blocks": [
+                            {
+                              "body": {
+                                "statements": [
+                                  {
+                                    "expr": {
+                                      "args": [],
+                                      "expr": {
+                                        "expr": {
+                                          "expr": {
+                                            "kind": "this"
+                                          },
+                                          "kind": "member",
+                                          "member": "m_buttonHints"
+                                        },
+                                        "kind": "member",
+                                        "member": "AddCharacterRoatateButtonHint"
+                                      },
+                                      "kind": "call",
+                                      "type_args": []
+                                    },
+                                    "kind": "expr"
+                                  },
+                                  {
+                                    "blocks": [
+                                      {
+                                        "body": {
+                                          "statements": [
+                                            {
+                                              "expr": {
+                                                "args": [],
+                                                "expr": {
+                                                  "expr": {
+                                                    "kind": "this"
+                                                  },
+                                                  "kind": "member",
+                                                  "member": "ApplyLastItemStyle"
+                                                },
+                                                "kind": "call",
+                                                "type_args": []
+                                              },
+                                              "kind": "expr"
+                                            }
+                                          ]
+                                        },
+                                        "condition": {
+                                          "expr": {
+                                            "args": [
+                                              {
+                                                "expr": {
+                                                  "kind": "this"
+                                                },
+                                                "kind": "member",
+                                                "member": "m_style"
+                                              },
+                                              {
+                                                "constant": {
+                                                  "kind": "cname",
+                                                  "value": ""
+                                                },
+                                                "kind": "constant"
+                                              }
+                                            ],
+                                            "expr": {
+                                              "kind": "ident",
+                                              "name": "NotEquals"
+                                            },
+                                            "kind": "call",
+                                            "type_args": []
+                                          },
+                                          "kind": "expr"
+                                        }
+                                      }
+                                    ],
+                                    "else": null,
+                                    "kind": "if"
+                                  }
+                                ]
+                              },
+                              "condition": {
+                                "expr": {
+                                  "expr": {
+                                    "expr": {
+                                      "kind": "this"
+                                    },
+                                    "kind": "member",
+                                    "member": "m_isLocked"
+                                  },
+                                  "kind": "un_op",
+                                  "op": "!"
+                                },
+                                "kind": "expr"
+                              }
+                            }
+                          ],
+                          "else": null,
+                          "kind": "if"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "AddCharacterRoatateButtonHint",
+                  "params": [],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "blocks": [
+                            {
+                              "body": {
+                                "statements": [
+                                  {
+                                    "expr": {
+                                      "args": [
+                                        {
+                                          "kind": "ident",
+                                          "name": "action"
+                                        }
+                                      ],
+                                      "expr": {
+                                        "expr": {
+                                          "expr": {
+                                            "kind": "this"
+                                          },
+                                          "kind": "member",
+                                          "member": "m_buttonHints"
+                                        },
+                                        "kind": "member",
+                                        "member": "RemoveButtonHint"
+                                      },
+                                      "kind": "call",
+                                      "type_args": []
+                                    },
+                                    "kind": "expr"
+                                  }
+                                ]
+                              },
+                              "condition": {
+                                "expr": {
+                                  "expr": {
+                                    "expr": {
+                                      "kind": "this"
+                                    },
+                                    "kind": "member",
+                                    "member": "m_isLocked"
+                                  },
+                                  "kind": "un_op",
+                                  "op": "!"
+                                },
+                                "kind": "expr"
+                              }
+                            }
+                          ],
+                          "else": null,
+                          "kind": "if"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "RemoveButtonHint",
+                  "params": [
+                    {
+                      "name": "action",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "CName"
+                      }
+                    }
+                  ],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "blocks": [
+                            {
+                              "body": {
+                                "statements": [
+                                  {
+                                    "expr": {
+                                      "args": [],
+                                      "expr": {
+                                        "expr": {
+                                          "expr": {
+                                            "kind": "this"
+                                          },
+                                          "kind": "member",
+                                          "member": "m_buttonHints"
+                                        },
+                                        "kind": "member",
+                                        "member": "ClearButtonHints"
+                                      },
+                                      "kind": "call",
+                                      "type_args": []
+                                    },
+                                    "kind": "expr"
+                                  }
+                                ]
+                              },
+                              "condition": {
+                                "expr": {
+                                  "expr": {
+                                    "expr": {
+                                      "kind": "this"
+                                    },
+                                    "kind": "member",
+                                    "member": "m_isLocked"
+                                  },
+                                  "kind": "un_op",
+                                  "op": "!"
+                                },
+                                "kind": "expr"
+                              }
+                            }
+                          ],
+                          "else": null,
+                          "kind": "if"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "ClearButtonHints",
+                  "params": [],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "args": [],
+                            "expr": {
+                              "expr": {
+                                "expr": {
+                                  "kind": "this"
+                                },
+                                "kind": "member",
+                                "member": "m_buttonHints"
+                              },
+                              "kind": "member",
+                              "member": "Show"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "Show",
+                  "params": [],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "args": [],
+                            "expr": {
+                              "expr": {
+                                "expr": {
+                                  "kind": "this"
+                                },
+                                "kind": "member",
+                                "member": "m_buttonHints"
+                              },
+                              "kind": "member",
+                              "member": "Hide"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "Hide",
+                  "params": [],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "args": [],
+                            "expr": {
+                              "expr": {
+                                "expr": {
+                                  "kind": "this"
+                                },
+                                "kind": "member",
+                                "member": "m_buttonHints"
+                              },
+                              "kind": "member",
+                              "member": "IsVisible"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "return"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "IsVisible",
+                  "params": [],
+                  "return_type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Bool"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "kind": "assign",
+                            "lhs": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "m_isLocked"
+                            },
+                            "rhs": {
+                              "constant": {
+                                "kind": "bool",
+                                "value": true
+                              },
+                              "kind": "constant"
+                            }
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "Lock",
+                  "params": [],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "kind": "assign",
+                            "lhs": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "m_isLocked"
+                            },
+                            "rhs": {
+                              "constant": {
+                                "kind": "bool",
+                                "value": false
+                              },
+                              "kind": "constant"
+                            }
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "Unlock",
+                  "params": [],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "expr": {
+                              "kind": "this"
+                            },
+                            "kind": "member",
+                            "member": "m_isLocked"
+                          },
+                          "kind": "return"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "IsLocked",
+                  "params": [],
+                  "return_type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Bool"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "kind": "assign",
+                            "lhs": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "m_style"
+                            },
+                            "rhs": {
+                              "kind": "ident",
+                              "name": "styleName"
+                            }
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [],
+                            "expr": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "ApplyListStyle"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "SetStyle",
+                  "params": [
+                    {
+                      "name": "styleName",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "CName"
+                      }
+                    }
+                  ],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "kind": "let",
+                          "name": "holder",
+                          "type": null,
+                          "value": {
+                            "expr": {
+                              "args": [
+                                {
+                                  "expr": {
+                                    "expr": {
+                                      "kind": "this"
+                                    },
+                                    "kind": "member",
+                                    "member": "m_buttonHints"
+                                  },
+                                  "kind": "member",
+                                  "member": "m_horizontalHolder"
+                                }
+                              ],
+                              "expr": {
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "inkWidgetRef"
+                                },
+                                "kind": "member",
+                                "member": "Get"
+                              },
+                              "kind": "call",
+                              "type_args": []
+                            },
+                            "kind": "dyn_cast",
+                            "type": {
+                              "args": [],
+                              "kind": "named",
+                              "name": "inkCompoundWidget"
+                            }
+                          }
+                        },
+                        {
+                          "blocks": [
+                            {
+                              "body": {
+                                "statements": [
+                                  {
+                                    "expr": {
+                                      "args": [
+                                        {
+                                          "args": [
+                                            {
+                                              "constant": {
+                                                "kind": "f32",
+                                                "value": 30.0
+                                              },
+                                              "kind": "constant"
+                                            },
+                                            {
+                                              "constant": {
+                                                "kind": "f32",
+                                                "value": 0.0
+                                              },
+                                              "kind": "constant"
+                                            },
+                                            {
+                                              "constant": {
+                                                "kind": "f32",
+                                                "value": 0.0
+                                              },
+                                              "kind": "constant"
+                                            },
+                                            {
+                                              "constant": {
+                                                "kind": "f32",
+                                                "value": 0.0
+                                              },
+                                              "kind": "constant"
+                                            }
+                                          ],
+                                          "expr": {
+                                            "kind": "ident",
+                                            "name": "inkMargin"
+                                          },
+                                          "kind": "call",
+                                          "type_args": []
+                                        }
+                                      ],
+                                      "expr": {
+                                        "expr": {
+                                          "kind": "ident",
+                                          "name": "holder"
+                                        },
+                                        "kind": "member",
+                                        "member": "SetChildMargin"
+                                      },
+                                      "kind": "call",
+                                      "type_args": []
+                                    },
+                                    "kind": "expr"
+                                  }
+                                ]
+                              },
+                              "condition": {
+                                "expr": {
+                                  "args": [
+                                    {
+                                      "expr": {
+                                        "kind": "this"
+                                      },
+                                      "kind": "member",
+                                      "member": "m_style"
+                                    },
+                                    {
+                                      "constant": {
+                                        "kind": "cname",
+                                        "value": "popup"
+                                      },
+                                      "kind": "constant"
+                                    }
+                                  ],
+                                  "expr": {
+                                    "kind": "ident",
+                                    "name": "Equals"
+                                  },
+                                  "kind": "call",
+                                  "type_args": []
+                                },
+                                "kind": "expr"
+                              }
+                            }
+                          ],
+                          "else": {
+                            "statements": [
+                              {
+                                "expr": {
+                                  "args": [
+                                    {
+                                      "args": [
+                                        {
+                                          "constant": {
+                                            "kind": "f32",
+                                            "value": 0.0
+                                          },
+                                          "kind": "constant"
+                                        },
+                                        {
+                                          "constant": {
+                                            "kind": "f32",
+                                            "value": 0.0
+                                          },
+                                          "kind": "constant"
+                                        },
+                                        {
+                                          "constant": {
+                                            "kind": "f32",
+                                            "value": 0.0
+                                          },
+                                          "kind": "constant"
+                                        },
+                                        {
+                                          "constant": {
+                                            "kind": "f32",
+                                            "value": 0.0
+                                          },
+                                          "kind": "constant"
+                                        }
+                                      ],
+                                      "expr": {
+                                        "kind": "ident",
+                                        "name": "inkMargin"
+                                      },
+                                      "kind": "call",
+                                      "type_args": []
+                                    }
+                                  ],
+                                  "expr": {
+                                    "expr": {
+                                      "kind": "ident",
+                                      "name": "holder"
+                                    },
+                                    "kind": "member",
+                                    "member": "SetChildMargin"
+                                  },
+                                  "kind": "call",
+                                  "type_args": []
+                                },
+                                "kind": "expr"
+                              }
+                            ]
+                          },
+                          "kind": "if"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "ApplyListStyle",
+                  "params": [],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "private"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "blocks": [
+                            {
+                              "body": {
+                                "statements": [
+                                  {
+                                    "kind": "let",
+                                    "name": "label",
+                                    "type": {
+                                      "args": [
+                                        {
+                                          "args": [],
+                                          "kind": "named",
+                                          "name": "inkText"
+                                        }
+                                      ],
+                                      "kind": "named",
+                                      "name": "wref"
+                                    },
+                                    "value": {
+                                      "expr": {
+                                        "args": [
+                                          {
+                                            "constant": {
+                                              "kind": "cname",
+                                              "value": "holder/label"
+                                            },
+                                            "kind": "constant"
+                                          }
+                                        ],
+                                        "expr": {
+                                          "expr": {
+                                            "kind": "ident",
+                                            "name": "item"
+                                          },
+                                          "kind": "member",
+                                          "member": "GetWidget"
+                                        },
+                                        "kind": "call",
+                                        "type_args": []
+                                      },
+                                      "kind": "dyn_cast",
+                                      "type": {
+                                        "args": [],
+                                        "kind": "named",
+                                        "name": "inkText"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "blocks": [
+                                      {
+                                        "body": {
+                                          "statements": [
+                                            {
+                                              "expr": {
+                                                "kind": "assign",
+                                                "lhs": {
+                                                  "kind": "ident",
+                                                  "name": "label"
+                                                },
+                                                "rhs": {
+                                                  "expr": {
+                                                    "args": [
+                                                      {
+                                                        "constant": {
+                                                          "kind": "cname",
+                                                          "value": "inputDisplayController/label"
+                                                        },
+                                                        "kind": "constant"
+                                                      }
+                                                    ],
+                                                    "expr": {
+                                                      "expr": {
+                                                        "kind": "ident",
+                                                        "name": "item"
+                                                      },
+                                                      "kind": "member",
+                                                      "member": "GetWidget"
+                                                    },
+                                                    "kind": "call",
+                                                    "type_args": []
+                                                  },
+                                                  "kind": "dyn_cast",
+                                                  "type": {
+                                                    "args": [],
+                                                    "kind": "named",
+                                                    "name": "inkText"
+                                                  }
+                                                }
+                                              },
+                                              "kind": "expr"
+                                            }
+                                          ]
+                                        },
+                                        "condition": {
+                                          "expr": {
+                                            "expr": {
+                                              "args": [
+                                                {
+                                                  "kind": "ident",
+                                                  "name": "label"
+                                                }
+                                              ],
+                                              "expr": {
+                                                "kind": "ident",
+                                                "name": "IsDefined"
+                                              },
+                                              "kind": "call",
+                                              "type_args": []
+                                            },
+                                            "kind": "un_op",
+                                            "op": "!"
+                                          },
+                                          "kind": "expr"
+                                        }
+                                      }
+                                    ],
+                                    "else": null,
+                                    "kind": "if"
+                                  },
+                                  {
+                                    "expr": {
+                                      "args": [
+                                        {
+                                          "constant": {
+                                            "kind": "i32",
+                                            "value": 38
+                                          },
+                                          "kind": "constant"
+                                        }
+                                      ],
+                                      "expr": {
+                                        "expr": {
+                                          "kind": "ident",
+                                          "name": "label"
+                                        },
+                                        "kind": "member",
+                                        "member": "SetFontSize"
+                                      },
+                                      "kind": "call",
+                                      "type_args": []
+                                    },
+                                    "kind": "expr"
+                                  },
+                                  {
+                                    "expr": {
+                                      "args": [
+                                        {
+                                          "constant": {
+                                            "kind": "cname",
+                                            "value": "Semi-Bold"
+                                          },
+                                          "kind": "constant"
+                                        }
+                                      ],
+                                      "expr": {
+                                        "expr": {
+                                          "kind": "ident",
+                                          "name": "label"
+                                        },
+                                        "kind": "member",
+                                        "member": "SetFontStyle"
+                                      },
+                                      "kind": "call",
+                                      "type_args": []
+                                    },
+                                    "kind": "expr"
+                                  },
+                                  {
+                                    "expr": {
+                                      "args": [
+                                        {
+                                          "expr": {
+                                            "kind": "ident",
+                                            "name": "textLetterCase"
+                                          },
+                                          "kind": "member",
+                                          "member": "UpperCase"
+                                        }
+                                      ],
+                                      "expr": {
+                                        "expr": {
+                                          "kind": "ident",
+                                          "name": "label"
+                                        },
+                                        "kind": "member",
+                                        "member": "SetLetterCase"
+                                      },
+                                      "kind": "call",
+                                      "type_args": []
+                                    },
+                                    "kind": "expr"
+                                  }
+                                ]
+                              },
+                              "condition": {
+                                "expr": {
+                                  "args": [
+                                    {
+                                      "expr": {
+                                        "kind": "this"
+                                      },
+                                      "kind": "member",
+                                      "member": "m_style"
+                                    },
+                                    {
+                                      "constant": {
+                                        "kind": "cname",
+                                        "value": "popup"
+                                      },
+                                      "kind": "constant"
+                                    }
+                                  ],
+                                  "expr": {
+                                    "kind": "ident",
+                                    "name": "Equals"
+                                  },
+                                  "kind": "call",
+                                  "type_args": []
+                                },
+                                "kind": "expr"
+                              }
+                            }
+                          ],
+                          "else": null,
+                          "kind": "if"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "ApplyItemStyle",
+                  "params": [
+                    {
+                      "name": "item",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [
+                          {
+                            "args": [],
+                            "kind": "named",
+                            "name": "ButtonHintListItem"
+                          }
+                        ],
+                        "kind": "named",
+                        "name": "ref"
+                      }
+                    }
+                  ],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "private"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "kind": "let",
+                          "name": "holder",
+                          "type": null,
+                          "value": {
+                            "expr": {
+                              "args": [
+                                {
+                                  "expr": {
+                                    "expr": {
+                                      "kind": "this"
+                                    },
+                                    "kind": "member",
+                                    "member": "m_buttonHints"
+                                  },
+                                  "kind": "member",
+                                  "member": "m_horizontalHolder"
+                                }
+                              ],
+                              "expr": {
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "inkWidgetRef"
+                                },
+                                "kind": "member",
+                                "member": "Get"
+                              },
+                              "kind": "call",
+                              "type_args": []
+                            },
+                            "kind": "dyn_cast",
+                            "type": {
+                              "args": [],
+                              "kind": "named",
+                              "name": "inkCompoundWidget"
+                            }
+                          }
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "expr": {
+                                  "args": [],
+                                  "expr": {
+                                    "expr": {
+                                      "args": [
+                                        {
+                                          "kind": "bin_op",
+                                          "lhs": {
+                                            "args": [],
+                                            "expr": {
+                                              "expr": {
+                                                "kind": "ident",
+                                                "name": "holder"
+                                              },
+                                              "kind": "member",
+                                              "member": "GetNumChildren"
+                                            },
+                                            "kind": "call",
+                                            "type_args": []
+                                          },
+                                          "op": "-",
+                                          "rhs": {
+                                            "constant": {
+                                              "kind": "i32",
+                                              "value": 1
+                                            },
+                                            "kind": "constant"
+                                          }
+                                        }
+                                      ],
+                                      "expr": {
+                                        "expr": {
+                                          "kind": "ident",
+                                          "name": "holder"
+                                        },
+                                        "kind": "member",
+                                        "member": "GetWidgetByIndex"
+                                      },
+                                      "kind": "call",
+                                      "type_args": []
+                                    },
+                                    "kind": "member",
+                                    "member": "GetController"
+                                  },
+                                  "kind": "call",
+                                  "type_args": []
+                                },
+                                "kind": "dyn_cast",
+                                "type": {
+                                  "args": [],
+                                  "kind": "named",
+                                  "name": "ButtonHintListItem"
+                                }
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "ApplyItemStyle"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "ApplyLastItemStyle",
+                  "params": [],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "private"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "kind": "let",
+                          "name": "buttonHints",
+                          "type": {
+                            "args": [
+                              {
+                                "args": [],
+                                "kind": "named",
+                                "name": "ButtonHints"
+                              }
+                            ],
+                            "kind": "named",
+                            "name": "ref"
+                          },
+                          "value": {
+                            "expr": {
+                              "args": [],
+                              "expr": {
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "root"
+                                },
+                                "kind": "member",
+                                "member": "GetController"
+                              },
+                              "kind": "call",
+                              "type_args": []
+                            },
+                            "kind": "dyn_cast",
+                            "type": {
+                              "args": [],
+                              "kind": "named",
+                              "name": "ButtonHints"
+                            }
+                          }
+                        },
+                        {
+                          "blocks": [
+                            {
+                              "body": {
+                                "statements": [
+                                  {
+                                    "expr": {
+                                      "kind": "null"
+                                    },
+                                    "kind": "return"
+                                  }
+                                ]
+                              },
+                              "condition": {
+                                "expr": {
+                                  "expr": {
+                                    "args": [
+                                      {
+                                        "kind": "ident",
+                                        "name": "buttonHints"
+                                      }
+                                    ],
+                                    "expr": {
+                                      "kind": "ident",
+                                      "name": "IsDefined"
+                                    },
+                                    "kind": "call",
+                                    "type_args": []
+                                  },
+                                  "kind": "un_op",
+                                  "op": "!"
+                                },
+                                "kind": "expr"
+                              }
+                            }
+                          ],
+                          "else": null,
+                          "kind": "if"
+                        },
+                        {
+                          "kind": "let",
+                          "name": "self",
+                          "type": {
+                            "args": [
+                              {
+                                "args": [],
+                                "kind": "named",
+                                "name": "ButtonHintsEx"
+                              }
+                            ],
+                            "kind": "named",
+                            "name": "ref"
+                          },
+                          "value": {
+                            "args": [],
+                            "kind": "new",
+                            "type": {
+                              "args": [],
+                              "kind": "named",
+                              "name": "ButtonHintsEx"
+                            }
+                          }
+                        },
+                        {
+                          "expr": {
+                            "kind": "assign",
+                            "lhs": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "self"
+                              },
+                              "kind": "member",
+                              "member": "m_buttonHints"
+                            },
+                            "rhs": {
+                              "kind": "ident",
+                              "name": "buttonHints"
+                            }
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "root"
+                                },
+                                "kind": "dyn_cast",
+                                "type": {
+                                  "args": [],
+                                  "kind": "named",
+                                  "name": "inkCompoundWidget"
+                                }
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "self"
+                              },
+                              "kind": "member",
+                              "member": "Mount"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "kind": "ident",
+                            "name": "self"
+                          },
+                          "kind": "return"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "Wrap",
+                  "params": [
+                    {
+                      "name": "root",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [
+                          {
+                            "args": [],
+                            "kind": "named",
+                            "name": "inkWidget"
+                          }
+                        ],
+                        "kind": "named",
+                        "name": "ref"
+                      }
+                    }
+                  ],
+                  "return_type": {
+                    "args": [
+                      {
+                        "args": [],
+                        "kind": "named",
+                        "name": "ButtonHintsEx"
+                      }
+                    ],
+                    "kind": "named",
+                    "name": "ref"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": true
+              },
+              "visibility": "public"
+            }
+          ],
+          "name": "ButtonHintsEx",
+          "type_params": []
+        },
+        "kind": "class"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "public"
+    }
+  ],
+  "path": [
+    "Codeware",
+    "UI"
+  ]
+}

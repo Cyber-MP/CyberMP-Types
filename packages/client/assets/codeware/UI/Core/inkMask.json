@@ -1,0 +1,685 @@
+{
+  "items": [
+    {
+      "annotations": [
+        {
+          "args": [
+            {
+              "kind": "ident",
+              "name": "inkMask"
+            }
+          ],
+          "name": "addMethod"
+        }
+      ],
+      "doc": [],
+      "item": {
+        "function": {
+          "body": {
+            "block": {
+              "statements": [
+                {
+                  "expr": {
+                    "args": [
+                      {
+                        "expr": {
+                          "kind": "this"
+                        },
+                        "kind": "member",
+                        "member": "textureAtlas"
+                      }
+                    ],
+                    "expr": {
+                      "expr": {
+                        "kind": "ident",
+                        "name": "ResourceAsyncRef"
+                      },
+                      "kind": "member",
+                      "member": "GetPath"
+                    },
+                    "kind": "call",
+                    "type_args": []
+                  },
+                  "kind": "return"
+                }
+              ]
+            },
+            "kind": "block"
+          },
+          "name": "GetTextureAtlas",
+          "params": [],
+          "return_type": {
+            "args": [],
+            "kind": "named",
+            "name": "ResRef"
+          },
+          "type_params": []
+        },
+        "kind": "function"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "public"
+    },
+    {
+      "annotations": [
+        {
+          "args": [
+            {
+              "kind": "ident",
+              "name": "inkMask"
+            }
+          ],
+          "name": "addMethod"
+        }
+      ],
+      "doc": [],
+      "item": {
+        "function": {
+          "body": {
+            "block": {
+              "statements": [
+                {
+                  "expr": {
+                    "args": [
+                      {
+                        "expr": {
+                          "kind": "this"
+                        },
+                        "kind": "member",
+                        "member": "textureAtlas"
+                      },
+                      {
+                        "kind": "ident",
+                        "name": "path"
+                      }
+                    ],
+                    "expr": {
+                      "expr": {
+                        "kind": "ident",
+                        "name": "ResourceAsyncRef"
+                      },
+                      "kind": "member",
+                      "member": "SetPath"
+                    },
+                    "kind": "call",
+                    "type_args": []
+                  },
+                  "kind": "expr"
+                }
+              ]
+            },
+            "kind": "block"
+          },
+          "name": "SetTextureAtlas",
+          "params": [
+            {
+              "name": "path",
+              "qualifiers": {
+                "const": false,
+                "optional": false,
+                "out": false
+              },
+              "type": {
+                "args": [],
+                "kind": "named",
+                "name": "ResRef"
+              }
+            }
+          ],
+          "return_type": null,
+          "type_params": []
+        },
+        "kind": "function"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "public"
+    },
+    {
+      "annotations": [
+        {
+          "args": [
+            {
+              "kind": "ident",
+              "name": "inkMask"
+            }
+          ],
+          "name": "addMethod"
+        }
+      ],
+      "doc": [],
+      "item": {
+        "function": {
+          "body": {
+            "block": {
+              "statements": [
+                {
+                  "expr": {
+                    "expr": {
+                      "kind": "this"
+                    },
+                    "kind": "member",
+                    "member": "dynamicTextureMask"
+                  },
+                  "kind": "return"
+                }
+              ]
+            },
+            "kind": "block"
+          },
+          "name": "GetDynamicTexture",
+          "params": [],
+          "return_type": {
+            "args": [],
+            "kind": "named",
+            "name": "CName"
+          },
+          "type_params": []
+        },
+        "kind": "function"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "public"
+    },
+    {
+      "annotations": [
+        {
+          "args": [
+            {
+              "kind": "ident",
+              "name": "inkMask"
+            }
+          ],
+          "name": "addMethod"
+        }
+      ],
+      "doc": [],
+      "item": {
+        "function": {
+          "body": {
+            "block": {
+              "statements": [
+                {
+                  "expr": {
+                    "kind": "assign",
+                    "lhs": {
+                      "expr": {
+                        "kind": "this"
+                      },
+                      "kind": "member",
+                      "member": "dynamicTextureMask"
+                    },
+                    "rhs": {
+                      "kind": "ident",
+                      "name": "value"
+                    }
+                  },
+                  "kind": "expr"
+                }
+              ]
+            },
+            "kind": "block"
+          },
+          "name": "SetDynamicTexture",
+          "params": [
+            {
+              "name": "value",
+              "qualifiers": {
+                "const": false,
+                "optional": false,
+                "out": false
+              },
+              "type": {
+                "args": [],
+                "kind": "named",
+                "name": "CName"
+              }
+            }
+          ],
+          "return_type": null,
+          "type_params": []
+        },
+        "kind": "function"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "public"
+    },
+    {
+      "annotations": [
+        {
+          "args": [
+            {
+              "kind": "ident",
+              "name": "inkMask"
+            }
+          ],
+          "name": "addMethod"
+        }
+      ],
+      "doc": [],
+      "item": {
+        "function": {
+          "body": {
+            "block": {
+              "statements": [
+                {
+                  "expr": {
+                    "expr": {
+                      "kind": "this"
+                    },
+                    "kind": "member",
+                    "member": "dataSource"
+                  },
+                  "kind": "return"
+                }
+              ]
+            },
+            "kind": "block"
+          },
+          "name": "GetDataSource",
+          "params": [],
+          "return_type": {
+            "args": [],
+            "kind": "named",
+            "name": "inkMaskDataSource"
+          },
+          "type_params": []
+        },
+        "kind": "function"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "public"
+    },
+    {
+      "annotations": [
+        {
+          "args": [
+            {
+              "kind": "ident",
+              "name": "inkMask"
+            }
+          ],
+          "name": "addMethod"
+        }
+      ],
+      "doc": [],
+      "item": {
+        "function": {
+          "body": {
+            "block": {
+              "statements": [
+                {
+                  "expr": {
+                    "kind": "assign",
+                    "lhs": {
+                      "expr": {
+                        "kind": "this"
+                      },
+                      "kind": "member",
+                      "member": "dataSource"
+                    },
+                    "rhs": {
+                      "kind": "ident",
+                      "name": "value"
+                    }
+                  },
+                  "kind": "expr"
+                }
+              ]
+            },
+            "kind": "block"
+          },
+          "name": "SetDataSource",
+          "params": [
+            {
+              "name": "value",
+              "qualifiers": {
+                "const": false,
+                "optional": false,
+                "out": false
+              },
+              "type": {
+                "args": [],
+                "kind": "named",
+                "name": "inkMaskDataSource"
+              }
+            }
+          ],
+          "return_type": null,
+          "type_params": []
+        },
+        "kind": "function"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "public"
+    },
+    {
+      "annotations": [
+        {
+          "args": [
+            {
+              "kind": "ident",
+              "name": "inkMask"
+            }
+          ],
+          "name": "addMethod"
+        }
+      ],
+      "doc": [],
+      "item": {
+        "function": {
+          "body": {
+            "block": {
+              "statements": [
+                {
+                  "expr": {
+                    "expr": {
+                      "kind": "this"
+                    },
+                    "kind": "member",
+                    "member": "invertMask"
+                  },
+                  "kind": "return"
+                }
+              ]
+            },
+            "kind": "block"
+          },
+          "name": "IsInverted",
+          "params": [],
+          "return_type": {
+            "args": [],
+            "kind": "named",
+            "name": "Bool"
+          },
+          "type_params": []
+        },
+        "kind": "function"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "public"
+    },
+    {
+      "annotations": [
+        {
+          "args": [
+            {
+              "kind": "ident",
+              "name": "inkMask"
+            }
+          ],
+          "name": "addMethod"
+        }
+      ],
+      "doc": [],
+      "item": {
+        "function": {
+          "body": {
+            "block": {
+              "statements": [
+                {
+                  "expr": {
+                    "kind": "assign",
+                    "lhs": {
+                      "expr": {
+                        "kind": "this"
+                      },
+                      "kind": "member",
+                      "member": "invertMask"
+                    },
+                    "rhs": {
+                      "kind": "ident",
+                      "name": "value"
+                    }
+                  },
+                  "kind": "expr"
+                }
+              ]
+            },
+            "kind": "block"
+          },
+          "name": "SetInverted",
+          "params": [
+            {
+              "name": "value",
+              "qualifiers": {
+                "const": false,
+                "optional": false,
+                "out": false
+              },
+              "type": {
+                "args": [],
+                "kind": "named",
+                "name": "Bool"
+              }
+            }
+          ],
+          "return_type": null,
+          "type_params": []
+        },
+        "kind": "function"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "public"
+    },
+    {
+      "annotations": [
+        {
+          "args": [
+            {
+              "kind": "ident",
+              "name": "inkMask"
+            }
+          ],
+          "name": "addMethod"
+        }
+      ],
+      "doc": [],
+      "item": {
+        "function": {
+          "body": {
+            "block": {
+              "statements": [
+                {
+                  "expr": {
+                    "expr": {
+                      "kind": "this"
+                    },
+                    "kind": "member",
+                    "member": "maskTransparency"
+                  },
+                  "kind": "return"
+                }
+              ]
+            },
+            "kind": "block"
+          },
+          "name": "GetTransparency",
+          "params": [],
+          "return_type": {
+            "args": [],
+            "kind": "named",
+            "name": "Float"
+          },
+          "type_params": []
+        },
+        "kind": "function"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "public"
+    },
+    {
+      "annotations": [
+        {
+          "args": [
+            {
+              "kind": "ident",
+              "name": "inkMask"
+            }
+          ],
+          "name": "addMethod"
+        }
+      ],
+      "doc": [],
+      "item": {
+        "function": {
+          "body": {
+            "block": {
+              "statements": [
+                {
+                  "expr": {
+                    "kind": "assign",
+                    "lhs": {
+                      "expr": {
+                        "kind": "this"
+                      },
+                      "kind": "member",
+                      "member": "maskTransparency"
+                    },
+                    "rhs": {
+                      "kind": "ident",
+                      "name": "value"
+                    }
+                  },
+                  "kind": "expr"
+                }
+              ]
+            },
+            "kind": "block"
+          },
+          "name": "SetTransparency",
+          "params": [
+            {
+              "name": "value",
+              "qualifiers": {
+                "const": false,
+                "optional": false,
+                "out": false
+              },
+              "type": {
+                "args": [],
+                "kind": "named",
+                "name": "Float"
+              }
+            }
+          ],
+          "return_type": null,
+          "type_params": []
+        },
+        "kind": "function"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "public"
+    }
+  ],
+  "path": null
+}

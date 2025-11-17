@@ -1,0 +1,178 @@
+{
+  "items": [
+    {
+      "annotations": [
+        {
+          "args": [
+            {
+              "kind": "ident",
+              "name": "inkWidgetLibraryResource"
+            }
+          ],
+          "name": "addMethod"
+        }
+      ],
+      "doc": [],
+      "item": {
+        "function": {
+          "body": null,
+          "name": "SetPath",
+          "params": [
+            {
+              "name": "self",
+              "qualifiers": {
+                "const": false,
+                "optional": false,
+                "out": false
+              },
+              "type": {
+                "args": [
+                  {
+                    "args": [],
+                    "kind": "named",
+                    "name": "inkWidgetLibraryResource"
+                  }
+                ],
+                "kind": "named",
+                "name": "script_ref"
+              }
+            },
+            {
+              "name": "path",
+              "qualifiers": {
+                "const": false,
+                "optional": false,
+                "out": false
+              },
+              "type": {
+                "args": [],
+                "kind": "named",
+                "name": "ResRef"
+              }
+            }
+          ],
+          "return_type": null,
+          "type_params": []
+        },
+        "kind": "function"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": true,
+        "persistent": false,
+        "quest": false,
+        "static": true
+      },
+      "visibility": "public"
+    },
+    {
+      "annotations": [
+        {
+          "args": [
+            {
+              "kind": "ident",
+              "name": "inkWidgetLibraryResource"
+            }
+          ],
+          "name": "addMethod"
+        }
+      ],
+      "doc": [],
+      "item": {
+        "function": {
+          "body": {
+            "block": {
+              "statements": [
+                {
+                  "kind": "let",
+                  "name": "ref",
+                  "type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "inkWidgetLibraryResource"
+                  },
+                  "value": null
+                },
+                {
+                  "expr": {
+                    "args": [
+                      {
+                        "kind": "ident",
+                        "name": "ref"
+                      },
+                      {
+                        "kind": "ident",
+                        "name": "path"
+                      }
+                    ],
+                    "expr": {
+                      "expr": {
+                        "kind": "ident",
+                        "name": "inkWidgetLibraryResource"
+                      },
+                      "kind": "member",
+                      "member": "SetPath"
+                    },
+                    "kind": "call",
+                    "type_args": []
+                  },
+                  "kind": "expr"
+                },
+                {
+                  "expr": {
+                    "kind": "ident",
+                    "name": "ref"
+                  },
+                  "kind": "return"
+                }
+              ]
+            },
+            "kind": "block"
+          },
+          "name": "Create",
+          "params": [
+            {
+              "name": "path",
+              "qualifiers": {
+                "const": false,
+                "optional": false,
+                "out": false
+              },
+              "type": {
+                "args": [],
+                "kind": "named",
+                "name": "ResRef"
+              }
+            }
+          ],
+          "return_type": {
+            "args": [],
+            "kind": "named",
+            "name": "inkWidgetLibraryResource"
+          },
+          "type_params": []
+        },
+        "kind": "function"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": true
+      },
+      "visibility": "public"
+    }
+  ],
+  "path": null
+}

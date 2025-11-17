@@ -1,0 +1,710 @@
+{
+  "items": [
+    {
+      "annotations": [],
+      "doc": [],
+      "item": {
+        "class": {
+          "extends": null,
+          "items": [
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "block": {
+                            "body": {
+                              "statements": [
+                                {
+                                  "blocks": [
+                                    {
+                                      "body": {
+                                        "statements": [
+                                          {
+                                            "expr": {
+                                              "constant": {
+                                                "kind": "bool",
+                                                "value": true
+                                              },
+                                              "kind": "constant"
+                                            },
+                                            "kind": "return"
+                                          }
+                                        ]
+                                      },
+                                      "condition": {
+                                        "expr": {
+                                          "args": [
+                                            {
+                                              "constant": {
+                                                "kind": "cname",
+                                                "value": "inkVirtualWindow"
+                                              },
+                                              "kind": "constant"
+                                            }
+                                          ],
+                                          "expr": {
+                                            "expr": {
+                                              "kind": "ident",
+                                              "name": "widget"
+                                            },
+                                            "kind": "member",
+                                            "member": "IsA"
+                                          },
+                                          "kind": "call",
+                                          "type_args": []
+                                        },
+                                        "kind": "expr"
+                                      }
+                                    }
+                                  ],
+                                  "else": null,
+                                  "kind": "if"
+                                },
+                                {
+                                  "expr": {
+                                    "kind": "assign",
+                                    "lhs": {
+                                      "kind": "ident",
+                                      "name": "widget"
+                                    },
+                                    "rhs": {
+                                      "args": [],
+                                      "expr": {
+                                        "expr": {
+                                          "kind": "ident",
+                                          "name": "widget"
+                                        },
+                                        "kind": "member",
+                                        "member": "GetParentWidget"
+                                      },
+                                      "kind": "call",
+                                      "type_args": []
+                                    }
+                                  },
+                                  "kind": "expr"
+                                }
+                              ]
+                            },
+                            "condition": {
+                              "expr": {
+                                "args": [
+                                  {
+                                    "kind": "ident",
+                                    "name": "widget"
+                                  }
+                                ],
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "IsDefined"
+                                },
+                                "kind": "call",
+                                "type_args": []
+                              },
+                              "kind": "expr"
+                            }
+                          },
+                          "kind": "while"
+                        },
+                        {
+                          "expr": {
+                            "constant": {
+                              "kind": "bool",
+                              "value": false
+                            },
+                            "kind": "constant"
+                          },
+                          "kind": "return"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "InWindowTree",
+                  "params": [
+                    {
+                      "name": "widget",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [
+                          {
+                            "args": [],
+                            "kind": "named",
+                            "name": "inkWidget"
+                          }
+                        ],
+                        "kind": "named",
+                        "name": "ref"
+                      }
+                    }
+                  ],
+                  "return_type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Bool"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": true
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "kind": "let",
+                          "name": "controller",
+                          "type": null,
+                          "value": {
+                            "args": [
+                              {
+                                "kind": "ident",
+                                "name": "controllerType"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "widget"
+                              },
+                              "kind": "member",
+                              "member": "GetControllerByType"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          }
+                        },
+                        {
+                          "blocks": [
+                            {
+                              "body": {
+                                "statements": [
+                                  {
+                                    "expr": {
+                                      "args": [
+                                        {
+                                          "kind": "ident",
+                                          "name": "controllers"
+                                        },
+                                        {
+                                          "kind": "ident",
+                                          "name": "controller"
+                                        }
+                                      ],
+                                      "expr": {
+                                        "kind": "ident",
+                                        "name": "ArrayPush"
+                                      },
+                                      "kind": "call",
+                                      "type_args": []
+                                    },
+                                    "kind": "expr"
+                                  }
+                                ]
+                              },
+                              "condition": {
+                                "expr": {
+                                  "args": [
+                                    {
+                                      "kind": "ident",
+                                      "name": "controller"
+                                    }
+                                  ],
+                                  "expr": {
+                                    "kind": "ident",
+                                    "name": "IsDefined"
+                                  },
+                                  "kind": "call",
+                                  "type_args": []
+                                },
+                                "kind": "expr"
+                              }
+                            }
+                          ],
+                          "else": {
+                            "statements": [
+                              {
+                                "kind": "let",
+                                "name": "container",
+                                "type": null,
+                                "value": {
+                                  "expr": {
+                                    "kind": "ident",
+                                    "name": "widget"
+                                  },
+                                  "kind": "dyn_cast",
+                                  "type": {
+                                    "args": [],
+                                    "kind": "named",
+                                    "name": "inkCompoundWidget"
+                                  }
+                                }
+                              },
+                              {
+                                "blocks": [
+                                  {
+                                    "body": {
+                                      "statements": [
+                                        {
+                                          "kind": "let",
+                                          "name": "i",
+                                          "type": null,
+                                          "value": {
+                                            "constant": {
+                                              "kind": "i32",
+                                              "value": 0
+                                            },
+                                            "kind": "constant"
+                                          }
+                                        },
+                                        {
+                                          "kind": "let",
+                                          "name": "n",
+                                          "type": null,
+                                          "value": {
+                                            "args": [],
+                                            "expr": {
+                                              "expr": {
+                                                "kind": "ident",
+                                                "name": "container"
+                                              },
+                                              "kind": "member",
+                                              "member": "GetNumChildren"
+                                            },
+                                            "kind": "call",
+                                            "type_args": []
+                                          }
+                                        },
+                                        {
+                                          "block": {
+                                            "body": {
+                                              "statements": [
+                                                {
+                                                  "expr": {
+                                                    "args": [
+                                                      {
+                                                        "args": [
+                                                          {
+                                                            "kind": "ident",
+                                                            "name": "i"
+                                                          }
+                                                        ],
+                                                        "expr": {
+                                                          "expr": {
+                                                            "kind": "ident",
+                                                            "name": "container"
+                                                          },
+                                                          "kind": "member",
+                                                          "member": "GetWidget"
+                                                        },
+                                                        "kind": "call",
+                                                        "type_args": []
+                                                      },
+                                                      {
+                                                        "kind": "ident",
+                                                        "name": "controllerType"
+                                                      },
+                                                      {
+                                                        "kind": "ident",
+                                                        "name": "controllers"
+                                                      }
+                                                    ],
+                                                    "expr": {
+                                                      "expr": {
+                                                        "kind": "ident",
+                                                        "name": "inkWidgetHelper"
+                                                      },
+                                                      "kind": "member",
+                                                      "member": "GetControllersByType"
+                                                    },
+                                                    "kind": "call",
+                                                    "type_args": []
+                                                  },
+                                                  "kind": "expr"
+                                                },
+                                                {
+                                                  "expr": {
+                                                    "kind": "bin_op",
+                                                    "lhs": {
+                                                      "kind": "ident",
+                                                      "name": "i"
+                                                    },
+                                                    "op": "+=",
+                                                    "rhs": {
+                                                      "constant": {
+                                                        "kind": "i32",
+                                                        "value": 1
+                                                      },
+                                                      "kind": "constant"
+                                                    }
+                                                  },
+                                                  "kind": "expr"
+                                                }
+                                              ]
+                                            },
+                                            "condition": {
+                                              "expr": {
+                                                "kind": "bin_op",
+                                                "lhs": {
+                                                  "kind": "ident",
+                                                  "name": "i"
+                                                },
+                                                "op": "<",
+                                                "rhs": {
+                                                  "kind": "ident",
+                                                  "name": "n"
+                                                }
+                                              },
+                                              "kind": "expr"
+                                            }
+                                          },
+                                          "kind": "while"
+                                        }
+                                      ]
+                                    },
+                                    "condition": {
+                                      "expr": {
+                                        "args": [
+                                          {
+                                            "kind": "ident",
+                                            "name": "container"
+                                          }
+                                        ],
+                                        "expr": {
+                                          "kind": "ident",
+                                          "name": "IsDefined"
+                                        },
+                                        "kind": "call",
+                                        "type_args": []
+                                      },
+                                      "kind": "expr"
+                                    }
+                                  }
+                                ],
+                                "else": null,
+                                "kind": "if"
+                              }
+                            ]
+                          },
+                          "kind": "if"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "GetControllersByType",
+                  "params": [
+                    {
+                      "name": "widget",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [
+                          {
+                            "args": [],
+                            "kind": "named",
+                            "name": "inkWidget"
+                          }
+                        ],
+                        "kind": "named",
+                        "name": "ref"
+                      }
+                    },
+                    {
+                      "name": "controllerType",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "CName"
+                      }
+                    },
+                    {
+                      "name": "controllers",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": true
+                      },
+                      "type": {
+                        "args": [
+                          {
+                            "args": [
+                              {
+                                "args": [],
+                                "kind": "named",
+                                "name": "inkLogicController"
+                              }
+                            ],
+                            "kind": "named",
+                            "name": "ref"
+                          }
+                        ],
+                        "kind": "named",
+                        "name": "array"
+                      }
+                    }
+                  ],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": true
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "block": {
+                            "body": {
+                              "statements": [
+                                {
+                                  "kind": "let",
+                                  "name": "controller",
+                                  "type": null,
+                                  "value": {
+                                    "args": [
+                                      {
+                                        "kind": "ident",
+                                        "name": "controllerType"
+                                      }
+                                    ],
+                                    "expr": {
+                                      "expr": {
+                                        "kind": "ident",
+                                        "name": "widget"
+                                      },
+                                      "kind": "member",
+                                      "member": "GetControllerByType"
+                                    },
+                                    "kind": "call",
+                                    "type_args": []
+                                  }
+                                },
+                                {
+                                  "blocks": [
+                                    {
+                                      "body": {
+                                        "statements": [
+                                          {
+                                            "expr": {
+                                              "kind": "ident",
+                                              "name": "controller"
+                                            },
+                                            "kind": "return"
+                                          }
+                                        ]
+                                      },
+                                      "condition": {
+                                        "expr": {
+                                          "args": [
+                                            {
+                                              "kind": "ident",
+                                              "name": "controller"
+                                            }
+                                          ],
+                                          "expr": {
+                                            "kind": "ident",
+                                            "name": "IsDefined"
+                                          },
+                                          "kind": "call",
+                                          "type_args": []
+                                        },
+                                        "kind": "expr"
+                                      }
+                                    }
+                                  ],
+                                  "else": null,
+                                  "kind": "if"
+                                },
+                                {
+                                  "expr": {
+                                    "kind": "assign",
+                                    "lhs": {
+                                      "kind": "ident",
+                                      "name": "widget"
+                                    },
+                                    "rhs": {
+                                      "expr": {
+                                        "kind": "ident",
+                                        "name": "widget"
+                                      },
+                                      "kind": "member",
+                                      "member": "parentWidget"
+                                    }
+                                  },
+                                  "kind": "expr"
+                                }
+                              ]
+                            },
+                            "condition": {
+                              "expr": {
+                                "args": [
+                                  {
+                                    "kind": "ident",
+                                    "name": "widget"
+                                  }
+                                ],
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "IsDefined"
+                                },
+                                "kind": "call",
+                                "type_args": []
+                              },
+                              "kind": "expr"
+                            }
+                          },
+                          "kind": "while"
+                        },
+                        {
+                          "expr": {
+                            "kind": "null"
+                          },
+                          "kind": "return"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "GetClosestControllerByType",
+                  "params": [
+                    {
+                      "name": "widget",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [
+                          {
+                            "args": [],
+                            "kind": "named",
+                            "name": "inkWidget"
+                          }
+                        ],
+                        "kind": "named",
+                        "name": "ref"
+                      }
+                    },
+                    {
+                      "name": "controllerType",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "CName"
+                      }
+                    }
+                  ],
+                  "return_type": {
+                    "args": [
+                      {
+                        "args": [],
+                        "kind": "named",
+                        "name": "inkLogicController"
+                      }
+                    ],
+                    "kind": "named",
+                    "name": "ref"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": true
+              },
+              "visibility": "public"
+            }
+          ],
+          "name": "inkWidgetHelper",
+          "type_params": []
+        },
+        "kind": "class"
+      },
+      "qualifiers": {
+        "abstract": true,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "public"
+    }
+  ],
+  "path": [
+    "Codeware",
+    "UI"
+  ]
+}

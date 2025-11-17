@@ -1,0 +1,114 @@
+{
+  "items": [
+    {
+      "annotations": [
+        {
+          "args": [
+            {
+              "kind": "ident",
+              "name": "inkWidgetLibraryReference"
+            }
+          ],
+          "name": "addMethod"
+        }
+      ],
+      "doc": [],
+      "item": {
+        "function": {
+          "body": {
+            "block": {
+              "statements": [
+                {
+                  "expr": {
+                    "args": [
+                      {
+                        "args": [
+                          {
+                            "kind": "ident",
+                            "name": "path"
+                          }
+                        ],
+                        "expr": {
+                          "expr": {
+                            "kind": "ident",
+                            "name": "inkWidgetLibraryResource"
+                          },
+                          "kind": "member",
+                          "member": "Create"
+                        },
+                        "kind": "call",
+                        "type_args": []
+                      },
+                      {
+                        "kind": "ident",
+                        "name": "item"
+                      }
+                    ],
+                    "expr": {
+                      "kind": "ident",
+                      "name": "inkWidgetLibraryReference"
+                    },
+                    "kind": "call",
+                    "type_args": []
+                  },
+                  "kind": "return"
+                }
+              ]
+            },
+            "kind": "block"
+          },
+          "name": "Create",
+          "params": [
+            {
+              "name": "path",
+              "qualifiers": {
+                "const": false,
+                "optional": false,
+                "out": false
+              },
+              "type": {
+                "args": [],
+                "kind": "named",
+                "name": "ResRef"
+              }
+            },
+            {
+              "name": "item",
+              "qualifiers": {
+                "const": false,
+                "optional": false,
+                "out": false
+              },
+              "type": {
+                "args": [],
+                "kind": "named",
+                "name": "CName"
+              }
+            }
+          ],
+          "return_type": {
+            "args": [],
+            "kind": "named",
+            "name": "inkWidgetLibraryReference"
+          },
+          "type_params": []
+        },
+        "kind": "function"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": true
+      },
+      "visibility": "public"
+    }
+  ],
+  "path": null
+}

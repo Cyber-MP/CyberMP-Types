@@ -1,0 +1,353 @@
+{
+  "items": [
+    {
+      "annotations": [
+        {
+          "args": [
+            {
+              "kind": "ident",
+              "name": "VehicleSystem"
+            }
+          ],
+          "name": "addMethod"
+        }
+      ],
+      "doc": [],
+      "item": {
+        "function": {
+          "body": null,
+          "name": "ToggleGarageVehicle",
+          "params": [
+            {
+              "name": "garageID",
+              "qualifiers": {
+                "const": false,
+                "optional": false,
+                "out": false
+              },
+              "type": {
+                "args": [],
+                "kind": "named",
+                "name": "GarageVehicleID"
+              }
+            },
+            {
+              "name": "enable",
+              "qualifiers": {
+                "const": false,
+                "optional": false,
+                "out": false
+              },
+              "type": {
+                "args": [],
+                "kind": "named",
+                "name": "Bool"
+              }
+            }
+          ],
+          "return_type": {
+            "args": [],
+            "kind": "named",
+            "name": "Bool"
+          },
+          "type_params": []
+        },
+        "kind": "function"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": true,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "public"
+    },
+    {
+      "annotations": [
+        {
+          "args": [
+            {
+              "kind": "ident",
+              "name": "VehicleSystem"
+            }
+          ],
+          "name": "addMethod"
+        }
+      ],
+      "doc": [],
+      "item": {
+        "function": {
+          "body": {
+            "block": {
+              "statements": [
+                {
+                  "kind": "let",
+                  "name": "playerVehicles",
+                  "type": null,
+                  "value": {
+                    "args": [
+                      {
+                        "constant": {
+                          "kind": "tweakdbid",
+                          "value": "Vehicle.vehicle_list.list"
+                        },
+                        "kind": "constant"
+                      }
+                    ],
+                    "expr": {
+                      "expr": {
+                        "kind": "ident",
+                        "name": "TweakDBInterface"
+                      },
+                      "kind": "member",
+                      "member": "GetForeignKeyArray"
+                    },
+                    "kind": "call",
+                    "type_args": []
+                  }
+                },
+                {
+                  "blocks": [
+                    {
+                      "body": {
+                        "statements": [
+                          {
+                            "expr": {
+                              "constant": {
+                                "kind": "bool",
+                                "value": false
+                              },
+                              "kind": "constant"
+                            },
+                            "kind": "return"
+                          }
+                        ]
+                      },
+                      "condition": {
+                        "expr": {
+                          "expr": {
+                            "args": [
+                              {
+                                "kind": "ident",
+                                "name": "playerVehicles"
+                              },
+                              {
+                                "kind": "ident",
+                                "name": "vehicleID"
+                              }
+                            ],
+                            "expr": {
+                              "kind": "ident",
+                              "name": "ArrayContains"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "un_op",
+                          "op": "!"
+                        },
+                        "kind": "expr"
+                      }
+                    }
+                  ],
+                  "else": null,
+                  "kind": "if"
+                },
+                {
+                  "kind": "let",
+                  "name": "garageID",
+                  "type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "GarageVehicleID"
+                  },
+                  "value": null
+                },
+                {
+                  "expr": {
+                    "kind": "assign",
+                    "lhs": {
+                      "expr": {
+                        "kind": "ident",
+                        "name": "garageID"
+                      },
+                      "kind": "member",
+                      "member": "recordID"
+                    },
+                    "rhs": {
+                      "kind": "ident",
+                      "name": "vehicleID"
+                    }
+                  },
+                  "kind": "expr"
+                },
+                {
+                  "kind": "let",
+                  "name": "success",
+                  "type": null,
+                  "value": {
+                    "args": [
+                      {
+                        "kind": "ident",
+                        "name": "garageID"
+                      },
+                      {
+                        "kind": "ident",
+                        "name": "enable"
+                      }
+                    ],
+                    "expr": {
+                      "expr": {
+                        "kind": "this"
+                      },
+                      "kind": "member",
+                      "member": "ToggleGarageVehicle"
+                    },
+                    "kind": "call",
+                    "type_args": []
+                  }
+                },
+                {
+                  "blocks": [
+                    {
+                      "body": {
+                        "statements": [
+                          {
+                            "expr": {
+                              "args": [
+                                {
+                                  "kind": "ident",
+                                  "name": "garageID"
+                                }
+                              ],
+                              "expr": {
+                                "expr": {
+                                  "kind": "this"
+                                },
+                                "kind": "member",
+                                "member": "DespawnPlayerVehicle"
+                              },
+                              "kind": "call",
+                              "type_args": []
+                            },
+                            "kind": "expr"
+                          }
+                        ]
+                      },
+                      "condition": {
+                        "expr": {
+                          "kind": "bin_op",
+                          "lhs": {
+                            "kind": "bin_op",
+                            "lhs": {
+                              "kind": "ident",
+                              "name": "success"
+                            },
+                            "op": "&&",
+                            "rhs": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "enable"
+                              },
+                              "kind": "un_op",
+                              "op": "!"
+                            }
+                          },
+                          "op": "&&",
+                          "rhs": {
+                            "kind": "ident",
+                            "name": "despawnIfDisabling"
+                          }
+                        },
+                        "kind": "expr"
+                      }
+                    }
+                  ],
+                  "else": null,
+                  "kind": "if"
+                },
+                {
+                  "expr": {
+                    "kind": "ident",
+                    "name": "success"
+                  },
+                  "kind": "return"
+                }
+              ]
+            },
+            "kind": "block"
+          },
+          "name": "EnablePlayerVehicleID",
+          "params": [
+            {
+              "name": "vehicleID",
+              "qualifiers": {
+                "const": false,
+                "optional": false,
+                "out": false
+              },
+              "type": {
+                "args": [],
+                "kind": "named",
+                "name": "TweakDBID"
+              }
+            },
+            {
+              "name": "enable",
+              "qualifiers": {
+                "const": false,
+                "optional": false,
+                "out": false
+              },
+              "type": {
+                "args": [],
+                "kind": "named",
+                "name": "Bool"
+              }
+            },
+            {
+              "name": "despawnIfDisabling",
+              "qualifiers": {
+                "const": false,
+                "optional": true,
+                "out": false
+              },
+              "type": {
+                "args": [],
+                "kind": "named",
+                "name": "Bool"
+              }
+            }
+          ],
+          "return_type": {
+            "args": [],
+            "kind": "named",
+            "name": "Bool"
+          },
+          "type_params": []
+        },
+        "kind": "function"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "public"
+    }
+  ],
+  "path": null
+}

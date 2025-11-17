@@ -1,0 +1,1418 @@
+{
+  "items": [
+    {
+      "annotations": [],
+      "doc": [],
+      "item": {
+        "import": {
+          "path": [
+            "Codeware",
+            "UI",
+            "inkCustomController"
+          ],
+          "type": "exact"
+        },
+        "kind": "import"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": null
+    },
+    {
+      "annotations": [],
+      "doc": [],
+      "item": {
+        "class": {
+          "extends": {
+            "args": [],
+            "kind": "named",
+            "name": "inkCustomController"
+          },
+          "items": [
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "field": {
+                  "default": null,
+                  "name": "m_viewport",
+                  "type": {
+                    "args": [
+                      {
+                        "args": [],
+                        "kind": "named",
+                        "name": "inkScrollArea"
+                      }
+                    ],
+                    "kind": "named",
+                    "name": "wref"
+                  }
+                },
+                "kind": "let"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "protected"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "field": {
+                  "default": null,
+                  "name": "m_content",
+                  "type": {
+                    "args": [
+                      {
+                        "args": [],
+                        "kind": "named",
+                        "name": "inkCanvas"
+                      }
+                    ],
+                    "kind": "named",
+                    "name": "wref"
+                  }
+                },
+                "kind": "let"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "protected"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "field": {
+                  "default": null,
+                  "name": "m_caretSize",
+                  "type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Vector2"
+                  }
+                },
+                "kind": "let"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "protected"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "args": [],
+                            "expr": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "CreateWidgets"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "OnCreate",
+                  "params": [],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": true,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "protected"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "kind": "let",
+                          "name": "viewport",
+                          "type": {
+                            "args": [
+                              {
+                                "args": [],
+                                "kind": "named",
+                                "name": "inkScrollArea"
+                              }
+                            ],
+                            "kind": "named",
+                            "name": "ref"
+                          },
+                          "value": {
+                            "args": [],
+                            "kind": "new",
+                            "type": {
+                              "args": [],
+                              "kind": "named",
+                              "name": "inkScrollArea"
+                            }
+                          }
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "cname",
+                                  "value": "viewport"
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "viewport"
+                              },
+                              "kind": "member",
+                              "member": "SetName"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "inkEAnchor"
+                                },
+                                "kind": "member",
+                                "member": "Fill"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "viewport"
+                              },
+                              "kind": "member",
+                              "member": "SetAnchor"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "args": [
+                                  {
+                                    "constant": {
+                                      "kind": "f32",
+                                      "value": 8.0
+                                    },
+                                    "kind": "constant"
+                                  },
+                                  {
+                                    "constant": {
+                                      "kind": "f32",
+                                      "value": 4.0
+                                    },
+                                    "kind": "constant"
+                                  },
+                                  {
+                                    "constant": {
+                                      "kind": "f32",
+                                      "value": 8.0
+                                    },
+                                    "kind": "constant"
+                                  },
+                                  {
+                                    "constant": {
+                                      "kind": "f32",
+                                      "value": 4.0
+                                    },
+                                    "kind": "constant"
+                                  }
+                                ],
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "inkMargin"
+                                },
+                                "kind": "call",
+                                "type_args": []
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "viewport"
+                              },
+                              "kind": "member",
+                              "member": "SetMargin"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "args": [
+                                  {
+                                    "constant": {
+                                      "kind": "f32",
+                                      "value": 0.0
+                                    },
+                                    "kind": "constant"
+                                  },
+                                  {
+                                    "constant": {
+                                      "kind": "f32",
+                                      "value": 0.0
+                                    },
+                                    "kind": "constant"
+                                  }
+                                ],
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "Vector2"
+                                },
+                                "kind": "call",
+                                "type_args": []
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "viewport"
+                              },
+                              "kind": "member",
+                              "member": "SetRenderTransformPivot"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "inkFitToContentDirection"
+                                },
+                                "kind": "member",
+                                "member": "Vertical"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "viewport"
+                              },
+                              "kind": "member",
+                              "member": "SetFitToContentDirection"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "bool",
+                                  "value": true
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "viewport"
+                              },
+                              "kind": "member",
+                              "member": "SetConstrainContentPosition"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "bool",
+                                  "value": true
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "viewport"
+                              },
+                              "kind": "member",
+                              "member": "SetUseInternalMask"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "kind": "let",
+                          "name": "content",
+                          "type": {
+                            "args": [
+                              {
+                                "args": [],
+                                "kind": "named",
+                                "name": "inkCanvas"
+                              }
+                            ],
+                            "kind": "named",
+                            "name": "ref"
+                          },
+                          "value": {
+                            "args": [],
+                            "kind": "new",
+                            "type": {
+                              "args": [],
+                              "kind": "named",
+                              "name": "inkCanvas"
+                            }
+                          }
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "constant": {
+                                  "kind": "cname",
+                                  "value": "content"
+                                },
+                                "kind": "constant"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "content"
+                              },
+                              "kind": "member",
+                              "member": "SetName"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "args": [
+                                  {
+                                    "constant": {
+                                      "kind": "f32",
+                                      "value": 0.0
+                                    },
+                                    "kind": "constant"
+                                  },
+                                  {
+                                    "constant": {
+                                      "kind": "f32",
+                                      "value": 0.0
+                                    },
+                                    "kind": "constant"
+                                  }
+                                ],
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "Vector2"
+                                },
+                                "kind": "call",
+                                "type_args": []
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "content"
+                              },
+                              "kind": "member",
+                              "member": "SetRenderTransformPivot"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "kind": "ident",
+                                "name": "viewport"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "content"
+                              },
+                              "kind": "member",
+                              "member": "Reparent"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "kind": "assign",
+                            "lhs": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "m_viewport"
+                            },
+                            "rhs": {
+                              "kind": "ident",
+                              "name": "viewport"
+                            }
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "kind": "assign",
+                            "lhs": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "m_content"
+                            },
+                            "rhs": {
+                              "kind": "ident",
+                              "name": "content"
+                            }
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "kind": "ident",
+                                "name": "viewport"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "SetRootWidget"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "kind": "ident",
+                                "name": "content"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "SetContainerWidget"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "CreateWidgets",
+                  "params": [],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "protected"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "expr": {
+                              "kind": "this"
+                            },
+                            "kind": "member",
+                            "member": "m_caretSize"
+                          },
+                          "kind": "return"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "GetCaretSize",
+                  "params": [],
+                  "return_type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "Vector2"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "kind": "assign",
+                            "lhs": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "m_caretSize"
+                            },
+                            "rhs": {
+                              "kind": "ident",
+                              "name": "caretSize"
+                            }
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "SetCaretSize",
+                  "params": [
+                    {
+                      "name": "caretSize",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "Vector2"
+                      }
+                    }
+                  ],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "blocks": [
+                            {
+                              "body": {
+                                "statements": [
+                                  {
+                                    "expr": {
+                                      "kind": "assign",
+                                      "lhs": {
+                                        "kind": "ident",
+                                        "name": "contentSize"
+                                      },
+                                      "rhs": {
+                                        "expr": {
+                                          "kind": "this"
+                                        },
+                                        "kind": "member",
+                                        "member": "m_caretSize"
+                                      }
+                                    },
+                                    "kind": "expr"
+                                  }
+                                ]
+                              },
+                              "condition": {
+                                "expr": {
+                                  "kind": "bin_op",
+                                  "lhs": {
+                                    "expr": {
+                                      "kind": "ident",
+                                      "name": "contentSize"
+                                    },
+                                    "kind": "member",
+                                    "member": "X"
+                                  },
+                                  "op": "<=",
+                                  "rhs": {
+                                    "constant": {
+                                      "kind": "f32",
+                                      "value": 0.009999999776482582
+                                    },
+                                    "kind": "constant"
+                                  }
+                                },
+                                "kind": "expr"
+                              }
+                            }
+                          ],
+                          "else": null,
+                          "kind": "if"
+                        },
+                        {
+                          "kind": "let",
+                          "name": "viewportSize",
+                          "type": {
+                            "args": [],
+                            "kind": "named",
+                            "name": "Vector2"
+                          },
+                          "value": {
+                            "args": [],
+                            "expr": {
+                              "expr": {
+                                "expr": {
+                                  "kind": "this"
+                                },
+                                "kind": "member",
+                                "member": "m_viewport"
+                              },
+                              "kind": "member",
+                              "member": "GetViewportSize"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          }
+                        },
+                        {
+                          "kind": "let",
+                          "name": "contentOffset",
+                          "type": {
+                            "args": [],
+                            "kind": "named",
+                            "name": "Vector2"
+                          },
+                          "value": {
+                            "args": [],
+                            "expr": {
+                              "expr": {
+                                "expr": {
+                                  "kind": "this"
+                                },
+                                "kind": "member",
+                                "member": "m_content"
+                              },
+                              "kind": "member",
+                              "member": "GetTranslation"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          }
+                        },
+                        {
+                          "blocks": [
+                            {
+                              "body": {
+                                "statements": [
+                                  {
+                                    "expr": {
+                                      "kind": "assign",
+                                      "lhs": {
+                                        "expr": {
+                                          "kind": "ident",
+                                          "name": "contentOffset"
+                                        },
+                                        "kind": "member",
+                                        "member": "X"
+                                      },
+                                      "rhs": {
+                                        "constant": {
+                                          "kind": "f32",
+                                          "value": 0.0
+                                        },
+                                        "kind": "constant"
+                                      }
+                                    },
+                                    "kind": "expr"
+                                  }
+                                ]
+                              },
+                              "condition": {
+                                "expr": {
+                                  "kind": "bin_op",
+                                  "lhs": {
+                                    "expr": {
+                                      "kind": "ident",
+                                      "name": "contentSize"
+                                    },
+                                    "kind": "member",
+                                    "member": "X"
+                                  },
+                                  "op": "<=",
+                                  "rhs": {
+                                    "expr": {
+                                      "kind": "ident",
+                                      "name": "viewportSize"
+                                    },
+                                    "kind": "member",
+                                    "member": "X"
+                                  }
+                                },
+                                "kind": "expr"
+                              }
+                            }
+                          ],
+                          "else": {
+                            "statements": [
+                              {
+                                "kind": "let",
+                                "name": "viewportBounds",
+                                "type": null,
+                                "value": {
+                                  "args": [
+                                    {
+                                      "expr": {
+                                        "expr": {
+                                          "kind": "ident",
+                                          "name": "contentOffset"
+                                        },
+                                        "kind": "member",
+                                        "member": "X"
+                                      },
+                                      "kind": "un_op",
+                                      "op": "-"
+                                    },
+                                    {
+                                      "constant": {
+                                        "kind": "f32",
+                                        "value": 0.0
+                                      },
+                                      "kind": "constant"
+                                    },
+                                    {
+                                      "kind": "bin_op",
+                                      "lhs": {
+                                        "expr": {
+                                          "expr": {
+                                            "kind": "ident",
+                                            "name": "contentOffset"
+                                          },
+                                          "kind": "member",
+                                          "member": "X"
+                                        },
+                                        "kind": "un_op",
+                                        "op": "-"
+                                      },
+                                      "op": "+",
+                                      "rhs": {
+                                        "expr": {
+                                          "kind": "ident",
+                                          "name": "viewportSize"
+                                        },
+                                        "kind": "member",
+                                        "member": "X"
+                                      }
+                                    },
+                                    {
+                                      "constant": {
+                                        "kind": "f32",
+                                        "value": 0.0
+                                      },
+                                      "kind": "constant"
+                                    }
+                                  ],
+                                  "expr": {
+                                    "kind": "ident",
+                                    "name": "inkMargin"
+                                  },
+                                  "kind": "call",
+                                  "type_args": []
+                                }
+                              },
+                              {
+                                "blocks": [
+                                  {
+                                    "body": {
+                                      "statements": [
+                                        {
+                                          "expr": {
+                                            "kind": "assign",
+                                            "lhs": {
+                                              "expr": {
+                                                "kind": "ident",
+                                                "name": "contentOffset"
+                                              },
+                                              "kind": "member",
+                                              "member": "X"
+                                            },
+                                            "rhs": {
+                                              "expr": {
+                                                "kind": "ident",
+                                                "name": "caretOffset"
+                                              },
+                                              "kind": "un_op",
+                                              "op": "-"
+                                            }
+                                          },
+                                          "kind": "expr"
+                                        }
+                                      ]
+                                    },
+                                    "condition": {
+                                      "expr": {
+                                        "kind": "bin_op",
+                                        "lhs": {
+                                          "kind": "ident",
+                                          "name": "caretOffset"
+                                        },
+                                        "op": "<",
+                                        "rhs": {
+                                          "expr": {
+                                            "kind": "ident",
+                                            "name": "viewportBounds"
+                                          },
+                                          "kind": "member",
+                                          "member": "left"
+                                        }
+                                      },
+                                      "kind": "expr"
+                                    }
+                                  }
+                                ],
+                                "else": {
+                                  "statements": [
+                                    {
+                                      "blocks": [
+                                        {
+                                          "body": {
+                                            "statements": [
+                                              {
+                                                "expr": {
+                                                  "kind": "assign",
+                                                  "lhs": {
+                                                    "expr": {
+                                                      "kind": "ident",
+                                                      "name": "contentOffset"
+                                                    },
+                                                    "kind": "member",
+                                                    "member": "X"
+                                                  },
+                                                  "rhs": {
+                                                    "expr": {
+                                                      "kind": "bin_op",
+                                                      "lhs": {
+                                                        "kind": "bin_op",
+                                                        "lhs": {
+                                                          "kind": "ident",
+                                                          "name": "caretOffset"
+                                                        },
+                                                        "op": "-",
+                                                        "rhs": {
+                                                          "expr": {
+                                                            "kind": "ident",
+                                                            "name": "viewportSize"
+                                                          },
+                                                          "kind": "member",
+                                                          "member": "X"
+                                                        }
+                                                      },
+                                                      "op": "+",
+                                                      "rhs": {
+                                                        "expr": {
+                                                          "expr": {
+                                                            "kind": "this"
+                                                          },
+                                                          "kind": "member",
+                                                          "member": "m_caretSize"
+                                                        },
+                                                        "kind": "member",
+                                                        "member": "X"
+                                                      }
+                                                    },
+                                                    "kind": "un_op",
+                                                    "op": "-"
+                                                  }
+                                                },
+                                                "kind": "expr"
+                                              }
+                                            ]
+                                          },
+                                          "condition": {
+                                            "expr": {
+                                              "kind": "bin_op",
+                                              "lhs": {
+                                                "kind": "ident",
+                                                "name": "caretOffset"
+                                              },
+                                              "op": ">",
+                                              "rhs": {
+                                                "expr": {
+                                                  "kind": "ident",
+                                                  "name": "viewportBounds"
+                                                },
+                                                "kind": "member",
+                                                "member": "right"
+                                              }
+                                            },
+                                            "kind": "expr"
+                                          }
+                                        }
+                                      ],
+                                      "else": {
+                                        "statements": [
+                                          {
+                                            "expr": {
+                                              "kind": "assign",
+                                              "lhs": {
+                                                "expr": {
+                                                  "kind": "ident",
+                                                  "name": "contentOffset"
+                                                },
+                                                "kind": "member",
+                                                "member": "X"
+                                              },
+                                              "rhs": {
+                                                "args": [
+                                                  {
+                                                    "expr": {
+                                                      "kind": "ident",
+                                                      "name": "contentOffset"
+                                                    },
+                                                    "kind": "member",
+                                                    "member": "X"
+                                                  },
+                                                  {
+                                                    "expr": {
+                                                      "kind": "bin_op",
+                                                      "lhs": {
+                                                        "kind": "bin_op",
+                                                        "lhs": {
+                                                          "expr": {
+                                                            "kind": "ident",
+                                                            "name": "contentSize"
+                                                          },
+                                                          "kind": "member",
+                                                          "member": "X"
+                                                        },
+                                                        "op": "-",
+                                                        "rhs": {
+                                                          "expr": {
+                                                            "kind": "ident",
+                                                            "name": "viewportSize"
+                                                          },
+                                                          "kind": "member",
+                                                          "member": "X"
+                                                        }
+                                                      },
+                                                      "op": "+",
+                                                      "rhs": {
+                                                        "expr": {
+                                                          "expr": {
+                                                            "kind": "this"
+                                                          },
+                                                          "kind": "member",
+                                                          "member": "m_caretSize"
+                                                        },
+                                                        "kind": "member",
+                                                        "member": "X"
+                                                      }
+                                                    },
+                                                    "kind": "un_op",
+                                                    "op": "-"
+                                                  }
+                                                ],
+                                                "expr": {
+                                                  "kind": "ident",
+                                                  "name": "MaxF"
+                                                },
+                                                "kind": "call",
+                                                "type_args": []
+                                              }
+                                            },
+                                            "kind": "expr"
+                                          }
+                                        ]
+                                      },
+                                      "kind": "if"
+                                    }
+                                  ]
+                                },
+                                "kind": "if"
+                              }
+                            ]
+                          },
+                          "kind": "if"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "kind": "ident",
+                                "name": "contentSize"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "expr": {
+                                  "kind": "this"
+                                },
+                                "kind": "member",
+                                "member": "m_content"
+                              },
+                              "kind": "member",
+                              "member": "SetSize"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "kind": "ident",
+                                "name": "contentOffset"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "expr": {
+                                  "kind": "this"
+                                },
+                                "kind": "member",
+                                "member": "m_content"
+                              },
+                              "kind": "member",
+                              "member": "SetTranslation"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "UpdateState",
+                  "params": [
+                    {
+                      "name": "contentSize",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "Vector2"
+                      }
+                    },
+                    {
+                      "name": "caretOffset",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "Float"
+                      }
+                    }
+                  ],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "kind": "let",
+                          "name": "self",
+                          "type": {
+                            "args": [
+                              {
+                                "args": [],
+                                "kind": "named",
+                                "name": "Viewport"
+                              }
+                            ],
+                            "kind": "named",
+                            "name": "ref"
+                          },
+                          "value": {
+                            "args": [],
+                            "kind": "new",
+                            "type": {
+                              "args": [],
+                              "kind": "named",
+                              "name": "Viewport"
+                            }
+                          }
+                        },
+                        {
+                          "expr": {
+                            "args": [],
+                            "expr": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "self"
+                              },
+                              "kind": "member",
+                              "member": "CreateInstance"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        },
+                        {
+                          "expr": {
+                            "kind": "ident",
+                            "name": "self"
+                          },
+                          "kind": "return"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "Create",
+                  "params": [],
+                  "return_type": {
+                    "args": [
+                      {
+                        "args": [],
+                        "kind": "named",
+                        "name": "Viewport"
+                      }
+                    ],
+                    "kind": "named",
+                    "name": "ref"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": true
+              },
+              "visibility": "public"
+            }
+          ],
+          "name": "Viewport",
+          "type_params": []
+        },
+        "kind": "class"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "public"
+    }
+  ],
+  "path": [
+    "Codeware",
+    "UI",
+    "TextInput"
+  ]
+}

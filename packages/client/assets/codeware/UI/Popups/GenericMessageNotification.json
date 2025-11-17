@@ -1,0 +1,1683 @@
+{
+  "items": [
+    {
+      "annotations": [
+        {
+          "args": [
+            {
+              "kind": "ident",
+              "name": "GenericMessageNotificationData"
+            }
+          ],
+          "name": "addField"
+        }
+      ],
+      "doc": [],
+      "item": {
+        "field": {
+          "default": null,
+          "name": "params",
+          "type": {
+            "args": [
+              {
+                "args": [],
+                "kind": "named",
+                "name": "inkTextParams"
+              }
+            ],
+            "kind": "named",
+            "name": "ref"
+          }
+        },
+        "kind": "let"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "public"
+    },
+    {
+      "annotations": [
+        {
+          "args": [
+            {
+              "kind": "ident",
+              "name": "GenericMessageNotificationData"
+            }
+          ],
+          "name": "addField"
+        }
+      ],
+      "doc": [],
+      "item": {
+        "field": {
+          "default": null,
+          "name": "isInput",
+          "type": {
+            "args": [],
+            "kind": "named",
+            "name": "Bool"
+          }
+        },
+        "kind": "let"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "public"
+    },
+    {
+      "annotations": [
+        {
+          "args": [
+            {
+              "kind": "ident",
+              "name": "GenericMessageNotificationCloseData"
+            }
+          ],
+          "name": "addField"
+        }
+      ],
+      "doc": [],
+      "item": {
+        "field": {
+          "default": null,
+          "name": "input",
+          "type": {
+            "args": [],
+            "kind": "named",
+            "name": "String"
+          }
+        },
+        "kind": "let"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "public"
+    },
+    {
+      "annotations": [
+        {
+          "args": [
+            {
+              "kind": "ident",
+              "name": "GenericMessageNotification"
+            }
+          ],
+          "name": "addField"
+        }
+      ],
+      "doc": [],
+      "item": {
+        "field": {
+          "default": null,
+          "name": "m_textInput",
+          "type": {
+            "args": [
+              {
+                "args": [],
+                "kind": "named",
+                "name": "TextInput"
+              }
+            ],
+            "kind": "named",
+            "name": "ref"
+          }
+        },
+        "kind": "let"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "public"
+    },
+    {
+      "annotations": [
+        {
+          "args": [
+            {
+              "kind": "ident",
+              "name": "GenericMessageNotification"
+            }
+          ],
+          "name": "addMethod"
+        }
+      ],
+      "doc": [],
+      "item": {
+        "function": {
+          "body": {
+            "block": {
+              "statements": [
+                {
+                  "kind": "let",
+                  "name": "data",
+                  "type": null,
+                  "value": {
+                    "args": [],
+                    "expr": {
+                      "expr": {
+                        "kind": "ident",
+                        "name": "GenericMessageNotification"
+                      },
+                      "kind": "member",
+                      "member": "GetBaseData"
+                    },
+                    "kind": "call",
+                    "type_args": []
+                  }
+                },
+                {
+                  "expr": {
+                    "kind": "assign",
+                    "lhs": {
+                      "expr": {
+                        "kind": "ident",
+                        "name": "data"
+                      },
+                      "kind": "member",
+                      "member": "title"
+                    },
+                    "rhs": {
+                      "kind": "ident",
+                      "name": "title"
+                    }
+                  },
+                  "kind": "expr"
+                },
+                {
+                  "expr": {
+                    "kind": "assign",
+                    "lhs": {
+                      "expr": {
+                        "kind": "ident",
+                        "name": "data"
+                      },
+                      "kind": "member",
+                      "member": "message"
+                    },
+                    "rhs": {
+                      "kind": "ident",
+                      "name": "message"
+                    }
+                  },
+                  "kind": "expr"
+                },
+                {
+                  "expr": {
+                    "kind": "assign",
+                    "lhs": {
+                      "expr": {
+                        "kind": "ident",
+                        "name": "data"
+                      },
+                      "kind": "member",
+                      "member": "params"
+                    },
+                    "rhs": {
+                      "kind": "ident",
+                      "name": "params"
+                    }
+                  },
+                  "kind": "expr"
+                },
+                {
+                  "expr": {
+                    "kind": "assign",
+                    "lhs": {
+                      "expr": {
+                        "kind": "ident",
+                        "name": "data"
+                      },
+                      "kind": "member",
+                      "member": "type"
+                    },
+                    "rhs": {
+                      "kind": "ident",
+                      "name": "type"
+                    }
+                  },
+                  "kind": "expr"
+                },
+                {
+                  "expr": {
+                    "args": [
+                      {
+                        "kind": "ident",
+                        "name": "data"
+                      }
+                    ],
+                    "expr": {
+                      "expr": {
+                        "kind": "ident",
+                        "name": "controller"
+                      },
+                      "kind": "member",
+                      "member": "ShowGameNotification"
+                    },
+                    "kind": "call",
+                    "type_args": []
+                  },
+                  "kind": "return"
+                }
+              ]
+            },
+            "kind": "block"
+          },
+          "name": "Show",
+          "params": [
+            {
+              "name": "controller",
+              "qualifiers": {
+                "const": false,
+                "optional": false,
+                "out": false
+              },
+              "type": {
+                "args": [
+                  {
+                    "args": [],
+                    "kind": "named",
+                    "name": "worlduiIGameController"
+                  }
+                ],
+                "kind": "named",
+                "name": "ref"
+              }
+            },
+            {
+              "name": "title",
+              "qualifiers": {
+                "const": false,
+                "optional": false,
+                "out": false
+              },
+              "type": {
+                "args": [],
+                "kind": "named",
+                "name": "String"
+              }
+            },
+            {
+              "name": "message",
+              "qualifiers": {
+                "const": false,
+                "optional": false,
+                "out": false
+              },
+              "type": {
+                "args": [],
+                "kind": "named",
+                "name": "String"
+              }
+            },
+            {
+              "name": "params",
+              "qualifiers": {
+                "const": false,
+                "optional": false,
+                "out": false
+              },
+              "type": {
+                "args": [
+                  {
+                    "args": [],
+                    "kind": "named",
+                    "name": "inkTextParams"
+                  }
+                ],
+                "kind": "named",
+                "name": "ref"
+              }
+            },
+            {
+              "name": "type",
+              "qualifiers": {
+                "const": false,
+                "optional": false,
+                "out": false
+              },
+              "type": {
+                "args": [],
+                "kind": "named",
+                "name": "GenericMessageNotificationType"
+              }
+            }
+          ],
+          "return_type": {
+            "args": [
+              {
+                "args": [],
+                "kind": "named",
+                "name": "inkGameNotificationToken"
+              }
+            ],
+            "kind": "named",
+            "name": "ref"
+          },
+          "type_params": []
+        },
+        "kind": "function"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": true,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": true
+      },
+      "visibility": "public"
+    },
+    {
+      "annotations": [
+        {
+          "args": [
+            {
+              "kind": "ident",
+              "name": "GenericMessageNotification"
+            }
+          ],
+          "name": "addMethod"
+        }
+      ],
+      "doc": [],
+      "item": {
+        "function": {
+          "body": {
+            "block": {
+              "statements": [
+                {
+                  "kind": "let",
+                  "name": "data",
+                  "type": null,
+                  "value": {
+                    "args": [],
+                    "expr": {
+                      "expr": {
+                        "kind": "ident",
+                        "name": "GenericMessageNotification"
+                      },
+                      "kind": "member",
+                      "member": "GetBaseData"
+                    },
+                    "kind": "call",
+                    "type_args": []
+                  }
+                },
+                {
+                  "expr": {
+                    "kind": "assign",
+                    "lhs": {
+                      "expr": {
+                        "kind": "ident",
+                        "name": "data"
+                      },
+                      "kind": "member",
+                      "member": "title"
+                    },
+                    "rhs": {
+                      "kind": "ident",
+                      "name": "title"
+                    }
+                  },
+                  "kind": "expr"
+                },
+                {
+                  "expr": {
+                    "kind": "assign",
+                    "lhs": {
+                      "expr": {
+                        "kind": "ident",
+                        "name": "data"
+                      },
+                      "kind": "member",
+                      "member": "message"
+                    },
+                    "rhs": {
+                      "kind": "ident",
+                      "name": "message"
+                    }
+                  },
+                  "kind": "expr"
+                },
+                {
+                  "expr": {
+                    "kind": "assign",
+                    "lhs": {
+                      "expr": {
+                        "kind": "ident",
+                        "name": "data"
+                      },
+                      "kind": "member",
+                      "member": "type"
+                    },
+                    "rhs": {
+                      "kind": "ident",
+                      "name": "type"
+                    }
+                  },
+                  "kind": "expr"
+                },
+                {
+                  "expr": {
+                    "kind": "assign",
+                    "lhs": {
+                      "expr": {
+                        "kind": "ident",
+                        "name": "data"
+                      },
+                      "kind": "member",
+                      "member": "isInput"
+                    },
+                    "rhs": {
+                      "constant": {
+                        "kind": "bool",
+                        "value": true
+                      },
+                      "kind": "constant"
+                    }
+                  },
+                  "kind": "expr"
+                },
+                {
+                  "expr": {
+                    "args": [
+                      {
+                        "kind": "ident",
+                        "name": "data"
+                      }
+                    ],
+                    "expr": {
+                      "expr": {
+                        "kind": "ident",
+                        "name": "controller"
+                      },
+                      "kind": "member",
+                      "member": "ShowGameNotification"
+                    },
+                    "kind": "call",
+                    "type_args": []
+                  },
+                  "kind": "return"
+                }
+              ]
+            },
+            "kind": "block"
+          },
+          "name": "ShowInput",
+          "params": [
+            {
+              "name": "controller",
+              "qualifiers": {
+                "const": false,
+                "optional": false,
+                "out": false
+              },
+              "type": {
+                "args": [
+                  {
+                    "args": [],
+                    "kind": "named",
+                    "name": "worlduiIGameController"
+                  }
+                ],
+                "kind": "named",
+                "name": "ref"
+              }
+            },
+            {
+              "name": "title",
+              "qualifiers": {
+                "const": false,
+                "optional": false,
+                "out": false
+              },
+              "type": {
+                "args": [],
+                "kind": "named",
+                "name": "String"
+              }
+            },
+            {
+              "name": "message",
+              "qualifiers": {
+                "const": false,
+                "optional": false,
+                "out": false
+              },
+              "type": {
+                "args": [],
+                "kind": "named",
+                "name": "String"
+              }
+            },
+            {
+              "name": "type",
+              "qualifiers": {
+                "const": false,
+                "optional": false,
+                "out": false
+              },
+              "type": {
+                "args": [],
+                "kind": "named",
+                "name": "GenericMessageNotificationType"
+              }
+            }
+          ],
+          "return_type": {
+            "args": [
+              {
+                "args": [],
+                "kind": "named",
+                "name": "inkGameNotificationToken"
+              }
+            ],
+            "kind": "named",
+            "name": "ref"
+          },
+          "type_params": []
+        },
+        "kind": "function"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": true,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": true
+      },
+      "visibility": "public"
+    },
+    {
+      "annotations": [
+        {
+          "args": [
+            {
+              "kind": "ident",
+              "name": "GenericMessageNotification"
+            }
+          ],
+          "name": "wrapMethod"
+        }
+      ],
+      "doc": [],
+      "item": {
+        "function": {
+          "body": {
+            "block": {
+              "statements": [
+                {
+                  "expr": {
+                    "args": [],
+                    "expr": {
+                      "kind": "ident",
+                      "name": "wrappedMethod"
+                    },
+                    "kind": "call",
+                    "type_args": []
+                  },
+                  "kind": "expr"
+                },
+                {
+                  "blocks": [
+                    {
+                      "body": {
+                        "statements": [
+                          {
+                            "expr": {
+                              "args": [
+                                {
+                                  "expr": {
+                                    "kind": "this"
+                                  },
+                                  "kind": "member",
+                                  "member": "m_message"
+                                },
+                                {
+                                  "expr": {
+                                    "expr": {
+                                      "kind": "this"
+                                    },
+                                    "kind": "member",
+                                    "member": "m_data"
+                                  },
+                                  "kind": "member",
+                                  "member": "message"
+                                },
+                                {
+                                  "expr": {
+                                    "expr": {
+                                      "kind": "this"
+                                    },
+                                    "kind": "member",
+                                    "member": "m_data"
+                                  },
+                                  "kind": "member",
+                                  "member": "params"
+                                }
+                              ],
+                              "expr": {
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "inkTextRef"
+                                },
+                                "kind": "member",
+                                "member": "SetText"
+                              },
+                              "kind": "call",
+                              "type_args": []
+                            },
+                            "kind": "expr"
+                          }
+                        ]
+                      },
+                      "condition": {
+                        "expr": {
+                          "args": [
+                            {
+                              "expr": {
+                                "expr": {
+                                  "kind": "this"
+                                },
+                                "kind": "member",
+                                "member": "m_data"
+                              },
+                              "kind": "member",
+                              "member": "params"
+                            }
+                          ],
+                          "expr": {
+                            "kind": "ident",
+                            "name": "IsDefined"
+                          },
+                          "kind": "call",
+                          "type_args": []
+                        },
+                        "kind": "expr"
+                      }
+                    }
+                  ],
+                  "else": null,
+                  "kind": "if"
+                },
+                {
+                  "blocks": [
+                    {
+                      "body": {
+                        "statements": [
+                          {
+                            "kind": "let",
+                            "name": "content",
+                            "type": null,
+                            "value": {
+                              "expr": {
+                                "args": [
+                                  {
+                                    "constant": {
+                                      "kind": "cname",
+                                      "value": "notification/main/inkVerticalPanelWidget18"
+                                    },
+                                    "kind": "constant"
+                                  }
+                                ],
+                                "expr": {
+                                  "expr": {
+                                    "kind": "this"
+                                  },
+                                  "kind": "member",
+                                  "member": "GetChildWidgetByPath"
+                                },
+                                "kind": "call",
+                                "type_args": []
+                              },
+                              "kind": "dyn_cast",
+                              "type": {
+                                "args": [],
+                                "kind": "named",
+                                "name": "inkCompoundWidget"
+                              }
+                            }
+                          },
+                          {
+                            "kind": "let",
+                            "name": "line",
+                            "type": null,
+                            "value": {
+                              "args": [
+                                {
+                                  "constant": {
+                                    "kind": "cname",
+                                    "value": "notification/main/inkVerticalPanelWidget18/line"
+                                  },
+                                  "kind": "constant"
+                                }
+                              ],
+                              "expr": {
+                                "expr": {
+                                  "kind": "this"
+                                },
+                                "kind": "member",
+                                "member": "GetChildWidgetByPath"
+                              },
+                              "kind": "call",
+                              "type_args": []
+                            }
+                          },
+                          {
+                            "kind": "let",
+                            "name": "title",
+                            "type": null,
+                            "value": {
+                              "args": [
+                                {
+                                  "constant": {
+                                    "kind": "cname",
+                                    "value": "notification/main/inkVerticalPanelWidget18/title"
+                                  },
+                                  "kind": "constant"
+                                }
+                              ],
+                              "expr": {
+                                "expr": {
+                                  "kind": "this"
+                                },
+                                "kind": "member",
+                                "member": "GetChildWidgetByPath"
+                              },
+                              "kind": "call",
+                              "type_args": []
+                            }
+                          },
+                          {
+                            "kind": "let",
+                            "name": "icon",
+                            "type": null,
+                            "value": {
+                              "args": [
+                                {
+                                  "constant": {
+                                    "kind": "cname",
+                                    "value": "notification/main/warning_icon"
+                                  },
+                                  "kind": "constant"
+                                }
+                              ],
+                              "expr": {
+                                "expr": {
+                                  "kind": "this"
+                                },
+                                "kind": "member",
+                                "member": "GetChildWidgetByPath"
+                              },
+                              "kind": "call",
+                              "type_args": []
+                            }
+                          },
+                          {
+                            "expr": {
+                              "kind": "assign",
+                              "lhs": {
+                                "expr": {
+                                  "kind": "this"
+                                },
+                                "kind": "member",
+                                "member": "m_textInput"
+                              },
+                              "rhs": {
+                                "args": [],
+                                "expr": {
+                                  "expr": {
+                                    "kind": "ident",
+                                    "name": "HubTextInput"
+                                  },
+                                  "kind": "member",
+                                  "member": "Create"
+                                },
+                                "kind": "call",
+                                "type_args": []
+                              }
+                            },
+                            "kind": "expr"
+                          },
+                          {
+                            "expr": {
+                              "args": [
+                                {
+                                  "constant": {
+                                    "kind": "cname",
+                                    "value": "TextInput"
+                                  },
+                                  "kind": "constant"
+                                }
+                              ],
+                              "expr": {
+                                "expr": {
+                                  "expr": {
+                                    "kind": "this"
+                                  },
+                                  "kind": "member",
+                                  "member": "m_textInput"
+                                },
+                                "kind": "member",
+                                "member": "SetName"
+                              },
+                              "kind": "call",
+                              "type_args": []
+                            },
+                            "kind": "expr"
+                          },
+                          {
+                            "expr": {
+                              "args": [
+                                {
+                                  "expr": {
+                                    "kind": "ident",
+                                    "name": "textLetterCase"
+                                  },
+                                  "kind": "member",
+                                  "member": "UpperCase"
+                                }
+                              ],
+                              "expr": {
+                                "expr": {
+                                  "expr": {
+                                    "kind": "this"
+                                  },
+                                  "kind": "member",
+                                  "member": "m_textInput"
+                                },
+                                "kind": "member",
+                                "member": "SetLetterCase"
+                              },
+                              "kind": "call",
+                              "type_args": []
+                            },
+                            "kind": "expr"
+                          },
+                          {
+                            "expr": {
+                              "args": [
+                                {
+                                  "kind": "ident",
+                                  "name": "content"
+                                }
+                              ],
+                              "expr": {
+                                "expr": {
+                                  "expr": {
+                                    "kind": "this"
+                                  },
+                                  "kind": "member",
+                                  "member": "m_textInput"
+                                },
+                                "kind": "member",
+                                "member": "Reparent"
+                              },
+                              "kind": "call",
+                              "type_args": []
+                            },
+                            "kind": "expr"
+                          },
+                          {
+                            "kind": "let",
+                            "name": "textWidget",
+                            "type": null,
+                            "value": {
+                              "args": [],
+                              "expr": {
+                                "expr": {
+                                  "expr": {
+                                    "kind": "this"
+                                  },
+                                  "kind": "member",
+                                  "member": "m_textInput"
+                                },
+                                "kind": "member",
+                                "member": "GetRootWidget"
+                              },
+                              "kind": "call",
+                              "type_args": []
+                            }
+                          },
+                          {
+                            "expr": {
+                              "args": [
+                                {
+                                  "args": [
+                                    {
+                                      "constant": {
+                                        "kind": "f32",
+                                        "value": 66.0
+                                      },
+                                      "kind": "constant"
+                                    },
+                                    {
+                                      "constant": {
+                                        "kind": "f32",
+                                        "value": 4.0
+                                      },
+                                      "kind": "constant"
+                                    },
+                                    {
+                                      "constant": {
+                                        "kind": "f32",
+                                        "value": 50.0
+                                      },
+                                      "kind": "constant"
+                                    },
+                                    {
+                                      "constant": {
+                                        "kind": "f32",
+                                        "value": 36.0
+                                      },
+                                      "kind": "constant"
+                                    }
+                                  ],
+                                  "expr": {
+                                    "kind": "ident",
+                                    "name": "inkMargin"
+                                  },
+                                  "kind": "call",
+                                  "type_args": []
+                                }
+                              ],
+                              "expr": {
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "textWidget"
+                                },
+                                "kind": "member",
+                                "member": "SetMargin"
+                              },
+                              "kind": "call",
+                              "type_args": []
+                            },
+                            "kind": "expr"
+                          },
+                          {
+                            "expr": {
+                              "args": [
+                                {
+                                  "kind": "ident",
+                                  "name": "textWidget"
+                                }
+                              ],
+                              "expr": {
+                                "expr": {
+                                  "kind": "this"
+                                },
+                                "kind": "member",
+                                "member": "RequestSetFocus"
+                              },
+                              "kind": "call",
+                              "type_args": []
+                            },
+                            "kind": "expr"
+                          },
+                          {
+                            "expr": {
+                              "args": [
+                                {
+                                  "constant": {
+                                    "kind": "bool",
+                                    "value": false
+                                  },
+                                  "kind": "constant"
+                                }
+                              ],
+                              "expr": {
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "icon"
+                                },
+                                "kind": "member",
+                                "member": "SetVisible"
+                              },
+                              "kind": "call",
+                              "type_args": []
+                            },
+                            "kind": "expr"
+                          },
+                          {
+                            "expr": {
+                              "args": [
+                                {
+                                  "constant": {
+                                    "kind": "bool",
+                                    "value": false
+                                  },
+                                  "kind": "constant"
+                                }
+                              ],
+                              "expr": {
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "line"
+                                },
+                                "kind": "member",
+                                "member": "SetVisible"
+                              },
+                              "kind": "call",
+                              "type_args": []
+                            },
+                            "kind": "expr"
+                          },
+                          {
+                            "expr": {
+                              "args": [
+                                {
+                                  "args": [
+                                    {
+                                      "constant": {
+                                        "kind": "f32",
+                                        "value": 66.0
+                                      },
+                                      "kind": "constant"
+                                    },
+                                    {
+                                      "constant": {
+                                        "kind": "f32",
+                                        "value": 20.0
+                                      },
+                                      "kind": "constant"
+                                    },
+                                    {
+                                      "constant": {
+                                        "kind": "f32",
+                                        "value": 0.0
+                                      },
+                                      "kind": "constant"
+                                    },
+                                    {
+                                      "expr": {
+                                        "constant": {
+                                          "kind": "f32",
+                                          "value": 30.0
+                                        },
+                                        "kind": "constant"
+                                      },
+                                      "kind": "un_op",
+                                      "op": "-"
+                                    }
+                                  ],
+                                  "expr": {
+                                    "kind": "ident",
+                                    "name": "inkMargin"
+                                  },
+                                  "kind": "call",
+                                  "type_args": []
+                                }
+                              ],
+                              "expr": {
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "title"
+                                },
+                                "kind": "member",
+                                "member": "SetMargin"
+                              },
+                              "kind": "call",
+                              "type_args": []
+                            },
+                            "kind": "expr"
+                          }
+                        ]
+                      },
+                      "condition": {
+                        "expr": {
+                          "expr": {
+                            "expr": {
+                              "kind": "this"
+                            },
+                            "kind": "member",
+                            "member": "m_data"
+                          },
+                          "kind": "member",
+                          "member": "isInput"
+                        },
+                        "kind": "expr"
+                      }
+                    }
+                  ],
+                  "else": null,
+                  "kind": "if"
+                }
+              ]
+            },
+            "kind": "block"
+          },
+          "name": "OnInitialize",
+          "params": [],
+          "return_type": {
+            "args": [],
+            "kind": "named",
+            "name": "Bool"
+          },
+          "type_params": []
+        },
+        "kind": "function"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": true,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "protected"
+    },
+    {
+      "annotations": [
+        {
+          "args": [
+            {
+              "kind": "ident",
+              "name": "GenericMessageNotification"
+            }
+          ],
+          "name": "replaceMethod"
+        }
+      ],
+      "doc": [],
+      "item": {
+        "function": {
+          "body": {
+            "block": {
+              "statements": [
+                {
+                  "expr": {
+                    "kind": "assign",
+                    "lhs": {
+                      "expr": {
+                        "kind": "this"
+                      },
+                      "kind": "member",
+                      "member": "m_closeData"
+                    },
+                    "rhs": {
+                      "args": [],
+                      "kind": "new",
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "GenericMessageNotificationCloseData"
+                      }
+                    }
+                  },
+                  "kind": "expr"
+                },
+                {
+                  "expr": {
+                    "kind": "assign",
+                    "lhs": {
+                      "expr": {
+                        "expr": {
+                          "kind": "this"
+                        },
+                        "kind": "member",
+                        "member": "m_closeData"
+                      },
+                      "kind": "member",
+                      "member": "identifier"
+                    },
+                    "rhs": {
+                      "expr": {
+                        "expr": {
+                          "kind": "this"
+                        },
+                        "kind": "member",
+                        "member": "m_data"
+                      },
+                      "kind": "member",
+                      "member": "identifier"
+                    }
+                  },
+                  "kind": "expr"
+                },
+                {
+                  "expr": {
+                    "kind": "assign",
+                    "lhs": {
+                      "expr": {
+                        "expr": {
+                          "kind": "this"
+                        },
+                        "kind": "member",
+                        "member": "m_closeData"
+                      },
+                      "kind": "member",
+                      "member": "result"
+                    },
+                    "rhs": {
+                      "kind": "ident",
+                      "name": "result"
+                    }
+                  },
+                  "kind": "expr"
+                },
+                {
+                  "blocks": [
+                    {
+                      "body": {
+                        "statements": [
+                          {
+                            "expr": {
+                              "kind": "assign",
+                              "lhs": {
+                                "expr": {
+                                  "expr": {
+                                    "kind": "this"
+                                  },
+                                  "kind": "member",
+                                  "member": "m_closeData"
+                                },
+                                "kind": "member",
+                                "member": "input"
+                              },
+                              "rhs": {
+                                "args": [],
+                                "expr": {
+                                  "expr": {
+                                    "expr": {
+                                      "kind": "this"
+                                    },
+                                    "kind": "member",
+                                    "member": "m_textInput"
+                                  },
+                                  "kind": "member",
+                                  "member": "GetText"
+                                },
+                                "kind": "call",
+                                "type_args": []
+                              }
+                            },
+                            "kind": "expr"
+                          }
+                        ]
+                      },
+                      "condition": {
+                        "expr": {
+                          "expr": {
+                            "expr": {
+                              "kind": "this"
+                            },
+                            "kind": "member",
+                            "member": "m_data"
+                          },
+                          "kind": "member",
+                          "member": "isInput"
+                        },
+                        "kind": "expr"
+                      }
+                    }
+                  ],
+                  "else": null,
+                  "kind": "if"
+                },
+                {
+                  "expr": {
+                    "args": [
+                      {
+                        "constant": {
+                          "kind": "cname",
+                          "value": "outro"
+                        },
+                        "kind": "constant"
+                      }
+                    ],
+                    "expr": {
+                      "expr": {
+                        "kind": "this"
+                      },
+                      "kind": "member",
+                      "member": "PlayLibraryAnimation"
+                    },
+                    "kind": "call",
+                    "type_args": []
+                  },
+                  "kind": "expr"
+                },
+                {
+                  "expr": {
+                    "args": [
+                      {
+                        "expr": {
+                          "kind": "this"
+                        },
+                        "kind": "member",
+                        "member": "m_closeData"
+                      }
+                    ],
+                    "expr": {
+                      "expr": {
+                        "expr": {
+                          "expr": {
+                            "kind": "this"
+                          },
+                          "kind": "member",
+                          "member": "m_data"
+                        },
+                        "kind": "member",
+                        "member": "token"
+                      },
+                      "kind": "member",
+                      "member": "TriggerCallback"
+                    },
+                    "kind": "call",
+                    "type_args": []
+                  },
+                  "kind": "expr"
+                }
+              ]
+            },
+            "kind": "block"
+          },
+          "name": "Close",
+          "params": [
+            {
+              "name": "result",
+              "qualifiers": {
+                "const": false,
+                "optional": false,
+                "out": false
+              },
+              "type": {
+                "args": [],
+                "kind": "named",
+                "name": "GenericMessageNotificationResult"
+              }
+            }
+          ],
+          "return_type": {
+            "args": [],
+            "kind": "named",
+            "name": "Void"
+          },
+          "type_params": []
+        },
+        "kind": "function"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": true,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "private"
+    },
+    {
+      "annotations": [
+        {
+          "args": [
+            {
+              "kind": "ident",
+              "name": "GenericMessageNotification"
+            }
+          ],
+          "name": "wrapMethod"
+        }
+      ],
+      "doc": [],
+      "item": {
+        "function": {
+          "body": {
+            "block": {
+              "statements": [
+                {
+                  "expr": {
+                    "args": [
+                      {
+                        "kind": "ident",
+                        "name": "evt"
+                      }
+                    ],
+                    "expr": {
+                      "kind": "ident",
+                      "name": "wrappedMethod"
+                    },
+                    "kind": "call",
+                    "type_args": []
+                  },
+                  "kind": "expr"
+                },
+                {
+                  "blocks": [
+                    {
+                      "body": {
+                        "statements": [
+                          {
+                            "blocks": [
+                              {
+                                "body": {
+                                  "statements": [
+                                    {
+                                      "expr": {
+                                        "args": [
+                                          {
+                                            "kind": "null"
+                                          }
+                                        ],
+                                        "expr": {
+                                          "expr": {
+                                            "kind": "this"
+                                          },
+                                          "kind": "member",
+                                          "member": "RequestSetFocus"
+                                        },
+                                        "kind": "call",
+                                        "type_args": []
+                                      },
+                                      "kind": "expr"
+                                    }
+                                  ]
+                                },
+                                "condition": {
+                                  "expr": {
+                                    "kind": "bin_op",
+                                    "lhs": {
+                                      "expr": {
+                                        "args": [
+                                          {
+                                            "args": [],
+                                            "expr": {
+                                              "expr": {
+                                                "kind": "ident",
+                                                "name": "evt"
+                                              },
+                                              "kind": "member",
+                                              "member": "GetTarget"
+                                            },
+                                            "kind": "call",
+                                            "type_args": []
+                                          }
+                                        ],
+                                        "expr": {
+                                          "kind": "ident",
+                                          "name": "IsDefined"
+                                        },
+                                        "kind": "call",
+                                        "type_args": []
+                                      },
+                                      "kind": "un_op",
+                                      "op": "!"
+                                    },
+                                    "op": "||",
+                                    "rhs": {
+                                      "expr": {
+                                        "args": [],
+                                        "expr": {
+                                          "expr": {
+                                            "args": [],
+                                            "expr": {
+                                              "expr": {
+                                                "kind": "ident",
+                                                "name": "evt"
+                                              },
+                                              "kind": "member",
+                                              "member": "GetTarget"
+                                            },
+                                            "kind": "call",
+                                            "type_args": []
+                                          },
+                                          "kind": "member",
+                                          "member": "CanSupportFocus"
+                                        },
+                                        "kind": "call",
+                                        "type_args": []
+                                      },
+                                      "kind": "un_op",
+                                      "op": "!"
+                                    }
+                                  },
+                                  "kind": "expr"
+                                }
+                              }
+                            ],
+                            "else": null,
+                            "kind": "if"
+                          }
+                        ]
+                      },
+                      "condition": {
+                        "expr": {
+                          "args": [
+                            {
+                              "constant": {
+                                "kind": "cname",
+                                "value": "click"
+                              },
+                              "kind": "constant"
+                            }
+                          ],
+                          "expr": {
+                            "expr": {
+                              "kind": "ident",
+                              "name": "evt"
+                            },
+                            "kind": "member",
+                            "member": "IsAction"
+                          },
+                          "kind": "call",
+                          "type_args": []
+                        },
+                        "kind": "expr"
+                      }
+                    }
+                  ],
+                  "else": null,
+                  "kind": "if"
+                }
+              ]
+            },
+            "kind": "block"
+          },
+          "name": "OnHandlePressInput",
+          "params": [
+            {
+              "name": "evt",
+              "qualifiers": {
+                "const": false,
+                "optional": false,
+                "out": false
+              },
+              "type": {
+                "args": [
+                  {
+                    "args": [],
+                    "kind": "named",
+                    "name": "inkPointerEvent"
+                  }
+                ],
+                "kind": "named",
+                "name": "ref"
+              }
+            }
+          ],
+          "return_type": {
+            "args": [],
+            "kind": "named",
+            "name": "Bool"
+          },
+          "type_params": []
+        },
+        "kind": "function"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": true,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "protected"
+    }
+  ],
+  "path": [
+    "Codeware",
+    "UI"
+  ]
+}

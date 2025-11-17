@@ -1,0 +1,809 @@
+{
+  "items": [
+    {
+      "annotations": [],
+      "doc": [],
+      "item": {
+        "class": {
+          "extends": {
+            "args": [],
+            "kind": "named",
+            "name": "ScriptableSystem"
+          },
+          "items": [
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "expr": {
+                            "args": [
+                              {
+                                "args": [
+                                  {
+                                    "kind": "this"
+                                  }
+                                ],
+                                "expr": {
+                                  "expr": {
+                                    "kind": "ident",
+                                    "name": "RegisterProviderRequest"
+                                  },
+                                  "kind": "member",
+                                  "member": "Create"
+                                },
+                                "kind": "call",
+                                "type_args": []
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "args": [
+                                  {
+                                    "args": [],
+                                    "expr": {
+                                      "expr": {
+                                        "kind": "this"
+                                      },
+                                      "kind": "member",
+                                      "member": "GetGameInstance"
+                                    },
+                                    "kind": "call",
+                                    "type_args": []
+                                  }
+                                ],
+                                "expr": {
+                                  "expr": {
+                                    "kind": "ident",
+                                    "name": "GameInstance"
+                                  },
+                                  "kind": "member",
+                                  "member": "GetScriptableSystemsContainer"
+                                },
+                                "kind": "call",
+                                "type_args": []
+                              },
+                              "kind": "member",
+                              "member": "QueueRequest"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "OnAttach",
+                  "params": [],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "protected"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": null,
+                  "name": "GetPackage",
+                  "params": [
+                    {
+                      "name": "language",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "CName"
+                      }
+                    }
+                  ],
+                  "return_type": {
+                    "args": [
+                      {
+                        "args": [],
+                        "kind": "named",
+                        "name": "ModLocalizationPackage"
+                      }
+                    ],
+                    "kind": "named",
+                    "name": "ref"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": null,
+                  "name": "GetFallback",
+                  "params": [],
+                  "return_type": {
+                    "args": [],
+                    "kind": "named",
+                    "name": "CName"
+                  },
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": []
+                    },
+                    "kind": "block"
+                  },
+                  "name": "OnLocaleChange",
+                  "params": [],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": []
+                    },
+                    "kind": "block"
+                  },
+                  "name": "OnGenderChange",
+                  "params": [],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            },
+            {
+              "annotations": [],
+              "doc": [],
+              "item": {
+                "function": {
+                  "body": {
+                    "block": {
+                      "statements": [
+                        {
+                          "kind": "let",
+                          "name": "packages",
+                          "type": {
+                            "args": [
+                              {
+                                "args": [
+                                  {
+                                    "args": [],
+                                    "kind": "named",
+                                    "name": "ModLocalizationPackage"
+                                  }
+                                ],
+                                "kind": "named",
+                                "name": "ref"
+                              }
+                            ],
+                            "kind": "named",
+                            "name": "array"
+                          },
+                          "value": null
+                        },
+                        {
+                          "kind": "let",
+                          "name": "fallback",
+                          "type": null,
+                          "value": {
+                            "args": [],
+                            "expr": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "GetFallback"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          }
+                        },
+                        {
+                          "blocks": [
+                            {
+                              "body": {
+                                "statements": [
+                                  {
+                                    "kind": "let",
+                                    "name": "fallbackPackage",
+                                    "type": null,
+                                    "value": {
+                                      "args": [
+                                        {
+                                          "kind": "ident",
+                                          "name": "fallback"
+                                        }
+                                      ],
+                                      "expr": {
+                                        "expr": {
+                                          "kind": "this"
+                                        },
+                                        "kind": "member",
+                                        "member": "GetPackage"
+                                      },
+                                      "kind": "call",
+                                      "type_args": []
+                                    }
+                                  },
+                                  {
+                                    "blocks": [
+                                      {
+                                        "body": {
+                                          "statements": [
+                                            {
+                                              "expr": {
+                                                "args": [
+                                                  {
+                                                    "kind": "ident",
+                                                    "name": "packages"
+                                                  },
+                                                  {
+                                                    "kind": "ident",
+                                                    "name": "fallbackPackage"
+                                                  }
+                                                ],
+                                                "expr": {
+                                                  "kind": "ident",
+                                                  "name": "ArrayPush"
+                                                },
+                                                "kind": "call",
+                                                "type_args": []
+                                              },
+                                              "kind": "expr"
+                                            }
+                                          ]
+                                        },
+                                        "condition": {
+                                          "expr": {
+                                            "args": [
+                                              {
+                                                "kind": "ident",
+                                                "name": "fallbackPackage"
+                                              }
+                                            ],
+                                            "expr": {
+                                              "kind": "ident",
+                                              "name": "IsDefined"
+                                            },
+                                            "kind": "call",
+                                            "type_args": []
+                                          },
+                                          "kind": "expr"
+                                        }
+                                      }
+                                    ],
+                                    "else": null,
+                                    "kind": "if"
+                                  }
+                                ]
+                              },
+                              "condition": {
+                                "expr": {
+                                  "args": [
+                                    {
+                                      "kind": "ident",
+                                      "name": "language"
+                                    },
+                                    {
+                                      "kind": "ident",
+                                      "name": "fallback"
+                                    }
+                                  ],
+                                  "expr": {
+                                    "kind": "ident",
+                                    "name": "NotEquals"
+                                  },
+                                  "kind": "call",
+                                  "type_args": []
+                                },
+                                "kind": "expr"
+                              }
+                            }
+                          ],
+                          "else": null,
+                          "kind": "if"
+                        },
+                        {
+                          "kind": "let",
+                          "name": "mainPackage",
+                          "type": null,
+                          "value": {
+                            "args": [
+                              {
+                                "kind": "ident",
+                                "name": "language"
+                              }
+                            ],
+                            "expr": {
+                              "expr": {
+                                "kind": "this"
+                              },
+                              "kind": "member",
+                              "member": "GetPackage"
+                            },
+                            "kind": "call",
+                            "type_args": []
+                          }
+                        },
+                        {
+                          "blocks": [
+                            {
+                              "body": {
+                                "statements": [
+                                  {
+                                    "expr": {
+                                      "args": [
+                                        {
+                                          "kind": "ident",
+                                          "name": "packages"
+                                        },
+                                        {
+                                          "kind": "ident",
+                                          "name": "mainPackage"
+                                        }
+                                      ],
+                                      "expr": {
+                                        "kind": "ident",
+                                        "name": "ArrayPush"
+                                      },
+                                      "kind": "call",
+                                      "type_args": []
+                                    },
+                                    "kind": "expr"
+                                  }
+                                ]
+                              },
+                              "condition": {
+                                "expr": {
+                                  "args": [
+                                    {
+                                      "kind": "ident",
+                                      "name": "mainPackage"
+                                    }
+                                  ],
+                                  "expr": {
+                                    "kind": "ident",
+                                    "name": "IsDefined"
+                                  },
+                                  "kind": "call",
+                                  "type_args": []
+                                },
+                                "kind": "expr"
+                              }
+                            }
+                          ],
+                          "else": null,
+                          "kind": "if"
+                        },
+                        {
+                          "body": {
+                            "statements": [
+                              {
+                                "kind": "let",
+                                "name": "values",
+                                "type": {
+                                  "args": [
+                                    {
+                                      "args": [
+                                        {
+                                          "args": [],
+                                          "kind": "named",
+                                          "name": "IScriptable"
+                                        }
+                                      ],
+                                      "kind": "named",
+                                      "name": "wref"
+                                    }
+                                  ],
+                                  "kind": "named",
+                                  "name": "array"
+                                },
+                                "value": null
+                              },
+                              {
+                                "expr": {
+                                  "args": [
+                                    {
+                                      "kind": "ident",
+                                      "name": "values"
+                                    }
+                                  ],
+                                  "expr": {
+                                    "expr": {
+                                      "args": [
+                                        {
+                                          "expr": {
+                                            "kind": "ident",
+                                            "name": "EntryType"
+                                          },
+                                          "kind": "member",
+                                          "member": "Interface"
+                                        }
+                                      ],
+                                      "expr": {
+                                        "expr": {
+                                          "kind": "ident",
+                                          "name": "package"
+                                        },
+                                        "kind": "member",
+                                        "member": "GetEntries"
+                                      },
+                                      "kind": "call",
+                                      "type_args": []
+                                    },
+                                    "kind": "member",
+                                    "member": "GetValues"
+                                  },
+                                  "kind": "call",
+                                  "type_args": []
+                                },
+                                "kind": "expr"
+                              },
+                              {
+                                "body": {
+                                  "statements": [
+                                    {
+                                      "kind": "let",
+                                      "name": "scriptEntry",
+                                      "type": null,
+                                      "value": {
+                                        "expr": {
+                                          "kind": "ident",
+                                          "name": "value"
+                                        },
+                                        "kind": "dyn_cast",
+                                        "type": {
+                                          "args": [],
+                                          "kind": "named",
+                                          "name": "LocalizationEntry"
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "kind": "let",
+                                      "name": "nativeEntry",
+                                      "type": {
+                                        "args": [],
+                                        "kind": "named",
+                                        "name": "localizationPersistenceOnScreenEntry"
+                                      },
+                                      "value": null
+                                    },
+                                    {
+                                      "expr": {
+                                        "kind": "assign",
+                                        "lhs": {
+                                          "expr": {
+                                            "kind": "ident",
+                                            "name": "nativeEntry"
+                                          },
+                                          "kind": "member",
+                                          "member": "primaryKey"
+                                        },
+                                        "rhs": {
+                                          "constant": {
+                                            "kind": "u64",
+                                            "value": 0
+                                          },
+                                          "kind": "constant"
+                                        }
+                                      },
+                                      "kind": "expr"
+                                    },
+                                    {
+                                      "expr": {
+                                        "kind": "assign",
+                                        "lhs": {
+                                          "expr": {
+                                            "kind": "ident",
+                                            "name": "nativeEntry"
+                                          },
+                                          "kind": "member",
+                                          "member": "secondaryKey"
+                                        },
+                                        "rhs": {
+                                          "args": [],
+                                          "expr": {
+                                            "expr": {
+                                              "kind": "ident",
+                                              "name": "scriptEntry"
+                                            },
+                                            "kind": "member",
+                                            "member": "GetKey"
+                                          },
+                                          "kind": "call",
+                                          "type_args": []
+                                        }
+                                      },
+                                      "kind": "expr"
+                                    },
+                                    {
+                                      "expr": {
+                                        "kind": "assign",
+                                        "lhs": {
+                                          "expr": {
+                                            "kind": "ident",
+                                            "name": "nativeEntry"
+                                          },
+                                          "kind": "member",
+                                          "member": "femaleVariant"
+                                        },
+                                        "rhs": {
+                                          "args": [
+                                            {
+                                              "expr": {
+                                                "kind": "ident",
+                                                "name": "PlayerGender"
+                                              },
+                                              "kind": "member",
+                                              "member": "Female"
+                                            }
+                                          ],
+                                          "expr": {
+                                            "expr": {
+                                              "kind": "ident",
+                                              "name": "scriptEntry"
+                                            },
+                                            "kind": "member",
+                                            "member": "GetVariant"
+                                          },
+                                          "kind": "call",
+                                          "type_args": []
+                                        }
+                                      },
+                                      "kind": "expr"
+                                    },
+                                    {
+                                      "expr": {
+                                        "kind": "assign",
+                                        "lhs": {
+                                          "expr": {
+                                            "kind": "ident",
+                                            "name": "nativeEntry"
+                                          },
+                                          "kind": "member",
+                                          "member": "maleVariant"
+                                        },
+                                        "rhs": {
+                                          "args": [
+                                            {
+                                              "expr": {
+                                                "kind": "ident",
+                                                "name": "PlayerGender"
+                                              },
+                                              "kind": "member",
+                                              "member": "Male"
+                                            }
+                                          ],
+                                          "expr": {
+                                            "expr": {
+                                              "kind": "ident",
+                                              "name": "scriptEntry"
+                                            },
+                                            "kind": "member",
+                                            "member": "GetVariant"
+                                          },
+                                          "kind": "call",
+                                          "type_args": []
+                                        }
+                                      },
+                                      "kind": "expr"
+                                    },
+                                    {
+                                      "expr": {
+                                        "args": [
+                                          {
+                                            "kind": "ident",
+                                            "name": "nativeEntries"
+                                          },
+                                          {
+                                            "kind": "ident",
+                                            "name": "nativeEntry"
+                                          }
+                                        ],
+                                        "expr": {
+                                          "kind": "ident",
+                                          "name": "ArrayPush"
+                                        },
+                                        "kind": "call",
+                                        "type_args": []
+                                      },
+                                      "kind": "expr"
+                                    }
+                                  ]
+                                },
+                                "iter": {
+                                  "kind": "ident",
+                                  "name": "values"
+                                },
+                                "kind": "for_in",
+                                "name": "value"
+                              }
+                            ]
+                          },
+                          "iter": {
+                            "kind": "ident",
+                            "name": "packages"
+                          },
+                          "kind": "for_in",
+                          "name": "package"
+                        }
+                      ]
+                    },
+                    "kind": "block"
+                  },
+                  "name": "GetOnScreenEntries",
+                  "params": [
+                    {
+                      "name": "language",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": false
+                      },
+                      "type": {
+                        "args": [],
+                        "kind": "named",
+                        "name": "CName"
+                      }
+                    },
+                    {
+                      "name": "nativeEntries",
+                      "qualifiers": {
+                        "const": false,
+                        "optional": false,
+                        "out": true
+                      },
+                      "type": {
+                        "args": [
+                          {
+                            "args": [],
+                            "kind": "named",
+                            "name": "localizationPersistenceOnScreenEntry"
+                          }
+                        ],
+                        "kind": "named",
+                        "name": "array"
+                      }
+                    }
+                  ],
+                  "return_type": null,
+                  "type_params": []
+                },
+                "kind": "function"
+              },
+              "qualifiers": {
+                "abstract": false,
+                "callback": false,
+                "const": false,
+                "exec": false,
+                "final": false,
+                "import_only": false,
+                "native": false,
+                "persistent": false,
+                "quest": false,
+                "static": false
+              },
+              "visibility": "public"
+            }
+          ],
+          "name": "ModLocalizationProvider",
+          "type_params": []
+        },
+        "kind": "class"
+      },
+      "qualifiers": {
+        "abstract": true,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "public"
+    }
+  ],
+  "path": [
+    "Codeware",
+    "Localization"
+  ]
+}

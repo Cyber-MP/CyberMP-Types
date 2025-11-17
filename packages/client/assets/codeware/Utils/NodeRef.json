@@ -1,0 +1,343 @@
+{
+  "items": [
+    {
+      "annotations": [],
+      "doc": [],
+      "item": {
+        "function": {
+          "body": null,
+          "name": "CreateNodeRef",
+          "params": [
+            {
+              "name": "value",
+              "qualifiers": {
+                "const": false,
+                "optional": false,
+                "out": false
+              },
+              "type": {
+                "args": [
+                  {
+                    "args": [],
+                    "kind": "named",
+                    "name": "String"
+                  }
+                ],
+                "kind": "named",
+                "name": "script_ref"
+              }
+            }
+          ],
+          "return_type": {
+            "args": [],
+            "kind": "named",
+            "name": "NodeRef"
+          },
+          "type_params": []
+        },
+        "kind": "function"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": true,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "public"
+    },
+    {
+      "annotations": [],
+      "doc": [],
+      "item": {
+        "function": {
+          "body": null,
+          "name": "HashToNodeRef",
+          "params": [
+            {
+              "name": "value",
+              "qualifiers": {
+                "const": false,
+                "optional": false,
+                "out": false
+              },
+              "type": {
+                "args": [],
+                "kind": "named",
+                "name": "Uint64"
+              }
+            }
+          ],
+          "return_type": {
+            "args": [],
+            "kind": "named",
+            "name": "NodeRef"
+          },
+          "type_params": []
+        },
+        "kind": "function"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": true,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "public"
+    },
+    {
+      "annotations": [],
+      "doc": [],
+      "item": {
+        "function": {
+          "body": null,
+          "name": "NodeRefToHash",
+          "params": [
+            {
+              "name": "value",
+              "qualifiers": {
+                "const": false,
+                "optional": false,
+                "out": false
+              },
+              "type": {
+                "args": [],
+                "kind": "named",
+                "name": "NodeRef"
+              }
+            }
+          ],
+          "return_type": {
+            "args": [],
+            "kind": "named",
+            "name": "Uint64"
+          },
+          "type_params": []
+        },
+        "kind": "function"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": true,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "public"
+    },
+    {
+      "annotations": [],
+      "doc": [],
+      "item": {
+        "function": {
+          "body": {
+            "expr": {
+              "args": [
+                {
+                  "kind": "ident",
+                  "name": "value"
+                }
+              ],
+              "expr": {
+                "kind": "ident",
+                "name": "CreateNodeRef"
+              },
+              "kind": "call",
+              "type_args": []
+            },
+            "kind": "inline"
+          },
+          "name": "ToNodeRef",
+          "params": [
+            {
+              "name": "value",
+              "qualifiers": {
+                "const": false,
+                "optional": false,
+                "out": false
+              },
+              "type": {
+                "args": [],
+                "kind": "named",
+                "name": "String"
+              }
+            }
+          ],
+          "return_type": {
+            "args": [],
+            "kind": "named",
+            "name": "NodeRef"
+          },
+          "type_params": []
+        },
+        "kind": "function"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "public"
+    },
+    {
+      "annotations": [],
+      "doc": [],
+      "item": {
+        "function": {
+          "body": {
+            "expr": {
+              "args": [
+                {
+                  "kind": "ident",
+                  "name": "value"
+                }
+              ],
+              "expr": {
+                "kind": "ident",
+                "name": "HashToNodeRef"
+              },
+              "kind": "call",
+              "type_args": []
+            },
+            "kind": "inline"
+          },
+          "name": "ToNodeRef",
+          "params": [
+            {
+              "name": "value",
+              "qualifiers": {
+                "const": false,
+                "optional": false,
+                "out": false
+              },
+              "type": {
+                "args": [],
+                "kind": "named",
+                "name": "Uint64"
+              }
+            }
+          ],
+          "return_type": {
+            "args": [],
+            "kind": "named",
+            "name": "NodeRef"
+          },
+          "type_params": []
+        },
+        "kind": "function"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "public"
+    },
+    {
+      "annotations": [],
+      "doc": [],
+      "item": {
+        "function": {
+          "body": {
+            "expr": {
+              "args": [
+                {
+                  "args": [
+                    {
+                      "kind": "ident",
+                      "name": "value"
+                    }
+                  ],
+                  "expr": {
+                    "expr": {
+                      "kind": "ident",
+                      "name": "EntityID"
+                    },
+                    "kind": "member",
+                    "member": "ToHash"
+                  },
+                  "kind": "call",
+                  "type_args": []
+                }
+              ],
+              "expr": {
+                "kind": "ident",
+                "name": "HashToNodeRef"
+              },
+              "kind": "call",
+              "type_args": []
+            },
+            "kind": "inline"
+          },
+          "name": "ToNodeRef",
+          "params": [
+            {
+              "name": "value",
+              "qualifiers": {
+                "const": false,
+                "optional": false,
+                "out": false
+              },
+              "type": {
+                "args": [],
+                "kind": "named",
+                "name": "EntityID"
+              }
+            }
+          ],
+          "return_type": {
+            "args": [],
+            "kind": "named",
+            "name": "NodeRef"
+          },
+          "type_params": []
+        },
+        "kind": "function"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "public"
+    }
+  ],
+  "path": null
+}

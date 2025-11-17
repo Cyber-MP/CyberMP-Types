@@ -1,0 +1,204 @@
+{
+  "items": [
+    {
+      "annotations": [
+        {
+          "args": [
+            {
+              "kind": "ident",
+              "name": "worlduiIGameController"
+            }
+          ],
+          "name": "addMethod"
+        }
+      ],
+      "doc": [],
+      "item": {
+        "function": {
+          "body": {
+            "block": {
+              "statements": [
+                {
+                  "kind": "let",
+                  "name": "widget",
+                  "type": null,
+                  "value": {
+                    "args": [],
+                    "expr": {
+                      "expr": {
+                        "kind": "this"
+                      },
+                      "kind": "member",
+                      "member": "GetRootWidget"
+                    },
+                    "kind": "call",
+                    "type_args": []
+                  }
+                },
+                {
+                  "block": {
+                    "body": {
+                      "statements": [
+                        {
+                          "kind": "let",
+                          "name": "userData",
+                          "type": null,
+                          "value": {
+                            "expr": {
+                              "args": [
+                                {
+                                  "constant": {
+                                    "kind": "cname",
+                                    "value": "inkWorldWidgetInfos"
+                                  },
+                                  "kind": "constant"
+                                }
+                              ],
+                              "expr": {
+                                "expr": {
+                                  "kind": "ident",
+                                  "name": "widget"
+                                },
+                                "kind": "member",
+                                "member": "GetUserData"
+                              },
+                              "kind": "call",
+                              "type_args": []
+                            },
+                            "kind": "dyn_cast",
+                            "type": {
+                              "args": [],
+                              "kind": "named",
+                              "name": "inkWorldWidgetInfos"
+                            }
+                          }
+                        },
+                        {
+                          "blocks": [
+                            {
+                              "body": {
+                                "statements": [
+                                  {
+                                    "expr": {
+                                      "args": [],
+                                      "expr": {
+                                        "expr": {
+                                          "kind": "ident",
+                                          "name": "userData"
+                                        },
+                                        "kind": "member",
+                                        "member": "GetComponent"
+                                      },
+                                      "kind": "call",
+                                      "type_args": []
+                                    },
+                                    "kind": "return"
+                                  }
+                                ]
+                              },
+                              "condition": {
+                                "expr": {
+                                  "args": [
+                                    {
+                                      "kind": "ident",
+                                      "name": "userData"
+                                    }
+                                  ],
+                                  "expr": {
+                                    "kind": "ident",
+                                    "name": "IsDefined"
+                                  },
+                                  "kind": "call",
+                                  "type_args": []
+                                },
+                                "kind": "expr"
+                              }
+                            }
+                          ],
+                          "else": null,
+                          "kind": "if"
+                        },
+                        {
+                          "expr": {
+                            "kind": "assign",
+                            "lhs": {
+                              "kind": "ident",
+                              "name": "widget"
+                            },
+                            "rhs": {
+                              "expr": {
+                                "kind": "ident",
+                                "name": "widget"
+                              },
+                              "kind": "member",
+                              "member": "parentWidget"
+                            }
+                          },
+                          "kind": "expr"
+                        }
+                      ]
+                    },
+                    "condition": {
+                      "expr": {
+                        "args": [
+                          {
+                            "kind": "ident",
+                            "name": "widget"
+                          }
+                        ],
+                        "expr": {
+                          "kind": "ident",
+                          "name": "IsDefined"
+                        },
+                        "kind": "call",
+                        "type_args": []
+                      },
+                      "kind": "expr"
+                    }
+                  },
+                  "kind": "while"
+                },
+                {
+                  "expr": {
+                    "kind": "null"
+                  },
+                  "kind": "return"
+                }
+              ]
+            },
+            "kind": "block"
+          },
+          "name": "GetWorldWidgetComponent",
+          "params": [],
+          "return_type": {
+            "args": [
+              {
+                "args": [],
+                "kind": "named",
+                "name": "IComponent"
+              }
+            ],
+            "kind": "named",
+            "name": "ref"
+          },
+          "type_params": []
+        },
+        "kind": "function"
+      },
+      "qualifiers": {
+        "abstract": false,
+        "callback": false,
+        "const": false,
+        "exec": false,
+        "final": false,
+        "import_only": false,
+        "native": false,
+        "persistent": false,
+        "quest": false,
+        "static": false
+      },
+      "visibility": "public"
+    }
+  ],
+  "path": null
+}
