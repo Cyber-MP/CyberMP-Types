@@ -22,10 +22,10 @@ export class IndexGenerator extends BaseGenerator {
 
     this.addHeader(sourceFile);
     sourceFile.addStatements([
+      `/// <reference path="./precomputed/index.d.ts" />`,
       `/// <reference path="./enums.d.ts" />`,
       `/// <reference path="./bitfields.d.ts" />`,
       `/// <reference path="./classes.d.ts" />`,
-      `/// <reference path="./precomputed.d.ts" />`,
     ]);
 
     this.funcGenerator.generate(sourceFile);
