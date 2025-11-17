@@ -47,4 +47,9 @@ declare interface MpGamePrecomputed {
    * @returns Model hash
    */
   getHashFromName(name: string, type: "tweakdbid" | "cname"): string;
+  
+  
+  isBlackScreenStarted(): boolean;
+  
+  isBlackScreenEnded(): boolean;
 }

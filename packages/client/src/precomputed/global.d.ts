@@ -39,7 +39,7 @@ declare interface MpGlobalPrecomputed {
     x: number,
     y: number,
     z: number,
-    yaw: number
+    yaw: number,
   ): void;
 
   spawnLocalPlayer(): boolean;
@@ -54,7 +54,7 @@ declare interface MpGlobalPrecomputed {
     y: number,
     z: number,
     yaw: number,
-    streaming: boolean
+    streaming: boolean,
   ): number;
 
   spawnLocalVehicle(
@@ -66,7 +66,7 @@ declare interface MpGlobalPrecomputed {
     roll: number,
     pitch: number,
     yaw: number,
-    streaming: boolean
+    streaming: boolean,
   ): number;
 
   spawnLocalObject(
@@ -78,7 +78,7 @@ declare interface MpGlobalPrecomputed {
     roll: number,
     pitch: number,
     yaw: number,
-    streaming: boolean
+    streaming: boolean,
   ): number;
 
   despawnLocalPed(hash: number): void;
@@ -121,4 +121,10 @@ declare interface MpGlobalPrecomputed {
    * Returns time in ms since game start.
    */
   getGameTimer(): number;
+
+  getLauncherSettingsJSON(): string;
+
+  getLauncherSettings(): any;
+
+  changeCefViewUrl(newUrl: string): void;
 }
