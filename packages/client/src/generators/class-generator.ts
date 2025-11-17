@@ -137,6 +137,7 @@ export class ClassGenerator extends BaseGenerator<[SourceFile]> {
       `/// <reference path="./precomputed.d.ts" />`,
       `/// <reference path="./enums.d.ts" />`,
       `/// <reference path="./bitfields.d.ts" />`,
+      `/// <reference path="./cyber.d.ts" />`,
     ]);
     sourceFile.addClasses(classes);
     sourceFile.saveSync();
