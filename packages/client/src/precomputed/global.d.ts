@@ -127,4 +127,8 @@ declare interface MpGlobalPrecomputed {
   getLauncherSettings(): any;
 
   changeCefViewUrl(newUrl: string): void;
+
+  setTick(cb: () => void): number;
+
+  clearTick(tickId: number): void;
 }
