@@ -1,0 +1,2 @@
+export class rendRenderMultilayerMaskBlobXboxOne extends rendRenderMultilayerMaskBlob {
+}

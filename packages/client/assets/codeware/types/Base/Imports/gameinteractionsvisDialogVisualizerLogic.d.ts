@@ -1,0 +1,2 @@
+export class gameinteractionsvisDialogVisualizerLogic extends gameinteractionsvisIGroupedVisualizerLogic {
+}

@@ -1,0 +1,2 @@
+export class scnCheckAnyoneDistractedInterruptCondition extends scnIInterruptCondition {
+}

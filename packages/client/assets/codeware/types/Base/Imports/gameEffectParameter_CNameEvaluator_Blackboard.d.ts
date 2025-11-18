@@ -1,0 +1,3 @@
+export class gameEffectParameter_CNameEvaluator_Blackboard extends gameIEffectParameter_CNameEvaluator {
+  blackboardProperty?: gameBlackboardPropertyBindingDefinition;
+}

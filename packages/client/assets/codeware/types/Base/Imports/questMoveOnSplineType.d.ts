@@ -1,0 +1,5 @@
+export enum questMoveOnSplineType {
+  Simple = 0,
+  Anim = 1,
+  WithCompanion = 2
+}

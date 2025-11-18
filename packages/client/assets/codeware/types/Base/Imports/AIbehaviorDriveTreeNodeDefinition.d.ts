@@ -1,0 +1,2 @@
+export abstract class AIbehaviorDriveTreeNodeDefinition extends AIbehaviorActionTreeNodeDefinition {
+}

@@ -1,0 +1,2 @@
+export class gameuiarcadeShooterAIVIPController extends gameuiarcadeShooterAIController {
+}

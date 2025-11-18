@@ -1,0 +1,2 @@
+export class worldStaticGpsLocationEntranceMarkerNodeInstance extends worldINodeInstance {
+}

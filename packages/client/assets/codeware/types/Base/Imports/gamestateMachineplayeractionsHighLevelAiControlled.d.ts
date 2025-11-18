@@ -1,0 +1,2 @@
+export class gamestateMachineplayeractionsHighLevelAiControlled extends gamestateMachineStateActionDefinition {
+}

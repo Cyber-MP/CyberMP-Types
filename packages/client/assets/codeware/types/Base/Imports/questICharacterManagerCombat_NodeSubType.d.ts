@@ -1,0 +1,2 @@
+export abstract class questICharacterManagerCombat_NodeSubType extends questICharacterManager_NodeSubType {
+}

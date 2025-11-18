@@ -1,0 +1,2 @@
+export class questFinalBoardsVideosFinished_NodeType extends questIUIManagerNodeType {
+}

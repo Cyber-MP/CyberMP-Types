@@ -1,0 +1,33 @@
+export class PanzerGameLogicController extends MinigameLogicControllerAdvanced {
+  gameOverDelay?: number;
+  mainMenuLibraryName?: string;
+  scoreboardLibraryName?: string;
+  panelsLayer?: string;
+  gameLayer?: string;
+  cloudsLayer?: string;
+  backgroundLibraryName?: string;
+  cloudsLibraryNames?: string[];
+  minCloudSpawnInterval?: number;
+  maxCloudSpawnInterval?: number;
+  minCloudSpeed?: number;
+  maxCloudSpeed?: number;
+  scoreCounter?: inkTextRef;
+  livesCounter?: inkTextRef;
+  moveUpKey?: string;
+  moveDownKey?: string;
+  moveLeftKey?: string;
+  moveRightKey?: string;
+  shootKey?: string;
+  backKey?: string;
+  submitKey?: string;
+  axisDeadZone?: number;
+  moveXAxis?: string;
+  moveYAxis?: string;
+  shootAxis?: string;
+  droneLibraryName?: string;
+  minDroneSpawnInterval?: number;
+  maxDroneSpawnInterval?: number;
+  avLibraryName?: string;
+  minAvSpawnInterval?: number;
+  maxAvSpawnInterval?: number;
+}

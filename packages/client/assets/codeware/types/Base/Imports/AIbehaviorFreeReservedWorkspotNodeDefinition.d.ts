@@ -1,0 +1,2 @@
+export class AIbehaviorFreeReservedWorkspotNodeDefinition extends AIbehaviorDecoratorNodeDefinition {
+}

@@ -1,0 +1,2 @@
+export class gameNPCQuickHackUploadStatPoolsListener extends gamePuppetStatPoolsListener {
+}

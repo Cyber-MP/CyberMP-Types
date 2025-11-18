@@ -1,0 +1,2 @@
+export class entTriggerNotifier_EntityInstance extends worldITriggerAreaNotiferInstance {
+}

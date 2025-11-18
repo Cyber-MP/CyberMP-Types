@@ -1,0 +1,2 @@
+export class AIbehaviorVehicleExpressionDefinition extends AIbehaviorPassiveExpressionDefinition {
+}

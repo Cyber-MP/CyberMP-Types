@@ -1,0 +1,2 @@
+export class AICTreeNodeSequenceDefinition extends AICTreeNodeChildrenListDefinition {
+}

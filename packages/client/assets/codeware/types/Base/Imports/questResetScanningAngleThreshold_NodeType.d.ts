@@ -1,0 +1,2 @@
+export class questResetScanningAngleThreshold_NodeType extends questIVisionModeNodeType {
+}

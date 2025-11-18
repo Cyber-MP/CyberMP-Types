@@ -1,0 +1,3 @@
+export class scnCheckPlayerTargetNodeDistanceInterruptCondition extends scnIInterruptCondition {
+  params?: scnCheckPlayerTargetNodeDistanceInterruptConditionParams;
+}

@@ -1,0 +1,2 @@
+export class gameuiarcadeShooterBossBasilisk extends gameuiarcadeShooterBossController {
+}

@@ -1,0 +1,2 @@
+export class gamestateMachineplayeractionsLocomotionStart extends gamestateMachineStateActionDefinition {
+}

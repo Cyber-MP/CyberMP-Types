@@ -1,0 +1,2 @@
+export class gameEffectObjectFilter_HitRepresentation_Sphere extends gameEffectObjectFilter_HitRepresentation {
+}

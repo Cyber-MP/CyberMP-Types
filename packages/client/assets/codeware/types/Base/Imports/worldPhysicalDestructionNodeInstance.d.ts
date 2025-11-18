@@ -1,0 +1,2 @@
+export class worldPhysicalDestructionNodeInstance extends worldSnappableNodeInstance {
+}

@@ -1,0 +1,2 @@
+export class gameuiInGameMenuGameCustomizationStateUpdater extends gameuiICustomizationStateUpdater {
+}

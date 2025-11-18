@@ -1,0 +1,2 @@
+export class scnCheckMountedVehicleImpactInterruptCondition extends scnIInterruptCondition {
+}

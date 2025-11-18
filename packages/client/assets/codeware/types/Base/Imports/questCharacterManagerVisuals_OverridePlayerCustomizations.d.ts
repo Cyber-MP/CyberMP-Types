@@ -1,0 +1,3 @@
+export class questCharacterManagerVisuals_OverridePlayerCustomizations extends questICharacterManagerVisuals_NodeSubType {
+  customizationData?: gameuiForcePlayerCustomizationData[];
+}

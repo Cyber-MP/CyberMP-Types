@@ -1,0 +1,2 @@
+export class animAnimStateTransitionCondition_AnyAnimEnd extends animIAnimStateTransitionCondition {
+}

@@ -1,0 +1,32 @@
+export class CDecalSpawner extends ISerializable {
+  materialStatic?: ResourceRef;
+  materialSkinned?: ResourceRef;
+  specularColor?: Color;
+  specularScale?: number;
+  specularBase?: number;
+  roughnessScale?: number;
+  normalThreshold?: number;
+  additiveNormals?: boolean;
+  diffuseRandomColor0?: Color;
+  diffuseRandomColor1?: Color;
+  subUVType?: ERenderDynamicDecalAtlas;
+  specularity?: number;
+  farZ?: number;
+  nearZ?: number;
+  size?: IEvaluatorFloat;
+  depthFadePower?: number;
+  normalFadeBias?: number;
+  normalFadeScale?: number;
+  doubleSided?: boolean;
+  projectionMode?: ERenderDynamicDecalProjection;
+  decalLifetime?: IEvaluatorFloat;
+  decalFadeTime?: number;
+  decalFadeInTime?: number;
+  projectOnStatic?: boolean;
+  projectOnSkinned?: boolean;
+  startScale?: number;
+  scaleTime?: number;
+  useVerticalProjection?: boolean;
+  spawnPriority?: EDynamicDecalSpawnPriority;
+  autoHideDistance?: number;
+}

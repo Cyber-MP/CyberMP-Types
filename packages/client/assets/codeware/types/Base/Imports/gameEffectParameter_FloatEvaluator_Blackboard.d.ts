@@ -1,0 +1,3 @@
+export class gameEffectParameter_FloatEvaluator_Blackboard extends gameIEffectParameter_FloatEvaluator {
+  blackboardProperty?: gameBlackboardPropertyBindingDefinition;
+}

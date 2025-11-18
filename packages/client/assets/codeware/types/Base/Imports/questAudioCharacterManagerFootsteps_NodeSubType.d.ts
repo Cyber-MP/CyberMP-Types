@@ -1,0 +1,2 @@
+export class questAudioCharacterManagerFootsteps_NodeSubType extends questIAudioCharacterManager_NodeSubType {
+}

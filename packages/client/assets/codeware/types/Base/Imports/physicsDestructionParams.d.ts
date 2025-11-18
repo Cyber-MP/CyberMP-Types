@@ -1,0 +1,32 @@
+export interface physicsDestructionParams {
+  startInactive?: boolean;
+  simulationType?: physicsSimulationType;
+  markEdgeChunks?: boolean;
+  useAggregatesForClusters?: boolean;
+  turnDynamicOnImpulse?: boolean;
+  buildConvexForClusters?: boolean;
+  damageThreshold?: number;
+  damageEndurance?: number;
+  bondEndurance?: number;
+  accumulateDamage?: boolean;
+  enableImpulseDamage?: boolean;
+  impulseToDamage?: number;
+  contactToDamage?: number;
+  maxContactImpulseRatio?: number;
+  impulseChildPropagationFactor?: number;
+  impulsePropagationFactor?: number;
+  impulseDiminishingFactor?: number;
+  breakBonds?: boolean;
+  debrisInstantRemovalThreshold?: number;
+  debrisTimeoutThreshold?: number;
+  debrisTimeout?: boolean;
+  debrisTimeoutMin?: number;
+  debrisTimeoutMax?: number;
+  fadeOutTime?: number;
+  debrisMaxSeparation?: number;
+  visualsRemain?: boolean;
+  debrisDestructible?: boolean;
+  supportDamage?: boolean;
+  maxAngularVelocity?: number;
+  fractureFieldMask?: number;
+}

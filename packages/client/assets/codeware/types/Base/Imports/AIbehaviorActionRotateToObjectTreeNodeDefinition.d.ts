@@ -1,0 +1,3 @@
+export class AIbehaviorActionRotateToObjectTreeNodeDefinition extends AIbehaviorActionRotateBaseTreeNodeDefinition {
+  completeWhenRotated?: AIArgumentMapping;
+}

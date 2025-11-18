@@ -1,0 +1,2 @@
+export class gameEffectExecutor_NewEffect_CopyData extends gameEffectExecutor_NewEffect {
+}

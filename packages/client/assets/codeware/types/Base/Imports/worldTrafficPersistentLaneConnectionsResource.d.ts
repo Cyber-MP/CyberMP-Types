@@ -1,0 +1,2 @@
+export class worldTrafficPersistentLaneConnectionsResource extends resStreamedResource {
+}

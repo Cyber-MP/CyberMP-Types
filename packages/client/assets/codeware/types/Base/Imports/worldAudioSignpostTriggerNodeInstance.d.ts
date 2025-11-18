@@ -1,0 +1,2 @@
+export class worldAudioSignpostTriggerNodeInstance extends worldTriggerAreaNodeInstance {
+}

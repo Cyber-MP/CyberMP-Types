@@ -1,0 +1,2 @@
+export class worldDebugColoring_SecondaryRefPointDistance extends worldEditorDebugColoringSettings {
+}

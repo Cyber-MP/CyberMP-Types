@@ -1,0 +1,2 @@
+export interface DebugGameEngine {
+}

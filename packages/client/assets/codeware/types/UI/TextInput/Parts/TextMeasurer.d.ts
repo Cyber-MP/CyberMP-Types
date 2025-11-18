@@ -1,0 +1,37 @@
+export class TextMeasurer extends inkCustomController {
+  m_shadow?: wref;
+  m_isMeasuring?: boolean;
+  m_isCharMode?: boolean;
+  m_targetText?: string;
+  m_targetLength?: number;
+  m_targetPosition?: number;
+  m_resultSize?: { x: number; y: number };
+  m_tickProxy?: inkAnimProxy;
+  m_useCharCache?: boolean;
+  m_charCache?: inkStringMap;
+  OnCreate(): void;
+  OnInitialize(): void;
+  InitializeProps(): void;
+  CreateWidgets(): void;
+  RegisterTick(): void;
+  MakeTargetChar(): string;
+  MakeTargetChunk(): string;
+  QueueMeasure(text: string, char: boolean, length: number, position: number): boolean;
+  MeasureWithCache(): boolean;
+  AddResultToCache(): void;
+  OnTick(anim: inkAnimProxy): void;
+  IsMeasuring(): boolean;
+  IsCharMode(): boolean;
+  GetTargetText(): string;
+  GetTargetLength(): number;
+  GetTargetPosition(): number;
+  GetMeasuredSize(): { x: number; y: number };
+  CopyTextSettings(source: inkText): void;
+  CopyTextSettings(source: inkCustomController): void;
+  MeasureChar(char: string, position?: number): boolean;
+  MeasureSpan(text: string, position: number, length: number): boolean;
+  MeasureAllChars(text: string): boolean;
+  MeasureChunk(text: string): boolean;
+  MeasureChunk(text: string, position: number): boolean;
+  static Create(): TextMeasurer;
+}

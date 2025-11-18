@@ -1,0 +1,2 @@
+export abstract class AIbehaviorActionMountHandlingNodeDefinition extends AIbehaviorActionTreeNodeDefinition {
+}

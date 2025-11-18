@@ -1,0 +1,2 @@
+export interface AIClearLineOfSightCoverSelection {
+}

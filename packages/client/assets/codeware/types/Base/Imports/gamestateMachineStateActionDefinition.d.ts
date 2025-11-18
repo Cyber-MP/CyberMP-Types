@@ -1,0 +1,2 @@
+export class gamestateMachineStateActionDefinition extends gamestateMachineIStateActionDefinition {
+}

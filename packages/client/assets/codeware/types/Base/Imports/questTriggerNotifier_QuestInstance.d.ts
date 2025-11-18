@@ -1,0 +1,2 @@
+export class questTriggerNotifier_QuestInstance extends worldITriggerAreaNotiferInstance {
+}

@@ -1,0 +1,2 @@
+export class gameuiarcadeShooterAIRangeController extends gameuiarcadeShooterAIController {
+}

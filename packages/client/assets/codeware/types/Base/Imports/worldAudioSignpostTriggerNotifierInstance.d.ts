@@ -1,0 +1,2 @@
+export class worldAudioSignpostTriggerNotifierInstance extends worldITriggerAreaNotiferInstance {
+}

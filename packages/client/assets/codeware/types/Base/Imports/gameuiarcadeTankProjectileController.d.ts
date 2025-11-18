@@ -1,0 +1,2 @@
+export class gameuiarcadeTankProjectileController extends gameuiarcadeArcadeObjectController {
+}

@@ -1,0 +1,3 @@
+export class gameEffectParameter_IntEvaluator_Blackboard extends gameIEffectParameter_IntEvaluator {
+  blackboardProperty?: gameBlackboardPropertyBindingDefinition;
+}

@@ -1,0 +1,2 @@
+export class gameaudioMeleeAudioSubSystem extends gameaudioIWeaponAudioComponentSubSystem {
+}

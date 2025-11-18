@@ -1,0 +1,2 @@
+export class questDebugShowMessageNodeDefinition extends questDisableableNodeDefinition {
+}

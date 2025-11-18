@@ -1,0 +1,2 @@
+export class worldAudioAttractAreaNotifierInstance extends worldITriggerAreaNotiferInstance {
+}

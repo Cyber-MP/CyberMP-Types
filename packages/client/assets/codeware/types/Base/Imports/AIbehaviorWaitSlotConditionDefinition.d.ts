@@ -1,0 +1,2 @@
+export class AIbehaviorWaitSlotConditionDefinition extends AIbehaviorConditionDefinition {
+}

@@ -1,0 +1,37 @@
+export class Caret extends inkCustomController {
+  m_caret?: wref;
+  m_position?: number;
+  m_maxPosition?: number;
+  m_opacity?: number;
+  m_fontSize?: number;
+  m_padSize?: number;
+  m_blinkAnimDef?: inkAnimDef;
+  m_blinkAnimProxy?: inkAnimProxy;
+  OnCreate(): void;
+  OnInitialize(): void;
+  InitializeProps(): void;
+  CreateWidgets(): void;
+  CreateAnimations(): void;
+  InitializeLayout(): void;
+  GetFontSize(): number;
+  SetFontSize(fontSize: number): void;
+  GetTintColor(): HDRColor;
+  SetTintColor(color: HDRColor): void;
+  GetOpacity(): number;
+  SetOpacity(opacity: number): void;
+  GetMaxPosition(): number;
+  SetMaxPosition(max: number): void;
+  GetPosition(): number;
+  SetPosition(position: number): void;
+  AdjustPosition(diff: number): void;
+  MoveToNextChar(): void;
+  MoveToPrevChar(): void;
+  MoveToEnd(): void;
+  MoveToStart(): void;
+  IsAt(position: number): boolean;
+  IsAtStart(): boolean;
+  IsAtEnd(): boolean;
+  UpdateState(isFocused: boolean, caretOffset: number): void;
+  GetSize(): { x: number; y: number };
+  static Create(): Caret;
+}

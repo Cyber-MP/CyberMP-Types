@@ -1,0 +1,2 @@
+export class UIObjectsLoaderSystemListener extends gameuiIUIObjectsLoaderSystemListener {
+}

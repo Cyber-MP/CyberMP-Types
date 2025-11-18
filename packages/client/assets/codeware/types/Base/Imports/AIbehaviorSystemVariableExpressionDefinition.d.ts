@@ -1,0 +1,3 @@
+export class AIbehaviorSystemVariableExpressionDefinition extends AIbehaviorPassiveExpressionDefinition {
+  variable?: AIbehaviorSystemVariableExpressionTypes;
+}

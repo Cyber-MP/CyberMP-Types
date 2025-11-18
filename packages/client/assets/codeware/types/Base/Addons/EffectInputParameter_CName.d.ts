@@ -1,0 +1,1 @@
+export let evaluator: gameIEffectParameter_CNameEvaluator;

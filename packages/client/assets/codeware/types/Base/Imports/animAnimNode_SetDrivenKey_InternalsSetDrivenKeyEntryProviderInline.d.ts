@@ -1,0 +1,3 @@
+export class animAnimNode_SetDrivenKey_InternalsSetDrivenKeyEntryProviderInline extends animAnimNode_SetDrivenKey_InternalsISetDrivenKeyEntryProvider {
+  entries?: animAnimNode_SetDrivenKey_InternalsEntry[];
+}

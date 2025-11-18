@@ -1,0 +1,2 @@
+export class gameuiarcadeShooterAISpiderDroneController extends gameuiarcadeShooterAIController {
+}

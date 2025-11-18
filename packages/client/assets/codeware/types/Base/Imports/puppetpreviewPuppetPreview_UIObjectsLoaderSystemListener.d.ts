@@ -1,0 +1,2 @@
+export class puppetpreviewPuppetPreview_UIObjectsLoaderSystemListener extends gameuiIUIObjectsLoaderSystemListener {
+}

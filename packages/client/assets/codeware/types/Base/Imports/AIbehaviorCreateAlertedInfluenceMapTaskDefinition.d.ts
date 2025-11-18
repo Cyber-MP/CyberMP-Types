@@ -1,0 +1,2 @@
+export class AIbehaviorCreateAlertedInfluenceMapTaskDefinition extends AIbehaviorTaskDefinition {
+}

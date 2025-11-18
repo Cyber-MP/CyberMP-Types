@@ -1,0 +1,2 @@
+export abstract class gameinteractionsvisIGroupedVisualizerLogic extends gameinteractionsvisIVisualizerLogicInterface {
+}

@@ -1,0 +1,2 @@
+export class gamestateMachineStateMachineBodyLocomotionTier1 extends gamestateMachineStateMachineBody {
+}

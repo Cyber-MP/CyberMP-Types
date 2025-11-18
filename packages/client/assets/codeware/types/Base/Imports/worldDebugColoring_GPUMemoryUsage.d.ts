@@ -1,0 +1,2 @@
+export class worldDebugColoring_GPUMemoryUsage extends worldDebugColoring_MetricsUsageAbstractBase {
+}

@@ -1,0 +1,2 @@
+export class AIbehaviorDriveCreateTrafficSlotTreeNodeDefinition extends AIbehaviorDriveTreeNodeDefinition {
+}

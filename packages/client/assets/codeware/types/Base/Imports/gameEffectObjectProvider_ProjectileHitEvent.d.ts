@@ -1,0 +1,2 @@
+export class gameEffectObjectProvider_ProjectileHitEvent extends EffectObjectProvider {
+}

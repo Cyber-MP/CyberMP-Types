@@ -1,0 +1,2 @@
+export class gameuiarcadeShooterPlatformCollisionController extends inkLogicController {
+}

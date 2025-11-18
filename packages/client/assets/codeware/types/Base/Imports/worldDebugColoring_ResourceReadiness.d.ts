@@ -1,0 +1,2 @@
+export class worldDebugColoring_ResourceReadiness extends worldEditorDebugColoringSettings {
+}

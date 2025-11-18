@@ -1,0 +1,2 @@
+export class AIbehaviorDriveFollowPositionTreeNodeDefinition extends AIbehaviorDriveTreeNodeDefinition {
+}

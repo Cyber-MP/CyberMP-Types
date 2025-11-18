@@ -1,0 +1,2 @@
+export class AIbehaviorWaitTargetToFollowConditionDefinition extends AIbehaviorConditionDefinition {
+}

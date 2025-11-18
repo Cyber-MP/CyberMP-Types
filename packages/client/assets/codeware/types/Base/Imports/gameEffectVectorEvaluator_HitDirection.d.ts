@@ -1,0 +1,2 @@
+export class gameEffectVectorEvaluator_HitDirection extends gameEffectVectorEvaluator {
+}

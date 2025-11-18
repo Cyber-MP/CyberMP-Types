@@ -1,0 +1,2 @@
+export class worldPhysicalImpulseAreaNodeInstance extends worldPhysicalTriggerAreaNodeInstance {
+}

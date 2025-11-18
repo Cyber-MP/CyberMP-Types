@@ -1,0 +1,2 @@
+export class gamestateMachineplayeractionsLocomotionBraindance extends gamestateMachineplayeractionsLocomotionBase {
+}

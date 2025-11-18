@@ -1,0 +1,2 @@
+export class gameEffectObjectProvider_QueryShockwave extends gameEffectObjectProvider_QuerySphere {
+}

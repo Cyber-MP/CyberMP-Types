@@ -1,0 +1,2 @@
+export class rendRenderMultilayerMaskBlobScarlett extends rendRenderMultilayerMaskBlob {
+}

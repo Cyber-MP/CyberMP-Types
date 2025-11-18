@@ -1,0 +1,2 @@
+export class AIbehaviorWaitSplineToFollowConditionDefinition extends AIbehaviorConditionDefinition {
+}

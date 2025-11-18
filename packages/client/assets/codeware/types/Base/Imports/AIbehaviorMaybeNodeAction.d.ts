@@ -1,0 +1,5 @@
+export enum AIbehaviorMaybeNodeAction {
+  Succeed = 0,
+  Fail = 1,
+  RepeatChild = 2
+}

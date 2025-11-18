@@ -1,0 +1,2 @@
+export class gameAttachmentSlotEventsItemUnequippedFromSlot extends AttachmentSlotEvent {
+}

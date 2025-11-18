@@ -1,0 +1,2 @@
+export abstract class questIEntityManagerSetAttachment_NodeSubType extends questIEntityManager_NodeSubType {
+}

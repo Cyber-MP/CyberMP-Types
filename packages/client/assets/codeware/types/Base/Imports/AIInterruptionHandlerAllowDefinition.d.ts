@@ -1,0 +1,2 @@
+export class AIInterruptionHandlerAllowDefinition extends AIInterruptionHandlerDefinition {
+}

@@ -1,0 +1,2 @@
+export class questDisableTeleportingMonitoring_NodeType extends questIWorldDataManagerNodeType {
+}

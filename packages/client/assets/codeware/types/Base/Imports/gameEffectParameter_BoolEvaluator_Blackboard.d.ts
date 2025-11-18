@@ -1,0 +1,3 @@
+export class gameEffectParameter_BoolEvaluator_Blackboard extends gameIEffectParameter_BoolEvaluator {
+  blackboardProperty?: gameBlackboardPropertyBindingDefinition;
+}

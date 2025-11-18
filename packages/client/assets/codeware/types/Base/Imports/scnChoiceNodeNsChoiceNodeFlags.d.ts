@@ -1,0 +1,4 @@
+export enum scnChoiceNodeNsChoiceNodeFlags {
+  IsFocusClue = 1,
+  IsValidInteractionFailsafeDisabled = 2
+}

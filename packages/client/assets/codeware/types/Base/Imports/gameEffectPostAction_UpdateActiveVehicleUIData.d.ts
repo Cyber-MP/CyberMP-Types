@@ -1,0 +1,2 @@
+export class gameEffectPostAction_UpdateActiveVehicleUIData extends EffectPostAction {
+}

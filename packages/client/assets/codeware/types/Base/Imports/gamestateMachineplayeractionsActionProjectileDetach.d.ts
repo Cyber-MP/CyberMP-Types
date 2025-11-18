@@ -1,0 +1,2 @@
+export class gamestateMachineplayeractionsActionProjectileDetach extends gamestateMachineStateActionDefinition {
+}

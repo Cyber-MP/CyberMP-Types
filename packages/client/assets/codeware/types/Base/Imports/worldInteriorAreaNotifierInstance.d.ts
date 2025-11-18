@@ -1,0 +1,2 @@
+export class worldInteriorAreaNotifierInstance extends worldITriggerAreaNotiferInstance {
+}

@@ -1,0 +1,2 @@
+export class worldAcousticsOutdoornessAreaNodeInstance extends worldAreaShapeNodeInstance {
+}

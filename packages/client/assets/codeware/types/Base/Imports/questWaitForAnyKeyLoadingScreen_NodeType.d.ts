@@ -1,0 +1,2 @@
+export class questWaitForAnyKeyLoadingScreen_NodeType extends questIUIManagerNodeType {
+}

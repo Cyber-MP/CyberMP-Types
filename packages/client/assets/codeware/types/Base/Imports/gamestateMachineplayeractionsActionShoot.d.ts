@@ -1,0 +1,2 @@
+export class gamestateMachineplayeractionsActionShoot extends gamestateMachineplayeractionsWeaponActionBase {
+}

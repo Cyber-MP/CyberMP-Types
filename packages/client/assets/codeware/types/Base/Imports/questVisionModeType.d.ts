@@ -1,0 +1,5 @@
+export enum questVisionModeType {
+  Undefined = 0,
+  FocusMode = 1,
+  EnhancedMode = 2
+}

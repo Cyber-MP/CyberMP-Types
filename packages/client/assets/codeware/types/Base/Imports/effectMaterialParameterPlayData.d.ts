@@ -1,0 +1,2 @@
+export class effectMaterialParameterPlayData extends effectVisualComponentTrackItemPlayData {
+}

@@ -1,0 +1,2 @@
+export class AIbehaviorSucceederNodeDefinition extends AIbehaviorLeafTreeNodeDefinition {
+}

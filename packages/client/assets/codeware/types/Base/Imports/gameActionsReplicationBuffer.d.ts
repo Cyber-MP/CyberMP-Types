@@ -1,0 +1,2 @@
+export interface gameActionsReplicationBuffer {
+}

@@ -1,0 +1,2 @@
+export class worldNavigationConfigAreaNodeInstance extends worldAreaShapeNodeInstance {
+}

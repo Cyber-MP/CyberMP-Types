@@ -1,0 +1,2 @@
+export class gameuiCharacterCustomizationState extends gameuiICharacterCustomizationState {
+}

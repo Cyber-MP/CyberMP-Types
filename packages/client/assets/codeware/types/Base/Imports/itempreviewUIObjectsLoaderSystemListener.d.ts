@@ -1,0 +1,2 @@
+export class itempreviewUIObjectsLoaderSystemListener extends gameuiIUIObjectsLoaderSystemListener {
+}

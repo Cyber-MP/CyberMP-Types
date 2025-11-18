@@ -1,0 +1,2 @@
+export class AIbehaviorClearActiveNodesDebuggerCommand extends AIbehaviorIDebuggerCommand {
+}

@@ -1,0 +1,37 @@
+export interface toolsJiraIssueFieldsResult {
+  project?: string;
+  summary?: string;
+  issuetype?: string;
+  priority?: string;
+  labels?: string;
+  assignee?: string;
+  description?: string;
+  versions?: string;
+  fixVersions?: string;
+  flagPosition?: string;
+  components?: string;
+  attachments?: toolsJiraAttachment[];
+  customfield_17400?: string;
+  customfield_18373?: string;
+  customfield_34100?: string;
+  customfield_15306?: string;
+  customfield_13009?: string;
+  customfield_10013?: string;
+  customfield_10503?: string;
+  customfield_10502?: string;
+  customfield_34718?: string;
+  customfield_36106?: string;
+  customfield_10006?: string;
+  customfield_10505?: string;
+  customfield_10603?: string;
+  customfield_24700?: string;
+  customfield_34706?: string;
+  customfield_25500?: string;
+  customfield_15808?: string;
+  customfield_33701?: string;
+  customfield_18006?: string;
+  customfield_29900?: string;
+  customfield_10005?: string;
+  customfield_10606?: string;
+  customfield_10002?: string;
+}

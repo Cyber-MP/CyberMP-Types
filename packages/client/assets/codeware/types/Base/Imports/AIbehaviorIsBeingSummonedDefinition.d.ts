@@ -1,0 +1,2 @@
+export class AIbehaviorIsBeingSummonedDefinition extends AIbehaviorVehicleExpressionDefinition {
+}

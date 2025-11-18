@@ -1,0 +1,29 @@
+export class workWorkspotTree extends ISerializable {
+  workspotRig?: ResourceAsyncRef;
+  globalProps?: workWorkspotGlobalProp[];
+  propsPlaySyncAnim?: boolean;
+  rootEntry?: workIEntry;
+  idCounter?: number;
+  dontInjectWorkspotGraph?: boolean;
+  animGraphSlotName?: string;
+  autoTransitionBlendTime?: number;
+  initialActions?: workIWorkspotItemAction[];
+  initialCanUseExits?: boolean;
+  blendOutTime?: number;
+  finalAnimsets?: workWorkspotAnimsetEntry[];
+  tags?: redTagList;
+  itemsPolicy?: number;
+  censorshipFlags?: number;
+  customTransitionAnims?: workTransitionAnim[];
+  inertializationDurationEnter?: number;
+  inertializationDurationExitNatural?: number;
+  inertializationDurationExitForced?: number;
+  useTimeLimitForSequences?: boolean;
+  frezeAtTheLastFrame_UseWithCaution?: boolean;
+  sequencesTimeLimit?: number;
+  snapToTerrain?: boolean;
+  unmountBodyCarry?: boolean;
+  statusEffectID?: TweakDBID;
+  whitelistVisualTags?: redTagList;
+  blacklistVisualTags?: redTagList;
+}

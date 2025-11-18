@@ -1,0 +1,3 @@
+export class animAnimStateTransitionCondition_IntEdgeGreaterFromZeroFeature extends animAnimStateTransitionCondition_IntEdgeFeature {
+  greaterThenValue?: number;
+}

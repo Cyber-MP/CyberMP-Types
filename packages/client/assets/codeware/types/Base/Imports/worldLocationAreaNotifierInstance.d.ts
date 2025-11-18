@@ -1,0 +1,2 @@
+export class worldLocationAreaNotifierInstance extends worldITriggerAreaNotiferInstance {
+}

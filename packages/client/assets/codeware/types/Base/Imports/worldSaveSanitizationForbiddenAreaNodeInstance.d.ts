@@ -1,0 +1,2 @@
+export class worldSaveSanitizationForbiddenAreaNodeInstance extends worldTriggerAreaNodeInstance {
+}

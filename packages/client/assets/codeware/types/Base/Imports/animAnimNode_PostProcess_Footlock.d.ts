@@ -1,0 +1,2 @@
+export class animAnimNode_PostProcess_Footlock extends animIAnimNode_PostProcess {
+}

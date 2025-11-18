@@ -1,0 +1,2 @@
+export class worldSaveSanitizationForbiddenAreaNotifier extends worldITriggerAreaNotifer {
+}

@@ -1,0 +1,35 @@
+export class worldPrefab extends resStreamedResource {
+  mainGroup?: worldNodesGroup;
+  type?: worldPrefabType;
+  teamOwnership?: worldPrefabOwnership;
+  streamingOcclusion?: worldPrefabStreamingOcclusion;
+  streamingImportance?: worldPrefabStreamingImportance;
+  defaultVariants?: worldPrefabVariantsList;
+  isLocked?: boolean;
+  maxBounds?: Box;
+  environmentDefinition?: ResourceAsyncRef;
+  terrainMultilayerSetup?: ResourceAsyncRef;
+  foliageBrushToTerrainLayerMapping?: ResourceAsyncRef;
+  prefabUniqueId?: string;
+  metadataArray?: worldPrefabMetadata[];
+  isMerged?: boolean;
+  proxyMeshBuildParams?: worldProxyMeshBuildParams;
+  isProxyMeshOnly?: boolean;
+  proxyMesh?: ResourceAsyncRef;
+  proxyScale?: { x: number; y: number; z: number };
+  maxProxyStreamingDistance?: number;
+  proxyDistanceFactor?: number;
+  averageNodeDiagonal?: number;
+  boostInnerNodesToProxyDistance?: boolean;
+  overrideStreamingPosWithBBoxCenter?: boolean;
+  ignoreMeshEmbeddedOccluders?: boolean;
+  ignoreAllOccluders?: boolean;
+  excludeOnConsole?: boolean;
+  excludeOnNextGenConsoles?: boolean;
+  isTerrainPrefab?: boolean;
+  minimapContribution?: worldPrefabMinimapContribution;
+  interiorMapContribution?: worldPrefabInteriorMapContribution;
+  booleanProxyHelper?: ResourceAsyncRef;
+  proxyLimiterHelper?: ResourceAsyncRef;
+  customProxyMeshHelper?: ResourceAsyncRef;
+}

@@ -1,0 +1,2 @@
+export class gameinteractionsOnScreenTestPredicate extends gameinteractionsIPredicateType {
+}

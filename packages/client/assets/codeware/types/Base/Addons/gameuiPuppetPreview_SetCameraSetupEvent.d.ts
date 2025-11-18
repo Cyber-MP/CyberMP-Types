@@ -1,0 +1,1 @@
+export let delayed: boolean;

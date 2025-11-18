@@ -1,0 +1,2 @@
+export class worldDebugColoring_BoostedPrefabProxy extends worldEditorDebugColoringSettings {
+}

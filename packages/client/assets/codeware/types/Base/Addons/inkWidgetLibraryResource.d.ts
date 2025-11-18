@@ -1,0 +1,1 @@
+export let library: ResourceAsyncRef;

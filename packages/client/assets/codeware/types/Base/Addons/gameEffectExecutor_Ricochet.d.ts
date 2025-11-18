@@ -1,0 +1,1 @@
+export let outputRicochetVector: EffectOutputParameter_Vector;
