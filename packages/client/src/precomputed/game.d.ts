@@ -5,6 +5,8 @@
 /// <reference path="../classes.d.ts" />
 
 declare interface MpGamePrecomputed {
+  readonly CyberMP: CyberMP;
+
   /**
    * Method to retrieve input events.
    */

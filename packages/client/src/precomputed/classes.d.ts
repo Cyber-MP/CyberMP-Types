@@ -1,5 +1,56 @@
 /// <reference path="./enums.d.ts" />
 
+/**
+ * Class with custom CyberMP native methods.
+ */
+declare interface CyberMP {
+  /**
+   * Removes game object classes (e.g., T extends gameObject, playerPuppet, NpcPuppet) from the map.
+   * @param objectClassMap Array of class names to delete.
+   */
+  DeclareDeletedObjects(objectClassMap: string[]): void;
+
+  /**
+   * Removes game objects by their unique hashes from the map.
+   * @param objectHashMap Array of unique game object hashes to delete.
+   */
+  DeletedObjectsByUniqueHash(objectHashMap: string[]): void;
+
+  /**
+   * Enables or disables synchronization of default effects, as defined by the CyberMP platform.
+   * @param value Whether to use the default effects.
+   */
+  UseDefaultEffectsByPlatform(value: boolean): void;
+}
+
+declare class vehicleBaseObject extends gameObject {
+  public HasGravity(): boolean;
+  public EnableGravity(is_enable: boolean): boolean;
+  public AddLinelyVelocity(
+    velocity: Vector3,
+    angularVelocity: Vector3
+  ): boolean;
+  public ChangeLinelyVelocity(
+    velocity: Vector3,
+    angularVelocity: Vector3,
+    switchIndex: number
+  ): boolean;
+  public GetVelocity(): Vector3;
+  public GetAngularVelocity(): Vector3;
+  public GetPhysicsState(): number;
+  public IsOnGround(): boolean;
+  public GetBoundaryBox(): Box;
+  public VehicleOwnerWasChanged(): void;
+}
+
+declare class gameMappinSystem extends gamemappinsIMappinSystem {
+  TrackMappin(id: gameNewMappinID): void;
+}
+
+/**
+ * @see https://github.com/psiberx/cp2077-codeware/blob/main/scripts/World/WeatherSystem.reds
+ * This class is based on Codeware's WeatherSystem.reds.
+ */
 declare class worldWeatherScriptInterface extends IScriptable {
   public SetWeather(
     weather: CyberEnums.WeatherState,
