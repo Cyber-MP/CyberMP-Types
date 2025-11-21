@@ -27,7 +27,7 @@ export class CodewareFieldAst {
       name: json.name,
       type: json.type,
       default: json.default,
-      isOptional: json.default === null,
+      isOptional: json.default === undefined,
       isReadonly: qualifiers.const,
       isStatic: qualifiers.static,
     };

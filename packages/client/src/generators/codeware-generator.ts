@@ -1,7 +1,13 @@
 import { BaseGenerator } from "./base-generator";
-import { Project, SourceFile, Scope, VariableDeclarationKind } from "ts-morph";
+import {
+  Project,
+  Scope,
+  VariableDeclarationKind,
+  OptionalKind,
+  PropertySignatureStructure,
+} from "ts-morph";
 import { Logger } from "../utils/logger";
-import { blacklist } from "../config/constants";
+import { blacklist, defsIndex } from "../config/constants";
 import * as fs from "fs";
 import * as path from "path";
 import { CodewareEnumAst } from "../red-ast/codeware/codeware-enum.ast";
@@ -132,14 +138,92 @@ interface CodewareModuleJson {
   }>;
 }
 
+interface ClassDefinition {
+  fields: Set<string>;
+  methods: Set<string>;
+}
+
 export class CodewareGenerator extends BaseGenerator {
   private codewareDir: string;
   private outputDir: string;
+  private codewareClasses: Set<string> = new Set();
+  private classesDefinitions: Map<string, ClassDefinition> = new Map();
 
   constructor(project: Project, codewareDir: string, outputDir: string) {
     super(project);
     this.codewareDir = codewareDir;
     this.outputDir = outputDir;
+    this.loadClassesDefinitions();
+  }
+
+  private loadClassesDefinitions(): void {
+    const classesPath = path.join(path.dirname(this.outputDir), "classes.d.ts");
+    if (!fs.existsSync(classesPath)) {
+      Logger.warn(
+        `classes.d.ts not found at ${classesPath}, skipping class definitions loading`
+      );
+      return;
+    }
+
+    Logger.info(`Loading class definitions from ${classesPath}`);
+
+    const classesContent = fs.readFileSync(classesPath, "utf-8");
+    const lines = classesContent.split("\n");
+    let currentClass: string | null = null;
+    let braceDepth = 0;
+    let inClass = false;
+
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      const classMatch = line.match(
+        /^declare (class|interface) (\w+)(?: extends [^{]+)?/
+      );
+
+      if (classMatch) {
+        currentClass = classMatch[2];
+        inClass = true;
+        braceDepth = 0;
+        this.classesDefinitions.set(currentClass, {
+          fields: new Set(),
+          methods: new Set(),
+        });
+        const openBraces = (line.match(/\{/g) || []).length;
+        if (openBraces > 0) {
+          braceDepth = openBraces;
+        }
+        continue;
+      }
+
+      if (inClass && currentClass) {
+        const openBraces = (line.match(/\{/g) || []).length;
+        const closeBraces = (line.match(/\}/g) || []).length;
+        braceDepth += openBraces - closeBraces;
+
+        if (braceDepth <= 0) {
+          inClass = false;
+          currentClass = null;
+          continue;
+        }
+
+        const def = this.classesDefinitions.get(currentClass);
+        if (def) {
+          const fieldMatch = line.match(/"([^"]+)"\??\s*:/);
+          if (fieldMatch) {
+            def.fields.add(fieldMatch[1]);
+          }
+          const methodMatch = line.match(/"([^"]+)"\s*\(/);
+          if (methodMatch) {
+            def.methods.add(methodMatch[1]);
+          }
+        }
+      }
+    }
+
+    Logger.info(`Loaded ${this.classesDefinitions.size} class definitions`);
+  }
+
+  private getClassDefinition(className: string): ClassDefinition | undefined {
+    return this.classesDefinitions.get(className);
   }
 
   private getAllJsonFiles(dir: string): string[] {
@@ -296,6 +380,10 @@ export class CodewareGenerator extends BaseGenerator {
     }
 
     const relativePath = path.relative(this.codewareDir, modulePath);
+    const isBaseAddonsOrOverrides =
+      relativePath.startsWith("Base" + path.sep + "Addons") ||
+      relativePath.startsWith("Base" + path.sep + "Overrides");
+
     const outputPath = path.join(
       this.outputDir,
       relativePath.replace(".json", ".d.ts")
@@ -321,7 +409,11 @@ export class CodewareGenerator extends BaseGenerator {
     }
 
     for (const { def, items } of structs) {
-      const properties = items
+      const isBaseAddonsOrOverrides =
+        relativePath.startsWith("Base" + path.sep + "Addons") ||
+        relativePath.startsWith("Base" + path.sep + "Overrides");
+
+      let allProperties = items
         .filter((item) => item.item.kind === "let" && item.item.field)
         .map((item) => {
           const field = CodewareFieldAst.fromJson(item.item.field!, {
@@ -336,6 +428,19 @@ export class CodewareGenerator extends BaseGenerator {
           };
         });
 
+      if (isBaseAddonsOrOverrides) {
+        const baseClassDef = this.getClassDefinition(def.name);
+        if (baseClassDef) {
+          allProperties = allProperties.filter(
+            (prop) => !baseClassDef.fields.has(prop.name)
+          );
+
+          if (allProperties.length === 0) {
+            continue;
+          }
+        }
+      }
+
       const extendsClause = def.extends
         ? CodewareTypeAst.toTypeScript(def.extends)
         : undefined;
@@ -344,12 +449,17 @@ export class CodewareGenerator extends BaseGenerator {
         name: def.name,
         hasDeclareKeyword: true,
         extends: extendsClause ? [extendsClause] : undefined,
-        properties,
+        properties: allProperties,
       });
     }
 
     for (const { def, items } of classes) {
-      const properties = items
+      const mappedClassName = CodewareTypeAst.mapClassName(def.name);
+      const isBaseAddonsOrOverrides =
+        relativePath.startsWith("Base" + path.sep + "Addons") ||
+        relativePath.startsWith("Base" + path.sep + "Overrides");
+
+      let allProperties = items
         .filter((item) => item.item.kind === "let" && item.item.field)
         .map((item) => {
           const field = CodewareFieldAst.fromJson(item.item.field!, {
@@ -366,7 +476,7 @@ export class CodewareGenerator extends BaseGenerator {
           };
         });
 
-      const methods = items
+      let allMethods = items
         .filter((item) => item.item.kind === "function" && item.item.function)
         .map((item) => {
           const func = CodewareFunctionAst.fromJson(
@@ -387,19 +497,35 @@ export class CodewareGenerator extends BaseGenerator {
           };
         });
 
+      if (isBaseAddonsOrOverrides) {
+        const baseClassDef = this.getClassDefinition(mappedClassName);
+        if (baseClassDef) {
+          allProperties = allProperties.filter(
+            (prop) => !baseClassDef.fields.has(prop.name)
+          );
+          allMethods = allMethods.filter(
+            (method) => !baseClassDef.methods.has(method.name)
+          );
+
+          if (allProperties.length === 0 && allMethods.length === 0) {
+            continue;
+          }
+        }
+      }
+
       const extendsClause = def.extends
         ? CodewareTypeAst.toTypeScript(def.extends)
         : undefined;
 
-      const mappedClassName = CodewareTypeAst.mapClassName(def.name);
+      this.codewareClasses.add(mappedClassName);
 
       sourceFile.addClass({
         name: mappedClassName,
         hasDeclareKeyword: true,
         isAbstract: def.isAbstract,
         extends: extendsClause,
-        properties,
-        methods,
+        properties: allProperties,
+        methods: allMethods,
       });
     }
 
@@ -442,8 +568,9 @@ export class CodewareGenerator extends BaseGenerator {
     }
 
     for (const [className, extensions] of annotationExtensions.entries()) {
-      const properties: any[] = [];
-      const methods: any[] = [];
+      const mappedClassName = CodewareTypeAst.mapClassName(className);
+      let properties: any[] = [];
+      let methods: any[] = [];
 
       for (const ext of extensions) {
         if (ext.type === "field") {
@@ -479,14 +606,43 @@ export class CodewareGenerator extends BaseGenerator {
         }
       }
 
+      if (isBaseAddonsOrOverrides) {
+        const baseClassDef = this.getClassDefinition(mappedClassName);
+        if (baseClassDef) {
+          properties = properties.filter(
+            (prop) => !baseClassDef.fields.has(prop.name)
+          );
+          methods = methods.filter(
+            (method) => !baseClassDef.methods.has(method.name)
+          );
+
+          if (properties.length === 0 && methods.length === 0) {
+            continue;
+          }
+        }
+      }
+
       if (properties.length > 0 || methods.length > 0) {
+        this.codewareClasses.add(mappedClassName);
         sourceFile.addClass({
-          name: className,
+          name: mappedClassName,
           hasDeclareKeyword: true,
           properties,
           methods,
         });
       }
+    }
+
+    const statements = sourceFile.getStatements();
+    const hasContent =
+      statements.length > 1 ||
+      (statements.length === 1 &&
+        statements[0].getKindName() !== "Comment" &&
+        statements[0].getKindName() !== "FirstStatement");
+
+    if (!hasContent) {
+      sourceFile.delete();
+      return "";
     }
 
     sourceFile.saveSync();
@@ -496,6 +652,8 @@ export class CodewareGenerator extends BaseGenerator {
   generate() {
     CodewareTypeAst.initializeBaseImportsClasses(this.codewareDir);
 
+    this.loadClassesDefinitions();
+
     if (!fs.existsSync(this.outputDir)) {
       fs.mkdirSync(this.outputDir, { recursive: true });
     }
@@ -503,6 +661,8 @@ export class CodewareGenerator extends BaseGenerator {
     const jsonFiles = this.getAllJsonFiles(this.codewareDir);
 
     Logger.info(`Found ${jsonFiles.length} JSON files`);
+
+    const generatedFiles: string[] = [];
 
     for (const jsonFile of jsonFiles) {
       try {
@@ -519,6 +679,9 @@ export class CodewareGenerator extends BaseGenerator {
         }
 
         const outputPath = this.processModule(jsonFile, content);
+        if (outputPath && outputPath !== "") {
+          generatedFiles.push(outputPath);
+        }
       } catch (error) {
         Logger.error(`Error processing ${jsonFile}`, error);
       }
@@ -529,7 +692,63 @@ export class CodewareGenerator extends BaseGenerator {
       overwrite: true,
     });
     this.addHeader(indexFile);
+
+    const referencePaths: string[] = [];
+    for (const generatedFile of generatedFiles) {
+      const relativePath = path.relative(this.outputDir, generatedFile);
+      const referencePath = "./" + relativePath.replace(/\\/g, "/");
+      referencePaths.push(`/// <reference path="${referencePath}" />`);
+    }
+    referencePaths.sort();
+    indexFile.addStatements(referencePaths);
+
     indexFile.saveSync();
+
+    const codewareClassesFilePath = path.join(
+      this.outputDir,
+      "CodewareClasses.d.ts"
+    );
+    const codewareClassesFile = this.project.createSourceFile(
+      codewareClassesFilePath,
+      "",
+      {
+        overwrite: true,
+      }
+    );
+
+    this.addHeader(codewareClassesFile);
+    codewareClassesFile.addStatements([
+      `/// <reference path="./index.d.ts" />`,
+    ]);
+
+    const uniqueCodewareClasses = Array.from(this.codewareClasses).filter(
+      (className) => !defsIndex.classes.has(className)
+    );
+    const sortedClasses = uniqueCodewareClasses.sort();
+
+    if (sortedClasses.length > 0) {
+      codewareClassesFile.addInterface({
+        name: "CodewareClasses",
+        properties: sortedClasses.map<OptionalKind<PropertySignatureStructure>>(
+          (className) => ({
+            name: className,
+            type: `typeof ${className}`,
+          })
+        ),
+      });
+      const excludedCount = this.codewareClasses.size - sortedClasses.length;
+      Logger.info(
+        `CodewareClasses created with ${sortedClasses.length} classes${
+          excludedCount > 0 ? ` (${excludedCount} excluded as duplicates)` : ""
+        }`
+      );
+    } else {
+      Logger.warn(
+        "No codeware classes found, skipping CodewareClasses interface"
+      );
+    }
+
+    codewareClassesFile.saveSync();
 
     Logger.success(`Types generated in directory: ${this.outputDir}`);
   }
