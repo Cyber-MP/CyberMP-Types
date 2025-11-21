@@ -305,10 +305,6 @@ export class CodewareGenerator extends BaseGenerator {
     });
 
     this.addHeader(sourceFile);
-    sourceFile.addStatements([
-      `/// <reference path="../../classes.d.ts" />`,
-      `/// <reference path="../../precomputed/primitives.d.ts" />`,
-    ]);
 
     for (const enumDef of enums) {
       const variants = enumDef.variants
@@ -505,7 +501,6 @@ export class CodewareGenerator extends BaseGenerator {
     }
 
     const jsonFiles = this.getAllJsonFiles(this.codewareDir);
-    const exports: string[] = [];
 
     Logger.info(`Found ${jsonFiles.length} JSON files`);
 
@@ -524,27 +519,16 @@ export class CodewareGenerator extends BaseGenerator {
         }
 
         const outputPath = this.processModule(jsonFile, content);
-
-        if (outputPath) {
-          const referencePath =
-            "./" + relativePath.replace(/\\/g, "/").replace(".json", "");
-          exports.push(`/// <reference path="${referencePath}.d.ts" />`);
-        }
       } catch (error) {
         Logger.error(`Error processing ${jsonFile}`, error);
       }
     }
 
-    const indexFile = this.project.createSourceFile(
-      path.join(this.outputDir, "index.d.ts"),
-      "",
-      { overwrite: true }
-    );
-    this.addHeader(indexFile);
-    indexFile.addStatements([`/// <reference path="../../classes.d.ts" />`]);
-    exports.forEach((referenceStatement) => {
-      indexFile.addStatements(referenceStatement);
+    const indexFilePath = path.join(this.outputDir, "index.d.ts");
+    const indexFile = this.project.createSourceFile(indexFilePath, "", {
+      overwrite: true,
     });
+    this.addHeader(indexFile);
     indexFile.saveSync();
 
     Logger.success(`Types generated in directory: ${this.outputDir}`);
