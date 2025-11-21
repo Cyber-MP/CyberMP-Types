@@ -1,2 +1,0 @@
-export class gameinteractionsOrbActivationPredicate extends gameinteractionsIPredicateType {
-}

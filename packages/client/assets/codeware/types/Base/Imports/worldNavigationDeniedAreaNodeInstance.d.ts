@@ -1,2 +1,0 @@
-export class worldNavigationDeniedAreaNodeInstance extends worldAreaShapeNodeInstance {
-}

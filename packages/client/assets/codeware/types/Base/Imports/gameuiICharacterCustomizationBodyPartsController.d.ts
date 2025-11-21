@@ -1,2 +1,0 @@
-export abstract class gameuiICharacterCustomizationBodyPartsController extends gameuiICharacterCustomizationComponent {
-}

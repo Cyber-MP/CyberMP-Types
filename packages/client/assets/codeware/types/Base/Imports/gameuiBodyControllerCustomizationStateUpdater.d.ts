@@ -1,2 +1,0 @@
-export class gameuiBodyControllerCustomizationStateUpdater extends gameuiICustomizationStateUpdater {
-}

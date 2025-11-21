@@ -1,2 +1,0 @@
-export class gameCyberspaceBoundaryNodeInstance extends worldTriggerAreaNodeInstance {
-}

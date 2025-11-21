@@ -1,2 +1,0 @@
-export class AIbehaviorWaitFormationPositionConditionDefinition extends AIbehaviorConditionDefinition {
-}

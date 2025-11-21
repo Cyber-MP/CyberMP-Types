@@ -1,1 +1,0 @@
-export let isHidden: boolean;

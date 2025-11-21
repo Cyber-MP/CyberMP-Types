@@ -1,2 +1,0 @@
-export class gameEffectObjectFilter_HitRepresentation_Sweep_Box extends gameEffectObjectFilter_HitRepresentation {
-}

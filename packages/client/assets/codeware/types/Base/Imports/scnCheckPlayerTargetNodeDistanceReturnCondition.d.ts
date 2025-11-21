@@ -1,3 +1,0 @@
-export class scnCheckPlayerTargetNodeDistanceReturnCondition extends scnIReturnCondition {
-  params?: scnCheckPlayerTargetNodeDistanceReturnConditionParams;
-}

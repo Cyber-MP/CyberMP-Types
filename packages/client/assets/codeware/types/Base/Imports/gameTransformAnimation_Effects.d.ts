@@ -1,2 +1,0 @@
-export abstract class gameTransformAnimation_Effects extends gameTransformAnimationTrackItemImpl {
-}

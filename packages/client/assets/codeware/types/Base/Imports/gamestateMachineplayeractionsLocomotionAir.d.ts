@@ -1,2 +1,0 @@
-export class gamestateMachineplayeractionsLocomotionAir extends gamestateMachineplayeractionsLocomotionSimple {
-}

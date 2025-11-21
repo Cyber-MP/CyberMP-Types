@@ -1,2 +1,0 @@
-export class gameExtraStatPoolDataModifierStatListener extends gameStatPoolDataModifierStatListener {
-}

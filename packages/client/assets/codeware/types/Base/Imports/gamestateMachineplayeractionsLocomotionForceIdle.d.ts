@@ -1,2 +1,0 @@
-export class gamestateMachineplayeractionsLocomotionForceIdle extends gamestateMachineplayeractionsLocomotionBase {
-}

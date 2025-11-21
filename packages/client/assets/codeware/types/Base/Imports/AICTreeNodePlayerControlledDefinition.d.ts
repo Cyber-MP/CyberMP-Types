@@ -1,2 +1,0 @@
-export class AICTreeNodePlayerControlledDefinition extends AICTreeNodeAtomicDefinition {
-}

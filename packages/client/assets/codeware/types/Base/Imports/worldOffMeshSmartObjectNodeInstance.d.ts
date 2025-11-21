@@ -1,2 +1,0 @@
-export class worldOffMeshSmartObjectNodeInstance extends worldOffMeshConnectionNodeInstance {
-}

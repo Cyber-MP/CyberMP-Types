@@ -1,1 +1,0 @@
-export let TriggersCombat: boolean;

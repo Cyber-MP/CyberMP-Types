@@ -1,2 +1,0 @@
-export abstract class questICharacterManagerParameters_NodeSubType extends questICharacterManager_NodeSubType {
-}

@@ -1,2 +1,0 @@
-export class questLootPurge_NodeType extends questIGameManagerNonSignalStoppingNodeType {
-}

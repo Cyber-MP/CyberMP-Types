@@ -1,5 +1,0 @@
-export class gameuiCharacterCustomizationBrokenNoseController extends gameuiICharacterCustomizationComponent {
-  stage1App?: gameuiCharacterCustomizationBrokenNoseControllerBrokenNoseAppearance;
-  stage2App?: gameuiCharacterCustomizationBrokenNoseControllerBrokenNoseAppearance;
-  finalSceneGroup?: string;
-}

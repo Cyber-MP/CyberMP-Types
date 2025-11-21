@@ -1,2 +1,0 @@
-export abstract class gameEffectObjectFilter_HitRepresentation extends gameEffectObjectGroupFilter {
-}

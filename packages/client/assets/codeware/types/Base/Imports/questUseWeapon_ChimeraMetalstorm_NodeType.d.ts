@@ -1,2 +1,0 @@
-export class questUseWeapon_ChimeraMetalstorm_NodeType extends questUseWeapon_NodeType {
-}

@@ -1,2 +1,0 @@
-export class AIbehaviorSelectorTreeNodeDefinition extends AIbehaviorCompositeTreeNodeDefinition {
-}

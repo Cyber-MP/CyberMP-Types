@@ -1,2 +1,0 @@
-export class AIbehaviorNodeRefToObjectTaskDefinition extends AIbehaviorNodeRefConverterTaskDefinition {
-}

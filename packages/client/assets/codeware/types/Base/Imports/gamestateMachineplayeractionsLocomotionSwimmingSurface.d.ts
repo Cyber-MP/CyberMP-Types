@@ -1,2 +1,0 @@
-export class gamestateMachineplayeractionsLocomotionSwimmingSurface extends gamestateMachineplayeractionsLocomotionBase {
-}

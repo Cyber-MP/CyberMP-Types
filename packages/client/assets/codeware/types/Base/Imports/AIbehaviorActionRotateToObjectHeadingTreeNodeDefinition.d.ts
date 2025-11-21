@@ -1,2 +1,0 @@
-export class AIbehaviorActionRotateToObjectHeadingTreeNodeDefinition extends AIbehaviorActionRotateBaseTreeNodeDefinition {
-}

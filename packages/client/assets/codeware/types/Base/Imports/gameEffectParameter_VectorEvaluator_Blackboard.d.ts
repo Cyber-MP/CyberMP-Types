@@ -1,3 +1,0 @@
-export class gameEffectParameter_VectorEvaluator_Blackboard extends gameIEffectParameter_VectorEvaluator {
-  blackboardProperty?: gameBlackboardPropertyBindingDefinition;
-}

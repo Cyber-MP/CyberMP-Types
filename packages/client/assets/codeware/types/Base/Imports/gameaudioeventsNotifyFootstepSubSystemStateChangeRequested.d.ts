@@ -1,2 +1,0 @@
-export class gameaudioeventsNotifyFootstepSubSystemStateChangeRequested extends Event {
-}

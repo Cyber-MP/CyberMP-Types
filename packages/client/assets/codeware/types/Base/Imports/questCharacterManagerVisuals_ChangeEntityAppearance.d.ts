@@ -1,2 +1,0 @@
-export class questCharacterManagerVisuals_ChangeEntityAppearance extends questCharacterManagerVisuals_EntityAppearanceOperationBase {
-}

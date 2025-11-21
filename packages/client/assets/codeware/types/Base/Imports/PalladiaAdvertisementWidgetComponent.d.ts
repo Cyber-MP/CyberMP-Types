@@ -1,2 +1,0 @@
-export class PalladiaAdvertisementWidgetComponent extends AdvertisementWidgetComponent {
-}

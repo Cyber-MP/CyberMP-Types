@@ -1,1 +1,0 @@
-export let audioCurves: ResourceRef;

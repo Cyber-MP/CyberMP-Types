@@ -1,2 +1,0 @@
-export class gameEffectObjectFilter_NoInstigator extends gameEffectObjectGroupFilter {
-}

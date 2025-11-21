@@ -1,2 +1,0 @@
-export class AIbehaviorOrConditionDefinition extends AIbehaviorCompositeConditionDefinition {
-}

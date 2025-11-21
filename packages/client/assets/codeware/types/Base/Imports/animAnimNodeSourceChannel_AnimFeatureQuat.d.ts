@@ -1,2 +1,0 @@
-export class animAnimNodeSourceChannel_AnimFeatureQuat extends animIAnimNodeSourceChannel_Quat {
-}

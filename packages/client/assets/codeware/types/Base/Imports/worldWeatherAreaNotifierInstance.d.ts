@@ -1,2 +1,0 @@
-export class worldWeatherAreaNotifierInstance extends worldITriggerAreaNotiferInstance {
-}

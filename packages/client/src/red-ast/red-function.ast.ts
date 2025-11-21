@@ -5,10 +5,6 @@ import { RedPropertyJson } from "./red-property.ast";
 import { RedTypeAst, RedTypeJson } from "./red-type.ast";
 import { RedArgumentAst } from "./red-argument.ast";
 
-export interface CodewareRedFunctionJson {
-  
-}
-
 export interface RedFunctionJson {
   readonly a: string; // full name
   readonly b?: string; // short name
@@ -89,10 +85,6 @@ export class RedFunctionAst {
     if (func.isQuest) badges++;
     if (func.isThreadSafe) badges++;
     return badges;
-  }
-
-  static fromCodewareJson(json: CodewareRedFunctionJson): RedFunctionAst {
-    
   }
 
   static fromJson(

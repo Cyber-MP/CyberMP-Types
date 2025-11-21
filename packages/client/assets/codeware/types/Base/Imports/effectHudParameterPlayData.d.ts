@@ -1,2 +1,0 @@
-export class effectHudParameterPlayData extends effectVisualComponentTrackItemPlayData {
-}

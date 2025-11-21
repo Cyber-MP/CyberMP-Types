@@ -1,2 +1,0 @@
-export class gameEffectDuration_Duration_Blackboard extends EffectDurationModifier {
-}

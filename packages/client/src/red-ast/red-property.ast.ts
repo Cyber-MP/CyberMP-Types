@@ -10,6 +10,10 @@ export interface RedPropertyJson {
   readonly d?: number; // offset
 }
 
+export interface CWPropertyJson {
+
+}
+
 export interface RedPropertyAst extends RedNodeAst {
   readonly visibility: RedVisibilityDef;
   readonly isPersistent: boolean;
@@ -74,6 +78,10 @@ export class RedPropertyAst {
       type: RedTypeAst.fromJson(json.a),
       offset: json.d === undefined ? 0 : json.d,
     };
+  }
+
+  static fromCodewareJson(json: CWPropertyJson): RedPropertyAst {
+    
   }
 }
 

@@ -1,3 +1,0 @@
-export abstract class questCharacterManagerVisuals_EntityAppearanceOperationBase extends questICharacterManagerVisuals_NodeSubType {
-  appearanceEntries?: questCharacterManagerVisuals_EntityAppearanceOperationBaseEntityAppearanceEntry[];
-}

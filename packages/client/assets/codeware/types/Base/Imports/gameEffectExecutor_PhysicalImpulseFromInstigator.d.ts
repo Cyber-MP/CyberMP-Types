@@ -1,2 +1,0 @@
-export class gameEffectExecutor_PhysicalImpulseFromInstigator extends EffectExecutor {
-}

@@ -1,2 +1,0 @@
-export class gamestateMachineplayeractionsActionDischarge extends gamestateMachineplayeractionsWeaponActionBase {
-}

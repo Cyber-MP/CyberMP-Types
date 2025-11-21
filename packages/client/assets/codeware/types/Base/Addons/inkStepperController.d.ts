@@ -1,1 +1,0 @@
-export let Change: inkStepperChangedCallback;

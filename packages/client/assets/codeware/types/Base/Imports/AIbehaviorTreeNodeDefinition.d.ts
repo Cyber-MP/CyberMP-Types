@@ -1,2 +1,0 @@
-export abstract class AIbehaviorTreeNodeDefinition extends AIbehaviorBehaviorComponentDefinition {
-}

@@ -1,2 +1,0 @@
-export class gameTransformAnimation_Rotation_InitialRotation extends gameTransformAnimation_Rotation {
-}

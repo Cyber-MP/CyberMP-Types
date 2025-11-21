@@ -1,2 +1,0 @@
-export class questGatherTriggerNotifier_QuestInstance extends questTriggerNotifier_QuestInstance {
-}

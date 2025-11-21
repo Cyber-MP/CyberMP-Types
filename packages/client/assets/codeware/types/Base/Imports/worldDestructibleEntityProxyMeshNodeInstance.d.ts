@@ -1,2 +1,0 @@
-export class worldDestructibleEntityProxyMeshNodeInstance extends worldEntityProxyMeshNodeInstance {
-}

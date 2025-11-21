@@ -1,2 +1,0 @@
-export class worldVehicleForbiddenAreaNotifierInstance extends worldITriggerAreaNotiferInstance {
-}

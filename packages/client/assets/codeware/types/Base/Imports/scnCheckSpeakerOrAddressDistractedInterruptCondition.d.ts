@@ -1,2 +1,0 @@
-export class scnCheckSpeakerOrAddressDistractedInterruptCondition extends scnIInterruptCondition {
-}

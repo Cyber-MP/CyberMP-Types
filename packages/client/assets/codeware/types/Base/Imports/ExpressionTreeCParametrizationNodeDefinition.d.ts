@@ -1,2 +1,0 @@
-export class ExpressionTreeCParametrizationNodeDefinition extends ExpressionTreeCNodeDefinition {
-}

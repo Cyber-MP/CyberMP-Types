@@ -1,2 +1,0 @@
-export class gameuiarcadeRoachRaceObstacleController extends gameuiarcadeArcadeObjectController {
-}

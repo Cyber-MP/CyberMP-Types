@@ -1,2 +1,0 @@
-export class AIbehaviorShouldEnterCrowdConditionDefinition extends AIbehaviorConditionDefinition {
-}

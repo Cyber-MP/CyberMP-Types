@@ -1,2 +1,0 @@
-export class questPlayEnv_ForceRelitEnvProbe extends questIEnvironmentManagerNodeType {
-}

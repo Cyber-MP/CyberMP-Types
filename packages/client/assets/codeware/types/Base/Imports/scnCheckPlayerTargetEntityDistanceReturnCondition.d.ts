@@ -1,3 +1,0 @@
-export class scnCheckPlayerTargetEntityDistanceReturnCondition extends scnIReturnCondition {
-  params?: scnCheckPlayerTargetEntityDistanceReturnConditionParams;
-}

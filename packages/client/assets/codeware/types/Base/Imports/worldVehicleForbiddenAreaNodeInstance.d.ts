@@ -1,2 +1,0 @@
-export class worldVehicleForbiddenAreaNodeInstance extends worldTriggerAreaNodeInstance {
-}

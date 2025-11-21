@@ -1,2 +1,0 @@
-export class gameEffectObjectProvider_QuerySphere_GrowOverTime extends gameEffectObjectProvider_QuerySphere {
-}

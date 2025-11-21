@@ -1,2 +1,0 @@
-export class questCharacterEquippedItemAttachmentSlotsListener extends AttachmentSlotsListener {
-}

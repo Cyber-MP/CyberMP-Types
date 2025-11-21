@@ -1,2 +1,0 @@
-export class AICTreeNodeTargetSharedVarDecoratorDefinition extends AICTreeNodeSingleSharedVarDecoratorDefinition {
-}

@@ -1,2 +1,0 @@
-export class gamestateMachineStateSocketDefinition extends graphGraphSocketDefinition {
-}

@@ -1,2 +1,0 @@
-export class MinimapHazardWarningMappinController extends BaseMinimapMappinController {
-}

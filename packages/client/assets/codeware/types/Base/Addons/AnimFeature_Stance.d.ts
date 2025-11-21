@@ -1,1 +1,0 @@
-export let stanceState: number;

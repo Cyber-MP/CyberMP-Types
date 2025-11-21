@@ -1,3 +1,0 @@
-export abstract class AICTreeNodeSingleSharedVarDecoratorDefinition extends AICTreeNodeSharedVarsBaseDecoratorDefinition {
-  sharedVarName?: LibTreeSharedVarRegistrationName;
-}

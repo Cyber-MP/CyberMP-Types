@@ -1,2 +1,0 @@
-export class worldQuestPreventionNotifierInstance extends worldITriggerAreaNotiferInstance {
-}

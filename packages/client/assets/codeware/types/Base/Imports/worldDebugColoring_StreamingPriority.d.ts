@@ -1,2 +1,0 @@
-export class worldDebugColoring_StreamingPriority extends worldEditorDebugColoringSettings {
-}

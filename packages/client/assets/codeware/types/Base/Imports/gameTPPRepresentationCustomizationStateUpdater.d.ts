@@ -1,2 +1,0 @@
-export class gameTPPRepresentationCustomizationStateUpdater extends gameuiICustomizationStateUpdater {
-}

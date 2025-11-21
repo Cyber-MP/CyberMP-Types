@@ -1,2 +1,0 @@
-export abstract class AIbehaviorActionItemHandlingNodeDefinition extends AIbehaviorActionTreeNodeDefinition {
-}

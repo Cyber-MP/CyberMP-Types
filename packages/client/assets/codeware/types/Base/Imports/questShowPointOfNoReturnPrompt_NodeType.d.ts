@@ -1,2 +1,0 @@
-export class questShowPointOfNoReturnPrompt_NodeType extends questIUIManagerNodeType {
-}

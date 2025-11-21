@@ -1,2 +1,0 @@
-export class gameuiHolocallCameraComponent extends entRenderToTextureCameraComponent {
-}

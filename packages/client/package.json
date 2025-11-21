@@ -10,6 +10,7 @@
     "start": "tsx ./src",
     "dev": "tsx watch ./src",
     "build": "npm run start",
+    "generate:codeware": "tsx ./src/generate-codeware.ts",
     "patch": "cd $(git rev-parse --show-toplevel) && for patch in packages/client/assets/patches/*.patch; do git apply \"$patch\"; done"
   },
   "keywords": [],

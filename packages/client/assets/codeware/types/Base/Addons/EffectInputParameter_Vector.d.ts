@@ -1,1 +1,0 @@
-export let evaluator: gameIEffectParameter_VectorEvaluator;

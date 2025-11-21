@@ -1,2 +1,0 @@
-export class AIbehaviorIdleTreeNodeDefinition extends AIbehaviorLeafTreeNodeDefinition {
-}

@@ -1,2 +1,0 @@
-export class animAnimNode_ForegroundSegmentBegin extends animAnimNode_OnePoseInput {
-}

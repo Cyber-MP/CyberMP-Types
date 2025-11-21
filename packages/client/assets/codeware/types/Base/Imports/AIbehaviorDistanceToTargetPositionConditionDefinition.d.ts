@@ -1,2 +1,0 @@
-export class AIbehaviorDistanceToTargetPositionConditionDefinition extends AIbehaviorDistanceToTargetConditionDefinition {
-}

@@ -1,2 +1,0 @@
-export class gamestateMachineplayeractionsLocomotionSwimmingStart extends gamestateMachineStateActionDefinition {
-}

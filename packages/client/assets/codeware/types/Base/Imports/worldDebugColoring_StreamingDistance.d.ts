@@ -1,2 +1,0 @@
-export class worldDebugColoring_StreamingDistance extends worldEditorDebugColoringSettings {
-}

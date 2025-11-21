@@ -1,2 +1,0 @@
-export class gamestateMachineplayeractionsLocomotionLadder extends gamestateMachineplayeractionsLocomotionBase {
-}

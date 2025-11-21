@@ -1,3 +1,0 @@
-export class questCharacterManagerVisuals_SetBrokenNoseStage extends questICharacterManagerVisuals_NodeSubType {
-  brokenNoseStage?: gameuiCharacterCustomization_BrokenNoseStage;
-}

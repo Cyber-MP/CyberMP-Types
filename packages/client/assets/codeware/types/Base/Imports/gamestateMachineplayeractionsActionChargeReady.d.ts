@@ -1,2 +1,0 @@
-export class gamestateMachineplayeractionsActionChargeReady extends gamestateMachineplayeractionsWeaponActionBase {
-}

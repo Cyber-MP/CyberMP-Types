@@ -1,4 +1,0 @@
-export enum animLocoStateType {
-  LS_Pre = 0,
-  LS_Loop = 1
-}

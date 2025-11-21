@@ -1,2 +1,0 @@
-export abstract class animAnimNode_SetDrivenKey_InternalsISetDrivenKeyEntryProvider extends ISerializable {
-}

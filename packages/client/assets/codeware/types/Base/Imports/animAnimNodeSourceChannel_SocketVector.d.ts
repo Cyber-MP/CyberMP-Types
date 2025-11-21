@@ -1,2 +1,0 @@
-export class animAnimNodeSourceChannel_SocketVector extends animIAnimNodeSourceChannel_Vector {
-}

@@ -1,2 +1,0 @@
-export class questToggleSwitchSeatsForPlayer_NodeType extends questIVehicleManagerNodeType {
-}

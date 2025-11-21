@@ -1,2 +1,0 @@
-export class questNewPlayerPuppetAttached_ConditionType extends questISceneConditionType {
-}
