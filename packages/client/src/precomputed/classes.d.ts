@@ -10,5 +10,3 @@ declare class worldWeatherScriptInterface extends IScriptable {
   public GetWeatherState(): worldWeatherState;
   public GetEnvironmentDefinition(): worldEnvironmentDefinition;
 }
-
-declare class IComponent extends entIComponent {}

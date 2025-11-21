@@ -11,7 +11,6 @@ import { CodewareFunctionAst } from "../red-ast/codeware/codeware-function.ast";
 import { CodewareFieldAst } from "../red-ast/codeware/codeware-field.ast";
 import { CodewareTypeAst } from "../red-ast/codeware/codeware-type.ast";
 
-// Зарезервированные слова TypeScript/JavaScript
 const reservedWords = new Set([
   "function",
   "class",
@@ -153,7 +152,6 @@ export class CodewareGenerator extends BaseGenerator {
         const fullPath = path.join(currentDir, entry.name);
         const relativePath = path.relative(dir, fullPath);
 
-        // Игнорируем Base/Imports
         if (relativePath.startsWith("Base" + path.sep + "Imports")) {
           continue;
         }
@@ -186,7 +184,6 @@ export class CodewareGenerator extends BaseGenerator {
       isStatic: boolean;
       readonly: boolean;
     }> = [];
-    // Маппинг для аннотаций: имя класса -> массив методов/полей для добавления
     const annotationExtensions = new Map<
       string,
       Array<{
@@ -198,7 +195,6 @@ export class CodewareGenerator extends BaseGenerator {
     >();
 
     for (const item of content.items) {
-      // Обрабатываем аннотации addMethod и addField
       if (item.annotations && item.annotations.length > 0) {
         let hasAnnotation = false;
         for (const annotation of item.annotations) {
@@ -221,11 +217,15 @@ export class CodewareGenerator extends BaseGenerator {
 
             if (targetClassName) {
               hasAnnotation = true;
-              if (!annotationExtensions.has(targetClassName)) {
-                annotationExtensions.set(targetClassName, []);
+              const mappedTargetClassName =
+                CodewareTypeAst.mapClassName(targetClassName);
+              if (!annotationExtensions.has(mappedTargetClassName)) {
+                annotationExtensions.set(mappedTargetClassName, []);
               }
 
-              const extensions = annotationExtensions.get(targetClassName)!;
+              const extensions = annotationExtensions.get(
+                mappedTargetClassName
+              )!;
               if (item.item.kind === "function" && item.item.function) {
                 extensions.push({
                   type: "method",
@@ -245,14 +245,13 @@ export class CodewareGenerator extends BaseGenerator {
           }
         }
         if (hasAnnotation) {
-          continue; // Пропускаем обычную обработку для элементов с аннотациями
+          continue;
         }
       }
 
       if (item.item.kind === "enum" && item.item.enum) {
         enums.push(CodewareEnumAst.fromJson(item.item.enum));
       } else if (item.item.kind === "class" && item.item.class) {
-        // Собираем все элементы класса: из class.items и из верхнего уровня item
         const classItems = item.item.class.items || [];
         const classJson = {
           ...item.item.class,
@@ -265,7 +264,6 @@ export class CodewareGenerator extends BaseGenerator {
           items: classItems,
         });
       } else if (item.item.kind === "struct" && item.item.struct) {
-        // Собираем все элементы структуры: из struct.items
         const structItems = item.item.struct.items || [];
         const structJson = {
           ...item.item.struct,
@@ -297,7 +295,6 @@ export class CodewareGenerator extends BaseGenerator {
       }
     }
 
-    // Создаем SourceFile для этого модуля
     const relativePath = path.relative(this.codewareDir, modulePath);
     const outputPath = path.join(
       this.outputDir,
@@ -313,7 +310,6 @@ export class CodewareGenerator extends BaseGenerator {
       `/// <reference path="../../precomputed/primitives.d.ts" />`,
     ]);
 
-    // Генерируем enums
     for (const enumDef of enums) {
       const variants = enumDef.variants
         .map((v) => `  ${v.name} = ${v.value}`)
@@ -328,7 +324,6 @@ export class CodewareGenerator extends BaseGenerator {
       });
     }
 
-    // Генерируем structs
     for (const { def, items } of structs) {
       const properties = items
         .filter((item) => item.item.kind === "let" && item.item.field)
@@ -357,7 +352,6 @@ export class CodewareGenerator extends BaseGenerator {
       });
     }
 
-    // Генерируем classes
     for (const { def, items } of classes) {
       const properties = items
         .filter((item) => item.item.kind === "let" && item.item.field)
@@ -401,8 +395,10 @@ export class CodewareGenerator extends BaseGenerator {
         ? CodewareTypeAst.toTypeScript(def.extends)
         : undefined;
 
+      const mappedClassName = CodewareTypeAst.mapClassName(def.name);
+
       sourceFile.addClass({
-        name: def.name,
+        name: mappedClassName,
         hasDeclareKeyword: true,
         isAbstract: def.isAbstract,
         extends: extendsClause,
@@ -411,7 +407,6 @@ export class CodewareGenerator extends BaseGenerator {
       });
     }
 
-    // Генерируем standalone functions
     for (const { func, isStatic } of standaloneFunctions) {
       const returnType = func.returnType
         ? CodewareTypeAst.toTypeScript(func.returnType)
@@ -429,7 +424,6 @@ export class CodewareGenerator extends BaseGenerator {
       });
     }
 
-    // Генерируем standalone fields
     for (const { field, isStatic, readonly } of standaloneFields) {
       const fieldType = CodewareTypeAst.toTypeScript(field.type);
       const modifiers: string[] = [];
@@ -451,7 +445,6 @@ export class CodewareGenerator extends BaseGenerator {
       });
     }
 
-    // Генерируем расширения классов из аннотаций
     for (const [className, extensions] of annotationExtensions.entries()) {
       const properties: any[] = [];
       const methods: any[] = [];
@@ -490,7 +483,6 @@ export class CodewareGenerator extends BaseGenerator {
         }
       }
 
-      // Добавляем расширение класса через declare class
       if (properties.length > 0 || methods.length > 0) {
         sourceFile.addClass({
           name: className,
@@ -506,7 +498,8 @@ export class CodewareGenerator extends BaseGenerator {
   }
 
   generate() {
-    // Создаем директорию для типов
+    CodewareTypeAst.initializeBaseImportsClasses(this.codewareDir);
+
     if (!fs.existsSync(this.outputDir)) {
       fs.mkdirSync(this.outputDir, { recursive: true });
     }
@@ -526,7 +519,6 @@ export class CodewareGenerator extends BaseGenerator {
           path.join(this.outputDir, relativePath.replace(".json", ".d.ts"))
         );
 
-        // Создаем директорию если нужно
         if (!fs.existsSync(outputDirPath)) {
           fs.mkdirSync(outputDirPath, { recursive: true });
         }
@@ -534,7 +526,6 @@ export class CodewareGenerator extends BaseGenerator {
         const outputPath = this.processModule(jsonFile, content);
 
         if (outputPath) {
-          // Добавляем в референсы (без экспорта)
           const referencePath =
             "./" + relativePath.replace(/\\/g, "/").replace(".json", "");
           exports.push(`/// <reference path="${referencePath}.d.ts" />`);
@@ -544,7 +535,6 @@ export class CodewareGenerator extends BaseGenerator {
       }
     }
 
-    // Создаем индексный файл с референсами
     const indexFile = this.project.createSourceFile(
       path.join(this.outputDir, "index.d.ts"),
       "",

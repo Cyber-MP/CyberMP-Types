@@ -1,4 +1,7 @@
 import { defsIndex } from "../../config/constants";
+import codewareClassMapping from "../../../assets/codeware-class-mapping.json";
+import * as fs from "fs";
+import * as path from "path";
 
 export interface CodewareTypeJson {
   kind: "named" | "static_array" | string;
@@ -14,7 +17,6 @@ export interface CodewareTypeAst {
 }
 
 export class CodewareTypeAst {
-  // Примитивные типы - маппинг на базовые TypeScript типы или типы из primitives.d.ts
   private static readonly primitiveMapping: Record<string, string> = {
     Bool: "boolean",
     Int8: "Int8",
@@ -31,8 +33,6 @@ export class CodewareTypeAst {
     CName: "CName",
     CRUID: "CRUID",
     CGUID: "CGUID",
-    PersistentID: "string",
-    EntityID: "string",
     TweakDBID: "TweakDBID",
     LocalizationString: "LocalizationString",
     DataBuffer: "DataBuffer",
@@ -44,10 +44,134 @@ export class CodewareTypeAst {
     NodeRef: "NodeRef<any>",
   };
 
+  private static readonly codewareToClassMapping: Record<string, string> =
+    codewareClassMapping as Record<string, string>;
+
+  private static baseImportsClassesCache: string[] | null = null;
+  private static codewareDirPath: string | null = null;
+
+  private static getBaseImportsClasses(codewareDir: string): string[] {
+    if (this.baseImportsClassesCache !== null) {
+      return this.baseImportsClassesCache;
+    }
+
+    const baseImportsPath = path.join(codewareDir, "Base", "Imports");
+    const classes: string[] = [];
+
+    if (!fs.existsSync(baseImportsPath)) {
+      this.baseImportsClassesCache = [];
+      return classes;
+    }
+
+    const walkDir = (currentDir: string) => {
+      const entries = fs.readdirSync(currentDir, { withFileTypes: true });
+
+      for (const entry of entries) {
+        const fullPath = path.join(currentDir, entry.name);
+
+        if (entry.isDirectory()) {
+          walkDir(fullPath);
+        } else if (entry.isFile() && entry.name.endsWith(".json")) {
+          try {
+            const content = JSON.parse(fs.readFileSync(fullPath, "utf-8")) as {
+              items?: Array<{
+                item?: {
+                  kind?: string;
+                  class?: { name?: string };
+                  struct?: { name?: string };
+                };
+              }>;
+            };
+
+            if (content.items) {
+              for (const item of content.items) {
+                if (item.item?.kind === "class" && item.item.class?.name) {
+                  classes.push(item.item.class.name);
+                } else if (
+                  item.item?.kind === "struct" &&
+                  item.item.struct?.name
+                ) {
+                  classes.push(item.item.struct.name);
+                }
+              }
+            }
+          } catch (error) {}
+        }
+      }
+    };
+
+    walkDir(baseImportsPath);
+
+    this.baseImportsClassesCache = classes.sort((a, b) => b.length - a.length);
+    return this.baseImportsClassesCache;
+  }
+
+  static initializeBaseImportsClasses(codewareDir: string): void {
+    this.codewareDirPath = codewareDir;
+    this.baseImportsClassesCache = null;
+    this.getBaseImportsClasses(codewareDir);
+  }
+
+  static resetBaseImportsCache(): void {
+    this.baseImportsClassesCache = null;
+  }
+
+  private static applyCodewareMapping(typeName: string): string {
+    if (this.codewareToClassMapping[typeName]) {
+      const mappedName = this.codewareToClassMapping[typeName];
+      if (defsIndex.classes.has(mappedName)) {
+        return mappedName;
+      }
+    }
+
+    if (this.codewareDirPath) {
+      const baseImportsClasses = this.getBaseImportsClasses(
+        this.codewareDirPath
+      );
+
+      if (baseImportsClasses.includes(typeName)) {
+        const sortedClasses = Array.from(defsIndex.classes).sort(
+          (a, b) => b.length - a.length
+        );
+
+        for (const className of sortedClasses) {
+          if (className.endsWith(typeName)) {
+            return className;
+          }
+        }
+      }
+    }
+
+    return typeName;
+  }
+
+  static mapClassName(className: string): string {
+    return this.applyCodewareMapping(className);
+  }
+
+  private static resolveTypeName(typeName: string): string {
+    const mappedName = this.applyCodewareMapping(typeName);
+
+    if (this.primitiveMapping[mappedName]) {
+      return this.primitiveMapping[mappedName];
+    }
+
+    if (defsIndex.enums.has(mappedName)) {
+      return `CyberEnums.${mappedName}`;
+    } else if (defsIndex.bitfields.has(mappedName)) {
+      return `CyberEnums.BitFields.${mappedName}`;
+    }
+
+    if (defsIndex.classes.has(mappedName) || defsIndex.funcs.has(mappedName)) {
+      return mappedName;
+    }
+
+    return mappedName;
+  }
+
   static toTypeScript(type: CodewareTypeJson | null | undefined): string {
     if (!type) return "void";
 
-    // Обрабатываем static_array как обычный массив
     if (type.kind === "static_array") {
       if (type.element) {
         const elementType = this.toTypeScript(type.element);
@@ -59,34 +183,21 @@ export class CodewareTypeAst {
     if (type.kind === "named") {
       const typeName = type.name || "";
 
-      // Обрабатываем шаблоны (templates) с аргументами
       if (type.args && type.args.length > 0) {
-        const innerType = this.toTypeScript(type.args[0]);
-        let innerTs = innerType;
+        const innerTs = this.toTypeScript(type.args[0]);
 
-        // Проверяем, является ли внутренний тип enum или bitfield
-        if (defsIndex.enums.has(innerTs)) {
-          innerTs = `CyberEnums.${innerTs}`;
-        } else if (defsIndex.bitfields.has(innerTs)) {
-          innerTs = `CyberEnums.BitFields.${innerTs}`;
-        }
-
-        // Массивы
         if (typeName === "array") {
           return `${innerTs}[]`;
         }
 
-        // Ссылки (ref) - как Handle
         if (typeName === "ref") {
           return `Handle<${innerTs}>`;
         }
 
-        // Weak ссылки (wref) - как WeakHandle
         if (typeName === "wref") {
           return `WeakHandle<${innerTs}>`;
         }
 
-        // Script ссылки (script_ref) - как ScriptRef
         if (typeName === "script_ref") {
           return `ScriptRef<${innerTs}>`;
         }
@@ -114,29 +225,10 @@ export class CodewareTypeAst {
           return `MultiChannelCurve<${innerTs}>`;
         }
 
-        // Остальные шаблоны - используем имя как есть с generic параметром
         return `${typeName}<${innerTs}>`;
       }
 
-      // Проверяем маппинг примитивных типов
-      if (this.primitiveMapping[typeName]) {
-        return this.primitiveMapping[typeName];
-      }
-
-      // Проверяем, является ли тип enum или bitfield
-      if (defsIndex.enums.has(typeName)) {
-        return `CyberEnums.${typeName}`;
-      } else if (defsIndex.bitfields.has(typeName)) {
-        return `CyberEnums.BitFields.${typeName}`;
-      }
-
-      // Проверяем, является ли тип классом или функцией
-      if (defsIndex.classes.has(typeName) || defsIndex.funcs.has(typeName)) {
-        return typeName;
-      }
-
-      // Остальные типы - используем имя как есть
-      return typeName;
+      return this.resolveTypeName(typeName);
     }
 
     return "any";
