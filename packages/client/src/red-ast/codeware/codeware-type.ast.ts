@@ -185,47 +185,28 @@ export class CodewareTypeAst {
 
       if (type.args && type.args.length > 0) {
         const innerTs = this.toTypeScript(type.args[0]);
-
-        if (typeName === "array") {
-          return `${innerTs}[]`;
+        switch (typeName) {
+          case "array":
+            return `${innerTs}[]`;
+          case "ref":
+            return `Handle<${innerTs}>`;
+          case "wref":
+            return `WeakHandle<${innerTs}>`;
+          case "script_ref":
+            return `ScriptRef<${innerTs}>`;
+          case "ResRef":
+            return `ResRef<${innerTs}>`;
+          case "ResAsyncRef":
+            return `ResAsyncRef<${innerTs}>`;
+          case "CurveData":
+          case "curveData":
+            return `CurveData<${innerTs}>`;
+          case "MultiChannelCurve":
+          case "multiChannelCurve":
+            return `MultiChannelCurve<${innerTs}>`;
+          default:
+            return `${typeName}<${innerTs}>`;
         }
-
-        if (typeName === "ref") {
-          return `Handle<${innerTs}>`;
-        }
-
-        if (typeName === "wref") {
-          return `WeakHandle<${innerTs}>`;
-        }
-
-        if (typeName === "script_ref") {
-          return `ScriptRef<${innerTs}>`;
-        }
-
-        // ResRef
-        if (typeName === "ResRef") {
-          return `ResRef<${innerTs}>`;
-        }
-
-        // ResAsyncRef
-        if (typeName === "ResAsyncRef") {
-          return `ResAsyncRef<${innerTs}>`;
-        }
-
-        // CurveData
-        if (typeName === "CurveData" || typeName === "curveData") {
-          return `CurveData<${innerTs}>`;
-        }
-
-        // MultiChannelCurve
-        if (
-          typeName === "MultiChannelCurve" ||
-          typeName === "multiChannelCurve"
-        ) {
-          return `MultiChannelCurve<${innerTs}>`;
-        }
-
-        return `${typeName}<${innerTs}>`;
       }
 
       return this.resolveTypeName(typeName);

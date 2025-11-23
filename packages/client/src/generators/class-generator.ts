@@ -134,7 +134,7 @@ export class ClassGenerator extends BaseGenerator<[SourceFile]> {
 
     this.addHeader(sourceFile);
     sourceFile.addStatements([
-      `/// <reference path="./precomputed/index.d.ts" />`,
+      `/// <reference path="./precomputed.d.ts" />`,
       `/// <reference path="./enums.d.ts" />`,
       `/// <reference path="./bitfields.d.ts" />`,
     ]);

@@ -1,6 +1,6 @@
 import { Logger } from "./utils/logger";
 import { EnumGenerator } from "./generators/enum-generator";
-import { defsIndex, project } from "./config/constants";
+import { project } from "./config/constants";
 import { rimraf } from "rimraf";
 import fs from "fs";
 import { BitfieldGenerator } from "./generators/bitfield-generator";
@@ -10,7 +10,50 @@ import { CodewareGenerator } from "./generators/codeware-generator";
 import * as path from "path";
 
 const copyPrecomputedFiles = () => {
-  fs.cpSync("./src/precomputed", "./out/precomputed", { recursive: true });
+  const precomputedDir = "./src/precomputed";
+  const outputDir = "./out";
+
+  if (!fs.existsSync(outputDir)) {
+    fs.mkdirSync(outputDir, { recursive: true });
+  }
+
+  const fileOrder = [
+    "primitives.d.ts",
+    "enums.d.ts",
+    "classes.d.ts",
+    "meta.d.ts",
+    "events.d.ts",
+    "game.d.ts",
+    "global.d.ts",
+  ];
+
+  const outputPath = path.join(outputDir, "precomputed.d.ts");
+  let combinedContent =
+    "// THIS CODE IS GENERATED, PLEASE DO NOT EDIT THIS\n\n";
+
+  for (const fileName of fileOrder) {
+    const filePath = path.join(precomputedDir, fileName);
+    if (fs.existsSync(filePath)) {
+      let content = fs.readFileSync(filePath, "utf-8");
+
+      content = content.replace(
+        /\/\/\/ <reference path="\.\/[^"]+" \/>\s*/g,
+        ""
+      );
+      content = content.replace(
+        /\/\/\/ <reference path="\.\.\/[^"]+" \/>\s*/g,
+        ""
+      );
+
+      combinedContent += `// === ${fileName} ===\n\n`;
+      combinedContent += content.trim();
+      combinedContent += "\n\n";
+    }
+  }
+
+  fs.writeFileSync(outputPath, combinedContent, "utf-8");
+
+  Logger.info("Precomputed files merged into precomputed.d.ts");
 };
 
 async function main() {
@@ -19,14 +62,15 @@ async function main() {
   Logger.info("Starting generation process...");
   const enumGenerator = new EnumGenerator(project);
   const bitfieldGenerator = new BitfieldGenerator(project);
-  
+
   const classGenerator = new ClassGenerator(project);
 
   enumGenerator.generate();
   bitfieldGenerator.generate();
-  
-  // Генерируем classes.d.ts перед codeware, чтобы можно было сравнить классы
-  classGenerator.generate(project.createSourceFile("./out/classes.d.ts", "", { overwrite: true }));
+
+  classGenerator.generate(
+    project.createSourceFile("./out/classes.d.ts", "", { overwrite: true })
+  );
 
   copyPrecomputedFiles();
 

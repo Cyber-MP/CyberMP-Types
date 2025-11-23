@@ -5,6 +5,10 @@ import {
   VariableDeclarationKind,
   OptionalKind,
   PropertySignatureStructure,
+  SourceFile,
+  ClassDeclarationStructure,
+  MethodDeclarationStructure,
+  PropertyDeclarationStructure,
 } from "ts-morph";
 import { Logger } from "../utils/logger";
 import { blacklist, defsIndex } from "../config/constants";
@@ -148,6 +152,14 @@ export class CodewareGenerator extends BaseGenerator {
   private outputDir: string;
   private codewareClasses: Set<string> = new Set();
   private classesDefinitions: Map<string, ClassDefinition> = new Map();
+  private addedEnums: Set<string> = new Set();
+  private addedInterfaces: Set<string> = new Set();
+  private addedClasses: Set<string> = new Set();
+  private addedFunctions: Set<string> = new Set();
+  private addedVariables: Set<string> = new Set();
+  private classMethodsStaticInfo: Map<string, Map<string, boolean>> = new Map();
+  private classPropertiesStaticInfo: Map<string, Map<string, boolean>> =
+    new Map();
 
   constructor(project: Project, codewareDir: string, outputDir: string) {
     super(project);
@@ -254,8 +266,9 @@ export class CodewareGenerator extends BaseGenerator {
 
   private processModule(
     modulePath: string,
-    content: CodewareModuleJson
-  ): string {
+    content: CodewareModuleJson,
+    sourceFile: SourceFile
+  ): void {
     const enums: CodewareEnumAst[] = [];
     const classes: Array<{ def: CodewareClassAst; items: any[] }> = [];
     const structs: Array<{ def: CodewareStructAst; items: any[] }> = [];
@@ -384,28 +397,34 @@ export class CodewareGenerator extends BaseGenerator {
       relativePath.startsWith("Base" + path.sep + "Addons") ||
       relativePath.startsWith("Base" + path.sep + "Overrides");
 
-    const outputPath = path.join(
-      this.outputDir,
-      relativePath.replace(".json", ".d.ts")
-    );
-    const sourceFile = this.project.createSourceFile(outputPath, "", {
-      overwrite: true,
-    });
-
-    this.addHeader(sourceFile);
-
     for (const enumDef of enums) {
-      const variants = enumDef.variants
-        .map((v) => `  ${v.name} = ${v.value}`)
-        .join(",\n");
-      sourceFile.addEnum({
-        name: enumDef.name,
-        hasDeclareKeyword: true,
-        members: enumDef.variants.map((v) => ({
-          name: v.name,
-          value: v.value,
-        })),
-      });
+      if (this.addedEnums.has(enumDef.name)) {
+        const existingEnum = sourceFile.getEnum(enumDef.name);
+        if (existingEnum) {
+          const existingMemberNames = new Set(
+            existingEnum.getMembers().map((m) => m.getName())
+          );
+          const newMembers = enumDef.variants
+            .filter((v) => !existingMemberNames.has(v.name))
+            .map((v) => ({
+              name: v.name,
+              value: v.value,
+            }));
+          for (const member of newMembers) {
+            existingEnum.addMember(member);
+          }
+        }
+      } else {
+        this.addedEnums.add(enumDef.name);
+        sourceFile.addEnum({
+          name: enumDef.name,
+          hasDeclareKeyword: true,
+          members: enumDef.variants.map((v) => ({
+            name: v.name,
+            value: v.value,
+          })),
+        });
+      }
     }
 
     for (const { def, items } of structs) {
@@ -445,12 +464,28 @@ export class CodewareGenerator extends BaseGenerator {
         ? CodewareTypeAst.toTypeScript(def.extends)
         : undefined;
 
-      sourceFile.addInterface({
-        name: def.name,
-        hasDeclareKeyword: true,
-        extends: extendsClause ? [extendsClause] : undefined,
-        properties: allProperties,
-      });
+      if (this.addedInterfaces.has(def.name)) {
+        const existingInterface = sourceFile.getInterface(def.name);
+        if (existingInterface) {
+          const existingPropertyNames = new Set(
+            existingInterface.getProperties().map((p) => p.getName())
+          );
+          const newProperties = allProperties.filter(
+            (prop) => !existingPropertyNames.has(prop.name)
+          );
+          for (const prop of newProperties) {
+            existingInterface.addProperty(prop);
+          }
+        }
+      } else {
+        this.addedInterfaces.add(def.name);
+        sourceFile.addInterface({
+          name: def.name,
+          hasDeclareKeyword: true,
+          extends: extendsClause ? [extendsClause] : undefined,
+          properties: allProperties,
+        });
+      }
     }
 
     for (const { def, items } of classes) {
@@ -517,19 +552,69 @@ export class CodewareGenerator extends BaseGenerator {
         ? CodewareTypeAst.toTypeScript(def.extends)
         : undefined;
 
-      this.codewareClasses.add(mappedClassName);
+      if (!this.classMethodsStaticInfo.has(mappedClassName)) {
+        this.classMethodsStaticInfo.set(mappedClassName, new Map());
+      }
+      if (!this.classPropertiesStaticInfo.has(mappedClassName)) {
+        this.classPropertiesStaticInfo.set(mappedClassName, new Map());
+      }
 
-      sourceFile.addClass({
-        name: mappedClassName,
-        hasDeclareKeyword: true,
-        isAbstract: def.isAbstract,
-        extends: extendsClause,
-        properties: allProperties,
-        methods: allMethods,
-      });
+      const methodsStaticMap =
+        this.classMethodsStaticInfo.get(mappedClassName)!;
+      const propertiesStaticMap =
+        this.classPropertiesStaticInfo.get(mappedClassName)!;
+
+      for (const method of allMethods) {
+        methodsStaticMap.set(method.name, method.isStatic || false);
+      }
+
+      for (const prop of allProperties) {
+        propertiesStaticMap.set(prop.name, prop.isStatic || false);
+      }
+
+      if (this.addedClasses.has(mappedClassName)) {
+        const existingInterface = sourceFile.getInterface(mappedClassName);
+        if (existingInterface) {
+          const existingPropertyNames = new Set(
+            existingInterface.getProperties().map((p) => p.getName())
+          );
+          const existingMethodNames = new Set(
+            existingInterface.getMethods().map((m) => m.getName())
+          );
+
+          const newProperties = allProperties.filter(
+            (prop) => !existingPropertyNames.has(prop.name)
+          );
+          const newMethods = allMethods.filter(
+            (method) => !existingMethodNames.has(method.name)
+          );
+
+          for (const prop of newProperties) {
+            existingInterface.addProperty(prop);
+          }
+          for (const method of newMethods) {
+            existingInterface.addMethod(method);
+          }
+        }
+      } else {
+        this.addedClasses.add(mappedClassName);
+        this.codewareClasses.add(mappedClassName);
+        sourceFile.addInterface({
+          name: mappedClassName,
+          hasDeclareKeyword: true,
+          extends: extendsClause ? [extendsClause] : undefined,
+          properties: allProperties,
+          methods: allMethods,
+        });
+      }
     }
 
     for (const { func, isStatic } of standaloneFunctions) {
+      if (this.addedFunctions.has(func.name)) {
+        continue;
+      }
+      this.addedFunctions.add(func.name);
+
       const returnType = func.returnType
         ? CodewareTypeAst.toTypeScript(func.returnType)
         : "void";
@@ -547,6 +632,11 @@ export class CodewareGenerator extends BaseGenerator {
     }
 
     for (const { field, isStatic, readonly } of standaloneFields) {
+      if (this.addedVariables.has(field.name)) {
+        continue;
+      }
+      this.addedVariables.add(field.name);
+
       const fieldType = CodewareTypeAst.toTypeScript(field.type);
       const modifiers: string[] = [];
       if (readonly) modifiers.push("readonly");
@@ -623,30 +713,62 @@ export class CodewareGenerator extends BaseGenerator {
       }
 
       if (properties.length > 0 || methods.length > 0) {
-        this.codewareClasses.add(mappedClassName);
-        sourceFile.addClass({
-          name: mappedClassName,
-          hasDeclareKeyword: true,
-          properties,
-          methods,
-        });
+        if (!this.classMethodsStaticInfo.has(mappedClassName)) {
+          this.classMethodsStaticInfo.set(mappedClassName, new Map());
+        }
+        if (!this.classPropertiesStaticInfo.has(mappedClassName)) {
+          this.classPropertiesStaticInfo.set(mappedClassName, new Map());
+        }
+
+        const methodsStaticMap =
+          this.classMethodsStaticInfo.get(mappedClassName)!;
+        const propertiesStaticMap =
+          this.classPropertiesStaticInfo.get(mappedClassName)!;
+
+        for (const method of methods) {
+          methodsStaticMap.set(method.name, method.isStatic || false);
+        }
+
+        for (const prop of properties) {
+          propertiesStaticMap.set(prop.name, prop.isStatic || false);
+        }
+
+        if (this.addedClasses.has(mappedClassName)) {
+          const existingInterface = sourceFile.getInterface(mappedClassName);
+          if (existingInterface) {
+            const existingPropertyNames = new Set(
+              existingInterface.getProperties().map((p) => p.getName())
+            );
+            const existingMethodNames = new Set(
+              existingInterface.getMethods().map((m) => m.getName())
+            );
+
+            const newProperties = properties.filter(
+              (prop) => !existingPropertyNames.has(prop.name)
+            );
+            const newMethods = methods.filter(
+              (method) => !existingMethodNames.has(method.name)
+            );
+
+            for (const prop of newProperties) {
+              existingInterface.addProperty(prop);
+            }
+            for (const method of newMethods) {
+              existingInterface.addMethod(method);
+            }
+          }
+        } else {
+          this.addedClasses.add(mappedClassName);
+          this.codewareClasses.add(mappedClassName);
+          sourceFile.addInterface({
+            name: mappedClassName,
+            hasDeclareKeyword: true,
+            properties,
+            methods,
+          });
+        }
       }
     }
-
-    const statements = sourceFile.getStatements();
-    const hasContent =
-      statements.length > 1 ||
-      (statements.length === 1 &&
-        statements[0].getKindName() !== "Comment" &&
-        statements[0].getKindName() !== "FirstStatement");
-
-    if (!hasContent) {
-      sourceFile.delete();
-      return "";
-    }
-
-    sourceFile.saveSync();
-    return outputPath;
   }
 
   generate() {
@@ -654,72 +776,38 @@ export class CodewareGenerator extends BaseGenerator {
 
     this.loadClassesDefinitions();
 
-    if (!fs.existsSync(this.outputDir)) {
-      fs.mkdirSync(this.outputDir, { recursive: true });
+    const outDir = path.join(process.cwd(), "out");
+    if (!fs.existsSync(outDir)) {
+      fs.mkdirSync(outDir, { recursive: true });
     }
 
     const jsonFiles = this.getAllJsonFiles(this.codewareDir);
 
     Logger.info(`Found ${jsonFiles.length} JSON files`);
 
-    const generatedFiles: string[] = [];
+    const codewareFilePath = path.join(outDir, "codeware.d.ts");
+    const codewareFile = this.project.createSourceFile(codewareFilePath, "", {
+      overwrite: true,
+    });
+    this.addHeader(codewareFile);
+
+    codewareFile.addStatements([
+      `/// <reference path="./precomputed.d.ts" />`,
+      `/// <reference path="./enums.d.ts" />`,
+      `/// <reference path="./bitfields.d.ts" />`,
+      `/// <reference path="./classes.d.ts" />`,
+    ]);
 
     for (const jsonFile of jsonFiles) {
       try {
         const content = JSON.parse(
           fs.readFileSync(jsonFile, "utf-8")
         ) as CodewareModuleJson;
-        const relativePath = path.relative(this.codewareDir, jsonFile);
-        const outputDirPath = path.dirname(
-          path.join(this.outputDir, relativePath.replace(".json", ".d.ts"))
-        );
-
-        if (!fs.existsSync(outputDirPath)) {
-          fs.mkdirSync(outputDirPath, { recursive: true });
-        }
-
-        const outputPath = this.processModule(jsonFile, content);
-        if (outputPath && outputPath !== "") {
-          generatedFiles.push(outputPath);
-        }
+        this.processModule(jsonFile, content, codewareFile);
       } catch (error) {
         Logger.error(`Error processing ${jsonFile}`, error);
       }
     }
-
-    const indexFilePath = path.join(this.outputDir, "index.d.ts");
-    const indexFile = this.project.createSourceFile(indexFilePath, "", {
-      overwrite: true,
-    });
-    this.addHeader(indexFile);
-
-    const referencePaths: string[] = [];
-    for (const generatedFile of generatedFiles) {
-      const relativePath = path.relative(this.outputDir, generatedFile);
-      const referencePath = "./" + relativePath.replace(/\\/g, "/");
-      referencePaths.push(`/// <reference path="${referencePath}" />`);
-    }
-    referencePaths.sort();
-    indexFile.addStatements(referencePaths);
-
-    indexFile.saveSync();
-
-    const codewareClassesFilePath = path.join(
-      this.outputDir,
-      "CodewareClasses.d.ts"
-    );
-    const codewareClassesFile = this.project.createSourceFile(
-      codewareClassesFilePath,
-      "",
-      {
-        overwrite: true,
-      }
-    );
-
-    this.addHeader(codewareClassesFile);
-    codewareClassesFile.addStatements([
-      `/// <reference path="./index.d.ts" />`,
-    ]);
 
     const uniqueCodewareClasses = Array.from(this.codewareClasses).filter(
       (className) => !defsIndex.classes.has(className)
@@ -727,7 +815,78 @@ export class CodewareGenerator extends BaseGenerator {
     const sortedClasses = uniqueCodewareClasses.sort();
 
     if (sortedClasses.length > 0) {
-      codewareClassesFile.addInterface({
+      for (const className of sortedClasses) {
+        const interfaceNode = codewareFile.getInterface(className);
+        if (interfaceNode) {
+          const methodsStaticMap =
+            this.classMethodsStaticInfo.get(className) ||
+            new Map<string, boolean>();
+          const propertiesStaticMap =
+            this.classPropertiesStaticInfo.get(className) ||
+            new Map<string, boolean>();
+
+          const properties: OptionalKind<PropertyDeclarationStructure>[] =
+            interfaceNode.getProperties().map((prop) => {
+              const typeNode = prop.getTypeNode();
+              const typeText = typeNode
+                ? typeNode.getText()
+                : prop.getType().getText() || "any";
+              const propName = prop.getName();
+              const isStatic = propertiesStaticMap.get(propName) || false;
+              return {
+                name: propName,
+                type: typeText,
+                hasQuestionToken: prop.hasQuestionToken(),
+                isReadonly: prop.isReadonly(),
+                scope: undefined,
+                isStatic: isStatic,
+              };
+            });
+
+          const methods: OptionalKind<MethodDeclarationStructure>[] =
+            interfaceNode.getMethods().map((method) => {
+              const returnTypeNode = method.getReturnTypeNode();
+              const returnTypeText = returnTypeNode
+                ? returnTypeNode.getText()
+                : method.getReturnType().getText() || "void";
+              const methodName = method.getName();
+              const isStatic = methodsStaticMap.get(methodName) || false;
+              return {
+                name: methodName,
+                returnType: returnTypeText,
+                parameters: method.getParameters().map((param) => {
+                  const paramTypeNode = param.getTypeNode();
+                  const paramTypeText = paramTypeNode
+                    ? paramTypeNode.getText()
+                    : param.getType().getText() || "any";
+                  return {
+                    name: param.getName(),
+                    type: paramTypeText,
+                    hasQuestionToken: param.hasQuestionToken(),
+                  };
+                }),
+                isStatic: isStatic,
+                scope: undefined,
+              };
+            });
+
+          const extendsArray = interfaceNode.getExtends();
+          const extendsClause =
+            extendsArray.length > 0 ? extendsArray[0].getText() : undefined;
+
+          interfaceNode.remove();
+
+          codewareFile.addClass({
+            name: className,
+            hasDeclareKeyword: true,
+            extends: extendsClause,
+            properties,
+            methods,
+          });
+        }
+      }
+
+      codewareFile.addInterface({
         name: "CodewareClasses",
         properties: sortedClasses.map<OptionalKind<PropertySignatureStructure>>(
           (className) => ({
@@ -742,14 +901,17 @@ export class CodewareGenerator extends BaseGenerator {
           excludedCount > 0 ? ` (${excludedCount} excluded as duplicates)` : ""
         }`
       );
+      Logger.info(
+        `Converted ${sortedClasses.length} interfaces to classes for CodewareClasses`
+      );
     } else {
       Logger.warn(
         "No codeware classes found, skipping CodewareClasses interface"
       );
     }
 
-    codewareClassesFile.saveSync();
+    codewareFile.saveSync();
 
-    Logger.success(`Types generated in directory: ${this.outputDir}`);
+    Logger.success(`Types generated in file: ${codewareFilePath}`);
   }
 }

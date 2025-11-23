@@ -12,7 +12,11 @@ export class IndexGenerator extends BaseGenerator {
   private classGenerator: ClassGenerator;
   private codewareGenerator?: CodewareGenerator;
 
-  constructor(project: Project, codewareGenerator?: CodewareGenerator, classGenerator?: ClassGenerator) {
+  constructor(
+    project: Project,
+    codewareGenerator?: CodewareGenerator,
+    classGenerator?: ClassGenerator
+  ) {
     super(project);
 
     this.funcGenerator = new FuncGenerator(project);
@@ -27,21 +31,20 @@ export class IndexGenerator extends BaseGenerator {
 
     this.addHeader(sourceFile);
     sourceFile.addStatements([
-      `/// <reference path="./precomputed/index.d.ts" />`,
+      `/// <reference path="./precomputed.d.ts" />`,
       `/// <reference path="./enums.d.ts" />`,
       `/// <reference path="./bitfields.d.ts" />`,
       `/// <reference path="./classes.d.ts" />`,
-      `/// <reference path="./codeware/index.d.ts" />`,
-      `/// <reference path="./codeware/CodewareClasses.d.ts" />`,
+      `/// <reference path="./codeware.d.ts" />`,
     ]);
 
     this.funcGenerator.generate(sourceFile);
     this.classGenerator.generate(sourceFile);
 
     const mpGameExtends = ["MpGamePrecomputed", "MpFuncs", "MpClasses"];
-    
-    const codewareClassesPath = path.join(process.cwd(), "out", "codeware", "CodewareClasses.d.ts");
-    if (fs.existsSync(codewareClassesPath)) {
+
+    const codewareFilePath = path.join(process.cwd(), "out", "codeware.d.ts");
+    if (fs.existsSync(codewareFilePath)) {
       mpGameExtends.push("CodewareClasses");
     }
 

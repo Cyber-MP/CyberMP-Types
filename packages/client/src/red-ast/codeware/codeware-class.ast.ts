@@ -1,9 +1,6 @@
 import { CodewareTypeJson } from "./codeware-type.ast";
-import { CodewareFieldAst, CodewareFieldJson } from "./codeware-field.ast";
-import {
-  CodewareFunctionAst,
-  CodewareFunctionJson,
-} from "./codeware-function.ast";
+import { CodewareFieldJson } from "./codeware-field.ast";
+import { CodewareFunctionJson } from "./codeware-function.ast";
 
 export interface CodewareClassItemJson {
   item: {
