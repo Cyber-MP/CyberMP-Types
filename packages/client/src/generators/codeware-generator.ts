@@ -6,9 +6,9 @@ import {
   OptionalKind,
   PropertySignatureStructure,
   SourceFile,
-  ClassDeclarationStructure,
   MethodDeclarationStructure,
   PropertyDeclarationStructure,
+  ModuleDeclarationKind,
 } from "ts-morph";
 import { Logger } from "../utils/logger";
 import { blacklist, defsIndex } from "../config/constants";
@@ -572,6 +572,8 @@ export class CodewareGenerator extends BaseGenerator {
         propertiesStaticMap.set(prop.name, prop.isStatic || false);
       }
 
+      const classExistsInClasses = defsIndex.classes.has(mappedClassName);
+
       if (this.addedClasses.has(mappedClassName)) {
         const existingInterface = sourceFile.getInterface(mappedClassName);
         if (existingInterface) {
@@ -589,23 +591,91 @@ export class CodewareGenerator extends BaseGenerator {
             (method) => !existingMethodNames.has(method.name)
           );
 
-          for (const prop of newProperties) {
-            existingInterface.addProperty(prop);
+          for (const method of allMethods) {
+            methodsStaticMap.set(method.name, method.isStatic || false);
           }
-          for (const method of newMethods) {
-            existingInterface.addMethod(method);
+          for (const prop of allProperties) {
+            propertiesStaticMap.set(prop.name, prop.isStatic || false);
+          }
+
+          if (classExistsInClasses) {
+            const staticMethods = newMethods.filter((m) => m.isStatic);
+
+            if (staticMethods.length > 0) {
+              const existingModules = sourceFile
+                .getModules()
+                .filter((m) => m.getName() === mappedClassName);
+              let namespace =
+                existingModules.length > 0 ? existingModules[0] : null;
+              if (!namespace) {
+                namespace = sourceFile.addModule({
+                  name: mappedClassName,
+                  hasDeclareKeyword: true,
+                  declarationKind: ModuleDeclarationKind.Namespace,
+                });
+              }
+              for (const method of staticMethods) {
+                const existingFunction = namespace.getFunction(method.name);
+                if (!existingFunction) {
+                  namespace.addFunction({
+                    name: method.name,
+                    returnType: method.returnType,
+                    parameters: method.parameters,
+                  });
+                }
+              }
+            }
+
+            const instanceMethods = newMethods.filter((m) => !m.isStatic);
+            if (newProperties.length > 0 || instanceMethods.length > 0) {
+              for (const prop of newProperties) {
+                existingInterface.addProperty(prop);
+              }
+              for (const method of instanceMethods) {
+                existingInterface.addMethod(method);
+              }
+            }
+          } else {
+            for (const prop of newProperties) {
+              existingInterface.addProperty(prop);
+            }
+            for (const method of newMethods) {
+              existingInterface.addMethod(method);
+            }
           }
         }
       } else {
         this.addedClasses.add(mappedClassName);
-        this.codewareClasses.add(mappedClassName);
-        sourceFile.addInterface({
-          name: mappedClassName,
-          hasDeclareKeyword: true,
-          extends: extendsClause ? [extendsClause] : undefined,
-          properties: allProperties,
-          methods: allMethods,
-        });
+        if (!classExistsInClasses) {
+          this.codewareClasses.add(mappedClassName);
+        }
+
+        if (classExistsInClasses) {
+          const staticMethods = allMethods.filter((m) => m.isStatic);
+
+          if (staticMethods.length > 0) {
+            const namespace = sourceFile.addModule({
+              name: mappedClassName,
+              hasDeclareKeyword: true,
+              declarationKind: ModuleDeclarationKind.Namespace,
+            });
+            for (const method of staticMethods) {
+              namespace.addFunction({
+                name: method.name,
+                returnType: method.returnType,
+                parameters: method.parameters,
+              });
+            }
+          }
+        } else {
+          sourceFile.addInterface({
+            name: mappedClassName,
+            hasDeclareKeyword: true,
+            extends: extendsClause ? [extendsClause] : undefined,
+            properties: allProperties,
+            methods: allMethods,
+          });
+        }
       }
     }
 
@@ -659,6 +729,9 @@ export class CodewareGenerator extends BaseGenerator {
 
     for (const [className, extensions] of annotationExtensions.entries()) {
       const mappedClassName = CodewareTypeAst.mapClassName(className);
+      const isBaseAddonsOrOverridesForExt =
+        relativePath.startsWith("Base" + path.sep + "Addons") ||
+        relativePath.startsWith("Base" + path.sep + "Overrides");
       let properties: any[] = [];
       let methods: any[] = [];
 
@@ -691,12 +764,12 @@ export class CodewareGenerator extends BaseGenerator {
               type: CodewareTypeAst.toTypeScript(param.type),
               hasQuestionToken: param.qualifiers.optional,
             })),
-            isStatic: ext.qualifiers.static,
+            isStatic: ext.qualifiers.static || false,
           });
         }
       }
 
-      if (isBaseAddonsOrOverrides) {
+      if (isBaseAddonsOrOverridesForExt) {
         const baseClassDef = this.getClassDefinition(mappedClassName);
         if (baseClassDef) {
           properties = properties.filter(
@@ -733,6 +806,8 @@ export class CodewareGenerator extends BaseGenerator {
           propertiesStaticMap.set(prop.name, prop.isStatic || false);
         }
 
+        const classExistsInClasses = defsIndex.classes.has(mappedClassName);
+
         if (this.addedClasses.has(mappedClassName)) {
           const existingInterface = sourceFile.getInterface(mappedClassName);
           if (existingInterface) {
@@ -750,22 +825,83 @@ export class CodewareGenerator extends BaseGenerator {
               (method) => !existingMethodNames.has(method.name)
             );
 
-            for (const prop of newProperties) {
-              existingInterface.addProperty(prop);
-            }
-            for (const method of newMethods) {
-              existingInterface.addMethod(method);
+            if (classExistsInClasses) {
+              const staticMethods = newMethods.filter((m) => m.isStatic);
+
+              if (staticMethods.length > 0) {
+                const existingModules = sourceFile
+                  .getModules()
+                  .filter((m) => m.getName() === mappedClassName);
+                let namespace =
+                  existingModules.length > 0 ? existingModules[0] : null;
+                if (!namespace) {
+                  namespace = sourceFile.addModule({
+                    name: mappedClassName,
+                    hasDeclareKeyword: true,
+                    declarationKind: ModuleDeclarationKind.Namespace,
+                  });
+                }
+                for (const method of staticMethods) {
+                  const existingFunction = namespace.getFunction(method.name);
+                  if (!existingFunction) {
+                    namespace.addFunction({
+                      name: method.name,
+                      returnType: method.returnType,
+                      parameters: method.parameters,
+                    });
+                  }
+                }
+              }
+
+              const instanceMethods = newMethods.filter((m) => !m.isStatic);
+              if (newProperties.length > 0 || instanceMethods.length > 0) {
+                for (const prop of newProperties) {
+                  existingInterface.addProperty(prop);
+                }
+                for (const method of instanceMethods) {
+                  existingInterface.addMethod(method);
+                }
+              }
+            } else {
+              for (const prop of newProperties) {
+                existingInterface.addProperty(prop);
+              }
+              for (const method of newMethods) {
+                existingInterface.addMethod(method);
+              }
             }
           }
         } else {
           this.addedClasses.add(mappedClassName);
-          this.codewareClasses.add(mappedClassName);
-          sourceFile.addInterface({
-            name: mappedClassName,
-            hasDeclareKeyword: true,
-            properties,
-            methods,
-          });
+          if (!classExistsInClasses) {
+            this.codewareClasses.add(mappedClassName);
+          }
+
+          if (classExistsInClasses) {
+            const staticMethods = methods.filter((m) => m.isStatic);
+
+            if (staticMethods.length > 0) {
+              const namespace = sourceFile.addModule({
+                name: mappedClassName,
+                hasDeclareKeyword: true,
+                declarationKind: ModuleDeclarationKind.Namespace,
+              });
+              for (const method of staticMethods) {
+                namespace.addFunction({
+                  name: method.name,
+                  returnType: method.returnType,
+                  parameters: method.parameters,
+                });
+              }
+            }
+          } else {
+            sourceFile.addInterface({
+              name: mappedClassName,
+              hasDeclareKeyword: true,
+              properties,
+              methods,
+            });
+          }
         }
       }
     }
