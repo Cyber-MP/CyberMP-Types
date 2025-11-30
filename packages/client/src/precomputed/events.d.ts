@@ -1,14 +1,4 @@
 declare interface MpEvents {
-  on(
-    eventName: "onResourceStarted",
-    callback: (resourceName: string) => void
-  ): void;
-
-  on(
-    eventName: "onResourceStopped",
-    callback: (resourceName: string) => void
-  ): void;
-
   /**
    * Register a custom event listener.
    * @param eventName Name of the event.
@@ -60,6 +50,6 @@ declare interface MpEvents {
    */
   addCommand(
     commandName: string,
-    callback: (id: number, args: string[]) => void
+    callback: (id: number, args: string[]) => void,
   ): void;
 }

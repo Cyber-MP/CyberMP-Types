@@ -13,8 +13,8 @@ declare interface MpGamePrecomputed {
   onInputKeyEvent(
     callback: (
       action: CyberEnums.EInputAction,
-      key: CyberEnums.EInputKey
-    ) => void
+      key: CyberEnums.EInputKey,
+    ) => void,
   ): void;
 
   /**
@@ -51,12 +51,6 @@ declare interface MpGamePrecomputed {
   getHashFromName(name: string, type: "tweakdbid" | "cname"): string;
 
   /**
-   * @callback selfFunction
-   * @param self Link to used class
-   * @param args Method arguments
-   */
-
-  /**
    * Overrides method function inside selected class.
    * @param className Class name
    * @param methodName Method name inside of class
@@ -65,7 +59,7 @@ declare interface MpGamePrecomputed {
   override(
     className: string,
     methodName: string,
-    func: (self: any, ...args: any[]) => void
+    func: (self: any, ...args: any[]) => void,
   ): void;
 
   /**
@@ -77,7 +71,7 @@ declare interface MpGamePrecomputed {
   observeAfter(
     className: string,
     methodName: string,
-    callback: (self: any, ...args: any[]) => void
+    callback: (self: any, ...args: any[]) => void,
   ): void;
 
   /**
@@ -89,7 +83,7 @@ declare interface MpGamePrecomputed {
   observeBefore(
     className: string,
     methodName: string,
-    callback: (self: any, ...args: any[]) => void
+    callback: (self: any, ...args: any[]) => void,
   ): void;
 
   /**
@@ -101,7 +95,7 @@ declare interface MpGamePrecomputed {
   observe(
     className: string,
     methodName: string,
-    callback: (self: any, ...args: any[]) => void
+    callback: (self: any, ...args: any[]) => void,
   ): void;
 
   /**
@@ -114,7 +108,7 @@ declare interface MpGamePrecomputed {
   observeAfterRaw(
     className: string,
     methodName: string,
-    callback: (self: any, ...args: any[]) => void
+    callback: (self: any, ...args: any[]) => void,
   ): void;
 
   /**
@@ -127,7 +121,7 @@ declare interface MpGamePrecomputed {
   observeBeforeRaw(
     className: string,
     methodName: string,
-    callback: (self: any, ...args: any[]) => void
+    callback: (self: any, ...args: any[]) => void,
   ): void;
 
   /**
@@ -139,7 +133,7 @@ declare interface MpGamePrecomputed {
   observeRaw(
     className: string,
     methodName: string,
-    callback: (self: any, ...args: any[]) => void
+    callback: (self: any, ...args: any[]) => void,
   ): void;
 
   isBlackScreenStarted(): boolean;

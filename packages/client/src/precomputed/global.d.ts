@@ -131,7 +131,7 @@ declare interface MpGlobalPrecomputed {
 
   changeCefViewUrl(newUrl: string): void;
 
-  setTick(cb: () => void): number;
+  setTick(cb: () => void | Promise<void>): number;
 
   clearTick(tickId: number): void;
 }
