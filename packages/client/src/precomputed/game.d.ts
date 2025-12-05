@@ -11,8 +11,8 @@ declare interface MpGamePrecomputed {
   onInputKeyEvent(
     callback: (
       action: CyberEnums.EInputAction,
-      key: CyberEnums.EInputKey
-    ) => void
+      key: CyberEnums.EInputKey,
+    ) => void,
   ): void;
 
   /**
@@ -47,9 +47,94 @@ declare interface MpGamePrecomputed {
    * @returns Model hash
    */
   getHashFromName(name: string, type: "tweakdbid" | "cname"): string;
-  
-  
+
+  /**
+   * Overrides method function inside selected class.
+   * @param className Class name
+   * @param methodName Method name inside of class
+   * @param {selfFunction} func Function to override instead
+   */
+  override(
+    className: string,
+    methodName: string,
+    func: (self: any, ...args: any[]) => void,
+  ): void;
+
+  /**
+   * Observes method inside selected class.
+   * @param className Class name
+   * @param methodName Method name inside of class
+   * @param {selfFunction} callback Callback of method function.
+   */
+  observeAfter(
+    className: string,
+    methodName: string,
+    callback: (self: any, ...args: any[]) => void,
+  ): void;
+
+  /**
+   * Observes method inside selected class.
+   * @param className Class name
+   * @param methodName Method name inside of class
+   * @param {selfFunction} callback Callback of method function.
+   */
+  observeBefore(
+    className: string,
+    methodName: string,
+    callback: (self: any, ...args: any[]) => void,
+  ): void;
+
+  /**
+   * Alias for {@link observeBefore}.
+   * @param className Class name
+   * @param methodName Method name inside of class
+   * @param {selfFunction} callback Callback of method function.
+   */
+  observe(
+    className: string,
+    methodName: string,
+    callback: (self: any, ...args: any[]) => void,
+  ): void;
+
+  /**
+   * Observes method inside selected class. Can only call methods from {@link MpGame}.
+   * Should be used when it's important for the function to execute quickly (as fast as V8 allows).
+   * @param className Class name
+   * @param methodName Method name inside of class
+   * @param {selfFunction} callback Callback of method function.
+   */
+  observeAfterRaw(
+    className: string,
+    methodName: string,
+    callback: (self: any, ...args: any[]) => void,
+  ): void;
+
+  /**
+   * Observes method inside selected class. Can only call methods from {@link MpGame}.
+   * Should be used when it's important for the function to execute quickly (as fast as V8 allows).
+   * @param className Class name
+   * @param methodName Method name inside of class
+   * @param {selfFunction} callback Callback of method function.
+   */
+  observeBeforeRaw(
+    className: string,
+    methodName: string,
+    callback: (self: any, ...args: any[]) => void,
+  ): void;
+
+  /**
+   * Alias for {@link observeBeforeRaw}.
+   * @param className Class name
+   * @param methodName Method name inside of class
+   * @param {selfFunction} callback Callback of method function.
+   */
+  observeRaw(
+    className: string,
+    methodName: string,
+    callback: (self: any, ...args: any[]) => void,
+  ): void;
+
   isBlackScreenStarted(): boolean;
-  
+
   isBlackScreenEnded(): boolean;
 }
