@@ -1,5 +1,5 @@
+import { consola } from "consola";
 import { Project, VariableDeclarationKind } from "ts-morph";
-import { Logger } from "../utils/logger";
 import { BaseGenerator } from "./base-generator";
 import { ClassGenerator } from "./class-generator";
 import { FuncGenerator } from "./func-generator";
@@ -21,6 +21,7 @@ export class IndexGenerator extends BaseGenerator {
     });
 
     this.addHeader(sourceFile);
+
     sourceFile.addStatements([
       `/// <reference path="./precomputed/index.d.ts" />`,
       `/// <reference path="./enums.d.ts" />`,
@@ -49,6 +50,6 @@ export class IndexGenerator extends BaseGenerator {
     });
 
     sourceFile.saveSync();
-    Logger.success("Index generated successfully");
+    consola.success("Index generated successfully");
   }
 }

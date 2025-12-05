@@ -1,10 +1,10 @@
-import { BaseGenerator } from "./base-generator";
-import { uniqueBy } from "../utils/file-utils";
-import { Project, ModuleDeclarationKind } from "ts-morph";
-import { Logger } from "../utils/logger";
+import { consola } from "consola";
 import { defsIndex } from "src/config/constants";
-import enums from "../../assets/enums.json";
 import { RedEnumAst } from "src/red-ast/red-enum.ast";
+import { ModuleDeclarationKind, Project } from "ts-morph";
+import enums from "../../assets/enums.json";
+import { uniqueBy } from "../utils/file-utils";
+import { BaseGenerator } from "./base-generator";
 
 export class EnumGenerator extends BaseGenerator {
   private enums: RedEnumAst[];
@@ -39,6 +39,6 @@ export class EnumGenerator extends BaseGenerator {
     });
     sourceFile.saveSync();
 
-    Logger.success("Enums generated successfully");
+    consola.success("Enums generated successfully");
   }
 }

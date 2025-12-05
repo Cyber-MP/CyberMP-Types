@@ -21,6 +21,7 @@ import {
 import classes from "../../assets/classes.json";
 import { Logger } from "../utils/logger";
 import { BaseGenerator } from "./base-generator";
+import { consola } from "consola";
 
 enum RedFunctionFlags {
   isPrivate,
@@ -152,6 +153,6 @@ export class ClassGenerator extends BaseGenerator<[SourceFile]> {
       ),
     });
 
-    Logger.success("Classes generated successfully");
+    consola.success("Classes generated successfully");
   }
 }

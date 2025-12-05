@@ -111,7 +111,7 @@ declare interface MpGlobalPrecomputed {
   getPlayerServerId(playerHash: number): number;
 
   /**
-   * Get console variable value as string.
+   * Get src variable value as string.
    */
   getVar(varName: string): string;
 

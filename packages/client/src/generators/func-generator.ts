@@ -1,5 +1,8 @@
-import { BaseGenerator } from "./base-generator";
-import { uniqueBy } from "../utils/file-utils";
+import { consola } from "consola";
+import { defsIndex } from "src/config/constants";
+import { RedFunctionAst } from "src/red-ast/red-function.ast";
+import { RedTypeAst } from "src/red-ast/red-type.ast";
+import { getFunctionParams } from "src/utils/type-resolver";
 import {
   MethodSignatureStructure,
   OptionalKind,
@@ -7,11 +10,8 @@ import {
   SourceFile,
 } from "ts-morph";
 import globalFuncs from "../../assets/globals.json";
-import { Logger } from "../utils/logger";
-import { defsIndex } from "src/config/constants";
-import { RedFunctionAst } from "src/red-ast/red-function.ast";
-import { RedTypeAst } from "src/red-ast/red-type.ast";
-import { getFunctionParams } from "src/utils/type-resolver";
+import { uniqueBy } from "../utils/file-utils";
+import { BaseGenerator } from "./base-generator";
 
 export class FuncGenerator extends BaseGenerator<[SourceFile]> {
   private funcs: RedFunctionAst[];
@@ -20,7 +20,7 @@ export class FuncGenerator extends BaseGenerator<[SourceFile]> {
     super(project);
 
     const functions: RedFunctionAst[] = globalFuncs.map((json) =>
-      RedFunctionAst.fromJson(json)
+      RedFunctionAst.fromJson(json),
     );
 
     functions.sort(RedFunctionAst.sort);
@@ -31,7 +31,7 @@ export class FuncGenerator extends BaseGenerator<[SourceFile]> {
           !item.name.startsWith("Operator") && !item.name.startsWith("Cast")
         );
       }),
-      (m) => m.name
+      (m) => m.name,
     );
     defsIndex.funcs = new Set<string>([...this.funcs.map((o) => o.name)]);
   }
@@ -50,6 +50,6 @@ export class FuncGenerator extends BaseGenerator<[SourceFile]> {
         // docs: (fn as any).docs,
       })),
     });
-    Logger.success("Funcs generated successfully");
+    consola.success("Funcs generated successfully");
   }
 }

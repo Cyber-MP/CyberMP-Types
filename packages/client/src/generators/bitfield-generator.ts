@@ -1,10 +1,10 @@
-import { BaseGenerator } from "./base-generator";
-import { uniqueBy } from "../utils/file-utils";
-import { Project, ModuleDeclarationKind } from "ts-morph";
-import { Logger } from "../utils/logger";
+import { consola } from "consola";
 import { defsIndex } from "src/config/constants";
-import bitfields from "../../assets/bitfields.json";
 import { RedBitfieldAst } from "src/red-ast/red-bitfield.ast";
+import { ModuleDeclarationKind, Project } from "ts-morph";
+import bitfields from "../../assets/bitfields.json";
+import { uniqueBy } from "../utils/file-utils";
+import { BaseGenerator } from "./base-generator";
 
 export class BitfieldGenerator extends BaseGenerator {
   private bitfields: RedBitfieldAst[];
@@ -38,6 +38,6 @@ export class BitfieldGenerator extends BaseGenerator {
 
     sourceFile.saveSync();
 
-    Logger.success("Bitfields generated successfully");
+    consola.success("Bitfields generated successfully");
   }
 }
