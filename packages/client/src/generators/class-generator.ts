@@ -1,3 +1,4 @@
+import { consola } from "consola";
 import { defsIndex } from "src/config/constants";
 import { RedClassAst } from "src/red-ast/red-class.ast";
 import { RedVisibilityDef } from "src/red-ast/red-definitions.ast";
@@ -19,9 +20,7 @@ import {
   SourceFile,
 } from "ts-morph";
 import classes from "../../assets/classes.json";
-import { Logger } from "../utils/logger";
 import { BaseGenerator } from "./base-generator";
-import { consola } from "consola";
 
 enum RedFunctionFlags {
   isPrivate,

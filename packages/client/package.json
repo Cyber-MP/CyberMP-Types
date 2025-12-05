@@ -9,7 +9,10 @@
   "scripts": {
     "start": "tsx ./src",
     "dev": "tsx watch ./src",
-    "build": "npm run start"
+    "build": "npm run start",
+    "test": "vitest run",
+    "test:dev": "vitest",
+    "prepublishOnly": "pnpm build && pnpm test"
   },
   "keywords": [],
   "author": "terminaate",
@@ -19,9 +22,11 @@
   "license": "MIT",
   "packageManager": "pnpm@10.14.0",
   "devDependencies": {
+    "@vitest/ui": "4.0.15",
     "consola": "^3.4.2",
     "rimraf": "^6.0.1",
-    "ts-morph": "^26.0.0"
+    "ts-morph": "^26.0.0",
+    "vitest": "^4.0.15"
   },
   "publishConfig": {
     "access": "public"
