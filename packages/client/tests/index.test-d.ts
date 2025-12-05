@@ -21,5 +21,23 @@ describe("Core, basis functions", () => {
     expectTypeOf<
       Parameters<vehicleBaseObject["GetSlotIdForMountedObject"]>
     >().toEqualTypeOf<[mountedObject: gameObject]>();
+    expectTypeOf<
+      ReturnType<worldWeatherScriptInterface["GetRainIntensity"]>
+    >().toEqualTypeOf<number>();
+  });
+
+  test("Custom mp injeceted natives", () => {
+    expectTypeOf<
+      ReturnType<vehicleBaseObject["HasGravity"]>
+    >().toEqualTypeOf<boolean>();
+
+    expectTypeOf<
+      ReturnType<worldWeatherScriptInterface["SetWeather"]>
+    >().toEqualTypeOf<void>();
+    expectTypeOf<
+      Parameters<worldWeatherScriptInterface["SetWeather"]>
+    >().toEqualTypeOf<
+      [weahter: CyberEnums.WeatherState, blendTime?: number, priority?: number]
+    >();
   });
 });
