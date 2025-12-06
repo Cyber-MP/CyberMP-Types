@@ -1,8 +1,11 @@
-import { RedNodeAst, RedNodeKind } from "./red-node.ast";
-import { cyrb53 } from "../utils/string";
-import { RedPrimitiveDef, RedTemplateDef } from "./red-definitions.ast";
-import { CodeSyntax } from "./red-definitions.ast";
 import { defsIndex, LuaPrimitiveDef } from "src/config/constants";
+import { cyrb53 } from "../utils/string";
+import {
+  CodeSyntax,
+  RedPrimitiveDef,
+  RedTemplateDef,
+} from "./red-definitions.ast";
+import { RedNodeAst, RedNodeKind } from "./red-node.ast";
 
 export interface RedTypeJson {
   readonly a?: number; // flag
@@ -32,10 +35,14 @@ export class RedTypeAst {
     // Use aliasName when available (similar to toLuadoc)
     let baseName = type.name ?? "any";
 
-    if (defsIndex.enums.has(baseName)) {
-      baseName = `CyberEnums.${baseName}`;
-    } else if (defsIndex.bitfields.has(baseName)) {
-      baseName = `CyberEnums.BitFields.${baseName}`;
+    if (defsIndex.enums.has(type.name)) {
+      baseName = `CyberEnums.${type.name}`;
+    } else if (defsIndex.bitfields.has(type.name)) {
+      baseName = `CyberEnums.BitFields.${type.name}`;
+    }
+
+    if (type.name === "Void") {
+      console.log("void captured");
     }
 
     // Primitive mapping
@@ -125,11 +132,15 @@ export class RedTypeAst {
       return `${baseName}<${innerTs}>`;
     }
 
-    if (defsIndex.classes.has(baseName) || defsIndex.funcs.has(baseName)) {
+    if (
+      defsIndex.classes.has(baseName) ||
+      defsIndex.funcs.has(baseName) ||
+      defsIndex.enums.has(type.name) ||
+      defsIndex.bitfields.has(type.name)
+    ) {
       return baseName;
     }
 
-    // TODO: FOR AROUND HERE FOR ARRAY AND SMTH LIEK THAT
     return "any";
   }
 
@@ -279,8 +290,8 @@ export class RedTypeAst {
       flag === undefined
         ? json.b!
         : flag <= RedPrimitiveDef.Variant
-        ? RedPrimitiveDef[flag]
-        : RedTemplateDef[flag];
+          ? RedPrimitiveDef[flag]
+          : RedTemplateDef[flag];
 
     return {
       id: cyrb53(name),
@@ -300,7 +311,7 @@ export class RedTypeAst {
       return this.loadAlias(nodes, type.innerType);
     }
     const alias: RedNodeAst | undefined = nodes.find(
-      (node) => node.name === type.name
+      (node) => node.name === type.name,
     );
 
     if (!alias) {
@@ -320,7 +331,7 @@ export class RedTypeAst {
         this.pseudocodeToPrimitive(token);
       const templateDef: RedTemplateDef | undefined = this.pseudocodeToTemplate(
         token,
-        innerDef
+        innerDef,
       );
       let name: string;
 
@@ -354,10 +365,10 @@ export class RedTypeAst {
 
   static pseudocodeToTemplate(
     code: string,
-    innerDef: any
+    innerDef: any,
   ): RedTemplateDef | undefined {
     const staticArrayMatch: RegExpMatchArray | null = code.match(
-      /\\\\\[(?<size>[0-9]+)].*/
+      /\\\\\[(?<size>[0-9]+)].*/,
     );
 
     if (staticArrayMatch) {

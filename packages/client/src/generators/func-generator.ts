@@ -1,8 +1,10 @@
 import { consola } from "consola";
 import { defsIndex } from "src/config/constants";
 import { RedFunctionAst } from "src/red-ast/red-function.ast";
-import { RedTypeAst } from "src/red-ast/red-type.ast";
-import { getFunctionParams } from "src/utils/type-resolver";
+import {
+  getFunctionParams,
+  getFunctionReturnType,
+} from "src/utils/type-resolver";
 import {
   MethodSignatureStructure,
   OptionalKind,
@@ -33,6 +35,7 @@ export class FuncGenerator extends BaseGenerator<[SourceFile]> {
       }),
       (m) => m.name,
     );
+
     defsIndex.funcs = new Set<string>([...this.funcs.map((o) => o.name)]);
   }
 
@@ -41,15 +44,11 @@ export class FuncGenerator extends BaseGenerator<[SourceFile]> {
       name: "MpFuncs",
       methods: this.funcs.map<OptionalKind<MethodSignatureStructure>>((fn) => ({
         name: `"${fn.name}"`,
-        returnType: fn.returnType
-          ? RedTypeAst.toTypescript(fn?.returnType)
-          : "any",
+        returnType: getFunctionReturnType(fn),
         parameters: getFunctionParams(fn.arguments),
-        // returnType: resolveType(fn.return),
-        // parameters: getFunctionParams(fn.params),
-        // docs: (fn as any).docs,
       })),
     });
+
     consola.success("Funcs generated successfully");
   }
 }

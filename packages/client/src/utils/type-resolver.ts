@@ -23,7 +23,7 @@ export function getFunctionParams(
 
 export function getFunctionReturnType(fn: RedFunctionAst) {
   if (!fn.returnType) {
-    return "any";
+    return "void";
   }
 
   const candidateOut = fn.arguments.find((o) => o.isOut);
