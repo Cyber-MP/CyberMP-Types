@@ -37,13 +37,7 @@ declare interface MpGlobalPrecomputed {
   /**
    * Local player spawning API.
    */
-  setSpawnDataLocalPlayer(
-    modelHash: number,
-    x: number,
-    y: number,
-    z: number,
-    yaw: number,
-  ): void;
+  setSpawnDataLocalPlayer(x: number, y: number, z: number, yaw: number): void;
 
   spawnLocalPlayer(): boolean;
 
