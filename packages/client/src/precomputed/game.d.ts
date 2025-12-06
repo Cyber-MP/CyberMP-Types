@@ -4,6 +4,30 @@
 /// <reference path="./classes.d.ts" />
 /// <reference path="../classes.d.ts" />
 
+interface OverrideFunction {
+  <
+    C extends keyof MpClasses,
+    I extends UnwrapMpClass<MpClasses[C]>,
+    M extends keyof I extends never ? string : keyof I,
+  >(
+    className: C,
+    methodName: M,
+    callback: (self: I, ...args: [...Parameters<I[M]>, origin: I[M]]) => void,
+  ): void;
+}
+
+interface ObserveFunction {
+  <
+    C extends keyof MpClasses,
+    I extends UnwrapMpClass<MpClasses[C]>,
+    M extends keyof I extends never ? string : keyof I,
+  >(
+    className: C,
+    methodName: M,
+    callback: (self: I, ...args: Parameters<I[M]>) => void,
+  ): void;
+}
+
 declare interface MpGamePrecomputed {
   CyberMP: CyberMP;
 
@@ -56,17 +80,7 @@ declare interface MpGamePrecomputed {
    * @param methodName Method name inside of class
    * @param {selfFunction} func Function to override instead
    */
-  override<
-    C extends keyof MpClasses,
-    I extends MpClasses[C] extends { new (...args: any[]): infer R }
-      ? R
-      : never,
-    M extends keyof I,
-  >(
-    className: C,
-    methodName: M,
-    func: (self: I, ...args: [...Parameters<I[M]>, I[M]]) => void,
-  ): void;
+  override: OverrideFunction;
 
   /**
    * Observes method inside selected class.
@@ -74,11 +88,7 @@ declare interface MpGamePrecomputed {
    * @param methodName Method name inside of class
    * @param {selfFunction} callback Callback of method function.
    */
-  observeAfter(
-    className: string,
-    methodName: string,
-    callback: (self: any, ...args: any[]) => void,
-  ): void;
+  observeAfter: ObserveFunction;
 
   /**
    * Observes method inside selected class.
@@ -86,11 +96,7 @@ declare interface MpGamePrecomputed {
    * @param methodName Method name inside of class
    * @param {selfFunction} callback Callback of method function.
    */
-  observeBefore(
-    className: string,
-    methodName: string,
-    callback: (self: any, ...args: any[]) => void,
-  ): void;
+  observeBefore: ObserveFunction;
 
   /**
    * Alias for {@link observeBefore}.
@@ -98,11 +104,7 @@ declare interface MpGamePrecomputed {
    * @param methodName Method name inside of class
    * @param {selfFunction} callback Callback of method function.
    */
-  observe(
-    className: string,
-    methodName: string,
-    callback: (self: any, ...args: any[]) => void,
-  ): void;
+  observe: ObserveFunction;
 
   /**
    * Observes method inside selected class. Can only call methods from {@link MpGame}.
@@ -111,11 +113,7 @@ declare interface MpGamePrecomputed {
    * @param methodName Method name inside of class
    * @param {selfFunction} callback Callback of method function.
    */
-  observeAfterRaw(
-    className: string,
-    methodName: string,
-    callback: (self: any, ...args: any[]) => void,
-  ): void;
+  observeAfterRaw: ObserveFunction;
 
   /**
    * Observes method inside selected class. Can only call methods from {@link MpGame}.
@@ -124,11 +122,7 @@ declare interface MpGamePrecomputed {
    * @param methodName Method name inside of class
    * @param {selfFunction} callback Callback of method function.
    */
-  observeBeforeRaw(
-    className: string,
-    methodName: string,
-    callback: (self: any, ...args: any[]) => void,
-  ): void;
+  observeBeforeRaw: ObserveFunction;
 
   /**
    * Alias for {@link observeBeforeRaw}.
@@ -136,11 +130,7 @@ declare interface MpGamePrecomputed {
    * @param methodName Method name inside of class
    * @param {selfFunction} callback Callback of method function.
    */
-  observeRaw(
-    className: string,
-    methodName: string,
-    callback: (self: any, ...args: any[]) => void,
-  ): void;
+  observeRaw: ObserveFunction;
 
   isBlackScreenStarted(): boolean;
 

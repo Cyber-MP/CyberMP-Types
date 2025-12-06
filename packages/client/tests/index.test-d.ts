@@ -40,4 +40,66 @@ describe("Core, basis functions", () => {
       [weahter: CyberEnums.WeatherState, blendTime?: number, priority?: number]
     >();
   });
+
+  test("Observers and Overrides", () => {
+    expectTypeOf(mp.game.override).toEqualTypeOf<OverrideFunction>();
+
+    mp.game.override("PlayerPuppet", "GetDisplayName", (self, ...args) => {
+      expectTypeOf(self).toEqualTypeOf<PlayerPuppet>();
+
+      const [origin] = args.slice(-1);
+      expectTypeOf(origin).toEqualTypeOf<PlayerPuppet["GetDisplayName"]>();
+
+      expectTypeOf<Parameters<typeof origin>>().toEqualTypeOf<
+        Parameters<PlayerPuppet["GetDisplayName"]>
+      >();
+    });
+
+    expectTypeOf(mp.game.observe).toEqualTypeOf<ObserveFunction>();
+    expectTypeOf(mp.game.observeBefore).toEqualTypeOf<ObserveFunction>();
+    expectTypeOf(mp.game.observeAfter).toEqualTypeOf<ObserveFunction>();
+
+    mp.game.observe("PlayerPuppet", "Kill", (self, ...args) => {
+      expectTypeOf(self).toEqualTypeOf<PlayerPuppet>();
+      expectTypeOf(args).toEqualTypeOf<Parameters<PlayerPuppet["Kill"]>>();
+    });
+
+    expectTypeOf(mp.game.observeRaw).toEqualTypeOf<ObserveFunction>();
+    expectTypeOf(mp.game.observeBeforeRaw).toEqualTypeOf<ObserveFunction>();
+    expectTypeOf(mp.game.observeAfterRaw).toEqualTypeOf<ObserveFunction>();
+
+    mp.game.observeRaw(
+      "vehicleBaseObject",
+      "AddCollisionForce",
+      (self, ...args) => {
+        expectTypeOf(self).toEqualTypeOf<vehicleBaseObject>();
+        expectTypeOf(args).toEqualTypeOf<
+          Parameters<vehicleBaseObject["AddCollisionForce"]>
+        >();
+      },
+    );
+
+    mp.game.override(
+      "worldWeatherScriptInterface",
+      "SetWeather",
+      (self, weather, blendTime, priority, origin) => {
+        expectTypeOf(self).toEqualTypeOf<worldWeatherScriptInterface>();
+
+        expectTypeOf(origin).toEqualTypeOf<
+          worldWeatherScriptInterface["SetWeather"]
+        >();
+      },
+    );
+
+    mp.game.observeAfter(
+      "worldWeatherScriptInterface",
+      "GetRainIntensity",
+      (self, ...args) => {
+        expectTypeOf(self).toEqualTypeOf<worldWeatherScriptInterface>();
+        expectTypeOf(args).toEqualTypeOf<
+          Parameters<worldWeatherScriptInterface["GetRainIntensity"]>
+        >();
+      },
+    );
+  });
 });
