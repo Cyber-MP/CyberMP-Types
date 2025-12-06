@@ -56,10 +56,16 @@ declare interface MpGamePrecomputed {
    * @param methodName Method name inside of class
    * @param {selfFunction} func Function to override instead
    */
-  override(
-    className: string,
-    methodName: string,
-    func: (self: any, ...args: any[]) => void,
+  override<
+    C extends keyof MpClasses,
+    I extends MpClasses[C] extends { new (...args: any[]): infer R }
+      ? R
+      : never,
+    M extends keyof I,
+  >(
+    className: C,
+    methodName: M,
+    func: (self: I, ...args: [...Parameters<I[M]>, I[M]]) => void,
   ): void;
 
   /**
