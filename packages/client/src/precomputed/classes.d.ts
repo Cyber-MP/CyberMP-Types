@@ -8,7 +8,7 @@ declare interface CyberMP {
    * Removes game object classes (e.g., T extends gameObject, playerPuppet, NpcPuppet) from the map.
    * @param objectClassMap Array of class names to delete.
    */
-  DeclareDeletedObjects(objectClassMap: string[]): void;
+  DeclareDeletedObjects(objectClassMap: Array<keyof MpClasses>): void;
 
   /**
    * Removes game objects by their unique hashes from the map.
@@ -54,6 +54,14 @@ declare interface vehicleBaseObject extends gameObject {
   public VehicleOwnerWasChanged(): void;
 }
 
-declare class gameMappinSystem extends gamemappinsIMappinSystem {
+declare interface gameMappinSystem extends gamemappinsIMappinSystem {
   TrackMappin(id: gameNewMappinID): void;
+}
+
+type OnlyExtendingScriptableSystem<T> = {
+  [K in keyof T as T[K] extends typeof gameScriptableSystem ? K : never]: T[K];
+};
+
+declare interface gameScriptableSystemsContainer<Map = OnlyExtendingScriptableSystem<MpClasses>> {
+  "Get"<N extends keyof Map>(systemName: N): UnwrapMpClass<Map[N]>;
 }

@@ -11,6 +11,11 @@ describe("Core, basis functions", () => {
     >();
   });
 
+  const policeRadioSystem =
+    mp.game.ScriptGameInstance.GetScriptableSystemsContainer().Get(
+      "HUDManager",
+    );
+
   test("MpGame Functions", () => {
     expectTypeOf(mp.game.CanLog()).toEqualTypeOf<boolean>();
     expectTypeOf(mp.game.GetPlayer()).toEqualTypeOf<PlayerPuppet>();
