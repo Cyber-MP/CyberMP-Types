@@ -9,6 +9,9 @@
   "scripts": {
     "start": "tsx ./src",
     "dev": "tsx watch ./src",
+    "generate-patches": "tsx ./src/generate-patches.ts",
+    "apply-patches": "tsx ./src/apply-patches.ts",
+    "prettify-edited": "tsx ./src/prettify-edited.ts",
     "build": "npm run start",
     "test": "vitest run",
     "test:dev": "vitest",
@@ -22,8 +25,11 @@
   "license": "MIT",
   "packageManager": "pnpm@10.14.0",
   "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
     "@vitest/ui": "4.0.15",
     "consola": "^3.4.2",
+    "fast-json-patch": "^3.1.1",
+    "fs-extra": "^11.3.2",
     "rimraf": "^6.0.1",
     "ts-morph": "^26.0.0",
     "vitest": "^4.0.15"
