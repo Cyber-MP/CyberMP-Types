@@ -15,7 +15,7 @@ export class IndexGenerator extends BaseGenerator {
     this.classGenerator = new ClassGenerator(project);
   }
 
-  generate() {
+  async generate() {
     const sourceFile = this.project.createSourceFile("./out/index.d.ts", "", {
       overwrite: true,
     });
@@ -30,7 +30,7 @@ export class IndexGenerator extends BaseGenerator {
     ]);
 
     this.funcGenerator.generate(sourceFile);
-    this.classGenerator.generate(sourceFile);
+    await this.classGenerator.generate(sourceFile);
 
     sourceFile.addInterface({
       name: "MpGame",

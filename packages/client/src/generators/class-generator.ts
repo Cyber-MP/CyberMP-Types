@@ -9,6 +9,8 @@ import {
   getFunctionParams,
   getFunctionReturnType,
 } from "src/utils/type-resolver";
+import { wikiClient, wikiParser } from "src/wiki";
+import { WikiClassDto } from "src/wiki/dtos";
 import {
   ClassDeclarationStructure,
   MethodDeclarationStructure,
@@ -59,77 +61,73 @@ export class ClassGenerator extends BaseGenerator<[SourceFile]> {
     defsIndex.classes = new Set<string>(this.classObjs.map((o) => o.name));
   }
 
-  private sortClasses(
-    classes: OptionalKind<ClassDeclarationStructure>[],
-  ): OptionalKind<ClassDeclarationStructure>[] {
-    const byName = new Map(classes.map((c) => [c.name!, c]));
-    const visited = new Set<string>();
-    const result: OptionalKind<ClassDeclarationStructure>[] = [];
-
-    const visit = (cls: OptionalKind<ClassDeclarationStructure>) => {
-      if (!cls.name || visited.has(cls.name)) return;
-      if (cls.extends && byName.has(cls.extends as string)) {
-        visit(byName.get(cls.extends as string)!);
-      }
-      visited.add(cls.name);
-      result.push(cls);
-    };
-
-    for (const cls of classes) visit(cls);
-    return result;
-  }
-
-  generate(file: SourceFile) {
+  async generate(file: SourceFile) {
     const sourceFile = this.createSourceFile("./out/classes.d.ts");
 
-    const classMap = new Map<string, any>(
-      this.classObjs.map((o) => [o.name, o]),
-    );
+    const classes = await Promise.all(
+      this.classObjs.map<Promise<OptionalKind<ClassDeclarationStructure>>>(
+        async (obj) => {
+          let classDocs: WikiClassDto;
 
-    const classes = this.classObjs.map<OptionalKind<ClassDeclarationStructure>>(
-      (obj) => {
-        const funcs: RedFunctionAst[] = obj.functions ?? [];
-        const propsList: RedPropertyAst[] = obj.properties ?? [];
-
-        // method names set
-        const methodNames = new Set<string>(funcs.map((f) => String(f.name)));
-
-        // filter out properties that collide with method names (delete duplicates)
-        const filteredProps = propsList.filter((p) => {
-          const propName = String(p.name);
-          if (methodNames.has(propName)) {
-            // removed because method with same name exists
-            return false;
+          if (
+            wikiClient.classes.find(
+              (o) => o.className.toLowerCase() === obj.name.toLowerCase(),
+            )
+          ) {
+            classDocs = wikiParser.parseClass(
+              await wikiClient.getClass(obj.name),
+              obj.name,
+            );
           }
-          return true;
-        });
 
-        const properties: OptionalKind<PropertyDeclarationStructure>[] =
-          filteredProps.map((p) => ({
-            name: `"${p.name}"`,
-            type: RedTypeAst.toTypescript(p.type),
-          }));
+          const funcs: RedFunctionAst[] = obj.functions ?? [];
+          const propsList: RedPropertyAst[] = obj.properties ?? [];
 
-        const methods: OptionalKind<MethodDeclarationStructure>[] = funcs.map(
-          (fn) => ({
-            name: `"${fn.name}"`,
-            returnType: getFunctionReturnType(fn),
-            parameters: getFunctionParams(fn.arguments),
-            isStatic: fn.isStatic,
-            // scope: visibilityToScope[fn.visibility],
-            // returnType: resolveType(fn.return),
-            // parameters: getFunctionParams(fn.params),
-          }),
-        );
+          // method names set
+          const methodNames = new Set<string>(funcs.map((f) => String(f.name)));
 
-        return {
-          name: obj.name,
-          extends: obj.parent,
-          hasDeclareKeyword: true,
-          properties,
-          methods,
-        };
-      },
+          // filter out properties that collide with method names (delete duplicates)
+          const filteredProps = propsList.filter((p) => {
+            const propName = String(p.name);
+            if (methodNames.has(propName)) {
+              // removed because method with same name exists
+              return false;
+            }
+            return true;
+          });
+
+          const properties: OptionalKind<PropertyDeclarationStructure>[] =
+            filteredProps.map((p) => ({
+              name: `"${p.name}"`,
+              type: RedTypeAst.toTypescript(p.type),
+            }));
+
+          const methods: OptionalKind<MethodDeclarationStructure>[] = funcs.map(
+            (fn) => {
+              const fnDocs = classDocs?.functions?.find(
+                (o) => o.name === fn.name,
+              );
+
+              return {
+                name: `"${fn.name}"`,
+                returnType: getFunctionReturnType(fn),
+                parameters: getFunctionParams(fn.arguments),
+                isStatic: fn.isStatic,
+                docs: fnDocs ? [fnDocs.comment] : [],
+              };
+            },
+          );
+
+          return {
+            name: obj.name,
+            extends: obj.parent,
+            hasDeclareKeyword: true,
+            properties,
+            methods,
+            docs: classDocs ? [classDocs.comment] : [],
+          };
+        },
+      ),
     );
 
     this.addHeader(sourceFile);
