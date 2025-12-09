@@ -28,8 +28,21 @@ interface ObserveFunction {
   ): void;
 }
 
+interface TweakDB {
+  getRecords<T = any>(str: string): T[];
+  getRecord<T = any>(str: string): T;
+  query(str: string): string[];
+  getFlat<T = any>(str: string): T;
+  setFlats(str: string, arr: any[]): boolean;
+  setFlat(str: string, obj: any): boolean;
+  setFlatNoUpdate(str: string, obj: any): boolean;
+  updateRecord(str: string): boolean;
+  createRecord(key: string, value: string): boolean;
+}
+
 declare interface MpGamePrecomputed {
   CyberMP: CyberMP;
+  TweakDB: TweakDB;
 
   /**
    * Method to retrieve input events.
@@ -131,6 +144,9 @@ declare interface MpGamePrecomputed {
    * @param {selfFunction} callback Callback of method function.
    */
   observeRaw: ObserveFunction;
+
+  toVariant<R = {}>(obj: any, str: string): R;
+  fromVariant<R = any>(obj: any): R;
 
   isBlackScreenStarted(): boolean;
 
