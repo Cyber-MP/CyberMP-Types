@@ -42,6 +42,20 @@ type OnLiftChangeStateEvent = {
   posZ: number;
 };
 
+interface MpEventsMap {
+  onResourceStarted(resourceName: string): void;
+  onResourcesRefreshed(): void;
+  onResourceStopped(resourceName: string): void;
+  onServerResourceStarted(resourceName: string): void;
+  onServerResourceStopped(resourceName: string): void;
+  onPlayerConnecting(tempId: number, name: string): void;
+  onPlayerConnected(playerId: number, tempId: string): void;
+  onPlayerDisconnected(playerId: number, reason: string): void;
+  onDamageEvent(playerId: string, data: OnDamageEvent): void;
+  onDoorChangeStateEvent(playerId: string, data: OnDoorChangeStateEvent): void;
+  onLiftChangeStateEvent(playerId: string, data: OnLiftChangeStateEvent): void;
+}
+
 /**
  * Main MP events interface.
  */
@@ -51,59 +65,8 @@ interface MpEvents {
    * @param eventName The name of the custom event.
    * @param callback The callback to run when triggered.
    */
+  on<E extends keyof MpEventsMap>(eventName: E, callback: MpEventsMap[E]): void;
   on(eventName: string, callback: (...args: any[]) => void): void;
-
-  on(
-    eventName: "onResourceStarted",
-    callback: (resourceName: string) => void,
-  ): void;
-
-  on(eventName: "onResourcesRefreshed", callback: () => void): void;
-
-  on(
-    eventName: "onResourceStopped",
-    callback: (resourceName: string) => void,
-  ): void;
-
-  on(
-    eventName: "onServerResourceStarted",
-    callback: (resourceName: string) => void,
-  ): void;
-
-  on(
-    eventName: "onServerResourceStopped",
-    callback: (resourceName: string) => void,
-  ): void;
-
-  on(
-    eventName: "onPlayerConnecting",
-    callback: (networkId: number, name: string) => void,
-  ): void;
-
-  on(
-    eventName: "onPlayerConnected",
-    callback: (playerId: number, networkId: string) => void,
-  ): void;
-
-  on(
-    eventName: "onPlayerDisconnected",
-    callback: (playerId: number, reason: string) => void,
-  ): void;
-
-  on(
-    eventName: "onDamageEvent",
-    callback: (playerId: string, data: OnDamageEvent) => void,
-  ): void;
-
-  on(
-    eventName: "onDoorChangeStateEvent",
-    callback: (playerId: string, data: OnDoorChangeStateEvent) => void,
-  ): void;
-
-  on(
-    eventName: "onLiftChangeStateEvent",
-    callback: (playerId: string, data: OnLiftChangeStateEvent) => void,
-  ): void;
 
   /**
    * Listen for a client-side event on the server.
@@ -117,6 +80,10 @@ interface MpEvents {
    * @param eventName Name of the event.
    * @param callback Callback function.
    */
+  off<E extends keyof MpEventsMap>(
+    eventName: E,
+    callback: MpEventsMap[E],
+  ): void;
   off(eventName: string, callback: (...args: any[]) => void): void;
 
   /**
@@ -138,6 +105,7 @@ interface MpEvents {
    * Register a command in the server scope.
    * @param commandName Command name without "/".
    * @param callback Callback with id and args.
+   * @deprecated use mp.commands instead
    */
   addCommand(
     commandName: string,
