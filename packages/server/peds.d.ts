@@ -5,6 +5,9 @@ interface MpPed extends MpEntity {
 type CreatePedOptions = {
   model: GameHash;
   position: Vector3;
+  health?: number;
+  yaw?: number;
+  dimension?: number;
 };
 
 interface MpPeds extends MpEntities<MpPed> {
