@@ -19,4 +19,10 @@ declare namespace CyberEnums {
     RAINY_NIGHT = "q306_rainy_night",
     COURIER_CLOUDS = "sa_courier_clouds",
   }
+
+  declare enum VoiceActivationType {
+    UNDEFINED = 0,
+    VOICE = 1,
+    PUSH_TO_TALK = 2,
+  }
 }

@@ -1,5 +1,6 @@
 /// <reference path="./events.d.ts" />
 /// <reference path="./meta.d.ts" />
+/// <reference path="./voice-chat.d.ts" />
 
 declare type ServerVector3 = [number, number, number];
 declare type ServerVector4 = [number, number, number, number];
@@ -7,6 +8,7 @@ declare type ServerVector4 = [number, number, number, number];
 declare interface MpGlobalPrecomputed {
   events: MpEvents;
   meta: MpMeta;
+  voiceChat: MpVoiceChat;
 
   /**
    * Focus or unfocus CEF view.
