@@ -3,6 +3,7 @@ interface MpVoiceChat {
   changeActivationType(type: CyberEnums.VoiceActivationType): void;
   bindPushToTalkKey(key: number | CyberEnums.EInputKey): void;
   setOutputVolume(value: number): void;
+  setInputVolume(value: number): void;
   setMicrophoneSensitivity(value: number): void;
   getOutputDevices(): string[];
   getInputDevices(): string[];
@@ -10,4 +11,5 @@ interface MpVoiceChat {
   setInputDevice(index: number): void;
   setVoiceInputDistance(distance: number): void;
   setVoiceOutputDistance(distance: number): void;
+  isActive(): boolean;
 }
