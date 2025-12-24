@@ -117,6 +117,7 @@ interface MpMeta {
 interface Mp {
   events: MpEvents;
   meta: MpMeta;
+  voiceChat: MpVoiceChat;
 
   /**
    * Starts a specific resource by name.
