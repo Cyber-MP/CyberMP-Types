@@ -40,6 +40,12 @@ declare type Vector3 = [number, number, number];
 
 declare type Vector4 = [number, number, number, number];
 
+interface MpVoiceChat {
+  mutePlayer(playerId: number): void;
+  createChannel(voiceId: number): void;
+  isPlayerMuted(playerId: number): boolean;
+}
+
 /**
  * Main MP events interface.
  */
