@@ -53,6 +53,8 @@ describe("Core, basis functions", () => {
       expectTypeOf<Parameters<typeof origin>>().toEqualTypeOf<
         Parameters<PlayerPuppet["GetDisplayName"]>
       >();
+
+      return "asdsada";
     });
 
     expectTypeOf(mp.game.observe).toEqualTypeOf<ObserveFunction>();
