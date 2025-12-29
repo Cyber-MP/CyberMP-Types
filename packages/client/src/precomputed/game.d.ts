@@ -12,7 +12,10 @@ interface OverrideFunction {
   >(
     className: C,
     methodName: M,
-    callback: (self: I, ...args: [...Parameters<I[M]>, origin: I[M]]) => void,
+    callback: (
+      self: I,
+      ...args: [...Parameters<I[M]>, origin: I[M]]
+    ) => ReturnType<I[M]>,
   ): void;
 }
 
@@ -43,6 +46,11 @@ interface TweakDB {
 interface MpGamePrecomputed {
   CyberMP: CyberMP;
   TweakDB: TweakDB;
+
+  getStreamedPool(
+    objName: "CVehicle" | "CPed" | "CPickups" | "CObject",
+  ): number[];
+  getStreamedPlayers(): number[];
 
   /**
    * Method to retrieve input events.
