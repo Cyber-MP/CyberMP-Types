@@ -1,7 +1,8 @@
 {
   "name": "@cybermp/client-types",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "",
+  "types": "./out/index.d.ts",
   "files": [
     "./out"
   ],
@@ -22,6 +23,10 @@
     "An1by"
   ],
   "exports": {
+    ".": {
+      "import": "./out/index.d.ts",
+      "types": "./out/index.d.ts"
+    },
     "./enums": {
       "import": "./out/enums.d.ts",
       "types": "./out/enums.d.ts"
