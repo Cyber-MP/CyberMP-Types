@@ -1,5 +1,9 @@
 import { consola } from "consola";
-import { Project, VariableDeclarationKind } from "ts-morph";
+import {
+  ModuleDeclarationKind,
+  Project,
+  VariableDeclarationKind,
+} from "ts-morph";
 import { BaseGenerator } from "./base-generator";
 import { ClassGenerator } from "./class-generator";
 import { FuncGenerator } from "./func-generator";
@@ -20,31 +24,41 @@ export class IndexGenerator extends BaseGenerator {
       overwrite: true,
     });
 
-    this.addHeader(sourceFile);
+    sourceFile.addStatements(`import * as CyberEnums from './enums'`);
+    sourceFile.addStatements(`import * as CyberBitfields from './bitfields'`);
 
-    sourceFile.addStatements([
+    sourceFile.addExportDeclaration({});
+
+    sourceFile.insertStatements(0, [
       `/// <reference path="./precomputed/index.d.ts" />`,
       `/// <reference path="./enums.d.ts" />`,
       `/// <reference path="./bitfields.d.ts" />`,
       `/// <reference path="./classes.d.ts" />`,
     ]);
 
-    this.funcGenerator.generate(sourceFile);
-    this.classGenerator.generate(sourceFile);
+    this.addHeader(sourceFile);
 
-    sourceFile.addInterface({
+    const module = sourceFile.addModule({
+      hasDeclareKeyword: true,
+      declarationKind: ModuleDeclarationKind.Global,
+      name: "global",
+    });
+
+    this.funcGenerator.generate(module);
+    this.classGenerator.generate(module);
+
+    module.addInterface({
       name: "MpGame",
       extends: ["MpGamePrecomputed", "MpFuncs", "MpClasses"],
     });
 
-    sourceFile.addInterface({
+    module.addInterface({
       name: "Mp",
       properties: [{ name: "game", type: "MpGame" }],
       extends: ["MpGlobalPrecomputed"],
     });
 
-    sourceFile.addVariableStatement({
-      hasDeclareKeyword: true,
+    module.addVariableStatement({
       declarationKind: VariableDeclarationKind.Const,
       declarations: [{ name: "mp", type: "Mp" }],
     });

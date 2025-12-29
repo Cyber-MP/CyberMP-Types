@@ -12,12 +12,13 @@ import {
 import {
   ClassDeclarationStructure,
   MethodDeclarationStructure,
+  ModuleDeclaration,
+  ModuleDeclarationKind,
   OptionalKind,
   Project,
   PropertyDeclarationStructure,
   PropertySignatureStructure,
   Scope,
-  SourceFile,
 } from "ts-morph";
 import classes from "../../assets/classes.json";
 import { BaseGenerator } from "./base-generator";
@@ -41,7 +42,7 @@ const visibilityToScope: Record<RedVisibilityDef, Scope> = {
   [RedVisibilityDef.public]: Scope.Public,
 };
 
-export class ClassGenerator extends BaseGenerator<[SourceFile]> {
+export class ClassGenerator extends BaseGenerator<[ModuleDeclaration]> {
   private classObjs: RedClassAst[];
 
   constructor(project: Project) {
@@ -79,7 +80,7 @@ export class ClassGenerator extends BaseGenerator<[SourceFile]> {
     return result;
   }
 
-  generate(file: SourceFile) {
+  generate(module: ModuleDeclaration) {
     const sourceFile = this.createSourceFile("./out/classes.d.ts");
 
     const classMap = new Map<string, any>(
@@ -125,7 +126,7 @@ export class ClassGenerator extends BaseGenerator<[SourceFile]> {
         return {
           name: obj.name,
           extends: obj.parent,
-          hasDeclareKeyword: true,
+          // hasDeclareKeyword: true,
           properties,
           methods,
         };
@@ -133,20 +134,33 @@ export class ClassGenerator extends BaseGenerator<[SourceFile]> {
     );
 
     this.addHeader(sourceFile);
-    sourceFile.addStatements([
+
+    sourceFile.addStatements(`import * as CyberEnums from './enums'`);
+    sourceFile.addStatements(`import * as CyberBitfields from './bitfields'`);
+    sourceFile.addExportDeclaration({});
+
+    sourceFile.insertStatements(0, [
       `/// <reference path="./precomputed/index.d.ts" />`,
       `/// <reference path="./enums.d.ts" />`,
       `/// <reference path="./bitfields.d.ts" />`,
     ]);
-    sourceFile.addClasses(classes);
+
+    sourceFile
+      .addModule({
+        name: "global",
+        declarationKind: ModuleDeclarationKind.Global,
+        hasDeclareKeyword: true,
+      })
+      .addClasses(classes);
     sourceFile.saveSync();
 
-    file.addInterface({
+    module.addInterface({
       name: "MpClasses",
       properties: this.classObjs.map<OptionalKind<PropertySignatureStructure>>(
         (obj) => ({
           name: obj.name,
           type:
+            // if class extrends from gameIGameSystem then its singleton
             obj.parent === "gameIGameSystem" ? obj.name : `typeof ${obj.name}`,
         }),
       ),

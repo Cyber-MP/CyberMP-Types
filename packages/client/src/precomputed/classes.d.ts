@@ -1,9 +1,7 @@
-/// <reference path="./enums.d.ts" />
-
 /**
  * Class with custom CyberMP native methods.
  */
-declare interface CyberMP {
+interface CyberMP {
   /**
    * Removes game object classes (e.g., T extends gameObject, playerPuppet, NpcPuppet) from the map.
    * @param objectClassMap Array of class names to delete.
@@ -23,38 +21,35 @@ declare interface CyberMP {
   UseDefaultEffectsByPlatform(value: boolean): void;
 }
 
-declare interface worldWeatherScriptInterface extends IScriptable {
-  public SetWeather(
+interface worldWeatherScriptInterface extends IScriptable {
+  SetWeather(
     weather: CyberEnums.WeatherState,
     blendTime?: number,
     priority?: number,
   ): void;
-  public ResetWeather(forceRestore?: boolean, blendTime?: number): void;
-  public GetWeatherState(): worldWeatherState;
-  public GetEnvironmentDefinition(): worldEnvironmentDefinition;
+  ResetWeather(forceRestore?: boolean, blendTime?: number): void;
+  GetWeatherState(): worldWeatherState;
+  GetEnvironmentDefinition(): worldEnvironmentDefinition;
 }
 
-declare interface vehicleBaseObject extends gameObject {
-  public HasGravity(): boolean;
-  public EnableGravity(is_enable: boolean): boolean;
-  public AddLinelyVelocity(
-    velocity: Vector3,
-    angularVelocity: Vector3,
-  ): boolean;
-  public ChangeLinelyVelocity(
+interface vehicleBaseObject extends gameObject {
+  HasGravity(): boolean;
+  EnableGravity(is_enable: boolean): boolean;
+  AddLinelyVelocity(velocity: Vector3, angularVelocity: Vector3): boolean;
+  ChangeLinelyVelocity(
     velocity: Vector3,
     angularVelocity: Vector3,
     switchIndex: number,
   ): boolean;
-  public GetVelocity(): Vector3;
-  public GetAngularVelocity(): Vector3;
-  public GetPhysicsState(): number;
-  public IsOnGround(): boolean;
-  public GetBoundaryBox(): Box;
-  public VehicleOwnerWasChanged(): void;
+  GetVelocity(): Vector3;
+  GetAngularVelocity(): Vector3;
+  GetPhysicsState(): number;
+  IsOnGround(): boolean;
+  GetBoundaryBox(): Box;
+  VehicleOwnerWasChanged(): void;
 }
 
-declare interface gameMappinSystem extends gamemappinsIMappinSystem {
+interface gameMappinSystem extends gamemappinsIMappinSystem {
   TrackMappin(id: gameNewMappinID): void;
 }
 
@@ -62,6 +57,8 @@ type OnlyExtendingScriptableSystem<T> = {
   [K in keyof T as T[K] extends typeof gameScriptableSystem ? K : never]: T[K];
 };
 
-declare interface gameScriptableSystemsContainer<Map = OnlyExtendingScriptableSystem<MpClasses>> {
+interface gameScriptableSystemsContainer<
+  Map = OnlyExtendingScriptableSystem<MpClasses>,
+> {
   "Get"<N extends keyof Map>(systemName: N): UnwrapMpClass<Map[N]>;
 }

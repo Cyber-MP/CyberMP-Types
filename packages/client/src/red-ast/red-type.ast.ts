@@ -38,7 +38,7 @@ export class RedTypeAst {
     if (defsIndex.enums.has(type.name)) {
       baseName = `CyberEnums.${type.name}`;
     } else if (defsIndex.bitfields.has(type.name)) {
-      baseName = `CyberEnums.BitFields.${type.name}`;
+      baseName = `CyberBitfields.${type.name}`;
     }
 
     if (type.name === "Void") {
@@ -95,7 +95,7 @@ export class RedTypeAst {
       if (defsIndex.enums.has(innerTs)) {
         innerTs = `CyberEnums.${innerTs}`;
       } else if (defsIndex.bitfields.has(innerTs)) {
-        innerTs = `CyberEnums.BitFields.${innerTs}`;
+        innerTs = `CyberBitfields.${innerTs}`;
       }
 
       switch (type.flag as RedTemplateDef) {

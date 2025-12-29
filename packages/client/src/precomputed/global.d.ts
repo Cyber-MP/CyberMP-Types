@@ -2,10 +2,10 @@
 /// <reference path="./meta.d.ts" />
 /// <reference path="./voice-chat.d.ts" />
 
-declare type ServerVector3 = [number, number, number];
-declare type ServerVector4 = [number, number, number, number];
+type ServerVector3 = [number, number, number];
+type ServerVector4 = [number, number, number, number];
 
-declare interface MpGlobalPrecomputed {
+interface MpGlobalPrecomputed {
   events: MpEvents;
   meta: MpMeta;
   voiceChat: MpVoiceChat;

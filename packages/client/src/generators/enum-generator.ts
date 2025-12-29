@@ -1,9 +1,14 @@
 import { consola } from "consola";
 import { defsIndex } from "src/config/constants";
 import { RedEnumAst } from "src/red-ast/red-enum.ast";
-import { ModuleDeclarationKind, Project } from "ts-morph";
+import { uniqueBy } from "src/utils/file-utils";
+import {
+  EnumDeclarationStructure,
+  EnumMemberStructure,
+  OptionalKind,
+  Project,
+} from "ts-morph";
 import enums from "../../assets/enums.json";
-import { uniqueBy } from "../utils/file-utils";
 import { BaseGenerator } from "./base-generator";
 
 export class EnumGenerator extends BaseGenerator {
@@ -18,25 +23,30 @@ export class EnumGenerator extends BaseGenerator {
 
   generate() {
     const sourceFile = this.createSourceFile("./out/enums.d.ts");
-    sourceFile.addStatements([
-      `/// <reference path="./precomputed/enums.d.ts" />`,
-    ]);
-
-    const enumDecls: string[] = this.enums.map((obj) => {
-      const members = uniqueBy(obj.members, (m) => m.key)
-        .map((m) => `  "${m.key}" = ${m.value},`)
-        .join("\n");
-
-      return `const enum ${obj.name} {\n${members}\n}`;
-    });
 
     this.addHeader(sourceFile);
-    sourceFile.addModule({
-      name: "CyberEnums",
-      hasDeclareKeyword: true,
-      declarationKind: ModuleDeclarationKind.Namespace,
-      statements: enumDecls,
-    });
+
+    sourceFile.addStatements([`export * from './precomputed/enums.d.ts'`]);
+
+    sourceFile.addEnums(
+      this.enums.map<OptionalKind<EnumDeclarationStructure>>((obj) => ({
+        name: obj.name,
+        isExported: true,
+        members: uniqueBy(obj.members, (m) => m.key).map<
+          OptionalKind<EnumMemberStructure>
+        >((o) => ({
+          name: `"${o.key}"`,
+          value: o.value,
+        })),
+      })),
+    );
+
+    // sourceFile.addModule({
+    //   name: "CyberEnums",
+    //   isExported: true,
+    //   declarationKind: ModuleDeclarationKind.Namespace,
+    //   statements: enumDecls,
+    // }).;
     sourceFile.saveSync();
 
     consola.success("Enums generated successfully");

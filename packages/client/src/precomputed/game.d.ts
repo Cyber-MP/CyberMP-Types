@@ -40,7 +40,7 @@ interface TweakDB {
   createRecord(key: string, value: string): boolean;
 }
 
-declare interface MpGamePrecomputed {
+interface MpGamePrecomputed {
   CyberMP: CyberMP;
   TweakDB: TweakDB;
 

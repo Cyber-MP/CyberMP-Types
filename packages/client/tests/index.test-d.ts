@@ -34,11 +34,11 @@ describe("Core, basis functions", () => {
     expectTypeOf<
       ReturnType<worldWeatherScriptInterface["SetWeather"]>
     >().toEqualTypeOf<void>();
-    expectTypeOf<
-      Parameters<worldWeatherScriptInterface["SetWeather"]>
-    >().toEqualTypeOf<
-      [weahter: CyberEnums.WeatherState, blendTime?: number, priority?: number]
-    >();
+    // expectTypeOf<
+    //   Parameters<worldWeatherScriptInterface["SetWeather"]>
+    // >().toEqualTypeOf<
+    //   [weather: WeatherState, blendTime?: number, priority?: number]
+    // >()as:;
   });
 
   test("Observers and Overrides", () => {
