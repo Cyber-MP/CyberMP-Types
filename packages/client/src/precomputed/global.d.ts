@@ -10,6 +10,10 @@ interface MpGlobalPrecomputed {
   meta: MpMeta;
   voiceChat: MpVoiceChat;
 
+  getActivePlayers(): number[];
+
+  getGamePool(cname: "CVehicle" | "CObject" | "CPickup" | "CPed"): number[];
+
   /**
    * Focus or unfocus CEF view.
    */
