@@ -57,6 +57,8 @@ interface MpGamePrecomputed {
     ) => void,
   ): void;
 
+  getDisplayResolution(): [number, number];
+
   /**
    * Event when the game is started.
    */
