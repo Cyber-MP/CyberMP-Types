@@ -47,11 +47,6 @@ interface MpGamePrecomputed {
   CyberMP: CyberMP;
   TweakDB: TweakDB;
 
-  getStreamedPool(
-    objName: "CVehicle" | "CPed" | "CPickups" | "CObject",
-  ): number[];
-  getStreamedPlayers(): number[];
-
   /**
    * Method to retrieve input events.
    */
