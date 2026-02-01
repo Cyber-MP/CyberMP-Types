@@ -119,6 +119,8 @@ interface Mp {
   meta: MpMeta;
   voiceChat: MpVoiceChat;
 
+  restartResource(resourceName: string): void;
+
   /**
    * Starts a specific resource by name.
    * @param resourceName Name of the resource to start.
