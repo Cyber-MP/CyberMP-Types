@@ -1,6 +1,7 @@
 /// <reference path="./events.d.ts" />
 /// <reference path="./meta.d.ts" />
 /// <reference path="./voice-chat.d.ts" />
+/// <reference path="./cef.d.ts" />
 
 type ServerVector3 = [number, number, number];
 type ServerVector4 = [number, number, number, number];
@@ -9,6 +10,7 @@ interface MpGlobalPrecomputed {
   events: MpEvents;
   meta: MpMeta;
   voiceChat: MpVoiceChat;
+  cef: MpCef;
 
   getStreamedPool(
     objName: "CVehicle" | "CPed" | "CPickups" | "CObject",
@@ -17,10 +19,20 @@ interface MpGlobalPrecomputed {
 
   /**
    * Focus or unfocus CEF view.
+   * @deprecated use mp.cef instead
    */
   setCefInFocusState(justFocus: boolean, withMouse: boolean): void;
 
+  /**
+   * @deprecated use mp.cef instead
+   */
   isInCefFocusState(): boolean;
+
+  /**
+   *
+   * @deprecated use mp.cef api instead
+   */
+  changeCefViewUrl(newUrl: string): void;
 
   /**
    * Mapping between network and game IDs.
@@ -130,9 +142,7 @@ interface MpGlobalPrecomputed {
 
   getLauncherSettings(): any;
 
-  changeCefViewUrl(newUrl: string): void;
-
-  setTick(cb: () => void | Promise<void>): number;
+  setTick(cb: () => any): number;
 
   clearTick(tickId: number): void;
 }

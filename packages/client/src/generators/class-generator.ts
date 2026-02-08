@@ -99,7 +99,6 @@ export class ClassGenerator extends BaseGenerator<[ModuleDeclaration]> {
         const filteredProps = propsList.filter((p) => {
           const propName = String(p.name);
           if (methodNames.has(propName)) {
-            // removed because method with same name exists
             return false;
           }
           return true;

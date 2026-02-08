@@ -24,3 +24,15 @@ export enum VoiceActivationType {
   VOICE = 1,
   PUSH_TO_TALK = 2,
 }
+
+export enum EPlayerGender {
+  Female = 1,
+  Male = 2,
+}
+
+export enum ELoadingScreenState {
+  Started = 1,
+  Loading,
+  PreEnded,
+  Hidden,
+}
