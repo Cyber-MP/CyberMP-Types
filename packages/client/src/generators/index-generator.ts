@@ -30,10 +30,10 @@ export class IndexGenerator extends BaseGenerator {
     sourceFile.addExportDeclaration({});
 
     sourceFile.insertStatements(0, [
-      `/// <reference path="./precomputed/index.d.ts" />`,
       `/// <reference path="./enums.d.ts" />`,
       `/// <reference path="./bitfields.d.ts" />`,
       `/// <reference path="./classes.d.ts" />`,
+      `/// <reference path="./precomputed/index.d.ts" />`,
     ]);
 
     this.addHeader(sourceFile);

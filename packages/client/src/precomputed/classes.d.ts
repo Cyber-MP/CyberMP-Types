@@ -68,8 +68,8 @@ declare global {
     "Get"<N extends keyof Map>(systemName: N): UnwrapMpClass<Map[N]>;
   }
 
-  class ScriptGameInstance {
-    static GetLoadingScreenSystem(): LoadingScreenSystem;
+  namespace ScriptGameInstance {
+    export const GetLoadingScreenSystem: () => LoadingScreenSystem;
   }
 
   interface LoadingScreenSystem {

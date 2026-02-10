@@ -139,9 +139,9 @@ export class ClassGenerator extends BaseGenerator<[ModuleDeclaration]> {
     sourceFile.addExportDeclaration({});
 
     sourceFile.insertStatements(0, [
-      `/// <reference path="./precomputed/index.d.ts" />`,
       `/// <reference path="./enums.d.ts" />`,
       `/// <reference path="./bitfields.d.ts" />`,
+      `/// <reference path="./precomputed/index.d.ts" />`,
     ]);
 
     sourceFile

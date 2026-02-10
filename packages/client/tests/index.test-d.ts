@@ -9,6 +9,9 @@ describe("Core, basis functions", () => {
     expectTypeOf(mp.game.ScriptGameInstance).toEqualTypeOf<
       typeof ScriptGameInstance
     >();
+    expectTypeOf(
+      mp.game.ScriptGameInstance.GetLoadingScreenSystem,
+    ).toEqualTypeOf<typeof ScriptGameInstance.GetLoadingScreenSystem>();
   });
 
   test("MpGame Functions", () => {
