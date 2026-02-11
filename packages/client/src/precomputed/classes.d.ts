@@ -69,13 +69,17 @@ declare global {
   }
 
   namespace ScriptGameInstance {
-    export const GetLoadingScreenSystem: () => LoadingScreenSystem;
+    export function GetLoadingScreenSystem(): LoadingScreenSystem;
   }
 
-  interface LoadingScreenSystem {
+  class LoadingScreenSystem {
     GetLoadingScreenState(): CyberEnums.ELoadingScreenState;
     GetLoadingScreenProgress(): number;
     OnLoadingScreenStateChange(newState: CyberEnums.ELoadingScreenState): void;
+  }
+
+  interface MpClasses {
+    LoadingScreenSystem: typeof LoadingScreenSystem;
   }
 
   interface inkISystemRequestsHandler {
