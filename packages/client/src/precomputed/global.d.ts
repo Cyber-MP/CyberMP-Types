@@ -13,7 +13,7 @@ interface MpGlobalPrecomputed {
   cef: MpCef;
 
   getStreamedPool(
-    objName: "CVehicle" | "CPed" | "CPickups" | "CObject",
+    objName: "CVehicle" | "CPed" | "CPickup" | "CObject",
   ): number[];
   getStreamedPlayers(): number[];
 
