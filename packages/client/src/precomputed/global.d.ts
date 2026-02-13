@@ -18,23 +18,6 @@ interface MpGlobalPrecomputed {
   getStreamedPlayers(): number[];
 
   /**
-   * Focus or unfocus CEF view.
-   * @deprecated use mp.cef instead
-   */
-  setCefInFocusState(justFocus: boolean, withMouse: boolean): void;
-
-  /**
-   * @deprecated use mp.cef instead
-   */
-  isInCefFocusState(): boolean;
-
-  /**
-   *
-   * @deprecated use mp.cef api instead
-   */
-  changeCefViewUrl(newUrl: string): void;
-
-  /**
    * Mapping between network and game IDs.
    */
   getVehicleGameIdByNetworkId(id: number): number;
