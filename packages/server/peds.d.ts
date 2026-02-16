@@ -1,9 +1,14 @@
 interface MpPed extends MpEntity {
   readonly health: number;
+  readonly model: TweakDBID;
+  readonly appearance: CName;
+
+  destroy(): void;
 }
 
 type CreatePedOptions = {
-  model: GameHash;
+  model: TweakDBID;
+  appearance: CName;
   position: Vector3;
   health?: number;
   yaw?: number;
@@ -11,13 +16,9 @@ type CreatePedOptions = {
 };
 
 interface MpPeds extends MpEntities<MpPed> {
-  create(
-    model: number,
-    x: number,
-    y: number,
-    z: number,
-    health: number,
-    yaw: number,
-  ): MpPed;
   create(options: CreatePedOptions): MpPed;
+
+  destroy(ped: MpPed | number): void;
+
+  toArray(): MpPed[];
 }

@@ -51,9 +51,9 @@ interface MpEventsMap {
   onPlayerConnecting(tempId: number, name: string): void;
   onPlayerConnected(playerId: number, tempId: string): void;
   onPlayerDisconnected(playerId: number, reason: string): void;
-  onDamageEvent(playerId: string, data: OnDamageEvent): void;
-  onDoorChangeStateEvent(playerId: string, data: OnDoorChangeStateEvent): void;
-  onLiftChangeStateEvent(playerId: string, data: OnLiftChangeStateEvent): void;
+  onDamageEvent(playerId: number, data: OnDamageEvent): void;
+  onDoorChangeStateEvent(playerId: number, data: OnDoorChangeStateEvent): void;
+  onLiftChangeStateEvent(playerId: number, data: OnLiftChangeStateEvent): void;
 }
 
 /**
@@ -73,7 +73,10 @@ interface MpEvents {
    * @param eventName The name of the event.
    * @param callback Function triggered when the event is received.
    */
-  onClient(eventName: string, callback: (...args: any[]) => void): void;
+  onClient(
+    eventName: string,
+    callback: (player: MpPlayer, ...args: any[]) => void,
+  ): void;
 
   /**
    * Unregister a custom event listener.
@@ -99,16 +102,9 @@ interface MpEvents {
    * @param playerId Target player entity/network ID.
    * @param args Arguments to send with the event.
    */
-  emitClient(eventName: string, playerId: number, ...args: any[]): void;
-
-  /**
-   * Register a command in the server scope.
-   * @param commandName Command name without "/".
-   * @param callback Callback with id and args.
-   * @deprecated use mp.commands instead
-   */
-  addCommand(
-    commandName: string,
-    callback: (id: number, args: string[]) => void,
+  emitClient(
+    player: MpPlayer | number,
+    eventName: string,
+    ...args: any[]
   ): void;
 }

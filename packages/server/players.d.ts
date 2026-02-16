@@ -13,6 +13,7 @@ interface MpPlayer extends MpEntity {
 }
 
 interface MpPlayers extends MpEntities<MpPlayer> {
-  kick(playerId: number, reason?: string): void;
+  kick(player: MpPlayer | number, reason?: string): void;
   getIdentifier(player: MpPlayer | number, type: PlayerIdentifierType): string;
+  toArray(): MpPlayer[];
 }

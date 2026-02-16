@@ -1,9 +1,11 @@
 interface MpObject extends MpEntity {
-  readonly dynamic: boolean;
+  readonly model: TweakDBID;
+
+  destroy(): void;
 }
 
 type CreateObjectOptions = {
-  model: GameHash;
+  model: TweakDBID;
   position: Vector3;
   yaw?: number;
   dynamic?: boolean;
@@ -11,13 +13,7 @@ type CreateObjectOptions = {
 };
 
 interface MpObjects extends MpEntities<MpObject> {
-  create(
-    model: GameHash,
-    x: number,
-    y: number,
-    z: number,
-    yaw: number,
-    dynamic: boolean,
-  ): MpObject;
   create(options: CreateObjectOptions): MpObject;
+  destroy(entity: MpObject | number): void;
+  toArray(): MpObject[];
 }

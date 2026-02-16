@@ -1,13 +1,20 @@
 interface MpMeta {
   setGlobalMeta(key: string, value: any, sync?: boolean): void;
   getGlobalMeta<T = any>(key: string): T;
+
   setPlayerMeta(
-    playerId: number,
+    player: MpPlayer | number,
     key: string,
     value: any,
     sync?: boolean,
   ): void;
-  getPlayerMeta<T = any>(playerId: number, key: string): T;
-  setEntityMeta(netId: number, key: string, value: any, sync?: boolean): void;
-  getEntityMeta<T = any>(netId: number, key: string): T;
+  getPlayerMeta<T = any>(player: MpPlayer | number, key: string): T;
+
+  setEntityMeta(
+    entity: MpEntity | number,
+    key: string,
+    value: any,
+    sync?: boolean,
+  ): void;
+  getEntityMeta<T = any>(entity: MpEntity | number, key: string): T;
 }

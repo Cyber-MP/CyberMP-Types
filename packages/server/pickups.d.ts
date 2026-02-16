@@ -1,32 +1,29 @@
 /**
  * Pickup types.
  */
-declare const enum PickupType {
+export enum PickupType {
   Clothes = 1,
   Weapon = 2,
   Other = 3,
 }
 
-interface MpPickup extends MpEntity {
-  readonly pickupType: PickupType;
-}
+declare global {
+  interface MpPickup extends MpEntity {
+    readonly model: TweakDBID;
+    readonly pickupType: PickupType;
 
-type CreatePickupOptions = {
-  model: GameHash;
-  type: PickupType;
-  position: Vector3;
-  yaw?: number;
-  dimension?: number;
-};
+    destroy(): void;
+  }
 
-interface MpPickups extends MpEntities<MpPickup> {
-  create(
-    model: GameHash,
-    type: PickupType,
-    x: number,
-    y: number,
-    z: number,
-    yaw: number,
-  ): MpPickup;
-  create(options: CreatePickupOptions): MpPickup;
+  type CreatePickupOptions = {
+    model: TweakDBID;
+    type: PickupType;
+    position: Vector3;
+    yaw?: number;
+    dimension?: number;
+  };
+
+  interface MpPickups extends MpEntities<MpPickup> {
+    create(options: CreatePickupOptions): MpPickup;
+  }
 }
