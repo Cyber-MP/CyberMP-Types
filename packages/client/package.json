@@ -1,8 +1,8 @@
 {
   "name": "@cybermp/client-types",
-  "version": "1.2.3",
+  "version": "1.6.12",
   "description": "",
-  "main": "./out/index.d.ts",
+  "types": "./out/index.d.ts",
   "files": [
     "./out"
   ],
@@ -22,6 +22,20 @@
   "contributors": [
     "An1by"
   ],
+  "exports": {
+    ".": {
+      "import": "./out/index.d.ts",
+      "types": "./out/index.d.ts"
+    },
+    "./enums": {
+      "import": "./out/enums.d.ts",
+      "types": "./out/enums.d.ts"
+    },
+    "./bitfields": {
+      "import": "./out/bitfields.d.ts",
+      "types": "./out/bitfields.d.ts"
+    }
+  },
   "license": "MIT",
   "packageManager": "pnpm@10.14.0",
   "devDependencies": {

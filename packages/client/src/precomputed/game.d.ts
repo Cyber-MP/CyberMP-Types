@@ -12,7 +12,10 @@ interface OverrideFunction {
   >(
     className: C,
     methodName: M,
-    callback: (self: I, ...args: [...Parameters<I[M]>, origin: I[M]]) => void,
+    callback: (
+      self: I,
+      ...args: [...Parameters<I[M]>, origin: I[M]]
+    ) => ReturnType<I[M]>,
   ): void;
 }
 
@@ -40,7 +43,7 @@ interface TweakDB {
   createRecord(key: string, value: string): boolean;
 }
 
-declare interface MpGamePrecomputed {
+interface MpGamePrecomputed {
   CyberMP: CyberMP;
   TweakDB: TweakDB;
 
@@ -53,6 +56,8 @@ declare interface MpGamePrecomputed {
       key: CyberEnums.EInputKey,
     ) => void,
   ): void;
+
+  getDisplayResolution(): [number, number];
 
   /**
    * Event when the game is started.

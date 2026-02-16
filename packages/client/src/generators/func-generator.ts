@@ -7,15 +7,15 @@ import {
 } from "src/utils/type-resolver";
 import {
   MethodSignatureStructure,
+  ModuleDeclaration,
   OptionalKind,
-  Project,
-  SourceFile,
+  Project
 } from "ts-morph";
 import globalFuncs from "../../assets/globals.json";
 import { uniqueBy } from "../utils/file-utils";
 import { BaseGenerator } from "./base-generator";
 
-export class FuncGenerator extends BaseGenerator<[SourceFile]> {
+export class FuncGenerator extends BaseGenerator<[ModuleDeclaration]> {
   private funcs: RedFunctionAst[];
 
   constructor(project: Project) {
@@ -39,8 +39,8 @@ export class FuncGenerator extends BaseGenerator<[SourceFile]> {
     defsIndex.funcs = new Set<string>([...this.funcs.map((o) => o.name)]);
   }
 
-  generate(file: SourceFile) {
-    file.addInterface({
+  generate(module: ModuleDeclaration) {
+    module.addInterface({
       name: "MpFuncs",
       methods: this.funcs.map<OptionalKind<MethodSignatureStructure>>((fn) => ({
         name: `"${fn.name}"`,

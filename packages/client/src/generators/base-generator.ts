@@ -13,7 +13,7 @@ export abstract class BaseGenerator<TArgs extends any[] = []> {
   }
 
   protected addHeader(file: SourceFile) {
-    file.addStatements(headerComment);
+    file.insertStatements(0, headerComment);
   }
 
   abstract generate(...args: TArgs): void;

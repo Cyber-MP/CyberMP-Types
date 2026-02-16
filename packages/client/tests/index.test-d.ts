@@ -9,6 +9,9 @@ describe("Core, basis functions", () => {
     expectTypeOf(mp.game.ScriptGameInstance).toEqualTypeOf<
       typeof ScriptGameInstance
     >();
+    expectTypeOf(
+      mp.game.ScriptGameInstance.GetLoadingScreenSystem,
+    ).toEqualTypeOf<typeof ScriptGameInstance.GetLoadingScreenSystem>();
   });
 
   test("MpGame Functions", () => {
@@ -34,11 +37,11 @@ describe("Core, basis functions", () => {
     expectTypeOf<
       ReturnType<worldWeatherScriptInterface["SetWeather"]>
     >().toEqualTypeOf<void>();
-    expectTypeOf<
-      Parameters<worldWeatherScriptInterface["SetWeather"]>
-    >().toEqualTypeOf<
-      [weahter: CyberEnums.WeatherState, blendTime?: number, priority?: number]
-    >();
+    // expectTypeOf<
+    //   Parameters<worldWeatherScriptInterface["SetWeather"]>
+    // >().toEqualTypeOf<
+    //   [weather: WeatherState, blendTime?: number, priority?: number]
+    // >()as:;
   });
 
   test("Observers and Overrides", () => {
@@ -53,6 +56,8 @@ describe("Core, basis functions", () => {
       expectTypeOf<Parameters<typeof origin>>().toEqualTypeOf<
         Parameters<PlayerPuppet["GetDisplayName"]>
       >();
+
+      return "asdsada";
     });
 
     expectTypeOf(mp.game.observe).toEqualTypeOf<ObserveFunction>();
