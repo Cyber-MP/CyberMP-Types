@@ -21,6 +21,7 @@ interface Mp {
   objects: MpObjects;
   pickups: MpPickups;
   peds: MpPeds;
+  hashes: MpHashes;
 
   /**
    * Checks if the code is running on the server.
