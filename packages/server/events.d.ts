@@ -1,6 +1,6 @@
-type OnDamageEvent = {
+type DamageEventData = {
   damageType: number;
-  weaponHash: number;
+  weaponHash: GameHash;
   overrideDefaultDamage: boolean;
   totalDamage: number;
   killerId: number;
@@ -23,37 +23,42 @@ type OnDamageEvent = {
   physicsMaterials: string[];
 };
 
-type OnDoorChangeStateEvent = {
-  hashObject: number;
-  state: boolean;
+type Vector3Object = {
   posX: number;
   posY: number;
   posZ: number;
 };
 
-type OnLiftChangeStateEvent = {
-  hashObject: number;
+type DoorStateChangeEventData = Vector3Object & {
+  hashObject: GameHash;
+  state: boolean;
+};
+
+type LiftStateChangeEventData = Vector3Object & {
+  hashObject: GameHash;
   playerID: number;
   targetFloor: number;
   currentFloor: number;
   maxFloor: number;
-  posX: number;
-  posY: number;
-  posZ: number;
 };
 
+type ExplosionEventData = Vector3Object & {};
+
 interface MpEventsMap {
-  onResourceStarted(resourceName: string): void;
-  onResourcesRefreshed(): void;
-  onResourceStopped(resourceName: string): void;
-  onServerResourceStarted(resourceName: string): void;
-  onServerResourceStopped(resourceName: string): void;
-  onPlayerConnecting(tempId: number, name: string): void;
-  onPlayerConnected(playerId: number, tempId: string): void;
-  onPlayerDisconnected(playerId: number, reason: string): void;
-  onDamageEvent(playerId: number, data: OnDamageEvent): void;
-  onDoorChangeStateEvent(playerId: number, data: OnDoorChangeStateEvent): void;
-  onLiftChangeStateEvent(playerId: number, data: OnLiftChangeStateEvent): void;
+  resourceStarted(resourceName: string): void;
+  resourcesRefreshed(): void;
+  resourceStopped(resourceName: string): void;
+  serverResourceStarted(resourceName: string): void;
+  serverResourceStopped(resourceName: string): void;
+  playerConnecting(tempId: number, name: string): void;
+  playerConnected(playerId: number, tempId: string): void;
+  playerRespawn(playerId: number, data: Vector3Object): void;
+  playerWasted(playerId: number): void;
+  playerDisconnected(playerId: number, reason: string): void;
+  damage(playerId: number, data: DamageEventData): void;
+  explosion(playerId: number, data: ExplosionEventData): void;
+  doorStateChange(playerId: number, data: DoorStateChangeEventData): void;
+  liftStateChange(playerId: number, data: LiftStateChangeEventData): void;
 }
 
 /**
