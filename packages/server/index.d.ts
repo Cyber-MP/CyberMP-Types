@@ -9,6 +9,7 @@
 /// <reference path="./pickups.d.ts" />
 /// <reference path="./objects.d.ts" />
 /// <reference path="./peds.d.ts" />
+/// <reference path="./hashes.d.ts" />
 
 interface Mp {
   events: MpEvents;
