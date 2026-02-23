@@ -44,6 +44,31 @@ type LiftStateChangeEventData = Vector3Object & {
 
 type ExplosionEventData = Vector3Object & {};
 
+type AppearancePropertyData = {
+  meshType: number;
+  isEnabed: boolean;
+  pathToMesh: GameHash;
+  appearanceHash: GameHash;
+  chunkMask: GameHash;
+};
+
+type AppearanceWeightPropertyData = {
+  targetHash: GameHash;
+  regionHash: GameHash;
+  weight: number;
+};
+
+type PlayerAppearanceChangeEventData = {
+  skinneds: AppearancePropertyData[];
+  garments: AppearancePropertyData[];
+  morphs: AppearancePropertyData[];
+  weights: AppearanceWeightPropertyData[];
+};
+
+type PlayerWastedEventData = {
+  killerId?: number;
+};
+
 interface MpEventsMap {
   resourceStarted(resourceName: string): void;
   resourcesRefreshed(): void;
@@ -53,8 +78,12 @@ interface MpEventsMap {
   playerConnecting(tempId: number, name: string): void;
   playerConnected(playerId: number, tempId: string): void;
   playerRespawn(playerId: number, data: Vector3Object): void;
-  playerWasted(playerId: number): void;
+  playerWasted(playerId: number, data: PlayerWastedEventData): void;
   playerDisconnected(playerId: number, reason: string): void;
+  playerAppearanceChange(
+    playerId: number,
+    data: PlayerAppearanceChangeEventData,
+  ): void;
   damage(playerId: number, data: DamageEventData): void;
   explosion(playerId: number, data: ExplosionEventData): void;
   doorStateChange(playerId: number, data: DoorStateChangeEventData): void;
