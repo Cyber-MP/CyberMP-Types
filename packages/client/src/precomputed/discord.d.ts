@@ -1,3 +1,3 @@
 interface MpDiscord {
-  updateRichPresence(state: string, details: string): void;
+  updateRichPresence(state?: string, details?: string): void;
 }
