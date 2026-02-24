@@ -2,6 +2,7 @@
 /// <reference path="./meta.d.ts" />
 /// <reference path="./voice-chat.d.ts" />
 /// <reference path="./cef.d.ts" />
+/// <reference path="./discord.d.ts" />
 
 type ServerVector3 = [number, number, number];
 type ServerVector4 = [number, number, number, number];
@@ -11,6 +12,7 @@ interface MpGlobalPrecomputed {
   meta: MpMeta;
   voiceChat: MpVoiceChat;
   cef: MpCef;
+  discord: MpDiscord;
 
   getStreamedPool(
     objName: "CVehicle" | "CPed" | "CPickup" | "CObject",
