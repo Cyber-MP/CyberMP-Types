@@ -22,6 +22,8 @@ declare global {
      * @param value Whether to use the default effects.
      */
     UseDefaultEffectsByPlatform(value: boolean): void;
+
+    SetDefaultSpawnPosition(position: Vector3, yaw: number): void;
   }
 
   interface worldWeatherScriptInterface extends IScriptable {
@@ -92,5 +94,4 @@ declare global {
   }
 }
 
-export { };
-
+export {};
