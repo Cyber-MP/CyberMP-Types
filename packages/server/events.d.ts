@@ -1,3 +1,5 @@
+/// <reference path="./players.d.ts" />
+
 type DamageEventData = {
   damageType: number;
   weaponHash: GameHash;
@@ -42,7 +44,12 @@ type LiftStateChangeEventData = Vector3Object & {
   maxFloor: number;
 };
 
-type ExplosionEventData = Vector3Object & {};
+type ExplosionEventData = Vector3Object & {
+  isVehicle: boolean;
+  vehicleID: number;
+  hashObject: GameHash;
+  objNetID: number;
+};
 
 type AppearancePropertyData = {
   meshType: number;
@@ -65,29 +72,99 @@ type PlayerAppearanceChangeEventData = {
   weights: AppearanceWeightPropertyData[];
 };
 
-type PlayerWastedEventData = {
+type PlayerDeathEventData = {
   killerId?: number;
 };
 
+type VehicleCustomizationChangeEventData = {
+  isVehicleWasCustomized: boolean;
+  isEnabledVehCustomization: boolean;
+  isDisabledVehCustomizationByDamage: boolean;
+  lightsColorDefined: boolean;
+  lightsColorHue: number;
+  primaryColorR: number;
+  primaryColorG: number;
+  primaryColorB: number;
+  primaryColorDefined: boolean;
+  secondaryColorR: number;
+  secondaryColorG: number;
+  secondaryColorB: number;
+  secondaryColorDefined: boolean;
+  vehicleID: number;
+  hashAppearance: GameHash;
+};
+
+type VehicleDestructionChangeEventData = {
+  vehicleID: number;
+  brokenGlass: number;
+  brokenLights: number;
+  flatTire: number;
+  windshieldShattered: boolean;
+};
+
+type FireEventData = Vector3Object & {
+  hashObject: GameHash;
+  dirX: number;
+  dirY: number;
+  dirZ: number;
+};
+
+type PickupChangeEventData = {
+  pickupNetId: number;
+  pickupHash: GameHash;
+  pickupHashes: GameHash[];
+};
+
+type PickupDespawnEventData = {
+  pickupNetId: number;
+  pickupHash: GameHash;
+  isBag: boolean;
+};
+
+type PickupCreateEventData = Vector3Object & {
+  pickupNetId: number;
+  pickupHash: GameHash;
+  pickupHashes: GameHash[];
+  isBag: boolean;
+};
+
 interface MpEventsMap {
-  resourceStarted(resourceName: string): void;
-  resourcesRefreshed(): void;
-  resourceStopped(resourceName: string): void;
-  serverResourceStarted(resourceName: string): void;
-  serverResourceStopped(resourceName: string): void;
+  anyResourceStart(resourceName: string): void;
+  anyResourceStop(resourceName: string): void;
+  anyServerResourceStart(resourceName: string): void;
+  anyServerResourceStop(resourceName: string): void;
+  resourceStart(): void;
+  resourceStop(): void;
+  resourcesRefresh(): void;
+
   playerConnecting(tempId: number, name: string): void;
   playerConnected(playerId: number, tempId: string): void;
   playerRespawn(playerId: number, data: Vector3Object): void;
-  playerWasted(playerId: number, data: PlayerWastedEventData): void;
+  playerDeath(playerId: number, data: PlayerDeathEventData): void;
   playerDisconnected(playerId: number, reason: string): void;
   playerAppearanceChange(
     playerId: number,
     data: PlayerAppearanceChangeEventData,
   ): void;
+
   damage(playerId: number, data: DamageEventData): void;
+  fire(playerId: number, data: FireEventData): void;
   explosion(playerId: number, data: ExplosionEventData): void;
   doorStateChange(playerId: number, data: DoorStateChangeEventData): void;
   liftStateChange(playerId: number, data: LiftStateChangeEventData): void;
+
+  vehicleCustomizationChange(
+    playerId: number,
+    data: VehicleCustomizationChangeEventData,
+  ): void;
+  vehicleDestructionChange(
+    playerId: number,
+    data: VehicleDestructionChangeEventData,
+  ): void;
+
+  pickupChange(playerId: number, data: PickupChangeEventData): void;
+  pickupDespawn(playerId: number, data: PickupDespawnEventData): void;
+  pickupCreate(playerId: number, data: PickupCreateEventData): void;
 }
 
 /**
