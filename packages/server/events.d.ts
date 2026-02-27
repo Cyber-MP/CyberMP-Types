@@ -3,7 +3,6 @@
 type DamageEventData = {
   damageType: number;
   weaponHash: GameHash;
-  overrideDefaultDamage: boolean;
   totalDamage: number;
   killerId: number;
   victimId: number;
@@ -16,8 +15,7 @@ type DamageEventData = {
   hitDirectionZ: number;
   damageValues: number[];
   flags: number[];
-  hitGlobalIds: number[];
-  compName: string[];
+  compName: string;
   dismembermentParts: any[];
   hitReactionZones: any[];
   hitShapeTypes: any[];
