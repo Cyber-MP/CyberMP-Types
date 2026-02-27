@@ -17,6 +17,9 @@ declare global {
 
     dimension: number;
     streamingRadius: number;
+
+    getMeta<T = any>(key: string): T;
+    setMeta(key: string, value: any, sync?: boolean): void;
   }
 
   interface MpEntities<T extends MpEntity = MpEntity> extends Array<T> {

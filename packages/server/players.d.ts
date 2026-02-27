@@ -1,3 +1,6 @@
+/// <reference path="./entities.d.ts" />
+/// <reference path="./vehicles.d.ts" />
+
 type PlayerIdentifierType = "steam" | "ip";
 
 interface MpPlayer extends MpEntity {
@@ -10,6 +13,9 @@ interface MpPlayer extends MpEntity {
 
   kick(reason?: string): void;
   getIdentifier(type: PlayerIdentifierType): string;
+
+  emit(eventName: string, ...args: any[]): void;
+  mute(): void;
 }
 
 interface MpPlayers extends MpEntities<MpPlayer> {
