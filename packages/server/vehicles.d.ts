@@ -1,3 +1,5 @@
+/// <reference path="./shared.d.ts" />
+
 export enum VehicleSeat {
   Driver = 0,
   Passenger = 1,

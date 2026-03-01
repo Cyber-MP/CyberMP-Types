@@ -1,5 +1,5 @@
-import { Project, SourceFile } from "ts-morph";
-import { headerComment } from "../config/constants";
+import type { Project, SourceFile } from 'ts-morph';
+import { headerComment } from '../config/constants';
 
 export abstract class BaseGenerator<TArgs extends any[] = []> {
   protected project: Project;
@@ -9,7 +9,7 @@ export abstract class BaseGenerator<TArgs extends any[] = []> {
   }
 
   protected createSourceFile(path: string): SourceFile {
-    return this.project.createSourceFile(path, "", { overwrite: true });
+    return this.project.createSourceFile(path, '', { overwrite: true });
   }
 
   protected addHeader(file: SourceFile) {

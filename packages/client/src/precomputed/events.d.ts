@@ -1,11 +1,11 @@
 interface MpEvents {
   on(
-    eventName: "onResourceStarted",
+    eventName: 'onResourceStarted',
     callback: (resourceName: string) => void,
   ): void;
 
   on(
-    eventName: "onResourceStopped",
+    eventName: 'onResourceStopped',
     callback: (resourceName: string) => void,
   ): void;
 

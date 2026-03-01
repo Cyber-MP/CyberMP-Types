@@ -15,7 +15,7 @@ interface MpGlobalPrecomputed {
   discord: MpDiscord;
 
   getStreamedPool(
-    objName: "CVehicle" | "CPed" | "CPickup" | "CObject",
+    objName: 'CVehicle' | 'CPed' | 'CPickup' | 'CObject',
   ): number[];
   getStreamedPlayers(): number[];
 

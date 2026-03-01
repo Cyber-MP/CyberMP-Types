@@ -1,4 +1,4 @@
-import {RedClassAst} from "./red-class.ast";
+import type { RedClassAst } from './red-class.ast';
 
 export enum RedNodeKind {
   enum,
@@ -7,7 +7,7 @@ export enum RedNodeKind {
   struct,
   property,
   function,
-  type
+  type,
 }
 
 export interface RedNodeAst {
@@ -26,7 +26,6 @@ export function getRedNodeKindName(kind: RedNodeKind): string {
 }
 
 export class RedNodeAst {
-
   static testName(node: RedNodeAst, rule: RegExp): boolean {
     const name: string = node.name.toLowerCase();
 
@@ -53,5 +52,4 @@ export class RedNodeAst {
 
     return object.properties.length === 0 && object.functions.length === 0;
   }
-
 }

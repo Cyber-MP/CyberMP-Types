@@ -1,27 +1,27 @@
-import { consola } from "consola";
-import { defsIndex } from "src/config/constants";
-import { RedClassAst } from "src/red-ast/red-class.ast";
-import { RedVisibilityDef } from "src/red-ast/red-definitions.ast";
-import { RedFunctionAst } from "src/red-ast/red-function.ast";
-import { RedPropertyAst } from "src/red-ast/red-property.ast";
-import { RedTypeAst } from "src/red-ast/red-type.ast";
+import { consola } from 'consola';
+import { defsIndex } from 'src/config/constants';
+import { RedClassAst } from 'src/red-ast/red-class.ast';
+import { RedVisibilityDef } from 'src/red-ast/red-definitions.ast';
+import { RedFunctionAst } from 'src/red-ast/red-function.ast';
+import { RedPropertyAst } from 'src/red-ast/red-property.ast';
+import { RedTypeAst } from 'src/red-ast/red-type.ast';
 import {
   getFunctionParams,
   getFunctionReturnType,
-} from "src/utils/type-resolver";
+} from 'src/utils/type-resolver';
 import {
-  ClassDeclarationStructure,
-  MethodDeclarationStructure,
-  ModuleDeclaration,
+  type ClassDeclarationStructure,
+  type MethodDeclarationStructure,
+  type ModuleDeclaration,
   ModuleDeclarationKind,
-  OptionalKind,
-  Project,
-  PropertyDeclarationStructure,
-  PropertySignatureStructure,
+  type OptionalKind,
+  type Project,
+  type PropertyDeclarationStructure,
+  type PropertySignatureStructure,
   Scope,
-} from "ts-morph";
-import classes from "../../assets/classes.json";
-import { BaseGenerator } from "./base-generator";
+} from 'ts-morph';
+import classes from '../../assets/classes.json';
+import { BaseGenerator } from './base-generator';
 
 enum RedFunctionFlags {
   isPrivate,
@@ -81,7 +81,7 @@ export class ClassGenerator extends BaseGenerator<[ModuleDeclaration]> {
   }
 
   generate(module: ModuleDeclaration) {
-    const sourceFile = this.createSourceFile("./out/classes.d.ts");
+    const sourceFile = this.createSourceFile('./out/classes.d.ts');
 
     const classMap = new Map<string, any>(
       this.classObjs.map((o) => [o.name, o]),
@@ -146,7 +146,7 @@ export class ClassGenerator extends BaseGenerator<[ModuleDeclaration]> {
 
     sourceFile
       .addModule({
-        name: "global",
+        name: 'global',
         declarationKind: ModuleDeclarationKind.Global,
         hasDeclareKeyword: true,
       })
@@ -154,17 +154,17 @@ export class ClassGenerator extends BaseGenerator<[ModuleDeclaration]> {
     sourceFile.saveSync();
 
     module.addInterface({
-      name: "MpClasses",
+      name: 'MpClasses',
       properties: this.classObjs.map<OptionalKind<PropertySignatureStructure>>(
         (obj) => ({
           name: obj.name,
           type:
             // if class extrends from gameIGameSystem then its singleton
-            obj.parent === "gameIGameSystem" ? obj.name : `typeof ${obj.name}`,
+            obj.parent === 'gameIGameSystem' ? obj.name : `typeof ${obj.name}`,
         }),
       ),
     });
 
-    consola.success("Classes generated successfully");
+    consola.success('Classes generated successfully');
   }
 }

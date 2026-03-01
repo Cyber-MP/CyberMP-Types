@@ -1,3 +1,5 @@
+/// <reference path="./players.d.ts" />
+
 interface MpVoiceChat {
   mutePlayer(player: MpPlayer | number): void;
 

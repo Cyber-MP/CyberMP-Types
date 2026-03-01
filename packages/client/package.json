@@ -15,7 +15,10 @@
     "build": "npm run start",
     "test": "vitest run",
     "test:dev": "vitest",
-    "prepublishOnly": "pnpm build && pnpm test"
+    "prepublishOnly": "pnpm build && pnpm test",
+    "format": "pnpx @biomejs/biome format --write ./src",
+    "lint": "pnpx @biomejs/biome lint --write ./src",
+    "check": "pnpx @biomejs/biome check --write ./src"
   },
   "keywords": [],
   "author": "terminaate",

@@ -1,4 +1,4 @@
-import { RedTypeAst } from "./red-type.ast";
+import type { RedTypeAst } from './red-type.ast';
 
 export enum RedVisibilityDef {
   public,

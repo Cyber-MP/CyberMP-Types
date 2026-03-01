@@ -1,5 +1,5 @@
-import { RedNodeAst, RedNodeKind } from "./red-node.ast";
-import { cyrb53 } from "../utils/string";
+import { cyrb53 } from '../utils/string';
+import { type RedNodeAst, RedNodeKind } from './red-node.ast';
 
 export interface RedEnumJson {
   readonly a: string; // name

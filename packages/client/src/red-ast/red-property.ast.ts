@@ -1,7 +1,7 @@
-import { RedTypeAst, RedTypeJson } from "./red-type.ast";
-import { RedVisibilityDef } from "./red-definitions.ast";
-import { RedNodeAst, RedNodeKind } from "./red-node.ast";
-import { cyrb53 } from "../utils/string";
+import { cyrb53 } from '../utils/string';
+import { RedVisibilityDef } from './red-definitions.ast';
+import { type RedNodeAst, RedNodeKind } from './red-node.ast';
+import { RedTypeAst, type RedTypeJson } from './red-type.ast';
 
 export interface RedPropertyJson {
   readonly a: RedTypeJson; // type
@@ -24,11 +24,12 @@ export interface RedPropertyAst extends RedNodeAst {
 
 export class RedPropertyAst {
   static sort(a: RedPropertyAst, b: RedPropertyAst): number {
-    let delta: number = a.visibility - b.visibility;
+    const delta: number = a.visibility - b.visibility;
 
-    if (delta != 0) {
+    if (delta !== 0) {
       return delta;
     }
+
     return a.name.localeCompare(b.name);
   }
 
@@ -63,7 +64,7 @@ export class RedPropertyAst {
 
   static fromJson(json: RedPropertyJson): RedPropertyAst {
     const flags: number = json.c === undefined ? 0 : json.c;
-    const name: string = json.b ?? "";
+    const name: string = json.b ?? '';
 
     return {
       id: cyrb53(name),

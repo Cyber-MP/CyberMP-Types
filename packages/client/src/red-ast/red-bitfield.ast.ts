@@ -1,6 +1,6 @@
-import { RedNodeAst, RedNodeKind } from "./red-node.ast";
-import { cyrb53 } from "../utils/string";
-import { RedEnumJson, RedEnumMemberAst } from "./red-enum.ast";
+import { cyrb53 } from '../utils/string';
+import type { RedEnumJson, RedEnumMemberAst } from './red-enum.ast';
+import { type RedNodeAst, RedNodeKind } from './red-node.ast';
 
 export interface RedBitfieldJson extends RedEnumJson {}
 

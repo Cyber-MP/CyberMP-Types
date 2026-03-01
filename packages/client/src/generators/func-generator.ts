@@ -1,19 +1,19 @@
-import { consola } from "consola";
-import { defsIndex } from "src/config/constants";
-import { RedFunctionAst } from "src/red-ast/red-function.ast";
+import { consola } from 'consola';
+import { defsIndex } from 'src/config/constants';
+import { RedFunctionAst } from 'src/red-ast/red-function.ast';
 import {
   getFunctionParams,
   getFunctionReturnType,
-} from "src/utils/type-resolver";
-import {
+} from 'src/utils/type-resolver';
+import type {
   MethodSignatureStructure,
   ModuleDeclaration,
   OptionalKind,
-  Project
-} from "ts-morph";
-import globalFuncs from "../../assets/globals.json";
-import { uniqueBy } from "../utils/file-utils";
-import { BaseGenerator } from "./base-generator";
+  Project,
+} from 'ts-morph';
+import globalFuncs from '../../assets/globals.json';
+import { uniqueBy } from '../utils/file-utils';
+import { BaseGenerator } from './base-generator';
 
 export class FuncGenerator extends BaseGenerator<[ModuleDeclaration]> {
   private funcs: RedFunctionAst[];
@@ -30,7 +30,7 @@ export class FuncGenerator extends BaseGenerator<[ModuleDeclaration]> {
     this.funcs = uniqueBy(
       functions.filter((item) => {
         return (
-          !item.name.startsWith("Operator") && !item.name.startsWith("Cast")
+          !item.name.startsWith('Operator') && !item.name.startsWith('Cast')
         );
       }),
       (m) => m.name,
@@ -41,7 +41,7 @@ export class FuncGenerator extends BaseGenerator<[ModuleDeclaration]> {
 
   generate(module: ModuleDeclaration) {
     module.addInterface({
-      name: "MpFuncs",
+      name: 'MpFuncs',
       methods: this.funcs.map<OptionalKind<MethodSignatureStructure>>((fn) => ({
         name: `"${fn.name}"`,
         returnType: getFunctionReturnType(fn),
@@ -49,6 +49,6 @@ export class FuncGenerator extends BaseGenerator<[ModuleDeclaration]> {
       })),
     });
 
-    consola.success("Funcs generated successfully");
+    consola.success('Funcs generated successfully');
   }
 }

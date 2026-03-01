@@ -1,3 +1,5 @@
+/// <reference path="./shared.d.ts" />
+
 export enum EntityType {
   Player = 1,
   Vehicle = 2,
@@ -23,11 +25,6 @@ declare global {
   }
 
   interface MpEntities<T extends MpEntity = MpEntity> extends Array<T> {
-    /**
-     * Checks if an entity exists in the game world.
-     * @param entity Entity ID.
-     * @returns True if entity exists, otherwise false.
-     */
     exists(entity: T | number): boolean;
 
     at(entity: T | number): T;

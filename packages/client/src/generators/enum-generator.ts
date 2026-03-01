@@ -1,15 +1,15 @@
-import { consola } from "consola";
-import { defsIndex } from "src/config/constants";
-import { RedEnumAst } from "src/red-ast/red-enum.ast";
-import { uniqueBy } from "src/utils/file-utils";
-import {
+import { consola } from 'consola';
+import { defsIndex } from 'src/config/constants';
+import { RedEnumAst } from 'src/red-ast/red-enum.ast';
+import { uniqueBy } from 'src/utils/file-utils';
+import type {
   EnumDeclarationStructure,
   EnumMemberStructure,
   OptionalKind,
   Project,
-} from "ts-morph";
-import enums from "../../assets/enums.json";
-import { BaseGenerator } from "./base-generator";
+} from 'ts-morph';
+import enums from '../../assets/enums.json';
+import { BaseGenerator } from './base-generator';
 
 export class EnumGenerator extends BaseGenerator {
   private enums: RedEnumAst[];
@@ -22,7 +22,7 @@ export class EnumGenerator extends BaseGenerator {
   }
 
   generate() {
-    const sourceFile = this.createSourceFile("./out/enums.d.ts");
+    const sourceFile = this.createSourceFile('./out/enums.d.ts');
 
     this.addHeader(sourceFile);
 
@@ -49,6 +49,6 @@ export class EnumGenerator extends BaseGenerator {
     // }).;
     sourceFile.saveSync();
 
-    consola.success("Enums generated successfully");
+    consola.success('Enums generated successfully');
   }
 }

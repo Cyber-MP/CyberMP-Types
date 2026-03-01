@@ -1,12 +1,12 @@
-import { consola } from "consola";
+import { consola } from 'consola';
 import {
   ModuleDeclarationKind,
-  Project,
+  type Project,
   VariableDeclarationKind,
-} from "ts-morph";
-import { BaseGenerator } from "./base-generator";
-import { ClassGenerator } from "./class-generator";
-import { FuncGenerator } from "./func-generator";
+} from 'ts-morph';
+import { BaseGenerator } from './base-generator';
+import { ClassGenerator } from './class-generator';
+import { FuncGenerator } from './func-generator';
 
 export class IndexGenerator extends BaseGenerator {
   private funcGenerator: FuncGenerator;
@@ -20,7 +20,7 @@ export class IndexGenerator extends BaseGenerator {
   }
 
   generate() {
-    const sourceFile = this.project.createSourceFile("./out/index.d.ts", "", {
+    const sourceFile = this.project.createSourceFile('./out/index.d.ts', '', {
       overwrite: true,
     });
 
@@ -41,29 +41,29 @@ export class IndexGenerator extends BaseGenerator {
     const module = sourceFile.addModule({
       hasDeclareKeyword: true,
       declarationKind: ModuleDeclarationKind.Global,
-      name: "global",
+      name: 'global',
     });
 
     this.funcGenerator.generate(module);
     this.classGenerator.generate(module);
 
     module.addInterface({
-      name: "MpGame",
-      extends: ["MpGamePrecomputed", "MpFuncs", "MpClasses"],
+      name: 'MpGame',
+      extends: ['MpGamePrecomputed', 'MpFuncs', 'MpClasses'],
     });
 
     module.addInterface({
-      name: "Mp",
-      properties: [{ name: "game", type: "MpGame" }],
-      extends: ["MpGlobalPrecomputed"],
+      name: 'Mp',
+      properties: [{ name: 'game', type: 'MpGame' }],
+      extends: ['MpGlobalPrecomputed'],
     });
 
     module.addVariableStatement({
       declarationKind: VariableDeclarationKind.Const,
-      declarations: [{ name: "mp", type: "Mp" }],
+      declarations: [{ name: 'mp', type: 'Mp' }],
     });
 
     sourceFile.saveSync();
-    consola.success("Index generated successfully");
+    consola.success('Index generated successfully');
   }
 }

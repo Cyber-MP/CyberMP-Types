@@ -1,9 +1,9 @@
-import { CodeSyntax, RedVisibilityDef } from "./red-definitions.ast";
-import { cyrb53 } from "../utils/string";
-import { RedNodeAst, RedNodeKind } from "./red-node.ast";
-import { RedPropertyJson } from "./red-property.ast";
-import { RedTypeAst, RedTypeJson } from "./red-type.ast";
-import { RedArgumentAst } from "./red-argument.ast";
+import { cyrb53 } from '../utils/string';
+import { RedArgumentAst } from './red-argument.ast';
+import { CodeSyntax, RedVisibilityDef } from './red-definitions.ast';
+import { type RedNodeAst, RedNodeKind } from './red-node.ast';
+import type { RedPropertyJson } from './red-property.ast';
+import { RedTypeAst, type RedTypeJson } from './red-type.ast';
 
 export interface RedFunctionJson {
   readonly a: string; // full name
@@ -32,9 +32,9 @@ export interface RedFunctionAst extends RedNodeAst {
 
 export class RedFunctionAst {
   static sort(a: RedFunctionAst, b: RedFunctionAst): number {
-    let delta: number = a.visibility - b.visibility;
+    const delta: number = a.visibility - b.visibility;
 
-    if (delta != 0) {
+    if (delta !== 0) {
       return delta;
     }
     return a.name.localeCompare(b.name);
@@ -45,7 +45,7 @@ export class RedFunctionAst {
       return true;
     }
     const args: RedArgumentAst[] = func.arguments.filter((arg) =>
-      RedTypeAst.testType(arg.type, rule)
+      RedTypeAst.testType(arg.type, rule),
     );
 
     return args.length > 0;
@@ -56,7 +56,7 @@ export class RedFunctionAst {
       return true;
     }
     const args: RedArgumentAst[] = func.arguments.filter((arg) =>
-      RedTypeAst.hasStrictType(arg.type, query)
+      RedTypeAst.hasStrictType(arg.type, query),
     );
 
     return args.length > 0;
@@ -67,7 +67,7 @@ export class RedFunctionAst {
       return true;
     }
     const args: RedArgumentAst[] = func.arguments.filter((arg) =>
-      RedTypeAst.hasType(arg.type, words)
+      RedTypeAst.hasType(arg.type, words),
     );
 
     return args.length > 0;
@@ -89,7 +89,7 @@ export class RedFunctionAst {
 
   static fromJson(
     json: RedFunctionJson,
-    isStaticFix?: boolean
+    isStaticFix?: boolean,
   ): RedFunctionAst {
     const flags: number = json.d;
     const name: string = json.b ?? json.a;
@@ -98,8 +98,8 @@ export class RedFunctionAst {
       json.c !== undefined ? RedTypeAst.fromJson(json.c) : undefined;
     let signature: string = name;
 
-    signature += args.map((arg) => arg.name).join(",");
-    signature += returnType ? RedTypeAst.toString(returnType) : "Void";
+    signature += args.map((arg) => arg.name).join(',');
+    signature += returnType ? RedTypeAst.toString(returnType) : 'Void';
     return {
       id: cyrb53(signature),
       kind: RedNodeKind.function,
@@ -126,26 +126,26 @@ export class RedFunctionAst {
 
     prototype += func.arguments
       .map((argument: RedArgumentAst) => {
-        let argPrototype: string = "";
+        let argPrototype: string = '';
 
         if (argument.isOut) {
-          argPrototype += "out ";
+          argPrototype += 'out ';
         } else if (argument.isOptional) {
-          argPrototype += "opt ";
+          argPrototype += 'opt ';
         }
         argPrototype += `${argument.name}: `;
         argPrototype += RedTypeAst.toString(
           argument.type,
-          CodeSyntax.pseudocode
+          CodeSyntax.pseudocode,
         );
         return argPrototype;
       })
-      .join(", ");
-    prototype += ") -&gt; ";
+      .join(', ');
+    prototype += ') -&gt; ';
     if (func.returnType) {
       prototype += RedTypeAst.toString(func.returnType, CodeSyntax.pseudocode);
     } else {
-      prototype += "Void";
+      prototype += 'Void';
     }
     return prototype;
   }
@@ -154,9 +154,10 @@ export class RedFunctionAst {
     if (func.returnType) {
       RedTypeAst.loadAlias(nodes, func.returnType);
     }
-    func.arguments.forEach((argument) =>
-      RedTypeAst.loadAlias(nodes, argument.type)
-    );
+
+    func.arguments.forEach((argument) => {
+      RedTypeAst.loadAlias(nodes, argument.type);
+    });
   }
 }
 

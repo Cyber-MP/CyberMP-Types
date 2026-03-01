@@ -1,7 +1,7 @@
 /// <reference path="./entities.d.ts" />
 /// <reference path="./vehicles.d.ts" />
 
-type PlayerIdentifierType = "steam" | "ip";
+type PlayerIdentifierType = 'steam' | 'ip';
 
 interface MpPlayer extends MpEntity {
   readonly velocity: Vector3;

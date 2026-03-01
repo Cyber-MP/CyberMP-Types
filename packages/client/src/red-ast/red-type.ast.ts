@@ -1,11 +1,11 @@
-import { defsIndex, LuaPrimitiveDef } from "src/config/constants";
-import { cyrb53 } from "../utils/string";
+import { defsIndex, LuaPrimitiveDef } from 'src/config/constants';
+import { cyrb53 } from '../utils/string';
 import {
   CodeSyntax,
   RedPrimitiveDef,
   RedTemplateDef,
-} from "./red-definitions.ast";
-import { RedNodeAst, RedNodeKind } from "./red-node.ast";
+} from './red-definitions.ast';
+import { type RedNodeAst, RedNodeKind } from './red-node.ast';
 
 export interface RedTypeJson {
   readonly a?: number; // flag
@@ -30,10 +30,10 @@ export class RedTypeAst {
   }
 
   static toTypescript(type: RedTypeAst): string {
-    if (!type) return "any";
+    if (!type) return 'any';
 
     // Use aliasName when available (similar to toLuadoc)
-    let baseName = type.name ?? "any";
+    let baseName = type.name ?? 'any';
 
     if (defsIndex.enums.has(type.name)) {
       baseName = `CyberEnums.${type.name}`;
@@ -41,17 +41,17 @@ export class RedTypeAst {
       baseName = `CyberBitfields.${type.name}`;
     }
 
-    if (type.name === "Void") {
-      console.log("void captured");
+    if (type.name === 'Void') {
+      console.log('void captured');
     }
 
     // Primitive mapping
-    if (this.isPrimitive(type)) {
+    if (RedTypeAst.isPrimitive(type)) {
       switch (type.flag as RedPrimitiveDef) {
         case RedPrimitiveDef.Void:
-          return "void";
+          return 'void';
         case RedPrimitiveDef.Bool:
-          return "boolean";
+          return 'boolean';
         case RedPrimitiveDef.Int8:
         case RedPrimitiveDef.Uint8:
         case RedPrimitiveDef.Int16:
@@ -62,7 +62,7 @@ export class RedTypeAst {
         case RedPrimitiveDef.Uint64:
         case RedPrimitiveDef.Float:
         case RedPrimitiveDef.Double:
-          return "number";
+          return 'number';
         case RedPrimitiveDef.String:
         case RedPrimitiveDef.LocalizationString:
         case RedPrimitiveDef.CName:
@@ -72,25 +72,25 @@ export class RedTypeAst {
         case RedPrimitiveDef.CRUID:
         case RedPrimitiveDef.EditorObjectID:
         case RedPrimitiveDef.MessageResourcePath:
-          return "string";
+          return 'string';
         case RedPrimitiveDef.DataBuffer:
         case RedPrimitiveDef.serializationDeferredDataBuffer:
         case RedPrimitiveDef.SharedDataBuffer:
           // you can change to Uint8Array if you prefer
-          return "ArrayBuffer";
+          return 'ArrayBuffer';
         case RedPrimitiveDef.CDateTime:
-          return "Date";
+          return 'Date';
         case RedPrimitiveDef.Variant:
         default:
-          return "any";
+          return 'any';
       }
     }
 
     // Template mapping (templates normally have innerType)
-    if (this.isTemplate(type)) {
+    if (RedTypeAst.isTemplate(type)) {
       let innerTs = type.innerType
         ? RedTypeAst.toTypescript(type.innerType)
-        : "any";
+        : 'any';
 
       if (defsIndex.enums.has(innerTs)) {
         innerTs = `CyberEnums.${innerTs}`;
@@ -116,13 +116,14 @@ export class RedTypeAst {
           return `CurveData<${innerTs}>`;
         case RedTemplateDef.multiChannelCurve:
           return `MultiChannelCurve<${innerTs}>`;
-        default:
+        default: {
           // fallback: represent as generic-like `Name<Inner>`
           const tmplName =
             RedTypeAst.templateToString(type.flag as RedTemplateDef) ??
             baseName;
           // If templateToString returned a simple token (e.g. "handle") avoid duplicating
           return `${tmplName}<${innerTs}>`;
+        }
       }
     }
 
@@ -141,7 +142,7 @@ export class RedTypeAst {
       return baseName;
     }
 
-    return "any";
+    return 'any';
   }
 
   static isTemplate(type: RedTypeAst): boolean {
@@ -157,7 +158,7 @@ export class RedTypeAst {
       return false;
     }
     if (type.innerType) {
-      return this.testType(type.innerType, rule);
+      return RedTypeAst.testType(type.innerType, rule);
     }
     const name: string = type.name.toLowerCase();
     const aliasName: string | undefined = type.aliasName?.toLowerCase();
@@ -170,7 +171,7 @@ export class RedTypeAst {
       return false;
     }
     if (type.innerType) {
-      return this.hasStrictType(type.innerType, query);
+      return RedTypeAst.hasStrictType(type.innerType, query);
     }
     const name: string = type.name.toLowerCase();
     const aliasName: string | undefined = type.aliasName?.toLowerCase();
@@ -183,7 +184,7 @@ export class RedTypeAst {
       return false;
     }
     if (type.innerType) {
-      return this.hasType(type.innerType, words);
+      return RedTypeAst.hasType(type.innerType, words);
     }
     const name: string = type.name.toLowerCase();
     const aliasName: string | undefined = type.aliasName?.toLowerCase();
@@ -201,26 +202,25 @@ export class RedTypeAst {
   static templateToString(flag: RedTemplateDef): string {
     switch (flag) {
       case RedTemplateDef.ref:
-        return "handle";
+        return 'handle';
       case RedTemplateDef.wref:
-        return "whandle";
+        return 'whandle';
       case RedTemplateDef.ResRef:
-        return "rRef";
+        return 'rRef';
       case RedTemplateDef.ResAsyncRef:
-        return "raRef";
+        return 'raRef';
       default:
         return RedTemplateDef[flag];
     }
   }
 
   static primitiveToLuadoc(flag: RedPrimitiveDef): string {
-    // @ts-ignore
     return LuaPrimitiveDef[RedPrimitiveDef[flag]];
   }
 
   static toString(type: RedTypeAst, syntax?: CodeSyntax): string {
     let name: string = type.name;
-    let str: string = "";
+    let str: string = '';
 
     if (
       (syntax === CodeSyntax.lua || syntax === CodeSyntax.redscript) &&
@@ -230,10 +230,10 @@ export class RedTypeAst {
     }
     if (type.innerType !== undefined) {
       if (syntax === CodeSyntax.pseudocode) {
-        if (this.isPrimitive(type)) {
-          name = this.primitiveToString(type.flag as RedPrimitiveDef);
-        } else if (this.isTemplate(type)) {
-          name = this.templateToString(type.flag as RedTemplateDef);
+        if (RedTypeAst.isPrimitive(type)) {
+          name = RedTypeAst.primitiveToString(type.flag as RedPrimitiveDef);
+        } else if (RedTypeAst.isTemplate(type)) {
+          name = RedTypeAst.templateToString(type.flag as RedTemplateDef);
         }
         if (type.size === undefined) {
           str += `${name}:`;
@@ -244,7 +244,7 @@ export class RedTypeAst {
         if (type.size === undefined) {
           str += `${name}<`;
         } else {
-          str += "[";
+          str += '[';
         }
       }
       str += RedTypeAst.toString(type.innerType, syntax);
@@ -252,7 +252,7 @@ export class RedTypeAst {
         str += `; ${type.size}`;
       }
       if (syntax !== CodeSyntax.pseudocode) {
-        str += type.size === undefined ? ">" : "]";
+        str += type.size === undefined ? '>' : ']';
       }
     } else {
       str = name;
@@ -262,21 +262,21 @@ export class RedTypeAst {
 
   static toLuadoc(type: RedTypeAst): string {
     let name: string = type.name;
-    let str: string = "";
+    let str: string = '';
 
     if (type.aliasName) {
       name = type.aliasName;
     }
-    if (this.isPrimitive(type)) {
-      name = this.primitiveToLuadoc(type.flag as RedPrimitiveDef);
-    } else if (this.isTemplate(type)) {
-      name = "";
+    if (RedTypeAst.isPrimitive(type)) {
+      name = RedTypeAst.primitiveToLuadoc(type.flag as RedPrimitiveDef);
+    } else if (RedTypeAst.isTemplate(type)) {
+      name = '';
     }
     if (type.innerType !== undefined) {
       str += name;
       str += RedTypeAst.toLuadoc(type.innerType);
       if (type.flag === RedTemplateDef.array) {
-        str += "[]";
+        str += '[]';
       }
     } else {
       str = name;
@@ -304,11 +304,12 @@ export class RedTypeAst {
   }
 
   static loadAlias(nodes: RedNodeAst[], type: RedTypeAst): void {
-    if (this.isPrimitive(type)) {
+    if (RedTypeAst.isPrimitive(type)) {
       return;
     }
     if (type.innerType) {
-      return this.loadAlias(nodes, type.innerType);
+      RedTypeAst.loadAlias(nodes, type.innerType);
+      return;
     }
     const alias: RedNodeAst | undefined = nodes.find(
       (node) => node.name === type.name,
@@ -321,18 +322,16 @@ export class RedTypeAst {
   }
 
   static fromPseudocode(code: string): RedTypeAst | undefined {
-    const tokens: string[] = code.split(":").reverse();
-    let currentType: RedTypeAst | undefined = undefined;
-    let innerType: RedTypeAst | undefined = undefined;
+    const tokens: string[] = code.split(':').reverse();
+    let currentType: RedTypeAst | undefined;
+    let innerType: RedTypeAst | undefined;
 
     for (const token of tokens) {
       const innerDef: any = {};
       const primitiveDef: RedPrimitiveDef | undefined =
-        this.pseudocodeToPrimitive(token);
-      const templateDef: RedTemplateDef | undefined = this.pseudocodeToTemplate(
-        token,
-        innerDef,
-      );
+        RedTypeAst.pseudocodeToPrimitive(token);
+      const templateDef: RedTemplateDef | undefined =
+        RedTypeAst.pseudocodeToTemplate(token, innerDef);
       let name: string;
 
       if (primitiveDef !== undefined) {
@@ -372,17 +371,17 @@ export class RedTypeAst {
     );
 
     if (staticArrayMatch) {
-      innerDef.size = +staticArrayMatch.groups!["size"];
+      innerDef.size = +staticArrayMatch.groups!['size'];
       return RedTemplateDef.array;
     }
     switch (code) {
-      case "handle":
+      case 'handle':
         return RedTemplateDef.ref;
-      case "whandle":
+      case 'whandle':
         return RedTemplateDef.wref;
-      case "rRef":
+      case 'rRef':
         return RedTemplateDef.ResRef;
-      case "raRef":
+      case 'raRef':
         return RedTemplateDef.ResAsyncRef;
       default:
         try {

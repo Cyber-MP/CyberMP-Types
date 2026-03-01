@@ -4,32 +4,28 @@
 /// <reference path="./classes.d.ts" />
 /// <reference path="../classes.d.ts" />
 
-interface OverrideFunction {
-  <
-    C extends keyof MpClasses,
-    I extends UnwrapMpClass<MpClasses[C]>,
-    M extends keyof I extends never ? string : keyof I,
-  >(
-    className: C,
-    methodName: M,
-    callback: (
-      self: I,
-      ...args: [...Parameters<I[M]>, origin: I[M]]
-    ) => ReturnType<I[M]>,
-  ): void;
-}
+type OverrideFunction = <
+  C extends keyof MpClasses,
+  I extends UnwrapMpClass<MpClasses[C]>,
+  M extends keyof I extends never ? string : keyof I,
+>(
+  className: C,
+  methodName: M,
+  callback: (
+    self: I,
+    ...args: [...Parameters<I[M]>, origin: I[M]]
+  ) => ReturnType<I[M]>,
+) => void;
 
-interface ObserveFunction {
-  <
-    C extends keyof MpClasses,
-    I extends UnwrapMpClass<MpClasses[C]>,
-    M extends keyof I extends never ? string : keyof I,
-  >(
-    className: C,
-    methodName: M,
-    callback: (self: I, ...args: Parameters<I[M]>) => void,
-  ): void;
-}
+type ObserveFunction = <
+  C extends keyof MpClasses,
+  I extends UnwrapMpClass<MpClasses[C]>,
+  M extends keyof I extends never ? string : keyof I,
+>(
+  className: C,
+  methodName: M,
+  callback: (self: I, ...args: Parameters<I[M]>) => void,
+) => void;
 
 interface TweakDB {
   getRecords<T = any>(str: string): T[];
@@ -95,7 +91,7 @@ interface MpGamePrecomputed {
    * @param type Model name type
    * @returns Model hash
    */
-  getHashFromName(name: string, type: "tweakdbid" | "cname"): string;
+  getHashFromName(name: string, type: 'tweakdbid' | 'cname'): string;
 
   /**
    * Overrides method function inside selected class.

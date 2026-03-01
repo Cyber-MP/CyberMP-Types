@@ -1,15 +1,15 @@
-import { consola } from "consola";
-import { defsIndex } from "src/config/constants";
-import { RedBitfieldAst } from "src/red-ast/red-bitfield.ast";
-import {
+import { consola } from 'consola';
+import { defsIndex } from 'src/config/constants';
+import { RedBitfieldAst } from 'src/red-ast/red-bitfield.ast';
+import type {
   EnumDeclarationStructure,
   EnumMemberStructure,
   OptionalKind,
   Project,
-} from "ts-morph";
-import bitfields from "../../assets/bitfields.json";
-import { uniqueBy } from "../utils/file-utils";
-import { BaseGenerator } from "./base-generator";
+} from 'ts-morph';
+import bitfields from '../../assets/bitfields.json';
+import { uniqueBy } from '../utils/file-utils';
+import { BaseGenerator } from './base-generator';
 
 export class BitfieldGenerator extends BaseGenerator {
   private bitfields: RedBitfieldAst[];
@@ -22,7 +22,7 @@ export class BitfieldGenerator extends BaseGenerator {
   }
 
   generate() {
-    const sourceFile = this.createSourceFile("./out/bitfields.d.ts");
+    const sourceFile = this.createSourceFile('./out/bitfields.d.ts');
 
     this.addHeader(sourceFile);
 
@@ -40,6 +40,6 @@ export class BitfieldGenerator extends BaseGenerator {
     );
     sourceFile.saveSync();
 
-    consola.success("Bitfields generated successfully");
+    consola.success('Bitfields generated successfully');
   }
 }

@@ -1,13 +1,13 @@
+import { cyrb53 } from '../utils/string';
 import {
-  InheritData,
+  type InheritData,
   RedOriginDef,
   RedVisibilityDef,
-} from "./red-definitions.ast";
-import { RedNodeAst, RedNodeKind } from "./red-node.ast";
-import { cyrb53 } from "../utils/string";
-import { RedPropertyAst, RedPropertyJson } from "./red-property.ast";
-import { RedFunctionAst, RedFunctionJson } from "./red-function.ast";
-import { RedTypeAst } from "./red-type.ast";
+} from './red-definitions.ast';
+import { RedFunctionAst, type RedFunctionJson } from './red-function.ast';
+import { type RedNodeAst, RedNodeKind } from './red-node.ast';
+import { RedPropertyAst, type RedPropertyJson } from './red-property.ast';
+import { RedTypeAst } from './red-type.ast';
 
 export interface RedClassJson {
   readonly a?: string; // parent
@@ -48,7 +48,7 @@ export class RedClassAst {
     //         expect a static qualifier.
     //       - structs can't have member functions. Therefore, the static qualifier of functions is always set.
     const isStaticFix: boolean =
-      json.g === true || name === "gamedataTweakDBInterface";
+      json.g === true || name === 'gamedataTweakDBInterface';
 
     return {
       id: cyrb53(name),
@@ -71,10 +71,12 @@ export class RedClassAst {
   }
 
   static loadAliases(nodes: RedNodeAst[], object: RedClassAst): void {
-    object.properties.forEach((property) =>
-      RedTypeAst.loadAlias(nodes, property.type)
-    );
-    object.functions.forEach((func) => RedFunctionAst.loadAlias(nodes, func));
+    object.properties.forEach((property) => {
+      RedTypeAst.loadAlias(nodes, property.type);
+    });
+    object.functions.forEach((func) => {
+      RedFunctionAst.loadAlias(nodes, func);
+    });
   }
 }
 

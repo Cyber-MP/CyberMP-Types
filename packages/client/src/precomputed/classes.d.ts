@@ -1,4 +1,4 @@
-import * as CyberEnums from "../enums";
+import type * as CyberEnums from '../enums';
 
 declare global {
   /**
@@ -67,7 +67,7 @@ declare global {
   interface gameScriptableSystemsContainer<
     Map = OnlyExtendingScriptableSystem<MpClasses>,
   > {
-    "Get"<N extends keyof Map>(systemName: N): UnwrapMpClass<Map[N]>;
+    Get<N extends keyof Map>(systemName: N): UnwrapMpClass<Map[N]>;
   }
 
   namespace ScriptGameInstance {
@@ -93,5 +93,3 @@ declare global {
     OnPlayerGenderChanged(gender: CyberEnums.EPlayerGender): void;
   }
 }
-
-export {};

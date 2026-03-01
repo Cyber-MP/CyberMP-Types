@@ -1,3 +1,5 @@
+/// <reference path="./players.d.ts" />
+
 interface MpCommands {
   /**
    * Register a command in the server scope.
