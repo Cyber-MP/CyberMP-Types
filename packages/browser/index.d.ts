@@ -18,7 +18,7 @@ interface MpEvents {
    * @param eventName Name of the event to trigger.
    * @param args Arguments to send with the event.
    */
-  trigger(eventName: string, ...args: any[]): void;
+  emit(eventName: string, ...args: any[]): void;
 }
 
 interface Mp {
