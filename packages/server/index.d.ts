@@ -17,7 +17,7 @@ type CoreConfig = {
   files?: string[];
 };
 
-type ServerConfig = {
+type Config = {
   tcp_host: string;
   udp_host: string;
   connection_host_addr: string;
@@ -47,7 +47,7 @@ interface Mp {
    */
   isServer(): boolean;
 
-  server: ServerConfig;
+  config: Config;
 }
 
 declare const mp: Mp;
