@@ -11,6 +11,23 @@
 /// <reference path="./peds.d.ts" />
 /// <reference path="./hashes.d.ts" />
 
+type CoreConfig = {
+  nametags?: boolean;
+  fast_travel?: boolean;
+  files?: string[];
+};
+
+type ServerConfig = {
+  tcp_host: string;
+  udp_host: string;
+  connection_host_addr: string;
+  max_players: number;
+  secret_token: string;
+  resources: string[];
+  disable_VoIP_server: boolean;
+  core?: CoreConfig;
+};
+
 interface Mp {
   events: MpEvents;
   meta: MpMeta;
@@ -29,6 +46,8 @@ interface Mp {
    * @returns True if running on server, false otherwise.
    */
   isServer(): boolean;
+
+  server: ServerConfig;
 }
 
 declare const mp: Mp;
