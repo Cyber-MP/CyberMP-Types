@@ -24,7 +24,7 @@ declare global {
     setMeta(key: string, value: any, sync?: boolean): void;
   }
 
-  interface MpEntities<T extends MpEntity = MpEntity> extends Array<T> {
+  interface MpEntities<T extends MpEntity = MpEntity> {
     exists(entity: T | number): boolean;
 
     at(entity: T | number): T;
