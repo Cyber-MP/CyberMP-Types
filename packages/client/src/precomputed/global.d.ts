@@ -13,6 +13,7 @@ interface MpGlobalPrecomputed {
   voiceChat: MpVoiceChat;
   cef: MpCef;
   discord: MpDiscord;
+  localStorage: MpLocalStorage;
 
   getStreamedPool(
     objName: 'CVehicle' | 'CPed' | 'CPickup' | 'CObject',
