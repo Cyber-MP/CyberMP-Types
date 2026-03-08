@@ -3,6 +3,7 @@
 /// <reference path="./voice-chat.d.ts" />
 /// <reference path="./cef.d.ts" />
 /// <reference path="./discord.d.ts" />
+/// <reference path="./local-storage.d.ts" />
 
 type ServerVector3 = [number, number, number];
 type ServerVector4 = [number, number, number, number];
