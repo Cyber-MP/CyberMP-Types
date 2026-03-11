@@ -137,6 +137,7 @@ interface MpEventsMap {
 
   playerConnecting(tempId: number, name: string): void;
   playerConnected(playerId: number, tempId: string): void;
+  playerSpawn(playerId: number): void;
   playerRespawn(playerId: number, data: Vector3Object): void;
   playerDeath(playerId: number, data: PlayerDeathEventData): void;
   playerDisconnected(playerId: number, reason: string): void;
