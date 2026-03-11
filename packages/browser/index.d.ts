@@ -1,4 +1,4 @@
-interface MpEvents {
+export interface MpEvents {
   /**
    * Used for listening for events coming from client-side.
    * @param eventName Name of the event to listen for.
@@ -21,8 +21,6 @@ interface MpEvents {
   emit(eventName: string, ...args: any[]): void;
 }
 
-interface Mp {
+export interface MpBrowser {
   events: MpEvents;
 }
-
-declare const mp: Mp;
