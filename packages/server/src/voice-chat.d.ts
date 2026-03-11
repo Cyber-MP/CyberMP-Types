@@ -1,6 +1,6 @@
-/// <reference path="./players.d.ts" />
+import type { MpPlayer } from './players';
 
-interface MpVoiceChat {
+export interface MpVoiceChat {
   mutePlayer(player: MpPlayer | number): void;
 
   createChannel(voiceId: number): void;

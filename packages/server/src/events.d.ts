@@ -1,4 +1,5 @@
-/// <reference path="./players.d.ts" />
+import type { MpPlayer } from './players';
+import type { GameHash } from './shared';
 
 type DamageEventData = {
   damageType: number;
@@ -166,10 +167,7 @@ interface MpEventsMap {
   pickupCreate(playerId: number, data: PickupCreateEventData): void;
 }
 
-/**
- * Main MP events interface.
- */
-interface MpEvents {
+export interface MpEvents {
   /**
    * Listen for a shared (server or client) custom event.
    * @param eventName The name of the custom event.

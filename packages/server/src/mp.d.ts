@@ -1,15 +1,13 @@
-/// <reference path="./shared.d.ts" />
-/// <reference path="./resources.d.ts" />
-/// <reference path="./events.d.ts" />
-/// <reference path="./commands.d.ts" />
-/// <reference path="./meta.d.ts" />
-/// <reference path="./entities.d.ts" />
-/// <reference path="./players.d.ts" />
-/// <reference path="./vehicles.d.ts" />
-/// <reference path="./pickups.d.ts" />
-/// <reference path="./objects.d.ts" />
-/// <reference path="./peds.d.ts" />
-/// <reference path="./hashes.d.ts" />
+import type { MpCommands } from './commands';
+import type { MpEntities } from './entities';
+import type { MpHashes } from './hashes';
+import type { MpMeta } from './meta';
+import type { MpObjects } from './objects';
+import type { MpPeds } from './peds';
+import type { MpPickups } from './pickups';
+import type { MpPlayers } from './players';
+import type { MpResources } from './resources';
+import type { MpVehicles } from './vehicles';
 
 type CoreConfig = {
   nametags?: boolean;
@@ -17,7 +15,7 @@ type CoreConfig = {
   files?: string[];
 };
 
-type Config = {
+export type ServerConfig = {
   tcp_host: string;
   udp_host: string;
   connection_host_addr: string;
@@ -28,7 +26,7 @@ type Config = {
   core?: CoreConfig;
 };
 
-interface Mp {
+export interface MpServer {
   events: MpEvents;
   meta: MpMeta;
   resources: MpResources;
@@ -47,7 +45,9 @@ interface Mp {
    */
   isServer(): boolean;
 
-  config: Config;
+  config: ServerConfig;
 }
 
-declare const mp: Mp;
+declare const mp: MpServer;
+
+export { mp };

@@ -13,32 +13,6 @@ export const defsIndex = {
 
 export const blacklist = ['with', 'debugger'];
 
-export const TYPES_MAP: Record<string, string> = {
-  int: 'number',
-  int32: 'number',
-  int16: 'number',
-  int64: 'number',
-  uint32: 'number',
-  uint64: 'number',
-  single: 'number',
-  double: 'number',
-  float: 'number',
-  decimal: 'number',
-  boolean: 'boolean',
-  bool: 'boolean',
-  string: 'string',
-  char: 'string',
-  object: 'Record<string, any>',
-  void: 'void',
-  any: 'any',
-  byte: 'number',
-  sbyte: 'number',
-  intptr: 'number',
-  uintptr: 'number',
-  guid: 'string',
-  datetime: 'Date',
-};
-
 export enum LuaPrimitiveDef {
   Void = 'void',
   Bool = 'Bool',

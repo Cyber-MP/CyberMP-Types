@@ -1,9 +1,10 @@
-/// <reference path="./entities.d.ts" />
-/// <reference path="./vehicles.d.ts" />
+import type { MpEntities, MpEntity } from './entities';
+import type { Vector3 } from './shared';
+import type { MpVehicle } from './vehicles';
 
-type PlayerIdentifierType = 'steam' | 'ip';
+export type PlayerIdentifierType = 'steam' | 'ip';
 
-interface MpPlayer extends MpEntity {
+export interface MpPlayer extends MpEntity {
   readonly velocity: Vector3;
   readonly health: number;
   readonly nickname: string;
@@ -18,7 +19,7 @@ interface MpPlayer extends MpEntity {
   mute(): void;
 }
 
-interface MpPlayers extends MpEntities<MpPlayer> {
+export interface MpPlayers extends MpEntities<MpPlayer> {
   kick(player: MpPlayer | number, reason?: string): void;
   getIdentifier(player: MpPlayer | number, type: PlayerIdentifierType): string;
   toArray(): MpPlayer[];

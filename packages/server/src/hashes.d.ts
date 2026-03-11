@@ -1,6 +1,6 @@
-/// <reference path="./shared.d.ts" />
+import type { CName, ResRef, TweakDBID } from './shared';
 
-interface MpHashes {
+export interface MpHashes {
   tweakdbid(path: string): TweakDBID;
   cname(path: string): CName;
   resref(path: string): ResRef;

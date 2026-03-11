@@ -1,7 +1,6 @@
 import { consola } from 'consola';
 import { defsIndex } from 'src/config/constants';
 import { RedClassAst } from 'src/red-ast/red-class.ast';
-import { RedVisibilityDef } from 'src/red-ast/red-definitions.ast';
 import { RedFunctionAst } from 'src/red-ast/red-function.ast';
 import { RedPropertyAst } from 'src/red-ast/red-property.ast';
 import { RedTypeAst } from 'src/red-ast/red-type.ast';
@@ -18,29 +17,9 @@ import {
   type Project,
   type PropertyDeclarationStructure,
   type PropertySignatureStructure,
-  Scope,
 } from 'ts-morph';
 import classes from '../../assets/classes.json';
 import { BaseGenerator } from './base-generator';
-
-enum RedFunctionFlags {
-  isPrivate,
-  isProtected,
-  isNative,
-  isStatic,
-  isFinal,
-  isThreadSafe,
-  isEvent,
-  isConst,
-  isQuest,
-  isTimer,
-}
-
-const visibilityToScope: Record<RedVisibilityDef, Scope> = {
-  [RedVisibilityDef.private]: Scope.Private,
-  [RedVisibilityDef.protected]: Scope.Protected,
-  [RedVisibilityDef.public]: Scope.Public,
-};
 
 export class ClassGenerator extends BaseGenerator<[ModuleDeclaration]> {
   private classObjs: RedClassAst[];
@@ -58,26 +37,6 @@ export class ClassGenerator extends BaseGenerator<[ModuleDeclaration]> {
 
     this.classObjs = objects;
     defsIndex.classes = new Set<string>(this.classObjs.map((o) => o.name));
-  }
-
-  private sortClasses(
-    classes: OptionalKind<ClassDeclarationStructure>[],
-  ): OptionalKind<ClassDeclarationStructure>[] {
-    const byName = new Map(classes.map((c) => [c.name!, c]));
-    const visited = new Set<string>();
-    const result: OptionalKind<ClassDeclarationStructure>[] = [];
-
-    const visit = (cls: OptionalKind<ClassDeclarationStructure>) => {
-      if (!cls.name || visited.has(cls.name)) return;
-      if (cls.extends && byName.has(cls.extends as string)) {
-        visit(byName.get(cls.extends as string)!);
-      }
-      visited.add(cls.name);
-      result.push(cls);
-    };
-
-    for (const cls of classes) visit(cls);
-    return result;
   }
 
   generate(module: ModuleDeclaration) {

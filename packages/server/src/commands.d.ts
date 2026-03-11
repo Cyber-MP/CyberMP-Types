@@ -1,6 +1,6 @@
-/// <reference path="./players.d.ts" />
+import type { MpPlayer } from './players';
 
-interface MpCommands {
+export interface MpCommands {
   /**
    * Register a command in the server scope.
    * @param commandName Command name without "/".

@@ -1,4 +1,7 @@
-interface MpMeta {
+import type { MpEntity } from './entities';
+import type { MpPlayer } from './players';
+
+export interface MpMeta {
   setGlobalMeta(key: string, value: any, sync?: boolean): void;
   getGlobalMeta<T = any>(key: string): T;
 

@@ -1,10 +1,13 @@
-interface MpObject extends MpEntity {
+import type { MpEntities, MpEntity } from './entities';
+import type { TweakDBID, Vector3 } from './shared';
+
+export interface MpObject extends MpEntity {
   readonly model: TweakDBID;
 
   destroy(): void;
 }
 
-type CreateObjectOptions = {
+export type CreateObjectOptions = {
   model: TweakDBID;
   position: Vector3;
   yaw?: number;
@@ -12,7 +15,7 @@ type CreateObjectOptions = {
   dimension?: number;
 };
 
-interface MpObjects extends MpEntities<MpObject> {
+export interface MpObjects extends MpEntities<MpObject> {
   create(options: CreateObjectOptions): MpObject;
   destroy(entity: MpObject | number): void;
   toArray(): MpObject[];

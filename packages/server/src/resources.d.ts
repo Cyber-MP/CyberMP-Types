@@ -1,4 +1,4 @@
-interface MpResources {
+export interface MpResources {
   /**
    * Gets the current state of a resource.
    * @param resourceName The resource to check.

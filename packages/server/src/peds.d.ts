@@ -1,4 +1,7 @@
-interface MpPed extends MpEntity {
+import type { MpEntities, MpEntity } from './entities';
+import type { CName, TweakDBID, Vector3 } from './shared';
+
+export interface MpPed extends MpEntity {
   readonly health: number;
   readonly model: TweakDBID;
   readonly appearance: CName;
@@ -6,7 +9,7 @@ interface MpPed extends MpEntity {
   destroy(): void;
 }
 
-type CreatePedOptions = {
+export type CreatePedOptions = {
   model: TweakDBID;
   appearance: CName;
   position: Vector3;
@@ -15,7 +18,7 @@ type CreatePedOptions = {
   dimension?: number;
 };
 
-interface MpPeds extends MpEntities<MpPed> {
+export interface MpPeds extends MpEntities<MpPed> {
   create(options: CreatePedOptions): MpPed;
 
   destroy(ped: MpPed | number): void;
