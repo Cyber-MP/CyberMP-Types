@@ -4,7 +4,8 @@ import { rimraf } from 'rimraf';
 import { defsIndex, project } from './config/constants';
 import { BitfieldGenerator } from './generators/bitfield-generator';
 import { EnumGenerator } from './generators/enum-generator';
-import { IndexGenerator } from './generators/index-generator';
+import { GameGenerator } from './generators/game-generator';
+import { MpGenerator } from './generators/mp-generator';
 import { capitalizeFirstLetter } from './utils/string';
 
 const copyPrecomputedFiles = () => {
@@ -25,11 +26,13 @@ async function main() {
   consola.start('Starting generation process...');
   const enumGenerator = new EnumGenerator(project);
   const bitfieldGenerator = new BitfieldGenerator(project);
-  const indexGenerator = new IndexGenerator(project);
+  const mpGenerator = new MpGenerator(project);
+  const gameGenerator = new GameGenerator(project);
 
   enumGenerator.generate();
   bitfieldGenerator.generate();
-  indexGenerator.generate();
+  gameGenerator.generate();
+  mpGenerator.generate();
 
   copyPrecomputedFiles();
 

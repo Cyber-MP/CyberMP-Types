@@ -1,7 +1,7 @@
 /**
  * See {@link worldWeatherState#name}
  */
-export enum WeatherState {
+export enum EWeatherState {
   SUNNY = '24h_weather_sunny',
   LIGHT_CLOUDS = '24h_weather_light_clouds',
   CLOUDY = '24h_weather_cloudy',
@@ -19,7 +19,7 @@ export enum WeatherState {
   COURIER_CLOUDS = 'sa_courier_clouds',
 }
 
-export enum VoiceActivationType {
+export enum EVoiceActivationType {
   UNDEFINED = 0,
   VOICE = 1,
   PUSH_TO_TALK = 2,

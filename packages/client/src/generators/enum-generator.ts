@@ -26,7 +26,9 @@ export class EnumGenerator extends BaseGenerator {
 
     this.addHeader(sourceFile);
 
-    sourceFile.addStatements([`export * from './precomputed/enums.d.ts'`]);
+    sourceFile.addExportDeclaration({
+      moduleSpecifier: './precomputed/enums.d.ts',
+    });
 
     sourceFile.addEnums(
       this.enums.map<OptionalKind<EnumDeclarationStructure>>((obj) => ({
@@ -41,12 +43,6 @@ export class EnumGenerator extends BaseGenerator {
       })),
     );
 
-    // sourceFile.addModule({
-    //   name: "CyberEnums",
-    //   isExported: true,
-    //   declarationKind: ModuleDeclarationKind.Namespace,
-    //   statements: enumDecls,
-    // }).;
     sourceFile.saveSync();
 
     consola.success('Enums generated successfully');

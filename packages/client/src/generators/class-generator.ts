@@ -8,20 +8,19 @@ import {
   getFunctionParams,
   getFunctionReturnType,
 } from 'src/utils/type-resolver';
-import {
-  type ClassDeclarationStructure,
-  type MethodDeclarationStructure,
-  type ModuleDeclaration,
-  ModuleDeclarationKind,
-  type OptionalKind,
-  type Project,
-  type PropertyDeclarationStructure,
-  type PropertySignatureStructure,
+import type {
+  ClassDeclarationStructure,
+  MethodDeclarationStructure,
+  OptionalKind,
+  Project,
+  PropertyDeclarationStructure,
+  PropertySignatureStructure,
+  SourceFile,
 } from 'ts-morph';
 import classes from '../../assets/classes.json';
 import { BaseGenerator } from './base-generator';
 
-export class ClassGenerator extends BaseGenerator<[ModuleDeclaration]> {
+export class ClassGenerator extends BaseGenerator<[SourceFile]> {
   private classObjs: RedClassAst[];
 
   constructor(project: Project) {
@@ -39,13 +38,7 @@ export class ClassGenerator extends BaseGenerator<[ModuleDeclaration]> {
     defsIndex.classes = new Set<string>(this.classObjs.map((o) => o.name));
   }
 
-  generate(module: ModuleDeclaration) {
-    const sourceFile = this.createSourceFile('./out/classes.d.ts');
-
-    const classMap = new Map<string, any>(
-      this.classObjs.map((o) => [o.name, o]),
-    );
-
+  generate(parentFile: SourceFile) {
     const classes = this.classObjs.map<OptionalKind<ClassDeclarationStructure>>(
       (obj) => {
         const funcs: RedFunctionAst[] = obj.functions ?? [];
@@ -84,6 +77,7 @@ export class ClassGenerator extends BaseGenerator<[ModuleDeclaration]> {
         return {
           name: obj.name,
           extends: obj.parent,
+          isExported: true,
           // hasDeclareKeyword: true,
           properties,
           methods,
@@ -91,29 +85,15 @@ export class ClassGenerator extends BaseGenerator<[ModuleDeclaration]> {
       },
     );
 
-    this.addHeader(sourceFile);
+    this.addHeader(parentFile);
 
-    sourceFile.addStatements(`import * as CyberEnums from './enums'`);
-    sourceFile.addStatements(`import * as CyberBitfields from './bitfields'`);
-    sourceFile.addExportDeclaration({});
+    parentFile.addClasses(classes);
 
-    sourceFile.insertStatements(0, [
-      `/// <reference path="./enums.d.ts" />`,
-      `/// <reference path="./bitfields.d.ts" />`,
-      `/// <reference path="./precomputed/index.d.ts" />`,
-    ]);
+    parentFile.saveSync();
 
-    sourceFile
-      .addModule({
-        name: 'global',
-        declarationKind: ModuleDeclarationKind.Global,
-        hasDeclareKeyword: true,
-      })
-      .addClasses(classes);
-    sourceFile.saveSync();
-
-    module.addInterface({
+    parentFile.addInterface({
       name: 'MpClasses',
+      isExported: true,
       properties: this.classObjs.map<OptionalKind<PropertySignatureStructure>>(
         (obj) => ({
           name: obj.name,

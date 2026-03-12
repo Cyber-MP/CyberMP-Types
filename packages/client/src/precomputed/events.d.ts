@@ -1,14 +1,4 @@
-interface MpEvents {
-  on(
-    eventName: 'onResourceStarted',
-    callback: (resourceName: string) => void,
-  ): void;
-
-  on(
-    eventName: 'onResourceStopped',
-    callback: (resourceName: string) => void,
-  ): void;
-
+export interface MpEvents {
   /**
    * Register a custom event listener.
    * @param eventName Name of the event.
