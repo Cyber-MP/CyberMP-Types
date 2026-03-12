@@ -1,5 +1,6 @@
 import type { MpCommands } from './commands';
 import type { MpEntities } from './entities';
+import type { MpEvents } from './events';
 import type { MpHashes } from './hashes';
 import type { MpMeta } from './meta';
 import type { MpObjects } from './objects';
@@ -9,9 +10,29 @@ import type { MpPlayers } from './players';
 import type { MpResources } from './resources';
 import type { MpVehicles } from './vehicles';
 
+type CoreOverrides = {
+  change_player_on_death_logic?: boolean;
+  disable_side_quests_notifications?: boolean;
+  change_vehicles_logic?: boolean;
+  disable_player_inventory_encumbrance?: boolean;
+  player_extended_customization?: boolean;
+  disable_time_skip?: boolean;
+  disable_turrets?: boolean;
+  disable_surveillance_cameras?: boolean;
+  disable_vending_machines?: boolean;
+  disable_generic_devices?: boolean;
+  disable_no_combat?: boolean;
+};
+
 type CoreConfig = {
   nametags?: boolean;
-  fast_travel?: boolean;
+  disable_switch_seats?: boolean;
+  delete_map_objects?: boolean;
+  default_gameplay_restrictions?: boolean;
+  disable_drop_points?: boolean;
+  disable_location_dependent_quests?: boolean;
+  disable_garage?: boolean;
+  override?: CoreOverrides;
   files?: string[];
 };
 
