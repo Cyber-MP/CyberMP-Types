@@ -1,3 +1,4 @@
+import type { MpCef } from './cef';
 import type { MpDiscord } from './discord';
 import type { MpEvents } from './events';
 import type { MpLocalStorage } from './local-storage';

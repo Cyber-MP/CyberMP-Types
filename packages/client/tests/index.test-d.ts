@@ -13,10 +13,6 @@ import { describe, expectTypeOf, test } from 'vitest';
 
 const mp = {} as MpClient;
 
-const asd = mp.game.GetMountedVehicle({} as gameObject);
-
-asd.HasGravity();
-
 describe('Core, basis functions', () => {
   test('Mp, MpGame', () => {
     expectTypeOf(mp).toEqualTypeOf<MpClient>();
