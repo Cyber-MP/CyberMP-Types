@@ -5,6 +5,9 @@ export enum EntityType {
   Player = 1,
   Vehicle = 2,
   Object = 3,
+  Ped = 4,
+  Pickup = 5,
+  GameObject = 6,
 }
 
 export interface MpEntity {

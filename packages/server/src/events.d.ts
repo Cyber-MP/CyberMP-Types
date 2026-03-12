@@ -1,3 +1,4 @@
+import type { EntityType } from './entities';
 import type { MpPlayer } from './players';
 import type { GameHash } from './shared';
 
@@ -140,6 +141,7 @@ export interface MpEventsMap {
   playerConnected(playerId: number, tempId: string): void;
   playerSpawn(playerId: number): void;
   playerRespawn(playerId: number, data: Vector3Object): void;
+  playerDespawn(playerId: number): void;
   playerDeath(playerId: number, data: PlayerDeathEventData): void;
   playerDisconnected(playerId: number, reason: string): void;
   playerAppearanceChange(
@@ -150,8 +152,21 @@ export interface MpEventsMap {
   damage(playerId: number, data: DamageEventData): void;
   fire(playerId: number, data: FireEventData): void;
   explosion(playerId: number, data: ExplosionEventData): void;
+
   doorStateChange(playerId: number, data: DoorStateChangeEventData): void;
   liftStateChange(playerId: number, data: LiftStateChangeEventData): void;
+
+  entitySpawn(id: number, type: EntityType): void;
+  entityDespawn(id: number, type: EntityType): void;
+
+  objectSpawn(id: number): void;
+  objectDespawn(id: number): void;
+
+  pedSpawn(id: number): void;
+  pedDespawn(id: number): void;
+
+  gameObjectSpawn(id: number): void;
+  gameObjectDespawn(id: number): void;
 
   vehicleCustomizationChange(
     playerId: number,
@@ -161,6 +176,8 @@ export interface MpEventsMap {
     playerId: number,
     data: VehicleDestructionChangeEventData,
   ): void;
+  vehicleSpawn(id: number): void;
+  vehicleDespawn(id: number): void;
 
   pickupChange(playerId: number, data: PickupChangeEventData): void;
   pickupDespawn(playerId: number, data: PickupDespawnEventData): void;
