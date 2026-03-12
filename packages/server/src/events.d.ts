@@ -1,7 +1,7 @@
 import type { MpPlayer } from './players';
 import type { GameHash } from './shared';
 
-type DamageEventData = {
+export type DamageEventData = {
   damageType: number;
   weaponHash: GameHash;
   totalDamage: number;
@@ -30,12 +30,12 @@ type Vector3Object = {
   posZ: number;
 };
 
-type DoorStateChangeEventData = Vector3Object & {
+export type DoorStateChangeEventData = Vector3Object & {
   hashObject: GameHash;
   state: boolean;
 };
 
-type LiftStateChangeEventData = Vector3Object & {
+export type LiftStateChangeEventData = Vector3Object & {
   hashObject: GameHash;
   playerID: number;
   targetFloor: number;
@@ -43,14 +43,14 @@ type LiftStateChangeEventData = Vector3Object & {
   maxFloor: number;
 };
 
-type ExplosionEventData = Vector3Object & {
+export type ExplosionEventData = Vector3Object & {
   isVehicle: boolean;
   vehicleID: number;
   hashObject: GameHash;
   objNetID: number;
 };
 
-type AppearancePropertyData = {
+export type AppearancePropertyData = {
   meshType: number;
   isEnabed: boolean;
   pathToMesh: GameHash;
@@ -58,24 +58,24 @@ type AppearancePropertyData = {
   chunkMask: GameHash;
 };
 
-type AppearanceWeightPropertyData = {
+export type AppearanceWeightPropertyData = {
   targetHash: GameHash;
   regionHash: GameHash;
   weight: number;
 };
 
-type PlayerAppearanceChangeEventData = {
+export type PlayerAppearanceChangeEventData = {
   skinneds: AppearancePropertyData[];
   garments: AppearancePropertyData[];
   morphs: AppearancePropertyData[];
   weights: AppearanceWeightPropertyData[];
 };
 
-type PlayerDeathEventData = {
+export type PlayerDeathEventData = {
   killerId?: number;
 };
 
-type VehicleCustomizationChangeEventData = {
+export type VehicleCustomizationChangeEventData = {
   isVehicleWasCustomized: boolean;
   isEnabledVehCustomization: boolean;
   isDisabledVehCustomizationByDamage: boolean;
@@ -93,7 +93,7 @@ type VehicleCustomizationChangeEventData = {
   hashAppearance: GameHash;
 };
 
-type VehicleDestructionChangeEventData = {
+export type VehicleDestructionChangeEventData = {
   vehicleID: number;
   brokenGlass: number;
   brokenLights: number;
@@ -101,33 +101,33 @@ type VehicleDestructionChangeEventData = {
   windshieldShattered: boolean;
 };
 
-type FireEventData = Vector3Object & {
+export type FireEventData = Vector3Object & {
   hashObject: GameHash;
   dirX: number;
   dirY: number;
   dirZ: number;
 };
 
-type PickupChangeEventData = {
+export type PickupChangeEventData = {
   pickupNetId: number;
   pickupHash: GameHash;
   pickupHashes: GameHash[];
 };
 
-type PickupDespawnEventData = {
+export type PickupDespawnEventData = {
   pickupNetId: number;
   pickupHash: GameHash;
   isBag: boolean;
 };
 
-type PickupCreateEventData = Vector3Object & {
+export type PickupCreateEventData = Vector3Object & {
   pickupNetId: number;
   pickupHash: GameHash;
   pickupHashes: GameHash[];
   isBag: boolean;
 };
 
-interface MpEventsMap {
+export interface MpEventsMap {
   anyResourceStart(resourceName: string): void;
   anyResourceStop(resourceName: string): void;
   anyServerResourceStart(resourceName: string): void;
