@@ -32,7 +32,7 @@ type CoreConfig = {
   disable_drop_points?: boolean;
   disable_location_dependent_quests?: boolean;
   disable_garage?: boolean;
-  override?: CoreOverrides;
+  overrides?: CoreOverrides;
   files?: string[];
 };
 
