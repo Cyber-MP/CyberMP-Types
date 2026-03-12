@@ -1,6 +1,8 @@
 import type * as CyberEnums from '../enums';
 import type { MpClasses, Vector3 } from '../game';
 
+type UnwrapClass<T> = T extends { new (): infer U } ? U : T;
+
 type OverrideFunction = <
   C extends keyof MpClasses,
   I extends UnwrapClass<MpClasses[C]>,
