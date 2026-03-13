@@ -180,8 +180,10 @@ export interface MpEventsMap {
   vehicleDespawn(id: number): void;
 
   pickupChange(playerId: number, data: PickupChangeEventData): void;
-  pickupDespawn(playerId: number, data: PickupDespawnEventData): void;
-  pickupCreate(playerId: number, data: PickupCreateEventData): void;
+  pickupRaise(playerId: number, data: PickupDespawnEventData): void;
+  pickupDrop(playerId: number, data: PickupCreateEventData): void;
+  pickupSpawn(id: number): void;
+  pickupDespawn(id: number): void;
 }
 
 export interface MpEvents {
