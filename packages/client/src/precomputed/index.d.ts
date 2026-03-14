@@ -1,5 +1,4 @@
 export * from './cef';
-export * from './classes';
 export * from './discord';
 export * from './enums';
 export * from './events';
@@ -7,5 +6,4 @@ export * from './game';
 export * from './local-storage';
 export * from './meta';
 export * from './mp';
-export * from './primitives';
 export * from './voice-chat';
