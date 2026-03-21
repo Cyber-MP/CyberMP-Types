@@ -16,8 +16,8 @@ export interface MpVoiceChat {
   setOutputDevice(index: number): void;
   setInputDevice(index: number): void;
 
-  setVoiceInputDistance(distance: number): void;
-  setVoiceOutputDistance(distance: number): void;
+  setInputDistance(distance: number): void;
+  setOutputDistance(distance: number): void;
 
   isActive(): boolean;
 }
