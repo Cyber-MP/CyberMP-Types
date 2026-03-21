@@ -1,5 +1,5 @@
 import type * as CyberEnums from '../enums';
-import type { MpClasses, Vector3 } from '../game';
+import type { entMorphTargetWeightEntry, MpClasses, Vector3 } from '../game';
 
 type UnwrapClass<T> = T extends { new (): infer U } ? U : T;
 
@@ -126,8 +126,13 @@ declare module '../game.d.ts' {
     OnPlayerGenderChanged(gender: CyberEnums.EPlayerGender): void;
   }
 
+  export interface entEntity {
+    GetMorphWeights(): entMorphTargetWeightEntry[];
+  }
+
   export interface MpClasses {
     LoadingScreenSystem: typeof LoadingScreenSystem;
+    entEntity: typeof entEntity;
   }
 
   export interface MpGame {
