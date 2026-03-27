@@ -54,8 +54,8 @@ declare module '../mp.d.ts' {
      * Spawn local-only entities (not synced).
      */
     spawnLocalPed(
-      skinHash: number,
-      appHash: number,
+      skinHash: number | bigint,
+      appHash: number | bigint,
       x: number,
       y: number,
       z: number,
@@ -64,8 +64,8 @@ declare module '../mp.d.ts' {
     ): number;
 
     spawnLocalVehicle(
-      skinHash: number,
-      appHash: number,
+      skinHash: number | bigint,
+      appHash: number | bigint,
       x: number,
       y: number,
       z: number,
