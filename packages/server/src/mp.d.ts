@@ -65,6 +65,7 @@ export interface MpServer {
    * @returns True if running on server, false otherwise.
    */
   isServer(): boolean;
+  cancelEvent(): void;
 
   config: ServerConfig;
 }
