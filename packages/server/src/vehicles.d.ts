@@ -2,6 +2,9 @@ import type { MpEntities, MpEntity } from './entities';
 import type { MpPlayer } from './players';
 import type { CName, TweakDBID, Vector3 } from './shared';
 
+/**
+ * @category Enums
+ */
 export enum VehicleSeat {
   Driver = 0,
   Passenger = 1,

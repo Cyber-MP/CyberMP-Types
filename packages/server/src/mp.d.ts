@@ -10,6 +10,9 @@ import type { MpPlayers } from './players';
 import type { MpResources } from './resources';
 import type { MpVehicles } from './vehicles';
 
+/**
+ * @category Global
+ */
 type CoreOverrides = {
   change_player_on_death_logic?: boolean;
   disable_side_quests_notifications?: boolean;
@@ -24,8 +27,12 @@ type CoreOverrides = {
   disable_no_combat?: boolean;
 };
 
+/**
+ * @category Global
+ */
 type CoreConfig = {
   nametags?: boolean;
+  death_autostand?: boolean;
   disable_switch_seats?: boolean;
   delete_map_objects?: boolean;
   default_gameplay_restrictions?: boolean;
@@ -36,6 +43,9 @@ type CoreConfig = {
   files?: string[];
 };
 
+/**
+ * @category Global
+ */
 export type ServerConfig = {
   tcp_host: string;
   udp_host: string;
@@ -47,6 +57,9 @@ export type ServerConfig = {
   core?: CoreConfig;
 };
 
+/**
+ * @category Global
+ */
 export interface MpServer {
   events: MpEvents;
   meta: MpMeta;
@@ -65,11 +78,13 @@ export interface MpServer {
    * @returns True if running on server, false otherwise.
    */
   isServer(): boolean;
-  cancelEvent(): void;
 
   config: ServerConfig;
 }
 
+/**
+ * @ignore
+ */
 declare const mp: MpServer;
 
 export { mp };

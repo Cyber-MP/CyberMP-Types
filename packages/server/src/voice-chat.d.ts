@@ -1,5 +1,8 @@
 import type { MpPlayer } from './players';
 
+/**
+ * @category VoiceChat
+ */
 export interface MpVoiceChat {
   mutePlayer(player: MpPlayer | number): void;
 

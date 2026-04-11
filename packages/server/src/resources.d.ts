@@ -1,3 +1,7 @@
+
+/**
+ * @category Resources
+ */
 export interface MpResources {
   /**
    * Gets the current state of a resource.

@@ -1,6 +1,9 @@
 import type { MpEntities, MpEntity } from './entities';
 import type { TweakDBID, Vector3 } from './shared';
 
+/**
+ * @category Enums
+ */
 export enum PickupType {
   Clothes = 1,
   Weapon = 2,
