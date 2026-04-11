@@ -39,3 +39,11 @@ export type CName = GameHash;
  * @category Hashes
  */
 export type ResRef = GameHash;
+
+/**
+ * @ignore
+ */
+export type Class<T, Arguments extends unknown[] = any[]> = {
+  prototype: Pick<T, keyof T>;
+  new (...arguments_: Arguments): T;
+};

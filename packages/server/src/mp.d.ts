@@ -1,13 +1,14 @@
 import type { MpCommands } from './commands';
-import type { MpEntities } from './entities';
+import type { MpEntities, MpEntity } from './entities';
 import type { MpEvents } from './events';
 import type { MpHashes } from './hashes';
 import type { MpMeta } from './meta';
-import type { MpObjects } from './objects';
-import type { MpPeds } from './peds';
-import type { MpPickups } from './pickups';
-import type { MpPlayers } from './players';
+import type { MpObject, MpObjects } from './objects';
+import type { MpPed, MpPeds } from './peds';
+import type { MpPickup, MpPickups } from './pickups';
+import type { MpPlayer, MpPlayers } from './players';
 import type { MpResources } from './resources';
+import type { Class } from './shared';
 import type { MpVehicles } from './vehicles';
 
 /**
@@ -72,6 +73,15 @@ export interface MpServer {
   pickups: MpPickups;
   peds: MpPeds;
   hashes: MpHashes;
+
+  cancelEvent(): void;
+
+  MpPlayer: Class<MpPlayer>;
+  MpEntity: Class<MpEntity>;
+  MpPickup: Class<MpPickup>;
+  MpVehicle: Class<MpPickup>;
+  MpPed: Class<MpPed>;
+  MpObject: Class<MpObject>;
 
   /**
    * Checks if the code is running on the server.
