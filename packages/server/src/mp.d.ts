@@ -9,7 +9,7 @@ import type { MpPickup, MpPickups } from './pickups';
 import type { MpPlayer, MpPlayers } from './players';
 import type { MpResources } from './resources';
 import type { Class } from './shared';
-import type { MpVehicles } from './vehicles';
+import type { MpVehicle, MpVehicles } from './vehicles';
 
 /**
  * @category Global
@@ -79,7 +79,7 @@ export interface MpServer {
   MpPlayer: Class<MpPlayer>;
   MpEntity: Class<MpEntity>;
   MpPickup: Class<MpPickup>;
-  MpVehicle: Class<MpPickup>;
+  MpVehicle: Class<MpVehicle>;
   MpPed: Class<MpPed>;
   MpObject: Class<MpObject>;
 
