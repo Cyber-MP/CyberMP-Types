@@ -1,4 +1,4 @@
-import type { MpEntities, MpEntity } from './entities';
+import type { EntityType, MpEntities, MpEntity } from './entities';
 import type { MpPlayer } from './players';
 import type { CName, TweakDBID, Vector3 } from './shared';
 
@@ -12,7 +12,7 @@ export enum VehicleSeat {
   RearRight = 3,
 }
 
-export interface MpVehicle extends MpEntity {
+export interface MpVehicle extends MpEntity<EntityType.Vehicle> {
   readonly model: TweakDBID;
   readonly appearance: CName;
   readonly health: number;

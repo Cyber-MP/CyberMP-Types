@@ -1,4 +1,4 @@
-import type { MpEntities, MpEntity } from './entities';
+import type { EntityType, MpEntities, MpEntity } from './entities';
 import type { TweakDBID, Vector3 } from './shared';
 
 /**
@@ -10,7 +10,7 @@ export enum PickupType {
   Other = 3,
 }
 
-export interface MpPickup extends MpEntity {
+export interface MpPickup extends MpEntity<EntityType.Pickup> {
   readonly model: TweakDBID;
   readonly pickupType: PickupType;
 

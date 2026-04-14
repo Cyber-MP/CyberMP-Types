@@ -1,7 +1,7 @@
-import type { MpEntities, MpEntity } from './entities';
+import type { EntityType, MpEntities, MpEntity } from './entities';
 import type { TweakDBID, Vector3 } from './shared';
 
-export interface MpObject extends MpEntity {
+export interface MpObject extends MpEntity<EntityType.GameObject> {
   readonly model: TweakDBID;
 
   destroy(): void;

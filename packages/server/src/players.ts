@@ -1,10 +1,10 @@
-import type { MpEntities, MpEntity } from './entities';
+import type { EntityType, MpEntities, MpEntity } from './entities';
 import type { Vector3 } from './shared';
 import type { MpVehicle } from './vehicles';
 
 export type MpPlayerIdentifierType = 'steam' | 'ip';
 
-export interface MpPlayer extends MpEntity {
+export interface MpPlayer extends MpEntity<EntityType.Player> {
   readonly velocity: Vector3;
   readonly health: number;
   readonly nickname: string;
@@ -21,6 +21,9 @@ export interface MpPlayer extends MpEntity {
 
 export interface MpPlayers extends MpEntities<MpPlayer> {
   kick(player: MpPlayer | number, reason?: string): void;
-  getIdentifier(player: MpPlayer | number, type: MpPlayerIdentifierType): string;
+  getIdentifier(
+    player: MpPlayer | number,
+    type: MpPlayerIdentifierType,
+  ): string;
   toArray(): MpPlayer[];
 }

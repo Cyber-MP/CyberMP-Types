@@ -1,7 +1,7 @@
-import type { MpEntities, MpEntity } from './entities';
+import type { EntityType, MpEntities, MpEntity } from './entities';
 import type { CName, TweakDBID, Vector3 } from './shared';
 
-export interface MpPed extends MpEntity {
+export interface MpPed extends MpEntity<EntityType.Ped> {
   readonly health: number;
   readonly model: TweakDBID;
   readonly appearance: CName;

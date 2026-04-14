@@ -1,5 +1,9 @@
+import type { MpObject } from './objects';
+import type { MpPed } from './peds';
+import type { MpPickup } from './pickups';
 import type { MpPlayer } from './players';
 import type { Rotation, Vector3 } from './shared';
+import type { MpVehicle } from './vehicles';
 
 /**
  * Types of entities available in the multiplayer environment.
@@ -15,10 +19,21 @@ export enum EntityType {
 }
 
 /**
+ * @category Entities
+ */
+export type MpAnyEntity =
+  | MpPlayer
+  | MpVehicle
+  | MpObject
+  | MpPed
+  | MpPickup
+  | MpEntity<EntityType.GameObject>;
+
+/**
  * Base interface representing any in-game entity.
  * @category Entities
  */
-export interface MpEntity {
+export interface MpEntity<TEntityType extends EntityType = EntityType> {
   /** Unique entity identifier */
   readonly id: number;
 
@@ -36,7 +51,7 @@ export interface MpEntity {
   /**
    * Type of entity (see {@link EntityType}).
    */
-  readonly type: EntityType;
+  readonly type: TEntityType;
 
   /** Whether the entity still exists in the world */
   readonly exist: boolean;
