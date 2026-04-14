@@ -38,7 +38,7 @@ interface TweakDB {
   createRecord(key: string, value: string): boolean;
 }
 
-interface CyberMP {
+interface MultiplayerSystem {
   /**
    * Removes game object classes (e.g., T extends gameObject, playerPuppet, NpcPuppet) from the map.
    * @param objectClassMap Array of class names to delete.
@@ -109,6 +109,7 @@ declare module '../game.d.ts' {
 
   export namespace ScriptGameInstance {
     export function GetLoadingScreenSystem(): LoadingScreenSystem;
+    export function GetMultiplayerSystem(): MultiplayerSystem;
   }
 
   export class LoadingScreenSystem {
