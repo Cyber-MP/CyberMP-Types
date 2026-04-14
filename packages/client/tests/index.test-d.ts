@@ -5,6 +5,7 @@ import type {
   OverrideFunction,
   PlayerPuppet,
   ScriptGameInstance,
+  VehicleObject,
   vehicleBaseObject,
   worldWeatherScriptInterface,
 } from 'out/game';
@@ -49,6 +50,13 @@ describe('Core, basis functions', () => {
     expectTypeOf(
       mp.game.ScriptGameInstance.GetLoadingScreenSystem,
     ).toEqualTypeOf<typeof ScriptGameInstance.GetLoadingScreenSystem>();
+    expectTypeOf(mp.game.ScriptGameInstance.GetMultiplayerSystem).toEqualTypeOf<
+      typeof ScriptGameInstance.GetMultiplayerSystem
+    >();
+  });
+
+  test('Class alias names works', () => {
+    expectTypeOf(mp.game.VehicleObject).toEqualTypeOf<typeof VehicleObject>();
   });
 
   test('Observers and Overrides', () => {

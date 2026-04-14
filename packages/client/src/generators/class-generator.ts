@@ -34,8 +34,34 @@ export class ClassGenerator extends BaseGenerator<[SourceFile]> {
       object.functions.sort(RedFunctionAst.sort);
     });
 
-    this.classObjs = objects;
+    this.classObjs = objects.reduce((acc, curr) => {
+      acc.push(curr);
+      if (curr.aliasName) {
+        const aliasClass: RedClassAst = {
+          name: curr.aliasName,
+          parent: curr.name,
+        } as any;
+
+        acc.push(aliasClass);
+      }
+      return acc;
+    }, [] as RedClassAst[]);
     defsIndex.classes = new Set<string>(this.classObjs.map((o) => o.name));
+  }
+
+  private recursiveParentIs(classObj: RedClassAst, name: string) {
+    if (classObj.parent === name) {
+      return true;
+    }
+
+    if (classObj.parent) {
+      const parent = this.classObjs.find((o) => o.name === classObj.parent);
+      if (parent) {
+        return this.recursiveParentIs(parent, name);
+      }
+    }
+
+    return false;
   }
 
   generate(parentFile: SourceFile) {
@@ -44,10 +70,8 @@ export class ClassGenerator extends BaseGenerator<[SourceFile]> {
         const funcs: RedFunctionAst[] = obj.functions ?? [];
         const propsList: RedPropertyAst[] = obj.properties ?? [];
 
-        // method names set
         const methodNames = new Set<string>(funcs.map((f) => String(f.name)));
 
-        // filter out properties that collide with method names (delete duplicates)
         const filteredProps = propsList.filter((p) => {
           const propName = String(p.name);
           if (methodNames.has(propName)) {
@@ -68,9 +92,6 @@ export class ClassGenerator extends BaseGenerator<[SourceFile]> {
             returnType: getFunctionReturnType(fn),
             parameters: getFunctionParams(fn.arguments),
             isStatic: fn.isStatic,
-            // scope: visibilityToScope[fn.visibility],
-            // returnType: resolveType(fn.return),
-            // parameters: getFunctionParams(fn.params),
           }),
         );
 
@@ -78,7 +99,6 @@ export class ClassGenerator extends BaseGenerator<[SourceFile]> {
           name: obj.name,
           extends: obj.parent,
           isExported: true,
-          // hasDeclareKeyword: true,
           properties,
           methods,
         };
@@ -97,9 +117,9 @@ export class ClassGenerator extends BaseGenerator<[SourceFile]> {
       properties: this.classObjs.map<OptionalKind<PropertySignatureStructure>>(
         (obj) => ({
           name: obj.name,
-          type:
-            // if class extrends from gameIGameSystem then its singleton
-            obj.parent === 'gameIGameSystem' ? obj.name : `typeof ${obj.name}`,
+          type: this.recursiveParentIs(obj, 'gameIGameSystem')
+            ? obj.name
+            : `typeof ${obj.name}`,
         }),
       ),
     });
