@@ -20,8 +20,6 @@ export type CreatePedOptions = {
 
 export interface MpPeds extends MpEntities<MpPed> {
   create(options: CreatePedOptions): MpPed;
-
   destroy(ped: MpPed | number): void;
-
   toArray(): MpPed[];
 }

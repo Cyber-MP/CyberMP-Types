@@ -2,7 +2,7 @@ import type { MpEntities, MpEntity } from './entities';
 import type { Vector3 } from './shared';
 import type { MpVehicle } from './vehicles';
 
-export type PlayerIdentifierType = 'steam' | 'ip';
+export type MpPlayerIdentifierType = 'steam' | 'ip';
 
 export interface MpPlayer extends MpEntity {
   readonly velocity: Vector3;
@@ -13,7 +13,7 @@ export interface MpPlayer extends MpEntity {
   readonly lastVehicle: MpVehicle | null;
 
   kick(reason?: string): void;
-  getIdentifier(type: PlayerIdentifierType): string;
+  getIdentifier(type: MpPlayerIdentifierType): string;
 
   emit(eventName: string, ...args: any[]): void;
   mute(): void;
@@ -21,6 +21,6 @@ export interface MpPlayer extends MpEntity {
 
 export interface MpPlayers extends MpEntities<MpPlayer> {
   kick(player: MpPlayer | number, reason?: string): void;
-  getIdentifier(player: MpPlayer | number, type: PlayerIdentifierType): string;
+  getIdentifier(player: MpPlayer | number, type: MpPlayerIdentifierType): string;
   toArray(): MpPlayer[];
 }

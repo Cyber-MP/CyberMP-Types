@@ -454,7 +454,9 @@ export interface MpEvents {
   ): void;
 
   /**
-   * Unregister a generic event listener.
+   * Unregister an event listener.
+   *
+   * Works for both standard and {@link MpEvents.onClient} events.
    */
   off(eventName: string, callback: (...args: any[]) => void): void;
 
