@@ -1,0 +1,242 @@
+{
+  "parent": "IScriptable",
+  "name": "inkanimProxy",
+  "flags": 2,
+  "funcs": [
+    {
+      "fullName": "Continue",
+      "shortName": "Continue",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 2017,
+      "flags": 1,
+      "params": [
+        {
+          "type": "inkanimPlaybackOptions",
+          "name": "playbackOptions",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetProgression",
+      "shortName": "GetProgression",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 2020,
+      "flags": 1
+    },
+    {
+      "fullName": "GetTargets",
+      "shortName": "GetTargets",
+      "return": {
+        "type": "array:whandle:inkWidget",
+        "flags": 64
+      },
+      "index": 2021,
+      "flags": 1
+    },
+    {
+      "fullName": "GetTime",
+      "shortName": "GetTime",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 2019,
+      "flags": 1
+    },
+    {
+      "fullName": "GotoEndAndStop",
+      "shortName": "GotoEndAndStop",
+      "index": 2014,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "silently",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "GotoStartAndStop",
+      "shortName": "GotoStartAndStop",
+      "index": 2013,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "silently",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "IsFinished",
+      "shortName": "IsFinished",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 2011,
+      "flags": 1
+    },
+    {
+      "fullName": "IsLoading",
+      "shortName": "IsLoading",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 2007,
+      "flags": 1
+    },
+    {
+      "fullName": "IsLoadingFailed",
+      "shortName": "IsLoadingFailed",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 2008,
+      "flags": 1
+    },
+    {
+      "fullName": "IsPaused",
+      "shortName": "IsPaused",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 2010,
+      "flags": 1
+    },
+    {
+      "fullName": "IsPlaying",
+      "shortName": "IsPlaying",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 2009,
+      "flags": 1
+    },
+    {
+      "fullName": "IsValid",
+      "shortName": "IsValid",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 2006,
+      "flags": 1
+    },
+    {
+      "fullName": "Pause",
+      "shortName": "Pause",
+      "index": 2015,
+      "flags": 1
+    },
+    {
+      "fullName": "RegisterToCallback",
+      "shortName": "RegisterToCallback",
+      "index": 2022,
+      "flags": 1,
+      "params": [
+        {
+          "type": "inkanimEventType",
+          "name": "eventType",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "object",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "functionName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Resume",
+      "shortName": "Resume",
+      "index": 2016,
+      "flags": 1
+    },
+    {
+      "fullName": "SetNormalizedPosition",
+      "shortName": "SetNormalizedPosition",
+      "index": 2018,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Float",
+          "name": "progress",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "isPlaying",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Stop",
+      "shortName": "Stop",
+      "index": 2012,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "silently",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "UnregisterFromAllCallbacks",
+      "shortName": "UnregisterFromAllCallbacks",
+      "index": 2024,
+      "flags": 1,
+      "params": [
+        {
+          "type": "inkanimEventType",
+          "name": "eventType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UnregisterFromCallback",
+      "shortName": "UnregisterFromCallback",
+      "index": 2023,
+      "flags": 1,
+      "params": [
+        {
+          "type": "inkanimEventType",
+          "name": "eventType",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "object",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "functionName",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

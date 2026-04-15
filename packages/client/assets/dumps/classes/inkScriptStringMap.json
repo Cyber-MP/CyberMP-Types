@@ -1,0 +1,93 @@
+{
+  "parent": "IScriptable",
+  "name": "inkScriptStringMap",
+  "flags": 2,
+  "funcs": [
+    {
+      "fullName": "Clear",
+      "shortName": "Clear",
+      "index": 1982,
+      "flags": 1
+    },
+    {
+      "fullName": "Get",
+      "shortName": "Get",
+      "return": {
+        "type": "Uint64",
+        "flags": 64
+      },
+      "index": 1978,
+      "flags": 1,
+      "params": [
+        {
+          "type": "String",
+          "name": "key",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Insert",
+      "shortName": "Insert",
+      "index": 1977,
+      "flags": 1,
+      "params": [
+        {
+          "type": "String",
+          "name": "key",
+          "flags": 128
+        },
+        {
+          "type": "Uint64",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "KeyExist",
+      "shortName": "KeyExist",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 1981,
+      "flags": 1,
+      "params": [
+        {
+          "type": "String",
+          "name": "key",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Set",
+      "shortName": "Set",
+      "index": 1979,
+      "flags": 1,
+      "params": [
+        {
+          "type": "String",
+          "name": "key",
+          "flags": 128
+        },
+        {
+          "type": "Uint64",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Size",
+      "shortName": "Size",
+      "return": {
+        "type": "Uint32",
+        "flags": 64
+      },
+      "index": 1980,
+      "flags": 1
+    }
+  ]
+}

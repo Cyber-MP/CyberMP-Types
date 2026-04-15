@@ -1,0 +1,247 @@
+{
+  "parent": "IScriptable",
+  "name": "SkillCheckBase",
+  "flags": 5,
+  "props": [
+    {
+      "type": "TweakDBID",
+      "name": "alternativeName",
+      "flags": 4632739873
+    },
+    {
+      "type": "EGameplayChallengeLevel",
+      "name": "difficulty",
+      "flags": 4632739873
+    },
+    {
+      "type": "handle:GameplayConditionContainer",
+      "name": "additionalRequirements",
+      "flags": 4766957605
+    },
+    {
+      "type": "Float",
+      "name": "duration",
+      "flags": 4632739873
+    },
+    {
+      "type": "Bool",
+      "name": "isActive",
+      "flags": 4565631008
+    },
+    {
+      "type": "Bool",
+      "name": "wasPassed",
+      "flags": 4565631008
+    },
+    {
+      "type": "Bool",
+      "name": "skillCheckPerformed",
+      "flags": 4297195552
+    },
+    {
+      "type": "EDeviceChallengeSkill",
+      "name": "skillToCheck",
+      "flags": 4565631008
+    },
+    {
+      "type": "handle:GameplaySkillCondition",
+      "name": "baseSkill",
+      "flags": 4699848736
+    },
+    {
+      "type": "Bool",
+      "name": "isDynamic",
+      "flags": 4565631008
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "CheckPerformed;",
+      "shortName": "CheckPerformed",
+      "flags": 33284
+    },
+    {
+      "fullName": "Evaluate;GameObject",
+      "shortName": "Evaluate",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41472,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "requester",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetAdditionalRequirements;",
+      "shortName": "GetAdditionalRequirements",
+      "return": {
+        "type": "handle:GameplayConditionContainer",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetAlternativeName;",
+      "shortName": "GetAlternativeName",
+      "return": {
+        "type": "TweakDBID",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetBaseSkill;",
+      "shortName": "GetBaseSkill",
+      "return": {
+        "type": "handle:GameplaySkillCondition",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetDifficulty;",
+      "shortName": "GetDifficulty",
+      "return": {
+        "type": "EGameplayChallengeLevel",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetDuration;",
+      "shortName": "GetDuration",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetSkill;",
+      "shortName": "GetSkill",
+      "return": {
+        "type": "EDeviceChallengeSkill",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "Initialize;",
+      "shortName": "Initialize",
+      "flags": 33280
+    },
+    {
+      "fullName": "IsActive;",
+      "shortName": "IsActive",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "IsDynamic;",
+      "shortName": "IsDynamic",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "IsPassed;",
+      "shortName": "IsPassed",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "SetAlternativeName;TweakDBID",
+      "shortName": "SetAlternativeName",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "TweakDBID",
+          "name": "name",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetDifficulty;EGameplayChallengeLevel",
+      "shortName": "SetDifficulty",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "EGameplayChallengeLevel",
+          "name": "difficulty",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetDuration;Float",
+      "shortName": "SetDuration",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Float",
+          "name": "duration",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetDynamic;Bool",
+      "shortName": "SetDynamic",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "isDynamic",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetIsActive;Bool",
+      "shortName": "SetIsActive",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetIsPassed;Bool",
+      "shortName": "SetIsPassed",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "WasPerformed;",
+      "shortName": "WasPerformed",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476
+    }
+  ]
+}

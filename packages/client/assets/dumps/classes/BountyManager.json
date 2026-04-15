@@ -1,0 +1,72 @@
+{
+  "parent": "IScriptable",
+  "name": "BountyManager",
+  "flags": 4,
+  "funcs": [
+    {
+      "fullName": "BountyManager::CompleteBounty;NPCPuppet",
+      "shortName": "CompleteBounty",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:NPCPuppet",
+          "name": "target",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "BountyManager::GenerateBounty;NPCPuppet",
+      "shortName": "GenerateBounty",
+      "return": {
+        "type": "Bounty",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:NPCPuppet",
+          "name": "target",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "BountyManager::GetTransgressionRecords;script_ref<array<TweakDBID>>",
+      "shortName": "GetTransgressionRecords",
+      "return": {
+        "type": "array:whandle:gamedataTransgression_Record",
+        "flags": 64
+      },
+      "flags": 32902,
+      "params": [
+        {
+          "type": "script_ref:array:TweakDBID",
+          "name": "transgressions",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "BountyManager::SetBountyFromID;TweakDBIDNPCPuppet",
+      "shortName": "SetBountyFromID",
+      "return": {
+        "type": "Bounty",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "TweakDBID",
+          "name": "bountyID",
+          "flags": 128
+        },
+        {
+          "type": "whandle:NPCPuppet",
+          "name": "target",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

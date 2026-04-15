@@ -1,0 +1,556 @@
+{
+  "parent": "InteractiveDevice",
+  "name": "Radio",
+  "flags": 4,
+  "props": [
+    {
+      "type": "handle:ScriptableDeviceAction",
+      "name": "effectAction",
+      "group": "High Pitch Noise Quick Hack Data",
+      "flags": 4431347749
+    },
+    {
+      "type": "gameEffectRef",
+      "name": "effectRef",
+      "group": "High Pitch Noise Quick Hack Data",
+      "flags": 4297130017
+    },
+    {
+      "type": "TweakDBID",
+      "name": "statusEffect",
+      "group": "High Pitch Noise Quick Hack Data",
+      "flags": 4297130017
+    },
+    {
+      "type": "TweakDBID",
+      "name": "damageType",
+      "group": "Aoe Damage Quick Hack Data",
+      "flags": 4297130017
+    },
+    {
+      "type": "Int32",
+      "name": "startingStation",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isInteractive",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isShortGlitchActive",
+      "flags": 4297130016
+    },
+    {
+      "type": "gameDelayID",
+      "name": "shortGlitchDelayID",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:gameEffectInstance",
+      "name": "effectInstance",
+      "flags": 4431347744
+    },
+    {
+      "type": "array:whandle:ScriptedPuppet",
+      "name": "targets",
+      "flags": 6583025696
+    },
+    {
+      "type": "handle:gameFxInstance",
+      "name": "vfxInstance",
+      "flags": 4431347744
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnNextStation",
+      "shortName": "OnNextStation",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:NextStation",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPreviousStation",
+      "shortName": "OnPreviousStation",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:PreviousStation",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnQuestDefaultStation",
+      "shortName": "OnQuestDefaultStation",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:QuestDefaultStation",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnQuestSetChannel",
+      "shortName": "OnQuestSetChannel",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:QuestSetChannel",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnQuickHackAoeDamage",
+      "shortName": "OnQuickHackAoeDamage",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:QuickHackAoeDamage",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnQuickHackHighPitchNoise",
+      "shortName": "OnQuickHackHighPitchNoise",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:QuickHackHighPitchNoise",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRequestComponents",
+      "shortName": "OnRequestComponents",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "entEntityRequestComponentsInterface",
+          "name": "ri",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSpiderbotDistraction",
+      "shortName": "OnSpiderbotDistraction",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:SpiderbotDistraction",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSpiderbotOrderCompletedEvent",
+      "shortName": "OnSpiderbotOrderCompletedEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:SpiderbotOrderCompletedEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnStopShortGlitch",
+      "shortName": "OnStopShortGlitch",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:StopShortGlitchEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnTakeControl",
+      "shortName": "OnTakeControl",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "entEntityResolveComponentsInterface",
+          "name": "ri",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnTargetAcquired",
+      "shortName": "OnTargetAcquired",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:TargetAcquiredEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnTargetLost",
+      "shortName": "OnTargetLost",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:TargetLostEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnToggleON",
+      "shortName": "OnToggleON",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:ToggleON",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnTogglePower",
+      "shortName": "OnTogglePower",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:TogglePower",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ApplyElectricDamage;",
+      "shortName": "ApplyElectricDamage",
+      "flags": 32900
+    },
+    {
+      "fullName": "ApplyStatusEffect;GameObject",
+      "shortName": "ApplyStatusEffect",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "target",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ClearTargets;",
+      "shortName": "ClearTargets",
+      "flags": 32900
+    },
+    {
+      "fullName": "CreateGameEffect;",
+      "shortName": "CreateGameEffect",
+      "flags": 32900
+    },
+    {
+      "fullName": "CutPower;",
+      "shortName": "CutPower",
+      "flags": 33024
+    },
+    {
+      "fullName": "DeactivateDevice;",
+      "shortName": "DeactivateDevice",
+      "flags": 33024
+    },
+    {
+      "fullName": "DeterminGameplayRole;",
+      "shortName": "DeterminGameplayRole",
+      "return": {
+        "type": "EGameplayRole",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "GetAttackPosition;",
+      "shortName": "GetAttackPosition",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "GetCenterWorldTransform;",
+      "shortName": "GetCenterWorldTransform",
+      "return": {
+        "type": "WorldTransform",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "GetController;",
+      "shortName": "GetController",
+      "return": {
+        "type": "handle:RadioController",
+        "flags": 64
+      },
+      "flags": 41216
+    },
+    {
+      "fullName": "GetDevicePS;",
+      "shortName": "GetDevicePS",
+      "return": {
+        "type": "handle:RadioControllerPS",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "IsStatusEffectValid;",
+      "shortName": "IsStatusEffectValid",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "MetalItUp;Bool",
+      "shortName": "MetalItUp",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "isMetal",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PlayAoeDamageSFX;",
+      "shortName": "PlayAoeDamageSFX",
+      "flags": 32900
+    },
+    {
+      "fullName": "PlayAoeDamageVFX;",
+      "shortName": "PlayAoeDamageVFX",
+      "flags": 32900
+    },
+    {
+      "fullName": "PlayGivenStation;",
+      "shortName": "PlayGivenStation",
+      "flags": 32900
+    },
+    {
+      "fullName": "PlayHighPitchNoiseSFX;",
+      "shortName": "PlayHighPitchNoiseSFX",
+      "flags": 32900
+    },
+    {
+      "fullName": "PlayHighPitchNoiseVFX;",
+      "shortName": "PlayHighPitchNoiseVFX",
+      "flags": 32900
+    },
+    {
+      "fullName": "PlayVfx;FxResource",
+      "shortName": "PlayVfx",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "gameFxResource",
+          "name": "fxResource",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RemoveStatusEffect;GameObject",
+      "shortName": "RemoveStatusEffect",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "target",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RemoveStatusEffectFromTargets;",
+      "shortName": "RemoveStatusEffectFromTargets",
+      "flags": 32900
+    },
+    {
+      "fullName": "ResolveGameplayState;",
+      "shortName": "ResolveGameplayState",
+      "flags": 33024
+    },
+    {
+      "fullName": "RestoreDeviceState;",
+      "shortName": "RestoreDeviceState",
+      "flags": 33024
+    },
+    {
+      "fullName": "StartGlitching;EGlitchStateFloat",
+      "shortName": "StartGlitching",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "EGlitchState",
+          "name": "glitchState",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "intensity",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "StartShortGlitch;",
+      "shortName": "StartShortGlitch",
+      "flags": 32900
+    },
+    {
+      "fullName": "StartStunEffect;",
+      "shortName": "StartStunEffect",
+      "flags": 32900
+    },
+    {
+      "fullName": "StopGlitching;",
+      "shortName": "StopGlitching",
+      "flags": 33024
+    },
+    {
+      "fullName": "StopStunEffect;",
+      "shortName": "StopStunEffect",
+      "flags": 32900
+    },
+    {
+      "fullName": "TryAddToTargets;ScriptedPuppet",
+      "shortName": "TryAddToTargets",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "whandle:ScriptedPuppet",
+          "name": "target",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TryRemoveFromTargets;ScriptedPuppet",
+      "shortName": "TryRemoveFromTargets",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "whandle:ScriptedPuppet",
+          "name": "target",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TryStopVfx;",
+      "shortName": "TryStopVfx",
+      "flags": 32900
+    },
+    {
+      "fullName": "TryTerminateEffectInstance;",
+      "shortName": "TryTerminateEffectInstance",
+      "flags": 32900
+    },
+    {
+      "fullName": "TurnOffDevice;",
+      "shortName": "TurnOffDevice",
+      "flags": 33024
+    },
+    {
+      "fullName": "TurnOnDevice;",
+      "shortName": "TurnOnDevice",
+      "flags": 33024
+    }
+  ]
+}

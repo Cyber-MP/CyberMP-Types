@@ -1,0 +1,77 @@
+{
+  "parent": "inkWidgetLogicController",
+  "name": "SlotMachineSlot",
+  "flags": 4,
+  "props": [
+    {
+      "type": "Int32",
+      "name": "winningRowIndex",
+      "flags": 4297130017
+    },
+    {
+      "type": "array:inkImageWidgetReference",
+      "name": "imagesUpper",
+      "flags": 6583025697
+    },
+    {
+      "type": "array:inkImageWidgetReference",
+      "name": "imagesLower",
+      "flags": 6583025697
+    },
+    {
+      "type": "array:CName",
+      "name": "imagePresets",
+      "flags": 6583025696
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "RandomiseImages;Bool",
+      "shortName": "RandomiseImages",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "isWinning",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RandomiseLowerImages;",
+      "shortName": "RandomiseLowerImages",
+      "flags": 33284
+    },
+    {
+      "fullName": "RandomiseUpperImages;",
+      "shortName": "RandomiseUpperImages",
+      "flags": 33284
+    },
+    {
+      "fullName": "SetImagesPresets;script_ref<array<CName>>",
+      "shortName": "SetImagesPresets",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "script_ref:array:CName",
+          "name": "imagePresets",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetWinningRow;",
+      "shortName": "SetWinningRow",
+      "flags": 33284
+    }
+  ]
+}

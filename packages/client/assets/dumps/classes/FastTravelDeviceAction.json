@@ -1,0 +1,100 @@
+{
+  "parent": "ActionBool",
+  "name": "FastTravelDeviceAction",
+  "flags": 4,
+  "props": [
+    {
+      "type": "handle:gameFastTravelPointData",
+      "name": "fastTravelPointData",
+      "flags": 4431347744
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "FastTravelDeviceAction::IsAvailable;ScriptableDeviceComponentPS",
+      "shortName": "IsAvailable",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:ScriptableDeviceComponentPS",
+          "name": "device",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "FastTravelDeviceAction::IsClearanceValid;Clearance",
+      "shortName": "IsClearanceValid",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gamedeviceClearance",
+          "name": "clearance",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "FastTravelDeviceAction::IsDefaultConditionMet;ScriptableDeviceComponentPSscript_ref<GetActionsContext>",
+      "shortName": "IsDefaultConditionMet",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:ScriptableDeviceComponentPS",
+          "name": "device",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:gameGetActionsContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CreateActionWidgetPackage;array<DeviceAction>",
+      "shortName": "CreateActionWidgetPackage",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "array:handle:gamedeviceAction",
+          "name": "actions",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "GetFastTravelPointData;",
+      "shortName": "GetFastTravelPointData",
+      "return": {
+        "type": "handle:gameFastTravelPointData",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "SetProperties;FastTravelPointData",
+      "shortName": "SetProperties",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:gameFastTravelPointData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,502 @@
+{
+  "parent": "BaseSubtitlesGameController",
+  "name": "ChattersGameController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "Float",
+      "name": "c_DisplayRange",
+      "flags": 4297130016
+    },
+    {
+      "type": "Float",
+      "name": "c_CloseDisplayRange",
+      "flags": 4297130016
+    },
+    {
+      "type": "Float",
+      "name": "c_TimeToUnblockSec",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:inkCompoundWidget",
+      "name": "rootWidget",
+      "flags": 4297130016
+    },
+    {
+      "type": "array:ChatterKeyValuePair",
+      "name": "AllControllers",
+      "flags": 6583025696
+    },
+    {
+      "type": "handle:gametargetingTargetingSystem",
+      "name": "targetingSystem",
+      "flags": 4431347744
+    },
+    {
+      "type": "array:CRUID",
+      "name": "broadcastBlockingLines",
+      "flags": 6583025696
+    },
+    {
+      "type": "Bool",
+      "name": "playerInDialogChoice",
+      "flags": 4297130016
+    },
+    {
+      "type": "EngineTime",
+      "name": "lastBroadcastBlockingLineTime",
+      "flags": 4297130016
+    },
+    {
+      "type": "EngineTime",
+      "name": "lastChoiceTime",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "bbPSceneTierEventId",
+      "flags": 4431347744
+    },
+    {
+      "type": "Int32",
+      "name": "sceneTier",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "OnNameplateEntityChangedCallback",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "OnNameplateOffsetChangedCallback",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "OnNameplateVisibilityChangedCallback",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "OnScannerModeChangedCallback",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "OnOnDialogsDataCallback",
+      "flags": 4431347744
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnDialogsData",
+      "shortName": "OnDialogsData",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Variant",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnNameplateVisibleEvent",
+      "shortName": "OnNameplateVisibleEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:NameplateVisibleEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPlayerAttach",
+      "shortName": "OnPlayerAttach",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "playerGameObject",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPlayerDetach",
+      "shortName": "OnPlayerDetach",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "playerGameObject",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnScannerModeChanged",
+      "shortName": "OnScannerModeChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Variant",
+          "name": "val",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSceneTierChange",
+      "shortName": "OnSceneTierChange",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "argTier",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnScreenProjectionUpdate",
+      "shortName": "OnScreenProjectionUpdate",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameuiScreenProjectionsData",
+          "name": "projections",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "AddBroadcastBlockingLine;script_ref<scnDialogLineData>",
+      "shortName": "AddBroadcastBlockingLine",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:scnDialogLineData",
+          "name": "lineData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CreateLine;LineSpawnData",
+      "shortName": "CreateLine",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "handle:LineSpawnData",
+          "name": "lineSpawnData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetTextSizeSettigId;",
+      "shortName": "GetTextSizeSettigId",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 33024
+    },
+    {
+      "fullName": "IsBroadcastBlockedByMainDialogue;",
+      "shortName": "IsBroadcastBlockedByMainDialogue",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "IsDistanceConditionFulfilled;script_ref<scnDialogLineData>",
+      "shortName": "IsDistanceConditionFulfilled",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:scnDialogLineData",
+          "name": "lineData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsLineTypeConditionFulfilled;script_ref<scnDialogLineData>",
+      "shortName": "IsLineTypeConditionFulfilled",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:scnDialogLineData",
+          "name": "lineData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnHideLine;script_ref<subtitleLineMapEntry>",
+      "shortName": "OnHideLine",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "script_ref:subtitleLineMapEntry",
+          "name": "lineData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnHideLineByData;script_ref<subtitleLineMapEntry>",
+      "shortName": "OnHideLineByData",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "script_ref:subtitleLineMapEntry",
+          "name": "lineData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnNameplateChanged;",
+      "shortName": "OnNameplateChanged",
+      "flags": 32900
+    },
+    {
+      "fullName": "OnNameplateEntityChanged;Variant",
+      "shortName": "OnNameplateEntityChanged",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Variant",
+          "name": "vrt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnNameplateOffsetChanged;Float",
+      "shortName": "OnNameplateOffsetChanged",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Float",
+          "name": "vrt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnNameplateVisibilityChanged;Bool",
+      "shortName": "OnNameplateVisibilityChanged",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "visibility",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRemovalFailure;CRUID",
+      "shortName": "OnRemovalFailure",
+      "flags": 32896,
+      "params": [
+        {
+          "type": "CRUID",
+          "name": "lineId",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSubCreated;BaseSubtitleLineLogicController",
+      "shortName": "OnSubCreated",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "whandle:BaseSubtitleLineLogicController",
+          "name": "controller",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetChattersForeignLinesVisibilitySetting;Bool",
+      "shortName": "SetChattersForeignLinesVisibilitySetting",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetChattersVisibilitySetting;Bool",
+      "shortName": "SetChattersVisibilitySetting",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetupLine;inkWidgetLineSpawnData",
+      "shortName": "SetupLine",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "handle:inkWidget",
+          "name": "lineWidget",
+          "flags": 128
+        },
+        {
+          "type": "handle:LineSpawnData",
+          "name": "lineSpawnData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ShouldDisplayLine;script_ref<scnDialogLineData>",
+      "shortName": "ShouldDisplayLine",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33024,
+      "params": [
+        {
+          "type": "script_ref:scnDialogLineData",
+          "name": "lineData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ShowKiroshiSettings;Bool",
+      "shortName": "ShowKiroshiSettings",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "StartScreenProjection;inkWidgetBool",
+      "shortName": "StartScreenProjection",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "whandle:inkWidget",
+          "name": "lineWidget",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "isDevice",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "StopScreenProjection;inkWidget",
+      "shortName": "StopScreenProjection",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "whandle:inkWidget",
+          "name": "lineWidget",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateChattersNameplateData;EntityIDBool",
+      "shortName": "UpdateChattersNameplateData",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "entID",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "isVisible",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

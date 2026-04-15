@@ -1,0 +1,570 @@
+{
+  "parent": "gameuiWidgetGameController",
+  "name": "gameuiHackingMinigameGameController",
+  "flags": 2,
+  "props": [
+    {
+      "type": "TweakDBID",
+      "name": "symbolsRecordTDBID",
+      "flags": 6694125569
+    },
+    {
+      "type": "TweakDBID",
+      "name": "minigameDefaultsTDBID",
+      "flags": 6694125569
+    },
+    {
+      "type": "Bool",
+      "name": "deviceMode",
+      "flags": 6627016705
+    },
+    {
+      "type": "Bool",
+      "name": "isAlternativeVariant",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "helpInputHintRef",
+      "flags": 4297130017
+    },
+    {
+      "type": "whandle:gamedataMinigame_Def_Record",
+      "name": "miniGameRecord",
+      "flags": 4297130016
+    },
+    {
+      "type": "Int32",
+      "name": "dimension",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isTutorialActive",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isOfficerBreach",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isRemoteBreach",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isItemBreach",
+      "flags": 4297130016
+    },
+    {
+      "type": "Int32",
+      "name": "numberAttempts",
+      "flags": 4297130016
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "tooltipsManagerRef",
+      "flags": 4297130017
+    },
+    {
+      "type": "whandle:gameuiTooltipsManager",
+      "name": "TooltipsManager",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:gameuiGameSystemUI",
+      "name": "uiSystem",
+      "flags": 4431347744
+    },
+    {
+      "type": "Bool",
+      "name": "contextHelpOverlay",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:gameIBlackboard",
+      "name": "bbMinigame",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "bbMinigameStateListener",
+      "flags": 4431347744
+    },
+    {
+      "type": "whandle:gameIBlackboard",
+      "name": "bbUiData",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "bbControllerStateListener",
+      "flags": 4431347744
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "AddUnlockableProgram",
+      "shortName": "AddUnlockableProgram",
+      "index": 14642,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gameuiUnlockableProgram",
+          "name": "program",
+          "flags": 128
+        },
+        {
+          "type": "array:Uint32",
+          "name": "instruction",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "EnableWhitelist",
+      "shortName": "EnableWhitelist",
+      "index": 14645,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "enable",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetPlayerPrograms",
+      "shortName": "GetPlayerPrograms",
+      "return": {
+        "type": "array:gameuiMinigameProgramData",
+        "flags": 64
+      },
+      "index": 14640,
+      "flags": 1
+    },
+    {
+      "fullName": "GetProgramsChains",
+      "shortName": "GetProgramsChains",
+      "return": {
+        "type": "array:gameuiCharactersChain",
+        "flags": 64
+      },
+      "index": 14636,
+      "flags": 1
+    },
+    {
+      "fullName": "GetRarity",
+      "shortName": "GetRarity",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 14638,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Float",
+          "name": "rarityValue",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetTrapByProbability",
+      "shortName": "GetTrapByProbability",
+      "return": {
+        "type": "handle:gamedataMiniGame_Trap_Record",
+        "flags": 64
+      },
+      "index": 14639,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Float",
+          "name": "probabilityValue",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetUnlockablePrograms",
+      "shortName": "GetUnlockablePrograms",
+      "return": {
+        "type": "array:gameuiUnlockableProgram",
+        "flags": 64
+      },
+      "index": 14637,
+      "flags": 1
+    },
+    {
+      "fullName": "IsWhitelistEnabled",
+      "shortName": "IsWhitelistEnabled",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 14646,
+      "flags": 1
+    },
+    {
+      "fullName": "PauseTheTimer",
+      "shortName": "PauseTheTimer",
+      "index": 14643,
+      "flags": 1
+    },
+    {
+      "fullName": "RemoveWhitelistedPosition",
+      "shortName": "RemoveWhitelistedPosition",
+      "index": 14648,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Vector2",
+          "name": "position",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ResumeTheTimer",
+      "shortName": "ResumeTheTimer",
+      "index": 14644,
+      "flags": 1
+    },
+    {
+      "fullName": "SetTrapIconAtCell",
+      "shortName": "SetTrapIconAtCell",
+      "index": 14641,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Vector2",
+          "name": "cellCoordinates",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "trap",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "WhitelistPosition",
+      "shortName": "WhitelistPosition",
+      "index": 14647,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Vector2",
+          "name": "position",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnDisconnectController",
+      "shortName": "OnDisconnectController",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "isDisconnected",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnGameStateChanged",
+      "shortName": "OnGameStateChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnGridCellPressed",
+      "shortName": "OnGridCellPressed",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "wasHorizontalyActive",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnHandleInput",
+      "shortName": "OnHandleInput",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnHideTooltipRequest",
+      "shortName": "OnHideTooltipRequest",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:MinigameTooltipHideRequest",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnPositionSelected",
+      "shortName": "OnPositionSelected",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Vector2",
+          "name": "position",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnShowTooltipRequest",
+      "shortName": "OnShowTooltipRequest",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:MinigameTooltipShowRequest",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "FilterTraps;script_ref<array<MiniGame_Trap_Record>>",
+      "shortName": "FilterTraps",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "script_ref:array:handle:gamedataMiniGame_Trap_Record",
+          "name": "trapList",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PrepareTooltips;",
+      "shortName": "PrepareTooltips",
+      "flags": 32900
+    },
+    {
+      "fullName": "ProcessMinigameGridClickTutorialFacts;Bool",
+      "shortName": "ProcessMinigameGridClickTutorialFacts",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "horizontal",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessMinigameTutorialFact;PlayerPuppet",
+      "shortName": "ProcessMinigameTutorialFact",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:PlayerPuppet",
+          "name": "player",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ScaleBoard;EntityInt32FloatMiniGame_AllSymbols_Record",
+      "shortName": "ScaleBoard",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:entEntity",
+          "name": "entity",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "size",
+          "flags": 640
+        },
+        {
+          "type": "Float",
+          "name": "powerLevel",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamedataMiniGame_AllSymbols_Record",
+          "name": "symbolsToUse",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "ScaleBuffer;EntityFloatFloatPlayerPuppet",
+      "shortName": "ScaleBuffer",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:entEntity",
+          "name": "entity",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "size",
+          "flags": 640
+        },
+        {
+          "type": "Float",
+          "name": "powerLevel",
+          "flags": 128
+        },
+        {
+          "type": "handle:PlayerPuppet",
+          "name": "player",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ScaleTimer;PlayerPuppetEntityFloatFloatBool",
+      "shortName": "ScaleTimer",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:PlayerPuppet",
+          "name": "player",
+          "flags": 128
+        },
+        {
+          "type": "handle:entEntity",
+          "name": "entity",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "time",
+          "flags": 640
+        },
+        {
+          "type": "Float",
+          "name": "powerLevel",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "waitInteraction",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "ScaleTraps;EntityPlayerPuppetFloatFloat",
+      "shortName": "ScaleTraps",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:entEntity",
+          "name": "entity",
+          "flags": 128
+        },
+        {
+          "type": "handle:PlayerPuppet",
+          "name": "player",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "prob",
+          "flags": 640
+        },
+        {
+          "type": "Float",
+          "name": "powerLevel",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ToggleTutorialOverlay;Bool",
+      "shortName": "ToggleTutorialOverlay",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "parent": "gameuiCreditsController",
+  "name": "CreditsGameController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "videoContainer",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "sceneTexture",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkVideoWidgetReference",
+      "name": "backgroundVideo",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkVideoWidgetReference",
+      "name": "binkVideo",
+      "flags": 4297130017
+    },
+    {
+      "type": "array:gameuiBinkResource",
+      "name": "binkVideos",
+      "flags": 6583025697
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "fastForward",
+      "flags": 4297130017
+    },
+    {
+      "type": "Float",
+      "name": "timerUntilFadeEp1",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkVideoWidgetReference",
+      "name": "musicVideoEp1",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "creditsAnimEp1",
+      "flags": 4297130017
+    },
+    {
+      "type": "Int32",
+      "name": "currentBinkVideo",
+      "flags": 4297130016
+    },
+    {
+      "type": "inkVideoWidgetSummary",
+      "name": "videoSummary",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isDataSet",
+      "flags": 4297130016
+    },
+    {
+      "type": "Float",
+      "name": "accumulatedTime",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isCounting",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnSetUserData",
+      "shortName": "OnSetUserData",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:IScriptable",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnUpdate",
+      "shortName": "OnUpdate",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Float",
+          "name": "timeDelta",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnVideoFinished",
+      "shortName": "OnVideoFinished",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "whandle:inkVideoWidget",
+          "name": "target",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "FinishVideo;",
+      "shortName": "FinishVideo",
+      "flags": 32900
+    },
+    {
+      "fullName": "InitializeCredits;",
+      "shortName": "InitializeCredits",
+      "flags": 32900
+    },
+    {
+      "fullName": "PlayCredits;",
+      "shortName": "PlayCredits",
+      "flags": 32900
+    },
+    {
+      "fullName": "PlayNextVideo;",
+      "shortName": "PlayNextVideo",
+      "flags": 32900
+    }
+  ]
+}

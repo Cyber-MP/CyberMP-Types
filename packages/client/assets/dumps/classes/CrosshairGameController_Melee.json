@@ -1,0 +1,280 @@
+{
+  "parent": "gameuiCrosshairBaseMelee",
+  "name": "CrosshairGameController_Melee",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkWidgetReference",
+      "name": "targetColorChange",
+      "flags": 4297130017
+    },
+    {
+      "type": "whandle:inkCanvasWidget",
+      "name": "chargeBar",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:inkRectangleWidget",
+      "name": "chargeBarFG",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:inkImageWidget",
+      "name": "chargeBarMonoTop",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:inkImageWidget",
+      "name": "chargeBarMonoBottom",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:inkMaskWidget",
+      "name": "chargeBarMask",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:inkTextWidget",
+      "name": "chargeValueL",
+      "flags": 4297130017
+    },
+    {
+      "type": "whandle:inkTextWidget",
+      "name": "chargeValueR",
+      "flags": 4297130017
+    },
+    {
+      "type": "Uint32",
+      "name": "bbcharge",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:MeleeResourcePoolListener",
+      "name": "meleeResourcePoolListener",
+      "flags": 4431347744
+    },
+    {
+      "type": "entEntityID",
+      "name": "weaponID",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "displayChargeBar",
+      "flags": 4297130016
+    },
+    {
+      "type": "Int32",
+      "name": "currentState",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:MeleeLeapAttackObjectTagger",
+      "name": "meleeLeapAttackObjectTagger",
+      "flags": 4431347744
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnGamePSMMeleeWeapon",
+      "shortName": "OnGamePSMMeleeWeapon",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "state",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnPlayerAttach",
+      "shortName": "OnPlayerAttach",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "playerPuppet",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPreIntro",
+      "shortName": "OnPreIntro",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnPreOutro",
+      "shortName": "OnPreOutro",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "ApplyCrosshairGUIState;CNameEntity",
+      "shortName": "ApplyCrosshairGUIState",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "CName",
+          "name": "state",
+          "flags": 128
+        },
+        {
+          "type": "handle:entEntity",
+          "name": "aimedAtEntity",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetIntroAnimation;Bool",
+      "shortName": "GetIntroAnimation",
+      "return": {
+        "type": "handle:inkanimProxy",
+        "flags": 64
+      },
+      "flags": 34304,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "firstEquip",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetOutroAnimation;",
+      "shortName": "GetOutroAnimation",
+      "return": {
+        "type": "handle:inkanimProxy",
+        "flags": 64
+      },
+      "flags": 34304
+    },
+    {
+      "fullName": "OnState_Aim;",
+      "shortName": "OnState_Aim",
+      "flags": 33024
+    },
+    {
+      "fullName": "OnState_GrenadeCharging;",
+      "shortName": "OnState_GrenadeCharging",
+      "flags": 33024
+    },
+    {
+      "fullName": "OnState_HipFire;",
+      "shortName": "OnState_HipFire",
+      "flags": 33024
+    },
+    {
+      "fullName": "OnState_LeftHandCyberware;",
+      "shortName": "OnState_LeftHandCyberware",
+      "flags": 33024
+    },
+    {
+      "fullName": "OnState_Reload;",
+      "shortName": "OnState_Reload",
+      "flags": 33024
+    },
+    {
+      "fullName": "OnState_Safe;",
+      "shortName": "OnState_Safe",
+      "flags": 33024
+    },
+    {
+      "fullName": "OnState_Scanning;",
+      "shortName": "OnState_Scanning",
+      "flags": 33024
+    },
+    {
+      "fullName": "OnState_Sprint;",
+      "shortName": "OnState_Sprint",
+      "flags": 33024
+    },
+    {
+      "fullName": "SetChargeScale;Float",
+      "shortName": "SetChargeScale",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "Float",
+          "name": "pct",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ShowCrosshairFromState;Bool",
+      "shortName": "ShowCrosshairFromState",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "show",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateResourceValue;FloatFloatFloat",
+      "shortName": "UpdateResourceValue",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Float",
+          "name": "oldValue",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "newValue",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "percToPoints",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateTargetIndicator;",
+      "shortName": "UpdateTargetIndicator",
+      "flags": 33284
+    }
+  ]
+}

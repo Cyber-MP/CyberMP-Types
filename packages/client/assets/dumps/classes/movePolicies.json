@@ -1,0 +1,845 @@
+{
+  "parent": "IScriptable",
+  "name": "movePolicies",
+  "flags": 2,
+  "props": [
+    {
+      "type": "Vector3",
+      "name": "destination",
+      "flags": 6627016704
+    },
+    {
+      "type": "Vector3",
+      "name": "destinationTangent",
+      "flags": 6627016704
+    },
+    {
+      "type": "Vector3",
+      "name": "startTangent",
+      "flags": 6627016704
+    },
+    {
+      "type": "AIObjectId",
+      "name": "targetSmartObject",
+      "flags": 6627016704
+    },
+    {
+      "type": "handle:gameSetupWorkspotActionEvent",
+      "name": "targetWorkspot",
+      "flags": 6627016704
+    },
+    {
+      "type": "Uint64",
+      "name": "targetSmartObjectHash",
+      "flags": 6627016704
+    },
+    {
+      "type": "whandle:gameObject",
+      "name": "targetObject",
+      "flags": 6627016704
+    },
+    {
+      "type": "moveStrafingTarget",
+      "name": "strafingTarget",
+      "flags": 6627016704
+    },
+    {
+      "type": "Bool",
+      "name": "useFollowSlots",
+      "flags": 6627016704
+    },
+    {
+      "type": "static:4,Vector3",
+      "name": "followSlotOverrides",
+      "flags": 6627016704
+    },
+    {
+      "type": "Bool",
+      "name": "hasLocalTargetOffset",
+      "flags": 6627016704
+    },
+    {
+      "type": "Vector3",
+      "name": "localTargetOffset",
+      "flags": 6627016704
+    },
+    {
+      "type": "Float",
+      "name": "desiredDistance",
+      "flags": 6627016704
+    },
+    {
+      "type": "Float",
+      "name": "toleranceRadius",
+      "flags": 6627016704
+    },
+    {
+      "type": "Float",
+      "name": "minMovementDistance",
+      "flags": 6627016704
+    },
+    {
+      "type": "Float",
+      "name": "strafingRotationOffset",
+      "flags": 6627016704
+    },
+    {
+      "type": "Float",
+      "name": "minFollowerDistance",
+      "flags": 6627016704
+    },
+    {
+      "type": "Float",
+      "name": "maxFollowerDistance",
+      "flags": 6627016704
+    },
+    {
+      "type": "moveMovementType",
+      "name": "movementType",
+      "flags": 6627016704
+    },
+    {
+      "type": "moveCirclingDirection",
+      "name": "circlingDirection",
+      "flags": 6627016704
+    },
+    {
+      "type": "Bool",
+      "name": "stopOnObstacle",
+      "flags": 6627016704
+    },
+    {
+      "type": "Bool",
+      "name": "avoidObstacleWithinTolerance",
+      "flags": 6627016704
+    },
+    {
+      "type": "Bool",
+      "name": "useCollisionAvoidance",
+      "flags": 6627016704
+    },
+    {
+      "type": "Bool",
+      "name": "useDestReservation",
+      "flags": 6627016704
+    },
+    {
+      "type": "Bool",
+      "name": "inRestrictedArea",
+      "flags": 6627016704
+    },
+    {
+      "type": "Bool",
+      "name": "isSpline",
+      "flags": 6627016704
+    },
+    {
+      "type": "Bool",
+      "name": "startFromClosestPoint",
+      "flags": 6627016704
+    },
+    {
+      "type": "Bool",
+      "name": "ignoreNavigation",
+      "flags": 6627016704
+    },
+    {
+      "type": "Bool",
+      "name": "useStart",
+      "flags": 6627016704
+    },
+    {
+      "type": "Bool",
+      "name": "useStop",
+      "flags": 6627016704
+    },
+    {
+      "type": "Bool",
+      "name": "isEvaluated",
+      "flags": 6627016704
+    },
+    {
+      "type": "Bool",
+      "name": "useOffMeshAllowedTags",
+      "flags": 6627016704
+    },
+    {
+      "type": "Bool",
+      "name": "useOffMeshBlockedTags",
+      "flags": 6627016704
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "GetInvalidPos",
+      "shortName": "GetInvalidPos",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "index": 14166,
+      "flags": 3
+    },
+    {
+      "fullName": "AddAllowedTag",
+      "shortName": "AddAllowedTag",
+      "index": 14142,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "tag",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AddBlockedTag",
+      "shortName": "AddBlockedTag",
+      "index": 14144,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "tag",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetIdleTurnsDeadZoneAngle",
+      "shortName": "GetIdleTurnsDeadZoneAngle",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 14152,
+      "flags": 1
+    },
+    {
+      "fullName": "GetMaxPathLength",
+      "shortName": "GetMaxPathLength",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 14159,
+      "flags": 1
+    },
+    {
+      "fullName": "GetMaxPathLengthToDirectDistanceRatioCurve",
+      "shortName": "GetMaxPathLengthToDirectDistanceRatioCurve",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "index": 14157,
+      "flags": 1
+    },
+    {
+      "fullName": "GetMovementType",
+      "shortName": "GetMovementType",
+      "return": {
+        "type": "moveMovementType",
+        "flags": 64
+      },
+      "index": 14150,
+      "flags": 1
+    },
+    {
+      "fullName": "SetAvoidObstacleWithinTolerance",
+      "shortName": "SetAvoidObstacleWithinTolerance",
+      "index": 14132,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "avoidWiyhinTolerance",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetAvoidPreventionFreeAreas",
+      "shortName": "SetAvoidPreventionFreeAreas",
+      "index": 14139,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "inRestrictedArea",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetAvoidSafeArea",
+      "shortName": "SetAvoidSafeArea",
+      "index": 14140,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "inRestrictedArea",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetAvoidThreat",
+      "shortName": "SetAvoidThreat",
+      "index": 14145,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "avoidThreat",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetAvoidThreatIgnoringDirection",
+      "shortName": "SetAvoidThreatIgnoringDirection",
+      "index": 14146,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "ignoreDirection",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetCalculateStartTangent",
+      "shortName": "SetCalculateStartTangent",
+      "index": 14164,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "calculateTangent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetCirclingPolicy",
+      "shortName": "SetCirclingPolicy",
+      "index": 14130,
+      "flags": 1,
+      "params": [
+        {
+          "type": "moveCirclingDirection",
+          "name": "direction",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetCollisionAvoidancePolicy",
+      "shortName": "SetCollisionAvoidancePolicy",
+      "index": 14137,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "avoidance",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "reservation",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetCostModCircle",
+      "shortName": "SetCostModCircle",
+      "index": 14167,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:worldNavigationScriptCostModCircle",
+          "name": "costModCircle",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetDebugName",
+      "shortName": "SetDebugName",
+      "index": 14160,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "debugName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetDestinationCover",
+      "shortName": "SetDestinationCover",
+      "index": 14120,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Uint64",
+          "name": "cover",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetDestinationObject",
+      "shortName": "SetDestinationObject",
+      "index": 14119,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "object",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetDestinationOrientation",
+      "shortName": "SetDestinationOrientation",
+      "index": 14122,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Quaternion",
+          "name": "oreiantation",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetDestinationPosition",
+      "shortName": "SetDestinationPosition",
+      "index": 14117,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Vector4",
+          "name": "position",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetDistancePolicy",
+      "shortName": "SetDistancePolicy",
+      "index": 14124,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Float",
+          "name": "distance",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "tolerance",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetDynamicTargetUpdateTimer",
+      "shortName": "SetDynamicTargetUpdateTimer",
+      "index": 14129,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Float",
+          "name": "updateTimer",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "distance",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetGetOutOfWay",
+      "shortName": "SetGetOutOfWay",
+      "index": 14147,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "getOutOfWay",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetIdleTurnsDeadZoneAngle",
+      "shortName": "SetIdleTurnsDeadZoneAngle",
+      "index": 14151,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Float",
+          "name": "angle",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetIgnoreNavigation",
+      "shortName": "SetIgnoreNavigation",
+      "index": 14149,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "ignore",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetInRestrictedArea",
+      "shortName": "SetInRestrictedArea",
+      "index": 14138,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "inRestrictedArea",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetInvalidDestinationPosition",
+      "shortName": "SetInvalidDestinationPosition",
+      "index": 14118,
+      "flags": 1
+    },
+    {
+      "fullName": "SetKeepLineOfSight",
+      "shortName": "SetKeepLineOfSight",
+      "index": 14133,
+      "flags": 1,
+      "params": [
+        {
+          "type": "moveLineOfSight",
+          "name": "los",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetLineOfSightPointPreference",
+      "shortName": "SetLineOfSightPointPreference",
+      "index": 14134,
+      "flags": 1,
+      "params": [
+        {
+          "type": "moveLineOfSightPointPreference",
+          "name": "preference",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetLocalTargetOffset",
+      "shortName": "SetLocalTargetOffset",
+      "index": 14165,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Vector4",
+          "name": "position",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetMaxPathLength",
+      "shortName": "SetMaxPathLength",
+      "index": 14158,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Float",
+          "name": "length",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetMaxPathLengthToDirectDistanceRatioCurve",
+      "shortName": "SetMaxPathLengthToDirectDistanceRatioCurve",
+      "index": 14156,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "curveName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetMaxZDiff",
+      "shortName": "SetMaxZDiff",
+      "index": 14125,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Float",
+          "name": "zDiff",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetMinDistancePolicy",
+      "shortName": "SetMinDistancePolicy",
+      "index": 14126,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Float",
+          "name": "minDistance",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetMovementType",
+      "shortName": "SetMovementType",
+      "index": 14136,
+      "flags": 1,
+      "params": [
+        {
+          "type": "moveMovementType",
+          "name": "movementType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetPositionProvider",
+      "shortName": "SetPositionProvider",
+      "index": 14162,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:entIPositionProvider",
+          "name": "provider",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetSquadInfo",
+      "shortName": "SetSquadInfo",
+      "index": 14155,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Uint32",
+          "name": "squadIndex",
+          "flags": 128
+        },
+        {
+          "type": "Uint32",
+          "name": "squadSize",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetStopOnObstacle",
+      "shortName": "SetStopOnObstacle",
+      "index": 14131,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "stopOnObstacle",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetStrafingPosition",
+      "shortName": "SetStrafingPosition",
+      "index": 14123,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Vector4",
+          "name": "position",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetStrafingPositionProvider",
+      "shortName": "SetStrafingPositionProvider",
+      "index": 14163,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:entIPositionProvider",
+          "name": "provider",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetStrafingPredictionTime",
+      "shortName": "SetStrafingPredictionTime",
+      "index": 14127,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Float",
+          "name": "strafingPredictionTime",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "strafingPredictionVelocityMax",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetStrafingRotationOffset",
+      "shortName": "SetStrafingRotationOffset",
+      "index": 14128,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Float",
+          "name": "angle",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetStrafingTarget",
+      "shortName": "SetStrafingTarget",
+      "index": 14121,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "object",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetTweakDBID",
+      "shortName": "SetTweakDBID",
+      "index": 14161,
+      "flags": 1,
+      "params": [
+        {
+          "type": "TweakDBID",
+          "name": "id",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetUseFollowSlots",
+      "shortName": "SetUseFollowSlots",
+      "index": 14153,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "use",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetUseLineOfSitePrecheck",
+      "shortName": "SetUseLineOfSitePrecheck",
+      "index": 14135,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "precheck",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetUseOffMeshAllowedTags",
+      "shortName": "SetUseOffMeshAllowedTags",
+      "index": 14141,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "useOffMeshBlockedTags",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetUseOffMeshBlockedTags",
+      "shortName": "SetUseOffMeshBlockedTags",
+      "index": 14143,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "useOffMeshAllowedTags",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetUseStartStop",
+      "shortName": "SetUseStartStop",
+      "index": 14148,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "useStart",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "useStop",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetUseSymmetricAnglesScores",
+      "shortName": "SetUseSymmetricAnglesScores",
+      "index": 14154,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "use",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

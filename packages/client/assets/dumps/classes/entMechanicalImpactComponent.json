@@ -1,0 +1,83 @@
+{
+  "parent": "entIComponent",
+  "name": "entMechanicalImpactComponent",
+  "flags": 2,
+  "props": [
+    {
+      "type": "Float",
+      "name": "c_impulseMagThreshold",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnMechanicalComponentImpactEvent",
+      "shortName": "OnMechanicalComponentImpactEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:entMechanicalComponentImpactEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "FilterOutVehicleImpact;script_ref<array<ImpactPointData>>VehicleObjectscript_ref<ImpactPointData>script_ref<GameObject>",
+      "shortName": "FilterOutVehicleImpact",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:array:entImpactPointData",
+          "name": "impactPoints",
+          "flags": 128
+        },
+        {
+          "type": "handle:vehicleBaseObject",
+          "name": "vehicleObject",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:entImpactPointData",
+          "name": "outImpactPoint",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:handle:gameObject",
+          "name": "outInstigator",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessVehicleImpact;VehicleObjectGameObjectscript_ref<ImpactPointData>",
+      "shortName": "ProcessVehicleImpact",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:vehicleBaseObject",
+          "name": "vehicleObject",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameObject",
+          "name": "instigator",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:entImpactPointData",
+          "name": "impactPoint",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

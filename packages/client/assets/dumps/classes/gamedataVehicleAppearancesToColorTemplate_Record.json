@@ -1,0 +1,81 @@
+{
+  "parent": "gamedataTweakDBRecord",
+  "name": "gamedataVehicleAppearancesToColorTemplate_Record",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "ColorTemplates",
+      "shortName": "ColorTemplates",
+      "index": 3613,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataVehicleColorTemplate_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "ColorTemplatesContains",
+      "shortName": "ColorTemplatesContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 3617,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataVehicleColorTemplate_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetColorTemplatesCount",
+      "shortName": "GetColorTemplatesCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 3614,
+      "flags": 1
+    },
+    {
+      "fullName": "GetColorTemplatesItem",
+      "shortName": "GetColorTemplatesItem",
+      "return": {
+        "type": "whandle:gamedataVehicleColorTemplate_Record",
+        "flags": 64
+      },
+      "index": 3615,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetColorTemplatesItemHandle",
+      "shortName": "GetColorTemplatesItemHandle",
+      "return": {
+        "type": "handle:gamedataVehicleColorTemplate_Record",
+        "flags": 64
+      },
+      "index": 3616,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

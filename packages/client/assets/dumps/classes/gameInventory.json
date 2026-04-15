@@ -1,0 +1,129 @@
+{
+  "parent": "gameComponent",
+  "name": "gameInventory",
+  "flags": 2,
+  "props": [
+    {
+      "type": "Bool",
+      "name": "saveInventory",
+      "flags": 6627016705
+    },
+    {
+      "type": "gameSharedInventoryTag",
+      "name": "inventoryTag",
+      "flags": 6627016705
+    },
+    {
+      "type": "Bool",
+      "name": "noInitialization",
+      "flags": 6627016705
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "CreateItemData",
+      "shortName": "CreateItemData",
+      "return": {
+        "type": "handle:gameItemData",
+        "flags": 64
+      },
+      "index": 13233,
+      "flags": 3,
+      "params": [
+        {
+          "type": "gameItemModParams",
+          "name": "itemData",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameObject",
+          "name": "owner",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsAccessible",
+      "shortName": "IsAccessible",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13231,
+      "flags": 1
+    },
+    {
+      "fullName": "ReinitializeStatsOnAllItems",
+      "shortName": "ReinitializeStatsOnAllItems",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13232,
+      "flags": 1
+    },
+    {
+      "fullName": "OnInteractionUsed",
+      "shortName": "OnInteractionUsed",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33036,
+      "params": [
+        {
+          "type": "handle:gameinteractionsChoiceEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnLootAllEvent",
+      "shortName": "OnLootAllEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33036,
+      "params": [
+        {
+          "type": "handle:gameOnLootAllEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsChoiceAvailable;ItemAction_RecordGameObjectEntityIDItemID",
+      "shortName": "IsChoiceAvailable",
+      "return": {
+        "type": "gameinteractionsELootChoiceType",
+        "flags": 64
+      },
+      "flags": 34308,
+      "params": [
+        {
+          "type": "handle:gamedataItemAction_Record",
+          "name": "itemActionRecord",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameObject",
+          "name": "requester",
+          "flags": 128
+        },
+        {
+          "type": "entEntityID",
+          "name": "ownerEntID",
+          "flags": 128
+        },
+        {
+          "type": "gameItemID",
+          "name": "itemID",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

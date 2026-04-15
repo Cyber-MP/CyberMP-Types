@@ -1,0 +1,101 @@
+{
+  "parent": "gamedataItem_Record",
+  "name": "gamedataItemRecipe_Record",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "CraftingResult",
+      "shortName": "CraftingResult",
+      "return": {
+        "type": "whandle:gamedataCraftingResult_Record",
+        "flags": 64
+      },
+      "index": 3760,
+      "flags": 1
+    },
+    {
+      "fullName": "CraftingResultHandle",
+      "shortName": "CraftingResultHandle",
+      "return": {
+        "type": "handle:gamedataCraftingResult_Record",
+        "flags": 64
+      },
+      "index": 3761,
+      "flags": 1
+    },
+    {
+      "fullName": "GetHideOnItemsAddedCount",
+      "shortName": "GetHideOnItemsAddedCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 3763,
+      "flags": 1
+    },
+    {
+      "fullName": "GetHideOnItemsAddedItem",
+      "shortName": "GetHideOnItemsAddedItem",
+      "return": {
+        "type": "whandle:gamedataItem_Record",
+        "flags": 64
+      },
+      "index": 3764,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetHideOnItemsAddedItemHandle",
+      "shortName": "GetHideOnItemsAddedItemHandle",
+      "return": {
+        "type": "handle:gamedataItem_Record",
+        "flags": 64
+      },
+      "index": 3765,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HideOnItemsAdded",
+      "shortName": "HideOnItemsAdded",
+      "index": 3762,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataItem_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "HideOnItemsAddedContains",
+      "shortName": "HideOnItemsAddedContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 3766,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataItem_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "parent": "inkVirtualCompoundItemController",
+  "name": "VendorItemVirtualController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "handle:VendorInventoryItemData",
+      "name": "data",
+      "flags": 4431544352
+    },
+    {
+      "type": "handle:VendorUIInventoryItemData",
+      "name": "newData",
+      "flags": 4431544352
+    },
+    {
+      "type": "whandle:InventoryItemDisplayController",
+      "name": "itemViewController",
+      "flags": 4297326624
+    },
+    {
+      "type": "Bool",
+      "name": "isSpawnInProgress",
+      "flags": 4297326624
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnSelected",
+      "shortName": "OnSelected",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "whandle:inkVirtualCompoundItemController",
+          "name": "itemController",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "discreteNav",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSpawned",
+      "shortName": "OnSpawned",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkWidget",
+          "name": "widget",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "userData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnDataChanged;Variant",
+      "shortName": "OnDataChanged",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Variant",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateControllerData;",
+      "shortName": "UpdateControllerData",
+      "flags": 32900
+    }
+  ]
+}

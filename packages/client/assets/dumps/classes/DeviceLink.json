@@ -1,0 +1,119 @@
+{
+  "name": "DeviceLink",
+  "flags": 8,
+  "props": [
+    {
+      "type": "gamePersistentID",
+      "name": "PSID",
+      "flags": 4563468320
+    },
+    {
+      "type": "CName",
+      "name": "className",
+      "flags": 4563468320
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "DeviceLink::Construct;script_ref<array<PersistentState>>",
+      "shortName": "Construct",
+      "return": {
+        "type": "array:DeviceLink",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "script_ref:array:handle:gamePersistentState",
+          "name": "persistentStates",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "DeviceLink::Construct;PersistentState",
+      "shortName": "Construct",
+      "return": {
+        "type": "DeviceLink",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gamePersistentState",
+          "name": "ps",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "DeviceLink::Construct;PersistentIDCName",
+      "shortName": "Construct",
+      "return": {
+        "type": "DeviceLink",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gamePersistentID",
+          "name": "id",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "_className",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "DeviceLink::GetLinkClassName;script_ref<DeviceLink>",
+      "shortName": "GetLinkClassName",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "script_ref:DeviceLink",
+          "name": "s",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "DeviceLink::GetLinkID;script_ref<DeviceLink>",
+      "shortName": "GetLinkID",
+      "return": {
+        "type": "gamePersistentID",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "script_ref:DeviceLink",
+          "name": "s",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "DeviceLink::IsValid;script_ref<DeviceLink>",
+      "shortName": "IsValid",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "script_ref:DeviceLink",
+          "name": "s",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "parent": "gameScriptableComponent",
+  "name": "BossStealthComponent",
+  "flags": 4,
+  "props": [
+    {
+      "type": "whandle:NPCPuppet",
+      "name": "owner",
+      "flags": 4297130016
+    },
+    {
+      "type": "entEntityID",
+      "name": "owner_id",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:PlayerPuppet",
+      "name": "player",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:gameStatPoolsSystem",
+      "name": "statPoolSystem",
+      "flags": 4431347744
+    },
+    {
+      "type": "gamedataStatPoolType",
+      "name": "statPoolType",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:AITargetTrackerComponent",
+      "name": "targetTrackerComponent",
+      "flags": 4431347744
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnNonStealthQuickHackVictimEvent",
+      "shortName": "OnNonStealthQuickHackVictimEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:NonStealthQuickHackVictimEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnStatusEffectApplied",
+      "shortName": "OnStatusEffectApplied",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameeventsApplyStatusEffectEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnGameAttach;",
+      "shortName": "OnGameAttach",
+      "flags": 33924
+    }
+  ]
+}

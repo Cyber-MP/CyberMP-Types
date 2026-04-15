@@ -1,0 +1,523 @@
+{
+  "parent": "gameuiIGameSystemUI",
+  "name": "gameuiGameSystemUI",
+  "flags": 2,
+  "funcs": [
+    {
+      "fullName": "ClearGlobalThemeOverride",
+      "shortName": "ClearGlobalThemeOverride",
+      "index": 14775,
+      "flags": 1
+    },
+    {
+      "fullName": "GetBlackBarsSizes",
+      "shortName": "GetBlackBarsSizes",
+      "return": {
+        "type": "Vector2",
+        "flags": 64
+      },
+      "index": 14782,
+      "flags": 1
+    },
+    {
+      "fullName": "GetCurrentWindowSize",
+      "shortName": "GetCurrentWindowSize",
+      "return": {
+        "type": "Vector2",
+        "flags": 64
+      },
+      "index": 14780,
+      "flags": 1
+    },
+    {
+      "fullName": "GetGameInstance",
+      "shortName": "GetGameInstance",
+      "return": {
+        "type": "ScriptGameInstance",
+        "flags": 64
+      },
+      "index": 14764,
+      "flags": 8193
+    },
+    {
+      "fullName": "GetHudEntryForcedVisibility",
+      "shortName": "GetHudEntryForcedVisibility",
+      "return": {
+        "type": "worlduiEntryVisibility",
+        "flags": 64
+      },
+      "index": 14788,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "entryName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetHudScalingOverride",
+      "shortName": "GetHudScalingOverride",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 14783,
+      "flags": 1
+    },
+    {
+      "fullName": "GetInteractableWidgetUnderCursor",
+      "shortName": "GetInteractableWidgetUnderCursor",
+      "return": {
+        "type": "whandle:inkWidget",
+        "flags": 64
+      },
+      "index": 14791,
+      "flags": 1
+    },
+    {
+      "fullName": "GetInverseUIScale",
+      "shortName": "GetInverseUIScale",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 14781,
+      "flags": 1
+    },
+    {
+      "fullName": "GetIsEulaAccepted",
+      "shortName": "GetIsEulaAccepted",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 14793,
+      "flags": 1
+    },
+    {
+      "fullName": "GetNeededPatchIntroPackage",
+      "shortName": "GetNeededPatchIntroPackage",
+      "return": {
+        "type": "gameuiPatchIntroPackage",
+        "flags": 64
+      },
+      "index": 14776,
+      "flags": 1
+    },
+    {
+      "fullName": "GetOneTimeMessageSeen",
+      "shortName": "GetOneTimeMessageSeen",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 14786,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gameuiOneTimeMessage",
+          "name": "message",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HideTutorialBracket",
+      "shortName": "HideTutorialBracket",
+      "index": 14771,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "bracketID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HideTutorialOverlay",
+      "shortName": "HideTutorialOverlay",
+      "index": 14773,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gameTutorialOverlayData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsPatchIntroNeeded",
+      "shortName": "IsPatchIntroNeeded",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 14777,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gameuiPatchIntro",
+          "name": "patchIntro",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "MarkPatchIntroAsSeen",
+      "shortName": "MarkPatchIntroAsSeen",
+      "index": 14778,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gameuiPatchIntro",
+          "name": "patchIntro",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "NotifyFastTravelStart",
+      "shortName": "NotifyFastTravelStart",
+      "index": 14784,
+      "flags": 1
+    },
+    {
+      "fullName": "QueueEvent",
+      "shortName": "QueueEvent",
+      "index": 14765,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:redEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "QueueMenuEvent",
+      "shortName": "QueueMenuEvent",
+      "index": 14766,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "eventName",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "userData",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "RequestDelamainTaxiMenu",
+      "shortName": "RequestDelamainTaxiMenu",
+      "index": 14769,
+      "flags": 1
+    },
+    {
+      "fullName": "RequestFastTravelMenu",
+      "shortName": "RequestFastTravelMenu",
+      "index": 14768,
+      "flags": 1
+    },
+    {
+      "fullName": "RequestVendorMenu",
+      "shortName": "RequestVendorMenu",
+      "index": 14767,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:questVendorPanelData",
+          "name": "data",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "scenarioName",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "ResetNavigationOppositeAxisDistanceCost",
+      "shortName": "ResetNavigationOppositeAxisDistanceCost",
+      "index": 14790,
+      "flags": 1
+    },
+    {
+      "fullName": "ResetPatchIntro",
+      "shortName": "ResetPatchIntro",
+      "index": 14779,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gameuiPatchIntro",
+          "name": "patchIntro",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetGlobalThemeOverride",
+      "shortName": "SetGlobalThemeOverride",
+      "index": 14774,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "themeID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetHudEntryForcedVisibility",
+      "shortName": "SetHudEntryForcedVisibility",
+      "index": 14787,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "entryName",
+          "flags": 128
+        },
+        {
+          "type": "worlduiEntryVisibility",
+          "name": "visibility",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetIsEulaAccepted",
+      "shortName": "SetIsEulaAccepted",
+      "index": 14792,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "isEulaAccepted",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetNavigationOppositeAxisDistanceCost",
+      "shortName": "SetNavigationOppositeAxisDistanceCost",
+      "index": 14789,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Float",
+          "name": "cost",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetOneTimeMessageSeen",
+      "shortName": "SetOneTimeMessageSeen",
+      "index": 14785,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gameuiOneTimeMessage",
+          "name": "message",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "seen",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ShowTutorialBracket",
+      "shortName": "ShowTutorialBracket",
+      "index": 14770,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gameTutorialBracketData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ShowTutorialOverlay",
+      "shortName": "ShowTutorialOverlay",
+      "index": 14772,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gameTutorialOverlayData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnEnterDelamainTaxiMenu",
+      "shortName": "OnEnterDelamainTaxiMenu",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33036
+    },
+    {
+      "fullName": "OnEnterFastTravelMenu",
+      "shortName": "OnEnterFastTravelMenu",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33036
+    },
+    {
+      "fullName": "OnExitDelamainTaxiMenu",
+      "shortName": "OnExitDelamainTaxiMenu",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33036
+    },
+    {
+      "fullName": "OnExitFastTravelMenu",
+      "shortName": "OnExitFastTravelMenu",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33036
+    },
+    {
+      "fullName": "GetDelamainTaxiSystem;",
+      "shortName": "GetDelamainTaxiSystem",
+      "return": {
+        "type": "handle:DelamainTaxiSystem",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "GetFastTravelSystem;",
+      "shortName": "GetFastTravelSystem",
+      "return": {
+        "type": "handle:FastTravelSystem",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "NotifyDelamainTaxiSystem;Bool",
+      "shortName": "NotifyDelamainTaxiSystem",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "menuEnabled",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "NotifyFastTravelSystem;Bool",
+      "shortName": "NotifyFastTravelSystem",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "menuEnabled",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PopGameContext;UIGameContextBool",
+      "shortName": "PopGameContext",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "UIGameContext",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "invalidate",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "PushGameContext;UIGameContext",
+      "shortName": "PushGameContext",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "UIGameContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RequestNewVisualState;CName",
+      "shortName": "RequestNewVisualState",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "CName",
+          "name": "newVisualState",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ResetGameContext;",
+      "shortName": "ResetGameContext",
+      "flags": 33284
+    },
+    {
+      "fullName": "RestorePreviousVisualState;CName",
+      "shortName": "RestorePreviousVisualState",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "CName",
+          "name": "popVisualState",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SwapGameContext;UIGameContextUIGameContext",
+      "shortName": "SwapGameContext",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "UIGameContext",
+          "name": "oldContext",
+          "flags": 128
+        },
+        {
+          "type": "UIGameContext",
+          "name": "newContext",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

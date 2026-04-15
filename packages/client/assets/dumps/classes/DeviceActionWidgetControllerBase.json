@@ -1,0 +1,153 @@
+{
+  "parent": "DeviceButtonLogicControllerBase",
+  "name": "DeviceActionWidgetControllerBase",
+  "flags": 4,
+  "props": [
+    {
+      "type": "array:whandle:gamedeviceAction",
+      "name": "actions",
+      "flags": 6583091232
+    },
+    {
+      "type": "handle:ResolveActionData",
+      "name": "actionData",
+      "flags": 4431413280
+    },
+    {
+      "type": "Bool",
+      "name": "isInactive",
+      "flags": 4297195552
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "AddAction;DeviceAction",
+      "shortName": "AddAction",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "whandle:gamedeviceAction",
+          "name": "action",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CanExecuteAction;",
+      "shortName": "CanExecuteAction",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "ClearButtonActions;",
+      "shortName": "ClearButtonActions",
+      "flags": 33280
+    },
+    {
+      "fullName": "FinalizeActionExecution;GameObjectDeviceAction",
+      "shortName": "FinalizeActionExecution",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "executor",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamedeviceAction",
+          "name": "action",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetActions;",
+      "shortName": "GetActions",
+      "return": {
+        "type": "array:whandle:gamedeviceAction",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "Initialize;DeviceInkGameControllerBasescript_ref<SActionWidgetPackage>",
+      "shortName": "Initialize",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "handle:DeviceInkGameControllerBase",
+          "name": "gameController",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:SActionWidgetPackage",
+          "name": "widgetData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterDeviceActionCallback;DeviceInkGameControllerBase",
+      "shortName": "RegisterDeviceActionCallback",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:DeviceInkGameControllerBase",
+          "name": "gameController",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RemoveAction;DeviceAction",
+      "shortName": "RemoveAction",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "whandle:gamedeviceAction",
+          "name": "action",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ResolveAction;script_ref<SActionWidgetPackage>",
+      "shortName": "ResolveAction",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "script_ref:SActionWidgetPackage",
+          "name": "widgetData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ResolveWidgetState;EWidgetState",
+      "shortName": "ResolveWidgetState",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "EWidgetState",
+          "name": "state",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetActions;script_ref<array<DeviceAction>>",
+      "shortName": "SetActions",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "script_ref:array:whandle:gamedeviceAction",
+          "name": "actions",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

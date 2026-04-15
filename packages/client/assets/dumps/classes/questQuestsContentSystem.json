@@ -1,0 +1,68 @@
+{
+  "parent": "questIQuestsContentSystem",
+  "name": "questQuestsContentSystem",
+  "flags": 2,
+  "funcs": [
+    {
+      "fullName": "IsTokensActivationBlocked",
+      "shortName": "IsTokensActivationBlocked",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 14389,
+      "flags": 1
+    },
+    {
+      "fullName": "IsTokensActivationBlockedBySource",
+      "shortName": "IsTokensActivationBlockedBySource",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 14390,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "source",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterLockListener",
+      "shortName": "RegisterLockListener",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 14387,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:questScriptQuestContentLockListener",
+          "name": "listener",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UnregisterLockListener",
+      "shortName": "UnregisterLockListener",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 14388,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:questScriptQuestContentLockListener",
+          "name": "listener",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

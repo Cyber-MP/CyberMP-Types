@@ -1,0 +1,264 @@
+{
+  "parent": "IScriptable",
+  "name": "inkanimController",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "Caller",
+      "shortName": "Caller",
+      "return": {
+        "type": "handle:inkanimController",
+        "flags": 64
+      },
+      "index": 2215,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:inkWidget",
+          "name": "caller",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "FromSet",
+      "shortName": "FromSet",
+      "return": {
+        "type": "handle:inkanimController",
+        "flags": 64
+      },
+      "index": 2214,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:inkWidgetsSet",
+          "name": "other",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetProxy",
+      "shortName": "GetProxy",
+      "return": {
+        "type": "handle:inkanimProxy",
+        "flags": 64
+      },
+      "index": 2222,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Uint32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Interpolate",
+      "shortName": "Interpolate",
+      "return": {
+        "type": "handle:inkanimBuilder",
+        "flags": 64
+      },
+      "index": 2217,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "interpolatorName",
+          "flags": 128
+        },
+        {
+          "type": "Variant",
+          "name": "startValue",
+          "flags": 128
+        },
+        {
+          "type": "Variant",
+          "name": "endValue",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "InterpolateFrom",
+      "shortName": "InterpolateFrom",
+      "return": {
+        "type": "handle:inkanimBuilder",
+        "flags": 64
+      },
+      "index": 2218,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "interpolatorName",
+          "flags": 128
+        },
+        {
+          "type": "Variant",
+          "name": "startValue",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "InterpolateTo",
+      "shortName": "InterpolateTo",
+      "return": {
+        "type": "handle:inkanimBuilder",
+        "flags": 64
+      },
+      "index": 2219,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "interpolatorName",
+          "flags": 128
+        },
+        {
+          "type": "Variant",
+          "name": "endValue",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Pause",
+      "shortName": "Pause",
+      "index": 2224,
+      "flags": 1
+    },
+    {
+      "fullName": "Play",
+      "shortName": "Play",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 2220,
+      "flags": 1
+    },
+    {
+      "fullName": "PlayOffset",
+      "shortName": "PlayOffset",
+      "return": {
+        "type": "handle:inkanimController",
+        "flags": 64
+      },
+      "index": 2216,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Float",
+          "name": "offset",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PlayWithOptions",
+      "shortName": "PlayWithOptions",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 2221,
+      "flags": 1,
+      "params": [
+        {
+          "type": "inkanimPlaybackOptions",
+          "name": "playbackOptions",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterToCallback",
+      "shortName": "RegisterToCallback",
+      "index": 2226,
+      "flags": 1,
+      "params": [
+        {
+          "type": "inkanimEventType",
+          "name": "eventType",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "object",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "functionName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Resume",
+      "shortName": "Resume",
+      "index": 2225,
+      "flags": 1
+    },
+    {
+      "fullName": "Select",
+      "shortName": "Select",
+      "return": {
+        "type": "handle:inkanimController",
+        "flags": 64
+      },
+      "index": 2213,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:inkWidget",
+          "name": "widget",
+          "flags": 128
+        },
+        {
+          "type": "inkSelectionRule",
+          "name": "selectionRule",
+          "flags": 1152
+        },
+        {
+          "type": "String",
+          "name": "param",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "Stop",
+      "shortName": "Stop",
+      "index": 2223,
+      "flags": 1
+    },
+    {
+      "fullName": "UnregisterFromCallback",
+      "shortName": "UnregisterFromCallback",
+      "index": 2227,
+      "flags": 1,
+      "params": [
+        {
+          "type": "inkanimEventType",
+          "name": "eventType",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "object",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "functionName",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

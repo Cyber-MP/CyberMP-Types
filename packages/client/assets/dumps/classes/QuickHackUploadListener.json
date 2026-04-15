@@ -1,0 +1,100 @@
+{
+  "parent": "ActionUploadListener",
+  "name": "QuickHackUploadListener",
+  "flags": 4,
+  "funcs": [
+    {
+      "fullName": "OnStatPoolAdded",
+      "shortName": "OnStatPoolAdded",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnStatPoolMaxValueReached",
+      "shortName": "OnStatPoolMaxValueReached",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Float",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Initialize;",
+      "shortName": "Initialize",
+      "flags": 33280
+    },
+    {
+      "fullName": "PlayQuickHackSound;CName",
+      "shortName": "PlayQuickHackSound",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "CName",
+          "name": "eventName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RemoveLink;ScriptedPuppet",
+      "shortName": "RemoveLink",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "whandle:ScriptedPuppet",
+          "name": "owner",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RemoveLinkedStatusEffects;ScriptedPuppetBool",
+      "shortName": "RemoveLinkedStatusEffects",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "whandle:ScriptedPuppet",
+          "name": "owner",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "ssAction",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "SendUploadFinishedEvent;",
+      "shortName": "SendUploadFinishedEvent",
+      "flags": 33028
+    },
+    {
+      "fullName": "SendUploadStartedEvent;ScriptableDeviceAction",
+      "shortName": "SendUploadStartedEvent",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "handle:ScriptableDeviceAction",
+          "name": "action",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetRegenBehavior;",
+      "shortName": "SetRegenBehavior",
+      "flags": 33024
+    }
+  ]
+}

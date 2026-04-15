@@ -1,0 +1,72 @@
+{
+  "parent": "gameuiHUDGameController",
+  "name": "CrouchIndicatorGameController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkImageWidgetReference",
+      "name": "crouchIcon",
+      "flags": 4297130017
+    },
+    {
+      "type": "CName",
+      "name": "genderName",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "psmLocomotionStateChangedCallback",
+      "flags": 4431347744
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnPSMLocomotionStateChanged",
+      "shortName": "OnPSMLocomotionStateChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPlayerAttach",
+      "shortName": "OnPlayerAttach",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "player",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPlayerDetach",
+      "shortName": "OnPlayerDetach",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "player",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

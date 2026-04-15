@@ -1,0 +1,395 @@
+{
+  "parent": "gameScriptableSystem",
+  "name": "DropPointSystem",
+  "flags": 4,
+  "props": [
+    {
+      "type": "array:handle:DropPointPackage",
+      "name": "packages",
+      "flags": 6851461152
+    },
+    {
+      "type": "array:handle:DropPointMappinRegistrationData",
+      "name": "mappins",
+      "flags": 6851461152
+    },
+    {
+      "type": "Bool",
+      "name": "isEnabled",
+      "flags": 4565565472
+    },
+    {
+      "type": "array:DropPointSystemLock",
+      "name": "dropPointSystemLocks",
+      "flags": 6851461152
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "AddDropPointSystemLock;CName",
+      "shortName": "AddDropPointSystemLock",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "CName",
+          "name": "reason",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CanDeposit;TweakDBIDPersistentID",
+      "shortName": "CanDeposit",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476,
+      "params": [
+        {
+          "type": "TweakDBID",
+          "name": "record",
+          "flags": 128
+        },
+        {
+          "type": "gamePersistentID",
+          "name": "dropPoint",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CreatePackage;DropPointRequest",
+      "shortName": "CreatePackage",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:DropPointRequest",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetMappinData;EntityID",
+      "shortName": "GetMappinData",
+      "return": {
+        "type": "handle:DropPointMappinRegistrationData",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "ownerID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetMappinSystem;",
+      "shortName": "GetMappinSystem",
+      "return": {
+        "type": "handle:gamemappinsMappinSystem",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "HasItemsThatCanBeDeposited;GameObjectPersistentID",
+      "shortName": "HasItemsThatCanBeDeposited",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "user",
+          "flags": 128
+        },
+        {
+          "type": "gamePersistentID",
+          "name": "dropPoint",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HasMappin;EntityID",
+      "shortName": "HasMappin",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "ownerID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HasMeaningfulItems;script_ref<array<gameItemData>>PersistentID",
+      "shortName": "HasMeaningfulItems",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41220,
+      "params": [
+        {
+          "type": "script_ref:array:whandle:gameItemData",
+          "name": "items",
+          "flags": 128
+        },
+        {
+          "type": "gamePersistentID",
+          "name": "dropPoint",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HideDropPointMappins;Bool",
+      "shortName": "HideDropPointMappins",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "informDevice",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "Is;TweakDBIDDropPointPackageStatus",
+      "shortName": "Is",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476,
+      "params": [
+        {
+          "type": "TweakDBID",
+          "name": "record",
+          "flags": 128
+        },
+        {
+          "type": "DropPointPackageStatus",
+          "name": "status",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsActive;TweakDBID",
+      "shortName": "IsActive",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 57860,
+      "params": [
+        {
+          "type": "TweakDBID",
+          "name": "record",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsCollected;TweakDBID",
+      "shortName": "IsCollected",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 57860,
+      "params": [
+        {
+          "type": "TweakDBID",
+          "name": "record",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsEnabled;",
+      "shortName": "IsEnabled",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "OnAttach;",
+      "shortName": "OnAttach",
+      "flags": 33920
+    },
+    {
+      "fullName": "OnDropPointRequest;DropPointRequest",
+      "shortName": "OnDropPointRequest",
+      "flags": 34052,
+      "params": [
+        {
+          "type": "handle:DropPointRequest",
+          "name": "dropPointRequest",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRegisterDropPointMappinRequest;RegisterDropPointMappinRequest",
+      "shortName": "OnRegisterDropPointMappinRequest",
+      "flags": 34052,
+      "params": [
+        {
+          "type": "handle:RegisterDropPointMappinRequest",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRestored;Int32Int32",
+      "shortName": "OnRestored",
+      "flags": 33920,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "saveVersion",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "gameVersion",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnToggleDropPointSystemRequest;ToggleDropPointSystemRequest",
+      "shortName": "OnToggleDropPointSystemRequest",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:ToggleDropPointSystemRequest",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUnregisterDropPointMappinRequest;UnregisterDropPointMappinRequest",
+      "shortName": "OnUnregisterDropPointMappinRequest",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:UnregisterDropPointMappinRequest",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterDropPointMappin;DropPointMappinRegistrationData",
+      "shortName": "RegisterDropPointMappin",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:DropPointMappinRegistrationData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RemoveDropPointSystemLock;CName",
+      "shortName": "RemoveDropPointSystemLock",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "CName",
+          "name": "reason",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RemoveMappinData;EntityID",
+      "shortName": "RemoveMappinData",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "ownerID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RestoreDropPointMappins;Bool",
+      "shortName": "RestoreDropPointMappins",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "informDevice",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "UnregisterDropPointMappin;DropPointMappinRegistrationData",
+      "shortName": "UnregisterDropPointMappin",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:DropPointMappinRegistrationData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdatePackage;DropPointRequest",
+      "shortName": "UpdatePackage",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:DropPointRequest",
+          "name": "dropPointRequest",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateRecord;DropPointPackageDropPointPackageStatusPersistentID",
+      "shortName": "UpdateRecord",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:DropPointPackage",
+          "name": "package",
+          "flags": 128
+        },
+        {
+          "type": "DropPointPackageStatus",
+          "name": "status",
+          "flags": 128
+        },
+        {
+          "type": "gamePersistentID",
+          "name": "holder",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

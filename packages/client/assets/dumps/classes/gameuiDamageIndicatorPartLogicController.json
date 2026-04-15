@@ -1,0 +1,191 @@
+{
+  "parent": "gameuiBaseDirectionalIndicatorPartLogicController",
+  "name": "gameuiDamageIndicatorPartLogicController",
+  "flags": 2,
+  "props": [
+    {
+      "type": "Float",
+      "name": "maxDistanceForSharedIndicators",
+      "flags": 6627016705
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "arrowFrontWidget",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "arrowBigWidget",
+      "flags": 4297130017
+    },
+    {
+      "type": "Float",
+      "name": "damageThreshold",
+      "flags": 4297130017
+    },
+    {
+      "type": "whandle:inkWidget",
+      "name": "root",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "animProxy",
+      "flags": 4431347744
+    },
+    {
+      "type": "Float",
+      "name": "damageTaken",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "continuous",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "revengeActive",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "ResetMinimumOpacity",
+      "shortName": "ResetMinimumOpacity",
+      "index": 14890,
+      "flags": 1
+    },
+    {
+      "fullName": "SetContinuous",
+      "shortName": "SetContinuous",
+      "index": 14888,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "continuous",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetMinimumOpacity",
+      "shortName": "SetMinimumOpacity",
+      "index": 14889,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Float",
+          "name": "opacity",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetReadyToRemove",
+      "shortName": "SetReadyToRemove",
+      "index": 14886,
+      "flags": 1
+    },
+    {
+      "fullName": "SetShowingDamage",
+      "shortName": "SetShowingDamage",
+      "index": 14887,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "showing",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnOutroComplete",
+      "shortName": "OnOutroComplete",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkanimProxy",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AddAttackAttempt;AIAttackAttemptEvent",
+      "shortName": "AddAttackAttempt",
+      "flags": 34052,
+      "params": [
+        {
+          "type": "handle:gameweaponeventsAIAttackAttemptEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AddIncomingDamage;gameDamageReceivedEvent",
+      "shortName": "AddIncomingDamage",
+      "flags": 34052,
+      "params": [
+        {
+          "type": "handle:gameeventsDamageReceivedEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "InitPart;",
+      "shortName": "InitPart",
+      "flags": 34052
+    },
+    {
+      "fullName": "PlayAnim;CNameCName",
+      "shortName": "PlayAnim",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "CName",
+          "name": "animName",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "callback",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Reset;",
+      "shortName": "Reset",
+      "flags": 32900
+    },
+    {
+      "fullName": "ResetRevenge;",
+      "shortName": "ResetRevenge",
+      "flags": 32900
+    },
+    {
+      "fullName": "StopContinuousEffect;",
+      "shortName": "StopContinuousEffect",
+      "flags": 32900
+    }
+  ]
+}

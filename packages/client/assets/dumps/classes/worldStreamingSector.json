@@ -1,0 +1,130 @@
+{
+  "parent": "CResource",
+  "name": "worldStreamingSector",
+  "flags": 2,
+  "props": [
+    {
+      "type": "array:rRef:CResource",
+      "name": "localInplaceResource",
+      "flags": 6627016704
+    },
+    {
+      "type": "raRef:worldStreamingSectorInplaceContent",
+      "name": "externInplaceResource",
+      "flags": 6627016704
+    },
+    {
+      "type": "Uint8",
+      "name": "level",
+      "flags": 6627016704
+    },
+    {
+      "type": "worldStreamingSectorCategory",
+      "name": "category",
+      "flags": 6627016704
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "GetNode",
+      "shortName": "GetNode",
+      "return": {
+        "type": "handle:worldNode",
+        "flags": 64
+      },
+      "index": 15613,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "arg",
+          "flags": 0
+        }
+      ]
+    },
+    {
+      "fullName": "GetNodeCount",
+      "shortName": "GetNodeCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 15612,
+      "flags": 1
+    },
+    {
+      "fullName": "GetNodeRef",
+      "shortName": "GetNodeRef",
+      "return": {
+        "type": "NodeRef",
+        "flags": 64
+      },
+      "index": 15618,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "arg",
+          "flags": 0
+        }
+      ]
+    },
+    {
+      "fullName": "GetNodeRefCount",
+      "shortName": "GetNodeRefCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 15617,
+      "flags": 1
+    },
+    {
+      "fullName": "GetNodeRefs",
+      "shortName": "GetNodeRefs",
+      "return": {
+        "type": "array:NodeRef",
+        "flags": 64
+      },
+      "index": 15616,
+      "flags": 1
+    },
+    {
+      "fullName": "GetNodeSetup",
+      "shortName": "GetNodeSetup",
+      "return": {
+        "type": "handle:WorldNodeSetupWrapper",
+        "flags": 64
+      },
+      "index": 15615,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "arg",
+          "flags": 0
+        }
+      ]
+    },
+    {
+      "fullName": "GetNodeSetupCount",
+      "shortName": "GetNodeSetupCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 15614,
+      "flags": 1
+    },
+    {
+      "fullName": "GetNodes",
+      "shortName": "GetNodes",
+      "return": {
+        "type": "array:handle:worldNode",
+        "flags": 64
+      },
+      "index": 15611,
+      "flags": 1
+    }
+  ]
+}

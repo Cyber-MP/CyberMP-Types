@@ -1,0 +1,1007 @@
+{
+  "parent": "IScriptable",
+  "name": "gamedamageAttackData",
+  "flags": 2,
+  "props": [
+    {
+      "type": "gamedataAttackType",
+      "name": "attackType",
+      "flags": 6627016704
+    },
+    {
+      "type": "whandle:gameObject",
+      "name": "instigator",
+      "flags": 6627016704
+    },
+    {
+      "type": "whandle:gameObject",
+      "name": "source",
+      "flags": 6627016704
+    },
+    {
+      "type": "whandle:gameweaponObject",
+      "name": "weapon",
+      "flags": 6627016704
+    },
+    {
+      "type": "handle:gameIAttack",
+      "name": "attackDefinition",
+      "flags": 6627016704
+    },
+    {
+      "type": "Vector4",
+      "name": "attackPosition",
+      "flags": 6627016704
+    },
+    {
+      "type": "Float",
+      "name": "weaponCharge",
+      "flags": 6627016704
+    },
+    {
+      "type": "Int32",
+      "name": "numRicochetBounces",
+      "flags": 6627016704
+    },
+    {
+      "type": "Int32",
+      "name": "numAttackSpread",
+      "flags": 6627016704
+    },
+    {
+      "type": "Float",
+      "name": "attackTime",
+      "flags": 6627016704
+    },
+    {
+      "type": "gamedataTriggerMode",
+      "name": "triggerMode",
+      "flags": 6627016704
+    },
+    {
+      "type": "array:SHitFlag",
+      "name": "flags",
+      "flags": 6583025696
+    },
+    {
+      "type": "array:SHitStatusEffect",
+      "name": "statusEffects",
+      "flags": 6583025696
+    },
+    {
+      "type": "gameuiHitType",
+      "name": "hitType",
+      "flags": 4297130016
+    },
+    {
+      "type": "Float",
+      "name": "vehicleImpactForce",
+      "flags": 4297130016
+    },
+    {
+      "type": "Float",
+      "name": "minimumHealthPercent",
+      "flags": 4297130016
+    },
+    {
+      "type": "Float",
+      "name": "additionalCritChance",
+      "flags": 4297130016
+    },
+    {
+      "type": "Float",
+      "name": "randRoll",
+      "flags": 4297130016
+    },
+    {
+      "type": "Int32",
+      "name": "hitReactionMin",
+      "flags": 4297130016
+    },
+    {
+      "type": "Int32",
+      "name": "hitReactionMax",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "gamedamageAttackData::CanEffectCriticallyHit;AttackDataStatsSystem",
+      "shortName": "CanEffectCriticallyHit",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gamedamageAttackData",
+          "name": "attackData",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameStatsSystem",
+          "name": "statsSystem",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gamedamageAttackData::CanGrenadeCriticallyHit;AttackDataStatsSystem",
+      "shortName": "CanGrenadeCriticallyHit",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gamedamageAttackData",
+          "name": "attackData",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameStatsSystem",
+          "name": "statsSystem",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gamedamageAttackData::HasFlag;script_ref<array<SHitFlag>>hitFlag",
+      "shortName": "HasFlag",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "script_ref:array:SHitFlag",
+          "name": "flags",
+          "flags": 128
+        },
+        {
+          "type": "hitFlag",
+          "name": "flag",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gamedamageAttackData::IsAreaOfEffect;gamedataAttackType",
+      "shortName": "IsAreaOfEffect",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gamedataAttackType",
+          "name": "attackType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gamedamageAttackData::IsDismembermentCause;gamedataAttackType",
+      "shortName": "IsDismembermentCause",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gamedataAttackType",
+          "name": "attackType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gamedamageAttackData::IsDoT;AttackData",
+      "shortName": "IsDoT",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gamedamageAttackData",
+          "name": "attackData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gamedamageAttackData::IsDoT;gamedataAttackType",
+      "shortName": "IsDoT",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gamedataAttackType",
+          "name": "attackType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gamedamageAttackData::IsEffect;gamedataAttackType",
+      "shortName": "IsEffect",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gamedataAttackType",
+          "name": "attackType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gamedamageAttackData::IsExplosion;gamedataAttackType",
+      "shortName": "IsExplosion",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gamedataAttackType",
+          "name": "attackType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gamedamageAttackData::IsHack;gamedataAttackType",
+      "shortName": "IsHack",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gamedataAttackType",
+          "name": "attackType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gamedamageAttackData::IsLightMelee;gamedataAttackType",
+      "shortName": "IsLightMelee",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gamedataAttackType",
+          "name": "attackType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gamedamageAttackData::IsMelee;gamedataAttackType",
+      "shortName": "IsMelee",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gamedataAttackType",
+          "name": "attackType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gamedamageAttackData::IsPlayerInCombat;AttackData",
+      "shortName": "IsPlayerInCombat",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gamedamageAttackData",
+          "name": "attackData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gamedamageAttackData::IsPressureWave;gamedataAttackType",
+      "shortName": "IsPressureWave",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gamedataAttackType",
+          "name": "attackType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gamedamageAttackData::IsQuickMelee;gamedataAttackType",
+      "shortName": "IsQuickMelee",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gamedataAttackType",
+          "name": "attackType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gamedamageAttackData::IsRangedOnly;gamedataAttackType",
+      "shortName": "IsRangedOnly",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gamedataAttackType",
+          "name": "attackType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gamedamageAttackData::IsRangedOrDirect;gamedataAttackType",
+      "shortName": "IsRangedOrDirect",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gamedataAttackType",
+          "name": "attackType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gamedamageAttackData::IsRangedOrDirectOrThrown;gamedataAttackType",
+      "shortName": "IsRangedOrDirectOrThrown",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gamedataAttackType",
+          "name": "attackType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gamedamageAttackData::IsReflect;gamedataAttackType",
+      "shortName": "IsReflect",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gamedataAttackType",
+          "name": "attackType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gamedamageAttackData::IsStrongMelee;gamedataAttackType",
+      "shortName": "IsStrongMelee",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gamedataAttackType",
+          "name": "attackType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gamedamageAttackData::IsThrown;gamedataAttackType",
+      "shortName": "IsThrown",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gamedataAttackType",
+          "name": "attackType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "gamedamageAttackData::IsWhip;gamedataAttackType",
+      "shortName": "IsWhip",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gamedataAttackType",
+          "name": "attackType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AddFlag;hitFlagCName",
+      "shortName": "AddFlag",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "hitFlag",
+          "name": "flag",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "sourceName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AddStatusEffect;TweakDBIDFloat",
+      "shortName": "AddStatusEffect",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "TweakDBID",
+          "name": "effect",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "stacks",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ClearDamage;",
+      "shortName": "ClearDamage",
+      "flags": 33284
+    },
+    {
+      "fullName": "DoesAttackWeaponHaveTag;CName",
+      "shortName": "DoesAttackWeaponHaveTag",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "CName",
+          "name": "tag",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetAdditionalCritChance;",
+      "shortName": "GetAdditionalCritChance",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetAttackDefinition;",
+      "shortName": "GetAttackDefinition",
+      "return": {
+        "type": "handle:gameIAttack",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetAttackPosition;",
+      "shortName": "GetAttackPosition",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetAttackSubtype;",
+      "shortName": "GetAttackSubtype",
+      "return": {
+        "type": "gamedataAttackSubtype",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetAttackTime;",
+      "shortName": "GetAttackTime",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetAttackType;",
+      "shortName": "GetAttackType",
+      "return": {
+        "type": "gamedataAttackType",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetFlags;",
+      "shortName": "GetFlags",
+      "return": {
+        "type": "array:SHitFlag",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetHitReactionSeverityMax;",
+      "shortName": "GetHitReactionSeverityMax",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetHitReactionSeverityMin;",
+      "shortName": "GetHitReactionSeverityMin",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetHitType;",
+      "shortName": "GetHitType",
+      "return": {
+        "type": "gameuiHitType",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetInstigator;",
+      "shortName": "GetInstigator",
+      "return": {
+        "type": "whandle:gameObject",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetMinimumHealthPercent;",
+      "shortName": "GetMinimumHealthPercent",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetNumAttackSpread;",
+      "shortName": "GetNumAttackSpread",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetNumRicochetBounces;",
+      "shortName": "GetNumRicochetBounces",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetRandRoll;",
+      "shortName": "GetRandRoll",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetSource;",
+      "shortName": "GetSource",
+      "return": {
+        "type": "whandle:gameObject",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetStatusEffects;",
+      "shortName": "GetStatusEffects",
+      "return": {
+        "type": "array:SHitStatusEffect",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetTriggerMode;",
+      "shortName": "GetTriggerMode",
+      "return": {
+        "type": "gamedataTriggerMode",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetVehicleImpactForce;",
+      "shortName": "GetVehicleImpactForce",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetWeapon;",
+      "shortName": "GetWeapon",
+      "return": {
+        "type": "whandle:gameweaponObject",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetWeaponCharge;",
+      "shortName": "GetWeaponCharge",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "HasFlag;hitFlag",
+      "shortName": "HasFlag",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476,
+      "params": [
+        {
+          "type": "hitFlag",
+          "name": "flag",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PreAttack;",
+      "shortName": "PreAttack",
+      "flags": 33284
+    },
+    {
+      "fullName": "RemoveFlag;hitFlagCName",
+      "shortName": "RemoveFlag",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "hitFlag",
+          "name": "flag",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "sourceName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RemoveFlag;hitFlag",
+      "shortName": "RemoveFlag",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "hitFlag",
+          "name": "flag",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetAdditionalCritChance;Float",
+      "shortName": "SetAdditionalCritChance",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Float",
+          "name": "f",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetAttackDefinition;IAttack",
+      "shortName": "SetAttackDefinition",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:gameIAttack",
+          "name": "a",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetAttackPosition;Vector4",
+      "shortName": "SetAttackPosition",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Vector4",
+          "name": "position",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetAttackTime;Float",
+      "shortName": "SetAttackTime",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Float",
+          "name": "time",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetAttackType;gamedataAttackType",
+      "shortName": "SetAttackType",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "gamedataAttackType",
+          "name": "attackTypeOverride",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetHitReactionSeverityMax;Int32",
+      "shortName": "SetHitReactionSeverityMax",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "i",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetHitReactionSeverityMin;Int32",
+      "shortName": "SetHitReactionSeverityMin",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "i",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetHitType;gameuiHitType",
+      "shortName": "SetHitType",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "gameuiHitType",
+          "name": "h",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetInstigator;GameObject",
+      "shortName": "SetInstigator",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "i",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetMinimumHealthPercent;Float",
+      "shortName": "SetMinimumHealthPercent",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Float",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetRandRoll;Float",
+      "shortName": "SetRandRoll",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Float",
+          "name": "roll",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetSource;GameObject",
+      "shortName": "SetSource",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "s",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetTriggerMode;gamedataTriggerMode",
+      "shortName": "SetTriggerMode",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "gamedataTriggerMode",
+          "name": "mode",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetVehicleImpactForce;Float",
+      "shortName": "SetVehicleImpactForce",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Float",
+          "name": "force",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetWeapon;WeaponObject",
+      "shortName": "SetWeapon",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "whandle:gameweaponObject",
+          "name": "w",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetWeaponCharge;Float",
+      "shortName": "SetWeaponCharge",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Float",
+          "name": "charge",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "WasBlocked;",
+      "shortName": "WasBlocked",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "WasBulletBlocked;",
+      "shortName": "WasBulletBlocked",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "WasBulletDeflected;",
+      "shortName": "WasBulletDeflected",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "WasDeflected;",
+      "shortName": "WasDeflected",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "WasDeflectedAny;",
+      "shortName": "WasDeflectedAny",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284
+    }
+  ]
+}

@@ -1,0 +1,286 @@
+{
+  "parent": "gameTimeDilatable",
+  "name": "gameItemObject",
+  "flags": 2,
+  "props": [
+    {
+      "type": "UpdateBucketEnum",
+      "name": "updateBucket",
+      "flags": 6694125569
+    },
+    {
+      "type": "gamedataQuality",
+      "name": "lootQuality",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isIconic",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isBroken",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "GetAnimationParameters",
+      "shortName": "GetAnimationParameters",
+      "return": {
+        "type": "array:CName",
+        "flags": 64
+      },
+      "index": 13192,
+      "flags": 1
+    },
+    {
+      "fullName": "GetConnectedItemDrop",
+      "shortName": "GetConnectedItemDrop",
+      "return": {
+        "type": "whandle:gameItemDropObject",
+        "flags": 64
+      },
+      "index": 13195,
+      "flags": 8193
+    },
+    {
+      "fullName": "GetItemData",
+      "shortName": "GetItemData",
+      "return": {
+        "type": "whandle:gameItemData",
+        "flags": 64
+      },
+      "index": 13190,
+      "flags": 8193
+    },
+    {
+      "fullName": "GetItemID",
+      "shortName": "GetItemID",
+      "return": {
+        "type": "gameItemID",
+        "flags": 64
+      },
+      "index": 13189,
+      "flags": 1
+    },
+    {
+      "fullName": "IsClientSideOnlyGadget",
+      "shortName": "IsClientSideOnlyGadget",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13193,
+      "flags": 1
+    },
+    {
+      "fullName": "IsConnectedWithDrop",
+      "shortName": "IsConnectedWithDrop",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13194,
+      "flags": 8193
+    },
+    {
+      "fullName": "IsVisualSpawnAttached",
+      "shortName": "IsVisualSpawnAttached",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13196,
+      "flags": 8193
+    },
+    {
+      "fullName": "QueueEventToChildItems",
+      "shortName": "QueueEventToChildItems",
+      "index": 13191,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:redEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnEvaluateLootQuality",
+      "shortName": "OnEvaluateLootQuality",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameeventsEvaluateLootQualityEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnGameAttached",
+      "shortName": "OnGameAttached",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnItemLooted",
+      "shortName": "OnItemLooted",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:ItemLootedEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnVisualSpawnAttached",
+      "shortName": "OnVisualSpawnAttached",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "DeterminGameplayRole;",
+      "shortName": "DeterminGameplayRole",
+      "return": {
+        "type": "EGameplayRole",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "EvaluateLootQuality;",
+      "shortName": "EvaluateLootQuality",
+      "flags": 32900
+    },
+    {
+      "fullName": "EvaluateLootQualityByTask;",
+      "shortName": "EvaluateLootQualityByTask",
+      "flags": 33024
+    },
+    {
+      "fullName": "EvaluateLootQualityTask;ScriptTaskData",
+      "shortName": "EvaluateLootQualityTask",
+      "flags": 34052,
+      "params": [
+        {
+          "type": "handle:gameScriptTaskData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetCurrentOutline;",
+      "shortName": "GetCurrentOutline",
+      "return": {
+        "type": "EFocusOutlineType",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "GetDefaultHighlight;",
+      "shortName": "GetDefaultHighlight",
+      "return": {
+        "type": "handle:FocusForcedHighlightData",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "GetIsBroken;",
+      "shortName": "GetIsBroken",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "GetIsIconic;",
+      "shortName": "GetIsIconic",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "GetLootQuality;",
+      "shortName": "GetLootQuality",
+      "return": {
+        "type": "gamedataQuality",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "HasValidLootQuality;",
+      "shortName": "HasValidLootQuality",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41220
+    },
+    {
+      "fullName": "IsContainer;",
+      "shortName": "IsContainer",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "IsQuest;",
+      "shortName": "IsQuest",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "ShouldRegisterToHUD;",
+      "shortName": "ShouldRegisterToHUD",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41216
+    },
+    {
+      "fullName": "ToggleLootHighlight;Bool",
+      "shortName": "ToggleLootHighlight",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "enable",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

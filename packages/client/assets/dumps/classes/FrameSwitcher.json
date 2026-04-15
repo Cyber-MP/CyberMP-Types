@@ -1,0 +1,49 @@
+{
+  "parent": "ActionBool",
+  "name": "FrameSwitcher",
+  "flags": 4,
+  "funcs": [
+    {
+      "fullName": "FrameSwitcher::GetPlayerStateMachine;GameObject",
+      "shortName": "GetPlayerStateMachine",
+      "return": {
+        "type": "handle:gameIBlackboard",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "requester",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "FrameSwitcher::IsPlayerInAcceptableState;ScriptableDeviceComponentPSscript_ref<GetActionsContext>",
+      "shortName": "IsPlayerInAcceptableState",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:ScriptableDeviceComponentPS",
+          "name": "device",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:gameGetActionsContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetProperties;",
+      "shortName": "SetProperties",
+      "flags": 33284
+    }
+  ]
+}

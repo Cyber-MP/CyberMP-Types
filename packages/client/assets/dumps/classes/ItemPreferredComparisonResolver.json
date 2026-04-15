@@ -1,0 +1,310 @@
+{
+  "parent": "IScriptable",
+  "name": "ItemPreferredComparisonResolver",
+  "flags": 4,
+  "props": [
+    {
+      "type": "array:handle:ItemPreferredAreaItems",
+      "name": "cacheadAreaItems",
+      "flags": 6583025696
+    },
+    {
+      "type": "array:handle:ItemComparableTypesCache",
+      "name": "cachedComparableTypes",
+      "flags": 6583025696
+    },
+    {
+      "type": "array:handle:TypeComparableItemsCache",
+      "name": "typeComparableItemsCache",
+      "flags": 6583025696
+    },
+    {
+      "type": "handle:InventoryDataManagerV2",
+      "name": "dataManager",
+      "flags": 4431347744
+    },
+    {
+      "type": "gameInventoryItemData",
+      "name": "forcedCompareItem",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "useForceCompare",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "ItemPreferredComparisonResolver::Make;InventoryDataManagerV2",
+      "shortName": "Make",
+      "return": {
+        "type": "handle:ItemPreferredComparisonResolver",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:InventoryDataManagerV2",
+          "name": "inventoryDataManager",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CacheComparableType;script_ref<InventoryItemData>",
+      "shortName": "CacheComparableType",
+      "return": {
+        "type": "handle:ItemComparableTypesCache",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:gameInventoryItemData",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CompareItemsByQuality;script_ref<InventoryItemData>script_ref<InventoryItemData>",
+      "shortName": "CompareItemsByQuality",
+      "return": {
+        "type": "gameItemComparisonState",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "script_ref:gameInventoryItemData",
+          "name": "lhs",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:gameInventoryItemData",
+          "name": "rhs",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CompareItemsByStats;script_ref<InventoryItemData>script_ref<InventoryItemData>",
+      "shortName": "CompareItemsByStats",
+      "return": {
+        "type": "gameItemComparisonState",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "script_ref:gameInventoryItemData",
+          "name": "lhs",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:gameInventoryItemData",
+          "name": "rhs",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "DisableForceComparedItem;",
+      "shortName": "DisableForceComparedItem",
+      "flags": 33284
+    },
+    {
+      "fullName": "FlushCache;",
+      "shortName": "FlushCache",
+      "flags": 33284
+    },
+    {
+      "fullName": "ForceComparedItem;script_ref<InventoryItemData>",
+      "shortName": "ForceComparedItem",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "script_ref:gameInventoryItemData",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ForceDisableComparison;",
+      "shortName": "ForceDisableComparison",
+      "flags": 33284
+    },
+    {
+      "fullName": "GetAreaItems;gamedataEquipmentArea",
+      "shortName": "GetAreaItems",
+      "return": {
+        "type": "handle:ItemPreferredAreaItems",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "gamedataEquipmentArea",
+          "name": "equipmentArea",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetComparableItems;script_ref<InventoryItemData>",
+      "shortName": "GetComparableItems",
+      "return": {
+        "type": "array:gameInventoryItemData",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "script_ref:gameInventoryItemData",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetComparableTypes;script_ref<InventoryItemData>",
+      "shortName": "GetComparableTypes",
+      "return": {
+        "type": "handle:ItemComparableTypesCache",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:gameInventoryItemData",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetItemComparisonState;script_ref<InventoryItemData>",
+      "shortName": "GetItemComparisonState",
+      "return": {
+        "type": "gameItemComparisonState",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "script_ref:gameInventoryItemData",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetPreferredComparisonItem;script_ref<InventoryItemData>",
+      "shortName": "GetPreferredComparisonItem",
+      "return": {
+        "type": "gameInventoryItemData",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "script_ref:gameInventoryItemData",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetTypeComparableItems;script_ref<InventoryItemData>",
+      "shortName": "GetTypeComparableItems",
+      "return": {
+        "type": "handle:TypeComparableItemsCache",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:gameInventoryItemData",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsAreaSelfComparable;script_ref<InventoryItemData>",
+      "shortName": "IsAreaSelfComparable",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:gameInventoryItemData",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsBetterComparableNewItem;UIScriptableSystemscript_ref<InventoryItemData>",
+      "shortName": "IsBetterComparableNewItem",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "whandle:UIScriptableSystem",
+          "name": "uiScriptableSystem",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:gameInventoryItemData",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsComparable;script_ref<InventoryItemData>",
+      "shortName": "IsComparable",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "script_ref:gameInventoryItemData",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsTypeComparable;script_ref<InventoryItemData>gamedataItemType",
+      "shortName": "IsTypeComparable",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "script_ref:gameInventoryItemData",
+          "name": "baseItem",
+          "flags": 128
+        },
+        {
+          "type": "gamedataItemType",
+          "name": "comparedType",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

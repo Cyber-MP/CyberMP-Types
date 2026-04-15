@@ -1,0 +1,251 @@
+{
+  "parent": "LocomotionTransition",
+  "name": "LocomotionEventsTransition",
+  "flags": 5,
+  "props": [
+    {
+      "type": "Bool",
+      "name": "causeContactDestruction",
+      "flags": 4297326624
+    },
+    {
+      "type": "Bool",
+      "name": "activatedDestructionComponent",
+      "flags": 4297326624
+    },
+    {
+      "type": "Bool",
+      "name": "ignoreBarbedWire",
+      "flags": 4297326624
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "CleanupTriggerDestructionComponent;StateGameScriptInterface",
+      "shortName": "CleanupTriggerDestructionComponent",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ConsumeStaminaBasedOnLocomotionState;StateContextStateGameScriptInterface",
+      "shortName": "ConsumeStaminaBasedOnLocomotionState",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnAttach;StateContextStateGameScriptInterface",
+      "shortName": "OnAttach",
+      "flags": 34048,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnEnter;StateContextStateGameScriptInterface",
+      "shortName": "OnEnter",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnExit;StateContextStateGameScriptInterface",
+      "shortName": "OnExit",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnForcedExit;StateContextStateGameScriptInterface",
+      "shortName": "OnForcedExit",
+      "flags": 34304,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUpdate;FloatStateContextStateGameScriptInterface",
+      "shortName": "OnUpdate",
+      "flags": 34304,
+      "params": [
+        {
+          "type": "Float",
+          "name": "timeDelta",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RemoveOpticalCamoEffect;StateContextStateGameScriptInterfaceInt32Float",
+      "shortName": "RemoveOpticalCamoEffect",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "currentState",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "timeInState",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "ResetGravityParametersForChargedJump;StateContextStateGameScriptInterface",
+      "shortName": "ResetGravityParametersForChargedJump",
+      "flags": 41092,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateInputToggles;StateContextStateGameScriptInterfaceFloatBoolBoolBool",
+      "shortName": "UpdateInputToggles",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "minTimeBeforeCrouch",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "dontToggleCrouchOffOnSprint",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "toggledSprint",
+          "flags": 640
+        },
+        {
+          "type": "Bool",
+          "name": "toggledCrouch",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateInputToggles;StateContextStateGameScriptInterfaceFloatBool",
+      "shortName": "UpdateInputToggles",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "minTimeBeforeCrouch",
+          "flags": 1152
+        },
+        {
+          "type": "Bool",
+          "name": "dontToggleCrouchOffOnSprint",
+          "flags": 1152
+        }
+      ]
+    }
+  ]
+}

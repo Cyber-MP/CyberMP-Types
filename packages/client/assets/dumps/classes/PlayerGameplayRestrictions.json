@@ -1,0 +1,238 @@
+{
+  "parent": "IScriptable",
+  "name": "PlayerGameplayRestrictions",
+  "flags": 4,
+  "funcs": [
+    {
+      "fullName": "PlayerGameplayRestrictions::AcquireHotkeyRestrictionTags;EHotkeyscript_ref<array<CName>>",
+      "shortName": "AcquireHotkeyRestrictionTags",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gameEHotkey",
+          "name": "hotkey",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:array:CName",
+          "name": "hotkeyTags",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PlayerGameplayRestrictions::ChangeFastTravelSystemState;BoolCNamePlayerPuppetTweakDBID",
+      "shortName": "ChangeFastTravelSystemState",
+      "flags": 32902,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "enable",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "reason",
+          "flags": 128
+        },
+        {
+          "type": "whandle:PlayerPuppet",
+          "name": "player",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "statusEffectID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PlayerGameplayRestrictions::GetMenuEventName;BoolEMenuType",
+      "shortName": "GetMenuEventName",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "blockMenu",
+          "flags": 128
+        },
+        {
+          "type": "EMenuType",
+          "name": "menuType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PlayerGameplayRestrictions::IsHotkeyRestricted;GameInstanceEHotkey",
+      "shortName": "IsHotkeyRestricted",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "game",
+          "flags": 128
+        },
+        {
+          "type": "gameEHotkey",
+          "name": "hotkey",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PlayerGameplayRestrictions::OnGameplayRestrictionAdded;PlayerPuppetStatusEffect_Recordscript_ref<array<CName>>",
+      "shortName": "OnGameplayRestrictionAdded",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:PlayerPuppet",
+          "name": "player",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamedataStatusEffect_Record",
+          "name": "record",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:array:CName",
+          "name": "gameplayTags",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PlayerGameplayRestrictions::OnGameplayRestrictionRemoved;PlayerPuppetRemoveStatusEffectscript_ref<array<CName>>",
+      "shortName": "OnGameplayRestrictionRemoved",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:PlayerPuppet",
+          "name": "player",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameeventsRemoveStatusEffect",
+          "name": "evt",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:array:CName",
+          "name": "gameplayTags",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PlayerGameplayRestrictions::PushForceRefreshInputHintsEventToPSM;GameObject",
+      "shortName": "PushForceRefreshInputHintsEventToPSM",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "requester",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PlayerGameplayRestrictions::RemoveAllGameplayRestrictions;GameObject",
+      "shortName": "RemoveAllGameplayRestrictions",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "target",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PlayerGameplayRestrictions::RequestFists;PlayerPuppetgameEquipAnimationType",
+      "shortName": "RequestFists",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:PlayerPuppet",
+          "name": "player",
+          "flags": 128
+        },
+        {
+          "type": "gameEquipAnimationType",
+          "name": "animType",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "PlayerGameplayRestrictions::RequestLastUsedWeapon;PlayerPuppetgameEquipAnimationType",
+      "shortName": "RequestLastUsedWeapon",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:PlayerPuppet",
+          "name": "player",
+          "flags": 128
+        },
+        {
+          "type": "gameEquipAnimationType",
+          "name": "animType",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "PlayerGameplayRestrictions::RequestMeleeWeapon;PlayerPuppetgameEquipAnimationType",
+      "shortName": "RequestMeleeWeapon",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:PlayerPuppet",
+          "name": "player",
+          "flags": 128
+        },
+        {
+          "type": "gameEquipAnimationType",
+          "name": "animType",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "PlayerGameplayRestrictions::SendBlockMenuRequest;PlayerPuppetBoolEMenuType",
+      "shortName": "SendBlockMenuRequest",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:PlayerPuppet",
+          "name": "player",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "blockMenu",
+          "flags": 128
+        },
+        {
+          "type": "EMenuType",
+          "name": "menuType",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

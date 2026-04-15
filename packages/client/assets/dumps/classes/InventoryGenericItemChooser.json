@@ -1,0 +1,477 @@
+{
+  "parent": "inkWidgetLogicController",
+  "name": "InventoryGenericItemChooser",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "itemContainer",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "slotsCategory",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "slotsRootContainer",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "slotsRootLabel",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "slotsContainer",
+      "flags": 4297195553
+    },
+    {
+      "type": "whandle:PlayerPuppet",
+      "name": "player",
+      "flags": 4297195552
+    },
+    {
+      "type": "handle:InventoryDataManagerV2",
+      "name": "inventoryDataManager",
+      "flags": 4431413280
+    },
+    {
+      "type": "whandle:UIScriptableSystem",
+      "name": "uiScriptableSystem",
+      "flags": 4297195552
+    },
+    {
+      "type": "gamedataEquipmentArea",
+      "name": "equipmentArea",
+      "flags": 4297195552
+    },
+    {
+      "type": "whandle:InventoryItemDisplayController",
+      "name": "itemDisplay",
+      "flags": 4297195552
+    },
+    {
+      "type": "Int32",
+      "name": "slotIndex",
+      "flags": 4297195552
+    },
+    {
+      "type": "whandle:InventoryItemDisplayController",
+      "name": "selectedItem",
+      "flags": 4297195552
+    },
+    {
+      "type": "whandle:gameuiTooltipsManager",
+      "name": "tooltipsManager",
+      "flags": 4297195552
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "transmogCtrlsContainer",
+      "flags": 4297130017
+    },
+    {
+      "type": "whandle:TransmogButtonView",
+      "name": "transmogIndicatorCtrl",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:inkWidget",
+      "name": "transmogIndicator",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnInventoryItemHoverOut",
+      "shortName": "OnInventoryItemHoverOut",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInventoryItemHoverOver",
+      "shortName": "OnInventoryItemHoverOver",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnItemInventoryClick",
+      "shortName": "OnItemInventoryClick",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Bind;PlayerPuppetInventoryDataManagerV2gamedataEquipmentAreaInt32gameuiTooltipsManagerBool",
+      "shortName": "Bind",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "whandle:PlayerPuppet",
+          "name": "playerArg",
+          "flags": 128
+        },
+        {
+          "type": "handle:InventoryDataManagerV2",
+          "name": "inventoryDataManagerArg",
+          "flags": 128
+        },
+        {
+          "type": "gamedataEquipmentArea",
+          "name": "equipmentAreaArg",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "slotIndexArg",
+          "flags": 1152
+        },
+        {
+          "type": "whandle:gameuiTooltipsManager",
+          "name": "tooltipsManagerArg",
+          "flags": 1152
+        },
+        {
+          "type": "Bool",
+          "name": "showTransmogedIcon",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "BindUIScriptableSystem;UIScriptableSystem",
+      "shortName": "BindUIScriptableSystem",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "whandle:UIScriptableSystem",
+          "name": "scriptableSystem",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CanEquipVisuals;ItemID",
+      "shortName": "CanEquipVisuals",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "gameItemID",
+          "name": "targetItem",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ChangeSelectedItem;InventoryItemDisplayController",
+      "shortName": "ChangeSelectedItem",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "whandle:InventoryItemDisplayController",
+          "name": "controller",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "DetermineUIMenuNotificationType;",
+      "shortName": "DetermineUIMenuNotificationType",
+      "return": {
+        "type": "UIMenuNotificationType",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "ForceDisplayLabel;",
+      "shortName": "ForceDisplayLabel",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33024
+    },
+    {
+      "fullName": "GetDisplayToSpawn;",
+      "shortName": "GetDisplayToSpawn",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 33024
+    },
+    {
+      "fullName": "GetEquipmentArea;",
+      "shortName": "GetEquipmentArea",
+      "return": {
+        "type": "gamedataEquipmentArea",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "GetIntroAnimation;",
+      "shortName": "GetIntroAnimation",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 33024
+    },
+    {
+      "fullName": "GetInventoryItemDisplayControllerFromTarget;inkPointerEvent",
+      "shortName": "GetInventoryItemDisplayControllerFromTarget",
+      "return": {
+        "type": "whandle:InventoryItemDisplayController",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetModifiedItem;",
+      "shortName": "GetModifiedItem",
+      "return": {
+        "type": "whandle:InventoryItemDisplayController",
+        "flags": 64
+      },
+      "flags": 33280
+    },
+    {
+      "fullName": "GetModifiedItemData;",
+      "shortName": "GetModifiedItemData",
+      "return": {
+        "type": "gameInventoryItemData",
+        "flags": 64
+      },
+      "flags": 33280
+    },
+    {
+      "fullName": "GetModifiedItemID;",
+      "shortName": "GetModifiedItemID",
+      "return": {
+        "type": "gameItemID",
+        "flags": 64
+      },
+      "flags": 33280
+    },
+    {
+      "fullName": "GetSelectedItem;",
+      "shortName": "GetSelectedItem",
+      "return": {
+        "type": "whandle:InventoryItemDisplayController",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "GetSelectedSlotID;",
+      "shortName": "GetSelectedSlotID",
+      "return": {
+        "type": "TweakDBID",
+        "flags": 64
+      },
+      "flags": 33280
+    },
+    {
+      "fullName": "GetSlotDisplayToSpawn;",
+      "shortName": "GetSlotDisplayToSpawn",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 33024
+    },
+    {
+      "fullName": "GetSlotIndex;",
+      "shortName": "GetSlotIndex",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "GetSlots;",
+      "shortName": "GetSlots",
+      "return": {
+        "type": "array:handle:gameInventoryItemAttachments",
+        "flags": 64
+      },
+      "flags": 33024
+    },
+    {
+      "fullName": "HideTooltips;",
+      "shortName": "HideTooltips",
+      "flags": 32900
+    },
+    {
+      "fullName": "IsAttachmentItem;script_ref<InventoryItemData>",
+      "shortName": "IsAttachmentItem",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33280,
+      "params": [
+        {
+          "type": "script_ref:gameInventoryItemData",
+          "name": "itemData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RebuildSlots;",
+      "shortName": "RebuildSlots",
+      "flags": 33024
+    },
+    {
+      "fullName": "RefreshItems;BoolInt32Bool",
+      "shortName": "RefreshItems",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "overrideClothingSet",
+          "flags": 1152
+        },
+        {
+          "type": "Int32",
+          "name": "clothingSetIndex",
+          "flags": 1152
+        },
+        {
+          "type": "Bool",
+          "name": "showTransmogedIcon",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "RefreshMainItem;BoolInt32Bool",
+      "shortName": "RefreshMainItem",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "overrideClothingSet",
+          "flags": 1152
+        },
+        {
+          "type": "Int32",
+          "name": "clothingSetIndex",
+          "flags": 1152
+        },
+        {
+          "type": "Bool",
+          "name": "showTransmogedIcon",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "RefreshSelectedItem;",
+      "shortName": "RefreshSelectedItem",
+      "flags": 33280
+    },
+    {
+      "fullName": "RequestClose;",
+      "shortName": "RequestClose",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33280
+    },
+    {
+      "fullName": "SelectMainItem;",
+      "shortName": "SelectMainItem",
+      "flags": 33284
+    },
+    {
+      "fullName": "ShowNotification;GameInstanceUIMenuNotificationType",
+      "shortName": "ShowNotification",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "gameInstance",
+          "flags": 128
+        },
+        {
+          "type": "UIMenuNotificationType",
+          "name": "type",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UnequipItem;InventoryItemDisplayController",
+      "shortName": "UnequipItem",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "whandle:InventoryItemDisplayController",
+          "name": "controller",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UnequipItemMods;InventoryItemDisplayController",
+      "shortName": "UnequipItemMods",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "whandle:InventoryItemDisplayController",
+          "name": "controller",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "parent": "ScannerChunk",
+  "name": "ScannerResistances",
+  "flags": 4,
+  "props": [
+    {
+      "type": "array:ScannerStatDetails",
+      "name": "resists",
+      "flags": 6583222304
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "GetResistances;",
+      "shortName": "GetResistances",
+      "return": {
+        "type": "array:ScannerStatDetails",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetType;",
+      "shortName": "GetType",
+      "return": {
+        "type": "ScannerDataType",
+        "flags": 64
+      },
+      "flags": 33280
+    },
+    {
+      "fullName": "Set;script_ref<array<ScannerStatDetails>>",
+      "shortName": "Set",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "script_ref:array:ScannerStatDetails",
+          "name": "r",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

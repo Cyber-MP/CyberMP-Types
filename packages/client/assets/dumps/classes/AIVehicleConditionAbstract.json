@@ -1,0 +1,44 @@
+{
+  "parent": "AIbehaviorconditionScript",
+  "name": "AIVehicleConditionAbstract",
+  "flags": 5,
+  "funcs": [
+    {
+      "fullName": "GetMountedVehicleAIComponent;ScriptExecutionContext",
+      "shortName": "GetMountedVehicleAIComponent",
+      "return": {
+        "type": "handle:AIVehicleAgent",
+        "flags": 64
+      },
+      "flags": 33028,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsVehicleOccupiedByHostile;ScriptExecutionContextEntityID",
+      "shortName": "IsVehicleOccupiedByHostile",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33028,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "entEntityID",
+          "name": "vehicleID",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

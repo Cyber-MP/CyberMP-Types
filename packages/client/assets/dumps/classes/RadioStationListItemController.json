@@ -1,0 +1,131 @@
+{
+  "parent": "inkVirtualCompoundItemController",
+  "name": "RadioStationListItemController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkTextWidgetReference",
+      "name": "label",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "typeIcon",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkHorizontalPanelWidgetReference",
+      "name": "equilizerIcon",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "codeTLicon",
+      "flags": 4297130017
+    },
+    {
+      "type": "handle:RadioListItemData",
+      "name": "stationData",
+      "flags": 4431347744
+    },
+    {
+      "type": "Int32",
+      "name": "currentRadioStationId",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnDataChanged",
+      "shortName": "OnDataChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Variant",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnDeselected",
+      "shortName": "OnDeselected",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "whandle:inkVirtualCompoundItemController",
+          "name": "itemController",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnRadioStationChangedEvent",
+      "shortName": "OnRadioStationChangedEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:RadioStationChangedEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSelected",
+      "shortName": "OnSelected",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "whandle:inkVirtualCompoundItemController",
+          "name": "itemController",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "discreteNav",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetStationData;",
+      "shortName": "GetStationData",
+      "return": {
+        "type": "handle:RadioListItemData",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "UpdateEquializer;",
+      "shortName": "UpdateEquializer",
+      "flags": 32900
+    }
+  ]
+}

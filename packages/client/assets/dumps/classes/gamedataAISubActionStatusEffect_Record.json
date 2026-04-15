@@ -1,0 +1,151 @@
+{
+  "parent": "gamedataAISubAction_Record",
+  "name": "gamedataAISubActionStatusEffect_Record",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "Apply",
+      "shortName": "Apply",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 3399,
+      "flags": 1
+    },
+    {
+      "fullName": "Condition",
+      "shortName": "Condition",
+      "return": {
+        "type": "whandle:gamedataAIActionCondition_Record",
+        "flags": 64
+      },
+      "index": 3389,
+      "flags": 1
+    },
+    {
+      "fullName": "ConditionHandle",
+      "shortName": "ConditionHandle",
+      "return": {
+        "type": "handle:gamedataAIActionCondition_Record",
+        "flags": 64
+      },
+      "index": 3390,
+      "flags": 1
+    },
+    {
+      "fullName": "Delay",
+      "shortName": "Delay",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 3398,
+      "flags": 1
+    },
+    {
+      "fullName": "GetStatusEffectsCount",
+      "shortName": "GetStatusEffectsCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 3394,
+      "flags": 1
+    },
+    {
+      "fullName": "GetStatusEffectsItem",
+      "shortName": "GetStatusEffectsItem",
+      "return": {
+        "type": "whandle:gamedataStatusEffect_Record",
+        "flags": 64
+      },
+      "index": 3395,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetStatusEffectsItemHandle",
+      "shortName": "GetStatusEffectsItemHandle",
+      "return": {
+        "type": "handle:gamedataStatusEffect_Record",
+        "flags": 64
+      },
+      "index": 3396,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Remove",
+      "shortName": "Remove",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 3400,
+      "flags": 1
+    },
+    {
+      "fullName": "StatusEffects",
+      "shortName": "StatusEffects",
+      "index": 3393,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataStatusEffect_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "StatusEffectsContains",
+      "shortName": "StatusEffectsContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 3397,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataStatusEffect_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Target",
+      "shortName": "Target",
+      "return": {
+        "type": "whandle:gamedataAIActionTarget_Record",
+        "flags": 64
+      },
+      "index": 3391,
+      "flags": 1
+    },
+    {
+      "fullName": "TargetHandle",
+      "shortName": "TargetHandle",
+      "return": {
+        "type": "handle:gamedataAIActionTarget_Record",
+        "flags": 64
+      },
+      "index": 3392,
+      "flags": 1
+    }
+  ]
+}

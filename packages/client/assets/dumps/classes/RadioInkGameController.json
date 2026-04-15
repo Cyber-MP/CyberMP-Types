@@ -1,0 +1,57 @@
+{
+  "parent": "DeviceInkGameControllerBase",
+  "name": "RadioInkGameController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkTextWidgetReference",
+      "name": "stationNameWidget",
+      "group": "Widget Refs",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "stationLogoWidget",
+      "group": "Widget Refs",
+      "flags": 4297195553
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "GetOwner;",
+      "shortName": "GetOwner",
+      "return": {
+        "type": "handle:Radio",
+        "flags": 64
+      },
+      "flags": 33024
+    },
+    {
+      "fullName": "Refresh;EDeviceStatus",
+      "shortName": "Refresh",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "EDeviceStatus",
+          "name": "state",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetupStationLogo;",
+      "shortName": "SetupStationLogo",
+      "flags": 32900
+    },
+    {
+      "fullName": "TurnOff;",
+      "shortName": "TurnOff",
+      "flags": 32900
+    },
+    {
+      "fullName": "TurnOn;",
+      "shortName": "TurnOn",
+      "flags": 32900
+    }
+  ]
+}

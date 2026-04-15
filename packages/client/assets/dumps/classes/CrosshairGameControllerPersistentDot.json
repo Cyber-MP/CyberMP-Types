@@ -1,0 +1,123 @@
+{
+  "parent": "gameuiHUDGameController",
+  "name": "CrosshairGameControllerPersistentDot",
+  "flags": 4,
+  "props": [
+    {
+      "type": "handle:userSettingsUserSettings",
+      "name": "settings",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:PersistentDotSettingsListener",
+      "name": "settingsListener",
+      "flags": 4431347744
+    },
+    {
+      "type": "CName",
+      "name": "groupPath",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isAiming",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "psmUpperBodyStateCallback",
+      "flags": 4431347744
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnPSMUpperBodyStateChanged",
+      "shortName": "OnPSMUpperBodyStateChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPlayerAttach",
+      "shortName": "OnPlayerAttach",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "player",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPlayerDetach",
+      "shortName": "OnPlayerDetach",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "player",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnVarModified;CNameCNameConfigVarTypeConfigChangeReason",
+      "shortName": "OnVarModified",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "CName",
+          "name": "groupPath",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "varName",
+          "flags": 128
+        },
+        {
+          "type": "InGameConfigVarType",
+          "name": "varType",
+          "flags": 128
+        },
+        {
+          "type": "InGameConfigChangeReason",
+          "name": "reason",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateRootVisibility;",
+      "shortName": "UpdateRootVisibility",
+      "flags": 32900
+    }
+  ]
+}

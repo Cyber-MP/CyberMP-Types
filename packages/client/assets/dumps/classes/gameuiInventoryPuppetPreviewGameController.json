@@ -1,0 +1,138 @@
+{
+  "parent": "gameuiPuppetPreviewGameController",
+  "name": "gameuiInventoryPuppetPreviewGameController",
+  "flags": 2,
+  "props": [
+    {
+      "type": "CName",
+      "name": "sceneName",
+      "flags": 6627016705
+    },
+    {
+      "type": "NodeRef",
+      "name": "cameraRef",
+      "flags": 6627016705
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "collider",
+      "flags": 4297130017
+    },
+    {
+      "type": "Bool",
+      "name": "rotationIsMouseDown",
+      "flags": 4297130016
+    },
+    {
+      "type": "Float",
+      "name": "maxMousePointerOffset",
+      "flags": 4297195552
+    },
+    {
+      "type": "Float",
+      "name": "mouseRotationSpeed",
+      "flags": 4297195552
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnGlobalRelease",
+      "shortName": "OnGlobalRelease",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnMouseDown",
+      "shortName": "OnMouseDown",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRelativeInput",
+      "shortName": "OnRelativeInput",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSetCameraSetupEvent",
+      "shortName": "OnSetCameraSetupEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Uint32",
+          "name": "index",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "slotName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "GetAnimFeature;AnimFeature_Paperdoll",
+      "shortName": "GetAnimFeature",
+      "flags": 32896,
+      "params": [
+        {
+          "type": "handle:AnimFeature_Paperdoll",
+          "name": "animFeature",
+          "flags": 640
+        }
+      ]
+    }
+  ]
+}

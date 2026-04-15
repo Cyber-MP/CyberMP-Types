@@ -1,0 +1,143 @@
+{
+  "parent": "gameIEffectorSystem",
+  "name": "gameEffectorSystem",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "ApplyEffector",
+      "shortName": "ApplyEffector",
+      "index": 13461,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "objID",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameObject",
+          "name": "instigator",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "recordID",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "parentRecordID",
+          "flags": 1152
+        },
+        {
+          "type": "entEntityID",
+          "name": "proxyEntityID",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "GetEffectorsByID",
+      "shortName": "GetEffectorsByID",
+      "index": 13465,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "objID",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "recordID",
+          "flags": 128
+        },
+        {
+          "type": "array:whandle:gameEffector",
+          "name": "outEffectors",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetEffectorsList",
+      "shortName": "GetEffectorsList",
+      "index": 13464,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "objID",
+          "flags": 128
+        },
+        {
+          "type": "array:whandle:gameEffector",
+          "name": "outEffectors",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsEffectorPresent",
+      "shortName": "IsEffectorPresent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13463,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "objID",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "recordID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RemoveEffector",
+      "shortName": "RemoveEffector",
+      "index": 13462,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "objID",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "recordID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RemoveEffectorsByID",
+      "shortName": "RemoveEffectorsByID",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13466,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "objID",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "recordID",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

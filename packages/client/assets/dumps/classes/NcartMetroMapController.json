@@ -1,0 +1,201 @@
+{
+  "parent": "CustomAnimationsHudGameController",
+  "name": "NcartMetroMapController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkWidgetReference",
+      "name": "playerMarkerPane",
+      "flags": 4297130017
+    },
+    {
+      "type": "array:metroMapPlayerPositionReferences",
+      "name": "playerCurrentPositionReferences",
+      "flags": 6583025697
+    },
+    {
+      "type": "handle:questQuestsSystem",
+      "name": "questsSystem",
+      "flags": 4431347744
+    },
+    {
+      "type": "Uint32",
+      "name": "selectedDestinationButtonListner",
+      "flags": 4297130016
+    },
+    {
+      "type": "Uint32",
+      "name": "selectionMenuShouldBeActiveListener",
+      "flags": 4297130016
+    },
+    {
+      "type": "Int32",
+      "name": "previousAnimatioNumber",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "directionAnimProxy",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "startupAnimProxy",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "playerPostionMarkerAnimProxy",
+      "flags": 4431347744
+    },
+    {
+      "type": "Bool",
+      "name": "mapOpen",
+      "flags": 4297130016
+    },
+    {
+      "type": "Float",
+      "name": "LineOffOpacity",
+      "flags": 4297130016
+    },
+    {
+      "type": "Float",
+      "name": "LineOnOpacity",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnMetroMapControlFactChangeEvent",
+      "shortName": "OnMetroMapControlFactChangeEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "factValue",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnMetroMapSelectionChangedEvent",
+      "shortName": "OnMetroMapSelectionChangedEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "factValue",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnStartupAnimationDone",
+      "shortName": "OnStartupAnimationDone",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkanimProxy",
+          "name": "proxy",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HideDirectionPanes;",
+      "shortName": "HideDirectionPanes",
+      "flags": 32900
+    },
+    {
+      "fullName": "ProcessButtonAnimation;Int32inkAnimOptions",
+      "shortName": "ProcessButtonAnimation",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "buttonNumber",
+          "flags": 128
+        },
+        {
+          "type": "inkanimPlaybackOptions",
+          "name": "animSetup",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetupDirectionWidget;Int32",
+      "shortName": "SetupDirectionWidget",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "buttonNumber",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SwitchActiveButton;Int32",
+      "shortName": "SwitchActiveButton",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "currentButtonFact",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateAvialableLines;",
+      "shortName": "UpdateAvialableLines",
+      "flags": 32900
+    },
+    {
+      "fullName": "UpdateDirectionDisplay;Int32",
+      "shortName": "UpdateDirectionDisplay",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "buttonNumber",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdatePlayerLocationMarker;Bool",
+      "shortName": "UpdatePlayerLocationMarker",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "show",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

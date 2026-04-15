@@ -1,0 +1,121 @@
+{
+  "parent": "gamedataTweakDBRecord",
+  "name": "gamedataVirtualNetwork_Record",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "GetPathsCount",
+      "shortName": "GetPathsCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 6041,
+      "flags": 1
+    },
+    {
+      "fullName": "GetPathsItem",
+      "shortName": "GetPathsItem",
+      "return": {
+        "type": "whandle:gamedataVirtualNetworkPath_Record",
+        "flags": 64
+      },
+      "index": 6042,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetPathsItemHandle",
+      "shortName": "GetPathsItemHandle",
+      "return": {
+        "type": "handle:gamedataVirtualNetworkPath_Record",
+        "flags": 64
+      },
+      "index": 6043,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "MinDistanceToOther",
+      "shortName": "MinDistanceToOther",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 6048,
+      "flags": 1
+    },
+    {
+      "fullName": "OffsetMultiplier",
+      "shortName": "OffsetMultiplier",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 6047,
+      "flags": 1
+    },
+    {
+      "fullName": "Paths",
+      "shortName": "Paths",
+      "index": 6040,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataVirtualNetworkPath_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "PathsContains",
+      "shortName": "PathsContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 6044,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataVirtualNetworkPath_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Scale",
+      "shortName": "Scale",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 6046,
+      "flags": 1
+    },
+    {
+      "fullName": "SegmentMarker",
+      "shortName": "SegmentMarker",
+      "return": {
+        "type": "Vector3",
+        "flags": 64
+      },
+      "index": 6045,
+      "flags": 1
+    }
+  ]
+}

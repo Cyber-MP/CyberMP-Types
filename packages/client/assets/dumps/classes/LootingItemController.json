@@ -1,0 +1,95 @@
+{
+  "parent": "inkWidgetLogicController",
+  "name": "LootingItemController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "whandle:inkTextWidget",
+      "name": "itemNameText",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isCurrentlySelected",
+      "flags": 4297130016
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "itemName",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "itemType",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "itemWeight",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "itemQuantity",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "itemQualityBar",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "itemSelection",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "itemIcon",
+      "flags": 4297195553
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "SetData;script_ref<ItemViewData>Bool",
+      "shortName": "SetData",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "script_ref:gameItemViewData",
+          "name": "itemData",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "isCurrentlySelected",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetIcon;script_ref<InventoryItemData>",
+      "shortName": "SetIcon",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "script_ref:gameInventoryItemData",
+          "name": "itemData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetText;script_ref<String>",
+      "shortName": "SetText",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "script_ref:String",
+          "name": "text",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,334 @@
+{
+  "parent": "MediaDeviceControllerPS",
+  "name": "RadioControllerPS",
+  "flags": 1028,
+  "props": [
+    {
+      "type": "RadioSetup",
+      "name": "radioSetup",
+      "flags": 4364304417
+    },
+    {
+      "type": "Bool",
+      "name": "wasRadioSetup",
+      "flags": 4565565472
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnInstantiated",
+      "shortName": "OnInstantiated",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "ActionQuickHackDistraction;",
+      "shortName": "ActionQuickHackDistraction",
+      "return": {
+        "type": "handle:QuickHackDistraction",
+        "flags": 64
+      },
+      "flags": 33024
+    },
+    {
+      "fullName": "CanAddAoeDamageQuickHack;",
+      "shortName": "CanAddAoeDamageQuickHack",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "CanCreateAnyQuickHackActions;",
+      "shortName": "CanCreateAnyQuickHackActions",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41216
+    },
+    {
+      "fullName": "CauseDistraction;",
+      "shortName": "CauseDistraction",
+      "flags": 33284
+    },
+    {
+      "fullName": "DetermineGameplayViability;script_ref<GetActionsContext>Bool",
+      "shortName": "DetermineGameplayViability",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33024,
+      "params": [
+        {
+          "type": "script_ref:gameGetActionsContext",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "hasActiveActions",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "EnsureRadioStatationPresence;",
+      "shortName": "EnsureRadioStatationPresence",
+      "flags": 32900
+    },
+    {
+      "fullName": "GameAttached;",
+      "shortName": "GameAttached",
+      "flags": 33024
+    },
+    {
+      "fullName": "GetActiveRadioStation;",
+      "shortName": "GetActiveRadioStation",
+      "return": {
+        "type": "ERadioStationList",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "GetActiveStationIndex;",
+      "shortName": "GetActiveStationIndex",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 33280
+    },
+    {
+      "fullName": "GetAoeDamageSFX;",
+      "shortName": "GetAoeDamageSFX",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetAoeDamageVFX;",
+      "shortName": "GetAoeDamageVFX",
+      "return": {
+        "type": "gameFxResource",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetBackgroundTextureTweakDBID;",
+      "shortName": "GetBackgroundTextureTweakDBID",
+      "return": {
+        "type": "TweakDBID",
+        "flags": 64
+      },
+      "flags": 33024
+    },
+    {
+      "fullName": "GetDeviceIconPath",
+      "shortName": "GetDeviceIconPath",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "flags": 33280
+    },
+    {
+      "fullName": "GetDeviceIconTweakDBID;",
+      "shortName": "GetDeviceIconTweakDBID",
+      "return": {
+        "type": "TweakDBID",
+        "flags": 64
+      },
+      "flags": 33024
+    },
+    {
+      "fullName": "GetDeviceWidget;script_ref<GetActionsContext>",
+      "shortName": "GetDeviceWidget",
+      "return": {
+        "type": "SDeviceWidgetPackage",
+        "flags": 64
+      },
+      "flags": 33280,
+      "params": [
+        {
+          "type": "script_ref:gameGetActionsContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetGlitchSFX;",
+      "shortName": "GetGlitchSFX",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "GetHighPitchNoiseRadius;",
+      "shortName": "GetHighPitchNoiseRadius",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetHighPitchNoiseSFX;",
+      "shortName": "GetHighPitchNoiseSFX",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetHighPitchNoiseVFX;",
+      "shortName": "GetHighPitchNoiseVFX",
+      "return": {
+        "type": "gameFxResource",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetQuickHackActions;array<DeviceAction>script_ref<GetActionsContext>",
+      "shortName": "GetQuickHackActions",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "array:handle:gamedeviceAction",
+          "name": "actions",
+          "flags": 640
+        },
+        {
+          "type": "script_ref:gameGetActionsContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetStartingStation;",
+      "shortName": "GetStartingStation",
+      "return": {
+        "type": "ERadioStationList",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "OnNextStation;NextStation",
+      "shortName": "OnNextStation",
+      "return": {
+        "type": "EntityNotificationType",
+        "flags": 64
+      },
+      "flags": 33280,
+      "params": [
+        {
+          "type": "handle:NextStation",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPreviousStation;PreviousStation",
+      "shortName": "OnPreviousStation",
+      "return": {
+        "type": "EntityNotificationType",
+        "flags": 64
+      },
+      "flags": 33280,
+      "params": [
+        {
+          "type": "handle:PreviousStation",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnQuestDefaultStation;QuestDefaultStation",
+      "shortName": "OnQuestDefaultStation",
+      "return": {
+        "type": "EntityNotificationType",
+        "flags": 64
+      },
+      "flags": 33280,
+      "params": [
+        {
+          "type": "handle:QuestDefaultStation",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnQuickHackDistraction;QuickHackDistraction",
+      "shortName": "OnQuickHackDistraction",
+      "return": {
+        "type": "EntityNotificationType",
+        "flags": 64
+      },
+      "flags": 33280,
+      "params": [
+        {
+          "type": "handle:QuickHackDistraction",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSpiderbotDistraction;SpiderbotDistraction",
+      "shortName": "OnSpiderbotDistraction",
+      "return": {
+        "type": "EntityNotificationType",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:SpiderbotDistraction",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetActiveStation;ERadioStationList",
+      "shortName": "SetActiveStation",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "ERadioStationList",
+          "name": "radioStationType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetDefaultRadioStation;",
+      "shortName": "SetDefaultRadioStation",
+      "flags": 32900
+    },
+    {
+      "fullName": "TryInitializeInteractiveState;",
+      "shortName": "TryInitializeInteractiveState",
+      "flags": 32900
+    }
+  ]
+}

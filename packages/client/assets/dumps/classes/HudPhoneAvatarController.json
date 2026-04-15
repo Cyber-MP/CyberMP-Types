@@ -1,0 +1,433 @@
+{
+  "parent": "HUDPhoneElement",
+  "name": "HudPhoneAvatarController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkImageWidgetReference",
+      "name": "ContactAvatar",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "HolocallRenderTexture",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "SignalRangeIcon",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "ContactName",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "StatusText",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkCanvasWidgetReference",
+      "name": "WaveformPlaceholder",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkFlexWidgetReference",
+      "name": "HolocallHolder",
+      "flags": 4297130017
+    },
+    {
+      "type": "CName",
+      "name": "UnknownAvatarName",
+      "flags": 4297130017
+    },
+    {
+      "type": "Color",
+      "name": "DefaultPortraitColor",
+      "flags": 4297130017
+    },
+    {
+      "type": "Vector2",
+      "name": "DefaultImageSize",
+      "flags": 4297130017
+    },
+    {
+      "type": "Bool",
+      "name": "blackWallEffectOnShow",
+      "flags": 4297130017
+    },
+    {
+      "type": "CName",
+      "name": "LoopAnimationName",
+      "flags": 4297130017
+    },
+    {
+      "type": "CName",
+      "name": "ShowingAnimationName",
+      "flags": 4297130017
+    },
+    {
+      "type": "CName",
+      "name": "HidingAnimationName",
+      "flags": 4297130017
+    },
+    {
+      "type": "CName",
+      "name": "AudiocallShowingAnimationName",
+      "flags": 4297130017
+    },
+    {
+      "type": "CName",
+      "name": "AudiocallHidingAnimationName",
+      "flags": 4297130017
+    },
+    {
+      "type": "CName",
+      "name": "HolocallShowingAnimationName",
+      "flags": 4297130017
+    },
+    {
+      "type": "CName",
+      "name": "HolocallHidingAnimationName",
+      "flags": 4297130017
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "LoopAnimation",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:gameIJournalManager",
+      "name": "JournalManager",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "RootAnimation",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "AudiocallAnimation",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "HolocallAnimation",
+      "flags": 4431347744
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "Holder",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:gameObject",
+      "name": "Owner",
+      "flags": 4297130016
+    },
+    {
+      "type": "EHudAvatarMode",
+      "name": "CurrentMode",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "Minimized",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "showAvatar",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnAudiocallAnimationFinished",
+      "shortName": "OnAudiocallAnimationFinished",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkanimProxy",
+          "name": "anim",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnHolocallAnimationFinished",
+      "shortName": "OnHolocallAnimationFinished",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkanimProxy",
+          "name": "anim",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnRootAnimationFinished",
+      "shortName": "OnRootAnimationFinished",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkanimProxy",
+          "name": "anim",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnStateChanged",
+      "shortName": "OnStateChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "whandle:inkWidget",
+          "name": "widget",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "oldState",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "newState",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AreElementAnimationsComplete;",
+      "shortName": "AreElementAnimationsComplete",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "ChangeMinimized;Bool",
+      "shortName": "ChangeMinimized",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "minimized",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnElementAnimationsFinished;",
+      "shortName": "OnElementAnimationsFinished",
+      "flags": 32900
+    },
+    {
+      "fullName": "PlayElementAnimations;",
+      "shortName": "PlayElementAnimations",
+      "flags": 32900
+    },
+    {
+      "fullName": "RefreshView;TweakDBIDscript_ref<String>EHudAvatarMode",
+      "shortName": "RefreshView",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "TweakDBID",
+          "name": "avatarID",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:String",
+          "name": "contactName",
+          "flags": 128
+        },
+        {
+          "type": "EHudAvatarMode",
+          "name": "mode",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetHolder;inkWidgetRef",
+      "shortName": "SetHolder",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "inkWidgetReference",
+          "name": "holder",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetJournalManager;IJournalManager",
+      "shortName": "SetJournalManager",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:gameIJournalManager",
+          "name": "journalManager",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetOwner;GameObject",
+      "shortName": "SetOwner",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "playerPuppet",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetStatusText;script_ref<String>",
+      "shortName": "SetStatusText",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "script_ref:String",
+          "name": "statusText",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ShowAvatar;Bool",
+      "shortName": "ShowAvatar",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "showAvatar",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ShowEndCallContact;TweakDBIDscript_ref<String>",
+      "shortName": "ShowEndCallContact",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "TweakDBID",
+          "name": "avatarID",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:String",
+          "name": "contactName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ShowIncomingContact;TweakDBIDscript_ref<String>",
+      "shortName": "ShowIncomingContact",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "TweakDBID",
+          "name": "avatarID",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:String",
+          "name": "contactName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "StartAudiocall;TweakDBIDscript_ref<String>Bool",
+      "shortName": "StartAudiocall",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "TweakDBID",
+          "name": "avatarID",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:String",
+          "name": "contactName",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "showAvatar",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "StartHolocall;TweakDBIDscript_ref<String>",
+      "shortName": "StartHolocall",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "TweakDBID",
+          "name": "avatarID",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:String",
+          "name": "contactName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "StopAudiocallAnimation;",
+      "shortName": "StopAudiocallAnimation",
+      "flags": 32900
+    },
+    {
+      "fullName": "StopHolocallAnimation;",
+      "shortName": "StopHolocallAnimation",
+      "flags": 32900
+    },
+    {
+      "fullName": "StopRootAnimation;",
+      "shortName": "StopRootAnimation",
+      "flags": 32900
+    }
+  ]
+}

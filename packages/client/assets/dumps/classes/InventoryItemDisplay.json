@@ -1,0 +1,311 @@
+{
+  "parent": "BaseButtonView",
+  "name": "InventoryItemDisplay",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkWidgetReference",
+      "name": "RarityRoot",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "ModsRoot",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "RarityWrapper",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "IconImage",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "IconShadowImage",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "IconFallback",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "BackgroundShape",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "BackgroundHighlight",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "BackgroundFrame",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "QuantityText",
+      "flags": 4297195553
+    },
+    {
+      "type": "CName",
+      "name": "ModName",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "toggleHighlight",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "equippedIcon",
+      "flags": 4297195553
+    },
+    {
+      "type": "String",
+      "name": "DefaultCategoryIconName",
+      "flags": 4297195553
+    },
+    {
+      "type": "gameInventoryItemData",
+      "name": "ItemData",
+      "flags": 4297195552
+    },
+    {
+      "type": "array:whandle:InventoryItemAttachmentDisplay",
+      "name": "AttachementsDisplay",
+      "flags": 6583091232
+    },
+    {
+      "type": "Vector2",
+      "name": "smallSize",
+      "flags": 4297195552
+    },
+    {
+      "type": "Vector2",
+      "name": "bigSize",
+      "flags": 4297195552
+    },
+    {
+      "type": "whandle:gameObject",
+      "name": "owner",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnButtonClick",
+      "shortName": "OnButtonClick",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "whandle:inkButtonController",
+          "name": "controller",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "ButtonStateChanged;inkEButtonStateinkEButtonState",
+      "shortName": "ButtonStateChanged",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "inkEButtonState",
+          "name": "oldState",
+          "flags": 128
+        },
+        {
+          "type": "inkEButtonState",
+          "name": "newState",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetItemData;",
+      "shortName": "GetItemData",
+      "return": {
+        "type": "gameInventoryItemData",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "GetShapeSize;EInventoryItemShape",
+      "shortName": "GetShapeSize",
+      "return": {
+        "type": "Vector2",
+        "flags": 64
+      },
+      "flags": 33024,
+      "params": [
+        {
+          "type": "gameInventoryItemShape",
+          "name": "shapeType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetWidgetForTooltip;",
+      "shortName": "GetWidgetForTooltip",
+      "return": {
+        "type": "whandle:inkWidget",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "Mark;Int32",
+      "shortName": "Mark",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PlayIntroAnimation;FloatFloat",
+      "shortName": "PlayIntroAnimation",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Float",
+          "name": "delay",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "duration",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RefreshUI;",
+      "shortName": "RefreshUI",
+      "flags": 33024
+    },
+    {
+      "fullName": "SelectItem;",
+      "shortName": "SelectItem",
+      "flags": 33284
+    },
+    {
+      "fullName": "SetEquippedState;Bool",
+      "shortName": "SetEquippedState",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "equipped",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetItemSize;",
+      "shortName": "SetItemSize",
+      "flags": 33024
+    },
+    {
+      "fullName": "SetQuantity;Int32",
+      "shortName": "SetQuantity",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "itemQuantity",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetRarity;CName",
+      "shortName": "SetRarity",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "CName",
+          "name": "quality",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetShape;EInventoryItemShape",
+      "shortName": "SetShape",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "gameInventoryItemShape",
+          "name": "shapeType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Setup;script_ref<InventoryItemData>Entity",
+      "shortName": "Setup",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "script_ref:gameInventoryItemData",
+          "name": "itemData",
+          "flags": 128
+        },
+        {
+          "type": "handle:entEntity",
+          "name": "ownerEntity",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "ShowMods;script_ref<array<InventoryItemAttachments>>",
+      "shortName": "ShowMods",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "script_ref:array:handle:gameInventoryItemAttachments",
+          "name": "attachements",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UnselectItem;",
+      "shortName": "UnselectItem",
+      "flags": 33284
+    },
+    {
+      "fullName": "UpdateIcon;",
+      "shortName": "UpdateIcon",
+      "flags": 33024
+    }
+  ]
+}

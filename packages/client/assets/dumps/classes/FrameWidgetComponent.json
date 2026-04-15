@@ -1,0 +1,116 @@
+{
+  "parent": "WorldWidgetComponent",
+  "name": "FrameWidgetComponent",
+  "flags": 2,
+  "props": [
+    {
+      "type": "Vector2",
+      "name": "dimensions",
+      "group": "User Interface",
+      "flags": 6694125569
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "GetFormat",
+      "shortName": "GetFormat",
+      "return": {
+        "type": "Vector2",
+        "flags": 64
+      },
+      "index": 11483,
+      "flags": 1
+    },
+    {
+      "fullName": "GetPathHash",
+      "shortName": "GetPathHash",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 11484,
+      "flags": 1,
+      "params": [
+        {
+          "type": "String",
+          "name": "path",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetRequestHandler",
+      "shortName": "GetRequestHandler",
+      "return": {
+        "type": "handle:inkISystemRequestsHandler",
+        "flags": 64
+      },
+      "index": 11482,
+      "flags": 1
+    },
+    {
+      "fullName": "InitScreenshot",
+      "shortName": "InitScreenshot",
+      "index": 11481,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Uint32",
+          "name": "hash",
+          "flags": 128
+        },
+        {
+          "type": "whandle:inkImageWidget",
+          "name": "widget",
+          "flags": 128
+        },
+        {
+          "type": "whandle:IScriptable",
+          "name": "object",
+          "flags": 1152
+        },
+        {
+          "type": "CName",
+          "name": "callback",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "GetScreenshotWidget;",
+      "shortName": "GetScreenshotWidget",
+      "return": {
+        "type": "whandle:inkImageWidget",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "InitDefaultScreenshot;",
+      "shortName": "InitDefaultScreenshot",
+      "flags": 33284
+    },
+    {
+      "fullName": "SetDefaultScreenshot;Bool",
+      "shortName": "SetDefaultScreenshot",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "StartGlitchTransition;",
+      "shortName": "StartGlitchTransition",
+      "flags": 33284
+    },
+    {
+      "fullName": "StopGlitchTransition;",
+      "shortName": "StopGlitchTransition",
+      "flags": 33284
+    }
+  ]
+}

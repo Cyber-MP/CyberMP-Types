@@ -1,0 +1,90 @@
+{
+  "parent": "AIHitReactionTask",
+  "name": "StaggerReactionTask",
+  "flags": 4,
+  "props": [
+    {
+      "type": "TweakDBID",
+      "name": "tweakDBPackage",
+      "flags": 4297326624
+    },
+    {
+      "type": "Bool",
+      "name": "tumble",
+      "flags": 4297326624
+    },
+    {
+      "type": "Bool",
+      "name": "onUpdateCompleted",
+      "flags": 4297326624
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "Activate;ScriptExecutionContext",
+      "shortName": "Activate",
+      "flags": 34048,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetDesiredHitReactionDuration;ScriptExecutionContext",
+      "shortName": "GetDesiredHitReactionDuration",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 32896,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetHitReactionType;",
+      "shortName": "GetHitReactionType",
+      "return": {
+        "type": "animHitReactionType",
+        "flags": 64
+      },
+      "flags": 32896
+    },
+    {
+      "fullName": "OnDeactivate;ScriptExecutionContext",
+      "shortName": "OnDeactivate",
+      "flags": 32896,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUpdate;ScriptExecutionContextFloat",
+      "shortName": "OnUpdate",
+      "flags": 32896,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "aiTime",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

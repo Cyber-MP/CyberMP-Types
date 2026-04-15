@@ -1,0 +1,254 @@
+{
+  "parent": "gameComponentPS",
+  "name": "vehicleControllerPS",
+  "flags": 1026,
+  "props": [
+    {
+      "type": "static:6,vehicleVehicleSlotsState",
+      "name": "vehicleDoors",
+      "flags": 6895452160
+    },
+    {
+      "type": "vehicleEState",
+      "name": "state",
+      "flags": 6962561025
+    },
+    {
+      "type": "vehicleELightMode",
+      "name": "lightMode",
+      "flags": 6895452160
+    },
+    {
+      "type": "Bool",
+      "name": "isAlarmOn",
+      "flags": 6895452160
+    },
+    {
+      "type": "Int32",
+      "name": "lightTypeMask",
+      "flags": 6895452160
+    },
+    {
+      "type": "Bool",
+      "name": "allowPassengerCameraSwitch",
+      "flags": 6895452160
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "CycleHeadLightMode",
+      "shortName": "CycleHeadLightMode",
+      "index": 13722,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "isPlayer",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "GetAllowPassengerCameraSwitch",
+      "shortName": "GetAllowPassengerCameraSwitch",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13732,
+      "flags": 1
+    },
+    {
+      "fullName": "GetDoorInteractionState",
+      "shortName": "GetDoorInteractionState",
+      "return": {
+        "type": "vehicleVehicleDoorInteractionState",
+        "flags": 64
+      },
+      "index": 13730,
+      "flags": 1,
+      "params": [
+        {
+          "type": "vehicleEVehicleDoor",
+          "name": "door",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetDoorState",
+      "shortName": "GetDoorState",
+      "return": {
+        "type": "vehicleVehicleDoorState",
+        "flags": 64
+      },
+      "index": 13726,
+      "flags": 1,
+      "params": [
+        {
+          "type": "vehicleEVehicleDoor",
+          "name": "door",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetHeadLightMode",
+      "shortName": "GetHeadLightMode",
+      "return": {
+        "type": "vehicleELightMode",
+        "flags": 64
+      },
+      "index": 13721,
+      "flags": 1
+    },
+    {
+      "fullName": "GetState",
+      "shortName": "GetState",
+      "return": {
+        "type": "vehicleEState",
+        "flags": 64
+      },
+      "index": 13718,
+      "flags": 1
+    },
+    {
+      "fullName": "GetWindowState",
+      "shortName": "GetWindowState",
+      "return": {
+        "type": "vehicleEVehicleWindowState",
+        "flags": 64
+      },
+      "index": 13728,
+      "flags": 1,
+      "params": [
+        {
+          "type": "vehicleEVehicleDoor",
+          "name": "door",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsAlarmOn",
+      "shortName": "IsAlarmOn",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13724,
+      "flags": 1
+    },
+    {
+      "fullName": "SetAlarm",
+      "shortName": "SetAlarm",
+      "index": 13723,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "on",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetAllowPassengerCameraSwitch",
+      "shortName": "SetAllowPassengerCameraSwitch",
+      "index": 13731,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "allow",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetDoorInteractionState",
+      "shortName": "SetDoorInteractionState",
+      "index": 13729,
+      "flags": 1,
+      "params": [
+        {
+          "type": "vehicleEVehicleDoor",
+          "name": "door",
+          "flags": 128
+        },
+        {
+          "type": "vehicleVehicleDoorInteractionState",
+          "name": "state",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetDoorState",
+      "shortName": "SetDoorState",
+      "index": 13725,
+      "flags": 1,
+      "params": [
+        {
+          "type": "vehicleEVehicleDoor",
+          "name": "door",
+          "flags": 128
+        },
+        {
+          "type": "vehicleVehicleDoorState",
+          "name": "state",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "immediate",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetHeadLightMode",
+      "shortName": "SetHeadLightMode",
+      "index": 13720,
+      "flags": 1,
+      "params": [
+        {
+          "type": "vehicleELightMode",
+          "name": "lightMode",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetState",
+      "shortName": "SetState",
+      "index": 13719,
+      "flags": 1,
+      "params": [
+        {
+          "type": "vehicleEState",
+          "name": "state",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetWindowState",
+      "shortName": "SetWindowState",
+      "index": 13727,
+      "flags": 1,
+      "params": [
+        {
+          "type": "vehicleEVehicleDoor",
+          "name": "door",
+          "flags": 128
+        },
+        {
+          "type": "vehicleEVehicleWindowState",
+          "name": "state",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

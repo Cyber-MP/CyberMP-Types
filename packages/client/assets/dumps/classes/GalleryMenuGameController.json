@@ -1,0 +1,642 @@
+{
+  "parent": "gameuiMenuGameController",
+  "name": "GalleryMenuGameController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkWidgetReference",
+      "name": "tooltipsManagerRef",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "favoriteManagerRef",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "buttonHintsManagerRef",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "globalWrapper",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "screenshotsGrid",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "filtersGrid",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "paginationWidget",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "globalPreloaderContainer",
+      "flags": 4297195553
+    },
+    {
+      "type": "Int32",
+      "name": "screenshotsPerPage",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "noPermissionWidget",
+      "flags": 4297195553
+    },
+    {
+      "type": "whandle:GalleryPopup",
+      "name": "noPermissionController",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:inkWidget",
+      "name": "globalPreloader",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:PaginationController",
+      "name": "paginationController",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:ButtonHints",
+      "name": "buttonHintsController",
+      "flags": 4297195552
+    },
+    {
+      "type": "whandle:inkISystemRequestsHandler",
+      "name": "systemHandler",
+      "flags": 4297130016
+    },
+    {
+      "type": "ScriptGameInstance",
+      "name": "gameInstance",
+      "flags": 4297130016
+    },
+    {
+      "type": "array:inkGameScreenshotInfo",
+      "name": "screenshotInfos",
+      "flags": 6583025696
+    },
+    {
+      "type": "array:inkGameScreenshotInfo",
+      "name": "sortedScreenshotInfos",
+      "flags": 6583025696
+    },
+    {
+      "type": "handle:inkGameNotificationToken",
+      "name": "screenshotFullPreviewPopupToken",
+      "flags": 4431347744
+    },
+    {
+      "type": "array:inkGameScreenshotSortMode",
+      "name": "filterTypes",
+      "flags": 6583025696
+    },
+    {
+      "type": "whandle:GalleryFilterController",
+      "name": "activeSort",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isFavoriteFiltering",
+      "flags": 4297130016
+    },
+    {
+      "type": "array:whandle:GalleryScreenshotItem",
+      "name": "screenshotItems",
+      "flags": 6583091232
+    },
+    {
+      "type": "Int32",
+      "name": "pageCount",
+      "flags": 4297130016
+    },
+    {
+      "type": "Int32",
+      "name": "currentPage",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:gameuiTooltipsManager",
+      "name": "tooltipsManager",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:GalleryFavoriteManager",
+      "name": "favoriteManager",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "onInputDeviceChangedCallbackID",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkGameNotificationToken",
+      "name": "deleteConfirmationToken",
+      "flags": 4431347744
+    },
+    {
+      "type": "Int32",
+      "name": "deleteScreenshotId",
+      "flags": 4297130016
+    },
+    {
+      "type": "CName",
+      "name": "visualStateName",
+      "flags": 4297195552
+    },
+    {
+      "type": "Bool",
+      "name": "isSecondaryActionEnabled",
+      "flags": 4297195552
+    },
+    {
+      "type": "array:whandle:GalleryFilterController",
+      "name": "filterButtons",
+      "flags": 6583025696
+    },
+    {
+      "type": "Bool",
+      "name": "canInteract",
+      "flags": 4297326624
+    },
+    {
+      "type": "whandle:gameObject",
+      "name": "playerObj",
+      "flags": 4297130016
+    },
+    {
+      "type": "Int32",
+      "name": "pageToDisplayOnLoad",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnArrowNext",
+      "shortName": "OnArrowNext",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnArrowPrev",
+      "shortName": "OnArrowPrev",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnDelayedDeleteNotificationOKEvent",
+      "shortName": "OnDelayedDeleteNotificationOKEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:DelayedDeleteNotificationOKEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnDeleteConfirm",
+      "shortName": "OnDeleteConfirm",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkGameNotificationData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnFavoritesLoadedReady",
+      "shortName": "OnFavoritesLoadedReady",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "array:Uint32",
+          "name": "favorites",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnFirstPartNext",
+      "shortName": "OnFirstPartNext",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkanimProxy",
+          "name": "proxy",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnFirstPartPrev",
+      "shortName": "OnFirstPartPrev",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkanimProxy",
+          "name": "proxy",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnItemFilterClick",
+      "shortName": "OnItemFilterClick",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPageNumberReleased",
+      "shortName": "OnPageNumberReleased",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPostOnAxis",
+      "shortName": "OnPostOnAxis",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnReleaseOnScreenshotItem",
+      "shortName": "OnReleaseOnScreenshotItem",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnScreenshotDeleted",
+      "shortName": "OnScreenshotDeleted",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "successful",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnScreenshotFullPreviewPopup",
+      "shortName": "OnScreenshotFullPreviewPopup",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkGameNotificationData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnScreenshotPreviewShowRequest",
+      "shortName": "OnScreenshotPreviewShowRequest",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:GalleryScreenshotPreviewPopupEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnScreenshotsForLoadReady",
+      "shortName": "OnScreenshotsForLoadReady",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "array:inkGameScreenshotInfo",
+          "name": "screenshotinfos",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnShortcutPress",
+      "shortName": "OnShortcutPress",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSwitchPageAnimFinish",
+      "shortName": "OnSwitchPageAnimFinish",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkanimProxy",
+          "name": "proxy",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "CreateScreenshotItem;",
+      "shortName": "CreateScreenshotItem",
+      "flags": 32900
+    },
+    {
+      "fullName": "DeleteScreenshot;Int32Bool",
+      "shortName": "DeleteScreenshot",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "screenshotIndex",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "canBeDeleted",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "DisplayNoPermission;",
+      "shortName": "DisplayNoPermission",
+      "flags": 33284
+    },
+    {
+      "fullName": "InitScreenshotItem;inkCompoundWidgetGalleryScreenshotItem",
+      "shortName": "InitScreenshotItem",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "whandle:inkCompoundWidget",
+          "name": "itemButton",
+          "flags": 128
+        },
+        {
+          "type": "whandle:GalleryScreenshotItem",
+          "name": "controller",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RefreshPageCount;Int32",
+      "shortName": "RefreshPageCount",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "screenshotCount",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterToPaginationNumbers;",
+      "shortName": "RegisterToPaginationNumbers",
+      "flags": 32900
+    },
+    {
+      "fullName": "RequestGameScreenshotsForLoad;Int32",
+      "shortName": "RequestGameScreenshotsForLoad",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "pageToDisplayOnLoad",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetItemsHoverable;Bool",
+      "shortName": "SetItemsHoverable",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "enabled",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetPageNumber;Int32Bool",
+      "shortName": "SetPageNumber",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "nextPageIndex",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "forceUpdate",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetScreenshotItemData;GalleryScreenshotItemGameScreenshotInfo",
+      "shortName": "SetScreenshotItemData",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "handle:GalleryScreenshotItem",
+          "name": "item",
+          "flags": 128
+        },
+        {
+          "type": "inkGameScreenshotInfo",
+          "name": "screenshotInfo",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetSelectedItem;Uint32",
+      "shortName": "SetSelectedItem",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "Uint32",
+          "name": "hash",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetupFilters;",
+      "shortName": "SetupFilters",
+      "flags": 32900
+    },
+    {
+      "fullName": "SortScreenshots;",
+      "shortName": "SortScreenshots",
+      "flags": 32900
+    },
+    {
+      "fullName": "SwitchPage;Int32",
+      "shortName": "SwitchPage",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "pageOffset",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UnregisterFromPaginationNumbers;",
+      "shortName": "UnregisterFromPaginationNumbers",
+      "flags": 32900
+    },
+    {
+      "fullName": "UpdateGalleryView;",
+      "shortName": "UpdateGalleryView",
+      "flags": 32900
+    }
+  ]
+}

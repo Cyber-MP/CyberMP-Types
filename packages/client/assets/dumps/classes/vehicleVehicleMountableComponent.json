@@ -1,0 +1,98 @@
+{
+  "parent": "gamemountingMountableComponent",
+  "name": "vehicleVehicleMountableComponent",
+  "flags": 2,
+  "funcs": [
+    {
+      "fullName": "OnActionDemolition",
+      "shortName": "OnActionDemolition",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:ActionDemolition",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnActionEngineering",
+      "shortName": "OnActionEngineering",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:ActionEngineering",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInteractionChoice",
+      "shortName": "OnInteractionChoice",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameinteractionsChoiceEvent",
+          "name": "choiceEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "DoStatusEffectsAllowMounting;GameObject",
+      "shortName": "DoStatusEffectsAllowMounting",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "executor",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "MountEntityToSlot;EntityIDEntityIDCNameMountType",
+      "shortName": "MountEntityToSlot",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "parentID",
+          "flags": 128
+        },
+        {
+          "type": "entEntityID",
+          "name": "childId",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "slot",
+          "flags": 128
+        },
+        {
+          "type": "MountType",
+          "name": "mountType",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

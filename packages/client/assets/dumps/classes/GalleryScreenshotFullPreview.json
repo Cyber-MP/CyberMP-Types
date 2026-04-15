@@ -1,0 +1,139 @@
+{
+  "parent": "gameuiWidgetGameController",
+  "name": "GalleryScreenshotFullPreview",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkWidgetReference",
+      "name": "buttonHintsManagerRef",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "screenshotContainer",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "screenshotMask",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "screenshotPreview",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "container",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "windowWrapper",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "favoriteIcon",
+      "flags": 4297130017
+    },
+    {
+      "type": "whandle:inkCompoundWidget",
+      "name": "preloader",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:inkISystemRequestsHandler",
+      "name": "systemHandler",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:GalleryScreenshotPreviewData",
+      "name": "data",
+      "flags": 4431347744
+    },
+    {
+      "type": "whandle:ButtonHints",
+      "name": "buttonHintsController",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:inkGameNotificationToken",
+      "name": "deleteConfirmationToken",
+      "flags": 4431347744
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnGlobalRelease",
+      "shortName": "OnGlobalRelease",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "GetPreviewImageWidget;",
+      "shortName": "GetPreviewImageWidget",
+      "return": {
+        "type": "whandle:inkImageWidget",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "LoadScreenshot;",
+      "shortName": "LoadScreenshot",
+      "flags": 32900
+    },
+    {
+      "fullName": "OnScreenshotLoaded;Vector2Int32",
+      "shortName": "OnScreenshotLoaded",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Vector2",
+          "name": "screenshotSize",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "errorCode",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RefreshFavoriteButtonHint;",
+      "shortName": "RefreshFavoriteButtonHint",
+      "flags": 32900
+    }
+  ]
+}

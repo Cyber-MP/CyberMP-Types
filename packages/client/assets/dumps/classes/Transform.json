@@ -1,0 +1,368 @@
+{
+  "name": "Transform",
+  "flags": 18,
+  "props": [
+    {
+      "type": "Vector4",
+      "name": "position",
+      "flags": 6962561025
+    },
+    {
+      "type": "Quaternion",
+      "name": "orientation",
+      "flags": 6962561025
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "GetForward",
+      "shortName": "GetForward",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "index": 959,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Transform",
+          "name": "xform",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetInverse",
+      "shortName": "GetInverse",
+      "return": {
+        "type": "Transform",
+        "flags": 64
+      },
+      "index": 967,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Transform",
+          "name": "xform",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetOrientation",
+      "shortName": "GetOrientation",
+      "return": {
+        "type": "Quaternion",
+        "flags": 64
+      },
+      "index": 969,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Transform",
+          "name": "xform",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetPitch",
+      "shortName": "GetPitch",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 962,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Transform",
+          "name": "xform",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetPosition",
+      "shortName": "GetPosition",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "index": 968,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Transform",
+          "name": "xform",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetRight",
+      "shortName": "GetRight",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "index": 960,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Transform",
+          "name": "xform",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetRoll",
+      "shortName": "GetRoll",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 964,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Transform",
+          "name": "xform",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetUp",
+      "shortName": "GetUp",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "index": 961,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Transform",
+          "name": "xform",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetYaw",
+      "shortName": "GetYaw",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 963,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Transform",
+          "name": "xform",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetIdentity",
+      "shortName": "SetIdentity",
+      "index": 965,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Transform",
+          "name": "xform",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetInverse",
+      "shortName": "SetInverse",
+      "index": 966,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Transform",
+          "name": "xform",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetOrientation",
+      "shortName": "SetOrientation",
+      "index": 971,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Transform",
+          "name": "xform",
+          "flags": 128
+        },
+        {
+          "type": "Quaternion",
+          "name": "quat",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetOrientationEuler",
+      "shortName": "SetOrientationEuler",
+      "index": 972,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Transform",
+          "name": "xform",
+          "flags": 128
+        },
+        {
+          "type": "EulerAngles",
+          "name": "euler",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetOrientationFromDir",
+      "shortName": "SetOrientationFromDir",
+      "index": 973,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Transform",
+          "name": "xform",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "direction",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetPosition",
+      "shortName": "SetPosition",
+      "index": 970,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Transform",
+          "name": "xform",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "v",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ToEulerAngles",
+      "shortName": "ToEulerAngles",
+      "return": {
+        "type": "EulerAngles",
+        "flags": 64
+      },
+      "index": 957,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Transform",
+          "name": "xform",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ToMatrix",
+      "shortName": "ToMatrix",
+      "return": {
+        "type": "Matrix",
+        "flags": 64
+      },
+      "index": 958,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Transform",
+          "name": "xform",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TransformPoint",
+      "shortName": "TransformPoint",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "index": 955,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Transform",
+          "name": "xform",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "v",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TransformVector",
+      "shortName": "TransformVector",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "index": 956,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Transform",
+          "name": "xform",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "v",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Transform::Create;Vector4Quaternion",
+      "shortName": "Create",
+      "return": {
+        "type": "Transform",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "Vector4",
+          "name": "position",
+          "flags": 128
+        },
+        {
+          "type": "Quaternion",
+          "name": "orientation",
+          "flags": 1152
+        }
+      ]
+    }
+  ]
+}

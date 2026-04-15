@@ -1,0 +1,578 @@
+{
+  "parent": "gameScriptableSystem",
+  "name": "UIScriptableSystem",
+  "flags": 4,
+  "props": [
+    {
+      "type": "Int32",
+      "name": "backpackActiveSorting",
+      "flags": 4565565472
+    },
+    {
+      "type": "Int32",
+      "name": "backpackActiveFilter",
+      "flags": 4565565472
+    },
+    {
+      "type": "Bool",
+      "name": "isBackpackActiveFilterSaved",
+      "flags": 4565565472
+    },
+    {
+      "type": "Int32",
+      "name": "vendorPanelPlayerActiveSorting",
+      "flags": 4565565472
+    },
+    {
+      "type": "Int32",
+      "name": "vendorPanelVendorActiveSorting",
+      "flags": 4565565472
+    },
+    {
+      "type": "array:gameItemID",
+      "name": "playerFavouriteItems",
+      "flags": 6851461152
+    },
+    {
+      "type": "array:gameItemID",
+      "name": "newItems",
+      "flags": 6851461152
+    },
+    {
+      "type": "array:TweakDBID",
+      "name": "DLCAddedItems",
+      "flags": 6851461152
+    },
+    {
+      "type": "array:gameWardrobeClothingSetIndex",
+      "name": "newWardrobeSets",
+      "flags": 6851461152
+    },
+    {
+      "type": "array:gameItemID",
+      "name": "newWardrobeItems",
+      "flags": 6851461152
+    },
+    {
+      "type": "array:CName",
+      "name": "availableCars",
+      "flags": 6851461152
+    },
+    {
+      "type": "array:UIScriptableSystemAttributeLevel",
+      "name": "previousAttributeLevels",
+      "flags": 6851461152
+    },
+    {
+      "type": "Bool",
+      "name": "comparisionTooltipDisabled",
+      "flags": 4565565472
+    },
+    {
+      "type": "whandle:PlayerPuppet",
+      "name": "attachedPlayer",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:UIScriptableInventoryListenerCallback",
+      "name": "inventoryListenerCallback",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:gameInventoryScriptListener",
+      "name": "inventoryListener",
+      "flags": 4431347744
+    },
+    {
+      "type": "Bool",
+      "name": "DEV_useNewTooltips",
+      "flags": 4565565472
+    },
+    {
+      "type": "Bool",
+      "name": "DEV_useLongScanTooltips",
+      "flags": 4565565472
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "UIScriptableSystem::GetInstance;GameInstance",
+      "shortName": "GetInstance",
+      "return": {
+        "type": "handle:UIScriptableSystem",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "gameInstance",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "DEV_IsNewTooltipEnabled;",
+      "shortName": "DEV_IsNewTooltipEnabled",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "DEV_IsScanLongTooltipEnabled;",
+      "shortName": "DEV_IsScanLongTooltipEnabled",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetBackpackActiveFilter;Int32",
+      "shortName": "GetBackpackActiveFilter",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 41476,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "defaultValue",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "GetBackpackActiveSorting;Int32",
+      "shortName": "GetBackpackActiveSorting",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 41476,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "defaultValue",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "GetPreviousAttributeLevel;gamedataStatType",
+      "shortName": "GetPreviousAttributeLevel",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 41476,
+      "params": [
+        {
+          "type": "gamedataStatType",
+          "name": "stat",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetVendorPanelPlayerActiveSorting;Int32",
+      "shortName": "GetVendorPanelPlayerActiveSorting",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 41476,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "defaultValue",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "GetVendorPanelVendorActiveSorting;Int32",
+      "shortName": "GetVendorPanelVendorActiveSorting",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 41476,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "defaultValue",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "IsAvailableCarNew;CName",
+      "shortName": "IsAvailableCarNew",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476,
+      "params": [
+        {
+          "type": "CName",
+          "name": "carFact",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsComparisionTooltipDisabled;",
+      "shortName": "IsComparisionTooltipDisabled",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "IsDLCAddedActiveItem;TweakDBID",
+      "shortName": "IsDLCAddedActiveItem",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476,
+      "params": [
+        {
+          "type": "TweakDBID",
+          "name": "itemTweakDBID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsInventoryItemNew;ItemID",
+      "shortName": "IsInventoryItemNew",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476,
+      "params": [
+        {
+          "type": "gameItemID",
+          "name": "itemID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsItemPlayerFavourite;ItemID",
+      "shortName": "IsItemPlayerFavourite",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476,
+      "params": [
+        {
+          "type": "gameItemID",
+          "name": "itemID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsWardrobeItemNew;ItemID",
+      "shortName": "IsWardrobeItemNew",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476,
+      "params": [
+        {
+          "type": "gameItemID",
+          "name": "itemID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsWardrobeSetNew;gameWardrobeClothingSetIndex",
+      "shortName": "IsWardrobeSetNew",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476,
+      "params": [
+        {
+          "type": "gameWardrobeClothingSetIndex",
+          "name": "wardrobeSet",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnAttach;",
+      "shortName": "OnAttach",
+      "flags": 33920
+    },
+    {
+      "fullName": "OnAvailableCarAdded;UIScriptableSystemAddAvailableCar",
+      "shortName": "OnAvailableCarAdded",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:UIScriptableSystemAddAvailableCar",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnComparisionTooltipDisabled;UIScriptableSystemSetComparisionTooltipDisabled",
+      "shortName": "OnComparisionTooltipDisabled",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:UIScriptableSystemSetComparisionTooltipDisabled",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnDLCAddedItemInspected;UIScriptableSystemDLCAddedItemInspected",
+      "shortName": "OnDLCAddedItemInspected",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:UIScriptableSystemDLCAddedItemInspected",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnDetach;",
+      "shortName": "OnDetach",
+      "flags": 33920
+    },
+    {
+      "fullName": "OnEnableScanLongDescription;ScanLongDescriptionCall",
+      "shortName": "OnEnableScanLongDescription",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:ScanLongDescriptionCall",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInventoryItemAdded;UIScriptableSystemInventoryAddItem",
+      "shortName": "OnInventoryItemAdded",
+      "flags": 33924,
+      "params": [
+        {
+          "type": "handle:UIScriptableSystemInventoryAddItem",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInventoryItemInspected;UIScriptableSystemInventoryInspectItem",
+      "shortName": "OnInventoryItemInspected",
+      "flags": 33924,
+      "params": [
+        {
+          "type": "handle:UIScriptableSystemInventoryInspectItem",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInventoryItemRemoved;UIScriptableSystemInventoryRemoveItem",
+      "shortName": "OnInventoryItemRemoved",
+      "flags": 33924,
+      "params": [
+        {
+          "type": "handle:UIScriptableSystemInventoryRemoveItem",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPlayerAttach;PlayerAttachRequest",
+      "shortName": "OnPlayerAttach",
+      "flags": 33924,
+      "params": [
+        {
+          "type": "handle:gamePlayerAttachRequest",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRestored;Int32Int32",
+      "shortName": "OnRestored",
+      "flags": 33920,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "saveVersion",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "gameVersion",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSetBackpackFilter;UIScriptableSystemSetBackpackFilter",
+      "shortName": "OnSetBackpackFilter",
+      "flags": 33924,
+      "params": [
+        {
+          "type": "handle:UIScriptableSystemSetBackpackFilter",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSetBackpackSorting;UIScriptableSystemSetBackpackSorting",
+      "shortName": "OnSetBackpackSorting",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:UIScriptableSystemSetBackpackSorting",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSetItemPlayerFavourite;UIScriptableSystemSetItemPlayerFavourite",
+      "shortName": "OnSetItemPlayerFavourite",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:UIScriptableSystemSetItemPlayerFavourite",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSetPreviousAttributeLevel;UIScriptableSystemSetPreviousAttributeLevel",
+      "shortName": "OnSetPreviousAttributeLevel",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:UIScriptableSystemSetPreviousAttributeLevel",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSetVendorPanelPlayerSorting;UIScriptableSystemSetVendorPanelPlayerSorting",
+      "shortName": "OnSetVendorPanelPlayerSorting",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:UIScriptableSystemSetVendorPanelPlayerSorting",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSetVendorPanelVendorSorting;UIScriptableSystemSetVendorPanelVendorSorting",
+      "shortName": "OnSetVendorPanelVendorSorting",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:UIScriptableSystemSetVendorPanelVendorSorting",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnWardrobeItemAdded;UIScriptableSystemWardrobeAddItem",
+      "shortName": "OnWardrobeItemAdded",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:UIScriptableSystemWardrobeAddItem",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnWardrobeItemInspected;UIScriptableSystemWardrobeInspectItem",
+      "shortName": "OnWardrobeItemInspected",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:UIScriptableSystemWardrobeInspectItem",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnWardrobeSetAdded;UIScriptableSystemWardrobeSetAdded",
+      "shortName": "OnWardrobeSetAdded",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:UIScriptableSystemWardrobeSetAdded",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnWardrobeSetInspected;UIScriptableSystemWardrobeSetInspected",
+      "shortName": "OnWardrobeSetInspected",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:UIScriptableSystemWardrobeSetInspected",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "On_DEV_ScriptableSystemUseNewTooltips;UI_DEV_ScriptableSystemUseNewTooltips",
+      "shortName": "On_DEV_ScriptableSystemUseNewTooltips",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:UI_DEV_ScriptableSystemUseNewTooltips",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetupInstance;",
+      "shortName": "SetupInstance",
+      "flags": 32900
+    }
+  ]
+}

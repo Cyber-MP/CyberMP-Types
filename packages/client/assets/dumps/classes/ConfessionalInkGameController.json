@@ -1,0 +1,247 @@
+{
+  "parent": "DeviceInkGameControllerBase",
+  "name": "ConfessionalInkGameController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "whandle:inkCanvasWidget",
+      "name": "defaultUI",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:inkVideoWidget",
+      "name": "mainDisplayWidget",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:inkTextWidget",
+      "name": "messegeWidget",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:inkTextWidget",
+      "name": "defaultTextWidget",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:inkWidget",
+      "name": "actionsList",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "RunningAnimation",
+      "flags": 4431347744
+    },
+    {
+      "type": "Bool",
+      "name": "isConfessing",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "onGlitchingStateChangedListener",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "onConfessListener",
+      "flags": 4431347744
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnConfess",
+      "shortName": "OnConfess",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnMessegeAnimFinished",
+      "shortName": "OnMessegeAnimFinished",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkanimProxy",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnVideoFinished",
+      "shortName": "OnVideoFinished",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "whandle:inkVideoWidget",
+          "name": "target",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetOwner;",
+      "shortName": "GetOwner",
+      "return": {
+        "type": "handle:ConfessionBooth",
+        "flags": 64
+      },
+      "flags": 33024
+    },
+    {
+      "fullName": "PlayConfessMessegeAnimation;",
+      "shortName": "PlayConfessMessegeAnimation",
+      "flags": 32900
+    },
+    {
+      "fullName": "PlayVideo;ResRefBoolCName",
+      "shortName": "PlayVideo",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "redResourceReferenceScriptToken",
+          "name": "videoPath",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "looped",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "audioEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Refresh;EDeviceStatus",
+      "shortName": "Refresh",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "EDeviceStatus",
+          "name": "state",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterBlackboardCallbacks;IBlackboard",
+      "shortName": "RegisterBlackboardCallbacks",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "handle:gameIBlackboard",
+          "name": "blackboard",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ResetConfessionState;",
+      "shortName": "ResetConfessionState",
+      "flags": 32900
+    },
+    {
+      "fullName": "SetupWidgets;",
+      "shortName": "SetupWidgets",
+      "flags": 33024
+    },
+    {
+      "fullName": "StartConfessing;",
+      "shortName": "StartConfessing",
+      "flags": 32900
+    },
+    {
+      "fullName": "StartGlitchingScreen;GlitchData",
+      "shortName": "StartGlitchingScreen",
+      "flags": 32896,
+      "params": [
+        {
+          "type": "GlitchData",
+          "name": "glitchData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "StopConfessing;",
+      "shortName": "StopConfessing",
+      "flags": 32900
+    },
+    {
+      "fullName": "StopGlitchingScreen;",
+      "shortName": "StopGlitchingScreen",
+      "flags": 32896
+    },
+    {
+      "fullName": "StopVideo;",
+      "shortName": "StopVideo",
+      "flags": 33284
+    },
+    {
+      "fullName": "TurnOff;",
+      "shortName": "TurnOff",
+      "flags": 33284
+    },
+    {
+      "fullName": "TurnOn;",
+      "shortName": "TurnOn",
+      "flags": 33284
+    },
+    {
+      "fullName": "UnRegisterBlackboardCallbacks;IBlackboard",
+      "shortName": "UnRegisterBlackboardCallbacks",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "handle:gameIBlackboard",
+          "name": "blackboard",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateActionWidgets;script_ref<array<SActionWidgetPackage>>",
+      "shortName": "UpdateActionWidgets",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "script_ref:array:SActionWidgetPackage",
+          "name": "widgetsData",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

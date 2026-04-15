@@ -1,0 +1,1748 @@
+{
+  "parent": "entIPlacedComponent",
+  "name": "senseComponent",
+  "flags": 2,
+  "props": [
+    {
+      "type": "Bool",
+      "name": "enableBeingDetectable",
+      "group": "Detectable params",
+      "flags": 6627016705
+    },
+    {
+      "type": "handle:senseVisibleObject",
+      "name": "visibleObject",
+      "group": "Detectable params",
+      "flags": 6627016709
+    },
+    {
+      "type": "handle:senseSensorObject",
+      "name": "sensorObject",
+      "group": "Senses params",
+      "flags": 6627016709
+    },
+    {
+      "type": "Bool",
+      "name": "isEnabled",
+      "group": "Component state",
+      "flags": 6694125569
+    },
+    {
+      "type": "Bool",
+      "name": "forceDisableUI",
+      "group": "Component state",
+      "flags": 6694125569
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "highLevelCb",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "reactionCb",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "wantedLevelChangedCb",
+      "flags": 4431347744
+    },
+    {
+      "type": "gamedataNPCHighLevelState",
+      "name": "highLevelState",
+      "flags": 4297130016
+    },
+    {
+      "type": "TweakDBID",
+      "name": "mainPreset",
+      "flags": 4297130016
+    },
+    {
+      "type": "TweakDBID",
+      "name": "secondaryPreset",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:gameIBlackboard",
+      "name": "puppetBlackboard",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:gameIBlackboard",
+      "name": "uiWantedBarBB",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "hideUIElements",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "enabledSenses",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "shouldStartDetectingPlayerCached",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "wasPlayerLastReactionTarget",
+      "flags": 4297130016
+    },
+    {
+      "type": "ESenseLogSource",
+      "name": "logSource",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "playerTakedownStateCallbackID",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "playerUpperBodyStateCallbackID",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "playerCarryingStateCallbackID",
+      "flags": 4431347744
+    },
+    {
+      "type": "whandle:PlayerPuppet",
+      "name": "playerInPerception",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "senseComponent::RequestDetectionOverwriteReevaluation;GameObjectEntityFloat",
+      "shortName": "RequestDetectionOverwriteReevaluation",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "obj",
+          "flags": 128
+        },
+        {
+          "type": "whandle:entEntity",
+          "name": "target",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "delay",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "senseComponent::RequestMainPresetChange;GameObjectscript_ref<String>",
+      "shortName": "RequestMainPresetChange",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "obj",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:String",
+          "name": "presetName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "senseComponent::RequestPresetChange;GameObjectTweakDBIDBool",
+      "shortName": "RequestPresetChange",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "obj",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "presetID",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "mainPreset",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "senseComponent::RequestSecondaryPresetChange;GameObjectscript_ref<String>",
+      "shortName": "RequestSecondaryPresetChange",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "obj",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:String",
+          "name": "presetName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "senseComponent::RequestSecondaryPresetChange;GameObjectTweakDBID",
+      "shortName": "RequestSecondaryPresetChange",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "obj",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "presetID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "senseComponent::ResetPreset;GameObject",
+      "shortName": "ResetPreset",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "obj",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "senseComponent::ShouldIgnoreIfPlayerCompanion;EntityEntity",
+      "shortName": "ShouldIgnoreIfPlayerCompanion",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:entEntity",
+          "name": "owner",
+          "flags": 128
+        },
+        {
+          "type": "whandle:entEntity",
+          "name": "target",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AddDetection",
+      "shortName": "AddDetection",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13506,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:senseComponent",
+          "name": "target",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "detection",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CreateHearingMappin",
+      "shortName": "CreateHearingMappin",
+      "index": 13518,
+      "flags": 1
+    },
+    {
+      "fullName": "CreateSenseMappin",
+      "shortName": "CreateSenseMappin",
+      "index": 13517,
+      "flags": 1
+    },
+    {
+      "fullName": "GetCurrentPreset",
+      "shortName": "GetCurrentPreset",
+      "return": {
+        "type": "TweakDBID",
+        "flags": 64
+      },
+      "index": 13505,
+      "flags": 1
+    },
+    {
+      "fullName": "GetCurrentPreset",
+      "shortName": "GetCurrentPreset",
+      "index": 13525,
+      "flags": 1
+    },
+    {
+      "fullName": "GetDetection",
+      "shortName": "GetDetection",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 13499,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "entityID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetDetectionMultiplier",
+      "shortName": "GetDetectionMultiplier",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 13515,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "entityID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetDistToTraceEndFromPosToMainTrackedObject",
+      "shortName": "GetDistToTraceEndFromPosToMainTrackedObject",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 13531,
+      "flags": 1,
+      "params": [
+        {
+          "type": "senseAdditionalTraceType",
+          "name": "traceType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetSenseShapes",
+      "shortName": "GetSenseShapes",
+      "return": {
+        "type": "array:handle:senseIShape",
+        "flags": 64
+      },
+      "index": 13508,
+      "flags": 1
+    },
+    {
+      "fullName": "GetTimeSinceLastEntityVisible",
+      "shortName": "GetTimeSinceLastEntityVisible",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 13528,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "entityID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetVisibilityTraceEndToAgentDist",
+      "shortName": "GetVisibilityTraceEndToAgentDist",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 13498,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "object",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HasDetectionAttitudeOverwrite",
+      "shortName": "HasDetectionAttitudeOverwrite",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13512,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "attitudeGroup",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HasDetectionOverwrite",
+      "shortName": "HasDetectionOverwrite",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13509,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "entityID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HasHearingMappin",
+      "shortName": "HasHearingMappin",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13524,
+      "flags": 1
+    },
+    {
+      "fullName": "HasSenseMappin",
+      "shortName": "HasSenseMappin",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13523,
+      "flags": 1
+    },
+    {
+      "fullName": "IgnoreLODChange",
+      "shortName": "IgnoreLODChange",
+      "index": 13536,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "ignoreLOD",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsAgentVisible",
+      "shortName": "IsAgentVisible",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13497,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "object",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsHearingEnabled",
+      "shortName": "IsHearingEnabled",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13495,
+      "flags": 1
+    },
+    {
+      "fullName": "RemoveDetectionAttitudeOverwrite",
+      "shortName": "RemoveDetectionAttitudeOverwrite",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13514,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "attitudeGroup",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RemoveDetectionOverwrite",
+      "shortName": "RemoveDetectionOverwrite",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13511,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "entityID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RemoveForcedSensesTracing",
+      "shortName": "RemoveForcedSensesTracing",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13533,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamedataSenseObjectType",
+          "name": "targetObjectType",
+          "flags": 128
+        },
+        {
+          "type": "EAIAttitude",
+          "name": "attitudeToTarget",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RemoveHearingMappin",
+      "shortName": "RemoveHearingMappin",
+      "index": 13521,
+      "flags": 1
+    },
+    {
+      "fullName": "RemoveSenseMappin",
+      "shortName": "RemoveSenseMappin",
+      "index": 13519,
+      "flags": 1
+    },
+    {
+      "fullName": "RequestRemovingSenseMappin",
+      "shortName": "RequestRemovingSenseMappin",
+      "index": 13520,
+      "flags": 1
+    },
+    {
+      "fullName": "ResetDetection",
+      "shortName": "ResetDetection",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13507,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "entityID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetCrowdsAggressiveState",
+      "shortName": "SetCrowdsAggressiveState",
+      "index": 13496,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "isAggresive",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetDetectionAttitudeOverwrite",
+      "shortName": "SetDetectionAttitudeOverwrite",
+      "index": 13513,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "attitudeGroup",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetDetectionCoolDown",
+      "shortName": "SetDetectionCoolDown",
+      "index": 13501,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Float",
+          "name": "coolDown",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetDetectionDropFactor",
+      "shortName": "SetDetectionDropFactor",
+      "index": 13502,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Float",
+          "name": "detectionDrop",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetDetectionFactor",
+      "shortName": "SetDetectionFactor",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13500,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Float",
+          "name": "detection",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "shapeName",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "SetDetectionMinRange",
+      "shortName": "SetDetectionMinRange",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13503,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Float",
+          "name": "range",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetDetectionMultiplier",
+      "shortName": "SetDetectionMultiplier",
+      "index": 13516,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "entityID",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "multiplier",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetDetectionOverwrite",
+      "shortName": "SetDetectionOverwrite",
+      "index": 13510,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "entityID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetForcedSensesTracing",
+      "shortName": "SetForcedSensesTracing",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13532,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamedataSenseObjectType",
+          "name": "targetObjectType",
+          "flags": 128
+        },
+        {
+          "type": "EAIAttitude",
+          "name": "attitudeToTarget",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetHasPierceableWapon",
+      "shortName": "SetHasPierceableWapon",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13535,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "hasTechWeapon",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetHearingEnabled",
+      "shortName": "SetHearingEnabled",
+      "index": 13494,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "enabled",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetIsPlayerInterestingFromSecuritySystemPOV",
+      "shortName": "SetIsPlayerInterestingFromSecuritySystemPOV",
+      "index": 13538,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "isPlayerInteresting",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetMainTrackedObject",
+      "shortName": "SetMainTrackedObject",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13529,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "target",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetMainTrackedObjectTraceZOffset",
+      "shortName": "SetMainTrackedObjectTraceZOffset",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13530,
+      "flags": 1,
+      "params": [
+        {
+          "type": "senseAdditionalTraceType",
+          "name": "traceType",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "zOffset",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetSensorObjectType",
+      "shortName": "SetSensorObjectType",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13526,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamedataSenseObjectType",
+          "name": "objectType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetTickDistanceOverride",
+      "shortName": "SetTickDistanceOverride",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13534,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Float",
+          "name": "overrideDistance",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetVisibleObjectType",
+      "shortName": "SetVisibleObjectType",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13527,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamedataSenseObjectType",
+          "name": "objectType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetVisionBlockersIgnoredBySensor",
+      "shortName": "SetVisionBlockersIgnoredBySensor",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13537,
+      "flags": 1,
+      "params": [
+        {
+          "type": "senseVisionBlockerTypeFlags",
+          "name": "ignoredVisionBlockers",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateCrowdMappin",
+      "shortName": "UpdateCrowdMappin",
+      "index": 13522,
+      "flags": 1
+    },
+    {
+      "fullName": "UsePreset",
+      "shortName": "UsePreset",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13504,
+      "flags": 1,
+      "params": [
+        {
+          "type": "TweakDBID",
+          "name": "presetID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnAddToBlacklistEvent",
+      "shortName": "OnAddToBlacklistEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:AddToBlacklistEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnAttitudeChanged",
+      "shortName": "OnAttitudeChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameeventsAttitudeChangedEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnAttitudeGroupChanged",
+      "shortName": "OnAttitudeGroupChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameeventsAttitudeGroupChangedEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnCurrentWantedLevelChanged",
+      "shortName": "OnCurrentWantedLevelChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnDeath",
+      "shortName": "OnDeath",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameeventsDeathEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnDefeated",
+      "shortName": "OnDefeated",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameeventsDefeatedEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnDetectedEvent",
+      "shortName": "OnDetectedEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:senseOnDetectedEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnDetectionReachedZero",
+      "shortName": "OnDetectionReachedZero",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:senseOnRemoveDetection",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnHACK_UseSensePresetEvent",
+      "shortName": "OnHACK_UseSensePresetEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameHACK_UseSensePresetEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnHighLevelChanged",
+      "shortName": "OnHighLevelChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnReactionChanged",
+      "shortName": "OnReactionChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnReevaluateDetectionOverwriteEvent",
+      "shortName": "OnReevaluateDetectionOverwriteEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:ReevaluateDetectionOverwriteEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRemoveFromBlacklistEvent",
+      "shortName": "OnRemoveFromBlacklistEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:RemoveFromBlacklistEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnResurrect",
+      "shortName": "OnResurrect",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameeventsResurrectEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSecurityAreaCrossingPerimeter",
+      "shortName": "OnSecurityAreaCrossingPerimeter",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:SecurityAreaCrossingPerimeter",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSenseEnabledEvent",
+      "shortName": "OnSenseEnabledEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:senseEnabledEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSenseInitialize",
+      "shortName": "OnSenseInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:senseInitializeEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSensePresetChangeEvent",
+      "shortName": "OnSensePresetChangeEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:sensePresetChangeEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSenseVisibilityEvent",
+      "shortName": "OnSenseVisibilityEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:senseVisibilityEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSensorOwnerChangedEvent",
+      "shortName": "OnSensorOwnerChangedEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:senseSensorOwnerChangedEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnStatusEffectApplied",
+      "shortName": "OnStatusEffectApplied",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameeventsApplyStatusEffectEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSuspiciousObjectEvent",
+      "shortName": "OnSuspiciousObjectEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:AIbehaviorSuspiciousObjectEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnTargetAssessmentRequest",
+      "shortName": "OnTargetAssessmentRequest",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:TargetAssessmentRequest",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetConstOwnerPuppet;",
+      "shortName": "GetConstOwnerPuppet",
+      "return": {
+        "type": "handle:ScriptedPuppet",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetGame;",
+      "shortName": "GetGame",
+      "return": {
+        "type": "ScriptGameInstance",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "GetOwner;",
+      "shortName": "GetOwner",
+      "return": {
+        "type": "handle:gameObject",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "GetOwnerDevice;",
+      "shortName": "GetOwnerDevice",
+      "return": {
+        "type": "handle:SensorDevice",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "GetOwnerPuppet;",
+      "shortName": "GetOwnerPuppet",
+      "return": {
+        "type": "handle:ScriptedPuppet",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "GetSecuritySystem;",
+      "shortName": "GetSecuritySystem",
+      "return": {
+        "type": "handle:SecuritySystemControllerPS",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "GetShouldStartDetectingPlayerCached;",
+      "shortName": "GetShouldStartDetectingPlayerCached",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 34308
+    },
+    {
+      "fullName": "InitDetectionOverwrite;",
+      "shortName": "InitDetectionOverwrite",
+      "flags": 32900
+    },
+    {
+      "fullName": "IsOwnerFriendlyTowardsPlayer;",
+      "shortName": "IsOwnerFriendlyTowardsPlayer",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "IsOwnerFriendlyTowardsTarget;GameObject",
+      "shortName": "IsOwnerFriendlyTowardsTarget",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "target",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsOwnerHostileTowardsPlayer;",
+      "shortName": "IsOwnerHostileTowardsPlayer",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "IsOwnerHostileTowardsTarget;GameObject",
+      "shortName": "IsOwnerHostileTowardsTarget",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "target",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsPlayerRecentlyDroppedThreat;GameObject",
+      "shortName": "IsPlayerRecentlyDroppedThreat",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "target",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsTargetInteresting;GameObject",
+      "shortName": "IsTargetInteresting",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "target",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsTargetInterestingForSecuritySystem;GameObject",
+      "shortName": "IsTargetInterestingForSecuritySystem",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "target",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsTargetPlayer;GameObject",
+      "shortName": "IsTargetPlayer",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "target",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Log;CNameString",
+      "shortName": "Log",
+      "flags": 41092,
+      "params": [
+        {
+          "type": "CName",
+          "name": "category",
+          "flags": 128
+        },
+        {
+          "type": "String",
+          "name": "message",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "LogBySource;CNameString",
+      "shortName": "LogBySource",
+      "flags": 41092,
+      "params": [
+        {
+          "type": "CName",
+          "name": "category",
+          "flags": 128
+        },
+        {
+          "type": "String",
+          "name": "message",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "LogCategory;String",
+      "shortName": "LogCategory",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 41092,
+      "params": [
+        {
+          "type": "String",
+          "name": "suffix",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "LogEnabled;",
+      "shortName": "LogEnabled",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41092
+    },
+    {
+      "fullName": "LogInfo;String",
+      "shortName": "LogInfo",
+      "flags": 41476,
+      "params": [
+        {
+          "type": "String",
+          "name": "message",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "LogStart;ESenseLogSourceString",
+      "shortName": "LogStart",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "ESenseLogSource",
+          "name": "source",
+          "flags": 128
+        },
+        {
+          "type": "String",
+          "name": "message",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "LogTrueFalse;StringBool",
+      "shortName": "LogTrueFalse",
+      "flags": 41476,
+      "params": [
+        {
+          "type": "String",
+          "name": "message",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnDetach;",
+      "shortName": "OnDetach",
+      "flags": 33924
+    },
+    {
+      "fullName": "OnPlayerCarryingStateChange;Bool",
+      "shortName": "OnPlayerCarryingStateChange",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "carrying",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPlayerTakedownStateChange;Int32",
+      "shortName": "OnPlayerTakedownStateChange",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "takedownState",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPlayerUpperBodyStateChange;Int32",
+      "shortName": "OnPlayerUpperBodyStateChange",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "upperBodyState",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PlayerEnteredPerception;PlayerPuppet",
+      "shortName": "PlayerEnteredPerception",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "whandle:PlayerPuppet",
+          "name": "player",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PlayerExitedPercpetion;PlayerPuppet",
+      "shortName": "PlayerExitedPercpetion",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "whandle:PlayerPuppet",
+          "name": "player",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ReevaluateDetectionOverwrite;GameObjectBool",
+      "shortName": "ReevaluateDetectionOverwrite",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "target",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "isVisible",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "ReevaluatePlayerInterestFromSecuritySystemPOV;",
+      "shortName": "ReevaluatePlayerInterestFromSecuritySystemPOV",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33924
+    },
+    {
+      "fullName": "RefreshCombatDetectionMultiplier;ScriptedPuppet",
+      "shortName": "RefreshCombatDetectionMultiplier",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:ScriptedPuppet",
+          "name": "target",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SendDetectionRiseEvent;GameObjectBool",
+      "shortName": "SendDetectionRiseEvent",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "target",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "isVisible",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ShouldStartDetecting;GameObject",
+      "shortName": "ShouldStartDetecting",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "target",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ShouldStartDetectingPlayer;PlayerPuppet",
+      "shortName": "ShouldStartDetectingPlayer",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:PlayerPuppet",
+          "name": "player",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ToggleComponent;Bool",
+      "shortName": "ToggleComponent",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "condition",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ToggleSenses;Bool",
+      "shortName": "ToggleSenses",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "condition",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TryCreateSenseMappin;",
+      "shortName": "TryCreateSenseMappin",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "UpdateVisionBlockersIgnoredBySensor;",
+      "shortName": "UpdateVisionBlockersIgnoredBySensor",
+      "flags": 33284
+    }
+  ]
+}

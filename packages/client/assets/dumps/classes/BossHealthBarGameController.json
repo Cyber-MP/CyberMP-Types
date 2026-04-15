@@ -1,0 +1,439 @@
+{
+  "parent": "gameuiHUDGameController",
+  "name": "BossHealthBarGameController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkWidgetReference",
+      "name": "healthControllerRef",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "healthPercentage",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "bossName",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "dividerContainerRef",
+      "flags": 4297130017
+    },
+    {
+      "type": "handle:BossHealthStatListener",
+      "name": "statListener",
+      "flags": 4431347744
+    },
+    {
+      "type": "whandle:NPCPuppet",
+      "name": "boss",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:NameplateBarLogicController",
+      "name": "healthController",
+      "flags": 4297130016
+    },
+    {
+      "type": "array:Float",
+      "name": "thresholds",
+      "flags": 6583025696
+    },
+    {
+      "type": "whandle:inkWidget",
+      "name": "root",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "unfoldAnimation",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "foldAnimation",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "fastTravelCallbackID",
+      "flags": 4431347744
+    },
+    {
+      "type": "array:whandle:NPCPuppet",
+      "name": "bossPuppets",
+      "flags": 6583025696
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "BossHealthBarGameController::ReevaluateBossHealthBar;NPCPuppetGameObjectBool",
+      "shortName": "ReevaluateBossHealthBar",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:NPCPuppet",
+          "name": "puppet",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameObject",
+          "name": "target",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "combatEnded",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "BossHealthBarGameController::ReevaluateBossHealthBar;NPCPuppetTargetTrackingExtensionBool",
+      "shortName": "ReevaluateBossHealthBar",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:NPCPuppet",
+          "name": "puppet",
+          "flags": 128
+        },
+        {
+          "type": "whandle:TargetTrackingExtension",
+          "name": "targetTracker",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "combatEnded",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "OnAnimationEnd",
+      "shortName": "OnAnimationEnd",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkanimProxy",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnBossCombatNotifier",
+      "shortName": "OnBossCombatNotifier",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:BossCombatNotifier",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnDamageDealt",
+      "shortName": "OnDamageDealt",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameeventsTargetDamageEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnThreatDefeated",
+      "shortName": "OnThreatDefeated",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:AIThreatDefeated",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnThreatInvalid",
+      "shortName": "OnThreatInvalid",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:AIThreatInvalid",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnThreatKilled",
+      "shortName": "OnThreatKilled",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:AIThreatDeath",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnThreatRemoved",
+      "shortName": "OnThreatRemoved",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:AIThreatRemoved",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnThreatUnconscious",
+      "shortName": "OnThreatUnconscious",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:AIThreatUnconscious",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "AddBoss;NPCPuppet",
+      "shortName": "AddBoss",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:NPCPuppet",
+          "name": "boss",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HideBossHealthBar;",
+      "shortName": "HideBossHealthBar",
+      "flags": 32900
+    },
+    {
+      "fullName": "MoveDividers;",
+      "shortName": "MoveDividers",
+      "flags": 32900
+    },
+    {
+      "fullName": "OnFastTravelFinished;Bool",
+      "shortName": "OnFastTravelFinished",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ReevaluateBossArray;",
+      "shortName": "ReevaluateBossArray",
+      "flags": 32900
+    },
+    {
+      "fullName": "ReevaluatePlayerInBossCombat;",
+      "shortName": "ReevaluatePlayerInBossCombat",
+      "flags": 32900
+    },
+    {
+      "fullName": "RegisterFastTravelCallback;",
+      "shortName": "RegisterFastTravelCallback",
+      "flags": 32900
+    },
+    {
+      "fullName": "RegisterToNewBoss;NPCPuppetBool",
+      "shortName": "RegisterToNewBoss",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:NPCPuppet",
+          "name": "boss",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "useSilentUpdate",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RemoveBoss;NPCPuppet",
+      "shortName": "RemoveBoss",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:NPCPuppet",
+          "name": "boss",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ScaleBetween;FloatFloatFloatFloatFloat",
+      "shortName": "ScaleBetween",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Float",
+          "name": "value",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "inMin",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "inMax",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "outMin",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "outMax",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetUpThresholds;Character_Record",
+      "shortName": "SetUpThresholds",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gamedataCharacter_Record",
+          "name": "boss",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ShowBossHealthBar;NPCPuppetBool",
+      "shortName": "ShowBossHealthBar",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:NPCPuppet",
+          "name": "puppet",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "useSilentUpdate",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SortThresholds;",
+      "shortName": "SortThresholds",
+      "flags": 32900
+    },
+    {
+      "fullName": "UnregisterFastTravelCallback;",
+      "shortName": "UnregisterFastTravelCallback",
+      "flags": 32900
+    },
+    {
+      "fullName": "UnregisterPreviousBoss;",
+      "shortName": "UnregisterPreviousBoss",
+      "flags": 32900
+    },
+    {
+      "fullName": "UpdateHealthValue;FloatBool",
+      "shortName": "UpdateHealthValue",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Float",
+          "name": "newValue",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "silent",
+          "flags": 1152
+        }
+      ]
+    }
+  ]
+}

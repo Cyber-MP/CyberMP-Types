@@ -1,0 +1,241 @@
+{
+  "parent": "inkWidgetLogicController",
+  "name": "BrowserController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkWidgetReference",
+      "name": "homeButton",
+      "flags": 4297195553
+    },
+    {
+      "type": "whandle:LinkController",
+      "name": "homeButtonCoontroller",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "addressText",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "pageContentRoot",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "spinnerContentRoot",
+      "flags": 4297195553
+    },
+    {
+      "type": "whandle:gameJournalManager",
+      "name": "journalManager",
+      "flags": 4297195552
+    },
+    {
+      "type": "redResourceReferenceScriptToken",
+      "name": "spinnerPath",
+      "flags": 4297195553
+    },
+    {
+      "type": "CName",
+      "name": "webPageLibraryID",
+      "flags": 4297195553
+    },
+    {
+      "type": "String",
+      "name": "defaultDevicePage",
+      "flags": 4297195553
+    },
+    {
+      "type": "whandle:BrowserGameController",
+      "name": "gameController",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:gameJournalInternetPage",
+      "name": "currentRequestedPage",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:inkCompoundWidget",
+      "name": "currentPage",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:inkAsyncSpawnRequest",
+      "name": "webPageSpawnRequest",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnPageSpawned",
+      "shortName": "OnPageSpawned",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkWidget",
+          "name": "widget",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "userData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnProcessLinkPressed",
+      "shortName": "OnProcessLinkPressed",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "whandle:inkWidget",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSpinnerSpawned",
+      "shortName": "OnSpinnerSpawned",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkWidget",
+          "name": "widget",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "userData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetDefaultpage;",
+      "shortName": "GetDefaultpage",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetOwnerGameObject;",
+      "shortName": "GetOwnerGameObject",
+      "return": {
+        "type": "handle:Computer",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "Init;BrowserGameController",
+      "shortName": "Init",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:BrowserGameController",
+          "name": "gameController",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "LoadWebPage;script_ref<String>",
+      "shortName": "LoadWebPage",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:String",
+          "name": "address",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnHomeButtonPressed;inkPointerEvent",
+      "shortName": "OnHomeButtonPressed",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetDefaultContent;",
+      "shortName": "SetDefaultContent",
+      "flags": 32900
+    },
+    {
+      "fullName": "SetDefaultPage;script_ref<String>",
+      "shortName": "SetDefaultPage",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "script_ref:String",
+          "name": "startingPage",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetFacts;JournalInternetPage",
+      "shortName": "SetFacts",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "whandle:gameJournalInternetPage",
+          "name": "page",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetWebsiteData;",
+      "shortName": "SetWebsiteData",
+      "flags": 33284
+    },
+    {
+      "fullName": "TryGetWebsiteData;script_ref<String>",
+      "shortName": "TryGetWebsiteData",
+      "return": {
+        "type": "whandle:gameJournalInternetPage",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:String",
+          "name": "address",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UnloadCurrentWebsite;",
+      "shortName": "UnloadCurrentWebsite",
+      "flags": 32900
+    }
+  ]
+}

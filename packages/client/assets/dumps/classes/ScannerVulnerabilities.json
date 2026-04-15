@@ -1,0 +1,65 @@
+{
+  "parent": "ScannerChunk",
+  "name": "ScannerVulnerabilities",
+  "flags": 4,
+  "props": [
+    {
+      "type": "array:Vulnerability",
+      "name": "vulnerabilities",
+      "flags": 6583025696
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "GetType;",
+      "shortName": "GetType",
+      "return": {
+        "type": "ScannerDataType",
+        "flags": 64
+      },
+      "flags": 33280
+    },
+    {
+      "fullName": "GetVulnerabilities;",
+      "shortName": "GetVulnerabilities",
+      "return": {
+        "type": "array:Vulnerability",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "IsValid;",
+      "shortName": "IsValid",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "PushBack;Vulnerability",
+      "shortName": "PushBack",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Vulnerability",
+          "name": "vuln",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Set;script_ref<array<Vulnerability>>",
+      "shortName": "Set",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "script_ref:array:Vulnerability",
+          "name": "vuln",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

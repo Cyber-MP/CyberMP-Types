@@ -1,0 +1,230 @@
+{
+  "parent": "inkWidgetLogicController",
+  "name": "gameuiCharacterRandomizationController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkWidgetReference",
+      "name": "punkSlider",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkGridWidgetReference",
+      "name": "locksGrid",
+      "flags": 4297130017
+    },
+    {
+      "type": "gameuiCharacterCustomizationEditTag",
+      "name": "editMode",
+      "flags": 4297130017
+    },
+    {
+      "type": "Bool",
+      "name": "inputDisabled",
+      "flags": 4297130017
+    },
+    {
+      "type": "array:gamedataCharacterRandomizationCategory",
+      "name": "lockedCategories",
+      "flags": 6583025696
+    },
+    {
+      "type": "array:gamedataCharacterRandomizationCategory",
+      "name": "excludedCatergoriesMirror",
+      "flags": 6583025696
+    },
+    {
+      "type": "array:whandle:inkWidget",
+      "name": "lockWidgets",
+      "flags": 6583025696
+    },
+    {
+      "type": "array:whandle:RandomizationLockListItem",
+      "name": "lockLogics",
+      "flags": 6583025696
+    },
+    {
+      "type": "array:handle:gamedataCharacterRandomizationCategoryUI_Record",
+      "name": "lockDatas",
+      "flags": 6583025696
+    },
+    {
+      "type": "handle:gameuiCharacterRandomizationParametersData",
+      "name": "data",
+      "flags": 4431347744
+    },
+    {
+      "type": "whandle:gameuiICharacterCustomizationSystem",
+      "name": "customizationSystem",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:PunkScoreSelectorControllerInt",
+      "name": "punkSliderController",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnLockSwitched",
+      "shortName": "OnLockSwitched",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPunkScoreUpdateValue",
+      "shortName": "OnPunkScoreUpdateValue",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "whandle:inkWidget",
+          "name": "widget",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ApplyEditModeFilter;",
+      "shortName": "ApplyEditModeFilter",
+      "flags": 32900
+    },
+    {
+      "fullName": "GetRandomizerData;",
+      "shortName": "GetRandomizerData",
+      "return": {
+        "type": "handle:gameuiCharacterRandomizationParametersData",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "InitializeExclusionArrays;",
+      "shortName": "InitializeExclusionArrays",
+      "flags": 32900
+    },
+    {
+      "fullName": "InitializeRandomizerLocksList;",
+      "shortName": "InitializeRandomizerLocksList",
+      "flags": 32900
+    },
+    {
+      "fullName": "OnLockListItemSpawned;inkWidgetCharacterRandomizationCategoryUI_Record",
+      "shortName": "OnLockListItemSpawned",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:inkWidget",
+          "name": "lockWidget",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamedataCharacterRandomizationCategoryUI_Record",
+          "name": "lockData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetCustomizationSystem;gameuiICharacterCustomizationSystem",
+      "shortName": "SetCustomizationSystem",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "whandle:gameuiICharacterCustomizationSystem",
+          "name": "customizationSystem",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetDisabledInputState;Bool",
+      "shortName": "SetDisabledInputState",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "inputDisabled",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ShouldDisplayLockCategory;gamedataCharacterRandomizationCategory",
+      "shortName": "ShouldDisplayLockCategory",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "gamedataCharacterRandomizationCategory",
+          "name": "testedCategory",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateDisabledInputState;",
+      "shortName": "UpdateDisabledInputState",
+      "flags": 32900
+    },
+    {
+      "fullName": "UpdateEditMode;gameuiCharacterCustomizationEditTag",
+      "shortName": "UpdateEditMode",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "gameuiCharacterCustomizationEditTag",
+          "name": "editMode",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateLock;CharacterRandomizationCategory_RecordBool",
+      "shortName": "UpdateLock",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gamedataCharacterRandomizationCategory_Record",
+          "name": "lock",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "enable",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateRandomizationSettingsFromData;",
+      "shortName": "UpdateRandomizationSettingsFromData",
+      "flags": 33284
+    }
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "parent": "gameuiHUDGameController",
+  "name": "buffListGameController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkHorizontalPanelWidgetReference",
+      "name": "buffsList",
+      "flags": 4297130017
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "bbBuffList",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "bbDeBuffList",
+      "flags": 4431347744
+    },
+    {
+      "type": "whandle:gameIBlackboard",
+      "name": "uiBlackboard",
+      "flags": 4297130016
+    },
+    {
+      "type": "array:gameuiBuffInfo",
+      "name": "buffDataList",
+      "flags": 6583025696
+    },
+    {
+      "type": "array:gameuiBuffInfo",
+      "name": "debuffDataList",
+      "flags": 6583025696
+    },
+    {
+      "type": "array:whandle:inkWidget",
+      "name": "buffWidgets",
+      "flags": 6583025696
+    },
+    {
+      "type": "whandle:gameuiGameSystemUI",
+      "name": "UISystem",
+      "flags": 4297130016
+    },
+    {
+      "type": "Int32",
+      "name": "pendingRequests",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnBuffDataChanged",
+      "shortName": "OnBuffDataChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Variant",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnBuffSpawned",
+      "shortName": "OnBuffSpawned",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkWidget",
+          "name": "newItem",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "userData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnDeBuffDataChanged",
+      "shortName": "OnDeBuffDataChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Variant",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnPlayerAttach",
+      "shortName": "OnPlayerAttach",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "playerGameObject",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "MergeKnockdowns;",
+      "shortName": "MergeKnockdowns",
+      "flags": 32900
+    },
+    {
+      "fullName": "SendVisibilityUpdate;BoolBool",
+      "shortName": "SendVisibilityUpdate",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "oldVisible",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "nowVisible",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateBuffDebuffList;",
+      "shortName": "UpdateBuffDebuffList",
+      "flags": 32900
+    },
+    {
+      "fullName": "UpdateBuffs;",
+      "shortName": "UpdateBuffs",
+      "flags": 32900
+    },
+    {
+      "fullName": "UpdateVisibility;",
+      "shortName": "UpdateVisibility",
+      "flags": 32900
+    }
+  ]
+}

@@ -1,0 +1,339 @@
+{
+  "parent": "gamedataTweakDBRecord",
+  "name": "gamedataSensePreset_Record",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "Curves",
+      "shortName": "Curves",
+      "index": 6161,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataDetectionCurve_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "CurvesContains",
+      "shortName": "CurvesContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 6165,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataDetectionCurve_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "DayNightCurve",
+      "shortName": "DayNightCurve",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "index": 6171,
+      "flags": 1
+    },
+    {
+      "fullName": "DetectionCoolDownTime",
+      "shortName": "DetectionCoolDownTime",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 6174,
+      "flags": 1
+    },
+    {
+      "fullName": "DetectionDifficultyModifierEasy",
+      "shortName": "DetectionDifficultyModifierEasy",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 6175,
+      "flags": 1
+    },
+    {
+      "fullName": "DetectionDifficultyModifierHard",
+      "shortName": "DetectionDifficultyModifierHard",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 6176,
+      "flags": 1
+    },
+    {
+      "fullName": "DetectionDifficultyModifierNormal",
+      "shortName": "DetectionDifficultyModifierNormal",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 6173,
+      "flags": 1
+    },
+    {
+      "fullName": "DetectionDifficultyModifierVeryHard",
+      "shortName": "DetectionDifficultyModifierVeryHard",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 6179,
+      "flags": 1
+    },
+    {
+      "fullName": "DetectionDropFactor",
+      "shortName": "DetectionDropFactor",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 6172,
+      "flags": 1
+    },
+    {
+      "fullName": "DetectionFactor",
+      "shortName": "DetectionFactor",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 6178,
+      "flags": 1
+    },
+    {
+      "fullName": "DetectionPartCoolDownTime",
+      "shortName": "DetectionPartCoolDownTime",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 6177,
+      "flags": 1
+    },
+    {
+      "fullName": "GetCurvesCount",
+      "shortName": "GetCurvesCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 6162,
+      "flags": 1
+    },
+    {
+      "fullName": "GetCurvesItem",
+      "shortName": "GetCurvesItem",
+      "return": {
+        "type": "whandle:gamedataDetectionCurve_Record",
+        "flags": 64
+      },
+      "index": 6163,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetCurvesItemHandle",
+      "shortName": "GetCurvesItemHandle",
+      "return": {
+        "type": "handle:gamedataDetectionCurve_Record",
+        "flags": 64
+      },
+      "index": 6164,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetMaterialCurvesCount",
+      "shortName": "GetMaterialCurvesCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 6167,
+      "flags": 1
+    },
+    {
+      "fullName": "GetMaterialCurvesItem",
+      "shortName": "GetMaterialCurvesItem",
+      "return": {
+        "type": "whandle:gamedataDetectionCurve_Record",
+        "flags": 64
+      },
+      "index": 6168,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetMaterialCurvesItemHandle",
+      "shortName": "GetMaterialCurvesItemHandle",
+      "return": {
+        "type": "handle:gamedataDetectionCurve_Record",
+        "flags": 64
+      },
+      "index": 6169,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetShapesCount",
+      "shortName": "GetShapesCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 6157,
+      "flags": 1
+    },
+    {
+      "fullName": "GetShapesItem",
+      "shortName": "GetShapesItem",
+      "return": {
+        "type": "whandle:gamedataSenseShape_Record",
+        "flags": 64
+      },
+      "index": 6158,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetShapesItemHandle",
+      "shortName": "GetShapesItemHandle",
+      "return": {
+        "type": "handle:gamedataSenseShape_Record",
+        "flags": 64
+      },
+      "index": 6159,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IgnorePhysicsTest",
+      "shortName": "IgnorePhysicsTest",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 6181,
+      "flags": 1
+    },
+    {
+      "fullName": "MaterialCurves",
+      "shortName": "MaterialCurves",
+      "index": 6166,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataDetectionCurve_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "MaterialCurvesContains",
+      "shortName": "MaterialCurvesContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 6170,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataDetectionCurve_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Shapes",
+      "shortName": "Shapes",
+      "index": 6156,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataSenseShape_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "ShapesContains",
+      "shortName": "ShapesContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 6160,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataSenseShape_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UseZCorrection",
+      "shortName": "UseZCorrection",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 6180,
+      "flags": 1
+    }
+  ]
+}

@@ -1,0 +1,936 @@
+{
+  "parent": "SensorDevice",
+  "name": "SecurityTurret",
+  "flags": 4,
+  "props": [
+    {
+      "type": "handle:AnimFeature_SecurityTurretData",
+      "name": "animFeature",
+      "flags": 4431347744
+    },
+    {
+      "type": "CName",
+      "name": "animFeatureName",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:entSlotComponent",
+      "name": "lookAtSlot",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:entMeshComponent",
+      "name": "laserMesh",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:gameTargetingComponent",
+      "name": "targetingComp",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:gameStaticTriggerAreaComponent",
+      "name": "triggerSideOne",
+      "flags": 4431413280
+    },
+    {
+      "type": "handle:gameStaticTriggerAreaComponent",
+      "name": "triggerSideTwo",
+      "flags": 4431413280
+    },
+    {
+      "type": "whandle:gameweaponObject",
+      "name": "weapon",
+      "flags": 4297195552
+    },
+    {
+      "type": "gameItemID",
+      "name": "itemID",
+      "flags": 4297195552
+    },
+    {
+      "type": "handle:gameEffectInstance",
+      "name": "laserGameEffect",
+      "flags": 4431413280
+    },
+    {
+      "type": "CName",
+      "name": "laserFXSlotName",
+      "flags": 4297195552
+    },
+    {
+      "type": "gameDelayID",
+      "name": "burstDelayEvtID",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isBurstDelayOngoing",
+      "flags": 4297130016
+    },
+    {
+      "type": "gameDelayID",
+      "name": "nextShootCycleDelayEvtID",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isShootingOngoing",
+      "flags": 4297130016
+    },
+    {
+      "type": "Float",
+      "name": "timeToNextShot",
+      "flags": 4297130016
+    },
+    {
+      "type": "Int32",
+      "name": "optim_CheckTargetParametersShots",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:gamedataWeaponItem_Record",
+      "name": "weaponRecord",
+      "flags": 4431347744
+    },
+    {
+      "type": "TweakDBID",
+      "name": "weaponTDBID",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:SecurityTurretReplicatedState",
+      "name": "netClientCurrentlyAppliedState",
+      "flags": 4431347744
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "SecurityTurret::CreateInputHint;GameInstanceBool",
+      "shortName": "CreateInputHint",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "isVisible",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnActionEngineering",
+      "shortName": "OnActionEngineering",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:ActionEngineering",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnAutoKillDelayEvent",
+      "shortName": "OnAutoKillDelayEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:AutoKillDelayEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnDamageReceived",
+      "shortName": "OnDamageReceived",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameeventsDamageReceivedEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnDeath",
+      "shortName": "OnDeath",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameeventsDeathEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnDetach",
+      "shortName": "OnDetach",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnDisassembleDevice",
+      "shortName": "OnDisassembleDevice",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:DisassembleDevice",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnGameAttached",
+      "shortName": "OnGameAttached",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnGrabReferenceToWeaponEvent",
+      "shortName": "OnGrabReferenceToWeaponEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:GrabReferenceToWeaponEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnHit",
+      "shortName": "OnHit",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnQuestForceOverheat",
+      "shortName": "OnQuestForceOverheat",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:QuestForceOverheat",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnQuestForceReload",
+      "shortName": "OnQuestForceReload",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:QuestForceReload",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnQuestRemoveWeapon",
+      "shortName": "OnQuestRemoveWeapon",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:QuestRemoveWeapon",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnQuestResetDeviceToInitialState",
+      "shortName": "OnQuestResetDeviceToInitialState",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:QuestResetDeviceToInitialState",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRequestComponents",
+      "shortName": "OnRequestComponents",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "entEntityRequestComponentsInterface",
+          "name": "ri",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRipOff",
+      "shortName": "OnRipOff",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:RipOff",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnTCSTakeOverControlActivate",
+      "shortName": "OnTCSTakeOverControlActivate",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:TCSTakeOverControlActivate",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnTCSTakeOverControlDeactivate",
+      "shortName": "OnTCSTakeOverControlDeactivate",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:TCSTakeOverControlDeactivate",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnTakeControl",
+      "shortName": "OnTakeControl",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "entEntityResolveComponentsInterface",
+          "name": "ri",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnTargetLocked",
+      "shortName": "OnTargetLocked",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:TargetLockedEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnTurnONTurretAfterDuration",
+      "shortName": "OnTurnONTurretAfterDuration",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:TurnONTurretAfterDuration",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnTurretBurstShootingDelayEvent",
+      "shortName": "OnTurretBurstShootingDelayEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:TurretBurstShootingDelayEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnTurretShootingIntervalEvent",
+      "shortName": "OnTurretShootingIntervalEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:TurretShootingIntervalEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnWorkspotFinished",
+      "shortName": "OnWorkspotFinished",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "CName",
+          "name": "componentName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ApplyReplicatedState;DeviceReplicatedState",
+      "shortName": "ApplyReplicatedState",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "handle:gameDeviceReplicatedState",
+          "name": "state",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ApplyShootingInterval;",
+      "shortName": "ApplyShootingInterval",
+      "flags": 32900
+    },
+    {
+      "fullName": "CheckTargetParameters;",
+      "shortName": "CheckTargetParameters",
+      "flags": 33028
+    },
+    {
+      "fullName": "ControlledDeviceInputAction;Bool",
+      "shortName": "ControlledDeviceInputAction",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "isPressed",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CutPower;",
+      "shortName": "CutPower",
+      "flags": 33024
+    },
+    {
+      "fullName": "DamagePipelineFinalized;gameHitEvent",
+      "shortName": "DamagePipelineFinalized",
+      "flags": 34048,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "DeterminGameplayRole;",
+      "shortName": "DeterminGameplayRole",
+      "return": {
+        "type": "EGameplayRole",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "DeterminGameplayRoleMappinRange;script_ref<SDeviceMappinData>",
+      "shortName": "DeterminGameplayRoleMappinRange",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 41472,
+      "params": [
+        {
+          "type": "script_ref:SDeviceMappinData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "EnterWorkspot;GameObjectBoolCNameCName",
+      "shortName": "EnterWorkspot",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "activator",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "freeCamera",
+          "flags": 1152
+        },
+        {
+          "type": "CName",
+          "name": "componentName",
+          "flags": 1152
+        },
+        {
+          "type": "CName",
+          "name": "deviceData",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "GetController;",
+      "shortName": "GetController",
+      "return": {
+        "type": "handle:SecurityTurretController",
+        "flags": 64
+      },
+      "flags": 41088
+    },
+    {
+      "fullName": "GetDevicePS;",
+      "shortName": "GetDevicePS",
+      "return": {
+        "type": "handle:SecurityTurretControllerPS",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "GetDeviceStateClass;",
+      "shortName": "GetDeviceStateClass",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 42496
+    },
+    {
+      "fullName": "GetFirerate;",
+      "shortName": "GetFirerate",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 33028
+    },
+    {
+      "fullName": "GetObjectToForwardHighlight;",
+      "shortName": "GetObjectToForwardHighlight",
+      "return": {
+        "type": "array:whandle:gameObject",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "GetReplicationStateToUpdate;",
+      "shortName": "GetReplicationStateToUpdate",
+      "return": {
+        "type": "handle:SecurityTurretReplicatedState",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "GetRipOffTriggerSide;Entity",
+      "shortName": "GetRipOffTriggerSide",
+      "return": {
+        "type": "EDoorTriggerSide",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:entEntity",
+          "name": "forEntity",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetScannerName;",
+      "shortName": "GetScannerName",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "flags": 41216
+    },
+    {
+      "fullName": "GetTurretWeapon;",
+      "shortName": "GetTurretWeapon",
+      "return": {
+        "type": "whandle:gameweaponObject",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetWeapon;",
+      "shortName": "GetWeapon",
+      "return": {
+        "type": "whandle:gameweaponObject",
+        "flags": 64
+      },
+      "flags": 33028
+    },
+    {
+      "fullName": "GiveWeaponToTurret;",
+      "shortName": "GiveWeaponToTurret",
+      "flags": 33028
+    },
+    {
+      "fullName": "GrabReferenceToWeapon;",
+      "shortName": "GrabReferenceToWeapon",
+      "flags": 33028
+    },
+    {
+      "fullName": "IsTurret;",
+      "shortName": "IsTurret",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 42496
+    },
+    {
+      "fullName": "MultiplyBaseAIRecoil;",
+      "shortName": "MultiplyBaseAIRecoil",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "OnAllValidTargetsDisappears;",
+      "shortName": "OnAllValidTargetsDisappears",
+      "flags": 33280
+    },
+    {
+      "fullName": "OnCurrentTargetAppears;GameObject",
+      "shortName": "OnCurrentTargetAppears",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "target",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessShootingPattern;",
+      "shortName": "ProcessShootingPattern",
+      "flags": 32900
+    },
+    {
+      "fullName": "PushPersistentData;",
+      "shortName": "PushPersistentData",
+      "flags": 33024
+    },
+    {
+      "fullName": "QueueNextShot;Float",
+      "shortName": "QueueNextShot",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Float",
+          "name": "delay",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ReplicateHealth;Float",
+      "shortName": "ReplicateHealth",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Float",
+          "name": "health",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ReplicateIsDead;Bool",
+      "shortName": "ReplicateIsDead",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "isDead",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ReplicateIsOn;Bool",
+      "shortName": "ReplicateIsOn",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "isOn",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ReplicateIsShooting;Bool",
+      "shortName": "ReplicateIsShooting",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "isShooting",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RipOffTurret;",
+      "shortName": "RipOffTurret",
+      "flags": 32900
+    },
+    {
+      "fullName": "SelectShootingPattern;WeaponObjectGameObjectBool",
+      "shortName": "SelectShootingPattern",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "whandle:gameweaponObject",
+          "name": "weapon",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameObject",
+          "name": "weaponOwner",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "forceReselection",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "SetAsIntrestingTarget;GameObject",
+      "shortName": "SetAsIntrestingTarget",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33280,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "target",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetFirerate;Float",
+      "shortName": "SetFirerate",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Float",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetLookAtPositionProviderOnFollowedTarget;LookAtAddEventGameObject",
+      "shortName": "SetLookAtPositionProviderOnFollowedTarget",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "handle:entLookAtAddEvent",
+          "name": "evt",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameObject",
+          "name": "otherTarget",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "ShootAttachedWeapon;Bool",
+      "shortName": "ShootAttachedWeapon",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "shootStart",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "ShootStart;",
+      "shortName": "ShootStart",
+      "flags": 32900
+    },
+    {
+      "fullName": "ShootStop;",
+      "shortName": "ShootStop",
+      "flags": 32900
+    },
+    {
+      "fullName": "ShouldShowDamageNumber;",
+      "shortName": "ShouldShowDamageNumber",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "SimplifiedTrackingSetUp;Vector4",
+      "shortName": "SimplifiedTrackingSetUp",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Vector4",
+          "name": "originalPosition",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ToggleTurretVisuals;Bool",
+      "shortName": "ToggleTurretVisuals",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "toggle",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TurnOffDevice;",
+      "shortName": "TurnOffDevice",
+      "flags": 33024
+    },
+    {
+      "fullName": "TurnOnDevice;",
+      "shortName": "TurnOnDevice",
+      "flags": 33024
+    }
+  ]
+}

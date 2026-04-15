@@ -1,0 +1,130 @@
+{
+  "parent": "gameuiWidgetGameController",
+  "name": "ExpansionErrorPopupController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkTextWidgetReference",
+      "name": "title",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "description",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "errorCodeText",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "closeButtonRef",
+      "flags": 4297130017
+    },
+    {
+      "type": "CName",
+      "name": "introAnimationName",
+      "flags": 4297130017
+    },
+    {
+      "type": "CName",
+      "name": "outroAnimationName",
+      "flags": 4297130017
+    },
+    {
+      "type": "handle:ExpansionErrorPopuppData",
+      "name": "data",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "animProxy",
+      "flags": 4431347744
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnOutroAnimationFinished",
+      "shortName": "OnOutroAnimationFinished",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkanimProxy",
+          "name": "proxy",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPressClose",
+      "shortName": "OnPressClose",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRelease",
+      "shortName": "OnRelease",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "Close;",
+      "shortName": "Close",
+      "flags": 32900
+    },
+    {
+      "fullName": "SetMessage;",
+      "shortName": "SetMessage",
+      "flags": 32900
+    },
+    {
+      "fullName": "SetupData;",
+      "shortName": "SetupData",
+      "flags": 32900
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "parent": "ActionBool",
+  "name": "ChangeMusicAction",
+  "flags": 4,
+  "props": [
+    {
+      "type": "String",
+      "name": "interactionRecordName",
+      "flags": 4297195552
+    },
+    {
+      "type": "handle:MusicSettings",
+      "name": "settings",
+      "flags": 4431544352
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "ChangeMusicAction::IsAvailable;ScriptableDeviceComponentPS",
+      "shortName": "IsAvailable",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:ScriptableDeviceComponentPS",
+          "name": "device",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ChangeMusicAction::IsClearanceValid;Clearance",
+      "shortName": "IsClearanceValid",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gamedeviceClearance",
+          "name": "clearance",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ChangeMusicAction::IsContextValid;script_ref<GetActionsContext>",
+      "shortName": "IsContextValid",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "script_ref:gameGetActionsContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetMusicSettings;",
+      "shortName": "GetMusicSettings",
+      "return": {
+        "type": "handle:MusicSettings",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "GetTweakDBChoiceRecord;",
+      "shortName": "GetTweakDBChoiceRecord",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "flags": 33280
+    },
+    {
+      "fullName": "SetProperties;MusicSettings",
+      "shortName": "SetProperties",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:MusicSettings",
+          "name": "settings",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetProperties;MusicSettingsTweakDBID",
+      "shortName": "SetProperties",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:MusicSettings",
+          "name": "settings",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "nameOnTrue",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

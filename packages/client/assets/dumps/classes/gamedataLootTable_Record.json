@@ -1,0 +1,259 @@
+{
+  "parent": "gamedataTweakDBRecord",
+  "name": "gamedataLootTable_Record",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "GetLootItemsCount",
+      "shortName": "GetLootItemsCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 6311,
+      "flags": 1
+    },
+    {
+      "fullName": "GetLootItemsItem",
+      "shortName": "GetLootItemsItem",
+      "return": {
+        "type": "whandle:gamedataLootItem_Record",
+        "flags": 64
+      },
+      "index": 6312,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetLootItemsItemHandle",
+      "shortName": "GetLootItemsItemHandle",
+      "return": {
+        "type": "handle:gamedataLootItem_Record",
+        "flags": 64
+      },
+      "index": 6313,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetLootTableInclusionsCount",
+      "shortName": "GetLootTableInclusionsCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 6321,
+      "flags": 1
+    },
+    {
+      "fullName": "GetLootTableInclusionsItem",
+      "shortName": "GetLootTableInclusionsItem",
+      "return": {
+        "type": "whandle:gamedataLootTable_Record",
+        "flags": 64
+      },
+      "index": 6322,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetLootTableInclusionsItemHandle",
+      "shortName": "GetLootTableInclusionsItemHandle",
+      "return": {
+        "type": "handle:gamedataLootTable_Record",
+        "flags": 64
+      },
+      "index": 6323,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetQueriesCount",
+      "shortName": "GetQueriesCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 6316,
+      "flags": 1
+    },
+    {
+      "fullName": "GetQueriesItem",
+      "shortName": "GetQueriesItem",
+      "return": {
+        "type": "whandle:gamedataItemQueryElement_Record",
+        "flags": 64
+      },
+      "index": 6317,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetQueriesItemHandle",
+      "shortName": "GetQueriesItemHandle",
+      "return": {
+        "type": "handle:gamedataItemQueryElement_Record",
+        "flags": 64
+      },
+      "index": 6318,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "LootGenerationType",
+      "shortName": "LootGenerationType",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "index": 6309,
+      "flags": 1
+    },
+    {
+      "fullName": "LootItems",
+      "shortName": "LootItems",
+      "index": 6310,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataLootItem_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "LootItemsContains",
+      "shortName": "LootItemsContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 6314,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataLootItem_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "LootTableInclusions",
+      "shortName": "LootTableInclusions",
+      "index": 6320,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataLootTable_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "LootTableInclusionsContains",
+      "shortName": "LootTableInclusionsContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 6324,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataLootTable_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "MaxItemsToLoot",
+      "shortName": "MaxItemsToLoot",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 6325,
+      "flags": 1
+    },
+    {
+      "fullName": "MinItemsToLoot",
+      "shortName": "MinItemsToLoot",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 6326,
+      "flags": 1
+    },
+    {
+      "fullName": "Queries",
+      "shortName": "Queries",
+      "index": 6315,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataItemQueryElement_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "QueriesContains",
+      "shortName": "QueriesContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 6319,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataItemQueryElement_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

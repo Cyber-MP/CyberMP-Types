@@ -1,0 +1,608 @@
+{
+  "parent": "gameuiHUDGameController",
+  "name": "AutoDriveController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkWidgetReference",
+      "name": "inputHintContainer",
+      "flags": 4297326625
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "autoDriveContentContainer",
+      "flags": 4297326625
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "countersContainer",
+      "flags": 4297326625
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "freeRoamHeaderContainer",
+      "flags": 4297326625
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "remainingDistanceCounterContainer",
+      "flags": 4297326625
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "remainingDistanceCounterText",
+      "flags": 4297326625
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "remainingTimeCounterContainer",
+      "flags": 4297326625
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "remainingTimeCounterText",
+      "flags": 4297326625
+    },
+    {
+      "type": "ScriptGameInstance",
+      "name": "gameInstance",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:AutoDriveSystem",
+      "name": "autoDriveSystem",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:PlayerPuppet",
+      "name": "player",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:gameIBlackboard",
+      "name": "autodriveBB",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:UI_AutodriveDataDef",
+      "name": "autodriveBBDef",
+      "flags": 4431347744
+    },
+    {
+      "type": "whandle:gameIBlackboard",
+      "name": "quickslotBB",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:UI_QuickSlotsDataDef",
+      "name": "quickslotBBDef",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "fakeUpdateProxy",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "autoDriveEnabledCallbackHandle",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "cinematicCameraCallbackHandle",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "autoDriveAvailableCallbackHandle",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "freeRoamEnabledCallbackHandle",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "radialWheelCallbackHandle",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "playerVehicleStateCallbackHandle",
+      "flags": 4431347744
+    },
+    {
+      "type": "Uint32",
+      "name": "q000StartedListenerId",
+      "flags": 4297130016
+    },
+    {
+      "type": "Uint32",
+      "name": "dpadHintsVisibilityEnabledListenerId",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:textTextParameterSet",
+      "name": "remainingDistanceCounterTextParams",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:textTextParameterSet",
+      "name": "remainingTimeCounterTextParams",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "inputHintVisibilityAnimProxy",
+      "flags": 4431347744
+    },
+    {
+      "type": "Bool",
+      "name": "inputHintVisible",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "wheelIconAnimProxy",
+      "flags": 4431347744
+    },
+    {
+      "type": "Bool",
+      "name": "wheelAnimationEnabled",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isHoldingDirectionInput",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "slowCloseAnimProxy",
+      "flags": 4431347744
+    },
+    {
+      "type": "Bool",
+      "name": "slowCloseAnimIsReversed",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "containerAnimProxy",
+      "flags": 4431347744
+    },
+    {
+      "type": "Bool",
+      "name": "containerVisible",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "containerAnimationPlaying",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "rootAnimProxy",
+      "flags": 4431347744
+    },
+    {
+      "type": "Bool",
+      "name": "rootVisible",
+      "flags": 4297130016
+    },
+    {
+      "type": "AutoDriveDriveType",
+      "name": "activeDriveType",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "headerAnimProxy",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "inputHintDriveTypeAnimProxy",
+      "flags": 4431347744
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnAction",
+      "shortName": "OnAction",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "gameinputScriptListenerAction",
+          "name": "action",
+          "flags": 128
+        },
+        {
+          "type": "gameinputScriptListenerActionConsumer",
+          "name": "consumer",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnAvailabilityUpdate",
+      "shortName": "OnAvailabilityUpdate",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkanimProxy",
+          "name": "proxy",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnContainerAnimationFinished",
+      "shortName": "OnContainerAnimationFinished",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkanimProxy",
+          "name": "proxy",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnDataUpdate",
+      "shortName": "OnDataUpdate",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkanimProxy",
+          "name": "proxy",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnPlayerAttach",
+      "shortName": "OnPlayerAttach",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "playerPuppet",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPlayerDetach",
+      "shortName": "OnPlayerDetach",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "playerPuppet",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRadialMenuShown",
+      "shortName": "OnRadialMenuShown",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSlowCloseAnimationThreshold",
+      "shortName": "OnSlowCloseAnimationThreshold",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "whandle:inkWidget",
+          "name": "target",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "ChangeSlowCloseAnimationDirection;",
+      "shortName": "ChangeSlowCloseAnimationDirection",
+      "flags": 32900
+    },
+    {
+      "fullName": "InitTextDisplays;",
+      "shortName": "InitTextDisplays",
+      "flags": 32900
+    },
+    {
+      "fullName": "IsAnimationPlaying;",
+      "shortName": "IsAnimationPlaying",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41092
+    },
+    {
+      "fullName": "OnAutoDriveAvailabilityChanged;Bool",
+      "shortName": "OnAutoDriveAvailabilityChanged",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "state",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnAutoDriveStateChanged;Bool",
+      "shortName": "OnAutoDriveStateChanged",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "state",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnCinematicCameraChanged;Bool",
+      "shortName": "OnCinematicCameraChanged",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "active",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnFactChange;Int32",
+      "shortName": "OnFactChange",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "factValue",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnFreeRoamStateChanged;Bool",
+      "shortName": "OnFreeRoamStateChanged",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "state",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPlayerVehicleStateChange;Int32",
+      "shortName": "OnPlayerVehicleStateChange",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetActiveDriveType;AutoDriveDriveTypeBool",
+      "shortName": "SetActiveDriveType",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "AutoDriveDriveType",
+          "name": "type",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "force",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetAvailabilityUpdateEnabled;Bool",
+      "shortName": "SetAvailabilityUpdateEnabled",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "on",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetContainerVisibility;BoolBoolBool",
+      "shortName": "SetContainerVisibility",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "visible",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "instant",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "force",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetDataUpdateEnabled;Bool",
+      "shortName": "SetDataUpdateEnabled",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "on",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetRootVisibility;Bool",
+      "shortName": "SetRootVisibility",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "visible",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetWheelAnimationEnabled;Bool",
+      "shortName": "SetWheelAnimationEnabled",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "enabled",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ShouldInputHintBeVisible;",
+      "shortName": "ShouldInputHintBeVisible",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "StartSlowCloseAnimProxy;inkAnimOptions",
+      "shortName": "StartSlowCloseAnimProxy",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "inkanimPlaybackOptions",
+          "name": "animOptions",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateActiveDriveType;Bool",
+      "shortName": "UpdateActiveDriveType",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "force",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateInputHintState;",
+      "shortName": "UpdateInputHintState",
+      "flags": 32900
+    },
+    {
+      "fullName": "UpdateInputHintVisibility;BoolBool",
+      "shortName": "UpdateInputHintVisibility",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "instant",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "force",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateSlowCloseAnimationState;",
+      "shortName": "UpdateSlowCloseAnimationState",
+      "flags": 32900
+    },
+    {
+      "fullName": "UpdateUIData;",
+      "shortName": "UpdateUIData",
+      "flags": 32900
+    }
+  ]
+}

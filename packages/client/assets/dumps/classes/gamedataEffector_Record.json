@@ -1,0 +1,131 @@
+{
+  "parent": "gamedataTweakDBRecord",
+  "name": "gamedataEffector_Record",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "EffectorClassName",
+      "shortName": "EffectorClassName",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "index": 3491,
+      "flags": 1
+    },
+    {
+      "fullName": "GetStatModifierGroupsCount",
+      "shortName": "GetStatModifierGroupsCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 3487,
+      "flags": 1
+    },
+    {
+      "fullName": "GetStatModifierGroupsItem",
+      "shortName": "GetStatModifierGroupsItem",
+      "return": {
+        "type": "whandle:gamedataStatModifierGroup_Record",
+        "flags": 64
+      },
+      "index": 3488,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetStatModifierGroupsItemHandle",
+      "shortName": "GetStatModifierGroupsItemHandle",
+      "return": {
+        "type": "handle:gamedataStatModifierGroup_Record",
+        "flags": 64
+      },
+      "index": 3489,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PrereqRecord",
+      "shortName": "PrereqRecord",
+      "return": {
+        "type": "whandle:gamedataIPrereq_Record",
+        "flags": 64
+      },
+      "index": 3484,
+      "flags": 1
+    },
+    {
+      "fullName": "PrereqRecordHandle",
+      "shortName": "PrereqRecordHandle",
+      "return": {
+        "type": "handle:gamedataIPrereq_Record",
+        "flags": 64
+      },
+      "index": 3485,
+      "flags": 1
+    },
+    {
+      "fullName": "RemoveAfterActionCall",
+      "shortName": "RemoveAfterActionCall",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 3493,
+      "flags": 1
+    },
+    {
+      "fullName": "RemoveAfterPrereqCheck",
+      "shortName": "RemoveAfterPrereqCheck",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 3492,
+      "flags": 1
+    },
+    {
+      "fullName": "StatModifierGroups",
+      "shortName": "StatModifierGroups",
+      "index": 3486,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataStatModifierGroup_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "StatModifierGroupsContains",
+      "shortName": "StatModifierGroupsContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 3490,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataStatModifierGroup_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

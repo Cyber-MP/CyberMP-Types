@@ -1,0 +1,182 @@
+{
+  "name": "ResourceRef",
+  "flags": 2,
+  "funcs": [
+    {
+      "fullName": "FromVariant",
+      "shortName": "FromVariant",
+      "return": {
+        "type": "ResourceRef",
+        "flags": 64
+      },
+      "index": 15302,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Variant",
+          "name": "arg",
+          "flags": 0
+        }
+      ]
+    },
+    {
+      "fullName": "GetHash",
+      "shortName": "GetHash",
+      "return": {
+        "type": "Uint64",
+        "flags": 64
+      },
+      "index": 15295,
+      "flags": 3,
+      "params": [
+        {
+          "type": "script_ref:ResourceRef",
+          "name": "self",
+          "flags": 0
+        }
+      ]
+    },
+    {
+      "fullName": "GetPath",
+      "shortName": "GetPath",
+      "return": {
+        "type": "redResourceReferenceScriptToken",
+        "flags": 64
+      },
+      "index": 15294,
+      "flags": 3,
+      "params": [
+        {
+          "type": "script_ref:ResourceRef",
+          "name": "self",
+          "flags": 0
+        }
+      ]
+    },
+    {
+      "fullName": "GetResource",
+      "shortName": "GetResource",
+      "return": {
+        "type": "handle:CResource",
+        "flags": 64
+      },
+      "index": 15297,
+      "flags": 3,
+      "params": [
+        {
+          "type": "script_ref:ResourceRef",
+          "name": "self",
+          "flags": 0
+        }
+      ]
+    },
+    {
+      "fullName": "GetToken",
+      "shortName": "GetToken",
+      "return": {
+        "type": "handle:ResourceToken",
+        "flags": 64
+      },
+      "index": 15296,
+      "flags": 3,
+      "params": [
+        {
+          "type": "script_ref:ResourceRef",
+          "name": "self",
+          "flags": 0
+        }
+      ]
+    },
+    {
+      "fullName": "IsEmpty",
+      "shortName": "IsEmpty",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 15298,
+      "flags": 3,
+      "params": [
+        {
+          "type": "script_ref:ResourceRef",
+          "name": "self",
+          "flags": 0
+        }
+      ]
+    },
+    {
+      "fullName": "IsFailed",
+      "shortName": "IsFailed",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 15300,
+      "flags": 3,
+      "params": [
+        {
+          "type": "script_ref:ResourceRef",
+          "name": "self",
+          "flags": 0
+        }
+      ]
+    },
+    {
+      "fullName": "IsLoaded",
+      "shortName": "IsLoaded",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 15299,
+      "flags": 3,
+      "params": [
+        {
+          "type": "script_ref:ResourceRef",
+          "name": "self",
+          "flags": 0
+        }
+      ]
+    },
+    {
+      "fullName": "LoadPath",
+      "shortName": "LoadPath",
+      "index": 15293,
+      "flags": 3,
+      "params": [
+        {
+          "type": "script_ref:ResourceRef",
+          "name": "self",
+          "flags": 0
+        },
+        {
+          "type": "redResourceReferenceScriptToken",
+          "name": "arg",
+          "flags": 0
+        }
+      ]
+    },
+    {
+      "fullName": "ToVariant",
+      "shortName": "ToVariant",
+      "return": {
+        "type": "Variant",
+        "flags": 64
+      },
+      "index": 15301,
+      "flags": 3,
+      "params": [
+        {
+          "type": "script_ref:ResourceRef",
+          "name": "self",
+          "flags": 0
+        },
+        {
+          "type": "CName",
+          "name": "arg",
+          "flags": 0
+        }
+      ]
+    }
+  ]
+}

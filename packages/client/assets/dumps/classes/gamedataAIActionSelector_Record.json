@@ -1,0 +1,121 @@
+{
+  "parent": "gamedataAINode_Record",
+  "name": "gamedataAIActionSelector_Record",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "Actions",
+      "shortName": "Actions",
+      "index": 7507,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataAIAction_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "ActionsContains",
+      "shortName": "ActionsContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 7511,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataAIAction_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "DefaultAction",
+      "shortName": "DefaultAction",
+      "return": {
+        "type": "whandle:gamedataAIAction_Record",
+        "flags": 64
+      },
+      "index": 7505,
+      "flags": 1
+    },
+    {
+      "fullName": "DefaultActionHandle",
+      "shortName": "DefaultActionHandle",
+      "return": {
+        "type": "handle:gamedataAIAction_Record",
+        "flags": 64
+      },
+      "index": 7506,
+      "flags": 1
+    },
+    {
+      "fullName": "DisableActionsLimit",
+      "shortName": "DisableActionsLimit",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 7512,
+      "flags": 1
+    },
+    {
+      "fullName": "FailOnNodeActivationConditionFailure",
+      "shortName": "FailOnNodeActivationConditionFailure",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 7513,
+      "flags": 1
+    },
+    {
+      "fullName": "GetActionsCount",
+      "shortName": "GetActionsCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 7508,
+      "flags": 1
+    },
+    {
+      "fullName": "GetActionsItem",
+      "shortName": "GetActionsItem",
+      "return": {
+        "type": "whandle:gamedataAIAction_Record",
+        "flags": 64
+      },
+      "index": 7509,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetActionsItemHandle",
+      "shortName": "GetActionsItemHandle",
+      "return": {
+        "type": "handle:gamedataAIAction_Record",
+        "flags": 64
+      },
+      "index": 7510,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

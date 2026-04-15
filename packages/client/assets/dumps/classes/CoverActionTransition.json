@@ -1,0 +1,205 @@
+{
+  "parent": "LocomotionTransition",
+  "name": "CoverActionTransition",
+  "flags": 5,
+  "props": [
+    {
+      "type": "ScriptGameInstance",
+      "name": "gameInstance",
+      "flags": 4297195552
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "locomotionStateCallbackID",
+      "flags": 4431413280
+    },
+    {
+      "type": "Float",
+      "name": "lastSlidingTime",
+      "flags": 4297195552
+    },
+    {
+      "type": "Bool",
+      "name": "isSliding",
+      "flags": 4297195552
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnLocomotionChanged",
+      "shortName": "OnLocomotionChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetManualLeanIdleTime;StateGameScriptInterfaceStateContext",
+      "shortName": "GetManualLeanIdleTime",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 41220,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsManualLeanInputPressed;StateContextStateGameScriptInterfaceCName",
+      "shortName": "IsManualLeanInputPressed",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41220,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "actionName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsManualLeanLeftInputPressed;StateContextStateGameScriptInterface",
+      "shortName": "IsManualLeanLeftInputPressed",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41220,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsManualLeanRightInputPressed;StateContextStateGameScriptInterface",
+      "shortName": "IsManualLeanRightInputPressed",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41220,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsMeleeLeaningInputCorrect;StateGameScriptInterface",
+      "shortName": "IsMeleeLeaningInputCorrect",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41220,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsPlayerInCorrectStateToPeek;StateGameScriptInterfaceStateContext",
+      "shortName": "IsPlayerInCorrectStateToPeek",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41220,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnAttach;StateContextStateGameScriptInterface",
+      "shortName": "OnAttach",
+      "flags": 34048,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnDetach;StateContextStateGameScriptInterface",
+      "shortName": "OnDetach",
+      "flags": 34048,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

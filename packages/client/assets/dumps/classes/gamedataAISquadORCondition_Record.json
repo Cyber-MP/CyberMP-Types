@@ -1,0 +1,81 @@
+{
+  "parent": "gamedataAITicketCheck_Record",
+  "name": "gamedataAISquadORCondition_Record",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "GetORCount",
+      "shortName": "GetORCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 8647,
+      "flags": 1
+    },
+    {
+      "fullName": "GetORItem",
+      "shortName": "GetORItem",
+      "return": {
+        "type": "whandle:gamedataAITicketCheck_Record",
+        "flags": 64
+      },
+      "index": 8648,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetORItemHandle",
+      "shortName": "GetORItemHandle",
+      "return": {
+        "type": "handle:gamedataAITicketCheck_Record",
+        "flags": 64
+      },
+      "index": 8649,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OR",
+      "shortName": "OR",
+      "index": 8646,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataAITicketCheck_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "ORContains",
+      "shortName": "ORContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 8650,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataAITicketCheck_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

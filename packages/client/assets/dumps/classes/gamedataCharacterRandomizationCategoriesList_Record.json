@@ -1,0 +1,81 @@
+{
+  "parent": "gamedataTweakDBRecord",
+  "name": "gamedataCharacterRandomizationCategoriesList_Record",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "GetListCount",
+      "shortName": "GetListCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 9763,
+      "flags": 1
+    },
+    {
+      "fullName": "GetListItem",
+      "shortName": "GetListItem",
+      "return": {
+        "type": "whandle:gamedataCharacterRandomizationCategoryUI_Record",
+        "flags": 64
+      },
+      "index": 9764,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetListItemHandle",
+      "shortName": "GetListItemHandle",
+      "return": {
+        "type": "handle:gamedataCharacterRandomizationCategoryUI_Record",
+        "flags": 64
+      },
+      "index": 9765,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "List",
+      "shortName": "List",
+      "index": 9762,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataCharacterRandomizationCategoryUI_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "ListContains",
+      "shortName": "ListContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 9766,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataCharacterRandomizationCategoryUI_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

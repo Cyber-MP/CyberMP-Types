@@ -1,0 +1,73 @@
+{
+  "parent": "inkWidgetLogicController",
+  "name": "InventoryItemDisplayCategoryArea",
+  "flags": 4,
+  "props": [
+    {
+      "type": "array:inkWidgetReference",
+      "name": "areasToHide",
+      "flags": 6583091233
+    },
+    {
+      "type": "array:inkCompoundWidgetReference",
+      "name": "equipmentAreas",
+      "flags": 6583091233
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "newItemsWrapper",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "newItemsCounter",
+      "flags": 4297195553
+    },
+    {
+      "type": "array:whandle:InventoryItemDisplayEquipmentArea",
+      "name": "categoryAreas",
+      "flags": 6583091232
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "GetAreasToHide;",
+      "shortName": "GetAreasToHide",
+      "return": {
+        "type": "array:inkWidgetReference",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "GetCategoryAreas;",
+      "shortName": "GetCategoryAreas",
+      "return": {
+        "type": "array:whandle:InventoryItemDisplayEquipmentArea",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "SetNewItemsCounter;Int32",
+      "shortName": "SetNewItemsCounter",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

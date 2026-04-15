@@ -1,0 +1,185 @@
+{
+  "parent": "gamedataTweakDBRecord",
+  "name": "gamedataVendorWare_Record",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "AvailabilityPrereq",
+      "shortName": "AvailabilityPrereq",
+      "return": {
+        "type": "whandle:gamedataIPrereq_Record",
+        "flags": 64
+      },
+      "index": 4869,
+      "flags": 1
+    },
+    {
+      "fullName": "AvailabilityPrereqHandle",
+      "shortName": "AvailabilityPrereqHandle",
+      "return": {
+        "type": "handle:gamedataIPrereq_Record",
+        "flags": 64
+      },
+      "index": 4870,
+      "flags": 1
+    },
+    {
+      "fullName": "ForceQuality",
+      "shortName": "ForceQuality",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "index": 4881,
+      "flags": 1
+    },
+    {
+      "fullName": "GenerationPrereqs",
+      "shortName": "GenerationPrereqs",
+      "index": 4871,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataIPrereq_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "GenerationPrereqsContains",
+      "shortName": "GenerationPrereqsContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 4875,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataIPrereq_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetGenerationPrereqsCount",
+      "shortName": "GetGenerationPrereqsCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 4872,
+      "flags": 1
+    },
+    {
+      "fullName": "GetGenerationPrereqsItem",
+      "shortName": "GetGenerationPrereqsItem",
+      "return": {
+        "type": "whandle:gamedataIPrereq_Record",
+        "flags": 64
+      },
+      "index": 4873,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetGenerationPrereqsItemHandle",
+      "shortName": "GetGenerationPrereqsItemHandle",
+      "return": {
+        "type": "handle:gamedataIPrereq_Record",
+        "flags": 64
+      },
+      "index": 4874,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetQuantityCount",
+      "shortName": "GetQuantityCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 4877,
+      "flags": 1
+    },
+    {
+      "fullName": "GetQuantityItem",
+      "shortName": "GetQuantityItem",
+      "return": {
+        "type": "whandle:gamedataStatModifier_Record",
+        "flags": 64
+      },
+      "index": 4878,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetQuantityItemHandle",
+      "shortName": "GetQuantityItemHandle",
+      "return": {
+        "type": "handle:gamedataStatModifier_Record",
+        "flags": 64
+      },
+      "index": 4879,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Quantity",
+      "shortName": "Quantity",
+      "index": 4876,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataStatModifier_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "QuantityContains",
+      "shortName": "QuantityContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 4880,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataStatModifier_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

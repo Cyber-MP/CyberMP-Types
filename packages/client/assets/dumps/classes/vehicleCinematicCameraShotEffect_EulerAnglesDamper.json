@@ -1,0 +1,73 @@
+{
+  "parent": "vehicleTimedCinematicCameraShotEffect",
+  "name": "vehicleCinematicCameraShotEffect_EulerAnglesDamper",
+  "flags": 2,
+  "props": [
+    {
+      "type": "CName",
+      "name": "dampingCurve",
+      "flags": 4297195553
+    },
+    {
+      "type": "Float",
+      "name": "damping",
+      "flags": 4297195553
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "GetDampValue",
+      "shortName": "GetDampValue",
+      "return": {
+        "type": "EulerAngles",
+        "flags": 64
+      },
+      "index": 13857,
+      "flags": 1
+    },
+    {
+      "fullName": "SetCurrValue",
+      "shortName": "SetCurrValue",
+      "index": 13858,
+      "flags": 1,
+      "params": [
+        {
+          "type": "EulerAngles",
+          "name": "currValue",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetDampFactor",
+      "shortName": "SetDampFactor",
+      "index": 13855,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Float",
+          "name": "dampFactor",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateDamp",
+      "shortName": "UpdateDamp",
+      "index": 13856,
+      "flags": 1,
+      "params": [
+        {
+          "type": "EulerAngles",
+          "name": "dest",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "dt",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "parent": "gameComponent",
+  "name": "gameAttitudeAgent",
+  "flags": 2,
+  "props": [
+    {
+      "type": "CName",
+      "name": "baseAttitudeGroup",
+      "flags": 6694125569
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "GetAttitudeGroup",
+      "shortName": "GetAttitudeGroup",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "index": 13640,
+      "flags": 1
+    },
+    {
+      "fullName": "GetAttitudeTowards",
+      "shortName": "GetAttitudeTowards",
+      "return": {
+        "type": "EAIAttitude",
+        "flags": 64
+      },
+      "index": 13641,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameAttitudeAgent",
+          "name": "other",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsDangerous",
+      "shortName": "IsDangerous",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13639,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameAttitudeAgent",
+          "name": "other",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetAttitudeGroup",
+      "shortName": "SetAttitudeGroup",
+      "index": 13642,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "group",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetAttitudeGroupUnsavable",
+      "shortName": "SetAttitudeGroupUnsavable",
+      "index": 13643,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "group",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetAttitudeTowards",
+      "shortName": "SetAttitudeTowards",
+      "index": 13644,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameAttitudeAgent",
+          "name": "agent",
+          "flags": 128
+        },
+        {
+          "type": "EAIAttitude",
+          "name": "attitude",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetAttitudeTowardsAgentGroup",
+      "shortName": "SetAttitudeTowardsAgentGroup",
+      "index": 13645,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameAttitudeAgent",
+          "name": "targetAgent",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameAttitudeAgent",
+          "name": "ownerAgent",
+          "flags": 128
+        },
+        {
+          "type": "EAIAttitude",
+          "name": "attitude",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

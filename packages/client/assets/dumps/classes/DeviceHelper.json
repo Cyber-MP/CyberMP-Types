@@ -1,0 +1,215 @@
+{
+  "name": "DeviceHelper",
+  "flags": 8,
+  "funcs": [
+    {
+      "fullName": "DeviceHelper::ConvertActionIntoScriptableAction;script_ref<array<DeviceAction>>script_ref<array<ScriptableDeviceAction>>",
+      "shortName": "ConvertActionIntoScriptableAction",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "script_ref:array:handle:gamedeviceAction",
+          "name": "inActions",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:array:handle:ScriptableDeviceAction",
+          "name": "outActions",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "DeviceHelper::ConvertActionsArray;script_ref<array<PuppetAction>>",
+      "shortName": "ConvertActionsArray",
+      "return": {
+        "type": "array:handle:gamedeviceAction",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "script_ref:array:handle:PuppetAction",
+          "name": "puppetActions",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "DeviceHelper::DebugLog;GameInstancescript_ref<String>",
+      "shortName": "DebugLog",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "gameInstance",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:String",
+          "name": "message",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "DeviceHelper::ExtractSpecificStateClass;script_ref<array<PersistentState>>CNamearray<PersistentState>",
+      "shortName": "ExtractSpecificStateClass",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "script_ref:array:handle:gamePersistentState",
+          "name": "states",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "desiredClassName",
+          "flags": 128
+        },
+        {
+          "type": "array:handle:gamePersistentState",
+          "name": "extractedStates",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "DeviceHelper::FindAction;CNamescript_ref<array<DeviceAction>>DeviceAction",
+      "shortName": "FindAction",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "CName",
+          "name": "actionName",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:array:handle:gamedeviceAction",
+          "name": "actions",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamedeviceAction",
+          "name": "foundAction",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "DeviceHelper::FindStatusAction;script_ref<array<DeviceAction>>BaseDeviceStatus",
+      "shortName": "FindStatusAction",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "script_ref:array:handle:gamedeviceAction",
+          "name": "actions",
+          "flags": 128
+        },
+        {
+          "type": "handle:BaseDeviceStatus",
+          "name": "status",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "DeviceHelper::IDMO;GameInstance",
+      "shortName": "IDMO",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "gameInstance",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "DeviceHelper::IsDebugModeON;GameInstance",
+      "shortName": "IsDebugModeON",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "gameInstance",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "DeviceHelper::PushActionsIntoInteractionChoice;script_ref<InteractionChoice>script_ref<array<DeviceAction>>",
+      "shortName": "PushActionsIntoInteractionChoice",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "script_ref:gameinteractionsChoice",
+          "name": "choice",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:array:handle:gamedeviceAction",
+          "name": "actions",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "DeviceHelper::RemoveActionFromArray;CNamescript_ref<array<DeviceAction>>",
+      "shortName": "RemoveActionFromArray",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "CName",
+          "name": "actionName",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:array:handle:gamedeviceAction",
+          "name": "actions",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "DeviceHelper::RemoveStatusAction;script_ref<array<DeviceAction>>",
+      "shortName": "RemoveStatusAction",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "script_ref:array:handle:gamedeviceAction",
+          "name": "actions",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

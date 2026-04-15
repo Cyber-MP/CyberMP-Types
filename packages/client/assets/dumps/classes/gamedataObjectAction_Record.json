@@ -1,0 +1,991 @@
+{
+  "parent": "gamedataTweakDBRecord",
+  "name": "gamedataObjectAction_Record",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "ActionName",
+      "shortName": "ActionName",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "index": 5149,
+      "flags": 1
+    },
+    {
+      "fullName": "ActivationTime",
+      "shortName": "ActivationTime",
+      "index": 5093,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataStatModifier_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "ActivationTimeContains",
+      "shortName": "ActivationTimeContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 5097,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataStatModifier_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CompletionEffects",
+      "shortName": "CompletionEffects",
+      "index": 5138,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataObjectActionEffect_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "CompletionEffectsContains",
+      "shortName": "CompletionEffectsContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 5142,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataObjectActionEffect_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Cooldown",
+      "shortName": "Cooldown",
+      "return": {
+        "type": "whandle:gamedataCooldown_Record",
+        "flags": 64
+      },
+      "index": 5087,
+      "flags": 1
+    },
+    {
+      "fullName": "CooldownHandle",
+      "shortName": "CooldownHandle",
+      "return": {
+        "type": "handle:gamedataCooldown_Record",
+        "flags": 64
+      },
+      "index": 5088,
+      "flags": 1
+    },
+    {
+      "fullName": "Costs",
+      "shortName": "Costs",
+      "index": 5143,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataObjectActionCost_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "CostsContains",
+      "shortName": "CostsContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 5147,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataObjectActionCost_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "DeviceHackCategory",
+      "shortName": "DeviceHackCategory",
+      "return": {
+        "type": "whandle:gamedataDeviceHackCategory_Record",
+        "flags": 64
+      },
+      "index": 5089,
+      "flags": 1
+    },
+    {
+      "fullName": "DeviceHackCategoryHandle",
+      "shortName": "DeviceHackCategoryHandle",
+      "return": {
+        "type": "handle:gamedataDeviceHackCategory_Record",
+        "flags": 64
+      },
+      "index": 5090,
+      "flags": 1
+    },
+    {
+      "fullName": "DurationTime",
+      "shortName": "DurationTime",
+      "index": 5133,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataStatModifier_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "DurationTimeContains",
+      "shortName": "DurationTimeContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 5137,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataStatModifier_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GameplayCategory",
+      "shortName": "GameplayCategory",
+      "return": {
+        "type": "whandle:gamedataObjectActionGameplayCategory_Record",
+        "flags": 64
+      },
+      "index": 5079,
+      "flags": 1
+    },
+    {
+      "fullName": "GameplayCategoryHandle",
+      "shortName": "GameplayCategoryHandle",
+      "return": {
+        "type": "handle:gamedataObjectActionGameplayCategory_Record",
+        "flags": 64
+      },
+      "index": 5080,
+      "flags": 1
+    },
+    {
+      "fullName": "GetActivationTimeCount",
+      "shortName": "GetActivationTimeCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 5094,
+      "flags": 1
+    },
+    {
+      "fullName": "GetActivationTimeItem",
+      "shortName": "GetActivationTimeItem",
+      "return": {
+        "type": "whandle:gamedataStatModifier_Record",
+        "flags": 64
+      },
+      "index": 5095,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetActivationTimeItemHandle",
+      "shortName": "GetActivationTimeItemHandle",
+      "return": {
+        "type": "handle:gamedataStatModifier_Record",
+        "flags": 64
+      },
+      "index": 5096,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetCompletionEffectsCount",
+      "shortName": "GetCompletionEffectsCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 5139,
+      "flags": 1
+    },
+    {
+      "fullName": "GetCompletionEffectsItem",
+      "shortName": "GetCompletionEffectsItem",
+      "return": {
+        "type": "whandle:gamedataObjectActionEffect_Record",
+        "flags": 64
+      },
+      "index": 5140,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetCompletionEffectsItemHandle",
+      "shortName": "GetCompletionEffectsItemHandle",
+      "return": {
+        "type": "handle:gamedataObjectActionEffect_Record",
+        "flags": 64
+      },
+      "index": 5141,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetCostsCount",
+      "shortName": "GetCostsCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 5144,
+      "flags": 1
+    },
+    {
+      "fullName": "GetCostsItem",
+      "shortName": "GetCostsItem",
+      "return": {
+        "type": "whandle:gamedataObjectActionCost_Record",
+        "flags": 64
+      },
+      "index": 5145,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetCostsItemHandle",
+      "shortName": "GetCostsItemHandle",
+      "return": {
+        "type": "handle:gamedataObjectActionCost_Record",
+        "flags": 64
+      },
+      "index": 5146,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetDurationTimeCount",
+      "shortName": "GetDurationTimeCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 5134,
+      "flags": 1
+    },
+    {
+      "fullName": "GetDurationTimeItem",
+      "shortName": "GetDurationTimeItem",
+      "return": {
+        "type": "whandle:gamedataStatModifier_Record",
+        "flags": 64
+      },
+      "index": 5135,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetDurationTimeItemHandle",
+      "shortName": "GetDurationTimeItemHandle",
+      "return": {
+        "type": "handle:gamedataStatModifier_Record",
+        "flags": 64
+      },
+      "index": 5136,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetInstigatorActivePrereqsCount",
+      "shortName": "GetInstigatorActivePrereqsCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 5109,
+      "flags": 1
+    },
+    {
+      "fullName": "GetInstigatorActivePrereqsItem",
+      "shortName": "GetInstigatorActivePrereqsItem",
+      "return": {
+        "type": "whandle:gamedataObjectActionPrereq_Record",
+        "flags": 64
+      },
+      "index": 5110,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetInstigatorActivePrereqsItemHandle",
+      "shortName": "GetInstigatorActivePrereqsItemHandle",
+      "return": {
+        "type": "handle:gamedataObjectActionPrereq_Record",
+        "flags": 64
+      },
+      "index": 5111,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetInstigatorPrereqsCount",
+      "shortName": "GetInstigatorPrereqsCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 5104,
+      "flags": 1
+    },
+    {
+      "fullName": "GetInstigatorPrereqsItem",
+      "shortName": "GetInstigatorPrereqsItem",
+      "return": {
+        "type": "whandle:gamedataIPrereq_Record",
+        "flags": 64
+      },
+      "index": 5105,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetInstigatorPrereqsItemHandle",
+      "shortName": "GetInstigatorPrereqsItemHandle",
+      "return": {
+        "type": "handle:gamedataIPrereq_Record",
+        "flags": 64
+      },
+      "index": 5106,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetInterruptionPrereqsCount",
+      "shortName": "GetInterruptionPrereqsCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 5099,
+      "flags": 1
+    },
+    {
+      "fullName": "GetInterruptionPrereqsItem",
+      "shortName": "GetInterruptionPrereqsItem",
+      "return": {
+        "type": "whandle:gamedataIPrereq_Record",
+        "flags": 64
+      },
+      "index": 5100,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetInterruptionPrereqsItemHandle",
+      "shortName": "GetInterruptionPrereqsItemHandle",
+      "return": {
+        "type": "handle:gamedataIPrereq_Record",
+        "flags": 64
+      },
+      "index": 5101,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetRewardsCount",
+      "shortName": "GetRewardsCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 5114,
+      "flags": 1
+    },
+    {
+      "fullName": "GetRewardsItem",
+      "shortName": "GetRewardsItem",
+      "return": {
+        "type": "whandle:gamedataRewardBase_Record",
+        "flags": 64
+      },
+      "index": 5115,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetRewardsItemHandle",
+      "shortName": "GetRewardsItemHandle",
+      "return": {
+        "type": "handle:gamedataRewardBase_Record",
+        "flags": 64
+      },
+      "index": 5116,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetStartEffectsCount",
+      "shortName": "GetStartEffectsCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 5124,
+      "flags": 1
+    },
+    {
+      "fullName": "GetStartEffectsItem",
+      "shortName": "GetStartEffectsItem",
+      "return": {
+        "type": "whandle:gamedataObjectActionEffect_Record",
+        "flags": 64
+      },
+      "index": 5125,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetStartEffectsItemHandle",
+      "shortName": "GetStartEffectsItemHandle",
+      "return": {
+        "type": "handle:gamedataObjectActionEffect_Record",
+        "flags": 64
+      },
+      "index": 5126,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetTargetActivePrereqsCount",
+      "shortName": "GetTargetActivePrereqsCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 5119,
+      "flags": 1
+    },
+    {
+      "fullName": "GetTargetActivePrereqsItem",
+      "shortName": "GetTargetActivePrereqsItem",
+      "return": {
+        "type": "whandle:gamedataObjectActionPrereq_Record",
+        "flags": 64
+      },
+      "index": 5120,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetTargetActivePrereqsItemHandle",
+      "shortName": "GetTargetActivePrereqsItemHandle",
+      "return": {
+        "type": "handle:gamedataObjectActionPrereq_Record",
+        "flags": 64
+      },
+      "index": 5121,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetTargetPrereqsCount",
+      "shortName": "GetTargetPrereqsCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 5129,
+      "flags": 1
+    },
+    {
+      "fullName": "GetTargetPrereqsItem",
+      "shortName": "GetTargetPrereqsItem",
+      "return": {
+        "type": "whandle:gamedataIPrereq_Record",
+        "flags": 64
+      },
+      "index": 5130,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetTargetPrereqsItemHandle",
+      "shortName": "GetTargetPrereqsItemHandle",
+      "return": {
+        "type": "handle:gamedataIPrereq_Record",
+        "flags": 64
+      },
+      "index": 5131,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HackCategory",
+      "shortName": "HackCategory",
+      "return": {
+        "type": "whandle:gamedataHackCategory_Record",
+        "flags": 64
+      },
+      "index": 5081,
+      "flags": 1
+    },
+    {
+      "fullName": "HackCategoryHandle",
+      "shortName": "HackCategoryHandle",
+      "return": {
+        "type": "handle:gamedataHackCategory_Record",
+        "flags": 64
+      },
+      "index": 5082,
+      "flags": 1
+    },
+    {
+      "fullName": "HackTier",
+      "shortName": "HackTier",
+      "return": {
+        "type": "whandle:gamedataDeviceHackTier_Record",
+        "flags": 64
+      },
+      "index": 5091,
+      "flags": 1
+    },
+    {
+      "fullName": "HackTierHandle",
+      "shortName": "HackTierHandle",
+      "return": {
+        "type": "handle:gamedataDeviceHackTier_Record",
+        "flags": 64
+      },
+      "index": 5092,
+      "flags": 1
+    },
+    {
+      "fullName": "InstigatorActivePrereqs",
+      "shortName": "InstigatorActivePrereqs",
+      "index": 5108,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataObjectActionPrereq_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "InstigatorActivePrereqsContains",
+      "shortName": "InstigatorActivePrereqsContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 5112,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataObjectActionPrereq_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "InstigatorPrereqs",
+      "shortName": "InstigatorPrereqs",
+      "index": 5103,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataIPrereq_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "InstigatorPrereqsContains",
+      "shortName": "InstigatorPrereqsContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 5107,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataIPrereq_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "InteractionLayer",
+      "shortName": "InteractionLayer",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "index": 5148,
+      "flags": 1
+    },
+    {
+      "fullName": "InterruptionPrereqs",
+      "shortName": "InterruptionPrereqs",
+      "index": 5098,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataIPrereq_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "InterruptionPrereqsContains",
+      "shortName": "InterruptionPrereqsContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 5102,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataIPrereq_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ObjectActionType",
+      "shortName": "ObjectActionType",
+      "return": {
+        "type": "whandle:gamedataObjectActionType_Record",
+        "flags": 64
+      },
+      "index": 5083,
+      "flags": 1
+    },
+    {
+      "fullName": "ObjectActionTypeHandle",
+      "shortName": "ObjectActionTypeHandle",
+      "return": {
+        "type": "handle:gamedataObjectActionType_Record",
+        "flags": 64
+      },
+      "index": 5084,
+      "flags": 1
+    },
+    {
+      "fullName": "ObjectActionUI",
+      "shortName": "ObjectActionUI",
+      "return": {
+        "type": "whandle:gamedataInteractionBase_Record",
+        "flags": 64
+      },
+      "index": 5085,
+      "flags": 1
+    },
+    {
+      "fullName": "ObjectActionUIHandle",
+      "shortName": "ObjectActionUIHandle",
+      "return": {
+        "type": "handle:gamedataInteractionBase_Record",
+        "flags": 64
+      },
+      "index": 5086,
+      "flags": 1
+    },
+    {
+      "fullName": "Priority",
+      "shortName": "Priority",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 5150,
+      "flags": 1
+    },
+    {
+      "fullName": "Rewards",
+      "shortName": "Rewards",
+      "index": 5113,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataRewardBase_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "RewardsContains",
+      "shortName": "RewardsContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 5117,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataRewardBase_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "StartEffects",
+      "shortName": "StartEffects",
+      "index": 5123,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataObjectActionEffect_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "StartEffectsContains",
+      "shortName": "StartEffectsContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 5127,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataObjectActionEffect_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TargetActivePrereqs",
+      "shortName": "TargetActivePrereqs",
+      "index": 5118,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataObjectActionPrereq_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "TargetActivePrereqsContains",
+      "shortName": "TargetActivePrereqsContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 5122,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataObjectActionPrereq_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TargetPrereqs",
+      "shortName": "TargetPrereqs",
+      "index": 5128,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataIPrereq_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "TargetPrereqsContains",
+      "shortName": "TargetPrereqsContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 5132,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataIPrereq_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,922 @@
+{
+  "name": "Vector4",
+  "flags": 18,
+  "props": [
+    {
+      "type": "Float",
+      "name": "X",
+      "flags": 6962561025
+    },
+    {
+      "type": "Float",
+      "name": "Y",
+      "flags": 6962561025
+    },
+    {
+      "type": "Float",
+      "name": "Z",
+      "flags": 6962561025
+    },
+    {
+      "type": "Float",
+      "name": "W",
+      "flags": 6962561025
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "ClampLength",
+      "shortName": "ClampLength",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "index": 952,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Vector4",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "min",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "max",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Cross",
+      "shortName": "Cross",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "index": 922,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Vector4",
+          "name": "a",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "b",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Distance",
+      "shortName": "Distance",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 931,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Vector4",
+          "name": "from",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "to",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Distance2D",
+      "shortName": "Distance2D",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 933,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Vector4",
+          "name": "from",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "to",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "DistanceSquared",
+      "shortName": "DistanceSquared",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 932,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Vector4",
+          "name": "from",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "to",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "DistanceSquared2D",
+      "shortName": "DistanceSquared2D",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 934,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Vector4",
+          "name": "from",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "to",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "DistanceToEdge",
+      "shortName": "DistanceToEdge",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 935,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Vector4",
+          "name": "point",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "a",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "b",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Dot",
+      "shortName": "Dot",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 921,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Vector4",
+          "name": "a",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "b",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Dot2D",
+      "shortName": "Dot2D",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 920,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Vector4",
+          "name": "a",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "b",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "FromHeading",
+      "shortName": "FromHeading",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "index": 939,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Float",
+          "name": "heading",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetAngleBetween",
+      "shortName": "GetAngleBetween",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 943,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Vector4",
+          "name": "from",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "to",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetAngleDegAroundAxis",
+      "shortName": "GetAngleDegAroundAxis",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 944,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Vector4",
+          "name": "dirA",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "dirB",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "axis",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Heading",
+      "shortName": "Heading",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 938,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Vector4",
+          "name": "dir",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Interpolate",
+      "shortName": "Interpolate",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "index": 948,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Vector4",
+          "name": "v1",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "v2",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "ratio",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsXYZZero",
+      "shortName": "IsXYZZero",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 951,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Vector4",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsZero",
+      "shortName": "IsZero",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 950,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Vector4",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Length",
+      "shortName": "Length",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 924,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Vector4",
+          "name": "a",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Length2D",
+      "shortName": "Length2D",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 923,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Vector4",
+          "name": "a",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "LengthSquared",
+      "shortName": "LengthSquared",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 925,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Vector4",
+          "name": "a",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Mirror",
+      "shortName": "Mirror",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "index": 930,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Vector4",
+          "name": "dir",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "normal",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "NearestPointOnEdge",
+      "shortName": "NearestPointOnEdge",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "index": 936,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Vector4",
+          "name": "point",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "a",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "b",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Normalize",
+      "shortName": "Normalize",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "index": 927,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Vector4",
+          "name": "a",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Normalize2D",
+      "shortName": "Normalize2D",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "index": 926,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Vector4",
+          "name": "a",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProjectPointToPlane",
+      "shortName": "ProjectPointToPlane",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "index": 945,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Vector4",
+          "name": "p1",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "p2",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "p3",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "toProject",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Rand",
+      "shortName": "Rand",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "index": 929,
+      "flags": 3
+    },
+    {
+      "fullName": "Rand2D",
+      "shortName": "Rand2D",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "index": 928,
+      "flags": 3
+    },
+    {
+      "fullName": "RotByAngleXY",
+      "shortName": "RotByAngleXY",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "index": 947,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Vector4",
+          "name": "vec",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "angleDeg",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RotateAxis",
+      "shortName": "RotateAxis",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "index": 946,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Vector4",
+          "name": "vector",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "axis",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "angle",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ToRotation",
+      "shortName": "ToRotation",
+      "return": {
+        "type": "EulerAngles",
+        "flags": 64
+      },
+      "index": 937,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Vector4",
+          "name": "dir",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Transform",
+      "shortName": "Transform",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "index": 940,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Matrix",
+          "name": "m",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "point",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TransformDir",
+      "shortName": "TransformDir",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "index": 941,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Matrix",
+          "name": "m",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "point",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TransformH",
+      "shortName": "TransformH",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "index": 942,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Matrix",
+          "name": "m",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "point",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Vector3To4",
+      "shortName": "Vector3To4",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "index": 953,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Vector3",
+          "name": "v3",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Vector4To3",
+      "shortName": "Vector4To3",
+      "return": {
+        "type": "Vector3",
+        "flags": 64
+      },
+      "index": 954,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Vector4",
+          "name": "v4",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Zero",
+      "shortName": "Zero",
+      "index": 949,
+      "flags": 3,
+      "params": [
+        {
+          "type": "Vector4",
+          "name": "self",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "Vector4::EmptyVector;",
+      "shortName": "EmptyVector",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "flags": 33286
+    },
+    {
+      "fullName": "Vector4::FRONT;",
+      "shortName": "FRONT",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "flags": 33286
+    },
+    {
+      "fullName": "Vector4::Lerp;Vector4Vector4Float",
+      "shortName": "Lerp",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "Vector4",
+          "name": "a",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "b",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "t",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Vector4::RIGHT;",
+      "shortName": "RIGHT",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "flags": 33286
+    },
+    {
+      "fullName": "Vector4::RandCone;FloatFloatFloatFloat",
+      "shortName": "RandCone",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "Float",
+          "name": "coneDir",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "coneAngle",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "minRadius",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "maxRadius",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Vector4::RandRing;FloatFloat",
+      "shortName": "RandRing",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "Float",
+          "name": "minRadius",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "maxRadius",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Vector4::RandRingStatic;Int32FloatFloat",
+      "shortName": "RandRingStatic",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "seed",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "minRadius",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "maxRadius",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Vector4::ToString;Vector4",
+      "shortName": "ToString",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "Vector4",
+          "name": "vec",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Vector4::ToStringPrec;Vector4Int32",
+      "shortName": "ToStringPrec",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "Vector4",
+          "name": "vec",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "precision",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Vector4::UP;",
+      "shortName": "UP",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "flags": 33286
+    }
+  ]
+}

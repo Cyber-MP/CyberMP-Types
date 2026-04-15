@@ -1,0 +1,211 @@
+{
+  "parent": "gameuiHUDGameController",
+  "name": "InteractionUIBase",
+  "flags": 5,
+  "props": [
+    {
+      "type": "whandle:gameIBlackboard",
+      "name": "InteractionsBlackboard",
+      "flags": 4297195552
+    },
+    {
+      "type": "handle:UIInteractionsDef",
+      "name": "InteractionsBBDefinition",
+      "flags": 4431413280
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "DialogsDataListenerId",
+      "flags": 4431413280
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "DialogsActiveHubListenerId",
+      "flags": 4431413280
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "DialogsSelectedChoiceListenerId",
+      "flags": 4431413280
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "InteractionsDataListenerId",
+      "flags": 4431413280
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "lootingDataListenerId",
+      "flags": 4431347744
+    },
+    {
+      "type": "Bool",
+      "name": "AreDialogsOpen",
+      "flags": 4297195552
+    },
+    {
+      "type": "Bool",
+      "name": "AreContactsOpen",
+      "flags": 4297195552
+    },
+    {
+      "type": "Bool",
+      "name": "IsLootingOpen",
+      "flags": 4297195552
+    },
+    {
+      "type": "Bool",
+      "name": "AreInteractionsOpen",
+      "flags": 4297195552
+    },
+    {
+      "type": "Bool",
+      "name": "interactionIsScrollable",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "dialogIsScrollable",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "lootingIsScrollable",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnDialogsActivateHub",
+      "shortName": "OnDialogsActivateHub",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "activeHubId",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnDialogsData",
+      "shortName": "OnDialogsData",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Variant",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnDialogsSelectIndex",
+      "shortName": "OnDialogsSelectIndex",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnInteractionData",
+      "shortName": "OnInteractionData",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Variant",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnLootingData",
+      "shortName": "OnLootingData",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Variant",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnInteractionsChanged;",
+      "shortName": "OnInteractionsChanged",
+      "flags": 33024
+    },
+    {
+      "fullName": "UpdateDialogsData;script_ref<DialogChoiceHubs>",
+      "shortName": "UpdateDialogsData",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "script_ref:gameinteractionsvisDialogChoiceHubs",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateInteractionData;script_ref<InteractionChoiceHubData>",
+      "shortName": "UpdateInteractionData",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "script_ref:gameinteractionsvisInteractionChoiceHubData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateListBlackboard;",
+      "shortName": "UpdateListBlackboard",
+      "flags": 32900
+    }
+  ]
+}

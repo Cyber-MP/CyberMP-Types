@@ -1,0 +1,280 @@
+{
+  "parent": "BaseButtonView",
+  "name": "CrafringMaterialItemController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkTextWidgetReference",
+      "name": "nameText",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "quantityText",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "quantityChangeText",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "icon",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "frame",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "tooltipAnchor",
+      "flags": 4297195553
+    },
+    {
+      "type": "handle:CachedCraftingMaterial",
+      "name": "data",
+      "flags": 4431413281
+    },
+    {
+      "type": "Int32",
+      "name": "quantity",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "hovered",
+      "flags": 4297130016
+    },
+    {
+      "type": "CrafringMaterialItemHighlight",
+      "name": "lastState",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "shouldBeHighlighted",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "useSimpleFromat",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "hideIfZero",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isCollapsed",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnCraftingMaterialAnimationCompleted",
+      "shortName": "OnCraftingMaterialAnimationCompleted",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkanimProxy",
+          "name": "anim",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnCraftingMaterialHoverOut",
+      "shortName": "OnCraftingMaterialHoverOut",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnCraftingMaterialHoverOver",
+      "shortName": "OnCraftingMaterialHoverOver",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "Collapse;Bool",
+      "shortName": "Collapse",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "collapse",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetCachedCraftingMaterial;",
+      "shortName": "GetCachedCraftingMaterial",
+      "return": {
+        "type": "whandle:CachedCraftingMaterial",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "GetItemID;",
+      "shortName": "GetItemID",
+      "return": {
+        "type": "gameItemID",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "GetMateialDisplayName;",
+      "shortName": "GetMateialDisplayName",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "GetQuantity;",
+      "shortName": "GetQuantity",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "GetTooltipAnchorWidget;",
+      "shortName": "GetTooltipAnchorWidget",
+      "return": {
+        "type": "whandle:inkWidget",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "PlayAnimation;Bool",
+      "shortName": "PlayAnimation",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "hideIfZero",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "RefreshUI;",
+      "shortName": "RefreshUI",
+      "flags": 33284
+    },
+    {
+      "fullName": "SetHighlighted;CrafringMaterialItemHighlightInt32Bool",
+      "shortName": "SetHighlighted",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "CrafringMaterialItemHighlight",
+          "name": "type",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "quantityChanged",
+          "flags": 1152
+        },
+        {
+          "type": "Bool",
+          "name": "canAfford",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "SetHighlighted;Int32",
+      "shortName": "SetHighlighted",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "quantityChanged",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "SetQuantity;Int32",
+      "shortName": "SetQuantity",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "quantity",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetUseSimpleFromat;Bool",
+      "shortName": "SetUseSimpleFromat",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "useSimpleFromat",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Setup;CachedCraftingMaterial",
+      "shortName": "Setup",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:CachedCraftingMaterial",
+          "name": "craftingMaterial",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

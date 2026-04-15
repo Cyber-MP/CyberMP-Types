@@ -1,0 +1,190 @@
+{
+  "parent": "HUDPhoneElement",
+  "name": "HudPhoneMessageController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkTextWidgetReference",
+      "name": "MessageText",
+      "flags": 4297130017
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "MessageAnim",
+      "flags": 4431347744
+    },
+    {
+      "type": "CName",
+      "name": "ShowingAnimationName",
+      "flags": 4297130017
+    },
+    {
+      "type": "CName",
+      "name": "HidingAnimationName",
+      "flags": 4297130017
+    },
+    {
+      "type": "CName",
+      "name": "VisibleAnimationName",
+      "flags": 4297130017
+    },
+    {
+      "type": "Int32",
+      "name": "MessageMaxLength",
+      "flags": 4297130017
+    },
+    {
+      "type": "String",
+      "name": "MessageTopper",
+      "flags": 4297130017
+    },
+    {
+      "type": "Bool",
+      "name": "Paused",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:gameJournalPhoneMessage",
+      "name": "CurrentMessage",
+      "flags": 4297130016
+    },
+    {
+      "type": "array:whandle:gameJournalPhoneMessage",
+      "name": "Queue",
+      "flags": 6583025696
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnAnimationFinished",
+      "shortName": "OnAnimationFinished",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkanimProxy",
+          "name": "anim",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnStateChanged",
+      "shortName": "OnStateChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "whandle:inkWidget",
+          "name": "widget",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "oldState",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "newState",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CheckIfReadyToDequeue;",
+      "shortName": "CheckIfReadyToDequeue",
+      "flags": 32900
+    },
+    {
+      "fullName": "ClearQueue;",
+      "shortName": "ClearQueue",
+      "flags": 33028
+    },
+    {
+      "fullName": "Dequeue;",
+      "shortName": "Dequeue",
+      "flags": 33028
+    },
+    {
+      "fullName": "Dismiss;",
+      "shortName": "Dismiss",
+      "flags": 33284
+    },
+    {
+      "fullName": "Enqueue;JournalPhoneMessage",
+      "shortName": "Enqueue",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "whandle:gameJournalPhoneMessage",
+          "name": "element",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetCurrentMessage;",
+      "shortName": "GetCurrentMessage",
+      "return": {
+        "type": "whandle:gameJournalPhoneMessage",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "GetNumElementsInQueue;",
+      "shortName": "GetNumElementsInQueue",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 33028
+    },
+    {
+      "fullName": "OnDequeue;JournalPhoneMessage",
+      "shortName": "OnDequeue",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "whandle:gameJournalPhoneMessage",
+          "name": "message",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Pause;",
+      "shortName": "Pause",
+      "flags": 33284
+    },
+    {
+      "fullName": "ShowMessage;JournalPhoneMessage",
+      "shortName": "ShowMessage",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "whandle:gameJournalPhoneMessage",
+          "name": "messageToShow",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "StopAllAnimations;",
+      "shortName": "StopAllAnimations",
+      "flags": 32900
+    },
+    {
+      "fullName": "Unpause;",
+      "shortName": "Unpause",
+      "flags": 33284
+    }
+  ]
+}

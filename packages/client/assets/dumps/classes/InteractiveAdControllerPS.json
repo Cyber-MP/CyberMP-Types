@@ -1,0 +1,173 @@
+{
+  "parent": "ScriptableDeviceComponentPS",
+  "name": "InteractiveAdControllerPS",
+  "flags": 1028,
+  "props": [
+    {
+      "type": "Bool",
+      "name": "showAd",
+      "flags": 4297195552
+    },
+    {
+      "type": "Bool",
+      "name": "showVendor",
+      "flags": 4297195552
+    },
+    {
+      "type": "Bool",
+      "name": "locationAdded",
+      "flags": 4297195552
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnInstantiated",
+      "shortName": "OnInstantiated",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "ActionCloseAd;script_ref<String>",
+      "shortName": "ActionCloseAd",
+      "return": {
+        "type": "handle:CloseAd",
+        "flags": 64
+      },
+      "flags": 33028,
+      "params": [
+        {
+          "type": "script_ref:String",
+          "name": "ButtonName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ActionShowVendor;script_ref<String>",
+      "shortName": "ActionShowVendor",
+      "return": {
+        "type": "handle:ShowVendor",
+        "flags": 64
+      },
+      "flags": 33028,
+      "params": [
+        {
+          "type": "script_ref:String",
+          "name": "ButtonName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AddLocation;Bool",
+      "shortName": "AddLocation",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetActions;array<DeviceAction>GetActionsContext",
+      "shortName": "GetActions",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33280,
+      "params": [
+        {
+          "type": "array:handle:gamedeviceAction",
+          "name": "actions",
+          "flags": 640
+        },
+        {
+          "type": "gameGetActionsContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetBlackboardDef;",
+      "shortName": "GetBlackboardDef",
+      "return": {
+        "type": "handle:InteractiveDeviceBlackboardDef",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "GetQuestActions;array<DeviceAction>script_ref<GetActionsContext>",
+      "shortName": "GetQuestActions",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "array:handle:gamedeviceAction",
+          "name": "outActions",
+          "flags": 640
+        },
+        {
+          "type": "script_ref:gameGetActionsContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Initialize;",
+      "shortName": "Initialize",
+      "flags": 33024
+    },
+    {
+      "fullName": "OnCloseAd;CloseAd",
+      "shortName": "OnCloseAd",
+      "return": {
+        "type": "EntityNotificationType",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:CloseAd",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnShowVendor;ShowVendor",
+      "shortName": "OnShowVendor",
+      "return": {
+        "type": "EntityNotificationType",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:ShowVendor",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetIsReady;Bool",
+      "shortName": "SetIsReady",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

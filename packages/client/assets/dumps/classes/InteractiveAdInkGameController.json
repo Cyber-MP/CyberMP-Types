@@ -1,0 +1,171 @@
+{
+  "parent": "DeviceInkGameControllerBase",
+  "name": "InteractiveAdInkGameController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkVideoWidgetReference",
+      "name": "ProcessingVideo",
+      "group": "Widget Refs",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkVideoWidgetReference",
+      "name": "PersonalAd",
+      "group": "Widget Refs",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkVideoWidgetReference",
+      "name": "CommonAd",
+      "group": "Widget Refs",
+      "flags": 4297130017
+    },
+    {
+      "type": "Float",
+      "name": "fadeDuration",
+      "flags": 4297195553
+    },
+    {
+      "type": "handle:inkanimDefinition",
+      "name": "animFade",
+      "flags": 4431347744
+    },
+    {
+      "type": "inkanimPlaybackOptions",
+      "name": "animOptions",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "showAd",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "onShowAdListener",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "onShowVendorListener",
+      "flags": 4431347744
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnShowAd",
+      "shortName": "OnShowAd",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "flag",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnShowVendor",
+      "shortName": "OnShowVendor",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "flag",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CreateAnimation;",
+      "shortName": "CreateAnimation",
+      "flags": 33028
+    },
+    {
+      "fullName": "GetOwner;",
+      "shortName": "GetOwner",
+      "return": {
+        "type": "handle:Device",
+        "flags": 64
+      },
+      "flags": 33024
+    },
+    {
+      "fullName": "Refresh;EDeviceStatus",
+      "shortName": "Refresh",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "EDeviceStatus",
+          "name": "state",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterBlackboardCallbacks;IBlackboard",
+      "shortName": "RegisterBlackboardCallbacks",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "handle:gameIBlackboard",
+          "name": "blackboard",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetupWidgets;",
+      "shortName": "SetupWidgets",
+      "flags": 33024
+    },
+    {
+      "fullName": "StartAdVideo;",
+      "shortName": "StartAdVideo",
+      "flags": 33028
+    },
+    {
+      "fullName": "StartProcessingVideo;",
+      "shortName": "StartProcessingVideo",
+      "flags": 33028
+    },
+    {
+      "fullName": "StopProcessingVideo;",
+      "shortName": "StopProcessingVideo",
+      "flags": 33028
+    },
+    {
+      "fullName": "UnRegisterBlackboardCallbacks;IBlackboard",
+      "shortName": "UnRegisterBlackboardCallbacks",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "handle:gameIBlackboard",
+          "name": "blackboard",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateActionWidgets;script_ref<array<SActionWidgetPackage>>",
+      "shortName": "UpdateActionWidgets",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "script_ref:array:SActionWidgetPackage",
+          "name": "widgetsData",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

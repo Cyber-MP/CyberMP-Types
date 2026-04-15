@@ -1,0 +1,141 @@
+{
+  "parent": "gamedataIPrereq_Record",
+  "name": "gamedataStatPrereq_Record",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "ComparisonType",
+      "shortName": "ComparisonType",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "index": 8809,
+      "flags": 1
+    },
+    {
+      "fullName": "GetStatModifiersCount",
+      "shortName": "GetStatModifiersCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 8805,
+      "flags": 1
+    },
+    {
+      "fullName": "GetStatModifiersItem",
+      "shortName": "GetStatModifiersItem",
+      "return": {
+        "type": "whandle:gamedataStatModifier_Record",
+        "flags": 64
+      },
+      "index": 8806,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetStatModifiersItemHandle",
+      "shortName": "GetStatModifiersItemHandle",
+      "return": {
+        "type": "handle:gamedataStatModifier_Record",
+        "flags": 64
+      },
+      "index": 8807,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "NotifyOnAnyChange",
+      "shortName": "NotifyOnAnyChange",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 8813,
+      "flags": 1
+    },
+    {
+      "fullName": "NotifyOnlyOnStateFulfilled",
+      "shortName": "NotifyOnlyOnStateFulfilled",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 8814,
+      "flags": 1
+    },
+    {
+      "fullName": "ObjectToCheck",
+      "shortName": "ObjectToCheck",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "index": 8811,
+      "flags": 1
+    },
+    {
+      "fullName": "StatModifiers",
+      "shortName": "StatModifiers",
+      "index": 8804,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataStatModifier_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "StatModifiersContains",
+      "shortName": "StatModifiersContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 8808,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataStatModifier_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "StatType",
+      "shortName": "StatType",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "index": 8810,
+      "flags": 1
+    },
+    {
+      "fullName": "ValueToCheck",
+      "shortName": "ValueToCheck",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 8812,
+      "flags": 1
+    }
+  ]
+}

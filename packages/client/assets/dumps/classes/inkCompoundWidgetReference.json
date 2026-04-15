@@ -1,0 +1,362 @@
+{
+  "parent": "inkWidgetReference",
+  "name": "inkCompoundWidgetReference",
+  "flags": 2,
+  "funcs": [
+    {
+      "fullName": "AddChild",
+      "shortName": "AddChild",
+      "return": {
+        "type": "whandle:inkWidget",
+        "flags": 64
+      },
+      "index": 2229,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkCompoundWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "widgetTypeName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AddChildWidget",
+      "shortName": "AddChildWidget",
+      "index": 2230,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkCompoundWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "whandle:inkWidget",
+          "name": "widget",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetChildOrder",
+      "shortName": "GetChildOrder",
+      "return": {
+        "type": "inkEChildOrder",
+        "flags": 64
+      },
+      "index": 2239,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkBasePanelWidgetReference",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetChildPosition",
+      "shortName": "GetChildPosition",
+      "return": {
+        "type": "Vector2",
+        "flags": 64
+      },
+      "index": 2241,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkCompoundWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "whandle:inkWidget",
+          "name": "childWidget",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetChildSize",
+      "shortName": "GetChildSize",
+      "return": {
+        "type": "Vector2",
+        "flags": 64
+      },
+      "index": 2242,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkCompoundWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "whandle:inkWidget",
+          "name": "childWidget",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetNumChildren",
+      "shortName": "GetNumChildren",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 2228,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkCompoundWidgetReference",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetWidgetByIndex",
+      "shortName": "GetWidgetByIndex",
+      "return": {
+        "type": "whandle:inkWidget",
+        "flags": 64
+      },
+      "index": 2231,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkCompoundWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetWidgetByPath",
+      "shortName": "GetWidgetByPath",
+      "return": {
+        "type": "whandle:inkWidget",
+        "flags": 64
+      },
+      "index": 2232,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkCompoundWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "inkWidgetPath",
+          "name": "path",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetWidgetByPathName",
+      "shortName": "GetWidgetByPathName",
+      "return": {
+        "type": "whandle:inkWidget",
+        "flags": 64
+      },
+      "index": 2233,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkCompoundWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "widgetNamePath",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RemoveAllChildren",
+      "shortName": "RemoveAllChildren",
+      "index": 2237,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkCompoundWidgetReference",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RemoveChild",
+      "shortName": "RemoveChild",
+      "index": 2234,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkCompoundWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "whandle:inkWidget",
+          "name": "childWidget",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RemoveChildByIndex",
+      "shortName": "RemoveChildByIndex",
+      "index": 2235,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkCompoundWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RemoveChildByName",
+      "shortName": "RemoveChildByName",
+      "index": 2236,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkCompoundWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "widgetName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ReorderChild",
+      "shortName": "ReorderChild",
+      "index": 2238,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkCompoundWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "whandle:inkWidget",
+          "name": "childWidget",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "newIndex",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetChildOrder",
+      "shortName": "SetChildOrder",
+      "index": 2240,
+      "flags": 3,
+      "params": [
+        {
+          "type": "inkBasePanelWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "inkEChildOrder",
+          "name": "newOrder",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "inkCompoundWidgetReference::GetWidget;inkCompoundRefInt32",
+      "shortName": "GetWidget",
+      "return": {
+        "type": "whandle:inkWidget",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "inkCompoundWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "inkCompoundWidgetReference::GetWidget;inkCompoundRefinkWidgetPath",
+      "shortName": "GetWidget",
+      "return": {
+        "type": "whandle:inkWidget",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "inkCompoundWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "inkWidgetPath",
+          "name": "path",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "inkCompoundWidgetReference::GetWidget;inkCompoundRefCName",
+      "shortName": "GetWidget",
+      "return": {
+        "type": "whandle:inkWidget",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "inkCompoundWidgetReference",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "path",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

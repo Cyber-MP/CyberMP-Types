@@ -1,0 +1,89 @@
+{
+  "parent": "IScriptable",
+  "name": "vehicleCinematicCameraShotEffect",
+  "flags": 2,
+  "funcs": [
+    {
+      "fullName": "GetValueFromCurve",
+      "shortName": "GetValueFromCurve",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 13850,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "curve",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "input",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "min",
+          "flags": 1152
+        },
+        {
+          "type": "Float",
+          "name": "max",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "GetExecutionTime;CinematicCameraData",
+      "shortName": "GetExecutionTime",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 33280,
+      "params": [
+        {
+          "type": "CinematicCameraData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Reset;",
+      "shortName": "Reset",
+      "flags": 33280
+    },
+    {
+      "fullName": "Start;CinematicCameraData",
+      "shortName": "Start",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "CinematicCameraData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Update;CinematicCameraDatascript_ref<WorldTransform>",
+      "shortName": "Update",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "CinematicCameraData",
+          "name": "data",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:WorldTransform",
+          "name": "resultTransform",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

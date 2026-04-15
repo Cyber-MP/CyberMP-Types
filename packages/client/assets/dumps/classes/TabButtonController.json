@@ -1,0 +1,156 @@
+{
+  "parent": "inkToggleController",
+  "name": "TabButtonController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkTextWidgetReference",
+      "name": "label",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "icon",
+      "flags": 4297195553
+    },
+    {
+      "type": "Int32",
+      "name": "data",
+      "flags": 4297195552
+    },
+    {
+      "type": "String",
+      "name": "labelSet",
+      "flags": 4297195552
+    },
+    {
+      "type": "String",
+      "name": "iconSet",
+      "flags": 4297195552
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnIconCallback",
+      "shortName": "OnIconCallback",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkCallbackData",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnTabHoverOut",
+      "shortName": "OnTabHoverOut",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnTabHoverOver",
+      "shortName": "OnTabHoverOver",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnTabSelected",
+      "shortName": "OnTabSelected",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetData;",
+      "shortName": "GetData",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "GetIcon;",
+      "shortName": "GetIcon",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "flags": 33280
+    },
+    {
+      "fullName": "GetLabelKey;",
+      "shortName": "GetLabelKey",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "flags": 33280
+    },
+    {
+      "fullName": "SetToggleData;Int32StringString",
+      "shortName": "SetToggleData",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "data",
+          "flags": 128
+        },
+        {
+          "type": "String",
+          "name": "label",
+          "flags": 1152
+        },
+        {
+          "type": "String",
+          "name": "icon",
+          "flags": 1152
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,314 @@
+{
+  "parent": "gameuiWidgetGameController",
+  "name": "gameuiTutorialPopupGameController",
+  "flags": 2,
+  "props": [
+    {
+      "type": "inkWidgetReference",
+      "name": "actionHint",
+      "flags": 4297326625
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "popupPanel",
+      "flags": 4297326625
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "popupFullscreenPanel",
+      "flags": 4297326625
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "popupBlockingPanel",
+      "flags": 4297326625
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "popupFullscreenRightPanel",
+      "flags": 4297326625
+    },
+    {
+      "type": "whandle:TutorialPopupData",
+      "name": "data",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "inputBlocked",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "gamePaused",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "isShownBbId",
+      "flags": 4431347744
+    },
+    {
+      "type": "CName",
+      "name": "animIntroPopup",
+      "flags": 4297130016
+    },
+    {
+      "type": "CName",
+      "name": "animIntroPopupModal",
+      "flags": 4297130016
+    },
+    {
+      "type": "CName",
+      "name": "animIntroFullscreenLeft",
+      "flags": 4297130016
+    },
+    {
+      "type": "CName",
+      "name": "animIntroFullscreenRight",
+      "flags": 4297130016
+    },
+    {
+      "type": "CName",
+      "name": "animOutroPopup",
+      "flags": 4297130016
+    },
+    {
+      "type": "CName",
+      "name": "animOutroPopupModal",
+      "flags": 4297130016
+    },
+    {
+      "type": "CName",
+      "name": "animOutroFullscreenLeft",
+      "flags": 4297130016
+    },
+    {
+      "type": "CName",
+      "name": "animOutroFullscreenRight",
+      "flags": 4297130016
+    },
+    {
+      "type": "CName",
+      "name": "animIntro",
+      "flags": 4297130016
+    },
+    {
+      "type": "CName",
+      "name": "animOutro",
+      "flags": 4297130016
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "targetPopup",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "animationProxy",
+      "flags": 4431347744
+    },
+    {
+      "type": "gamePopupPosition",
+      "name": "targetPosition",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "onInputDeviceChangedCallbackID",
+      "flags": 4431347744
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "AdaptToScreenComposition",
+      "shortName": "AdaptToScreenComposition",
+      "index": 14652,
+      "flags": 1
+    },
+    {
+      "fullName": "RequestVisualState",
+      "shortName": "RequestVisualState",
+      "index": 14650,
+      "flags": 1
+    },
+    {
+      "fullName": "RestorePreviousVisualState",
+      "shortName": "RestorePreviousVisualState",
+      "index": 14651,
+      "flags": 1
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnInputDeviceChanged",
+      "shortName": "OnInputDeviceChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Uint32",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnIntro",
+      "shortName": "OnIntro",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkanimProxy",
+          "name": "anim",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnOutro",
+      "shortName": "OnOutro",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkanimProxy",
+          "name": "anim",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPlayerAttach",
+      "shortName": "OnPlayerAttach",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "playerPuppet",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPlayerDetach",
+      "shortName": "OnPlayerDetach",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "playerPuppet",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRelease",
+      "shortName": "OnRelease",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "AdaptToBlackBars;Float",
+      "shortName": "AdaptToBlackBars",
+      "flags": 33924,
+      "params": [
+        {
+          "type": "Float",
+          "name": "offset",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AdaptToDpadHints;",
+      "shortName": "AdaptToDpadHints",
+      "flags": 32900
+    },
+    {
+      "fullName": "AdaptToHudSafezones;Vector2",
+      "shortName": "AdaptToHudSafezones",
+      "flags": 33924,
+      "params": [
+        {
+          "type": "Vector2",
+          "name": "safezones",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "BlockInput;Bool",
+      "shortName": "BlockInput",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PauseGame;Bool",
+      "shortName": "PauseGame",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetupView;",
+      "shortName": "SetupView",
+      "flags": 32900
+    }
+  ]
+}

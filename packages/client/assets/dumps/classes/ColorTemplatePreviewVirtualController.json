@@ -1,0 +1,328 @@
+{
+  "parent": "inkVirtualCompoundItemController",
+  "name": "ColorTemplatePreviewVirtualController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "CName",
+      "name": "widgetToSpawn",
+      "flags": 4297130017
+    },
+    {
+      "type": "handle:WrappedTemplateData",
+      "name": "wrappedData",
+      "flags": 4431347744
+    },
+    {
+      "type": "whandle:inkWidget",
+      "name": "spawnedWidget",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:ColorTemplatePreviewDisplayController",
+      "name": "templatePreview",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "templateToggled",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "templateSelected",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "canNavigate",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "colorCorrectionEnabled",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnColorCorrectionDisabled",
+      "shortName": "OnColorCorrectionDisabled",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "whandle:inkWidget",
+          "name": "widget",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnColorCorrectionEnabled",
+      "shortName": "OnColorCorrectionEnabled",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "whandle:inkWidget",
+          "name": "widget",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnDataChanged",
+      "shortName": "OnDataChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Variant",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnDeselected",
+      "shortName": "OnDeselected",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "whandle:inkVirtualCompoundItemController",
+          "name": "itemController",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnNavigationDisabled",
+      "shortName": "OnNavigationDisabled",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "whandle:inkWidget",
+          "name": "widget",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnNavigationEnabled",
+      "shortName": "OnNavigationEnabled",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "whandle:inkWidget",
+          "name": "widget",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSelected",
+      "shortName": "OnSelected",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "whandle:inkVirtualCompoundItemController",
+          "name": "itemController",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "discreteNav",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnTemplateToggled",
+      "shortName": "OnTemplateToggled",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "whandle:inkWidget",
+          "name": "widget",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnToggledOff",
+      "shortName": "OnToggledOff",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "whandle:inkVirtualCompoundItemController",
+          "name": "itemController",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnToggledOn",
+      "shortName": "OnToggledOn",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "whandle:inkVirtualCompoundItemController",
+          "name": "itemController",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnWidgetSpawned",
+      "shortName": "OnWidgetSpawned",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkWidget",
+          "name": "widget",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "userData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetCurrentData;",
+      "shortName": "GetCurrentData",
+      "return": {
+        "type": "handle:WrappedTemplateData",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "HandleToggleOff;",
+      "shortName": "HandleToggleOff",
+      "flags": 33284
+    },
+    {
+      "fullName": "HandleToggleOn;",
+      "shortName": "HandleToggleOn",
+      "flags": 33284
+    },
+    {
+      "fullName": "RegisterToCallbacks;",
+      "shortName": "RegisterToCallbacks",
+      "flags": 32900
+    },
+    {
+      "fullName": "SetVisualSelected;Bool",
+      "shortName": "SetVisualSelected",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetVisualToggled;Bool",
+      "shortName": "SetVisualToggled",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetupData;",
+      "shortName": "SetupData",
+      "flags": 32900
+    },
+    {
+      "fullName": "UnregisterFromCallbacks;",
+      "shortName": "UnregisterFromCallbacks",
+      "flags": 32900
+    },
+    {
+      "fullName": "UpdateData;WrappedTemplateData",
+      "shortName": "UpdateData",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:WrappedTemplateData",
+          "name": "wrappedData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateNavigationState;",
+      "shortName": "UpdateNavigationState",
+      "flags": 32900
+    }
+  ]
+}

@@ -1,0 +1,808 @@
+{
+  "parent": "gameIPreventionSpawnSystem",
+  "name": "gamePreventionSpawnSystem",
+  "flags": 2,
+  "funcs": [
+    {
+      "fullName": "CancelAllSpawnRequests",
+      "shortName": "CancelAllSpawnRequests",
+      "index": 13942,
+      "flags": 1
+    },
+    {
+      "fullName": "CancelSpawnRequest",
+      "shortName": "CancelSpawnRequest",
+      "index": 13941,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Uint32",
+          "name": "requestID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ClearStrategyPreCheckRequests",
+      "shortName": "ClearStrategyPreCheckRequests",
+      "index": 13946,
+      "flags": 1
+    },
+    {
+      "fullName": "DebugTryOverrideWithForcedStrategy",
+      "shortName": "DebugTryOverrideWithForcedStrategy",
+      "index": 13952,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "vehiclePoliceStrategy",
+          "name": "strategy",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "FindPursuitPointsRangeAsync",
+      "shortName": "FindPursuitPointsRangeAsync",
+      "index": 13967,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "array:Vector4",
+          "name": "spawnOriginPositions",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "radiusMin",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "radiusMax",
+          "flags": 128
+        },
+        {
+          "type": "Uint32",
+          "name": "unitCount",
+          "flags": 128
+        },
+        {
+          "type": "array:TweakDBID",
+          "name": "characterRecords",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "navVisCheck",
+          "flags": 128
+        },
+        {
+          "type": "NavGenAgentSize",
+          "name": "agentSize",
+          "flags": 128
+        },
+        {
+          "type": "whandle:IScriptable",
+          "name": "scriptable",
+          "flags": 128
+        },
+        {
+          "type": "String",
+          "name": "functionName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetAvailableStrategies",
+      "shortName": "GetAvailableStrategies",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13949,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "array:vehiclePoliceStrategy",
+          "name": "strategies",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "GetIntersectionInFrontOfPlayerPos",
+      "shortName": "GetIntersectionInFrontOfPlayerPos",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "index": 13953,
+      "flags": 8193
+    },
+    {
+      "fullName": "GetNearestRoadFromPlayerInfo",
+      "shortName": "GetNearestRoadFromPlayerInfo",
+      "index": 13956,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "gameNearestRoadFromPlayerInfo",
+          "name": "info",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "GetNumberOfSpawnedPreventionUnits",
+      "shortName": "GetNumberOfSpawnedPreventionUnits",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 13965,
+      "flags": 1
+    },
+    {
+      "fullName": "GetPreventionSystemCanSpawnInCrowd",
+      "shortName": "GetPreventionSystemCanSpawnInCrowd",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13970,
+      "flags": 1
+    },
+    {
+      "fullName": "GetRandomAvailableStrategy",
+      "shortName": "GetRandomAvailableStrategy",
+      "return": {
+        "type": "vehiclePoliceStrategy",
+        "flags": 64
+      },
+      "index": 13951,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "array:vehiclePoliceStrategy",
+          "name": "wantedStrategies",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetRandomAvailableStrategyInRange",
+      "shortName": "GetRandomAvailableStrategyInRange",
+      "return": {
+        "type": "vehiclePoliceStrategy",
+        "flags": 64
+      },
+      "index": 13950,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "Uint8",
+          "name": "minStrat",
+          "flags": 128
+        },
+        {
+          "type": "Uint8",
+          "name": "maxStrat",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "InterruptAllActionAndCommands",
+      "shortName": "InterruptAllActionAndCommands",
+      "index": 13975,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:vehicleBaseObject",
+          "name": "veh",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsAnyStrategyAvailable",
+      "shortName": "IsAnyStrategyAvailable",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13948,
+      "flags": 8193
+    },
+    {
+      "fullName": "IsEntityRegistered",
+      "shortName": "IsEntityRegistered",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13977,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "id",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsInUnmountingRange",
+      "shortName": "IsInUnmountingRange",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13982,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Vector3",
+          "name": "position",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsPlayerInDogTown",
+      "shortName": "IsPlayerInDogTown",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13955,
+      "flags": 8193
+    },
+    {
+      "fullName": "IsPlayerInSoftDeescalationTrigger",
+      "shortName": "IsPlayerInSoftDeescalationTrigger",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13981,
+      "flags": 1
+    },
+    {
+      "fullName": "IsPlayerOnHighway",
+      "shortName": "IsPlayerOnHighway",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13954,
+      "flags": 8193
+    },
+    {
+      "fullName": "IsPointInPreventionFreeArea",
+      "shortName": "IsPointInPreventionFreeArea",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13976,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Vector4",
+          "name": "point",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsPreventionVehicleEnabled",
+      "shortName": "IsPreventionVehicleEnabled",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13966,
+      "flags": 1
+    },
+    {
+      "fullName": "IsStrategyAvailable",
+      "shortName": "IsStrategyAvailable",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13947,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "vehiclePoliceStrategy",
+          "name": "strategy",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "MarkAsDead",
+      "shortName": "MarkAsDead",
+      "index": 13978,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "entityID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "NotifyPlayerMounted",
+      "shortName": "NotifyPlayerMounted",
+      "index": 13980,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "isPlayerMounted",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterEntityDeathCallback",
+      "shortName": "RegisterEntityDeathCallback",
+      "index": 13971,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:IScriptable",
+          "name": "scriptable",
+          "flags": 128
+        },
+        {
+          "type": "String",
+          "name": "functionName",
+          "flags": 128
+        },
+        {
+          "type": "entEntityID",
+          "name": "entityID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ReinitAll",
+      "shortName": "ReinitAll",
+      "index": 13961,
+      "flags": 1
+    },
+    {
+      "fullName": "RequestAVSpawn",
+      "shortName": "RequestAVSpawn",
+      "return": {
+        "type": "Uint32",
+        "flags": 64
+      },
+      "index": 13960,
+      "flags": 1,
+      "params": [
+        {
+          "type": "TweakDBID",
+          "name": "recordID",
+          "flags": 128
+        },
+        {
+          "type": "Vector2",
+          "name": "spawnDistanceRange",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "useOffTrafficPoints",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RequestAVSpawnAtLocation",
+      "shortName": "RequestAVSpawnAtLocation",
+      "return": {
+        "type": "Uint32",
+        "flags": 64
+      },
+      "index": 13959,
+      "flags": 1,
+      "params": [
+        {
+          "type": "TweakDBID",
+          "name": "recordID",
+          "flags": 128
+        },
+        {
+          "type": "Vector3",
+          "name": "location",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RequestAVSpawnPoints",
+      "shortName": "RequestAVSpawnPoints",
+      "return": {
+        "type": "Uint32",
+        "flags": 64
+      },
+      "index": 13958,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:IScriptable",
+          "name": "scriptable",
+          "flags": 128
+        },
+        {
+          "type": "String",
+          "name": "functionName",
+          "flags": 128
+        },
+        {
+          "type": "Vector2",
+          "name": "spawnDistanceRange",
+          "flags": 128
+        },
+        {
+          "type": "Uint32",
+          "name": "maxSpawnPoints",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "useOffTrafficPoints",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RequestChaseVehicle",
+      "shortName": "RequestChaseVehicle",
+      "return": {
+        "type": "Uint32",
+        "flags": 64
+      },
+      "index": 13944,
+      "flags": 1,
+      "params": [
+        {
+          "type": "TweakDBID",
+          "name": "vehicleRecordID",
+          "flags": 128
+        },
+        {
+          "type": "array:TweakDBID",
+          "name": "passengersRecordIDs",
+          "flags": 128
+        },
+        {
+          "type": "handle:vehicleBaseStrategyRequest",
+          "name": "strategy",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RequestDespawn",
+      "shortName": "RequestDespawn",
+      "index": 13962,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "entityID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RequestDespawnAll",
+      "shortName": "RequestDespawnAll",
+      "index": 13964,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "shouldUseAggressiveDespawn",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RequestDespawnVehicleAndPassengers",
+      "shortName": "RequestDespawnVehicleAndPassengers",
+      "index": 13963,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:vehicleBaseObject",
+          "name": "vehicle",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RequestRoadBlockadeSpawn",
+      "shortName": "RequestRoadBlockadeSpawn",
+      "return": {
+        "type": "Uint32",
+        "flags": 64
+      },
+      "index": 13957,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:TweakDBID",
+          "name": "vehiclessRecordIDs",
+          "flags": 128
+        },
+        {
+          "type": "Vector2",
+          "name": "spawnDistanceRange",
+          "flags": 128
+        },
+        {
+          "type": "Uint32",
+          "name": "numberNPCsPerCar",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RequestUnitSpawn",
+      "shortName": "RequestUnitSpawn",
+      "return": {
+        "type": "Uint32",
+        "flags": 64
+      },
+      "index": 13943,
+      "flags": 1,
+      "params": [
+        {
+          "type": "TweakDBID",
+          "name": "recordID",
+          "flags": 128
+        },
+        {
+          "type": "WorldTransform",
+          "name": "spawnTransform",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetStrategyPreCheckRequests",
+      "shortName": "SetStrategyPreCheckRequests",
+      "index": 13945,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:handle:vehicleBaseStrategyRequest",
+          "name": "preCheckRequests",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ToggleFreeArea",
+      "shortName": "ToggleFreeArea",
+      "index": 13968,
+      "flags": 1,
+      "params": [
+        {
+          "type": "NodeRef",
+          "name": "areaReference",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "enable",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TogglePreventionActive",
+      "shortName": "TogglePreventionActive",
+      "index": 13974,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "isActive",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TogglePreventionCrowdSpawns",
+      "shortName": "TogglePreventionCrowdSpawns",
+      "index": 13973,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "toggle",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TogglePreventionQuestTrigger",
+      "shortName": "TogglePreventionQuestTrigger",
+      "index": 13969,
+      "flags": 1,
+      "params": [
+        {
+          "type": "NodeRef",
+          "name": "areaReference",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "enable",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TryGetVehicleType",
+      "shortName": "TryGetVehicleType",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13979,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "id",
+          "flags": 128
+        },
+        {
+          "type": "gameDynamicVehicleType",
+          "name": "vehicleType",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "UnregisterEntityDeathCallback",
+      "shortName": "UnregisterEntityDeathCallback",
+      "index": 13972,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:IScriptable",
+          "name": "scriptable",
+          "flags": 128
+        },
+        {
+          "type": "String",
+          "name": "functionName",
+          "flags": 128
+        },
+        {
+          "type": "entEntityID",
+          "name": "entityID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Debug_EmulateDamageDealt;Float",
+      "shortName": "Debug_EmulateDamageDealt",
+      "flags": 34052,
+      "params": [
+        {
+          "type": "Float",
+          "name": "damageAmount",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "DespawnCallback;EntityID",
+      "shortName": "DespawnCallback",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "entityID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnEnterPreventionQuestTrigger;Bool",
+      "shortName": "OnEnterPreventionQuestTrigger",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "disablePreventionSystem",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RoadblockadeNPCEarlyInit;gamePuppet",
+      "shortName": "RoadblockadeNPCEarlyInit",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gamePuppet",
+          "name": "puppet",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetIfAvailable;vehiclePoliceStrategy",
+      "shortName": "SetIfAvailable",
+      "return": {
+        "type": "vehiclePoliceStrategy",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "vehiclePoliceStrategy",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SpawnRequestFinished;SpawnRequestResult",
+      "shortName": "SpawnRequestFinished",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "gameSpawnRequestResult",
+          "name": "requestResult",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TryFillPreventionSystemDebugData;PreventionSystemDebugData",
+      "shortName": "TryFillPreventionSystemDebugData",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476,
+      "params": [
+        {
+          "type": "gamePreventionSystemDebugData",
+          "name": "dataToFill",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "VehicleEarlyInit;WheeledObject",
+      "shortName": "VehicleEarlyInit",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:vehicleWheeledBaseObject",
+          "name": "vehicleObject",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

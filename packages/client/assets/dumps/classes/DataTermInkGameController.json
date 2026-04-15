@@ -1,0 +1,225 @@
+{
+  "parent": "DeviceInkGameControllerBase",
+  "name": "DataTermInkGameController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "whandle:inkHorizontalPanelWidget",
+      "name": "fcPointsPanel",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:inkTextWidget",
+      "name": "districtText",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:inkTextWidget",
+      "name": "pointText",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:gameFastTravelPointData",
+      "name": "point",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "onFastTravelPointUpdateListener",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "onToggleHologramListener",
+      "flags": 4431347744
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnActionWidgetSpawned",
+      "shortName": "OnActionWidgetSpawned",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkWidget",
+          "name": "widget",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "userData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnFastTravelPointUpdate",
+      "shortName": "OnFastTravelPointUpdate",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Variant",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnToggleHologram",
+      "shortName": "OnToggleHologram",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "subwayGateOpen",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CreateAnimPlaybackOverrideData;",
+      "shortName": "CreateAnimPlaybackOverrideData",
+      "return": {
+        "type": "inkanimPlaybackOptions",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "GetFastTravelSystem;",
+      "shortName": "GetFastTravelSystem",
+      "return": {
+        "type": "handle:FastTravelSystem",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "GetIsSubwayGate;",
+      "shortName": "GetIsSubwayGate",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "GetOwner;",
+      "shortName": "GetOwner",
+      "return": {
+        "type": "handle:DataTerm",
+        "flags": 64
+      },
+      "flags": 33024
+    },
+    {
+      "fullName": "Refresh;EDeviceStatus",
+      "shortName": "Refresh",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "EDeviceStatus",
+          "name": "state",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterBlackboardCallbacks;IBlackboard",
+      "shortName": "RegisterBlackboardCallbacks",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "handle:gameIBlackboard",
+          "name": "blackboard",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ResolveHologramState;BoolEDeviceStatus",
+      "shortName": "ResolveHologramState",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "shouldBeOpen",
+          "flags": 128
+        },
+        {
+          "type": "EDeviceStatus",
+          "name": "deviceState",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetupWidgets;",
+      "shortName": "SetupWidgets",
+      "flags": 33024
+    },
+    {
+      "fullName": "TurnOff;",
+      "shortName": "TurnOff",
+      "flags": 33028
+    },
+    {
+      "fullName": "TurnOn;",
+      "shortName": "TurnOn",
+      "flags": 33028
+    },
+    {
+      "fullName": "UnRegisterBlackboardCallbacks;IBlackboard",
+      "shortName": "UnRegisterBlackboardCallbacks",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "handle:gameIBlackboard",
+          "name": "blackboard",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateActionWidgets;script_ref<array<SActionWidgetPackage>>",
+      "shortName": "UpdateActionWidgets",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "script_ref:array:SActionWidgetPackage",
+          "name": "widgetsData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdatePointText;",
+      "shortName": "UpdatePointText",
+      "flags": 32900
+    },
+    {
+      "fullName": "UpdateSubwayHologramDefaultState;EDeviceStatus",
+      "shortName": "UpdateSubwayHologramDefaultState",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "EDeviceStatus",
+          "name": "deviceState",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

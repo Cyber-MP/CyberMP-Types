@@ -1,0 +1,122 @@
+{
+  "parent": "IScriptable",
+  "name": "gameObjectActionsCallbackController",
+  "flags": 2,
+  "funcs": [
+    {
+      "fullName": "Create",
+      "shortName": "Create",
+      "return": {
+        "type": "handle:gameObjectActionsCallbackController",
+        "flags": 64
+      },
+      "index": 13085,
+      "flags": 3,
+      "params": [
+        {
+          "type": "whandle:entEntity",
+          "name": "target",
+          "flags": 128
+        },
+        {
+          "type": "whandle:entEntity",
+          "name": "instigator",
+          "flags": 128
+        },
+        {
+          "type": "ScriptGameInstance",
+          "name": "gameInstance",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AddObjectAction",
+      "shortName": "AddObjectAction",
+      "index": 13086,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataObjectAction_Record",
+          "name": "objectActionRecord",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ClearAllObjectActions",
+      "shortName": "ClearAllObjectActions",
+      "index": 13088,
+      "flags": 1
+    },
+    {
+      "fullName": "HasObjectAction",
+      "shortName": "HasObjectAction",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13087,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "whandle:gamedataObjectAction_Record",
+          "name": "objectActionRecord",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsObjectActionInstigatorPrereqFulfilled",
+      "shortName": "IsObjectActionInstigatorPrereqFulfilled",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13090,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "whandle:gamedataObjectAction_Record",
+          "name": "objectActionRecord",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsObjectActionTargetPrereqFulfilled",
+      "shortName": "IsObjectActionTargetPrereqFulfilled",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13089,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "whandle:gamedataObjectAction_Record",
+          "name": "objectActionRecord",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterSkillCheckCallbacks",
+      "shortName": "RegisterSkillCheckCallbacks",
+      "index": 13092,
+      "flags": 1
+    },
+    {
+      "fullName": "UnlockNotifications",
+      "shortName": "UnlockNotifications",
+      "index": 13091,
+      "flags": 1
+    },
+    {
+      "fullName": "UnregisterSkillCheckCallbacks",
+      "shortName": "UnregisterSkillCheckCallbacks",
+      "index": 13093,
+      "flags": 1
+    }
+  ]
+}

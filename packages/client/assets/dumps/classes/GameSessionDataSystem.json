@@ -1,0 +1,136 @@
+{
+  "parent": "gameScriptableSystem",
+  "name": "GameSessionDataSystem",
+  "flags": 4,
+  "props": [
+    {
+      "type": "array:handle:GameSessionDataModule",
+      "name": "gameSessionDataModules",
+      "flags": 6583025696
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "GameSessionDataSystem::AddDataEntryRequest;GameInstanceEGameSessionDataTypeVariant",
+      "shortName": "AddDataEntryRequest",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "EGameSessionDataType",
+          "name": "dataType",
+          "flags": 128
+        },
+        {
+          "type": "Variant",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GameSessionDataSystem::CheckDataRequest;GameInstanceEGameSessionDataTypeVariant",
+      "shortName": "CheckDataRequest",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "EGameSessionDataType",
+          "name": "dataType",
+          "flags": 128
+        },
+        {
+          "type": "Variant",
+          "name": "dataHelper",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetModule;EGameSessionDataType",
+      "shortName": "GetModule",
+      "return": {
+        "type": "handle:GameSessionDataModule",
+        "flags": 64
+      },
+      "flags": 41092,
+      "params": [
+        {
+          "type": "EGameSessionDataType",
+          "name": "dataType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Initialize;",
+      "shortName": "Initialize",
+      "flags": 32900
+    },
+    {
+      "fullName": "IsDataValid;EGameSessionDataTypeVariant",
+      "shortName": "IsDataValid",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33028,
+      "params": [
+        {
+          "type": "EGameSessionDataType",
+          "name": "dataType",
+          "flags": 128
+        },
+        {
+          "type": "Variant",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnAttach;",
+      "shortName": "OnAttach",
+      "flags": 33920
+    },
+    {
+      "fullName": "OnDataEntryRequest;DataEntryRequest",
+      "shortName": "OnDataEntryRequest",
+      "flags": 33924,
+      "params": [
+        {
+          "type": "handle:DataEntryRequest",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnDetach;",
+      "shortName": "OnDetach",
+      "flags": 33920
+    },
+    {
+      "fullName": "RefreshDebug;",
+      "shortName": "RefreshDebug",
+      "flags": 32900
+    },
+    {
+      "fullName": "Uninitialize;",
+      "shortName": "Uninitialize",
+      "flags": 32900
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "name": "ResourceAsyncRef",
+  "flags": 2,
+  "funcs": [
+    {
+      "fullName": "GetHash",
+      "shortName": "GetHash",
+      "return": {
+        "type": "Uint64",
+        "flags": 64
+      },
+      "index": 15305,
+      "flags": 3,
+      "params": [
+        {
+          "type": "script_ref:ResourceAsyncRef",
+          "name": "self",
+          "flags": 0
+        }
+      ]
+    },
+    {
+      "fullName": "GetPath",
+      "shortName": "GetPath",
+      "return": {
+        "type": "redResourceReferenceScriptToken",
+        "flags": 64
+      },
+      "index": 15304,
+      "flags": 3,
+      "params": [
+        {
+          "type": "script_ref:ResourceAsyncRef",
+          "name": "self",
+          "flags": 0
+        }
+      ]
+    },
+    {
+      "fullName": "IsEmpty",
+      "shortName": "IsEmpty",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 15306,
+      "flags": 3,
+      "params": [
+        {
+          "type": "script_ref:ResourceAsyncRef",
+          "name": "self",
+          "flags": 0
+        }
+      ]
+    },
+    {
+      "fullName": "SetPath",
+      "shortName": "SetPath",
+      "index": 15303,
+      "flags": 3,
+      "params": [
+        {
+          "type": "script_ref:ResourceAsyncRef",
+          "name": "self",
+          "flags": 0
+        },
+        {
+          "type": "redResourceReferenceScriptToken",
+          "name": "arg",
+          "flags": 0
+        }
+      ]
+    }
+  ]
+}

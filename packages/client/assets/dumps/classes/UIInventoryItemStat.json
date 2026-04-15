@@ -1,0 +1,55 @@
+{
+  "parent": "IScriptable",
+  "name": "UIInventoryItemStat",
+  "flags": 4,
+  "props": [
+    {
+      "type": "gamedataStatType",
+      "name": "Type",
+      "flags": 4297326624
+    },
+    {
+      "type": "Float",
+      "name": "Value",
+      "flags": 4297326624
+    },
+    {
+      "type": "handle:IUIInventoryItemStatsProvider",
+      "name": "PropertiesProvider",
+      "flags": 4431544352
+    },
+    {
+      "type": "handle:UIItemStatProperties",
+      "name": "properties",
+      "flags": 4431347744
+    },
+    {
+      "type": "Bool",
+      "name": "propertiesFetched",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "GetProperties;",
+      "shortName": "GetProperties",
+      "return": {
+        "type": "whandle:UIItemStatProperties",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "SetProperties;UIItemStatProperties",
+      "shortName": "SetProperties",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:UIItemStatProperties",
+          "name": "properties",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

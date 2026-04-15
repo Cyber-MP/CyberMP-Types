@@ -1,0 +1,204 @@
+{
+  "parent": "gameuiGenericNotificationGameController",
+  "name": "ZoneAlertNotificationQueue",
+  "flags": 4,
+  "props": [
+    {
+      "type": "Float",
+      "name": "duration",
+      "flags": 4297130017
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "securityBlackBoardID",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "combatBlackBoardID",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "wantedValueBlackboardID",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "playerBlackboardID",
+      "flags": 4431347744
+    },
+    {
+      "type": "whandle:gameIBlackboard",
+      "name": "blackboard",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:gameIBlackboard",
+      "name": "wantedBlackboard",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:UI_WantedBarDef",
+      "name": "wantedBlackboardDef",
+      "flags": 4431347744
+    },
+    {
+      "type": "Bool",
+      "name": "playerInCombat",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:gameObject",
+      "name": "playerPuppet",
+      "flags": 4297130016
+    },
+    {
+      "type": "ESecurityAreaType",
+      "name": "currentSecurityZoneType",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:gameIBlackboard",
+      "name": "vehicleZoneBlackboard",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:LocalPlayerDef",
+      "name": "vehicleZoneBlackboardDef",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "vehicleZoneBlackboardID",
+      "flags": 4431347744
+    },
+    {
+      "type": "Int32",
+      "name": "WANTED_TIER_SIZE",
+      "flags": 4297130016
+    },
+    {
+      "type": "Int32",
+      "name": "wantedLevel",
+      "flags": 4297130016
+    },
+    {
+      "type": "Uint32",
+      "name": "factListenerID",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnCombatChange",
+      "shortName": "OnCombatChange",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPlayerAttach",
+      "shortName": "OnPlayerAttach",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "playerPuppet",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPlayerDetach",
+      "shortName": "OnPlayerDetach",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "playerPuppet",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSecurityDataChange",
+      "shortName": "OnSecurityDataChange",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Variant",
+          "name": "arg",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnVehicleZone",
+      "shortName": "OnVehicleZone",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "arg",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetID;",
+      "shortName": "GetID",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 34304
+    },
+    {
+      "fullName": "GetShouldSaveState;",
+      "shortName": "GetShouldSaveState",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 34304
+    },
+    {
+      "fullName": "OnFact;Int32",
+      "shortName": "OnFact",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "val",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

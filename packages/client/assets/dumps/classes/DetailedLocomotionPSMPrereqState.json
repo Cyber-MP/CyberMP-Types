@@ -1,0 +1,60 @@
+{
+  "parent": "PlayerStateMachinePrereqState",
+  "name": "DetailedLocomotionPSMPrereqState",
+  "flags": 4,
+  "props": [
+    {
+      "type": "gamebbScriptID_Int32",
+      "name": "locomotionID",
+      "flags": 4297130016
+    },
+    {
+      "type": "Uint32",
+      "name": "playerAttachedCallbackID",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnPlayerAttachedCallback;GameObject",
+      "shortName": "OnPlayerAttachedCallback",
+      "flags": 33924,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "playerPuppet",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterPlayerAttachedCallback;BlackboardID_IntGameInstance",
+      "shortName": "RegisterPlayerAttachedCallback",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "gamebbScriptID_Int32",
+          "name": "locomotionID",
+          "flags": 128
+        },
+        {
+          "type": "ScriptGameInstance",
+          "name": "game",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UnregisterPlayerAttachedCallback;GameInstance",
+      "shortName": "UnregisterPlayerAttachedCallback",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "game",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

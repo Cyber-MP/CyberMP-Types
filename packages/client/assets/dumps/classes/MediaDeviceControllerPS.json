@@ -1,0 +1,364 @@
+{
+  "parent": "ScriptableDeviceComponentPS",
+  "name": "MediaDeviceControllerPS",
+  "flags": 1028,
+  "props": [
+    {
+      "type": "Int32",
+      "name": "previousStation",
+      "flags": 4297195552
+    },
+    {
+      "type": "String",
+      "name": "activeChannelName",
+      "flags": 4297195552
+    },
+    {
+      "type": "Bool",
+      "name": "dataInitialized",
+      "flags": 4565631008
+    },
+    {
+      "type": "Int32",
+      "name": "amountOfStations",
+      "flags": 4565631008
+    },
+    {
+      "type": "Int32",
+      "name": "activeStation",
+      "flags": 4565631008
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "ActionMediaDeviceStatus;",
+      "shortName": "ActionMediaDeviceStatus",
+      "return": {
+        "type": "handle:MediaDeviceStatus",
+        "flags": 64
+      },
+      "flags": 41220
+    },
+    {
+      "fullName": "ActionNextStation;",
+      "shortName": "ActionNextStation",
+      "return": {
+        "type": "handle:NextStation",
+        "flags": 64
+      },
+      "flags": 33280
+    },
+    {
+      "fullName": "ActionPreviousStation;",
+      "shortName": "ActionPreviousStation",
+      "return": {
+        "type": "handle:PreviousStation",
+        "flags": 64
+      },
+      "flags": 33280
+    },
+    {
+      "fullName": "ActionQuestDefaultStation;",
+      "shortName": "ActionQuestDefaultStation",
+      "return": {
+        "type": "handle:QuestDefaultStation",
+        "flags": 64
+      },
+      "flags": 33028
+    },
+    {
+      "fullName": "ActionQuestDisableInteraction;",
+      "shortName": "ActionQuestDisableInteraction",
+      "return": {
+        "type": "handle:QuestDisableInteraction",
+        "flags": 64
+      },
+      "flags": 33028
+    },
+    {
+      "fullName": "ActionQuestEnableInteraction;",
+      "shortName": "ActionQuestEnableInteraction",
+      "return": {
+        "type": "handle:QuestEnableInteraction",
+        "flags": 64
+      },
+      "flags": 33028
+    },
+    {
+      "fullName": "ActionQuestNextStation;",
+      "shortName": "ActionQuestNextStation",
+      "return": {
+        "type": "handle:QuestNextStation",
+        "flags": 64
+      },
+      "flags": 33028
+    },
+    {
+      "fullName": "ActionQuestPreviousStation;",
+      "shortName": "ActionQuestPreviousStation",
+      "return": {
+        "type": "handle:QuestPreviousStation",
+        "flags": 64
+      },
+      "flags": 33028
+    },
+    {
+      "fullName": "ActionQuestSetChannel;",
+      "shortName": "ActionQuestSetChannel",
+      "return": {
+        "type": "handle:QuestSetChannel",
+        "flags": 64
+      },
+      "flags": 33028
+    },
+    {
+      "fullName": "ActionThumbnailUI;",
+      "shortName": "ActionThumbnailUI",
+      "return": {
+        "type": "handle:ThumbnailUI",
+        "flags": 64
+      },
+      "flags": 33024
+    },
+    {
+      "fullName": "GetActions;array<DeviceAction>GetActionsContext",
+      "shortName": "GetActions",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33280,
+      "params": [
+        {
+          "type": "array:handle:gamedeviceAction",
+          "name": "actions",
+          "flags": 640
+        },
+        {
+          "type": "gameGetActionsContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetActiveStationIndex;",
+      "shortName": "GetActiveStationIndex",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 33280
+    },
+    {
+      "fullName": "GetActiveStationName;",
+      "shortName": "GetActiveStationName",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetDeviceStatusAction;",
+      "shortName": "GetDeviceStatusAction",
+      "return": {
+        "type": "handle:MediaDeviceStatus",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "GetDeviceStatusTextData;",
+      "shortName": "GetDeviceStatusTextData",
+      "return": {
+        "type": "handle:textTextParameterSet",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "GetPreviousStationIndex;",
+      "shortName": "GetPreviousStationIndex",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetQuestActionByName;CName",
+      "shortName": "GetQuestActionByName",
+      "return": {
+        "type": "handle:gamedeviceAction",
+        "flags": 64
+      },
+      "flags": 33280,
+      "params": [
+        {
+          "type": "CName",
+          "name": "actionName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetQuestActions;array<DeviceAction>script_ref<GetActionsContext>",
+      "shortName": "GetQuestActions",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "array:handle:gamedeviceAction",
+          "name": "outActions",
+          "flags": 640
+        },
+        {
+          "type": "script_ref:gameGetActionsContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetQuickHackDistractionActions;",
+      "shortName": "GetQuickHackDistractionActions",
+      "flags": 32900
+    },
+    {
+      "fullName": "OnNextStation;NextStation",
+      "shortName": "OnNextStation",
+      "return": {
+        "type": "EntityNotificationType",
+        "flags": 64
+      },
+      "flags": 33280,
+      "params": [
+        {
+          "type": "handle:NextStation",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPreviousStation;PreviousStation",
+      "shortName": "OnPreviousStation",
+      "return": {
+        "type": "EntityNotificationType",
+        "flags": 64
+      },
+      "flags": 33280,
+      "params": [
+        {
+          "type": "handle:PreviousStation",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnQuestDisableInteraction;QuestDisableInteraction",
+      "shortName": "OnQuestDisableInteraction",
+      "return": {
+        "type": "EntityNotificationType",
+        "flags": 64
+      },
+      "flags": 33280,
+      "params": [
+        {
+          "type": "handle:QuestDisableInteraction",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnQuestEnableInteraction;QuestEnableInteraction",
+      "shortName": "OnQuestEnableInteraction",
+      "return": {
+        "type": "EntityNotificationType",
+        "flags": 64
+      },
+      "flags": 33280,
+      "params": [
+        {
+          "type": "handle:QuestEnableInteraction",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnQuestNextStation;QuestNextStation",
+      "shortName": "OnQuestNextStation",
+      "return": {
+        "type": "EntityNotificationType",
+        "flags": 64
+      },
+      "flags": 33280,
+      "params": [
+        {
+          "type": "handle:QuestNextStation",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnQuestPreviousStation;QuestPreviousStation",
+      "shortName": "OnQuestPreviousStation",
+      "return": {
+        "type": "EntityNotificationType",
+        "flags": 64
+      },
+      "flags": 33280,
+      "params": [
+        {
+          "type": "handle:QuestPreviousStation",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnQuestSetChannel;QuestSetChannel",
+      "shortName": "OnQuestSetChannel",
+      "return": {
+        "type": "EntityNotificationType",
+        "flags": 64
+      },
+      "flags": 34308,
+      "params": [
+        {
+          "type": "handle:QuestSetChannel",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PassChannelName;script_ref<String>",
+      "shortName": "PassChannelName",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "script_ref:String",
+          "name": "channelName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetActiveStationIndex;Int32",
+      "shortName": "SetActiveStationIndex",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "stationIDX",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

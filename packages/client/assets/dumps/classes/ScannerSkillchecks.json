@@ -1,0 +1,105 @@
+{
+  "parent": "ScannerChunk",
+  "name": "ScannerSkillchecks",
+  "flags": 4,
+  "props": [
+    {
+      "type": "array:UIInteractionSkillCheck",
+      "name": "skillchecks",
+      "flags": 6583025696
+    },
+    {
+      "type": "Bool",
+      "name": "authorizationRequired",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isPlayerAuthorized",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "GetAuthorization;",
+      "shortName": "GetAuthorization",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetPlayerAuthorization;",
+      "shortName": "GetPlayerAuthorization",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetSkillchecks;",
+      "shortName": "GetSkillchecks",
+      "return": {
+        "type": "array:UIInteractionSkillCheck",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetType;",
+      "shortName": "GetType",
+      "return": {
+        "type": "ScannerDataType",
+        "flags": 64
+      },
+      "flags": 33280
+    },
+    {
+      "fullName": "IsValid;",
+      "shortName": "IsValid",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "Set;script_ref<array<UIInteractionSkillCheck>>",
+      "shortName": "Set",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "script_ref:array:UIInteractionSkillCheck",
+          "name": "sklchs",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetAuthorization;Bool",
+      "shortName": "SetAuthorization",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "auth",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetPlayerAuthorization;Bool",
+      "shortName": "SetPlayerAuthorization",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "auth",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

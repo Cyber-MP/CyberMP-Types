@@ -1,0 +1,106 @@
+{
+  "parent": "BaseChunkGameController",
+  "name": "ScannerRequirementsGameController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "ScannerRequirementsRightPanel",
+      "flags": 4297130017
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "requirementsCallbackID",
+      "flags": 4431347744
+    },
+    {
+      "type": "Bool",
+      "name": "isValidRequirements",
+      "flags": 4297130016
+    },
+    {
+      "type": "array:whandle:inkAsyncSpawnRequest",
+      "name": "asyncSpawnRequests",
+      "flags": 6583025696
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnRequirementSpawned",
+      "shortName": "OnRequirementSpawned",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkWidget",
+          "name": "widget",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "userData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRequirementsChanged",
+      "shortName": "OnRequirementsChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Variant",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "ClearAllAsyncSpawnRequests;",
+      "shortName": "ClearAllAsyncSpawnRequests",
+      "flags": 32900
+    },
+    {
+      "fullName": "ClearAsyncSpawnRequest;inkAsyncSpawnRequest",
+      "shortName": "ClearAsyncSpawnRequest",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "whandle:inkAsyncSpawnRequest",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateGlobalVisibility;",
+      "shortName": "UpdateGlobalVisibility",
+      "flags": 32900
+    }
+  ]
+}

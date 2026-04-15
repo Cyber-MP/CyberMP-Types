@@ -1,0 +1,149 @@
+{
+  "name": "Color",
+  "flags": 18,
+  "props": [
+    {
+      "type": "Uint8",
+      "name": "Red",
+      "flags": 6694125569
+    },
+    {
+      "type": "Uint8",
+      "name": "Green",
+      "flags": 6694125569
+    },
+    {
+      "type": "Uint8",
+      "name": "Blue",
+      "flags": 6694125569
+    },
+    {
+      "type": "Uint8",
+      "name": "Alpha",
+      "flags": 6694125569
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "Color::ColorToHSB;Color",
+      "shortName": "ColorToHSB",
+      "return": {
+        "type": "HSBColor",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "Color",
+          "name": "color",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Color::Equals;ColorColorInt32",
+      "shortName": "Equals",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "Color",
+          "name": "colorA",
+          "flags": 128
+        },
+        {
+          "type": "Color",
+          "name": "colorB",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "tolerance",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "Color::HSBToColor;FloatBoolFloatFloat",
+      "shortName": "HSBToColor",
+      "return": {
+        "type": "Color",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "Float",
+          "name": "hue",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "onlyHue",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "saturation",
+          "flags": 1152
+        },
+        {
+          "type": "Float",
+          "name": "brightness",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "Color::ToHDRColorDirect;Color",
+      "shortName": "ToHDRColorDirect",
+      "return": {
+        "type": "HDRColor",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "Color",
+          "name": "color",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Color::ToLinear;Color",
+      "shortName": "ToLinear",
+      "return": {
+        "type": "Color",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "Color",
+          "name": "sRGBColor",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Color::ToSRGB;Color",
+      "shortName": "ToSRGB",
+      "return": {
+        "type": "Color",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "Color",
+          "name": "linearColor",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "parent": "gamedataTweakDBRecord",
+  "name": "gamedataOffMeshLinkTag_Record",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "GetPrerequisitesCount",
+      "shortName": "GetPrerequisitesCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 6341,
+      "flags": 1
+    },
+    {
+      "fullName": "GetPrerequisitesItem",
+      "shortName": "GetPrerequisitesItem",
+      "return": {
+        "type": "whandle:gamedataIPrereq_Record",
+        "flags": 64
+      },
+      "index": 6342,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetPrerequisitesItemHandle",
+      "shortName": "GetPrerequisitesItemHandle",
+      "return": {
+        "type": "handle:gamedataIPrereq_Record",
+        "flags": 64
+      },
+      "index": 6343,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsAllowed",
+      "shortName": "IsAllowed",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 6346,
+      "flags": 1
+    },
+    {
+      "fullName": "Prerequisites",
+      "shortName": "Prerequisites",
+      "index": 6340,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataIPrereq_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "PrerequisitesContains",
+      "shortName": "PrerequisitesContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 6344,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataIPrereq_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Tag",
+      "shortName": "Tag",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "index": 6345,
+      "flags": 1
+    }
+  ]
+}

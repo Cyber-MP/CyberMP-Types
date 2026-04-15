@@ -1,0 +1,1987 @@
+{
+  "parent": "gameuiWidgetGameController",
+  "name": "vehicleColorSelectorGameController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkWidgetReference",
+      "name": "CursorRootContainerRef",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "CursorRootOffsetPoint",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "colorPaletteRef",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "stickerPaletteRef",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "currentTemplateParentRef",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "windowTitle",
+      "flags": 4297130017
+    },
+    {
+      "type": "array:inkWidgetReference",
+      "name": "classicBackgrounds",
+      "flags": 6583025697
+    },
+    {
+      "type": "array:inkWidgetReference",
+      "name": "mordredBackgrounds",
+      "flags": 6583025697
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "colorWheelColorA",
+      "flags": 4297326625
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "colorWheelColorB",
+      "flags": 4297326625
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "colorWheelColorLights",
+      "flags": 4297326625
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "colorWheelColorLightsCircle",
+      "flags": 4297326625
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "colorWheelColorLightsFixedCircleContainer",
+      "flags": 4297326625
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "colorWheelColorLightsFixedCircle",
+      "flags": 4297326625
+    },
+    {
+      "type": "vehicleColorSelectorPointerDef",
+      "name": "colorPickerA",
+      "flags": 4297130017
+    },
+    {
+      "type": "vehicleColorSelectorPointerDef",
+      "name": "selectedColorPointerA",
+      "flags": 4297130017
+    },
+    {
+      "type": "vehicleColorSelectorPointerDef",
+      "name": "colorPickerB",
+      "flags": 4297130017
+    },
+    {
+      "type": "vehicleColorSelectorPointerDef",
+      "name": "selectedColorPointerB",
+      "flags": 4297130017
+    },
+    {
+      "type": "vehicleColorSelectorPointerDef",
+      "name": "colorPickerLights",
+      "flags": 4297130017
+    },
+    {
+      "type": "vehicleColorSelectorPointerDef",
+      "name": "selectedColorPointerLights",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "swapColorHint",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "changeSliderHint",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "twintoneApplyHintText",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "changeTabRightHint",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "changeTabLeftHint",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "mouseHitColor1Ref",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "mouseHitColor2Ref",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "mouseHitLightsRef",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "vehiclePreviewColorA",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "vehiclePreviewColorB",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "vehiclePreviewLightsCar",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "vehiclePreviewLightsBike",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "vehiclePreviewBackground",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "vehiclePreviewForeground",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "vehiclePreviewGlowBackground",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "vehiclePreviewGlowA",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "vehiclePreviewGlowB",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "vehiclePreviewGlowLights",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "vehiclePreviewScalingCanvas",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "lightsPreviewBeamA",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "lightsPreviewBeamB",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "lightsPreviewBeamBike",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "lightErrorMessage",
+      "flags": 4297130017
+    },
+    {
+      "type": "String",
+      "name": "timeDilationProfile",
+      "flags": 4297195552
+    },
+    {
+      "type": "CName",
+      "name": "introAnimation",
+      "flags": 4297130016
+    },
+    {
+      "type": "CName",
+      "name": "cancelAnimation",
+      "flags": 4297130016
+    },
+    {
+      "type": "CName",
+      "name": "applyAnimation",
+      "flags": 4297130016
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "titleTextMain",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "titleTextNumber",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "colorHints",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "mouseHitSaturationBar",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "saturationBarFill",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "saturationPointer",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "saturationBarHighlight",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "saturationBarHint",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "brightnessBarHighlight",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "brightnessBarHint",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "headlightsIcon",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "mouseHitBrightnessBar",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "brightnessPointer",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "modeChangeBack",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "modeChangeNext",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "applyContainerWidget",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "resetContainerWidget",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "vehicleUnknownPane",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "vehicleBrandIcon",
+      "flags": 4297130017
+    },
+    {
+      "type": "Float",
+      "name": "crackedCarGlitchMinimumInterval",
+      "flags": 4297130017
+    },
+    {
+      "type": "Float",
+      "name": "crackedCarGlitchMaximumInterval",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "vehicleNameText",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetLibraryReference",
+      "name": "templatePreviewLibraryRef",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "uniqueColorPanel",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "uniqueColorErrorPanel",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkVirtualCompoundWidgetReference",
+      "name": "genericPatternsGrid",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkVirtualCompoundWidgetReference",
+      "name": "uniquePatternsGrid",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "saveProfileHint",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "deleteProfileHint",
+      "flags": 4297130017
+    },
+    {
+      "type": "handle:inkGameNotificationData",
+      "name": "popupData",
+      "flags": 4431413280
+    },
+    {
+      "type": "whandle:inkISystemRequestsHandler",
+      "name": "systemRequestsHandler",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:PlayerPuppet",
+      "name": "player",
+      "flags": 4297130016
+    },
+    {
+      "type": "ScriptGameInstance",
+      "name": "gameInstance",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:gameTimeSystem",
+      "name": "timeSystem",
+      "flags": 4431347744
+    },
+    {
+      "type": "whandle:vehicleBaseObject",
+      "name": "vehicle",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "animProxy",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "fakeUpdateProxy",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "sbBarsProxy",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "LightsFocusProxy",
+      "flags": 4431347744
+    },
+    {
+      "type": "whandle:inkWidget",
+      "name": "stickersPage",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "isInMenuCallbackID",
+      "flags": 4431347744
+    },
+    {
+      "type": "vehicleColorSelectorActiveMode",
+      "name": "activeMode",
+      "flags": 4297130016
+    },
+    {
+      "type": "vehicleColorSelectorActiveMode",
+      "name": "previousMode",
+      "flags": 4297130016
+    },
+    {
+      "type": "vehicleColorSelectorActiveInputMode",
+      "name": "activeInputMode",
+      "flags": 4297130016
+    },
+    {
+      "type": "Float",
+      "name": "currentAngle",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "colorADefined",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "colorBDefined",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "lightsDefined",
+      "flags": 4297130016
+    },
+    {
+      "type": "Float",
+      "name": "targetColorAngleA",
+      "flags": 4297130016
+    },
+    {
+      "type": "Float",
+      "name": "targetColorAngleB",
+      "flags": 4297130016
+    },
+    {
+      "type": "Float",
+      "name": "targetColorAngleLights",
+      "flags": 4297130016
+    },
+    {
+      "type": "Float",
+      "name": "targetColorASaturation",
+      "flags": 4297130016
+    },
+    {
+      "type": "Float",
+      "name": "targetColorBSaturation",
+      "flags": 4297130016
+    },
+    {
+      "type": "Float",
+      "name": "targetColorABrightness",
+      "flags": 4297130016
+    },
+    {
+      "type": "Float",
+      "name": "targetColorBBrightness",
+      "flags": 4297130016
+    },
+    {
+      "type": "Vector2",
+      "name": "axisInputCache",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "inputEnabled",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "sbBarsShown",
+      "flags": 4297130016
+    },
+    {
+      "type": "Float",
+      "name": "sbBarsLength",
+      "flags": 4297130016
+    },
+    {
+      "type": "Float",
+      "name": "axisInputThreshold",
+      "flags": 4297130016
+    },
+    {
+      "type": "Float",
+      "name": "saturationPointerPosition",
+      "flags": 4297130016
+    },
+    {
+      "type": "Float",
+      "name": "brightnessPointerPosition",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "mouseInputEnabled",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "lightsEditingEnabled",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "hasCustomRims",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "hasUniquePaintjobs",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "saturationSliderHolded",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "brightnessSliderHolded",
+      "flags": 4297130016
+    },
+    {
+      "type": "Float",
+      "name": "ChromaSliderStepPad",
+      "flags": 4297130016
+    },
+    {
+      "type": "Float",
+      "name": "ChromaSliderStepMouse",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "sliderHoldGamepad",
+      "flags": 4297130016
+    },
+    {
+      "type": "Int32",
+      "name": "sliderHoldGamepadDamp",
+      "flags": 4297130016
+    },
+    {
+      "type": "Int32",
+      "name": "sliderPadHoldAccelerationTreshhold",
+      "flags": 4297130016
+    },
+    {
+      "type": "Int32",
+      "name": "storedSelectedColorID",
+      "flags": 4297130016
+    },
+    {
+      "type": "Color",
+      "name": "cachedNewColorA",
+      "flags": 4297130016
+    },
+    {
+      "type": "Color",
+      "name": "cachedNewColorB",
+      "flags": 4297130016
+    },
+    {
+      "type": "Color",
+      "name": "cachedNewColorLights",
+      "flags": 4297130016
+    },
+    {
+      "type": "vehicleColorSelectorMenuCloseReason",
+      "name": "CloseReason",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "unsupportedVehicle",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "previewDataMissing",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:TwintoneTemplateGridController",
+      "name": "virtualGenericTemplateGridController",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:TwintoneTemplateGridController",
+      "name": "virtualUniqueTemplateGridController",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "genericGridInitialized",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "uniqueGridInitialized",
+      "flags": 4297130016
+    },
+    {
+      "type": "VehicleVisualCustomizationTemplate",
+      "name": "currentTemplate",
+      "flags": 4297130016
+    },
+    {
+      "type": "VehicleVisualCustomizationTemplate",
+      "name": "toggledTemplate",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:ColorTemplatePreviewDisplayController",
+      "name": "currentTemplatePreview",
+      "flags": 4297130016
+    },
+    {
+      "type": "vehicleColorSelectorActiveTab",
+      "name": "activePanel",
+      "flags": 4297130016
+    },
+    {
+      "type": "vehicleColorSelectorSBBar",
+      "name": "activeSBBar",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "mainPanelAnimProxy",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "twintonePanelAnimProxy",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "carGlitchProxy",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "crackedAnimProxy",
+      "flags": 4431347744
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnAction",
+      "shortName": "OnAction",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "gameinputScriptListenerAction",
+          "name": "action",
+          "flags": 128
+        },
+        {
+          "type": "gameinputScriptListenerActionConsumer",
+          "name": "consumer",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnAllGenericElementsSpawned",
+      "shortName": "OnAllGenericElementsSpawned",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnAllUniqueElementsSpawned",
+      "shortName": "OnAllUniqueElementsSpawned",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnBrightnessBarPressed",
+      "shortName": "OnBrightnessBarPressed",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnCarGlitchFinish",
+      "shortName": "OnCarGlitchFinish",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkanimProxy",
+          "name": "proxy",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnCrackedAnimIntroEnd",
+      "shortName": "OnCrackedAnimIntroEnd",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkanimProxy",
+          "name": "proxy",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnFakeUpdate",
+      "shortName": "OnFakeUpdate",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkanimProxy",
+          "name": "proxy",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnFinalAnimationFinished",
+      "shortName": "OnFinalAnimationFinished",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkanimProxy",
+          "name": "proxy",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnGenericControllerSelected",
+      "shortName": "OnGenericControllerSelected",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "whandle:inkWidget",
+          "name": "widget",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnGenericTemplateToggled",
+      "shortName": "OnGenericTemplateToggled",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "whandle:inkWidget",
+          "name": "widget",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnGlobalAxisInput",
+      "shortName": "OnGlobalAxisInput",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnGlobalInputHold",
+      "shortName": "OnGlobalInputHold",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnGlobalInputReleased",
+      "shortName": "OnGlobalInputReleased",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnGlobalPressInput",
+      "shortName": "OnGlobalPressInput",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnHoverOutColorWheel1",
+      "shortName": "OnHoverOutColorWheel1",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnHoverOutColorWheel2",
+      "shortName": "OnHoverOutColorWheel2",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnHoverOutColorWheelLights",
+      "shortName": "OnHoverOutColorWheelLights",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnHoverOverBrightnessBar",
+      "shortName": "OnHoverOverBrightnessBar",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnHoverOverColorWheel1",
+      "shortName": "OnHoverOverColorWheel1",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnHoverOverColorWheel2",
+      "shortName": "OnHoverOverColorWheel2",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnHoverOverColorWheelLights",
+      "shortName": "OnHoverOverColorWheelLights",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnHoverOverSaturationBar",
+      "shortName": "OnHoverOverSaturationBar",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnIntroFinished",
+      "shortName": "OnIntroFinished",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkanimProxy",
+          "name": "proxy",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnIsInMenuChanged",
+      "shortName": "OnIsInMenuChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "param",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnMouseInput",
+      "shortName": "OnMouseInput",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSaturationBarPressed",
+      "shortName": "OnSaturationBarPressed",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnShowSBBarsAnimFinished",
+      "shortName": "OnShowSBBarsAnimFinished",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkanimProxy",
+          "name": "proxy",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnUniqueControllerSelected",
+      "shortName": "OnUniqueControllerSelected",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "whandle:inkWidget",
+          "name": "widget",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUniqueTemplateToggled",
+      "shortName": "OnUniqueTemplateToggled",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "whandle:inkWidget",
+          "name": "widget",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnVehicleColorSelectionSliderHoldEvent",
+      "shortName": "OnVehicleColorSelectionSliderHoldEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:VehicleColorSelectionSliderHoldEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Apply;",
+      "shortName": "Apply",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "CalculateNewColorAngle;Float",
+      "shortName": "CalculateNewColorAngle",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Float",
+          "name": "angle",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CanDeleteProfile;",
+      "shortName": "CanDeleteProfile",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "Cancel;",
+      "shortName": "Cancel",
+      "flags": 32900
+    },
+    {
+      "fullName": "DeleteProfile;",
+      "shortName": "DeleteProfile",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "FinishMQ058IfNecessary;",
+      "shortName": "FinishMQ058IfNecessary",
+      "flags": 32900
+    },
+    {
+      "fullName": "GetActiveInputMode;",
+      "shortName": "GetActiveInputMode",
+      "return": {
+        "type": "vehicleColorSelectorActiveInputMode",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "GetColorPickerForActiveColor;",
+      "shortName": "GetColorPickerForActiveColor",
+      "return": {
+        "type": "vehicleColorSelectorPointerDef",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "GetMouseLocationRelativeToActiveColorPicker;Vector2",
+      "shortName": "GetMouseLocationRelativeToActiveColorPicker",
+      "return": {
+        "type": "Vector2",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Vector2",
+          "name": "mousePos",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetNavigationEnabledInGrids;",
+      "shortName": "GetNavigationEnabledInGrids",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "GetNextValidMode;vehicleColorSelectorActiveModeInt32",
+      "shortName": "GetNextValidMode",
+      "return": {
+        "type": "vehicleColorSelectorActiveMode",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "vehicleColorSelectorActiveMode",
+          "name": "currentMode",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "direction",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "GetSliderStepForControlDevice;",
+      "shortName": "GetSliderStepForControlDevice",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "HandleClickReleased;inkPointerEvent",
+      "shortName": "HandleClickReleased",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HandleNavigation;inkPointerEvent",
+      "shortName": "HandleNavigation",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "InitializeMQ058;",
+      "shortName": "InitializeMQ058",
+      "flags": 32900
+    },
+    {
+      "fullName": "LoadTemplateData;VehicleVisualCustomizationTemplate",
+      "shortName": "LoadTemplateData",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "VehicleVisualCustomizationTemplate",
+          "name": "template",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "MoveCurrentSlider;Int32",
+      "shortName": "MoveCurrentSlider",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "direction",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "MoveNavigation;inkDiscreteNavigationDirection",
+      "shortName": "MoveNavigation",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "inkDiscreteNavigationDirection",
+          "name": "direction",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "NormalizeAngle;Float",
+      "shortName": "NormalizeAngle",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Float",
+          "name": "angle",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnBothGridInitialized;",
+      "shortName": "OnBothGridInitialized",
+      "flags": 32900
+    },
+    {
+      "fullName": "PackCurrentConfigurationToTemplate;",
+      "shortName": "PackCurrentConfigurationToTemplate",
+      "return": {
+        "type": "VehicleVisualCustomizationTemplate",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "PlayAnimation;CNameinkAnimOptions",
+      "shortName": "PlayAnimation",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "CName",
+          "name": "animationName",
+          "flags": 128
+        },
+        {
+          "type": "inkanimPlaybackOptions",
+          "name": "playbackOptions",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "PlayCarGlitchEffect;",
+      "shortName": "PlayCarGlitchEffect",
+      "flags": 32900
+    },
+    {
+      "fullName": "PlayFailSound;",
+      "shortName": "PlayFailSound",
+      "flags": 32900
+    },
+    {
+      "fullName": "PlayLightsFocusAnimation;Bool",
+      "shortName": "PlayLightsFocusAnimation",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "val",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProccessSwapColorHintVisibility;",
+      "shortName": "ProccessSwapColorHintVisibility",
+      "flags": 32900
+    },
+    {
+      "fullName": "ProcessApplyHintVisiblity;",
+      "shortName": "ProcessApplyHintVisiblity",
+      "flags": 32900
+    },
+    {
+      "fullName": "ProcessCurrentSliderChange;Int32",
+      "shortName": "ProcessCurrentSliderChange",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "change",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessDeleteProfileHintVisibility;",
+      "shortName": "ProcessDeleteProfileHintVisibility",
+      "flags": 32900
+    },
+    {
+      "fullName": "ProcessFakeUpdate;Bool",
+      "shortName": "ProcessFakeUpdate",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "on",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessMouseInput;Vector2",
+      "shortName": "ProcessMouseInput",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Vector2",
+          "name": "mousePos",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessPointerClick;inkPointerEvent",
+      "shortName": "ProcessPointerClick",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessPointerMovement;FloatvehicleColorSelectorPointerDef",
+      "shortName": "ProcessPointerMovement",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Float",
+          "name": "angle",
+          "flags": 128
+        },
+        {
+          "type": "vehicleColorSelectorPointerDef",
+          "name": "pointer",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessPreviousCustomizationState;",
+      "shortName": "ProcessPreviousCustomizationState",
+      "flags": 32900
+    },
+    {
+      "fullName": "ProcessResetHintVisiblity;",
+      "shortName": "ProcessResetHintVisiblity",
+      "flags": 32900
+    },
+    {
+      "fullName": "ProcessSaveProfileHintVisibility;",
+      "shortName": "ProcessSaveProfileHintVisibility",
+      "flags": 32900
+    },
+    {
+      "fullName": "ReadSBBarsValues;",
+      "shortName": "ReadSBBarsValues",
+      "flags": 32900
+    },
+    {
+      "fullName": "Reset;",
+      "shortName": "Reset",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "ResetCustomizationToVehicle;",
+      "shortName": "ResetCustomizationToVehicle",
+      "flags": 32900
+    },
+    {
+      "fullName": "ResetSliderControls;",
+      "shortName": "ResetSliderControls",
+      "flags": 32900
+    },
+    {
+      "fullName": "SaveProfile;",
+      "shortName": "SaveProfile",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "SelectActivePanel;vehicleColorSelectorActiveTab",
+      "shortName": "SelectActivePanel",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "vehicleColorSelectorActiveTab",
+          "name": "nextPanel",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SelectDefaultTemplateInGrids;",
+      "shortName": "SelectDefaultTemplateInGrids",
+      "flags": 32900
+    },
+    {
+      "fullName": "SelectSBBar;vehicleColorSelectorSBBar",
+      "shortName": "SelectSBBar",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "vehicleColorSelectorSBBar",
+          "name": "bar",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SendCustomizationToVehicle;",
+      "shortName": "SendCustomizationToVehicle",
+      "flags": 32900
+    },
+    {
+      "fullName": "SetClassicBackgroundVisibility;Bool",
+      "shortName": "SetClassicBackgroundVisibility",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "visible",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetCursorVisibility;Bool",
+      "shortName": "SetCursorVisibility",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "visible",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetHeadlightsFixedColor;Vehicle_Record",
+      "shortName": "SetHeadlightsFixedColor",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "whandle:gamedataVehicle_Record",
+          "name": "record",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetInputEnabled;Bool",
+      "shortName": "SetInputEnabled",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "enabled",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetMordredBackgroundVisibility;Bool",
+      "shortName": "SetMordredBackgroundVisibility",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "visible",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetNavigationEnabledInGrids;Bool",
+      "shortName": "SetNavigationEnabledInGrids",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "enabled",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetSliderPosition;vehicleColorSelectorSBBarFloat",
+      "shortName": "SetSliderPosition",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "vehicleColorSelectorSBBar",
+          "name": "bar",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "newPosition",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetTimeDilatation;Bool",
+      "shortName": "SetTimeDilatation",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "enable",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ShouldProcessMouseInputForActiveColorPicker;Vector2",
+      "shortName": "ShouldProcessMouseInputForActiveColorPicker",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Vector2",
+          "name": "mousePos",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ShowSBBars;Bool",
+      "shortName": "ShowSBBars",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "val",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SignalUICallBack;",
+      "shortName": "SignalUICallBack",
+      "flags": 32900
+    },
+    {
+      "fullName": "StartCrackedAnimations;",
+      "shortName": "StartCrackedAnimations",
+      "flags": 32900
+    },
+    {
+      "fullName": "SwapColors;",
+      "shortName": "SwapColors",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "SwitchActiveMode;Int32vehicleColorSelectorActiveMode",
+      "shortName": "SwitchActiveMode",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "direction",
+          "flags": 1152
+        },
+        {
+          "type": "vehicleColorSelectorActiveMode",
+          "name": "switchTo",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "UnitializeTwintone;",
+      "shortName": "UnitializeTwintone",
+      "flags": 32900
+    },
+    {
+      "fullName": "UnlockSemimaruUniqueTemplate;TweakDBID",
+      "shortName": "UnlockSemimaruUniqueTemplate",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "TweakDBID",
+          "name": "tweakDBID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Update;",
+      "shortName": "Update",
+      "flags": 32900
+    },
+    {
+      "fullName": "UpdateActiveSBBar;",
+      "shortName": "UpdateActiveSBBar",
+      "flags": 32900
+    },
+    {
+      "fullName": "UpdateColor;FloatvehicleColorSelectorActiveMode",
+      "shortName": "UpdateColor",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Float",
+          "name": "colorAngle",
+          "flags": 128
+        },
+        {
+          "type": "vehicleColorSelectorActiveMode",
+          "name": "selectedMode",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateControlsState;",
+      "shortName": "UpdateControlsState",
+      "flags": 32900
+    },
+    {
+      "fullName": "UpdateCurrentTemplate;VehicleVisualCustomizationTemplate",
+      "shortName": "UpdateCurrentTemplate",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "VehicleVisualCustomizationTemplate",
+          "name": "newTemplate",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateLightsPreviewWidgets;Bool",
+      "shortName": "UpdateLightsPreviewWidgets",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "reset",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateNavigationOverride;",
+      "shortName": "UpdateNavigationOverride",
+      "flags": 32900
+    },
+    {
+      "fullName": "UpdateNavigationState;",
+      "shortName": "UpdateNavigationState",
+      "flags": 32900
+    },
+    {
+      "fullName": "UpdatePointerPosition;FloatvehicleColorSelectorPointerDefBool",
+      "shortName": "UpdatePointerPosition",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Float",
+          "name": "colorAngle",
+          "flags": 128
+        },
+        {
+          "type": "vehicleColorSelectorPointerDef",
+          "name": "pointer",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "rotate",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdatePointerVisiblity;vehicleColorSelectorPointerDefBool",
+      "shortName": "UpdatePointerVisiblity",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "vehicleColorSelectorPointerDef",
+          "name": "pointer",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "set",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateSBBarsForActiveColor;",
+      "shortName": "UpdateSBBarsForActiveColor",
+      "flags": 32900
+    },
+    {
+      "fullName": "UpdateSliderFromScreenPosition;vehicleColorSelectorSBBarVector2",
+      "shortName": "UpdateSliderFromScreenPosition",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "vehicleColorSelectorSBBar",
+          "name": "slider",
+          "flags": 128
+        },
+        {
+          "type": "Vector2",
+          "name": "position",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateSlidersPosition;",
+      "shortName": "UpdateSlidersPosition",
+      "flags": 32900
+    },
+    {
+      "fullName": "UpdateTintedPartsForMode;vehicleColorSelectorActiveMode",
+      "shortName": "UpdateTintedPartsForMode",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "vehicleColorSelectorActiveMode",
+          "name": "mode",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateTwintonePanel;",
+      "shortName": "UpdateTwintonePanel",
+      "flags": 32900
+    },
+    {
+      "fullName": "UpdateVehicleManufacturer;",
+      "shortName": "UpdateVehicleManufacturer",
+      "flags": 32900
+    },
+    {
+      "fullName": "UpdateVehiclePreview;",
+      "shortName": "UpdateVehiclePreview",
+      "flags": 32900
+    },
+    {
+      "fullName": "UpdateWidgetsForNewMode;vehicleColorSelectorActiveModevehicleColorSelectorActiveMode",
+      "shortName": "UpdateWidgetsForNewMode",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "vehicleColorSelectorActiveMode",
+          "name": "currentMode",
+          "flags": 128
+        },
+        {
+          "type": "vehicleColorSelectorActiveMode",
+          "name": "previousMode",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "VerifyVehicleValidity;",
+      "shortName": "VerifyVehicleValidity",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900
+    }
+  ]
+}

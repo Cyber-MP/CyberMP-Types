@@ -1,0 +1,119 @@
+{
+  "parent": "IScriptable",
+  "name": "PreventionAgents",
+  "flags": 4,
+  "props": [
+    {
+      "type": "CName",
+      "name": "groupName",
+      "flags": 4297130016
+    },
+    {
+      "type": "array:handle:SPreventionAgentData",
+      "name": "requsteredAgents",
+      "flags": 6583025696
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "AddAgent;PersistentState",
+      "shortName": "AddAgent",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "whandle:gamePersistentState",
+          "name": "ps",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CreateGroup;CNamePersistentState",
+      "shortName": "CreateGroup",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "CName",
+          "name": "groupName",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gamePersistentState",
+          "name": "ps",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetAgentsNumber;",
+      "shortName": "GetAgentsNumber",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetAgetntByIndex;Int32",
+      "shortName": "GetAgetntByIndex",
+      "return": {
+        "type": "whandle:gamePersistentState",
+        "flags": 64
+      },
+      "flags": 41476,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetGroupName;",
+      "shortName": "GetGroupName",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "HasAgents;",
+      "shortName": "HasAgents",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "IsAgentalreadyAdded;PersistentState",
+      "shortName": "IsAgentalreadyAdded",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476,
+      "params": [
+        {
+          "type": "whandle:gamePersistentState",
+          "name": "ps",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RemoveAgent;PersistentState",
+      "shortName": "RemoveAgent",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "whandle:gamePersistentState",
+          "name": "ps",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

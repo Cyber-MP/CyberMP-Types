@@ -1,0 +1,274 @@
+{
+  "parent": "inkToggleController",
+  "name": "PhotoModeGridButton",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkImageWidgetReference",
+      "name": "FrameImg",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "DynamicImg",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "BgWidget",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "HoverWidget",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "PlusImg",
+      "flags": 4297130017
+    },
+    {
+      "type": "CName",
+      "name": "currentImagePart",
+      "flags": 4297130016
+    },
+    {
+      "type": "redResourceReferenceScriptToken",
+      "name": "atlasRef",
+      "flags": 4297130016
+    },
+    {
+      "type": "Int32",
+      "name": "buttonData",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:PhotoModeGridList",
+      "name": "parentGrid",
+      "flags": 4297130016
+    },
+    {
+      "type": "Int32",
+      "name": "index",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "visibleOnGrid",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "alwaysVisible",
+      "flags": 4297130016
+    },
+    {
+      "type": "Float",
+      "name": "imageScalingSpeed",
+      "flags": 4297130016
+    },
+    {
+      "type": "Float",
+      "name": "opacityScalingSpeed",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnHoverOut",
+      "shortName": "OnHoverOut",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnHovered",
+      "shortName": "OnHovered",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnToggleClick",
+      "shortName": "OnToggleClick",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "ButtonStateChanged;Bool",
+      "shortName": "ButtonStateChanged",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "selected",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetData;",
+      "shortName": "GetData",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "IsToggledVisually;",
+      "shortName": "IsToggledVisually",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "OnVisibilityOnGridChanged;Bool",
+      "shortName": "OnVisibilityOnGridChanged",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "visible",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetData;Int32",
+      "shortName": "SetData",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "buttonData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetForceVisible;",
+      "shortName": "SetForceVisible",
+      "flags": 33284
+    },
+    {
+      "fullName": "SetImage;ResRefCName",
+      "shortName": "SetImage",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "redResourceReferenceScriptToken",
+          "name": "atlasPath",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "imagePart",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetImageScalingSpeed;Float",
+      "shortName": "SetImageScalingSpeed",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Float",
+          "name": "speed",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetOpacityScalingSpeed;Float",
+      "shortName": "SetOpacityScalingSpeed",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Float",
+          "name": "speed",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Setup;PhotoModeGridListInt32",
+      "shortName": "Setup",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:PhotoModeGridList",
+          "name": "grid",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateSize;Float",
+      "shortName": "UpdateSize",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Float",
+          "name": "timeDelta",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

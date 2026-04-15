@@ -1,0 +1,412 @@
+{
+  "parent": "inkWidgetLogicController",
+  "name": "inkSliderController",
+  "flags": 2,
+  "props": [
+    {
+      "type": "inkWidgetReference",
+      "name": "slidingAreaRef",
+      "group": "References",
+      "flags": 6627016705
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "handleRef",
+      "group": "References",
+      "flags": 6627016705
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "nextRef",
+      "group": "References - Optional",
+      "flags": 6627016705
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "priorRef",
+      "group": "References - Optional",
+      "flags": 6627016705
+    },
+    {
+      "type": "inkESliderDirection",
+      "name": "direction",
+      "group": "Design",
+      "flags": 6627016705
+    },
+    {
+      "type": "Bool",
+      "name": "autoSizeHandle",
+      "group": "Design",
+      "flags": 6627016705
+    },
+    {
+      "type": "Float",
+      "name": "minHandleSize",
+      "group": "Design",
+      "flags": 6627016705
+    },
+    {
+      "type": "Float",
+      "name": "maxHandleSize",
+      "group": "Design",
+      "flags": 6627016705
+    },
+    {
+      "type": "Float",
+      "name": "percentHandleSize",
+      "group": "Design",
+      "flags": 6627016705
+    },
+    {
+      "type": "Float",
+      "name": "currentProgress",
+      "group": "Debug",
+      "flags": 6627016705
+    },
+    {
+      "type": "Float",
+      "name": "minimumValue",
+      "group": "Debug",
+      "flags": 6627016705
+    },
+    {
+      "type": "Float",
+      "name": "maximumValue",
+      "group": "Debug",
+      "flags": 6627016705
+    },
+    {
+      "type": "Float",
+      "name": "step",
+      "group": "Debug",
+      "flags": 6627016705
+    },
+    {
+      "type": "inkSliderControllerInputCallback",
+      "name": "SliderInput",
+      "group": "Debug",
+      "flags": 6627016704
+    },
+    {
+      "type": "inkSliderControllerValueChangeCallback",
+      "name": "SliderValueChanged",
+      "group": "Debug",
+      "flags": 6627016704
+    },
+    {
+      "type": "inkSliderControllerHandleReleasedCallback",
+      "name": "SliderHandleReleased",
+      "group": "Debug",
+      "flags": 6627016704
+    },
+    {
+      "type": "whandle:inkWidget",
+      "name": "handleWidgetRef",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:inkWidget",
+      "name": "slidingAreaWidgetRef",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isDragging",
+      "flags": 4297130016
+    },
+    {
+      "type": "Vector2",
+      "name": "defaultScale",
+      "flags": 4297130016
+    },
+    {
+      "type": "Vector2",
+      "name": "pressedScale",
+      "flags": 4297130016
+    },
+    {
+      "type": "Float",
+      "name": "defaultOpacity",
+      "flags": 4297130016
+    },
+    {
+      "type": "CName",
+      "name": "defaultColor",
+      "flags": 4297130017
+    },
+    {
+      "type": "CName",
+      "name": "hoveredColor",
+      "flags": 4297130017
+    },
+    {
+      "type": "CName",
+      "name": "pressedColor",
+      "flags": 4297130017
+    },
+    {
+      "type": "Float",
+      "name": "pressedOpacity",
+      "flags": 4297130017
+    },
+    {
+      "type": "Bool",
+      "name": "HACK_isDisabledForHDRCalibrationScreen",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "ChangeProgress",
+      "shortName": "ChangeProgress",
+      "index": 1891,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Float",
+          "name": "newValue",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ChangeValue",
+      "shortName": "ChangeValue",
+      "index": 1890,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Float",
+          "name": "newValue",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetCurrentValue",
+      "shortName": "GetCurrentValue",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 1883,
+      "flags": 1
+    },
+    {
+      "fullName": "GetHandleRef",
+      "shortName": "GetHandleRef",
+      "return": {
+        "type": "inkWidgetReference",
+        "flags": 64
+      },
+      "index": 1895,
+      "flags": 1
+    },
+    {
+      "fullName": "GetMaxValue",
+      "shortName": "GetMaxValue",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 1884,
+      "flags": 1
+    },
+    {
+      "fullName": "GetMinValue",
+      "shortName": "GetMinValue",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 1885,
+      "flags": 1
+    },
+    {
+      "fullName": "GetPercentageHandleSize",
+      "shortName": "GetPercentageHandleSize",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 1887,
+      "flags": 1
+    },
+    {
+      "fullName": "GetProgress",
+      "shortName": "GetProgress",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 1882,
+      "flags": 1
+    },
+    {
+      "fullName": "GetSlidingAreaRef",
+      "shortName": "GetSlidingAreaRef",
+      "return": {
+        "type": "inkWidgetReference",
+        "flags": 64
+      },
+      "index": 1894,
+      "flags": 1
+    },
+    {
+      "fullName": "GetStep",
+      "shortName": "GetStep",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 1886,
+      "flags": 1
+    },
+    {
+      "fullName": "Next",
+      "shortName": "Next",
+      "index": 1892,
+      "flags": 1
+    },
+    {
+      "fullName": "Prior",
+      "shortName": "Prior",
+      "index": 1893,
+      "flags": 1
+    },
+    {
+      "fullName": "SetInputDisabled",
+      "shortName": "SetInputDisabled",
+      "index": 1889,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "disabled",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetPercentageHandleSize",
+      "shortName": "SetPercentageHandleSize",
+      "index": 1888,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Float",
+          "name": "newSize",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Setup",
+      "shortName": "Setup",
+      "index": 1881,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Float",
+          "name": "minimumValue",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "maximumValue",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "defaultValue",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "step",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "OnHoverOut",
+      "shortName": "OnHoverOut",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnHoverOver",
+      "shortName": "OnHoverOver",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnPress",
+      "shortName": "OnPress",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRelease",
+      "shortName": "OnRelease",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "HACK_SetDisabledForHDRCalibrationScreen;",
+      "shortName": "HACK_SetDisabledForHDRCalibrationScreen",
+      "flags": 33284
+    }
+  ]
+}

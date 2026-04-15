@@ -1,0 +1,79 @@
+{
+  "parent": "gameIGameSystem",
+  "name": "exEntitySpawner",
+  "flags": 2,
+  "funcs": [
+    {
+      "fullName": "Despawn",
+      "shortName": "Despawn",
+      "index": 15634,
+      "flags": 3,
+      "params": [
+        {
+          "type": "handle:entEntity",
+          "name": "entity",
+          "flags": 0
+        }
+      ]
+    },
+    {
+      "fullName": "Spawn",
+      "shortName": "Spawn",
+      "return": {
+        "type": "entEntityID",
+        "flags": 64
+      },
+      "index": 15632,
+      "flags": 3,
+      "params": [
+        {
+          "type": "raRef:CResource",
+          "name": "entityPath",
+          "flags": 0
+        },
+        {
+          "type": "WorldTransform",
+          "name": "worldTransform",
+          "flags": 0
+        },
+        {
+          "type": "CName",
+          "name": "appearance",
+          "flags": 1024
+        },
+        {
+          "type": "TweakDBID",
+          "name": "recordID",
+          "flags": 1024
+        }
+      ]
+    },
+    {
+      "fullName": "SpawnRecord",
+      "shortName": "SpawnRecord",
+      "return": {
+        "type": "entEntityID",
+        "flags": 64
+      },
+      "index": 15633,
+      "flags": 3,
+      "params": [
+        {
+          "type": "TweakDBID",
+          "name": "recordID",
+          "flags": 0
+        },
+        {
+          "type": "WorldTransform",
+          "name": "worldTransform",
+          "flags": 0
+        },
+        {
+          "type": "CName",
+          "name": "appearance",
+          "flags": 1024
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "parent": "IScriptable",
+  "name": "ResourceToken",
+  "flags": 2,
+  "funcs": [
+    {
+      "fullName": "FromResRef",
+      "shortName": "FromResRef",
+      "return": {
+        "type": "handle:ResourceToken",
+        "flags": 64
+      },
+      "index": 15292,
+      "flags": 3,
+      "params": [
+        {
+          "type": "rRef:CResource",
+          "name": "arg",
+          "flags": 0
+        }
+      ]
+    },
+    {
+      "fullName": "GetHash",
+      "shortName": "GetHash",
+      "return": {
+        "type": "Uint64",
+        "flags": 64
+      },
+      "index": 15287,
+      "flags": 1
+    },
+    {
+      "fullName": "GetPath",
+      "shortName": "GetPath",
+      "return": {
+        "type": "raRef:CResource",
+        "flags": 64
+      },
+      "index": 15286,
+      "flags": 1
+    },
+    {
+      "fullName": "GetResource",
+      "shortName": "GetResource",
+      "return": {
+        "type": "handle:CResource",
+        "flags": 64
+      },
+      "index": 15285,
+      "flags": 1
+    },
+    {
+      "fullName": "IsFailed",
+      "shortName": "IsFailed",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 15290,
+      "flags": 1
+    },
+    {
+      "fullName": "IsFinished",
+      "shortName": "IsFinished",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 15288,
+      "flags": 1
+    },
+    {
+      "fullName": "IsLoaded",
+      "shortName": "IsLoaded",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 15289,
+      "flags": 1
+    },
+    {
+      "fullName": "RegisterCallback",
+      "shortName": "RegisterCallback",
+      "index": 15291,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:IScriptable",
+          "name": "arg",
+          "flags": 0
+        },
+        {
+          "type": "CName",
+          "name": "arg",
+          "flags": 0
+        }
+      ]
+    }
+  ]
+}

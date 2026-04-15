@@ -1,0 +1,122 @@
+{
+  "parent": "IScriptable",
+  "name": "PlayerWeaponHandlingModifiers",
+  "flags": 4,
+  "props": [
+    {
+      "type": "whandle:PlayerPuppet",
+      "name": "player",
+      "flags": 4297130016
+    },
+    {
+      "type": "CName",
+      "name": "opSymbol",
+      "flags": 4297326624
+    },
+    {
+      "type": "array:handle:gameConstantStatModifierData_Deprecated",
+      "name": "recoilGroup",
+      "flags": 6583222304
+    },
+    {
+      "type": "array:handle:gameConstantStatModifierData_Deprecated",
+      "name": "timeOutGroup",
+      "flags": 6583222304
+    },
+    {
+      "type": "array:handle:gameConstantStatModifierData_Deprecated",
+      "name": "multSwayGroup",
+      "flags": 6583222304
+    },
+    {
+      "type": "array:handle:gameConstantStatModifierData_Deprecated",
+      "name": "addSwayGroup",
+      "flags": 6583222304
+    },
+    {
+      "type": "array:handle:gameConstantStatModifierData_Deprecated",
+      "name": "spreadGroup",
+      "flags": 6583222304
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "PlayerWeaponHandlingModifiers::Create;PlayerPuppet",
+      "shortName": "Create",
+      "return": {
+        "type": "handle:PlayerWeaponHandlingModifiers",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:PlayerPuppet",
+          "name": "player",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ModifyCurveValue;Float",
+      "shortName": "ModifyCurveValue",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Float",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ModifyOpSymbol;CName",
+      "shortName": "ModifyOpSymbol",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "CName",
+          "name": "symbol",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnAttach;",
+      "shortName": "OnAttach",
+      "flags": 33284
+    },
+    {
+      "fullName": "RemoveHandlingModifiersFromWeapon;WeaponObject",
+      "shortName": "RemoveHandlingModifiersFromWeapon",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "whandle:gameweaponObject",
+          "name": "equippedRightHandWeapon",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateEquippedWeaponsHandling;UpdateEquippedWeaponsHandlingEventWeaponObject",
+      "shortName": "UpdateEquippedWeaponsHandling",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:UpdateEquippedWeaponsHandlingEvent",
+          "name": "evt",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameweaponObject",
+          "name": "equippedRightHandWeapon",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

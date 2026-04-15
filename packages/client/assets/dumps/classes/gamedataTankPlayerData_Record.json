@@ -1,0 +1,161 @@
+{
+  "parent": "gamedataTweakDBRecord",
+  "name": "gamedataTankPlayerData_Record",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "FlatlinedScorePenalty",
+      "shortName": "FlatlinedScorePenalty",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 4613,
+      "flags": 1
+    },
+    {
+      "fullName": "GetWeaponLevelListCount",
+      "shortName": "GetWeaponLevelListCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 4602,
+      "flags": 1
+    },
+    {
+      "fullName": "GetWeaponLevelListItem",
+      "shortName": "GetWeaponLevelListItem",
+      "return": {
+        "type": "whandle:gamedataTankPlayerWeaponLevel_Record",
+        "flags": 64
+      },
+      "index": 4603,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetWeaponLevelListItemHandle",
+      "shortName": "GetWeaponLevelListItemHandle",
+      "return": {
+        "type": "handle:gamedataTankPlayerWeaponLevel_Record",
+        "flags": 64
+      },
+      "index": 4604,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "InvincibilityTime",
+      "shortName": "InvincibilityTime",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 4612,
+      "flags": 1
+    },
+    {
+      "fullName": "MaxAEAMS",
+      "shortName": "MaxAEAMS",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 4608,
+      "flags": 1
+    },
+    {
+      "fullName": "MaxHealth",
+      "shortName": "MaxHealth",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 4609,
+      "flags": 1
+    },
+    {
+      "fullName": "MaxLives",
+      "shortName": "MaxLives",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 4611,
+      "flags": 1
+    },
+    {
+      "fullName": "ProjectileSpawnerTDBID",
+      "shortName": "ProjectileSpawnerTDBID",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "index": 4606,
+      "flags": 1
+    },
+    {
+      "fullName": "RammingDamage",
+      "shortName": "RammingDamage",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 4610,
+      "flags": 1
+    },
+    {
+      "fullName": "Velocity",
+      "shortName": "Velocity",
+      "return": {
+        "type": "Vector2",
+        "flags": 64
+      },
+      "index": 4607,
+      "flags": 1
+    },
+    {
+      "fullName": "WeaponLevelList",
+      "shortName": "WeaponLevelList",
+      "index": 4601,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataTankPlayerWeaponLevel_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "WeaponLevelListContains",
+      "shortName": "WeaponLevelListContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 4605,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataTankPlayerWeaponLevel_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

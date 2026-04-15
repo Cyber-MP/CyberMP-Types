@@ -1,0 +1,398 @@
+{
+  "parent": "IScriptable",
+  "name": "gameItemData",
+  "flags": 3,
+  "funcs": [
+    {
+      "fullName": "AddStatsOnEquip",
+      "shortName": "AddStatsOnEquip",
+      "index": 13222,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "objectAttachedTo",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetBareStatValueByType",
+      "shortName": "GetBareStatValueByType",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 13211,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamedataStatType",
+          "name": "type",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetDynamicTags",
+      "shortName": "GetDynamicTags",
+      "return": {
+        "type": "array:CName",
+        "flags": 64
+      },
+      "index": 13207,
+      "flags": 1
+    },
+    {
+      "fullName": "GetEmptySlotsOnItem",
+      "shortName": "GetEmptySlotsOnItem",
+      "index": 13224,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:TweakDBID",
+          "name": "emptySlots",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "GetID",
+      "shortName": "GetID",
+      "return": {
+        "type": "gameItemID",
+        "flags": 64
+      },
+      "index": 13197,
+      "flags": 1
+    },
+    {
+      "fullName": "GetItemPart",
+      "shortName": "GetItemPart",
+      "index": 13215,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gameInnerItemData",
+          "name": "part",
+          "flags": 640
+        },
+        {
+          "type": "TweakDBID",
+          "name": "slotId",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetItemParts",
+      "shortName": "GetItemParts",
+      "index": 13216,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:gameInnerItemData",
+          "name": "parts",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "GetItemType",
+      "shortName": "GetItemType",
+      "return": {
+        "type": "gamedataItemType",
+        "flags": 64
+      },
+      "index": 13218,
+      "flags": 1
+    },
+    {
+      "fullName": "GetLocalizedItemType",
+      "shortName": "GetLocalizedItemType",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "index": 13219,
+      "flags": 1
+    },
+    {
+      "fullName": "GetName",
+      "shortName": "GetName",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "index": 13198,
+      "flags": 1
+    },
+    {
+      "fullName": "GetNameAsString",
+      "shortName": "GetNameAsString",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "index": 13199,
+      "flags": 1
+    },
+    {
+      "fullName": "GetQuantity",
+      "shortName": "GetQuantity",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 13200,
+      "flags": 1
+    },
+    {
+      "fullName": "GetStatValueByType",
+      "shortName": "GetStatValueByType",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 13210,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamedataStatType",
+          "name": "type",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetStatsObjectID",
+      "shortName": "GetStatsObjectID",
+      "return": {
+        "type": "gameStatsObjectID",
+        "flags": 64
+      },
+      "index": 13212,
+      "flags": 1
+    },
+    {
+      "fullName": "GetTemporaryStatBundle",
+      "shortName": "GetTemporaryStatBundle",
+      "return": {
+        "type": "handle:gameStatsBundleHandler",
+        "flags": 64
+      },
+      "index": 13217,
+      "flags": 1
+    },
+    {
+      "fullName": "GetTimestamp",
+      "shortName": "GetTimestamp",
+      "return": {
+        "type": "GameTime",
+        "flags": 64
+      },
+      "index": 13208,
+      "flags": 1
+    },
+    {
+      "fullName": "GetUsedSlotsOnItem",
+      "shortName": "GetUsedSlotsOnItem",
+      "index": 13225,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:TweakDBID",
+          "name": "usedSlots",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "GetVariant",
+      "shortName": "GetVariant",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 13221,
+      "flags": 1
+    },
+    {
+      "fullName": "HasAnyOfTags",
+      "shortName": "HasAnyOfTags",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13204,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "array:CName",
+          "name": "tags",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HasAttachmentSlot",
+      "shortName": "HasAttachmentSlot",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13201,
+      "flags": 1,
+      "params": [
+        {
+          "type": "TweakDBID",
+          "name": "slotID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HasPartInSlot",
+      "shortName": "HasPartInSlot",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13213,
+      "flags": 1,
+      "params": [
+        {
+          "type": "TweakDBID",
+          "name": "slotID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HasPlacementSlot",
+      "shortName": "HasPlacementSlot",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13202,
+      "flags": 1,
+      "params": [
+        {
+          "type": "TweakDBID",
+          "name": "slotID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HasStatData",
+      "shortName": "HasStatData",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13209,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamedataStatType",
+          "name": "type",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HasTag",
+      "shortName": "HasTag",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13203,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "CName",
+          "name": "tag",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ReinitializePlayerStats",
+      "shortName": "ReinitializePlayerStats",
+      "index": 13214,
+      "flags": 1,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "gameInstance",
+          "flags": 128
+        },
+        {
+          "type": "entEntityID",
+          "name": "ownerID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RemoveDynamicTag",
+      "shortName": "RemoveDynamicTag",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13206,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "tag",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetDynamicTag",
+      "shortName": "SetDynamicTag",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13205,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "tag",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SubtractStatsOnUnequip",
+      "shortName": "SubtractStatsOnUnequip",
+      "index": 13223,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "objectDetachedFrom",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UsesVariants",
+      "shortName": "UsesVariants",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13220,
+      "flags": 1
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "parent": "inkVirtualCompoundItemController",
+  "name": "ItemDisplayVirtualController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkWidgetReference",
+      "name": "itemDisplayWidget",
+      "flags": 4297195553
+    },
+    {
+      "type": "CName",
+      "name": "widgetToSpawn",
+      "flags": 4297195553
+    },
+    {
+      "type": "handle:WrappedInventoryItemData",
+      "name": "wrappedData",
+      "flags": 4431413280
+    },
+    {
+      "type": "gameInventoryItemData",
+      "name": "data",
+      "flags": 4297195552
+    },
+    {
+      "type": "whandle:inkWidget",
+      "name": "spawnedWidget",
+      "flags": 4297195552
+    },
+    {
+      "type": "Int32",
+      "name": "notificationListenerID",
+      "flags": 4297195552
+    },
+    {
+      "type": "whandle:ImmediateNotificationListener",
+      "name": "immediateNotificationListener",
+      "flags": 4297195552
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnDataChanged",
+      "shortName": "OnDataChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Variant",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnSelected",
+      "shortName": "OnSelected",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "whandle:inkVirtualCompoundItemController",
+          "name": "itemController",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "discreteNav",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnWidgetSpawned",
+      "shortName": "OnWidgetSpawned",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkWidget",
+          "name": "widget",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "userData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetItemView;",
+      "shortName": "GetItemView",
+      "return": {
+        "type": "whandle:InventoryItemDisplayController",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "GetWrappedData;",
+      "shortName": "GetWrappedData",
+      "return": {
+        "type": "whandle:WrappedInventoryItemData",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "SetupData;",
+      "shortName": "SetupData",
+      "flags": 32900
+    },
+    {
+      "fullName": "Update;",
+      "shortName": "Update",
+      "flags": 33284
+    }
+  ]
+}

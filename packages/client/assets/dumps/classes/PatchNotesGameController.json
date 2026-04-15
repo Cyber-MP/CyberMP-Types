@@ -1,0 +1,210 @@
+{
+  "parent": "gameuiWidgetGameController",
+  "name": "PatchNotesGameController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "notesContainerRef",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "patch20TitleContainerRef",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "patch21TitleContainerRef",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "patch22TitleContainerRef",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "patch23TitleContainerRef",
+      "flags": 4297130017
+    },
+    {
+      "type": "CName",
+      "name": "itemLibraryName",
+      "flags": 4297130017
+    },
+    {
+      "type": "CName",
+      "name": "introAnimationName",
+      "flags": 4297130017
+    },
+    {
+      "type": "CName",
+      "name": "outroAnimationName",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "closeButtonRef",
+      "flags": 4297130017
+    },
+    {
+      "type": "handle:gameuiGameSystemUI",
+      "name": "uiSystem",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "introAnimProxy",
+      "flags": 4431347744
+    },
+    {
+      "type": "Bool",
+      "name": "isInputBlocked",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:PatchNotesPopupData",
+      "name": "data",
+      "flags": 4431347744
+    },
+    {
+      "type": "whandle:inkISystemRequestsHandler",
+      "name": "requestHandler",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnGlobalRelease",
+      "shortName": "OnGlobalRelease",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnIntroAnimationFinished",
+      "shortName": "OnIntroAnimationFinished",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkanimProxy",
+          "name": "proxy",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnOutroAnimationFinished",
+      "shortName": "OnOutroAnimationFinished",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkanimProxy",
+          "name": "proxy",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPressClose",
+      "shortName": "OnPressClose",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "Close;",
+      "shortName": "Close",
+      "flags": 32900
+    },
+    {
+      "fullName": "PlayAnimation;CNameinkAnimOptions",
+      "shortName": "PlayAnimation",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "CName",
+          "name": "animationName",
+          "flags": 128
+        },
+        {
+          "type": "inkanimPlaybackOptions",
+          "name": "playbackOptions",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "PopulateNotesList;",
+      "shortName": "PopulateNotesList",
+      "flags": 32900
+    },
+    {
+      "fullName": "SpawnNote;CNameCNameCName",
+      "shortName": "SpawnNote",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "CName",
+          "name": "title",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "description",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "imagePart",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

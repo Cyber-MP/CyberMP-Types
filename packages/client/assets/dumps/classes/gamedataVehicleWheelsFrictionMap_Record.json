@@ -1,0 +1,101 @@
+{
+  "parent": "gamedataTweakDBRecord",
+  "name": "gamedataVehicleWheelsFrictionMap_Record",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "DefaultFrictionPreset",
+      "shortName": "DefaultFrictionPreset",
+      "return": {
+        "type": "whandle:gamedataVehicleWheelsFrictionPreset_Record",
+        "flags": 64
+      },
+      "index": 5527,
+      "flags": 1
+    },
+    {
+      "fullName": "DefaultFrictionPresetHandle",
+      "shortName": "DefaultFrictionPresetHandle",
+      "return": {
+        "type": "handle:gamedataVehicleWheelsFrictionPreset_Record",
+        "flags": 64
+      },
+      "index": 5528,
+      "flags": 1
+    },
+    {
+      "fullName": "GetSurfacesCount",
+      "shortName": "GetSurfacesCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 5530,
+      "flags": 1
+    },
+    {
+      "fullName": "GetSurfacesItem",
+      "shortName": "GetSurfacesItem",
+      "return": {
+        "type": "whandle:gamedataVehicleSurfaceBinding_Record",
+        "flags": 64
+      },
+      "index": 5531,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetSurfacesItemHandle",
+      "shortName": "GetSurfacesItemHandle",
+      "return": {
+        "type": "handle:gamedataVehicleSurfaceBinding_Record",
+        "flags": 64
+      },
+      "index": 5532,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Surfaces",
+      "shortName": "Surfaces",
+      "index": 5529,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataVehicleSurfaceBinding_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "SurfacesContains",
+      "shortName": "SurfacesContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 5533,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataVehicleSurfaceBinding_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

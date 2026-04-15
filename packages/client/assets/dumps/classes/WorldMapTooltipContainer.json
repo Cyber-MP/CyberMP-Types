@@ -1,0 +1,143 @@
+{
+  "parent": "inkWidgetLogicController",
+  "name": "WorldMapTooltipContainer",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkWidgetReference",
+      "name": "defaultTooltip",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "policeTooltip",
+      "flags": 4297195553
+    },
+    {
+      "type": "whandle:WorldMapTooltipBaseController",
+      "name": "defaultTooltipController",
+      "flags": 4297195552
+    },
+    {
+      "type": "whandle:WorldMapTooltipBaseController",
+      "name": "policeTooltipController",
+      "flags": 4297195552
+    },
+    {
+      "type": "[3]whandle:WorldMapTooltipBaseController",
+      "name": "tooltips",
+      "flags": 4297195552
+    },
+    {
+      "type": "Int32",
+      "name": "currentVisibleIndex",
+      "flags": 4297195552
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "GetControllerPriorityIndex;WorldMapTooltipBaseController",
+      "shortName": "GetControllerPriorityIndex",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "whandle:WorldMapTooltipBaseController",
+          "name": "controller",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetTooltipController;WorldMapTooltipType",
+      "shortName": "GetTooltipController",
+      "return": {
+        "type": "whandle:WorldMapTooltipBaseController",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "WorldMapTooltipType",
+          "name": "type",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Hide;WorldMapTooltipType",
+      "shortName": "Hide",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "WorldMapTooltipType",
+          "name": "target",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HideAll;Bool",
+      "shortName": "HideAll",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "force",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "PlayPaymentErrorAnimation;",
+      "shortName": "PlayPaymentErrorAnimation",
+      "flags": 33284
+    },
+    {
+      "fullName": "SetData;WorldMapTooltipTypescript_ref<WorldMapTooltipData>WorldMapMenuGameController",
+      "shortName": "SetData",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "WorldMapTooltipType",
+          "name": "target",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:WorldMapTooltipData",
+          "name": "data",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameuiWorldMapMenuGameController",
+          "name": "menu",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Show;WorldMapTooltipType",
+      "shortName": "Show",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "WorldMapTooltipType",
+          "name": "target",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

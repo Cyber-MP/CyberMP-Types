@@ -1,0 +1,56 @@
+{
+  "parent": "ProximityDetectorControllerPS",
+  "name": "DoorProximityDetectorControllerPS",
+  "flags": 1028,
+  "funcs": [
+    {
+      "fullName": "GetQuestActionByName;CName",
+      "shortName": "GetQuestActionByName",
+      "return": {
+        "type": "handle:gamedeviceAction",
+        "flags": 64
+      },
+      "flags": 33280,
+      "params": [
+        {
+          "type": "CName",
+          "name": "actionName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetQuestActions;array<DeviceAction>script_ref<GetActionsContext>",
+      "shortName": "GetQuestActions",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "array:handle:gamedeviceAction",
+          "name": "outActions",
+          "flags": 640
+        },
+        {
+          "type": "script_ref:gameGetActionsContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSecuritySystemOutput;SecuritySystemOutput",
+      "shortName": "OnSecuritySystemOutput",
+      "return": {
+        "type": "EntityNotificationType",
+        "flags": 64
+      },
+      "flags": 33024,
+      "params": [
+        {
+          "type": "handle:SecuritySystemOutput",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

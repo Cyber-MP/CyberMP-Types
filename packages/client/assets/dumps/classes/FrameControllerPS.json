@@ -1,0 +1,65 @@
+{
+  "parent": "ScriptableDeviceComponentPS",
+  "name": "FrameControllerPS",
+  "flags": 1028,
+  "funcs": [
+    {
+      "fullName": "ActionOpen;",
+      "shortName": "ActionOpen",
+      "return": {
+        "type": "handle:FrameSwitcher",
+        "flags": 64
+      },
+      "flags": 33028
+    },
+    {
+      "fullName": "GetActions;array<DeviceAction>GetActionsContext",
+      "shortName": "GetActions",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33280,
+      "params": [
+        {
+          "type": "array:handle:gamedeviceAction",
+          "name": "actions",
+          "flags": 640
+        },
+        {
+          "type": "gameGetActionsContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnFrameSwitcher;FrameSwitcher",
+      "shortName": "OnFrameSwitcher",
+      "return": {
+        "type": "EntityNotificationType",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:FrameSwitcher",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetState;Bool",
+      "shortName": "SetState",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "state",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

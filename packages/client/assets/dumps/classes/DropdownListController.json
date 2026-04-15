@@ -1,0 +1,255 @@
+{
+  "parent": "inkWidgetLogicController",
+  "name": "DropdownListController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "listContainer",
+      "flags": 4297195553
+    },
+    {
+      "type": "whandle:IScriptable",
+      "name": "ownerController",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:DropdownButtonController",
+      "name": "triggerButton",
+      "flags": 4297130016
+    },
+    {
+      "type": "DropdownDisplayContext",
+      "name": "displayContext",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:DropdownElementController",
+      "name": "activeElement",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "listOpened",
+      "flags": 4297130016
+    },
+    {
+      "type": "array:handle:DropdownItemData",
+      "name": "data",
+      "flags": 6583025696
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnDropdownItemClicked",
+      "shortName": "OnDropdownItemClicked",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnHoverOut",
+      "shortName": "OnHoverOut",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnRelease",
+      "shortName": "OnRelease",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Close;",
+      "shortName": "Close",
+      "flags": 33284
+    },
+    {
+      "fullName": "GetData;",
+      "shortName": "GetData",
+      "return": {
+        "type": "array:handle:DropdownItemData",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "GetDisplayContext;",
+      "shortName": "GetDisplayContext",
+      "return": {
+        "type": "DropdownDisplayContext",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "IsOpened;",
+      "shortName": "IsOpened",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "Open;",
+      "shortName": "Open",
+      "flags": 33284
+    },
+    {
+      "fullName": "SetTriggerButton;DropdownButtonController",
+      "shortName": "SetTriggerButton",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:DropdownButtonController",
+          "name": "triggerButton",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Setup;inkLogicControllerscript_ref<array<DropdownItemData>>DropdownButtonController",
+      "shortName": "Setup",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "whandle:inkWidgetLogicController",
+          "name": "owner",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:array:handle:DropdownItemData",
+          "name": "data",
+          "flags": 128
+        },
+        {
+          "type": "handle:DropdownButtonController",
+          "name": "triggerButton",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "Setup;inkGameControllerscript_ref<array<DropdownItemData>>DropdownButtonController",
+      "shortName": "Setup",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "whandle:gameuiWidgetGameController",
+          "name": "owner",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:array:handle:DropdownItemData",
+          "name": "data",
+          "flags": 128
+        },
+        {
+          "type": "handle:DropdownButtonController",
+          "name": "triggerButton",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "Setup;inkLogicControllerDropdownDisplayContextDropdownButtonController",
+      "shortName": "Setup",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "whandle:inkWidgetLogicController",
+          "name": "owner",
+          "flags": 128
+        },
+        {
+          "type": "DropdownDisplayContext",
+          "name": "displayContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:DropdownButtonController",
+          "name": "triggerButton",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "Setup;inkGameControllerDropdownDisplayContextDropdownButtonController",
+      "shortName": "Setup",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "whandle:gameuiWidgetGameController",
+          "name": "owner",
+          "flags": 128
+        },
+        {
+          "type": "DropdownDisplayContext",
+          "name": "displayContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:DropdownButtonController",
+          "name": "triggerButton",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "SetupData;script_ref<array<DropdownItemData>>",
+      "shortName": "SetupData",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:array:handle:DropdownItemData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Toggle;",
+      "shortName": "Toggle",
+      "flags": 33284
+    }
+  ]
+}

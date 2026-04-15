@@ -1,0 +1,351 @@
+{
+  "parent": "inkGridController",
+  "name": "TwintoneTemplateGridController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "handle:inkScriptableDataSourceWrapper",
+      "name": "templatesDataSource",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkScriptableDataViewWrapper",
+      "name": "templatesDataView",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:VehicleVisualCustomizationTemplateClassifier",
+      "name": "templatesDataClassifier",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:VehicleVisualCustomizationTemplatePositionProvider",
+      "name": "templatePositionProvider",
+      "flags": 4431347744
+    },
+    {
+      "type": "whandle:PlayerPuppet",
+      "name": "player",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:ColorTemplatePreviewVirtualController",
+      "name": "toggledController",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:ColorTemplatePreviewVirtualController",
+      "name": "selectedController",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "canNavigate",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "colorCorrectionEnabled",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "enabled",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnAllElementsSpawned",
+      "shortName": "OnAllElementsSpawned",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "CanNavigateToItem;inkVirtualCompoundItemController",
+      "shortName": "CanNavigateToItem",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 34304,
+      "params": [
+        {
+          "type": "whandle:inkVirtualCompoundItemController",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "DeleteSelectedTemplateInGrid;Bool",
+      "shortName": "DeleteSelectedTemplateInGrid",
+      "return": {
+        "type": "VehicleVisualCustomizationTemplate",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "canChangeCurrentlySelectedIndex",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetCanNavigateInGrid;",
+      "shortName": "GetCanNavigateInGrid",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "GetControllerAtIndex;Uint32",
+      "shortName": "GetControllerAtIndex",
+      "return": {
+        "type": "handle:ColorTemplatePreviewVirtualController",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Uint32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetFirstEmptyIndex;",
+      "shortName": "GetFirstEmptyIndex",
+      "return": {
+        "type": "Uint32",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "GetSelectedController;",
+      "shortName": "GetSelectedController",
+      "return": {
+        "type": "whandle:ColorTemplatePreviewVirtualController",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "GetToggledController;",
+      "shortName": "GetToggledController",
+      "return": {
+        "type": "whandle:ColorTemplatePreviewVirtualController",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "IsEnabled;",
+      "shortName": "IsEnabled",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "MoveDiscreteNavigation;inkDiscreteNavigationDirection",
+      "shortName": "MoveDiscreteNavigation",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "inkDiscreteNavigationDirection",
+          "name": "direction",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PackListToTheLeft;",
+      "shortName": "PackListToTheLeft",
+      "flags": 32900
+    },
+    {
+      "fullName": "PopulateData;VehicleVisualCustomizationTypevehicleVisualCustomizationComponentCName",
+      "shortName": "PopulateData",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "VehicleVisualCustomizationType",
+          "name": "templateType",
+          "flags": 128
+        },
+        {
+          "type": "handle:vehicleVisualCustomizationComponent",
+          "name": "component",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "modelName",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "ResetTemplatesGrid;",
+      "shortName": "ResetTemplatesGrid",
+      "flags": 33284
+    },
+    {
+      "fullName": "ResetVirtualGrid;",
+      "shortName": "ResetVirtualGrid",
+      "flags": 32900
+    },
+    {
+      "fullName": "SetCanNavigateInGrid;Bool",
+      "shortName": "SetCanNavigateInGrid",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "canNavigate",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetColorCorrectionEnabled;Bool",
+      "shortName": "SetColorCorrectionEnabled",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "enabled",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetEnabled;Bool",
+      "shortName": "SetEnabled",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "enabled",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetSelectedController;ColorTemplatePreviewVirtualController",
+      "shortName": "SetSelectedController",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "whandle:ColorTemplatePreviewVirtualController",
+          "name": "itemController",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetToggledController;ColorTemplatePreviewVirtualController",
+      "shortName": "SetToggledController",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "whandle:ColorTemplatePreviewVirtualController",
+          "name": "itemController",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetupTemplatesGrid;VehicleVisualCustomizationTypevehicleVisualCustomizationComponentCName",
+      "shortName": "SetupTemplatesGrid",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "VehicleVisualCustomizationType",
+          "name": "templateType",
+          "flags": 128
+        },
+        {
+          "type": "handle:vehicleVisualCustomizationComponent",
+          "name": "component",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "modelName",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "SetupVirtualGrid;",
+      "shortName": "SetupVirtualGrid",
+      "flags": 32900
+    },
+    {
+      "fullName": "ToggleTemplateInGrid;VehicleVisualCustomizationTemplateBool",
+      "shortName": "ToggleTemplateInGrid",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "VehicleVisualCustomizationTemplate",
+          "name": "template",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "selectTemplate",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TryToFocusElement;Bool",
+      "shortName": "TryToFocusElement",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "onlyIfPreviouslySelected",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateTemplateInGrid;WrappedTemplateData",
+      "shortName": "UpdateTemplateInGrid",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:WrappedTemplateData",
+          "name": "wrappedData",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

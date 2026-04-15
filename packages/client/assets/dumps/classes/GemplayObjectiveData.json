@@ -1,0 +1,160 @@
+{
+  "parent": "IScriptable",
+  "name": "GemplayObjectiveData",
+  "flags": 4,
+  "props": [
+    {
+      "type": "String",
+      "name": "questUniqueId",
+      "flags": 4364304417
+    },
+    {
+      "type": "String",
+      "name": "questTitle",
+      "flags": 4364304417
+    },
+    {
+      "type": "String",
+      "name": "objectiveDescription",
+      "flags": 4364304417
+    },
+    {
+      "type": "String",
+      "name": "uniqueId",
+      "flags": 4297130016
+    },
+    {
+      "type": "entEntityID",
+      "name": "ownerID",
+      "flags": 4297130016
+    },
+    {
+      "type": "String",
+      "name": "objectiveEntryID",
+      "flags": 4297130016
+    },
+    {
+      "type": "String",
+      "name": "uniqueIdPrefix",
+      "flags": 4297130016
+    },
+    {
+      "type": "gameJournalEntryState",
+      "name": "objectiveState",
+      "flags": 4565565472
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "CreateUniqueID;EntityID",
+      "shortName": "CreateUniqueID",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "entityID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetObjectiveDescription;",
+      "shortName": "GetObjectiveDescription",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetObjectiveEntryID;",
+      "shortName": "GetObjectiveEntryID",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetObjectiveState;",
+      "shortName": "GetObjectiveState",
+      "return": {
+        "type": "gameJournalEntryState",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetOwnerID;",
+      "shortName": "GetOwnerID",
+      "return": {
+        "type": "entEntityID",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetQuestTitle;",
+      "shortName": "GetQuestTitle",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetUniqueID;",
+      "shortName": "GetUniqueID",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "IsCreated;",
+      "shortName": "IsCreated",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "SetObjectiveEntryID;script_ref<String>",
+      "shortName": "SetObjectiveEntryID",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "script_ref:String",
+          "name": "objectiveEntryID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetObjectiveState;gameJournalEntryState",
+      "shortName": "SetObjectiveState",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "gameJournalEntryState",
+          "name": "state",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetOwnerID;EntityID",
+      "shortName": "SetOwnerID",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "requesterID",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

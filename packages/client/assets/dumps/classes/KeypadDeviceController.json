@@ -1,0 +1,398 @@
+{
+  "parent": "DeviceWidgetControllerBase",
+  "name": "KeypadDeviceController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "Bool",
+      "name": "hasButtonAuthorization",
+      "flags": 4297130017
+    },
+    {
+      "type": "whandle:inkTextWidget",
+      "name": "enteredPasswordWidget",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:inkTextWidget",
+      "name": "passwordStatusWidget",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:inkWidget",
+      "name": "actionButton",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:inkTextWidget",
+      "name": "ActionText",
+      "flags": 4297130016
+    },
+    {
+      "type": "array:CName",
+      "name": "passwordsList",
+      "flags": 6583025696
+    },
+    {
+      "type": "String",
+      "name": "cardName",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isPasswordKnown",
+      "flags": 4297130016
+    },
+    {
+      "type": "Int32",
+      "name": "maxDigitsCount",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:inkHorizontalPanelWidget",
+      "name": "row1",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:inkHorizontalPanelWidget",
+      "name": "row2",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:inkHorizontalPanelWidget",
+      "name": "row3",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:inkHorizontalPanelWidget",
+      "name": "row4",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "arePasswordsInitialized",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:gameIBlackboard",
+      "name": "blackboard",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnKeypadButtonWidgetSpawned",
+      "shortName": "OnKeypadButtonWidgetSpawned",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkWidget",
+          "name": "widget",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "userData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnMouseButtonReleased",
+      "shortName": "OnMouseButtonReleased",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AddKeypadButtons;inkWidgetInt32script_ref<SDeviceWidgetPackage>DeviceInkGameControllerBase",
+      "shortName": "AddKeypadButtons",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "whandle:inkWidget",
+          "name": "parentWidget",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "rowNumber",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:SDeviceWidgetPackage",
+          "name": "widgetData",
+          "flags": 128
+        },
+        {
+          "type": "handle:DeviceInkGameControllerBase",
+          "name": "gameController",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CanAddDigit;",
+      "shortName": "CanAddDigit",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "CanHandleClickAction;",
+      "shortName": "CanHandleClickAction",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "CheckPassword;",
+      "shortName": "CheckPassword",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "ClearPassword;",
+      "shortName": "ClearPassword",
+      "flags": 33284
+    },
+    {
+      "fullName": "DenyAccess;",
+      "shortName": "DenyAccess",
+      "flags": 32900
+    },
+    {
+      "fullName": "DetermineMaxDigitsCount;DeviceInkGameControllerBase",
+      "shortName": "DetermineMaxDigitsCount",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:DeviceInkGameControllerBase",
+          "name": "gameController",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetAccessDeniedSoundEventName;",
+      "shortName": "GetAccessDeniedSoundEventName",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "GetAccessGrantedSoundEventName;",
+      "shortName": "GetAccessGrantedSoundEventName",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "GetDeleteInputSoundEventName;",
+      "shortName": "GetDeleteInputSoundEventName",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "GetTerminalAudioName;",
+      "shortName": "GetTerminalAudioName",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "GrantAccess;",
+      "shortName": "GrantAccess",
+      "flags": 32900
+    },
+    {
+      "fullName": "HandleButtonClicked;inkWidget",
+      "shortName": "HandleButtonClicked",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "whandle:inkWidget",
+          "name": "button",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Initialize;DeviceInkGameControllerBaseSDeviceWidgetPackage",
+      "shortName": "Initialize",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "handle:DeviceInkGameControllerBase",
+          "name": "gameController",
+          "flags": 128
+        },
+        {
+          "type": "SDeviceWidgetPackage",
+          "name": "widgetData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsDigit;CName",
+      "shortName": "IsDigit",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "CName",
+          "name": "buttonName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PlayTerminalSound;CName",
+      "shortName": "PlayTerminalSound",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "CName",
+          "name": "soundEventName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RefreshActionButtons;",
+      "shortName": "RefreshActionButtons",
+      "flags": 32900
+    },
+    {
+      "fullName": "ResolveAction;script_ref<SActionWidgetPackage>",
+      "shortName": "ResolveAction",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "script_ref:SActionWidgetPackage",
+          "name": "widgetData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetWidgetsAllowed;",
+      "shortName": "SetWidgetsAllowed",
+      "flags": 32900
+    },
+    {
+      "fullName": "SetWidgetsLocked;",
+      "shortName": "SetWidgetsLocked",
+      "flags": 32900
+    },
+    {
+      "fullName": "SetWidgetsState;CName",
+      "shortName": "SetWidgetsState",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "CName",
+          "name": "stateName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TryGetButtonSpawnedDataForIndex;Int32script_ref<SDeviceWidgetPackage>KeypadButtonSpawnData",
+      "shortName": "TryGetButtonSpawnedDataForIndex",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:SDeviceWidgetPackage",
+          "name": "widgetData",
+          "flags": 128
+        },
+        {
+          "type": "handle:KeypadButtonSpawnData",
+          "name": "keypadButtonSpawnData",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "TryInitializePasswords;DeviceInkGameControllerBaseSDeviceWidgetPackage",
+      "shortName": "TryInitializePasswords",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:DeviceInkGameControllerBase",
+          "name": "gameController",
+          "flags": 128
+        },
+        {
+          "type": "SDeviceWidgetPackage",
+          "name": "widgetData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TrySaveBlackboard;DeviceInkGameControllerBase",
+      "shortName": "TrySaveBlackboard",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:DeviceInkGameControllerBase",
+          "name": "gameController",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

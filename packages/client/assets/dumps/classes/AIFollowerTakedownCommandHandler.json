@@ -1,0 +1,80 @@
+{
+  "parent": "AIbehaviortaskScript",
+  "name": "AIFollowerTakedownCommandHandler",
+  "flags": 4,
+  "props": [
+    {
+      "type": "handle:AIArgumentMapping",
+      "name": "inCommand",
+      "flags": 4431544357
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "Activate;ScriptExecutionContext",
+      "shortName": "Activate",
+      "flags": 34048,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Deactivate;ScriptExecutionContext",
+      "shortName": "Deactivate",
+      "flags": 33924,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SelectBestTarget;ScriptExecutionContextscript_ref<array<EntityID>>GameObject",
+      "shortName": "SelectBestTarget",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:array:entEntityID",
+          "name": "targetEntityIds",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameObject",
+          "name": "target",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "Update;ScriptExecutionContext",
+      "shortName": "Update",
+      "return": {
+        "type": "AIbehaviorUpdateOutcome",
+        "flags": 64
+      },
+      "flags": 34048,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,364 @@
+{
+  "parent": "gamePuppetBase",
+  "name": "gamePuppet",
+  "flags": 2,
+  "funcs": [
+    {
+      "fullName": "HasLootableItems",
+      "shortName": "HasLootableItems",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13019,
+      "flags": 3,
+      "params": [
+        {
+          "type": "whandle:ScriptedPuppet",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CacheLootForDropping",
+      "shortName": "CacheLootForDropping",
+      "index": 13005,
+      "flags": 1
+    },
+    {
+      "fullName": "CanRagdoll",
+      "shortName": "CanRagdoll",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13013,
+      "flags": 1
+    },
+    {
+      "fullName": "CheckIsStandingOnVehicle",
+      "shortName": "CheckIsStandingOnVehicle",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13008,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "vehicleID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "DropAmmo",
+      "shortName": "DropAmmo",
+      "index": 13002,
+      "flags": 8193
+    },
+    {
+      "fullName": "DropLootBag",
+      "shortName": "DropLootBag",
+      "index": 13006,
+      "flags": 1
+    },
+    {
+      "fullName": "DropWeapons",
+      "shortName": "DropWeapons",
+      "index": 13001,
+      "flags": 8193
+    },
+    {
+      "fullName": "GenerateLoot",
+      "shortName": "GenerateLoot",
+      "index": 12999,
+      "flags": 8193
+    },
+    {
+      "fullName": "GenerateLootWithStats",
+      "shortName": "GenerateLootWithStats",
+      "index": 13000,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "array:handle:gameStatModifierData_Deprecated",
+          "name": "lootModifiers",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetAttitude",
+      "shortName": "GetAttitude",
+      "return": {
+        "type": "handle:gameAttitudeAgent",
+        "flags": 64
+      },
+      "index": 12988,
+      "flags": 8193
+    },
+    {
+      "fullName": "GetBlackboard",
+      "shortName": "GetBlackboard",
+      "return": {
+        "type": "handle:gameIBlackboard",
+        "flags": 64
+      },
+      "index": 12990,
+      "flags": 8193
+    },
+    {
+      "fullName": "GetBodyType",
+      "shortName": "GetBodyType",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "index": 12998,
+      "flags": 8193
+    },
+    {
+      "fullName": "GetCPOMissionVoted",
+      "shortName": "GetCPOMissionVoted",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12996,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "CName",
+          "name": "deviceGroup",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetCurrentNavmeshPosition",
+      "shortName": "GetCurrentNavmeshPosition",
+      "return": {
+        "type": "navNaviPositionType",
+        "flags": 64
+      },
+      "index": 13012,
+      "flags": 1,
+      "params": [
+        {
+          "type": "script_ref:Vector4",
+          "name": "position",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetLastValidNavmeshPoint",
+      "shortName": "GetLastValidNavmeshPoint",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "index": 13014,
+      "flags": 1
+    },
+    {
+      "fullName": "GetNPCRarity",
+      "shortName": "GetNPCRarity",
+      "return": {
+        "type": "gamedataNPCRarity",
+        "flags": 64
+      },
+      "index": 13015,
+      "flags": 8193
+    },
+    {
+      "fullName": "GetNPCRarityRecord",
+      "shortName": "GetNPCRarityRecord",
+      "return": {
+        "type": "handle:gamedataNPCRarity_Record",
+        "flags": 64
+      },
+      "index": 13016,
+      "flags": 8193
+    },
+    {
+      "fullName": "GetResolvedGenderName",
+      "shortName": "GetResolvedGenderName",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "index": 12997,
+      "flags": 8193
+    },
+    {
+      "fullName": "GetSenses",
+      "shortName": "GetSenses",
+      "return": {
+        "type": "handle:senseComponent",
+        "flags": 64
+      },
+      "index": 12987,
+      "flags": 8193
+    },
+    {
+      "fullName": "GetTargetTracker",
+      "shortName": "GetTargetTracker",
+      "return": {
+        "type": "handle:AITargetTrackerComponent",
+        "flags": 64
+      },
+      "index": 12991,
+      "flags": 8193
+    },
+    {
+      "fullName": "GetVelocity",
+      "shortName": "GetVelocity",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "index": 12986,
+      "flags": 8193
+    },
+    {
+      "fullName": "GetVisibleObject",
+      "shortName": "GetVisibleObject",
+      "return": {
+        "type": "handle:senseVisibleObjectComponent",
+        "flags": 64
+      },
+      "index": 12989,
+      "flags": 8193
+    },
+    {
+      "fullName": "HasCPOMissionData",
+      "shortName": "HasCPOMissionData",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12994,
+      "flags": 8193
+    },
+    {
+      "fullName": "HasCrowdStaticLOD",
+      "shortName": "HasCrowdStaticLOD",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13004,
+      "flags": 8193
+    },
+    {
+      "fullName": "HasMechanicalImpactComponent",
+      "shortName": "HasMechanicalImpactComponent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13018,
+      "flags": 8193
+    },
+    {
+      "fullName": "HasRuntimeAnimsetTags",
+      "shortName": "HasRuntimeAnimsetTags",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13003,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "array:CName",
+          "name": "tagList",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HideIrreversibly",
+      "shortName": "HideIrreversibly",
+      "index": 12992,
+      "flags": 8193
+    },
+    {
+      "fullName": "InitializeBaseInventory",
+      "shortName": "InitializeBaseInventory",
+      "index": 13010,
+      "flags": 1
+    },
+    {
+      "fullName": "IsLooted",
+      "shortName": "IsLooted",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13007,
+      "flags": 8193
+    },
+    {
+      "fullName": "ProcessLoot",
+      "shortName": "ProcessLoot",
+      "index": 13017,
+      "flags": 1
+    },
+    {
+      "fullName": "SetCPOMissionData",
+      "shortName": "SetCPOMissionData",
+      "index": 12993,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "hasCPOMissionData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetCPOMissionVoted",
+      "shortName": "SetCPOMissionVoted",
+      "index": 12995,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "CName",
+          "name": "deviceGroup",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "hasVoted",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TryGetVehicleBelow",
+      "shortName": "TryGetVehicleBelow",
+      "return": {
+        "type": "entEntityID",
+        "flags": 64
+      },
+      "index": 13009,
+      "flags": 8193
+    },
+    {
+      "fullName": "WasLootGenerated",
+      "shortName": "WasLootGenerated",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13011,
+      "flags": 1
+    }
+  ]
+}

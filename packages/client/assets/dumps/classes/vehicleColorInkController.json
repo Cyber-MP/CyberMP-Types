@@ -1,0 +1,318 @@
+{
+  "parent": "gameuiHUDGameController",
+  "name": "vehicleColorInkController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "whandle:vehicleBaseObject",
+      "name": "vehicle",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:gameIBlackboard",
+      "name": "vehicleBlackboard",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:VehicleComponentPS",
+      "name": "vehiclePS",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:inkWidget",
+      "name": "root",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "AnimProxy",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "GlitchAnimProxy",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "SpoilerAnimProxy",
+      "flags": 4431347744
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "primaryColorPane",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "secondaryColorPane",
+      "flags": 4297130017
+    },
+    {
+      "type": "array:inkImageWidgetReference",
+      "name": "primaryColor",
+      "flags": 6583025697
+    },
+    {
+      "type": "array:inkImageWidgetReference",
+      "name": "secondaryColor",
+      "flags": 6583025697
+    },
+    {
+      "type": "VehicleVisualCustomizationWidgetCarPart",
+      "name": "carPartType",
+      "flags": 4297130017
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "colorModDefinition",
+      "flags": 4431347744
+    },
+    {
+      "type": "Color",
+      "name": "cachedPrimaryColor",
+      "flags": 4297130016
+    },
+    {
+      "type": "Color",
+      "name": "cachedSecondaryColor",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "colorSecondaryCodeListener",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "vehicleCollisionListener",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "vehicleDamageListener",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "vehicleModBlockedByDamageListener",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "vehicleModActiveListener",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "vehicleTPPCallbackID",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "vehicleSpeedListener",
+      "flags": 4431347744
+    },
+    {
+      "type": "VehicleVisualCustomizationTemplate",
+      "name": "cachedTemplate",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "moddingBlockedByDamage",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "visualCustomizationActive",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "spoilerDeployed",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "cachedTppView",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "fakeUpdateProxy",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "damageAnimLoopProxy",
+      "flags": 4431347744
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnSpolierAnimationEnd",
+      "shortName": "OnSpolierAnimationEnd",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkanimProxy",
+          "name": "proxy",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnVehicleCameraChange",
+      "shortName": "OnVehicleCameraChange",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "tppCamera",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnVehicleCollision",
+      "shortName": "OnVehicleCollision",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "val",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnVehicleCustomizationBlockedByDamage",
+      "shortName": "OnVehicleCustomizationBlockedByDamage",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "val",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnVehicleDamageState",
+      "shortName": "OnVehicleDamageState",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "val",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnVehicleSpeedChange",
+      "shortName": "OnVehicleSpeedChange",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Float",
+          "name": "speed",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnVehicleVisualCustomizationActive",
+      "shortName": "OnVehicleVisualCustomizationActive",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ApplyColors;Bool",
+      "shortName": "ApplyColors",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "instant",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "HandleGlitch;Int32",
+      "shortName": "HandleGlitch",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "val",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessColorsUpdates;",
+      "shortName": "ProcessColorsUpdates",
+      "flags": 32900
+    },
+    {
+      "fullName": "RestoreVisualCustomization;",
+      "shortName": "RestoreVisualCustomization",
+      "flags": 32900
+    }
+  ]
+}

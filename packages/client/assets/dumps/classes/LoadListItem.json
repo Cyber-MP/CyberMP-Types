@@ -1,0 +1,321 @@
+{
+  "parent": "AnimatedListItemController",
+  "name": "LoadListItem",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkImageWidgetReference",
+      "name": "imageReplacement",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "label",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "labelDate",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "type",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "quest",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "level",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "lifepath",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "cloudStatus",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "playTime",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "characterLevel",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "characterLevelLabel",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "gameVersion",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "emptySlotWrapper",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "wrapper",
+      "flags": 4297130017
+    },
+    {
+      "type": "handle:textTextParameterSet",
+      "name": "versionParams",
+      "flags": 4431347744
+    },
+    {
+      "type": "Int32",
+      "name": "index",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "emptySlot",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "validSlot",
+      "flags": 4297130016
+    },
+    {
+      "type": "Uint64",
+      "name": "initialLoadingID",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:inkSaveMetadataInfo",
+      "name": "metadata",
+      "flags": 4431347744
+    },
+    {
+      "type": "redResourceReferenceScriptToken",
+      "name": "defaultAtlasPath",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "tranistionAnimProxy",
+      "flags": 4431347744
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnHoverOut",
+      "shortName": "OnHoverOut",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnHoverOver",
+      "shortName": "OnHoverOver",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "CheckThumbnailCensorship;Bool",
+      "shortName": "CheckThumbnailCensorship",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "IsBuildCensored",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "EmptySlot;",
+      "shortName": "EmptySlot",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "GetInitialLoadingID;",
+      "shortName": "GetInitialLoadingID",
+      "return": {
+        "type": "Uint64",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "GetPlatform;",
+      "shortName": "GetPlatform",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "GetPreviewImageWidget;",
+      "shortName": "GetPreviewImageWidget",
+      "return": {
+        "type": "whandle:inkImageWidget",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "Index;",
+      "shortName": "Index",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "IsCloud;",
+      "shortName": "IsCloud",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "IsModded;",
+      "shortName": "IsModded",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "IsVisible;",
+      "shortName": "IsVisible",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "PlayTransitionAnimation;CNameinkAnimOptions",
+      "shortName": "PlayTransitionAnimation",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "CName",
+          "name": "animName",
+          "flags": 128
+        },
+        {
+          "type": "inkanimPlaybackOptions",
+          "name": "animOptions",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetData;Int32BoolBool",
+      "shortName": "SetData",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "emptySlot",
+          "flags": 1152
+        },
+        {
+          "type": "Bool",
+          "name": "allSlotsTaken",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "SetInvalid;script_ref<String>",
+      "shortName": "SetInvalid",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "script_ref:String",
+          "name": "label",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetMetadata;SaveMetadataInfoBool",
+      "shortName": "SetMetadata",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:inkSaveMetadataInfo",
+          "name": "metadata",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "isEp1Enabled",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "ValidSlot;",
+      "shortName": "ValidSlot",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284
+    }
+  ]
+}

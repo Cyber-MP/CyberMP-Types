@@ -1,0 +1,81 @@
+{
+  "parent": "gamedataTweakDBRecord",
+  "name": "gamedataTankLevelSpawnableArrangement_Record",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "ArrangementList",
+      "shortName": "ArrangementList",
+      "index": 4086,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataTankSpawnableArrangement_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "ArrangementListContains",
+      "shortName": "ArrangementListContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 4090,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataTankSpawnableArrangement_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetArrangementListCount",
+      "shortName": "GetArrangementListCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 4087,
+      "flags": 1
+    },
+    {
+      "fullName": "GetArrangementListItem",
+      "shortName": "GetArrangementListItem",
+      "return": {
+        "type": "whandle:gamedataTankSpawnableArrangement_Record",
+        "flags": 64
+      },
+      "index": 4088,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetArrangementListItemHandle",
+      "shortName": "GetArrangementListItemHandle",
+      "return": {
+        "type": "handle:gamedataTankSpawnableArrangement_Record",
+        "flags": 64
+      },
+      "index": 4089,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

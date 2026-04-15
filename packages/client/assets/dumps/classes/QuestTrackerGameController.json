@@ -1,0 +1,332 @@
+{
+  "parent": "gameuiHUDGameController",
+  "name": "QuestTrackerGameController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkWidgetReference",
+      "name": "questTrackerContainer",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "QuestTitle",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "ObjectiveContainer",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "TrackedMappinTitle",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "TrackedMappinContainer",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "TrackedMappinObjectiveContainer",
+      "flags": 4297130017
+    },
+    {
+      "type": "whandle:gameObject",
+      "name": "player",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:gamemappinsMappinSystem",
+      "name": "mappinSystem",
+      "flags": 4297195552
+    },
+    {
+      "type": "whandle:gameJournalManager",
+      "name": "journalManager",
+      "flags": 4297195552
+    },
+    {
+      "type": "whandle:gameJournalQuestObjective",
+      "name": "bufferedEntry",
+      "flags": 4297195552
+    },
+    {
+      "type": "whandle:gameJournalQuestPhase",
+      "name": "bufferedPhase",
+      "flags": 4297195552
+    },
+    {
+      "type": "whandle:gameJournalQuest",
+      "name": "bufferedQuest",
+      "flags": 4297195552
+    },
+    {
+      "type": "whandle:inkWidget",
+      "name": "root",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:gameIBlackboard",
+      "name": "blackboard",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:UI_SystemDef",
+      "name": "uiSystemBB",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "uiSystemId",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "trackedMappinId",
+      "flags": 4431347744
+    },
+    {
+      "type": "whandle:inkAsyncSpawnRequest",
+      "name": "trackedMappinSpawnRequest",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:gamemappinsIMappin",
+      "name": "currentMappin",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnCounterChanged",
+      "shortName": "OnCounterChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Uint32",
+          "name": "hash",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "className",
+          "flags": 128
+        },
+        {
+          "type": "gameJournalNotifyOption",
+          "name": "notifyOption",
+          "flags": 128
+        },
+        {
+          "type": "gameJournalChangeType",
+          "name": "changeType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnMenuUpdate",
+      "shortName": "OnMenuUpdate",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnObjectiveIsOptionalChanged",
+      "shortName": "OnObjectiveIsOptionalChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Uint32",
+          "name": "hash",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "className",
+          "flags": 128
+        },
+        {
+          "type": "gameJournalNotifyOption",
+          "name": "notifyOption",
+          "flags": 128
+        },
+        {
+          "type": "gameJournalChangeType",
+          "name": "changeType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnStateChanges",
+      "shortName": "OnStateChanges",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Uint32",
+          "name": "hash",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "className",
+          "flags": 128
+        },
+        {
+          "type": "gameJournalNotifyOption",
+          "name": "notifyOption",
+          "flags": 128
+        },
+        {
+          "type": "gameJournalChangeType",
+          "name": "changeType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnTrackedEntryChanges",
+      "shortName": "OnTrackedEntryChanges",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Uint32",
+          "name": "hash",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "className",
+          "flags": 128
+        },
+        {
+          "type": "gameJournalNotifyOption",
+          "name": "notifyOption",
+          "flags": 128
+        },
+        {
+          "type": "gameJournalChangeType",
+          "name": "changeType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnTrackedMappinSpawned",
+      "shortName": "OnTrackedMappinSpawned",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkWidget",
+          "name": "newItem",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "userData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnTrackedMappinUpdated",
+      "shortName": "OnTrackedMappinUpdated",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Variant",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnTrackedQuestPhaseUpdateRequest",
+      "shortName": "OnTrackedQuestPhaseUpdateRequest",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:TrackedQuestPhaseUpdateRequest",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "SortObjectiveListByTimestamp;script_ref<array<JournalEntry>>",
+      "shortName": "SortObjectiveListByTimestamp",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:array:whandle:gameJournalEntry",
+          "name": "sortedObjectives",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateTrackerData;",
+      "shortName": "UpdateTrackerData",
+      "flags": 32900
+    }
+  ]
+}

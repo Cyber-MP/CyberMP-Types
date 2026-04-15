@@ -1,0 +1,378 @@
+{
+  "parent": "IScriptable",
+  "name": "ItemCompareBuilder",
+  "flags": 4,
+  "props": [
+    {
+      "type": "gameInventoryItemSortData",
+      "name": "sortData1",
+      "flags": 4297130016
+    },
+    {
+      "type": "gameInventoryItemSortData",
+      "name": "sortData2",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:CompareBuilder",
+      "name": "compareBuilder",
+      "flags": 4431347744
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "ItemCompareBuilder::BuildInventoryItemSortData;script_ref<InventoryItemData>UIScriptableSystem",
+      "shortName": "BuildInventoryItemSortData",
+      "return": {
+        "type": "gameInventoryItemSortData",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "script_ref:gameInventoryItemData",
+          "name": "item",
+          "flags": 128
+        },
+        {
+          "type": "handle:UIScriptableSystem",
+          "name": "uiScriptableSystem",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ItemCompareBuilder::GetDPS;script_ref<InventoryItemData>",
+      "shortName": "GetDPS",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 32902,
+      "params": [
+        {
+          "type": "script_ref:gameInventoryItemData",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ItemCompareBuilder::GetEquipmentAreaIndex;gamedataEquipmentArea",
+      "shortName": "GetEquipmentAreaIndex",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 32902,
+      "params": [
+        {
+          "type": "gamedataEquipmentArea",
+          "name": "equipmentArea",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ItemCompareBuilder::GetItemTypeIndex;gamedataItemType",
+      "shortName": "GetItemTypeIndex",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 32902,
+      "params": [
+        {
+          "type": "gamedataItemType",
+          "name": "itemType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ItemCompareBuilder::GetItemTypeInnerIndex;gamedataItemTypegameItemData",
+      "shortName": "GetItemTypeInnerIndex",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 32902,
+      "params": [
+        {
+          "type": "gamedataItemType",
+          "name": "itemType",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameItemData",
+          "name": "itemData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ItemCompareBuilder::GetItemTypeOrder;gameItemDatagamedataEquipmentAreagamedataItemType",
+      "shortName": "GetItemTypeOrder",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:gameItemData",
+          "name": "itemData",
+          "flags": 128
+        },
+        {
+          "type": "gamedataEquipmentArea",
+          "name": "equipmentArea",
+          "flags": 128
+        },
+        {
+          "type": "gamedataItemType",
+          "name": "itemType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ItemCompareBuilder::GetItemTypeOrder;script_ref<InventoryItemData>",
+      "shortName": "GetItemTypeOrder",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "script_ref:gameInventoryItemData",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ItemCompareBuilder::GetTypeSortValue;script_ref<InventoryItemData>",
+      "shortName": "GetTypeSortValue",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 32902,
+      "params": [
+        {
+          "type": "script_ref:gameInventoryItemData",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ItemCompareBuilder::HasItemTypeInnerIndex;gamedataItemType",
+      "shortName": "HasItemTypeInnerIndex",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32902,
+      "params": [
+        {
+          "type": "gamedataItemType",
+          "name": "itemType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ItemCompareBuilder::Make;script_ref<InventoryItemSortData>script_ref<InventoryItemSortData>",
+      "shortName": "Make",
+      "return": {
+        "type": "handle:ItemCompareBuilder",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "script_ref:gameInventoryItemSortData",
+          "name": "sortData1",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:gameInventoryItemSortData",
+          "name": "sortData2",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ChimeraMod;",
+      "shortName": "ChimeraMod",
+      "return": {
+        "type": "handle:ItemCompareBuilder",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "DLCAddedItem;",
+      "shortName": "DLCAddedItem",
+      "return": {
+        "type": "handle:ItemCompareBuilder",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "DPSAsc;",
+      "shortName": "DPSAsc",
+      "return": {
+        "type": "handle:ItemCompareBuilder",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "DPSDesc;",
+      "shortName": "DPSDesc",
+      "return": {
+        "type": "handle:ItemCompareBuilder",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "FavouriteItem;",
+      "shortName": "FavouriteItem",
+      "return": {
+        "type": "handle:ItemCompareBuilder",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "Get;",
+      "shortName": "Get",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "GetBool;",
+      "shortName": "GetBool",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "ItemType;",
+      "shortName": "ItemType",
+      "return": {
+        "type": "handle:ItemCompareBuilder",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "NameAsc;",
+      "shortName": "NameAsc",
+      "return": {
+        "type": "handle:ItemCompareBuilder",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "NameDesc;",
+      "shortName": "NameDesc",
+      "return": {
+        "type": "handle:ItemCompareBuilder",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "NewItem;UIScriptableSystem",
+      "shortName": "NewItem",
+      "return": {
+        "type": "handle:ItemCompareBuilder",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:UIScriptableSystem",
+          "name": "uiScriptableSystem",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PriceAsc;",
+      "shortName": "PriceAsc",
+      "return": {
+        "type": "handle:ItemCompareBuilder",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "PriceDesc;",
+      "shortName": "PriceDesc",
+      "return": {
+        "type": "handle:ItemCompareBuilder",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "QualityAsc;",
+      "shortName": "QualityAsc",
+      "return": {
+        "type": "handle:ItemCompareBuilder",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "QualityDesc;",
+      "shortName": "QualityDesc",
+      "return": {
+        "type": "handle:ItemCompareBuilder",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "QuestItem;",
+      "shortName": "QuestItem",
+      "return": {
+        "type": "handle:ItemCompareBuilder",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "WeightAsc;",
+      "shortName": "WeightAsc",
+      "return": {
+        "type": "handle:ItemCompareBuilder",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "WeightDesc;",
+      "shortName": "WeightDesc",
+      "return": {
+        "type": "handle:ItemCompareBuilder",
+        "flags": 64
+      },
+      "flags": 33284
+    }
+  ]
+}

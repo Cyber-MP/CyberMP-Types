@@ -1,0 +1,272 @@
+{
+  "parent": "MasterControllerPS",
+  "name": "SmartHouseControllerPS",
+  "flags": 1028,
+  "props": [
+    {
+      "type": "array:SPresetTimetableEntry",
+      "name": "timetable",
+      "flags": 6583091232
+    },
+    {
+      "type": "handle:SmartHousePreset",
+      "name": "activePreset",
+      "flags": 4431413284
+    },
+    {
+      "type": "array:handle:SmartHousePreset",
+      "name": "availablePresets",
+      "flags": 6650200101
+    },
+    {
+      "type": "SmartHouseConfiguration",
+      "name": "smartHouseCustomization",
+      "flags": 4364304417
+    },
+    {
+      "type": "Uint32",
+      "name": "callbackID",
+      "flags": 4297195552
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnInstantiated",
+      "shortName": "OnInstantiated",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "ActionOpenInteriorManager;",
+      "shortName": "ActionOpenInteriorManager",
+      "return": {
+        "type": "handle:OpenInteriorManager",
+        "flags": 64
+      },
+      "flags": 33028
+    },
+    {
+      "fullName": "ActionPreset;SmartHousePreset",
+      "shortName": "ActionPreset",
+      "return": {
+        "type": "handle:PresetAction",
+        "flags": 64
+      },
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:SmartHousePreset",
+          "name": "preset",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ActivatePreset;Int32",
+      "shortName": "ActivatePreset",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "i",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CheckTimetable;SPresetTimetableEntryInt32",
+      "shortName": "CheckTimetable",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "SPresetTimetableEntry",
+          "name": "newTable",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "arrayPos",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GameAttached;",
+      "shortName": "GameAttached",
+      "flags": 33024
+    },
+    {
+      "fullName": "GetActions;array<DeviceAction>GetActionsContext",
+      "shortName": "GetActions",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33280,
+      "params": [
+        {
+          "type": "array:handle:gamedeviceAction",
+          "name": "outActions",
+          "flags": 640
+        },
+        {
+          "type": "gameGetActionsContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetActiveTimeTableEntry;",
+      "shortName": "GetActiveTimeTableEntry",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 41220
+    },
+    {
+      "fullName": "GetCurrentTime;",
+      "shortName": "GetCurrentTime",
+      "return": {
+        "type": "GameTime",
+        "flags": 64
+      },
+      "flags": 41220
+    },
+    {
+      "fullName": "GetCustomizationFact;",
+      "shortName": "GetCustomizationFact",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "GetDeviceWidget;script_ref<GetActionsContext>",
+      "shortName": "GetDeviceWidget",
+      "return": {
+        "type": "SDeviceWidgetPackage",
+        "flags": 64
+      },
+      "flags": 33280,
+      "params": [
+        {
+          "type": "script_ref:gameGetActionsContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetInkWidgetTweakDBID;script_ref<GetActionsContext>",
+      "shortName": "GetInkWidgetTweakDBID",
+      "return": {
+        "type": "TweakDBID",
+        "flags": 64
+      },
+      "flags": 33024,
+      "params": [
+        {
+          "type": "script_ref:gameGetActionsContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Initialize;",
+      "shortName": "Initialize",
+      "flags": 33024
+    },
+    {
+      "fullName": "InitializePreset;",
+      "shortName": "InitializePreset",
+      "flags": 33028
+    },
+    {
+      "fullName": "InitializeTimetable;",
+      "shortName": "InitializeTimetable",
+      "flags": 33028
+    },
+    {
+      "fullName": "MakeTime;SSimpleGameTime",
+      "shortName": "MakeTime",
+      "return": {
+        "type": "GameTime",
+        "flags": 64
+      },
+      "flags": 41220,
+      "params": [
+        {
+          "type": "SSimpleGameTime",
+          "name": "time",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnOpenInteriorManager;OpenInteriorManager",
+      "shortName": "OnOpenInteriorManager",
+      "return": {
+        "type": "EntityNotificationType",
+        "flags": 64
+      },
+      "flags": 33280,
+      "params": [
+        {
+          "type": "handle:OpenInteriorManager",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPresetAction;PresetAction",
+      "shortName": "OnPresetAction",
+      "return": {
+        "type": "EntityNotificationType",
+        "flags": 64
+      },
+      "flags": 33280,
+      "params": [
+        {
+          "type": "handle:PresetAction",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "QuestForcePreset;CName",
+      "shortName": "QuestForcePreset",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "CName",
+          "name": "preset",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterFactCallback;",
+      "shortName": "RegisterFactCallback",
+      "flags": 33284
+    },
+    {
+      "fullName": "UninitializeTimetable;",
+      "shortName": "UninitializeTimetable",
+      "flags": 33284
+    },
+    {
+      "fullName": "UnregisterFactCallback;",
+      "shortName": "UnregisterFactCallback",
+      "flags": 33284
+    }
+  ]
+}

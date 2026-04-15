@@ -1,0 +1,267 @@
+{
+  "parent": "gameuiBaseGarmentItemPreviewGameController",
+  "name": "gameuiWardrobeSetPreviewGameController",
+  "flags": 2,
+  "props": [
+    {
+      "type": "inkWidgetReference",
+      "name": "colliderWidgetRef",
+      "flags": 4297130017
+    },
+    {
+      "type": "whandle:inkWidget",
+      "name": "colliderWidget",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:InventoryItemPreviewData",
+      "name": "data",
+      "flags": 4431347744
+    },
+    {
+      "type": "Bool",
+      "name": "isMouseDown",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isNotification",
+      "flags": 4297130016
+    },
+    {
+      "type": "Float",
+      "name": "c_GARMENT_ROTATION_SPEED",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "ClearPuppet",
+      "shortName": "ClearPuppet",
+      "index": 14630,
+      "flags": 1
+    },
+    {
+      "fullName": "HandleUnderwearVisualTags",
+      "shortName": "HandleUnderwearVisualTags",
+      "index": 14632,
+      "flags": 1
+    },
+    {
+      "fullName": "PreviewEquipAndForceShowItem",
+      "shortName": "PreviewEquipAndForceShowItem",
+      "index": 14626,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gameItemID",
+          "name": "itemID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PreviewEquipItem",
+      "shortName": "PreviewEquipItem",
+      "index": 14625,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gameItemID",
+          "name": "itemID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PreviewUnequipFromEquipmentArea",
+      "shortName": "PreviewUnequipFromEquipmentArea",
+      "index": 14629,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamedataEquipmentArea",
+          "name": "equipmentArea",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PreviewUnequipFromSlot",
+      "shortName": "PreviewUnequipFromSlot",
+      "index": 14628,
+      "flags": 1,
+      "params": [
+        {
+          "type": "TweakDBID",
+          "name": "slotID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PreviewUnequipItem",
+      "shortName": "PreviewUnequipItem",
+      "index": 14627,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gameItemID",
+          "name": "itemID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RestorePuppetWeapons",
+      "shortName": "RestorePuppetWeapons",
+      "index": 14631,
+      "flags": 1
+    },
+    {
+      "fullName": "SetUpPuppet",
+      "shortName": "SetUpPuppet",
+      "index": 14633,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:gameItemID",
+          "name": "visualItems",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnGlobalRelease",
+      "shortName": "OnGlobalRelease",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnPress",
+      "shortName": "OnPress",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPreviewInitialized",
+      "shortName": "OnPreviewInitialized",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnRelativeInput",
+      "shortName": "OnRelativeInput",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "CleanUpPuppet;",
+      "shortName": "CleanUpPuppet",
+      "flags": 33028
+    },
+    {
+      "fullName": "DelayedResetItemAppearanceInSlot;TweakDBID",
+      "shortName": "DelayedResetItemAppearanceInSlot",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "TweakDBID",
+          "name": "slotID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetVisualItems;",
+      "shortName": "GetVisualItems",
+      "return": {
+        "type": "array:gameItemID",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "HandleAxisInput;inkPointerEvent",
+      "shortName": "HandleAxisInput",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RestorePuppetEquipment;",
+      "shortName": "RestorePuppetEquipment",
+      "flags": 33284
+    },
+    {
+      "fullName": "SyncUnderwearToEquipmentSystem;",
+      "shortName": "SyncUnderwearToEquipmentSystem",
+      "flags": 33284
+    },
+    {
+      "fullName": "TryRestoreActiveWardrobeSet;",
+      "shortName": "TryRestoreActiveWardrobeSet",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33028
+    }
+  ]
+}

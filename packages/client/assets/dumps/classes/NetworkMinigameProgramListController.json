@@ -1,0 +1,155 @@
+{
+  "parent": "inkWidgetLogicController",
+  "name": "NetworkMinigameProgramListController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkWidgetReference",
+      "name": "programPlayerContainer",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "programNetworkContainer",
+      "flags": 4297195553
+    },
+    {
+      "type": "CName",
+      "name": "programLibraryName",
+      "flags": 4297195553
+    },
+    {
+      "type": "array:whandle:NetworkMinigameProgramController",
+      "name": "slotList",
+      "flags": 6583091232
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "animProxy_02",
+      "flags": 4431347744
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "headerBG",
+      "flags": 4297130017
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "FindSlotIndexByID;script_ref<String>",
+      "shortName": "FindSlotIndexByID",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:String",
+          "name": "id",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetDesignatedParent;script_ref<ProgramData>",
+      "shortName": "GetDesignatedParent",
+      "return": {
+        "type": "inkWidgetReference",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:ProgramData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PlaySideBarAnim;",
+      "shortName": "PlaySideBarAnim",
+      "flags": 33284
+    },
+    {
+      "fullName": "ProcessListModified;Boolscript_ref<array<ProgramData>>script_ref<array<ProgramData>>",
+      "shortName": "ProcessListModified",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "shouldModify",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:array:ProgramData",
+          "name": "playerProgramsAdded",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:array:ProgramData",
+          "name": "playerProgramsRemoved",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ShowCompleted;script_ref<String>Bool",
+      "shortName": "ShowCompleted",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "script_ref:String",
+          "name": "id",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "revealLocalizedName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Spawn;script_ref<array<ProgramData>>",
+      "shortName": "Spawn",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "script_ref:array:ProgramData",
+          "name": "contents",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SpawnSlot;script_ref<ProgramData>",
+      "shortName": "SpawnSlot",
+      "return": {
+        "type": "whandle:NetworkMinigameProgramController",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:ProgramData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdatePartialCompletionState;script_ref<array<ProgramProgressData>>",
+      "shortName": "UpdatePartialCompletionState",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "script_ref:array:ProgramProgressData",
+          "name": "progressList",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

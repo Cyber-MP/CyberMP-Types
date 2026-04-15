@@ -1,0 +1,378 @@
+{
+  "parent": "gameScriptableSystem",
+  "name": "FocusCluesSystem",
+  "flags": 4,
+  "props": [
+    {
+      "type": "array:LinkedFocusClueData",
+      "name": "linkedClues",
+      "flags": 6851461152
+    },
+    {
+      "type": "array:CName",
+      "name": "disabledGroupes",
+      "flags": 6851461152
+    },
+    {
+      "type": "LinkedFocusClueData",
+      "name": "activeLinkedClue",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "AddLinkedClue;script_ref<LinkedFocusClueData>",
+      "shortName": "AddLinkedClue",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:LinkedFocusClueData",
+          "name": "clue",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "DisableGroup;CName",
+      "shortName": "DisableGroup",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "CName",
+          "name": "groupID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "EnableGroup;CName",
+      "shortName": "EnableGroup",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "CName",
+          "name": "groupID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetActiveLinkedClue;",
+      "shortName": "GetActiveLinkedClue",
+      "return": {
+        "type": "LinkedFocusClueData",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetActiveLinkedClueScannableData;",
+      "shortName": "GetActiveLinkedClueScannableData",
+      "return": {
+        "type": "array:gameScanningTooltipElementDef",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetClueGroupData;CNamescript_ref<FocusClueDefinition>",
+      "shortName": "GetClueGroupData",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476,
+      "params": [
+        {
+          "type": "CName",
+          "name": "groupID",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:FocusClueDefinition",
+          "name": "clue",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetLinkedClueGroupData;CNamescript_ref<LinkedFocusClueData>",
+      "shortName": "GetLinkedClueGroupData",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "CName",
+          "name": "groupID",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:LinkedFocusClueData",
+          "name": "clue",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HasLinkedClue;script_ref<LinkedFocusClueData>",
+      "shortName": "HasLinkedClue",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:LinkedFocusClueData",
+          "name": "clue",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsGroupDisabled;CName",
+      "shortName": "IsGroupDisabled",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476,
+      "params": [
+        {
+          "type": "CName",
+          "name": "groupID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsGroupTagged;script_ref<LinkedFocusClueData>",
+      "shortName": "IsGroupTagged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:LinkedFocusClueData",
+          "name": "clue",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsGroupped;EntityIDCName",
+      "shortName": "IsGroupped",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "ownerID",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "groupID",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "IsRegistered;EntityIDCName",
+      "shortName": "IsRegistered",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "ownerID",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "groupID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsTagged;GameObject",
+      "shortName": "IsTagged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41092,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "owner",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRegisterLinkedClueRequest;RegisterLinkedCluekRequest",
+      "shortName": "OnRegisterLinkedClueRequest",
+      "flags": 33924,
+      "params": [
+        {
+          "type": "handle:RegisterLinkedCluekRequest",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnTagLinkedClueRequest;TagLinkedCluekRequest",
+      "shortName": "OnTagLinkedClueRequest",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:TagLinkedCluekRequest",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUnregisterLinkedClueRequest;UnregisterLinkedCluekRequest",
+      "shortName": "OnUnregisterLinkedClueRequest",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:UnregisterLinkedCluekRequest",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUpdateLinkedCluesRequest;UpdateLinkedClueskRequest",
+      "shortName": "OnUpdateLinkedCluesRequest",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:UpdateLinkedClueskRequest",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RemoveLinkedClue;script_ref<LinkedFocusClueData>",
+      "shortName": "RemoveLinkedClue",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:LinkedFocusClueData",
+          "name": "clue",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RemoveLinkedClueByIndex;Int32",
+      "shortName": "RemoveLinkedClueByIndex",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "clueID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ResolveLinkedCluesTagging;script_ref<LinkedFocusClueData>Bool",
+      "shortName": "ResolveLinkedCluesTagging",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:LinkedFocusClueData",
+          "name": "clue",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "tag",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SendlinkedClueTagEvent;script_ref<LinkedFocusClueData>EntityIDBool",
+      "shortName": "SendlinkedClueTagEvent",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:LinkedFocusClueData",
+          "name": "linkedClue",
+          "flags": 128
+        },
+        {
+          "type": "entEntityID",
+          "name": "requester",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "tag",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SendlinkedClueUpdateEvent;script_ref<LinkedFocusClueData>EntityID",
+      "shortName": "SendlinkedClueUpdateEvent",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:LinkedFocusClueData",
+          "name": "linkedClue",
+          "flags": 128
+        },
+        {
+          "type": "entEntityID",
+          "name": "requester",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateLinkedClues;script_ref<LinkedFocusClueData>",
+      "shortName": "UpdateLinkedClues",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:LinkedFocusClueData",
+          "name": "clue",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateSingleLinkedClue;LinkedFocusClueData",
+      "shortName": "UpdateSingleLinkedClue",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "LinkedFocusClueData",
+          "name": "clue",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

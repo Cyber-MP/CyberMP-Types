@@ -9,10 +9,7 @@
   "scripts": {
     "start": "tsx ./src",
     "dev": "tsx watch ./src",
-    "generate-patches": "tsx ./scripts/generate-patches.ts",
-    "apply-patches": "tsx ./scripts/apply-patches.ts",
-    "prettify-edited": "tsx ./scripts/prettify-edited.ts",
-    "build": "npm run start",
+    "build": "pnpm run start",
     "test": "vitest run",
     "test:dev": "vitest",
     "prepublishOnly": "pnpm build && pnpm test",
@@ -54,7 +51,8 @@
     "fs-extra": "^11.3.2",
     "rimraf": "^6.0.1",
     "ts-morph": "^26.0.0",
-    "vitest": "^4.0.15"
+    "vitest": "^4.0.15",
+    "glob": "^13.0.6"
   },
   "publishConfig": {
     "access": "public"

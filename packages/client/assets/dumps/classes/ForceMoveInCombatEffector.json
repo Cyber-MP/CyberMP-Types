@@ -1,0 +1,89 @@
+{
+  "parent": "gameEffector",
+  "name": "ForceMoveInCombatEffector",
+  "flags": 4,
+  "props": [
+    {
+      "type": "handle:AIHumanComponent",
+      "name": "aiComponent",
+      "flags": 4431544352
+    },
+    {
+      "type": "Bool",
+      "name": "commandStarted",
+      "flags": 4297326624
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "ForceMoveInCombatEffector::GetCommandName;",
+      "shortName": "GetCommandName",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 32902
+    },
+    {
+      "fullName": "Initialize;TweakDBIDGameInstanceTweakDBID",
+      "shortName": "Initialize",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "TweakDBID",
+          "name": "record",
+          "flags": 128
+        },
+        {
+          "type": "ScriptGameInstance",
+          "name": "game",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "parentRecord",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "StartMovement;GameObjectAIPositionSpecFloatmoveMovementType",
+      "shortName": "StartMovement",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "owner",
+          "flags": 128
+        },
+        {
+          "type": "AIPositionSpec",
+          "name": "end",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "desiredDistance",
+          "flags": 128
+        },
+        {
+          "type": "moveMovementType",
+          "name": "movementType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Uninitialize;GameInstance",
+      "shortName": "Uninitialize",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "game",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

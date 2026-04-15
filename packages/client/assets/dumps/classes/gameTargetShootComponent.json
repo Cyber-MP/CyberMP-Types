@@ -1,0 +1,535 @@
+{
+  "parent": "entIComponent",
+  "name": "gameTargetShootComponent",
+  "flags": 2,
+  "props": [
+    {
+      "type": "handle:gamedataWeaponItem_Record",
+      "name": "weaponRecord",
+      "flags": 4431544352
+    },
+    {
+      "type": "TweakDBID",
+      "name": "weaponTDBID",
+      "flags": 4297326624
+    },
+    {
+      "type": "handle:gamedataCharacter_Record",
+      "name": "characterRecord",
+      "flags": 4431544352
+    },
+    {
+      "type": "TweakDBID",
+      "name": "characterTDBID",
+      "flags": 4297326624
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "CalculateMissOffset",
+      "shortName": "CalculateMissOffset",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "index": 12726,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "weaponOwner",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameweaponObject",
+          "name": "weapon",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "shootAtPointWS",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "maxSpread",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "useForcedMissZOffset",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "forcedMissZOffset",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "isInLowCover",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetBasicGroupCoefficient",
+      "shortName": "GetBasicGroupCoefficient",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 12729,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "weaponOwner",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetLastHitTime",
+      "shortName": "GetLastHitTime",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 12728,
+      "flags": 8193
+    },
+    {
+      "fullName": "GetPackageName",
+      "shortName": "GetPackageName",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "index": 12725,
+      "flags": 8193
+    },
+    {
+      "fullName": "InsertRecentHitter",
+      "shortName": "InsertRecentHitter",
+      "index": 12730,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "weaponOwner",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsDebugEnabled",
+      "shortName": "IsDebugEnabled",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12724,
+      "flags": 8193
+    },
+    {
+      "fullName": "IsTimeBetweenHitsEnabled",
+      "shortName": "IsTimeBetweenHitsEnabled",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12723,
+      "flags": 8193
+    },
+    {
+      "fullName": "SetLastHitTime",
+      "shortName": "SetLastHitTime",
+      "index": 12727,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Float",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CalculateTimeBetweenHits;script_ref<TimeBetweenHitsParameters>",
+      "shortName": "CalculateTimeBetweenHits",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:TimeBetweenHitsParameters",
+          "name": "params",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetCoverCoefficient;GameObjectWeaponItem_RecordGameObject",
+      "shortName": "GetCoverCoefficient",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 41092,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "weaponOwner",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamedataWeaponItem_Record",
+          "name": "weaponRecord",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameObject",
+          "name": "target",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetDifficultyLevelCoefficient;",
+      "shortName": "GetDifficultyLevelCoefficient",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 41092
+    },
+    {
+      "fullName": "GetDistanceCoefficient;WeaponObjectVector4",
+      "shortName": "GetDistanceCoefficient",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 41092,
+      "params": [
+        {
+          "type": "whandle:gameweaponObject",
+          "name": "weapon",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "targetPosition",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetDistanceCoefficientFromCurve;CNameFloat",
+      "shortName": "GetDistanceCoefficientFromCurve",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 41092,
+      "params": [
+        {
+          "type": "CName",
+          "name": "curveName",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "lookupValue",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetGameObject;",
+      "shortName": "GetGameObject",
+      "return": {
+        "type": "handle:gameObject",
+        "flags": 64
+      },
+      "flags": 41092
+    },
+    {
+      "fullName": "GetGroupCoefficient;GameObject",
+      "shortName": "GetGroupCoefficient",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "weaponOwner",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetHMGGroupMultiplier;",
+      "shortName": "GetHMGGroupMultiplier",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 41092
+    },
+    {
+      "fullName": "GetPlayersNumCoefficient;GameObject",
+      "shortName": "GetPlayersNumCoefficient",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 41092,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "weaponOwner",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetValueFromCurve;CNameFloat",
+      "shortName": "GetValueFromCurve",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 41092,
+      "params": [
+        {
+          "type": "CName",
+          "name": "curveName",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "lookupValue",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetVisibilityCoefficient;GameObjectWeaponObjectGameObjectFloat",
+      "shortName": "GetVisibilityCoefficient",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 41092,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "weaponOwner",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameweaponObject",
+          "name": "weapon",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameObject",
+          "name": "target",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "visibilityThresholdCoefficient",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetVisibilityCoefficientFromCurve;CNameFloat",
+      "shortName": "GetVisibilityCoefficientFromCurve",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 41092,
+      "params": [
+        {
+          "type": "CName",
+          "name": "curveName",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "lookupValue",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetVisionBlockersCoefficient;GameObjectGameObject",
+      "shortName": "GetVisionBlockersCoefficient",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 41092,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "weaponOwner",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameObject",
+          "name": "target",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HandleBeingShot;GameObjectWeaponObjectVector4FloatFloatBool",
+      "shortName": "HandleBeingShot",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "weaponOwner",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameweaponObject",
+          "name": "weapon",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "shootAtPoint",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "maxSpread",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "coefficientMultiplier",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "miss",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "HandleBeingShot;GameObjectWeaponObjectVector4FloatFloat",
+      "shortName": "HandleBeingShot",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "weaponOwner",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameweaponObject",
+          "name": "weapon",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "shootAtPoint",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "maxSpread",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "coefficientMultiplier",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HandleMissed;GameObjectWeaponObjectVector4Float",
+      "shortName": "HandleMissed",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "weaponOwner",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameweaponObject",
+          "name": "weapon",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "shootAtPoint",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "maxSpread",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ShouldBeHit;GameObjectWeaponObjectWeaponItem_RecordFloat",
+      "shortName": "ShouldBeHit",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "weaponOwner",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameweaponObject",
+          "name": "weapon",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamedataWeaponItem_Record",
+          "name": "weaponRecord",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "visibilityThresholdCoefficient",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,182 @@
+{
+  "parent": "gameuiCrosshairBaseGameController",
+  "name": "CrosshairGameController_Mantis_Blade",
+  "flags": 4,
+  "props": [
+    {
+      "type": "handle:redCallbackObject",
+      "name": "weaponBBID",
+      "flags": 4431347744
+    },
+    {
+      "type": "gamePSMMeleeWeapon",
+      "name": "meleeWeaponState",
+      "flags": 4297130016
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "targetColorChange",
+      "flags": 4297130017
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "holdAnim",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "aimAnim",
+      "flags": 4431347744
+    },
+    {
+      "type": "Bool",
+      "name": "isInHoldState",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:MeleeLeapAttackObjectTagger",
+      "name": "meleeLeapAttackObjectTagger",
+      "flags": 4431347744
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnPSMMeleeWeaponStateChanged",
+      "shortName": "OnPSMMeleeWeaponStateChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPlayerAttach",
+      "shortName": "OnPlayerAttach",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "playerPuppet",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPlayerDetach",
+      "shortName": "OnPlayerDetach",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "playerPuppet",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ApplyCrosshairGUIState;CNameEntity",
+      "shortName": "ApplyCrosshairGUIState",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "CName",
+          "name": "state",
+          "flags": 128
+        },
+        {
+          "type": "handle:entEntity",
+          "name": "aimedAtEntity",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetIntroAnimation;Bool",
+      "shortName": "GetIntroAnimation",
+      "return": {
+        "type": "handle:inkanimProxy",
+        "flags": 64
+      },
+      "flags": 33280,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "firstEquip",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetOutroAnimation;",
+      "shortName": "GetOutroAnimation",
+      "return": {
+        "type": "handle:inkanimProxy",
+        "flags": 64
+      },
+      "flags": 33280
+    },
+    {
+      "fullName": "OnMeleeWeaponStateChange;gamePSMMeleeWeapongamePSMMeleeWeapon",
+      "shortName": "OnMeleeWeaponStateChange",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "gamePSMMeleeWeapon",
+          "name": "oldState",
+          "flags": 128
+        },
+        {
+          "type": "gamePSMMeleeWeapon",
+          "name": "newState",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnState_Default;",
+      "shortName": "OnState_Default",
+      "flags": 33028
+    },
+    {
+      "fullName": "OnState_Hold;",
+      "shortName": "OnState_Hold",
+      "flags": 33028
+    },
+    {
+      "fullName": "PlayAnimation;CName",
+      "shortName": "PlayAnimation",
+      "return": {
+        "type": "handle:inkanimProxy",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "CName",
+          "name": "animName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateTargetIndicator;",
+      "shortName": "UpdateTargetIndicator",
+      "flags": 33284
+    }
+  ]
+}

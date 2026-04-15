@@ -1,0 +1,70 @@
+{
+  "parent": "VehicleEventsTransition",
+  "name": "PassengerEvents",
+  "flags": 4,
+  "props": [
+    {
+      "type": "Bool",
+      "name": "noWeaponsRestrictionApplied",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnEnter;StateContextStateGameScriptInterface",
+      "shortName": "OnEnter",
+      "flags": 34048,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnExit;StateContextStateGameScriptInterface",
+      "shortName": "OnExit",
+      "flags": 34308,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUpdate;FloatStateContextStateGameScriptInterface",
+      "shortName": "OnUpdate",
+      "flags": 34308,
+      "params": [
+        {
+          "type": "Float",
+          "name": "timeDelta",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

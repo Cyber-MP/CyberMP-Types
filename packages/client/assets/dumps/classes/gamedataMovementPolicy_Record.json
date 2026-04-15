@@ -1,0 +1,655 @@
+{
+  "parent": "gamedataTweakDBRecord",
+  "name": "gamedataMovementPolicy_Record",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "AllowedTags",
+      "shortName": "AllowedTags",
+      "index": 9193,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataMovementPolicyTagList_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "AllowedTagsContains",
+      "shortName": "AllowedTagsContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 9197,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataMovementPolicyTagList_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AvoidObstacleWithinTolerance",
+      "shortName": "AvoidObstacleWithinTolerance",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 9237,
+      "flags": 1
+    },
+    {
+      "fullName": "AvoidSafeArea",
+      "shortName": "AvoidSafeArea",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 9233,
+      "flags": 1
+    },
+    {
+      "fullName": "AvoidThreat",
+      "shortName": "AvoidThreat",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 9235,
+      "flags": 1
+    },
+    {
+      "fullName": "AvoidThreatCost",
+      "shortName": "AvoidThreatCost",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 9212,
+      "flags": 1
+    },
+    {
+      "fullName": "AvoidThreatIgnoringDirection",
+      "shortName": "AvoidThreatIgnoringDirection",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 9222,
+      "flags": 1
+    },
+    {
+      "fullName": "AvoidThreatRange",
+      "shortName": "AvoidThreatRange",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 9209,
+      "flags": 1
+    },
+    {
+      "fullName": "BlockedTags",
+      "shortName": "BlockedTags",
+      "index": 9188,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataMovementPolicyTagList_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "BlockedTagsContains",
+      "shortName": "BlockedTagsContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 9192,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataMovementPolicyTagList_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CalculateStartTangent",
+      "shortName": "CalculateStartTangent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 9236,
+      "flags": 1
+    },
+    {
+      "fullName": "CirclingDirection",
+      "shortName": "CirclingDirection",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "index": 9201,
+      "flags": 1
+    },
+    {
+      "fullName": "DeadAngle",
+      "shortName": "DeadAngle",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 9220,
+      "flags": 1
+    },
+    {
+      "fullName": "DebugName",
+      "shortName": "DebugName",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "index": 9203,
+      "flags": 1
+    },
+    {
+      "fullName": "DestinationOrientationPosition",
+      "shortName": "DestinationOrientationPosition",
+      "return": {
+        "type": "whandle:gamedataAIActionTarget_Record",
+        "flags": 64
+      },
+      "index": 9186,
+      "flags": 1
+    },
+    {
+      "fullName": "DestinationOrientationPositionHandle",
+      "shortName": "DestinationOrientationPositionHandle",
+      "return": {
+        "type": "handle:gamedataAIActionTarget_Record",
+        "flags": 64
+      },
+      "index": 9187,
+      "flags": 1
+    },
+    {
+      "fullName": "Distance",
+      "shortName": "Distance",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 9207,
+      "flags": 1
+    },
+    {
+      "fullName": "DontUseStart",
+      "shortName": "DontUseStart",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 9228,
+      "flags": 1
+    },
+    {
+      "fullName": "DontUseStop",
+      "shortName": "DontUseStop",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 9223,
+      "flags": 1
+    },
+    {
+      "fullName": "DynamicTargetUpdateDistance",
+      "shortName": "DynamicTargetUpdateDistance",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 9218,
+      "flags": 1
+    },
+    {
+      "fullName": "DynamicTargetUpdateTimer",
+      "shortName": "DynamicTargetUpdateTimer",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 9217,
+      "flags": 1
+    },
+    {
+      "fullName": "GetAllowedTagsCount",
+      "shortName": "GetAllowedTagsCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 9194,
+      "flags": 1
+    },
+    {
+      "fullName": "GetAllowedTagsItem",
+      "shortName": "GetAllowedTagsItem",
+      "return": {
+        "type": "whandle:gamedataMovementPolicyTagList_Record",
+        "flags": 64
+      },
+      "index": 9195,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetAllowedTagsItemHandle",
+      "shortName": "GetAllowedTagsItemHandle",
+      "return": {
+        "type": "handle:gamedataMovementPolicyTagList_Record",
+        "flags": 64
+      },
+      "index": 9196,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetBlockedTagsCount",
+      "shortName": "GetBlockedTagsCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 9189,
+      "flags": 1
+    },
+    {
+      "fullName": "GetBlockedTagsItem",
+      "shortName": "GetBlockedTagsItem",
+      "return": {
+        "type": "whandle:gamedataMovementPolicyTagList_Record",
+        "flags": 64
+      },
+      "index": 9190,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetBlockedTagsItemHandle",
+      "shortName": "GetBlockedTagsItemHandle",
+      "return": {
+        "type": "handle:gamedataMovementPolicyTagList_Record",
+        "flags": 64
+      },
+      "index": 9191,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetOutOfWay",
+      "shortName": "GetOutOfWay",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 9239,
+      "flags": 1
+    },
+    {
+      "fullName": "IgnoreCollisionAvoidance",
+      "shortName": "IgnoreCollisionAvoidance",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 9226,
+      "flags": 1
+    },
+    {
+      "fullName": "IgnoreLoSPrecheck",
+      "shortName": "IgnoreLoSPrecheck",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 9232,
+      "flags": 1
+    },
+    {
+      "fullName": "IgnoreNavigation",
+      "shortName": "IgnoreNavigation",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 9224,
+      "flags": 1
+    },
+    {
+      "fullName": "IgnoreRestrictedMovementArea",
+      "shortName": "IgnoreRestrictedMovementArea",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 9230,
+      "flags": 1
+    },
+    {
+      "fullName": "IgnoreSpotReservation",
+      "shortName": "IgnoreSpotReservation",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 9229,
+      "flags": 1
+    },
+    {
+      "fullName": "KeepLineOfSight",
+      "shortName": "KeepLineOfSight",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "index": 9198,
+      "flags": 1
+    },
+    {
+      "fullName": "LineOfSightPointPreference",
+      "shortName": "LineOfSightPointPreference",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "index": 9200,
+      "flags": 1
+    },
+    {
+      "fullName": "MaxPathLength",
+      "shortName": "MaxPathLength",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 9221,
+      "flags": 1
+    },
+    {
+      "fullName": "MaxPathLengthToDirectDistanceRatioCurve",
+      "shortName": "MaxPathLengthToDirectDistanceRatioCurve",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "index": 9202,
+      "flags": 1
+    },
+    {
+      "fullName": "MinDistance",
+      "shortName": "MinDistance",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 9219,
+      "flags": 1
+    },
+    {
+      "fullName": "MovementType",
+      "shortName": "MovementType",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "index": 9199,
+      "flags": 1
+    },
+    {
+      "fullName": "Ring",
+      "shortName": "Ring",
+      "return": {
+        "type": "whandle:gamedataAIRingType_Record",
+        "flags": 64
+      },
+      "index": 9180,
+      "flags": 1
+    },
+    {
+      "fullName": "RingDistanceMult",
+      "shortName": "RingDistanceMult",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 9216,
+      "flags": 1
+    },
+    {
+      "fullName": "RingDistanceOffset",
+      "shortName": "RingDistanceOffset",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 9213,
+      "flags": 1
+    },
+    {
+      "fullName": "RingHandle",
+      "shortName": "RingHandle",
+      "return": {
+        "type": "handle:gamedataAIRingType_Record",
+        "flags": 64
+      },
+      "index": 9181,
+      "flags": 1
+    },
+    {
+      "fullName": "RingToleranceMult",
+      "shortName": "RingToleranceMult",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 9210,
+      "flags": 1
+    },
+    {
+      "fullName": "RingToleranceOffset",
+      "shortName": "RingToleranceOffset",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 9211,
+      "flags": 1
+    },
+    {
+      "fullName": "SpatialHintMults",
+      "shortName": "SpatialHintMults",
+      "return": {
+        "type": "Vector3",
+        "flags": 64
+      },
+      "index": 9204,
+      "flags": 1
+    },
+    {
+      "fullName": "StopOnObstacle",
+      "shortName": "StopOnObstacle",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 9238,
+      "flags": 1
+    },
+    {
+      "fullName": "StrafingPredictionTime",
+      "shortName": "StrafingPredictionTime",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 9206,
+      "flags": 1
+    },
+    {
+      "fullName": "StrafingPredictionVelocityMax",
+      "shortName": "StrafingPredictionVelocityMax",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 9215,
+      "flags": 1
+    },
+    {
+      "fullName": "StrafingRotationOffset",
+      "shortName": "StrafingRotationOffset",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 9214,
+      "flags": 1
+    },
+    {
+      "fullName": "StrafingTarget",
+      "shortName": "StrafingTarget",
+      "return": {
+        "type": "whandle:gamedataAIActionTarget_Record",
+        "flags": 64
+      },
+      "index": 9182,
+      "flags": 1
+    },
+    {
+      "fullName": "StrafingTargetHandle",
+      "shortName": "StrafingTargetHandle",
+      "return": {
+        "type": "handle:gamedataAIActionTarget_Record",
+        "flags": 64
+      },
+      "index": 9183,
+      "flags": 1
+    },
+    {
+      "fullName": "SymmetricAnglesScores",
+      "shortName": "SymmetricAnglesScores",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 9227,
+      "flags": 1
+    },
+    {
+      "fullName": "Target",
+      "shortName": "Target",
+      "return": {
+        "type": "whandle:gamedataAIActionTarget_Record",
+        "flags": 64
+      },
+      "index": 9184,
+      "flags": 1
+    },
+    {
+      "fullName": "TargetHandle",
+      "shortName": "TargetHandle",
+      "return": {
+        "type": "handle:gamedataAIActionTarget_Record",
+        "flags": 64
+      },
+      "index": 9185,
+      "flags": 1
+    },
+    {
+      "fullName": "Tolerance",
+      "shortName": "Tolerance",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 9205,
+      "flags": 1
+    },
+    {
+      "fullName": "UseFollowSlots",
+      "shortName": "UseFollowSlots",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 9234,
+      "flags": 1
+    },
+    {
+      "fullName": "UseOffMeshAllowedTags",
+      "shortName": "UseOffMeshAllowedTags",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 9231,
+      "flags": 1
+    },
+    {
+      "fullName": "UseOffMeshBlockedTags",
+      "shortName": "UseOffMeshBlockedTags",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 9225,
+      "flags": 1
+    },
+    {
+      "fullName": "ZDiff",
+      "shortName": "ZDiff",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 9208,
+      "flags": 1
+    }
+  ]
+}

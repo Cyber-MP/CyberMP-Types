@@ -1,0 +1,291 @@
+{
+  "parent": "InteractiveMasterDevice",
+  "name": "SecurityAlarm",
+  "flags": 4,
+  "props": [
+    {
+      "type": "handle:entMeshComponent",
+      "name": "workingAlarm",
+      "flags": 4431413280
+    },
+    {
+      "type": "handle:entMeshComponent",
+      "name": "destroyedAlarm",
+      "flags": 4431413280
+    },
+    {
+      "type": "Bool",
+      "name": "isGlitching",
+      "flags": 4297195552
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnQuestForceSecuritySystemArmed",
+      "shortName": "OnQuestForceSecuritySystemArmed",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:QuestForceSecuritySystemArmed",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnQuestForceSecuritySystemSafe",
+      "shortName": "OnQuestForceSecuritySystemSafe",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:QuestForceSecuritySystemSafe",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRequestComponents",
+      "shortName": "OnRequestComponents",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "entEntityRequestComponentsInterface",
+          "name": "ri",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSecurityAlarmBreachResponse",
+      "shortName": "OnSecurityAlarmBreachResponse",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:SecurityAlarmBreachResponse",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSecuritySystemOutput",
+      "shortName": "OnSecuritySystemOutput",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:SecuritySystemOutput",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnTakeControl",
+      "shortName": "OnTakeControl",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "entEntityResolveComponentsInterface",
+          "name": "ri",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnTargetAssessmentRequest",
+      "shortName": "OnTargetAssessmentRequest",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:TargetAssessmentRequest",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnToggleAlarm",
+      "shortName": "OnToggleAlarm",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:ToggleAlarm",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ActivateDevice;",
+      "shortName": "ActivateDevice",
+      "flags": 33024
+    },
+    {
+      "fullName": "BreakDevice;",
+      "shortName": "BreakDevice",
+      "flags": 33024
+    },
+    {
+      "fullName": "CutPower;",
+      "shortName": "CutPower",
+      "flags": 33024
+    },
+    {
+      "fullName": "DeactivateDevice;",
+      "shortName": "DeactivateDevice",
+      "flags": 33024
+    },
+    {
+      "fullName": "DeactivateState;",
+      "shortName": "DeactivateState",
+      "flags": 33028
+    },
+    {
+      "fullName": "DeterminGameplayRole;",
+      "shortName": "DeterminGameplayRole",
+      "return": {
+        "type": "EGameplayRole",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "DetermineState;",
+      "shortName": "DetermineState",
+      "flags": 33028
+    },
+    {
+      "fullName": "GetController;",
+      "shortName": "GetController",
+      "return": {
+        "type": "handle:SecurityAlarmController",
+        "flags": 64
+      },
+      "flags": 41088
+    },
+    {
+      "fullName": "GetDevicePS;",
+      "shortName": "GetDevicePS",
+      "return": {
+        "type": "handle:SecurityAlarmControllerPS",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "PlaySound;",
+      "shortName": "PlaySound",
+      "flags": 33028
+    },
+    {
+      "fullName": "ResolveGameplayState;",
+      "shortName": "ResolveGameplayState",
+      "flags": 33024
+    },
+    {
+      "fullName": "SendStim;",
+      "shortName": "SendStim",
+      "flags": 33028
+    },
+    {
+      "fullName": "SetCombatState;",
+      "shortName": "SetCombatState",
+      "flags": 33028
+    },
+    {
+      "fullName": "StartBlinking;",
+      "shortName": "StartBlinking",
+      "flags": 33028
+    },
+    {
+      "fullName": "StartGlitching;EGlitchStateFloat",
+      "shortName": "StartGlitching",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "EGlitchState",
+          "name": "glitchState",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "intensity",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "StopBlinking;",
+      "shortName": "StopBlinking",
+      "flags": 33028
+    },
+    {
+      "fullName": "StopGlitching;",
+      "shortName": "StopGlitching",
+      "flags": 33024
+    },
+    {
+      "fullName": "StopSound;",
+      "shortName": "StopSound",
+      "flags": 33028
+    },
+    {
+      "fullName": "StopStim;",
+      "shortName": "StopStim",
+      "flags": 33028
+    },
+    {
+      "fullName": "TurnOffDevice;",
+      "shortName": "TurnOffDevice",
+      "flags": 33024
+    },
+    {
+      "fullName": "TurnOffLights;",
+      "shortName": "TurnOffLights",
+      "flags": 33024
+    },
+    {
+      "fullName": "TurnOnDevice;",
+      "shortName": "TurnOnDevice",
+      "flags": 33024
+    },
+    {
+      "fullName": "TurnOnLights;",
+      "shortName": "TurnOnLights",
+      "flags": 33028
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "parent": "gameuiMenuGameController",
+  "name": "ItemLog",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "listRef",
+      "flags": 4297130017
+    },
+    {
+      "type": "Float",
+      "name": "initialPopupDelay",
+      "flags": 4297130017
+    },
+    {
+      "type": "array:whandle:DisassemblePopupLogicController",
+      "name": "popupList",
+      "flags": 6583025696
+    },
+    {
+      "type": "array:gameInventoryItemData",
+      "name": "listOfAddedInventoryItems",
+      "flags": 6583025696
+    },
+    {
+      "type": "whandle:PlayerPuppet",
+      "name": "player",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:InventoryDataManagerV2",
+      "name": "InventoryManager",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:ItemLogUserData",
+      "name": "data",
+      "flags": 4431347744
+    },
+    {
+      "type": "Int32",
+      "name": "onScreenCount",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "animProxy",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkanimDefinition",
+      "name": "alpha_fadein",
+      "flags": 4431347744
+    },
+    {
+      "type": "inkanimPlaybackOptions",
+      "name": "AnimOptions",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnDelayComplete",
+      "shortName": "OnDelayComplete",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkanimProxy",
+          "name": "anim",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnItemAdded",
+      "shortName": "OnItemAdded",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkGameNotificationData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRemovePopup",
+      "shortName": "OnRemovePopup",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "whandle:inkWidget",
+          "name": "widget",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "CreatePopup;",
+      "shortName": "CreatePopup",
+      "flags": 32900
+    },
+    {
+      "fullName": "CreatePopupDelay;",
+      "shortName": "CreatePopupDelay",
+      "flags": 32900
+    },
+    {
+      "fullName": "ManagePopups;",
+      "shortName": "ManagePopups",
+      "flags": 33284
+    }
+  ]
+}

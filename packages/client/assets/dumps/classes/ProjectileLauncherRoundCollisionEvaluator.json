@@ -1,0 +1,120 @@
+{
+  "parent": "gameprojectileScriptCollisionEvaluator",
+  "name": "ProjectileLauncherRoundCollisionEvaluator",
+  "flags": 4,
+  "props": [
+    {
+      "type": "gamedataProjectileOnCollisionAction",
+      "name": "collisionAction",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "projectileStopped",
+      "flags": 4297130016
+    },
+    {
+      "type": "Int32",
+      "name": "maxBounceCount",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "projectileBounced",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "projectileStopAndStick",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "projectilePierced",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "EvaluateCollision;gameprojectileOnCollisionActionCollisionEvaluatorParams",
+      "shortName": "EvaluateCollision",
+      "return": {
+        "type": "gameprojectileOnCollisionAction",
+        "flags": 64
+      },
+      "flags": 33024,
+      "params": [
+        {
+          "type": "gameprojectileOnCollisionAction",
+          "name": "defaultOnCollisionAction",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameprojectileCollisionEvaluatorParams",
+          "name": "params",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProjectileBounced;",
+      "shortName": "ProjectileBounced",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "ProjectilePierced;",
+      "shortName": "ProjectilePierced",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "ProjectileStopAndStick;",
+      "shortName": "ProjectileStopAndStick",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "ProjectileStopped;",
+      "shortName": "ProjectileStopped",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "SetCollisionAction;gamedataProjectileOnCollisionAction",
+      "shortName": "SetCollisionAction",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "gamedataProjectileOnCollisionAction",
+          "name": "collisionAction",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetNumberOfBounces;Int32",
+      "shortName": "SetNumberOfBounces",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "maxBounceCount",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

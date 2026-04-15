@@ -1,0 +1,486 @@
+{
+  "parent": "gameNativeAutodriveSystem",
+  "name": "AutoDriveSystem",
+  "flags": 4,
+  "props": [
+    {
+      "type": "whandle:PlayerPuppet",
+      "name": "player",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "playerVehicleStateCallbackHandle",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "playerCombatStateCallbackHandle",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "playerWeaponStateCallbackHandle",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "playerMeleeWeaponStateCallbackHandle",
+      "flags": 4431347744
+    },
+    {
+      "type": "Uint32",
+      "name": "playerAttachedCallbackID",
+      "flags": 4297130016
+    },
+    {
+      "type": "Uint32",
+      "name": "playerDetachedCallbackID",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:AutodriveHealthChangeListener",
+      "name": "vehicleHealthListener",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:AutodriveQuestContentLockListener",
+      "name": "autodriveQuestContentLockListener",
+      "flags": 4431347744
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnAction",
+      "shortName": "OnAction",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "gameinputScriptListenerAction",
+          "name": "action",
+          "flags": 128
+        },
+        {
+          "type": "gameinputScriptListenerActionConsumer",
+          "name": "consumer",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnReachedWorldBoundary",
+      "shortName": "OnReachedWorldBoundary",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "GetActiveVehicleDataBB;",
+      "shortName": "GetActiveVehicleDataBB",
+      "return": {
+        "type": "handle:gameIBlackboard",
+        "flags": 64
+      },
+      "flags": 41092
+    },
+    {
+      "fullName": "GetActiveVehicleDataBBDef;",
+      "shortName": "GetActiveVehicleDataBBDef",
+      "return": {
+        "type": "handle:UI_ActiveVehicleDataDef",
+        "flags": 64
+      },
+      "flags": 41092
+    },
+    {
+      "fullName": "GetAutodriveAvailable;",
+      "shortName": "GetAutodriveAvailable",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 42500
+    },
+    {
+      "fullName": "GetAutodriveDataBB;",
+      "shortName": "GetAutodriveDataBB",
+      "return": {
+        "type": "handle:gameIBlackboard",
+        "flags": 64
+      },
+      "flags": 41092
+    },
+    {
+      "fullName": "GetAutodriveDataBBDef;",
+      "shortName": "GetAutodriveDataBBDef",
+      "return": {
+        "type": "handle:UI_AutodriveDataDef",
+        "flags": 64
+      },
+      "flags": 41092
+    },
+    {
+      "fullName": "GetDistanceToCurrentDestination;",
+      "shortName": "GetDistanceToCurrentDestination",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetEstimatedTimeToArrival;",
+      "shortName": "GetEstimatedTimeToArrival",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetMapBB;",
+      "shortName": "GetMapBB",
+      "return": {
+        "type": "handle:gameIBlackboard",
+        "flags": 64
+      },
+      "flags": 41092
+    },
+    {
+      "fullName": "GetMapBBDef;",
+      "shortName": "GetMapBBDef",
+      "return": {
+        "type": "handle:UI_MapDef",
+        "flags": 64
+      },
+      "flags": 41092
+    },
+    {
+      "fullName": "HighlightValidRoadsOnMinimap;",
+      "shortName": "HighlightValidRoadsOnMinimap",
+      "flags": 32900
+    },
+    {
+      "fullName": "OnAttach;",
+      "shortName": "OnAttach",
+      "flags": 33920
+    },
+    {
+      "fullName": "OnAutoDriveHitRequest;AutoDriveHitRequest",
+      "shortName": "OnAutoDriveHitRequest",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:AutoDriveHitRequest",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnAutodriveToggled;BoolBool",
+      "shortName": "OnAutodriveToggled",
+      "flags": 33924,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "enabled",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "isDelamain",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnDetach;",
+      "shortName": "OnDetach",
+      "flags": 33920
+    },
+    {
+      "fullName": "OnDisableAutoDriveRequest;DisableAutoDriveRequest",
+      "shortName": "OnDisableAutoDriveRequest",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:DisableAutoDriveRequest",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnEnableAutoDriveRequest;EnableAutoDriveRequest",
+      "shortName": "OnEnableAutoDriveRequest",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:EnableAutoDriveRequest",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnMeleeWeaponStateChange;Int32",
+      "shortName": "OnMeleeWeaponStateChange",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPlayerAttachedCallback;GameObject",
+      "shortName": "OnPlayerAttachedCallback",
+      "flags": 33924,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "playerPuppet",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPlayerDetachedCallback;GameObject",
+      "shortName": "OnPlayerDetachedCallback",
+      "flags": 33924,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "playerPuppet",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPlayerStateChange;Int32",
+      "shortName": "OnPlayerStateChange",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPlayerVehicleChange;Variant",
+      "shortName": "OnPlayerVehicleChange",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Variant",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSendAutoDriveNotificationRequest;SendAutoDriveNotificationRequest",
+      "shortName": "OnSendAutoDriveNotificationRequest",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameSendAutoDriveNotificationRequest",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnStopAutoDriveOnDestinationReachedRequest;StopAutoDriveOnDestinationReachedRequest",
+      "shortName": "OnStopAutoDriveOnDestinationReachedRequest",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameStopAutoDriveOnDestinationReachedRequest",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnStopAutoDriveOnTeleportRequest;StopAutoDriveOnTeleportRequest",
+      "shortName": "OnStopAutoDriveOnTeleportRequest",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:StopAutoDriveOnTeleportRequest",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnStopAutoDriveRequest;StopAutoDriveRequest",
+      "shortName": "OnStopAutoDriveRequest",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameStopAutoDriveRequest",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnToggleFreeRoamRequest;ToggleFreeRoamRequest",
+      "shortName": "OnToggleFreeRoamRequest",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:ToggleFreeRoamRequest",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUpdateAutoDriveAvailabilityRequest;UpdateAutoDriveAvailabilityRequest",
+      "shortName": "OnUpdateAutoDriveAvailabilityRequest",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:UpdateAutoDriveAvailabilityRequest",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUpdateAutodriveOnDestinationChangeRequest;UpdateAutodriveOnDestinationChangeRequest",
+      "shortName": "OnUpdateAutodriveOnDestinationChangeRequest",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:UpdateAutodriveOnDestinationChangeRequest",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUpdateAutodriveStateAfterQuestLockChange;UpdateAutodriveStateAfterQuestLockChange",
+      "shortName": "OnUpdateAutodriveStateAfterQuestLockChange",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:UpdateAutodriveStateAfterQuestLockChange",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUpdateAutodriveStateAfterVehicleHealthChangeRequest;UpdateAutodriveStateAfterVehicleHealthChange",
+      "shortName": "OnUpdateAutodriveStateAfterVehicleHealthChangeRequest",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:UpdateAutodriveStateAfterVehicleHealthChange",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUpdateAutodriveStateOnVehicleForceBrakeEnd;UpdateAutodriveStateOnVehicleForceBrakeEnd",
+      "shortName": "OnUpdateAutodriveStateOnVehicleForceBrakeEnd",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:UpdateAutodriveStateOnVehicleForceBrakeEnd",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUpdateAutodriveStateOnVehicleQuickHackChange;UpdateAutodriveStateOnVehicleQuickHackChange",
+      "shortName": "OnUpdateAutodriveStateOnVehicleQuickHackChange",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:UpdateAutodriveStateOnVehicleQuickHackChange",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnWeaponStateChange;Int32",
+      "shortName": "OnWeaponStateChange",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SendNotification;StringSimpleMessageType",
+      "shortName": "SendNotification",
+      "flags": 42116,
+      "params": [
+        {
+          "type": "String",
+          "name": "message",
+          "flags": 128
+        },
+        {
+          "type": "gameSimpleMessageType",
+          "name": "type",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SignalAutodriveAvailable;",
+      "shortName": "SignalAutodriveAvailable",
+      "flags": 32900
+    },
+    {
+      "fullName": "StartListeningForPlayerMoveInputs;",
+      "shortName": "StartListeningForPlayerMoveInputs",
+      "flags": 32900
+    },
+    {
+      "fullName": "StopAutodriveIfNecessary;Bool",
+      "shortName": "StopAutodriveIfNecessary",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "stopVehicleIfDeactivated",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "StopListeningForPlayerMoveInputs;",
+      "shortName": "StopListeningForPlayerMoveInputs",
+      "flags": 32900
+    },
+    {
+      "fullName": "StopPlayerVehicle;",
+      "shortName": "StopPlayerVehicle",
+      "flags": 32900
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "name": "entEntityGameInterface",
+  "flags": 2,
+  "funcs": [
+    {
+      "fullName": "BindToComponent",
+      "shortName": "BindToComponent",
+      "index": 11334,
+      "flags": 3,
+      "params": [
+        {
+          "type": "entEntityGameInterface",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "entEntityGameInterface",
+          "name": "target",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "componentName",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "slotName",
+          "flags": 1152
+        },
+        {
+          "type": "Bool",
+          "name": "keepWorldTransform",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "Destroy",
+      "shortName": "Destroy",
+      "index": 11329,
+      "flags": 3,
+      "params": [
+        {
+          "type": "entEntityGameInterface",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetEntity",
+      "shortName": "GetEntity",
+      "return": {
+        "type": "handle:entEntity",
+        "flags": 64
+      },
+      "index": 11332,
+      "flags": 3,
+      "params": [
+        {
+          "type": "entEntityGameInterface",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsStatic",
+      "shortName": "IsStatic",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 11331,
+      "flags": 3,
+      "params": [
+        {
+          "type": "entEntityGameInterface",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsValid",
+      "shortName": "IsValid",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 11330,
+      "flags": 3,
+      "params": [
+        {
+          "type": "entEntityGameInterface",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ToggleSelectionEffect",
+      "shortName": "ToggleSelectionEffect",
+      "index": 11335,
+      "flags": 3,
+      "params": [
+        {
+          "type": "entEntityGameInterface",
+          "name": "self",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "enable",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TryDisableCrowdCollider",
+      "shortName": "TryDisableCrowdCollider",
+      "index": 11337,
+      "flags": 3,
+      "params": [
+        {
+          "type": "array:whandle:entEntity",
+          "name": "crowdEntity",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TryEnableCrowdCollider",
+      "shortName": "TryEnableCrowdCollider",
+      "index": 11336,
+      "flags": 3,
+      "params": [
+        {
+          "type": "array:whandle:entEntity",
+          "name": "crowdEntity",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UnbindTransform",
+      "shortName": "UnbindTransform",
+      "index": 11333,
+      "flags": 3,
+      "params": [
+        {
+          "type": "entEntityGameInterface",
+          "name": "self",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

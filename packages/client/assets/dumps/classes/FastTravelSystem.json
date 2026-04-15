@@ -1,0 +1,648 @@
+{
+  "parent": "gameScriptableSystem",
+  "name": "FastTravelSystem",
+  "flags": 4,
+  "props": [
+    {
+      "type": "array:handle:gameFastTravelPointData",
+      "name": "fastTravelNodes",
+      "flags": 6851461152
+    },
+    {
+      "type": "Bool",
+      "name": "isFastTravelEnabledOnMap",
+      "flags": 4297130016
+    },
+    {
+      "type": "Int32",
+      "name": "fastTravelPointsTotal",
+      "flags": 4565565472
+    },
+    {
+      "type": "Int32",
+      "name": "lastUpdatedAchievementCount",
+      "flags": 4565565472
+    },
+    {
+      "type": "array:FastTravelSystemLock",
+      "name": "fastTravelLocks",
+      "flags": 6851461152
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "loadingScreenCallbackID",
+      "flags": 4431347744
+    },
+    {
+      "type": "Bool",
+      "name": "requestAutoSafeAfterLoadingScreen",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:gamedataFastTravelSystem_Record",
+      "name": "fastTravelSystemRecord",
+      "flags": 4297130016
+    },
+    {
+      "type": "CName",
+      "name": "lockLisenerID",
+      "flags": 4297130016
+    },
+    {
+      "type": "CName",
+      "name": "unlockLisenerID",
+      "flags": 4297130016
+    },
+    {
+      "type": "CName",
+      "name": "removeAllLocksLisenerID",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "FastTravelSystem::AddFastTravelLock;CNameGameInstanceTweakDBID",
+      "shortName": "AddFastTravelLock",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "CName",
+          "name": "reason",
+          "flags": 128
+        },
+        {
+          "type": "ScriptGameInstance",
+          "name": "game",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "statusEffectID",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "FastTravelSystem::ManageFastTravelLock;BoolCNameGameInstanceTweakDBID",
+      "shortName": "ManageFastTravelLock",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "enable",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "reason",
+          "flags": 128
+        },
+        {
+          "type": "ScriptGameInstance",
+          "name": "game",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "statusEffectID",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "FastTravelSystem::RemoveAllFastTravelLocks;GameInstance",
+      "shortName": "RemoveAllFastTravelLocks",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "game",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "FastTravelSystem::RemoveFastTravelLock;CNameGameInstanceTweakDBID",
+      "shortName": "RemoveFastTravelLock",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "CName",
+          "name": "reason",
+          "flags": 128
+        },
+        {
+          "type": "ScriptGameInstance",
+          "name": "game",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "statusEffectID",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "OnLoadingScreenFinished",
+      "shortName": "OnLoadingScreenFinished",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AddFastTravelLock;CNameTweakDBID",
+      "shortName": "AddFastTravelLock",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "CName",
+          "name": "reason",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "statusEffectID",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "AddFastTravelPoint;FastTravelPointData",
+      "shortName": "AddFastTravelPoint",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameFastTravelPointData",
+          "name": "nodeData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CheckForScottieAchievement;",
+      "shortName": "CheckForScottieAchievement",
+      "flags": 32900
+    },
+    {
+      "fullName": "EvaluateFastTravelLocksOnRestore;",
+      "shortName": "EvaluateFastTravelLocksOnRestore",
+      "flags": 32900
+    },
+    {
+      "fullName": "GetAmmountOfFastTravelPointsOnMap;",
+      "shortName": "GetAmmountOfFastTravelPointsOnMap",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetFastTravelPoint;FastTravelPointData",
+      "shortName": "GetFastTravelPoint",
+      "return": {
+        "type": "handle:gameFastTravelPointData",
+        "flags": 64
+      },
+      "flags": 41476,
+      "params": [
+        {
+          "type": "handle:gameFastTravelPointData",
+          "name": "nodeData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetFastTravelPoints;",
+      "shortName": "GetFastTravelPoints",
+      "return": {
+        "type": "array:handle:gameFastTravelPointData",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "HasFastTravelPoint;FastTravelPointData",
+      "shortName": "HasFastTravelPoint",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476,
+      "params": [
+        {
+          "type": "handle:gameFastTravelPointData",
+          "name": "nodeData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "InitializeDebugButtons;",
+      "shortName": "InitializeDebugButtons",
+      "flags": 32900
+    },
+    {
+      "fullName": "IsFastTravelEnabled;",
+      "shortName": "IsFastTravelEnabled",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "IsFastTravelEnabledOnMap;",
+      "shortName": "IsFastTravelEnabledOnMap",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "OnAttach;",
+      "shortName": "OnAttach",
+      "flags": 33920
+    },
+    {
+      "fullName": "OnCloseLastVisitedFastTravelSubwayGate;CloseLastVisitedFastTravelSubwayGate",
+      "shortName": "OnCloseLastVisitedFastTravelSubwayGate",
+      "flags": 33924,
+      "params": [
+        {
+          "type": "handle:CloseLastVisitedFastTravelSubwayGate",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnDebugButtonClicked;SDOClickedRequest",
+      "shortName": "OnDebugButtonClicked",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameSDOClickedRequest",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnDetach;",
+      "shortName": "OnDetach",
+      "flags": 33920
+    },
+    {
+      "fullName": "OnEnableFastTravelRequest;EnableFastTravelRequest",
+      "shortName": "OnEnableFastTravelRequest",
+      "flags": 33924,
+      "params": [
+        {
+          "type": "handle:EnableFastTravelRequest",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnFastTravelConsoleInstructionRequest;FastTravelConsoleInstructionRequest",
+      "shortName": "OnFastTravelConsoleInstructionRequest",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:FastTravelConsoleInstructionRequest",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnFastTravelPrefetchRequest;FastTravelPrefetchRequest",
+      "shortName": "OnFastTravelPrefetchRequest",
+      "flags": 33924,
+      "params": [
+        {
+          "type": "handle:FastTravelPrefetchRequest",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnOpenFastTravelMenuForLastVisitedSubwayGate;OpenFastTravelMenuForLastVisitedSubwayGate",
+      "shortName": "OnOpenFastTravelMenuForLastVisitedSubwayGate",
+      "flags": 33924,
+      "params": [
+        {
+          "type": "handle:OpenFastTravelMenuForLastVisitedSubwayGate",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnOpenLastVisitedFastTravelSubwayGate;OpenLastVisitedFastTravelSubwayGate",
+      "shortName": "OnOpenLastVisitedFastTravelSubwayGate",
+      "flags": 33924,
+      "params": [
+        {
+          "type": "handle:OpenLastVisitedFastTravelSubwayGate",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPerformFastTravelRequest;PerformFastTravelRequest",
+      "shortName": "OnPerformFastTravelRequest",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:PerformFastTravelRequest",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRegisterFastTravelPointRequest;RegisterFastTravelPointRequest",
+      "shortName": "OnRegisterFastTravelPointRequest",
+      "flags": 33924,
+      "params": [
+        {
+          "type": "handle:RegisterFastTravelPointRequest",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRegisterFastTravelPointsRequest;RegisterFastTravelPointsRequest",
+      "shortName": "OnRegisterFastTravelPointsRequest",
+      "flags": 33924,
+      "params": [
+        {
+          "type": "handle:RegisterFastTravelPointsRequest",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRemoveAllFastTravelLocksRequest;RemoveAllFastTravelLocksRequest",
+      "shortName": "OnRemoveAllFastTravelLocksRequest",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:RemoveAllFastTravelLocksRequest",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRequestAutoSave;AutoSaveRequest",
+      "shortName": "OnRequestAutoSave",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:AutoSaveRequest",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRestored;Int32Int32",
+      "shortName": "OnRestored",
+      "flags": 33920,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "saveVersion",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "gameVersion",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnToggleFastTravelAvailabilityOnMapRequest;FastTravelMenuToggledEvent",
+      "shortName": "OnToggleFastTravelAvailabilityOnMapRequest",
+      "flags": 33924,
+      "params": [
+        {
+          "type": "handle:FastTravelMenuToggledEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUnregisterFastTravelPointRequest;UnregisterFastTravelPointRequest",
+      "shortName": "OnUnregisterFastTravelPointRequest",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:UnregisterFastTravelPointRequest",
+          "name": "request",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUpdateFastTravelPointRecordRequest;UpdateFastTravelPointRecordRequest",
+      "shortName": "OnUpdateFastTravelPointRecordRequest",
+      "flags": 33924,
+      "params": [
+        {
+          "type": "handle:UpdateFastTravelPointRecordRequest",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PerformFastTravel;GameObjectFastTravelPointData",
+      "shortName": "PerformFastTravel",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "player",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameFastTravelPointData",
+          "name": "nodeData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RefreshFastTravelNodes;",
+      "shortName": "RefreshFastTravelNodes",
+      "flags": 32900
+    },
+    {
+      "fullName": "RegisterFastTravelPoint;FastTravelPointDataEntityID",
+      "shortName": "RegisterFastTravelPoint",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameFastTravelPointData",
+          "name": "pointData",
+          "flags": 128
+        },
+        {
+          "type": "entEntityID",
+          "name": "requesterID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterLoadingScreenCallback;",
+      "shortName": "RegisterLoadingScreenCallback",
+      "flags": 33028
+    },
+    {
+      "fullName": "RegisterMappin;FastTravelPointData",
+      "shortName": "RegisterMappin",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameFastTravelPointData",
+          "name": "nodeData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RemoveFastTravelLock;CName",
+      "shortName": "RemoveFastTravelLock",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "CName",
+          "name": "reason",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RemoveFastTravelPoint;FastTravelPointData",
+      "shortName": "RemoveFastTravelPoint",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameFastTravelPointData",
+          "name": "nodeData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RequestAutoSave;",
+      "shortName": "RequestAutoSave",
+      "flags": 32900
+    },
+    {
+      "fullName": "RequestAutoSaveWithDelay;",
+      "shortName": "RequestAutoSaveWithDelay",
+      "flags": 32900
+    },
+    {
+      "fullName": "RestoreFastTravelMappins;",
+      "shortName": "RestoreFastTravelMappins",
+      "flags": 32900
+    },
+    {
+      "fullName": "SetFastTravelStarted;",
+      "shortName": "SetFastTravelStarted",
+      "flags": 32900
+    },
+    {
+      "fullName": "ShowDebug;",
+      "shortName": "ShowDebug",
+      "flags": 32900
+    },
+    {
+      "fullName": "TutorialAddFastTravelFact;",
+      "shortName": "TutorialAddFastTravelFact",
+      "flags": 32900
+    },
+    {
+      "fullName": "UninitializeDebugButtons;",
+      "shortName": "UninitializeDebugButtons",
+      "flags": 32900
+    },
+    {
+      "fullName": "UnregisterFastTravelPoint;FastTravelPointDataEntityID",
+      "shortName": "UnregisterFastTravelPoint",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameFastTravelPointData",
+          "name": "pointData",
+          "flags": 128
+        },
+        {
+          "type": "entEntityID",
+          "name": "requesterID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UnregisterLoadingCallback;",
+      "shortName": "UnregisterLoadingCallback",
+      "flags": 33028
+    },
+    {
+      "fullName": "UnregisterMappin;FastTravelPointData",
+      "shortName": "UnregisterMappin",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameFastTravelPointData",
+          "name": "nodeData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "execInstructionForward;Float",
+      "shortName": "execInstructionForward",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Float",
+          "name": "magicFloat",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "execInstructionPrevious;",
+      "shortName": "execInstructionPrevious",
+      "flags": 32900
+    }
+  ]
+}

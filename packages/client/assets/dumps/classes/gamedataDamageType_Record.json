@@ -1,0 +1,175 @@
+{
+  "parent": "gamedataTweakDBRecord",
+  "name": "gamedataDamageType_Record",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "AssociatedStat",
+      "shortName": "AssociatedStat",
+      "return": {
+        "type": "whandle:gamedataStat_Record",
+        "flags": 64
+      },
+      "index": 3094,
+      "flags": 1
+    },
+    {
+      "fullName": "AssociatedStatHandle",
+      "shortName": "AssociatedStatHandle",
+      "return": {
+        "type": "handle:gamedataStat_Record",
+        "flags": 64
+      },
+      "index": 3095,
+      "flags": 1
+    },
+    {
+      "fullName": "DamageType",
+      "shortName": "DamageType",
+      "return": {
+        "type": "gamedataDamageType",
+        "flags": 64
+      },
+      "index": 3105,
+      "flags": 1
+    },
+    {
+      "fullName": "EnumName",
+      "shortName": "EnumName",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "index": 3093,
+      "flags": 1
+    },
+    {
+      "fullName": "GetResistancesCount",
+      "shortName": "GetResistancesCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 3097,
+      "flags": 1
+    },
+    {
+      "fullName": "GetResistancesItem",
+      "shortName": "GetResistancesItem",
+      "return": {
+        "type": "whandle:gamedataStatDistributionData_Record",
+        "flags": 64
+      },
+      "index": 3098,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetResistancesItemHandle",
+      "shortName": "GetResistancesItemHandle",
+      "return": {
+        "type": "handle:gamedataStatDistributionData_Record",
+        "flags": 64
+      },
+      "index": 3099,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetTagsCount",
+      "shortName": "GetTagsCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 3102,
+      "flags": 1
+    },
+    {
+      "fullName": "GetTagsItem",
+      "shortName": "GetTagsItem",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "index": 3103,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Resistances",
+      "shortName": "Resistances",
+      "index": 3096,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataStatDistributionData_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "ResistancesContains",
+      "shortName": "ResistancesContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 3100,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataStatDistributionData_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Tags",
+      "shortName": "Tags",
+      "return": {
+        "type": "array:CName",
+        "flags": 64
+      },
+      "index": 3101,
+      "flags": 1
+    },
+    {
+      "fullName": "TagsContains",
+      "shortName": "TagsContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 3104,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

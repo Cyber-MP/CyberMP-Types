@@ -1,0 +1,81 @@
+{
+  "parent": "gamedataTweakDBRecord",
+  "name": "gamedataItemsFactoryAppearanceSuffixOrder_Record",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "AppearanceSuffixes",
+      "shortName": "AppearanceSuffixes",
+      "index": 8687,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataItemsFactoryAppearanceSuffixBase_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "AppearanceSuffixesContains",
+      "shortName": "AppearanceSuffixesContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 8691,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataItemsFactoryAppearanceSuffixBase_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetAppearanceSuffixesCount",
+      "shortName": "GetAppearanceSuffixesCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 8688,
+      "flags": 1
+    },
+    {
+      "fullName": "GetAppearanceSuffixesItem",
+      "shortName": "GetAppearanceSuffixesItem",
+      "return": {
+        "type": "whandle:gamedataItemsFactoryAppearanceSuffixBase_Record",
+        "flags": 64
+      },
+      "index": 8689,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetAppearanceSuffixesItemHandle",
+      "shortName": "GetAppearanceSuffixesItemHandle",
+      "return": {
+        "type": "handle:gamedataItemsFactoryAppearanceSuffixBase_Record",
+        "flags": 64
+      },
+      "index": 8690,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

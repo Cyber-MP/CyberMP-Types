@@ -1,0 +1,736 @@
+{
+  "parent": "SensorDeviceControllerPS",
+  "name": "SurveillanceCameraControllerPS",
+  "flags": 1028,
+  "props": [
+    {
+      "type": "CameraSetup",
+      "name": "cameraProperties",
+      "flags": 4632674337
+    },
+    {
+      "type": "CameraQuestProperties",
+      "name": "cameraQuestProperties",
+      "flags": 4632674337
+    },
+    {
+      "type": "ESurveillanceCameraStatus",
+      "name": "cameraState",
+      "flags": 4565565472
+    },
+    {
+      "type": "Bool",
+      "name": "shouldStream",
+      "flags": 4565565472
+    },
+    {
+      "type": "Bool",
+      "name": "isDetecting",
+      "flags": 4297130016
+    },
+    {
+      "type": "array:entEntityID",
+      "name": "feedReceivers",
+      "flags": 6851461152
+    },
+    {
+      "type": "entEntityID",
+      "name": "mostRecentRequester",
+      "flags": 4565565472
+    },
+    {
+      "type": "CName",
+      "name": "virtualComponentName",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isFeedReplacedWithBink",
+      "flags": 4565565472
+    },
+    {
+      "type": "redResourceReferenceScriptToken",
+      "name": "binkVideoPath",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "shouldRevealEnemies",
+      "flags": 4565565472
+    },
+    {
+      "type": "handle:EngDemoContainer",
+      "name": "cameraSkillChecks",
+      "flags": 4498456613
+    },
+    {
+      "type": "Bool",
+      "name": "overrideTakeOverCameraAngle",
+      "group": "Override Take Over Camera Angle",
+      "flags": 4364238881
+    },
+    {
+      "type": "Float",
+      "name": "overrideTakeOverPitch",
+      "group": "Override Take Over Camera Angle",
+      "flags": 4364238881
+    },
+    {
+      "type": "Float",
+      "name": "overrideTakeOverRotation",
+      "group": "Override Take Over Camera Angle",
+      "flags": 4364238881
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnInstantiated",
+      "shortName": "OnInstantiated",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "ActionCameraTagSeenEnemies;",
+      "shortName": "ActionCameraTagSeenEnemies",
+      "return": {
+        "type": "handle:CameraTagSeenEnemies",
+        "flags": 64
+      },
+      "flags": 32896
+    },
+    {
+      "fullName": "ActionEngineering;script_ref<GetActionsContext>",
+      "shortName": "ActionEngineering",
+      "return": {
+        "type": "handle:ActionEngineering",
+        "flags": 64
+      },
+      "flags": 33024,
+      "params": [
+        {
+          "type": "script_ref:gameGetActionsContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ActionQuestForceReplaceStreamWithVideo;",
+      "shortName": "ActionQuestForceReplaceStreamWithVideo",
+      "return": {
+        "type": "handle:QuestForceReplaceStreamWithVideo",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "ActionQuestForceStopReplacingStream;",
+      "shortName": "ActionQuestForceStopReplacingStream",
+      "return": {
+        "type": "handle:QuestForceStopReplacingStream",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "ActionSurveillanceCameraStatus;",
+      "shortName": "ActionSurveillanceCameraStatus",
+      "return": {
+        "type": "handle:SurveillanceCameraStatus",
+        "flags": 64
+      },
+      "flags": 41092
+    },
+    {
+      "fullName": "ActionToggleStreamFeed;Bool",
+      "shortName": "ActionToggleStreamFeed",
+      "return": {
+        "type": "handle:ToggleStreamFeed",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "shouldStream",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CanAddEngineeringSkillcheck;",
+      "shortName": "CanAddEngineeringSkillcheck",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33024
+    },
+    {
+      "fullName": "CanCreateAnyQuickHackActions;",
+      "shortName": "CanCreateAnyQuickHackActions",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41216
+    },
+    {
+      "fullName": "CanStreamVideo;",
+      "shortName": "CanStreamVideo",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "ClearFeedReceivers;",
+      "shortName": "ClearFeedReceivers",
+      "flags": 33284
+    },
+    {
+      "fullName": "DetermineGameplayViability;script_ref<GetActionsContext>Bool",
+      "shortName": "DetermineGameplayViability",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33024,
+      "params": [
+        {
+          "type": "script_ref:gameGetActionsContext",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "hasActiveActions",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ForceRevealEnemies;Bool",
+      "shortName": "ForceRevealEnemies",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "reveal",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetActions;array<DeviceAction>GetActionsContext",
+      "shortName": "GetActions",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33280,
+      "params": [
+        {
+          "type": "array:handle:gamedeviceAction",
+          "name": "actions",
+          "flags": 640
+        },
+        {
+          "type": "gameGetActionsContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetBackgroundTextureTweakDBID;",
+      "shortName": "GetBackgroundTextureTweakDBID",
+      "return": {
+        "type": "TweakDBID",
+        "flags": 64
+      },
+      "flags": 33024
+    },
+    {
+      "fullName": "GetCameraState;",
+      "shortName": "GetCameraState",
+      "return": {
+        "type": "ESurveillanceCameraStatus",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetDeviceIconPath",
+      "shortName": "GetDeviceIconPath",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "flags": 33280
+    },
+    {
+      "fullName": "GetDeviceIconTweakDBID;",
+      "shortName": "GetDeviceIconTweakDBID",
+      "return": {
+        "type": "TweakDBID",
+        "flags": 64
+      },
+      "flags": 33024
+    },
+    {
+      "fullName": "GetDeviceStatusAction;",
+      "shortName": "GetDeviceStatusAction",
+      "return": {
+        "type": "handle:SurveillanceCameraStatus",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "GetDeviceWidget;script_ref<GetActionsContext>",
+      "shortName": "GetDeviceWidget",
+      "return": {
+        "type": "SDeviceWidgetPackage",
+        "flags": 64
+      },
+      "flags": 33280,
+      "params": [
+        {
+          "type": "script_ref:gameGetActionsContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetFakeToggleStreamAction;BoolEntityID",
+      "shortName": "GetFakeToggleStreamAction",
+      "return": {
+        "type": "handle:ToggleStreamFeed",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "startStream",
+          "flags": 128
+        },
+        {
+          "type": "entEntityID",
+          "name": "whoIsReceiving",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetFeedReceiversArray;",
+      "shortName": "GetFeedReceiversArray",
+      "return": {
+        "type": "array:entEntityID",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetMinigameActions;script_ref<array<DeviceAction>>script_ref<GetActionsContext>",
+      "shortName": "GetMinigameActions",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "script_ref:array:handle:gamedeviceAction",
+          "name": "actions",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:gameGetActionsContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetMostRecentRequester;",
+      "shortName": "GetMostRecentRequester",
+      "return": {
+        "type": "entEntityID",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetOverrideTakeOverPitch;",
+      "shortName": "GetOverrideTakeOverPitch",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetOverrideTakeOverYaw;",
+      "shortName": "GetOverrideTakeOverYaw",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetQuestActionByName;CName",
+      "shortName": "GetQuestActionByName",
+      "return": {
+        "type": "handle:gamedeviceAction",
+        "flags": 64
+      },
+      "flags": 33280,
+      "params": [
+        {
+          "type": "CName",
+          "name": "actionName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetQuestActions;array<DeviceAction>script_ref<GetActionsContext>",
+      "shortName": "GetQuestActions",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "array:handle:gamedeviceAction",
+          "name": "actions",
+          "flags": 640
+        },
+        {
+          "type": "script_ref:gameGetActionsContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetQuestFactOnDetection;",
+      "shortName": "GetQuestFactOnDetection",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "GetQuickHackActions;array<DeviceAction>script_ref<GetActionsContext>",
+      "shortName": "GetQuickHackActions",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "array:handle:gamedeviceAction",
+          "name": "actions",
+          "flags": 640
+        },
+        {
+          "type": "script_ref:gameGetActionsContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetSkillCheckContainerForSetup;",
+      "shortName": "GetSkillCheckContainerForSetup",
+      "return": {
+        "type": "handle:BaseSkillCheckContainer",
+        "flags": 64
+      },
+      "flags": 33024
+    },
+    {
+      "fullName": "GetVirtualSystemType;",
+      "shortName": "GetVirtualSystemType",
+      "return": {
+        "type": "EVirtualSystem",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "GetWidgetTypeName",
+      "shortName": "GetWidgetTypeName",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 33280
+    },
+    {
+      "fullName": "GetfollowedTargetID;",
+      "shortName": "GetfollowedTargetID",
+      "return": {
+        "type": "entEntityID",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "HandleFeedReceiversArray;BoolBool",
+      "shortName": "HandleFeedReceiversArray",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "shouldAdd",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "hasHack",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Initialize;",
+      "shortName": "Initialize",
+      "flags": 33024
+    },
+    {
+      "fullName": "IsDetecting;",
+      "shortName": "IsDetecting",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 57860
+    },
+    {
+      "fullName": "IsDetectingDebug;",
+      "shortName": "IsDetectingDebug",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "IsRequesterOnTheList;EntityID",
+      "shortName": "IsRequesterOnTheList",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "requester",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsStreaming;",
+      "shortName": "IsStreaming",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 57860
+    },
+    {
+      "fullName": "OnActionEngineering;ActionEngineering",
+      "shortName": "OnActionEngineering",
+      "return": {
+        "type": "EntityNotificationType",
+        "flags": 64
+      },
+      "flags": 33280,
+      "params": [
+        {
+          "type": "handle:ActionEngineering",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnCameraTagSeenEnemies;CameraTagSeenEnemies",
+      "shortName": "OnCameraTagSeenEnemies",
+      "return": {
+        "type": "EntityNotificationType",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:CameraTagSeenEnemies",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnQuestForceReplaceStreamWithVideo;QuestForceReplaceStreamWithVideo",
+      "shortName": "OnQuestForceReplaceStreamWithVideo",
+      "return": {
+        "type": "EntityNotificationType",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:QuestForceReplaceStreamWithVideo",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnQuestForceStopReplacingStream;QuestForceStopReplacingStream",
+      "shortName": "OnQuestForceStopReplacingStream",
+      "return": {
+        "type": "EntityNotificationType",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:QuestForceStopReplacingStream",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSetDeviceAttitude;SetDeviceAttitude",
+      "shortName": "OnSetDeviceAttitude",
+      "return": {
+        "type": "EntityNotificationType",
+        "flags": 64
+      },
+      "flags": 33024,
+      "params": [
+        {
+          "type": "handle:SetDeviceAttitude",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnTCSTakeOverControlDeactivate;TCSTakeOverControlDeactivate",
+      "shortName": "OnTCSTakeOverControlDeactivate",
+      "return": {
+        "type": "EntityNotificationType",
+        "flags": 64
+      },
+      "flags": 34048,
+      "params": [
+        {
+          "type": "handle:TCSTakeOverControlDeactivate",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnToggleON;ToggleON",
+      "shortName": "OnToggleON",
+      "return": {
+        "type": "EntityNotificationType",
+        "flags": 64
+      },
+      "flags": 34304,
+      "params": [
+        {
+          "type": "handle:ToggleON",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnToggleStreamFeed;ToggleStreamFeed",
+      "shortName": "OnToggleStreamFeed",
+      "return": {
+        "type": "EntityNotificationType",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:ToggleStreamFeed",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Override;ScriptableDeviceAction",
+      "shortName": "Override",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:ScriptableDeviceAction",
+          "name": "action",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PushResaveData;SurveillanceCameraResaveData",
+      "shortName": "PushResaveData",
+      "flags": 34308,
+      "params": [
+        {
+          "type": "SurveillanceCameraResaveData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ShouldOverrideTakeOverAngle;",
+      "shortName": "ShouldOverrideTakeOverAngle",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "ShouldRevealEnemies;",
+      "shortName": "ShouldRevealEnemies",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "ShouldStream;",
+      "shortName": "ShouldStream",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "ThreatDetected;Bool",
+      "shortName": "ThreatDetected",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "isDetected",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

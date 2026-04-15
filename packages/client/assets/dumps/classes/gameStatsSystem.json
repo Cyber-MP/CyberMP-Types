@@ -1,0 +1,554 @@
+{
+  "parent": "gameIStatsSystem",
+  "name": "gameStatsSystem",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "AddModifier",
+      "shortName": "AddModifier",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12830,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gameStatsObjectID",
+          "name": "objID",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameStatModifierData_Deprecated",
+          "name": "modifierData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AddModifiers",
+      "shortName": "AddModifiers",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12831,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gameStatsObjectID",
+          "name": "objID",
+          "flags": 128
+        },
+        {
+          "type": "array:handle:gameStatModifierData_Deprecated",
+          "name": "modifierData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AddSavedModifier",
+      "shortName": "AddSavedModifier",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12832,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gameStatsObjectID",
+          "name": "objID",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameStatModifierData_Deprecated",
+          "name": "modifierData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ApplyModifierGroup",
+      "shortName": "ApplyModifierGroup",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12841,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gameStatsObjectID",
+          "name": "objID",
+          "flags": 128
+        },
+        {
+          "type": "Uint64",
+          "name": "groupID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CalculateModifierListValue",
+      "shortName": "CalculateModifierListValue",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 12843,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gameStatsObjectID",
+          "name": "objID",
+          "flags": 128
+        },
+        {
+          "type": "array:whandle:gamedataStatModifier_Record",
+          "name": "modifierData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "DefineModifierGroupFromRecord",
+      "shortName": "DefineModifierGroupFromRecord",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12839,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Uint64",
+          "name": "groupID",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "recordID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ForceModifier",
+      "shortName": "ForceModifier",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12837,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gameStatsObjectID",
+          "name": "objID",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameStatModifierData_Deprecated",
+          "name": "modifierData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetDamageRecordFromId",
+      "shortName": "GetDamageRecordFromId",
+      "return": {
+        "type": "whandle:gamedataDamageType_Record",
+        "flags": 64
+      },
+      "index": 12828,
+      "flags": 1,
+      "params": [
+        {
+          "type": "TweakDBID",
+          "name": "damageTypeRecordId",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetDamageRecordFromType",
+      "shortName": "GetDamageRecordFromType",
+      "return": {
+        "type": "whandle:gamedataDamageType_Record",
+        "flags": 64
+      },
+      "index": 12829,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamedataDamageType",
+          "name": "damageType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetDamageRecordId",
+      "shortName": "GetDamageRecordId",
+      "return": {
+        "type": "TweakDBID",
+        "flags": 64
+      },
+      "index": 12826,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamedataDamageType",
+          "name": "damageType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetDamageType",
+      "shortName": "GetDamageType",
+      "return": {
+        "type": "gamedataDamageType",
+        "flags": 64
+      },
+      "index": 12825,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamedataStatType",
+          "name": "statType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetDamageTypeByRecordID",
+      "shortName": "GetDamageTypeByRecordID",
+      "return": {
+        "type": "gamedataDamageType",
+        "flags": 64
+      },
+      "index": 12827,
+      "flags": 1,
+      "params": [
+        {
+          "type": "TweakDBID",
+          "name": "damageTypeRecordId",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetSortedStatsThemes",
+      "shortName": "GetSortedStatsThemes",
+      "index": 12823,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gameStatsObjectID",
+          "name": "objID",
+          "flags": 128
+        },
+        {
+          "type": "array:CName",
+          "name": "outThemes",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "GetStatBoolValue",
+      "shortName": "GetStatBoolValue",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12821,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "gameStatsObjectID",
+          "name": "objID",
+          "flags": 128
+        },
+        {
+          "type": "gamedataStatType",
+          "name": "statType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetStatDetails",
+      "shortName": "GetStatDetails",
+      "return": {
+        "type": "array:gameStatDetailedData",
+        "flags": 64
+      },
+      "index": 12822,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gameStatsObjectID",
+          "name": "objID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetStatType",
+      "shortName": "GetStatType",
+      "return": {
+        "type": "gamedataStatType",
+        "flags": 64
+      },
+      "index": 12824,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamedataDamageType",
+          "name": "damageType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetStatValue",
+      "shortName": "GetStatValue",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 12819,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "gameStatsObjectID",
+          "name": "objID",
+          "flags": 128
+        },
+        {
+          "type": "gamedataStatType",
+          "name": "statType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetStatValueFromDamageType",
+      "shortName": "GetStatValueFromDamageType",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 12820,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "gameStatsObjectID",
+          "name": "objId",
+          "flags": 128
+        },
+        {
+          "type": "gamedataDamageType",
+          "name": "damageType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterListener",
+      "shortName": "RegisterListener",
+      "index": 12844,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gameStatsObjectID",
+          "name": "objID",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameIStatsListener",
+          "name": "listener",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RemoveAllModifiers",
+      "shortName": "RemoveAllModifiers",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12836,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gameStatsObjectID",
+          "name": "objID",
+          "flags": 128
+        },
+        {
+          "type": "gamedataStatType",
+          "name": "statType",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "removeSavedModifiers",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "RemoveAndUncacheModifier",
+      "shortName": "RemoveAndUncacheModifier",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12834,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gameStatsObjectID",
+          "name": "objID",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameStatModifierData_Deprecated",
+          "name": "modifierData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RemoveModifier",
+      "shortName": "RemoveModifier",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12833,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gameStatsObjectID",
+          "name": "objID",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameStatModifierData_Deprecated",
+          "name": "modifierData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RemoveModifierGroup",
+      "shortName": "RemoveModifierGroup",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12842,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gameStatsObjectID",
+          "name": "objID",
+          "flags": 128
+        },
+        {
+          "type": "Uint64",
+          "name": "groupID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RemoveSavedModifiers",
+      "shortName": "RemoveSavedModifiers",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12835,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gameStatsObjectID",
+          "name": "objID",
+          "flags": 128
+        },
+        {
+          "type": "gamedataStatType",
+          "name": "statType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UndefineModifierGroup",
+      "shortName": "UndefineModifierGroup",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12840,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Uint64",
+          "name": "groupID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UnforceStat",
+      "shortName": "UnforceStat",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12838,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gameStatsObjectID",
+          "name": "objID",
+          "flags": 128
+        },
+        {
+          "type": "gamedataStatType",
+          "name": "statType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UnregisterListener",
+      "shortName": "UnregisterListener",
+      "index": 12845,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gameStatsObjectID",
+          "name": "objID",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameIStatsListener",
+          "name": "listener",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

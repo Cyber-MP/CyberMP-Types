@@ -1,0 +1,117 @@
+{
+  "parent": "gameCustomValueStatPoolsListener",
+  "name": "StaminaListener",
+  "flags": 4,
+  "props": [
+    {
+      "type": "whandle:PlayerPuppet",
+      "name": "player",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "psmAdded",
+      "flags": 4297130016
+    },
+    {
+      "type": "Float",
+      "name": "staminaValue",
+      "flags": 4297130016
+    },
+    {
+      "type": "Float",
+      "name": "staminPerc",
+      "flags": 4297130016
+    },
+    {
+      "type": "Float",
+      "name": "sfxThreshold",
+      "flags": 4297130016
+    },
+    {
+      "type": "Float",
+      "name": "sfxDelay",
+      "flags": 4297130016
+    },
+    {
+      "type": "CName",
+      "name": "sfxName",
+      "flags": 4297130016
+    },
+    {
+      "type": "gameDelayID",
+      "name": "delayID",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnStatPoolMinValueReached",
+      "shortName": "OnStatPoolMinValueReached",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Float",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetStaminaPerc;",
+      "shortName": "GetStaminaPerc",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "GetStaminaValue;",
+      "shortName": "GetStaminaValue",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "Init;PlayerPuppet",
+      "shortName": "Init",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "whandle:PlayerPuppet",
+          "name": "player",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnStatPoolValueChanged;FloatFloatFloat",
+      "shortName": "OnStatPoolValueChanged",
+      "flags": 34304,
+      "params": [
+        {
+          "type": "Float",
+          "name": "oldValue",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "newValue",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "percToPoints",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

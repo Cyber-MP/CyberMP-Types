@@ -1,0 +1,191 @@
+{
+  "parent": "gameScriptableComponent",
+  "name": "MinotaurMechComponent",
+  "flags": 4,
+  "props": [
+    {
+      "type": "TweakDBID",
+      "name": "deathAttackRecordID",
+      "flags": 4297326625
+    },
+    {
+      "type": "whandle:NPCPuppet",
+      "name": "owner",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:MinotaurOnStatusEffectAppliedListener",
+      "name": "statusEffectListener",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:entSimpleColliderComponent",
+      "name": "npcCollisionComponent",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:entSimpleColliderComponent",
+      "name": "npcDeathCollisionComponent",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:entSimpleColliderComponent",
+      "name": "npcSystemCollapseCollisionComponent",
+      "flags": 4431347744
+    },
+    {
+      "type": "MechanicalScanType",
+      "name": "currentScanType",
+      "flags": 4297130016
+    },
+    {
+      "type": "CName",
+      "name": "currentScanAnimation",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnAudioEvent",
+      "shortName": "OnAudioEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:entAudioEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnEnableColliderDelayEvent",
+      "shortName": "OnEnableColliderDelayEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:EnableColliderDelayEvent",
+          "name": "enableColliderEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnMinotaurDeath",
+      "shortName": "OnMinotaurDeath",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameeventsDeathEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRequestComponents",
+      "shortName": "OnRequestComponents",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "entEntityRequestComponentsInterface",
+          "name": "ri",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnStatusEffectApplied",
+      "shortName": "OnStatusEffectApplied",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameeventsApplyStatusEffectEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnStatusEffectRemoved",
+      "shortName": "OnStatusEffectRemoved",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameeventsRemoveStatusEffect",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnTakeControl",
+      "shortName": "OnTakeControl",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "entEntityResolveComponentsInterface",
+          "name": "ri",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "DisableWeapons;",
+      "shortName": "DisableWeapons",
+      "flags": 33284
+    },
+    {
+      "fullName": "EnableSystemCollapse;",
+      "shortName": "EnableSystemCollapse",
+      "flags": 33284
+    },
+    {
+      "fullName": "EnableWeapons;",
+      "shortName": "EnableWeapons",
+      "flags": 33284
+    },
+    {
+      "fullName": "FireAttack;",
+      "shortName": "FireAttack",
+      "flags": 33284
+    },
+    {
+      "fullName": "OnGameAttach;",
+      "shortName": "OnGameAttach",
+      "flags": 34308
+    },
+    {
+      "fullName": "OnGameDetach;",
+      "shortName": "OnGameDetach",
+      "flags": 34308
+    }
+  ]
+}

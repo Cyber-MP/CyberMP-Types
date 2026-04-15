@@ -1,0 +1,397 @@
+{
+  "parent": "gameScriptableComponent",
+  "name": "AreaEffectVisualizationComponent",
+  "flags": 4,
+  "props": [
+    {
+      "type": "handle:FxResourceMapperComponent",
+      "name": "fxResourceMapper",
+      "flags": 4431413280
+    },
+    {
+      "type": "array:handle:GameEffectTargetVisualizationData",
+      "name": "forceHighlightTargetBuckets",
+      "flags": 6583025696
+    },
+    {
+      "type": "array:CName",
+      "name": "availableQuickHacks",
+      "flags": 6583025696
+    },
+    {
+      "type": "array:CName",
+      "name": "availablespiderbotActions",
+      "flags": 6583025696
+    },
+    {
+      "type": "handle:BaseScriptableAction",
+      "name": "activeAction",
+      "flags": 4431347744
+    },
+    {
+      "type": "Int32",
+      "name": "activeEffectIndex",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnAddForceHighlightTarget",
+      "shortName": "OnAddForceHighlightTarget",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:AddForceHighlightTargetEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnAreaEffectVisualisationRequest",
+      "shortName": "OnAreaEffectVisualisationRequest",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:AreaEffectVisualisationRequest",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnHUDInstruction",
+      "shortName": "OnHUDInstruction",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:HUDInstruction",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnQHackWheelItemChanged",
+      "shortName": "OnQHackWheelItemChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:QHackWheelItemChangedEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRequestComponents",
+      "shortName": "OnRequestComponents",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "entEntityRequestComponentsInterface",
+          "name": "ri",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnResponse",
+      "shortName": "OnResponse",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:ResponseEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnTakeControl",
+      "shortName": "OnTakeControl",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "entEntityResolveComponentsInterface",
+          "name": "ri",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AddTargetToBucket;CNameEntityID",
+      "shortName": "AddTargetToBucket",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "CName",
+          "name": "bucketName",
+          "flags": 128
+        },
+        {
+          "type": "entEntityID",
+          "name": "entityID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CancelForcedVisionAppearance;FocusForcedHighlightData",
+      "shortName": "CancelForcedVisionAppearance",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:FocusForcedHighlightData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ForceVisionAppearance;FocusForcedHighlightData",
+      "shortName": "ForceVisionAppearance",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:FocusForcedHighlightData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetFxMapper;",
+      "shortName": "GetFxMapper",
+      "return": {
+        "type": "handle:FxResourceMapperComponent",
+        "flags": 64
+      },
+      "flags": 33028
+    },
+    {
+      "fullName": "RemoveBucket;CName",
+      "shortName": "RemoveBucket",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "CName",
+          "name": "bucketName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ResolveAreaEffectVisualisations;BoolInstanceState",
+      "shortName": "ResolveAreaEffectVisualisations",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "activated",
+          "flags": 128
+        },
+        {
+          "type": "InstanceState",
+          "name": "instanceState",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ResolveAreaEffectsInFocusModeVisibility;Bool",
+      "shortName": "ResolveAreaEffectsInFocusModeVisibility",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "show",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ResolveAreaEffectsVisibility;BoolInstanceState",
+      "shortName": "ResolveAreaEffectsVisibility",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "show",
+          "flags": 128
+        },
+        {
+          "type": "InstanceState",
+          "name": "instanceState",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ResolveAreaQuickHacksVisibility;Bool",
+      "shortName": "ResolveAreaQuickHacksVisibility",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "show",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ResolveAreaQuickHacksVisibility;BoolBaseScriptableAction",
+      "shortName": "ResolveAreaQuickHacksVisibility",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "show",
+          "flags": 128
+        },
+        {
+          "type": "handle:BaseScriptableAction",
+          "name": "action",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ResolveAreaSpiderbotVisibility;Bool",
+      "shortName": "ResolveAreaSpiderbotVisibility",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "show",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SendEventToBucket;CNameEvent",
+      "shortName": "SendEventToBucket",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "CName",
+          "name": "bucketName",
+          "flags": 128
+        },
+        {
+          "type": "handle:redEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "StartDrawingAreaEffectRange;AreaEffectData",
+      "shortName": "StartDrawingAreaEffectRange",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:AreaEffectData",
+          "name": "effectData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "StartHighlightingTargets;Int32IScriptable",
+      "shortName": "StartHighlightingTargets",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "effectDataIDX",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "responseData",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "StopDrawingAreaEffectRange;AreaEffectData",
+      "shortName": "StopDrawingAreaEffectRange",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:AreaEffectData",
+          "name": "effectData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "StopHighlightingTargets;Int32IScriptable",
+      "shortName": "StopHighlightingTargets",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "effectDataIDX",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "responseData",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "ToggleAreaEffectVisibility;Int32BoolIScriptable",
+      "shortName": "ToggleAreaEffectVisibility",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "effectDataIDX",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "show",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "responseData",
+          "flags": 1152
+        }
+      ]
+    }
+  ]
+}

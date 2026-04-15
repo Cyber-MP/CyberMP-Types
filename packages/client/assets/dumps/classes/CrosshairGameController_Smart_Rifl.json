@@ -1,0 +1,513 @@
+{
+  "parent": "gameuiCrosshairBaseGameController",
+  "name": "CrosshairGameController_Smart_Rifl",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkTextWidgetReference",
+      "name": "txtAccuracy",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "txtTargetsCount",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "txtFluffStatus",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "leftPart",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "rightPart",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "leftPartExtra",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "rightPartExtra",
+      "flags": 4297195553
+    },
+    {
+      "type": "Float",
+      "name": "offsetLeftRight",
+      "flags": 4297130016
+    },
+    {
+      "type": "Float",
+      "name": "offsetLeftRightExtra",
+      "flags": 4297130016
+    },
+    {
+      "type": "Float",
+      "name": "latchVertical",
+      "flags": 4297130016
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "topPart",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "bottomPart",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "horiPart",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "vertPart",
+      "flags": 4297195553
+    },
+    {
+      "type": "CName",
+      "name": "targetWidgetLibraryName",
+      "flags": 4297195553
+    },
+    {
+      "type": "Int32",
+      "name": "targetsPullSize",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "targetColorChange",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "targetingFrame",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "reticleFrame",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "bufferFrame",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "targetHolder",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "lockHolder",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "reloadIndicator",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "reloadIndicatorInv",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "smartLinkDot",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "smartLinkFrame",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "smartLinkFluff",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "smartLinkFirmwareOnline",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "smartLinkFirmwareOffline",
+      "flags": 4297195553
+    },
+    {
+      "type": "Bool",
+      "name": "hasSmartLink",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:gameIBlackboard",
+      "name": "weaponBlackboard",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "weaponParamsListenerId",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:gamesmartGunUIParameters",
+      "name": "smartData",
+      "flags": 4431347744
+    },
+    {
+      "type": "array:whandle:inkWidget",
+      "name": "targetsPool",
+      "flags": 6583025696
+    },
+    {
+      "type": "array:whandle:inkWidget",
+      "name": "targets",
+      "flags": 6583025696
+    },
+    {
+      "type": "Bool",
+      "name": "isBlocked",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isAimDownSights",
+      "flags": 4297130016
+    },
+    {
+      "type": "Vector2",
+      "name": "bufferedSpread",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "reloadAnimationProxy",
+      "flags": 4431347744
+    },
+    {
+      "type": "array:entEntityID",
+      "name": "prevTargetedEntityIDs",
+      "flags": 6583222304
+    },
+    {
+      "type": "array:entEntityID",
+      "name": "currTargetedEntityIDs",
+      "flags": 6583222304
+    },
+    {
+      "type": "Int32",
+      "name": "numLockedTargets",
+      "flags": 4297326624
+    },
+    {
+      "type": "whandle:PlayerDevelopmentData",
+      "name": "playerDevelopmentData",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnBulletSpreadChanged",
+      "shortName": "OnBulletSpreadChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Vector2",
+          "name": "spread",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnDeadEyeAnimFinished",
+      "shortName": "OnDeadEyeAnimFinished",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkanimProxy",
+          "name": "anim",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnPlayerAttach",
+      "shortName": "OnPlayerAttach",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "playerPuppet",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPreIntro",
+      "shortName": "OnPreIntro",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnPreOutro",
+      "shortName": "OnPreOutro",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnSmartGunParams",
+      "shortName": "OnSmartGunParams",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Variant",
+          "name": "argParams",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AllocateNewTarget;script_ref<smartGunUITargetParameters>script_ref<array<inkWidget>>",
+      "shortName": "AllocateNewTarget",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "script_ref:gamesmartGunUITargetParameters",
+          "name": "data",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:array:whandle:inkWidget",
+          "name": "newTargets",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ApplyCrosshairGUIState;CNameEntity",
+      "shortName": "ApplyCrosshairGUIState",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "CName",
+          "name": "state",
+          "flags": 128
+        },
+        {
+          "type": "handle:entEntity",
+          "name": "aimedAtEntity",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CheckIfRectangleNeedsToBeResized;Vector2Vector2",
+      "shortName": "CheckIfRectangleNeedsToBeResized",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Vector2",
+          "name": "targetableRegionSize",
+          "flags": 640
+        },
+        {
+          "type": "Vector2",
+          "name": "reticleSize",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "GetIntroAnimation;Bool",
+      "shortName": "GetIntroAnimation",
+      "return": {
+        "type": "handle:inkanimProxy",
+        "flags": 64
+      },
+      "flags": 34304,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "firstEquip",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetOutroAnimation;",
+      "shortName": "GetOutroAnimation",
+      "return": {
+        "type": "handle:inkanimProxy",
+        "flags": 64
+      },
+      "flags": 34304
+    },
+    {
+      "fullName": "HandleDeadEye;",
+      "shortName": "HandleDeadEye",
+      "flags": 33280
+    },
+    {
+      "fullName": "LookupCurrentTargets;script_ref<smartGunUITargetParameters>script_ref<array<inkWidget>>",
+      "shortName": "LookupCurrentTargets",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "script_ref:gamesmartGunUITargetParameters",
+          "name": "data",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:array:whandle:inkWidget",
+          "name": "newTargets",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnCrosshairStateChange;gamePSMCrosshairStatesgamePSMCrosshairStates",
+      "shortName": "OnCrosshairStateChange",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "gamePSMCrosshairStates",
+          "name": "oldState",
+          "flags": 128
+        },
+        {
+          "type": "gamePSMCrosshairStates",
+          "name": "newState",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnState_Aim;",
+      "shortName": "OnState_Aim",
+      "flags": 33024
+    },
+    {
+      "fullName": "OnState_GrenadeCharging;",
+      "shortName": "OnState_GrenadeCharging",
+      "flags": 33024
+    },
+    {
+      "fullName": "OnState_HipFire;",
+      "shortName": "OnState_HipFire",
+      "flags": 33024
+    },
+    {
+      "fullName": "OnState_Reload;",
+      "shortName": "OnState_Reload",
+      "flags": 33024
+    },
+    {
+      "fullName": "OnState_Safe;",
+      "shortName": "OnState_Safe",
+      "flags": 33024
+    },
+    {
+      "fullName": "OnState_Scanning;",
+      "shortName": "OnState_Scanning",
+      "flags": 33024
+    },
+    {
+      "fullName": "OnState_Sprint;",
+      "shortName": "OnState_Sprint",
+      "flags": 33024
+    },
+    {
+      "fullName": "ProcessData;script_ref<smartGunUITargetParameters>inkWidgetCrosshair_Smart_Rifl_Bucket",
+      "shortName": "ProcessData",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "script_ref:gamesmartGunUITargetParameters",
+          "name": "data",
+          "flags": 128
+        },
+        {
+          "type": "whandle:inkWidget",
+          "name": "currWidget",
+          "flags": 128
+        },
+        {
+          "type": "whandle:Crosshair_Smart_Rifl_Bucket",
+          "name": "currController",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessParams;smartGunUIParameters",
+      "shortName": "ProcessParams",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:gamesmartGunUIParameters",
+          "name": "smartData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ReturnAllTargetsToPool;",
+      "shortName": "ReturnAllTargetsToPool",
+      "flags": 33284
+    },
+    {
+      "fullName": "SetupLayout;",
+      "shortName": "SetupLayout",
+      "flags": 32900
+    }
+  ]
+}

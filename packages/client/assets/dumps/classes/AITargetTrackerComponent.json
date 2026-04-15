@@ -1,0 +1,935 @@
+{
+  "parent": "gameComponent",
+  "name": "AITargetTrackerComponent",
+  "flags": 2,
+  "props": [
+    {
+      "type": "Bool",
+      "name": "TriggersCombat",
+      "group": "Combat",
+      "flags": 6627016705
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "ActivateThreat",
+      "shortName": "ActivateThreat",
+      "index": 12627,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:entEntity",
+          "name": "et",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AddDroppingCooldown",
+      "shortName": "AddDroppingCooldown",
+      "index": 12645,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:entEntity",
+          "name": "et",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AddThreat",
+      "shortName": "AddThreat",
+      "return": {
+        "type": "Uint32",
+        "flags": 64
+      },
+      "index": 12629,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:entEntity",
+          "name": "et",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "isHostile",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "pos",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "accuracy",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "cooldown",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "isPersistent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AddThreatOnPosition",
+      "shortName": "AddThreatOnPosition",
+      "return": {
+        "type": "Uint32",
+        "flags": 64
+      },
+      "index": 12630,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Vector4",
+          "name": "pos",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "timeToLive",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ClearForceDetected",
+      "shortName": "ClearForceDetected",
+      "index": 12663,
+      "flags": 1
+    },
+    {
+      "fullName": "ClearThreats",
+      "shortName": "ClearThreats",
+      "index": 12636,
+      "flags": 1
+    },
+    {
+      "fullName": "CollectTrackers",
+      "shortName": "CollectTrackers",
+      "return": {
+        "type": "array:handle:entEntity",
+        "flags": 64
+      },
+      "index": 12664,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "onlyHostiles",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "onlyInContact",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "DeactivateThreat",
+      "shortName": "DeactivateThreat",
+      "index": 12628,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:entEntity",
+          "name": "et",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetCurrentPreset",
+      "shortName": "GetCurrentPreset",
+      "return": {
+        "type": "TweakDBID",
+        "flags": 64
+      },
+      "index": 12647,
+      "flags": 1
+    },
+    {
+      "fullName": "GetDroppingCooldown",
+      "shortName": "GetDroppingCooldown",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 12646,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:entEntity",
+          "name": "et",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetHostileThreats",
+      "shortName": "GetHostileThreats",
+      "return": {
+        "type": "array:AITrackedLocation",
+        "flags": 64
+      },
+      "index": 12625,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "onlyVisible",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetRecentlyDroppedThreat",
+      "shortName": "GetRecentlyDroppedThreat",
+      "return": {
+        "type": "AIDroppedThreatData",
+        "flags": 64
+      },
+      "index": 12672,
+      "flags": 1
+    },
+    {
+      "fullName": "GetThreatBeliefPositionProvider",
+      "shortName": "GetThreatBeliefPositionProvider",
+      "return": {
+        "type": "handle:entIPositionProvider",
+        "flags": 64
+      },
+      "index": 12666,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:entEntity",
+          "name": "threat",
+          "flags": 128
+        },
+        {
+          "type": "Vector3",
+          "name": "offset",
+          "flags": 1152
+        },
+        {
+          "type": "Bool",
+          "name": "failIfVisible",
+          "flags": 1152
+        },
+        {
+          "type": "CName",
+          "name": "slotName",
+          "flags": 1152
+        },
+        {
+          "type": "handle:entIPositionProvider",
+          "name": "failSafeProvider",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "GetThreatLastKnownPositionProvider",
+      "shortName": "GetThreatLastKnownPositionProvider",
+      "return": {
+        "type": "handle:entIPositionProvider",
+        "flags": 64
+      },
+      "index": 12665,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:entEntity",
+          "name": "threat",
+          "flags": 128
+        },
+        {
+          "type": "Vector3",
+          "name": "offset",
+          "flags": 1152
+        },
+        {
+          "type": "Bool",
+          "name": "failIfVisible",
+          "flags": 1152
+        },
+        {
+          "type": "CName",
+          "name": "slotName",
+          "flags": 1152
+        },
+        {
+          "type": "handle:entIPositionProvider",
+          "name": "failSafeProvider",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "GetThreatPersistence",
+      "shortName": "GetThreatPersistence",
+      "return": {
+        "type": "AIThreatPersistenceStatus",
+        "flags": 64
+      },
+      "index": 12632,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:entEntity",
+          "name": "et",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetThreatPersistenceBySource",
+      "shortName": "GetThreatPersistenceBySource",
+      "return": {
+        "type": "AIThreatPersistenceStatus",
+        "flags": 64
+      },
+      "index": 12633,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:entEntity",
+          "name": "et",
+          "flags": 128
+        },
+        {
+          "type": "Uint32",
+          "name": "src",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetThreatPriorityModFromAttackersCurve",
+      "shortName": "GetThreatPriorityModFromAttackersCurve",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 12660,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Uint32",
+          "name": "attackers",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetThreatPriorityModFromDistCurve",
+      "shortName": "GetThreatPriorityModFromDistCurve",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 12658,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Float",
+          "name": "distanceFromThreat",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetThreatPriorityModFromDmgCurve",
+      "shortName": "GetThreatPriorityModFromDmgCurve",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 12657,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Float",
+          "name": "timeSinceLastDmg",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetThreatPriorityModFromHisteresisCurve",
+      "shortName": "GetThreatPriorityModFromHisteresisCurve",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 12659,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Float",
+          "name": "timeSinceTargetChange",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetThreatSharedBeliefPositionProvider",
+      "shortName": "GetThreatSharedBeliefPositionProvider",
+      "return": {
+        "type": "handle:entIPositionProvider",
+        "flags": 64
+      },
+      "index": 12668,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:entEntity",
+          "name": "threat",
+          "flags": 128
+        },
+        {
+          "type": "Vector3",
+          "name": "offset",
+          "flags": 1152
+        },
+        {
+          "type": "Bool",
+          "name": "failIfVisible",
+          "flags": 1152
+        },
+        {
+          "type": "CName",
+          "name": "slotName",
+          "flags": 1152
+        },
+        {
+          "type": "handle:entIPositionProvider",
+          "name": "failSafeProvider",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "GetThreatSharedLastKnownPositionProvider",
+      "shortName": "GetThreatSharedLastKnownPositionProvider",
+      "return": {
+        "type": "handle:entIPositionProvider",
+        "flags": 64
+      },
+      "index": 12667,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:entEntity",
+          "name": "threat",
+          "flags": 128
+        },
+        {
+          "type": "Vector3",
+          "name": "offset",
+          "flags": 1152
+        },
+        {
+          "type": "Bool",
+          "name": "failIfVisible",
+          "flags": 1152
+        },
+        {
+          "type": "CName",
+          "name": "slotName",
+          "flags": 1152
+        },
+        {
+          "type": "handle:entIPositionProvider",
+          "name": "failSafeProvider",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "GetThreats",
+      "shortName": "GetThreats",
+      "return": {
+        "type": "array:AITrackedLocation",
+        "flags": 64
+      },
+      "index": 12624,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "onlyVisible",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetTopHostileThreat",
+      "shortName": "GetTopHostileThreat",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12626,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "onlyVisible",
+          "flags": 128
+        },
+        {
+          "type": "AITrackedLocation",
+          "name": "threat",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "GetVisibleThreatBeliefAccuracy",
+      "shortName": "GetVisibleThreatBeliefAccuracy",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 12639,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:entEntity",
+          "name": "et",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HasHostileThreat",
+      "shortName": "HasHostileThreat",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12651,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "onlyVisible",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "onlyEntities",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "IsPositionValid",
+      "shortName": "IsPositionValid",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12661,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Vector4",
+          "name": "pos",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "MapThreat",
+      "shortName": "MapThreat",
+      "return": {
+        "type": "Uint32",
+        "flags": 64
+      },
+      "index": 12643,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:entEntity",
+          "name": "et",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PullSquadSync",
+      "shortName": "PullSquadSync",
+      "index": 12650,
+      "flags": 1,
+      "params": [
+        {
+          "type": "AISquadType",
+          "name": "sqType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PushSquadSync",
+      "shortName": "PushSquadSync",
+      "index": 12649,
+      "flags": 1,
+      "params": [
+        {
+          "type": "AISquadType",
+          "name": "sqType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterListener",
+      "shortName": "RegisterListener",
+      "index": 12623,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:entEntity",
+          "name": "et",
+          "flags": 128
+        },
+        {
+          "type": "handle:AIScriptsTargetTrackingListener",
+          "name": "listener",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RemoveThreat",
+      "shortName": "RemoveThreat",
+      "index": 12642,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Uint32",
+          "name": "id",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RemoveThreatBeliefAccuracyMinValue",
+      "shortName": "RemoveThreatBeliefAccuracyMinValue",
+      "index": 12641,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:entEntity",
+          "name": "et",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "reason",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RequestThreatBeliefAccuracyMinValue",
+      "shortName": "RequestThreatBeliefAccuracyMinValue",
+      "index": 12640,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:entEntity",
+          "name": "et",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "reason",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "minAccuracy",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ResetDroppingCooldown",
+      "shortName": "ResetDroppingCooldown",
+      "index": 12644,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:entEntity",
+          "name": "et",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ResetRecentlyDroppedThreat",
+      "shortName": "ResetRecentlyDroppedThreat",
+      "index": 12670,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Float",
+          "name": "delay",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "ResetRecentlyDroppedThreatNoCallbacks",
+      "shortName": "ResetRecentlyDroppedThreatNoCallbacks",
+      "index": 12671,
+      "flags": 1
+    },
+    {
+      "fullName": "SetCurrentPreset",
+      "shortName": "SetCurrentPreset",
+      "index": 12648,
+      "flags": 1,
+      "params": [
+        {
+          "type": "TweakDBID",
+          "name": "presetId",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetCurrentThreatsPersistence",
+      "shortName": "SetCurrentThreatsPersistence",
+      "index": 12634,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "isPersistent",
+          "flags": 128
+        },
+        {
+          "type": "Uint32",
+          "name": "src",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetForceDetect",
+      "shortName": "SetForceDetect",
+      "index": 12662,
+      "flags": 1
+    },
+    {
+      "fullName": "SetRecentlyDroppedThreat",
+      "shortName": "SetRecentlyDroppedThreat",
+      "index": 12669,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:entEntity",
+          "name": "threat",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "position",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "validFor",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "SetThreatAccuracy",
+      "shortName": "SetThreatAccuracy",
+      "index": 12637,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:entEntity",
+          "name": "et",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "accuracy",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetThreatBaseMul",
+      "shortName": "SetThreatBaseMul",
+      "index": 12635,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:entEntity",
+          "name": "et",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "threatValue",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetThreatBeliefAccuracy",
+      "shortName": "SetThreatBeliefAccuracy",
+      "index": 12638,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:entEntity",
+          "name": "et",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "accuracy",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetThreatPersistence",
+      "shortName": "SetThreatPersistence",
+      "index": 12631,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:entEntity",
+          "name": "et",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "isPersistent",
+          "flags": 128
+        },
+        {
+          "type": "Uint32",
+          "name": "src",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetThreatPriorityAttackersCurve",
+      "shortName": "SetThreatPriorityAttackersCurve",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12656,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "curveName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetThreatPriorityDistCurve",
+      "shortName": "SetThreatPriorityDistCurve",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12654,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "curveName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetThreatPriorityDmgCurve",
+      "shortName": "SetThreatPriorityDmgCurve",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12653,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "curveName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetThreatPriorityHisteresisCurve",
+      "shortName": "SetThreatPriorityHisteresisCurve",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12655,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "curveName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ThreatFromEntity",
+      "shortName": "ThreatFromEntity",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12652,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:entEntity",
+          "name": "et",
+          "flags": 128
+        },
+        {
+          "type": "AITrackedLocation",
+          "name": "threat",
+          "flags": 640
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,559 @@
+{
+  "parent": "AIISmartCoverManager",
+  "name": "AISmartCoverManager",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "GetCoverActionType",
+      "shortName": "GetCoverActionType",
+      "return": {
+        "type": "AIUninterruptibleActionType",
+        "flags": 64
+      },
+      "index": 13930,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "occupant",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetCoverHeight",
+      "shortName": "GetCoverHeight",
+      "return": {
+        "type": "gameCoverHeight",
+        "flags": 64
+      },
+      "index": 13914,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Uint64",
+          "name": "coverId",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetCoverPosition",
+      "shortName": "GetCoverPosition",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "index": 13915,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Uint64",
+          "name": "coverId",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetCoverRemainingHealthPercentage",
+      "shortName": "GetCoverRemainingHealthPercentage",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 13918,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Uint64",
+          "name": "coverId",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetCoverWorldForward",
+      "shortName": "GetCoverWorldForward",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "index": 13916,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Uint64",
+          "name": "coverId",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetCoverWorldUp",
+      "shortName": "GetCoverWorldUp",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "index": 13917,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Uint64",
+          "name": "coverId",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetCurrentCover",
+      "shortName": "GetCurrentCover",
+      "return": {
+        "type": "Uint64",
+        "flags": 64
+      },
+      "index": 13925,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "occupant",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetDemandCoverHolder",
+      "shortName": "GetDemandCoverHolder",
+      "return": {
+        "type": "handle:AICoverDemandHolder",
+        "flags": 64
+      },
+      "index": 13927,
+      "flags": 1,
+      "params": [
+        {
+          "type": "NodeRef",
+          "name": "nodeRef",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetThreatsNotProtectedFrom",
+      "shortName": "GetThreatsNotProtectedFrom",
+      "return": {
+        "type": "array:AITrackedLocation",
+        "flags": 64
+      },
+      "index": 13920,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Uint64",
+          "name": "coverId",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameObject",
+          "name": "occupant",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "angleMultiplier",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "predictionTime",
+          "flags": 128
+        },
+        {
+          "type": "gamedataTrackingMode",
+          "name": "trackingMode",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetUsableExposureSpotsForCover",
+      "shortName": "GetUsableExposureSpotsForCover",
+      "return": {
+        "type": "array:gameAvailableExposureMethodResult",
+        "flags": 64
+      },
+      "index": 13921,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Uint64",
+          "name": "coverId",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameObject",
+          "name": "threat",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetUsableExposureSpotsForCoverOccupant",
+      "shortName": "GetUsableExposureSpotsForCoverOccupant",
+      "return": {
+        "type": "array:gameAvailableExposureMethodResult",
+        "flags": 64
+      },
+      "index": 13923,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "occupant",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameObject",
+          "name": "threat",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetUsableExposureSpotsForCoverTolerance",
+      "shortName": "GetUsableExposureSpotsForCoverTolerance",
+      "return": {
+        "type": "array:gameAvailableExposureMethodResult",
+        "flags": 64
+      },
+      "index": 13922,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Uint64",
+          "name": "coverId",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameObject",
+          "name": "threat",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "maxTolerance",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetUsableExposureSpotsNumForCoverTolerance",
+      "shortName": "GetUsableExposureSpotsNumForCoverTolerance",
+      "return": {
+        "type": "Uint32",
+        "flags": 64
+      },
+      "index": 13924,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Uint64",
+          "name": "coverId",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameObject",
+          "name": "threat",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "maxTolerance",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "useRoughCalculations",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsCoverAvailable",
+      "shortName": "IsCoverAvailable",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13913,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Uint64",
+          "name": "coverId",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameObject",
+          "name": "occupant",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsCoverRegular",
+      "shortName": "IsCoverRegular",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13932,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Uint64",
+          "name": "coverIdValue",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsCoverValid",
+      "shortName": "IsCoverValid",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13935,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Uint64",
+          "name": "coverId",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsEnteringOrLeavingCover",
+      "shortName": "IsEnteringOrLeavingCover",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13929,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "occupant",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsProtectingHorizontallyAgainstObject",
+      "shortName": "IsProtectingHorizontallyAgainstObject",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13919,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Uint64",
+          "name": "coverId",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameObject",
+          "name": "object",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "angleMultiplier",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsShootingSpot",
+      "shortName": "IsShootingSpot",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13933,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Uint64",
+          "name": "coverIdValue",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "LeaveCoverImmediately",
+      "shortName": "LeaveCoverImmediately",
+      "index": 13928,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "occupant",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "NodeRefToObjectId",
+      "shortName": "NodeRefToObjectId",
+      "return": {
+        "type": "Uint64",
+        "flags": 64
+      },
+      "index": 13926,
+      "flags": 1,
+      "params": [
+        {
+          "type": "NodeRef",
+          "name": "nodeRef",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "NotifyGotDamageInCover",
+      "shortName": "NotifyGotDamageInCover",
+      "index": 13931,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Uint64",
+          "name": "coverId",
+          "flags": 128
+        },
+        {
+          "type": "EngineTime",
+          "name": "damageTime",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "executingCoverAction",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "isShooting",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterCoverOccupant",
+      "shortName": "RegisterCoverOccupant",
+      "index": 13911,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Uint64",
+          "name": "coverId",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameObject",
+          "name": "occupant",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterCoverPreInstanceData",
+      "shortName": "RegisterCoverPreInstanceData",
+      "index": 13938,
+      "flags": 1,
+      "params": [
+        {
+          "type": "worldGlobalNodeRef",
+          "name": "globalNodeRef",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "isEnabled",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetCoverDisabled",
+      "shortName": "SetCoverDisabled",
+      "index": 13937,
+      "flags": 1,
+      "params": [
+        {
+          "type": "worldGlobalNodeRef",
+          "name": "globalNodeRef",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetCoverEnabled",
+      "shortName": "SetCoverEnabled",
+      "index": 13936,
+      "flags": 1,
+      "params": [
+        {
+          "type": "worldGlobalNodeRef",
+          "name": "globalNodeRef",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetMaxAllowedActionHalfAngleDeg",
+      "shortName": "SetMaxAllowedActionHalfAngleDeg",
+      "index": 13934,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Float",
+          "name": "angleDeg",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UnregisterCoverOccupant",
+      "shortName": "UnregisterCoverOccupant",
+      "index": 13912,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "occupant",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UnregisterCoverPreInstanceData",
+      "shortName": "UnregisterCoverPreInstanceData",
+      "index": 13939,
+      "flags": 1,
+      "params": [
+        {
+          "type": "worldGlobalNodeRef",
+          "name": "globalNodeRef",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

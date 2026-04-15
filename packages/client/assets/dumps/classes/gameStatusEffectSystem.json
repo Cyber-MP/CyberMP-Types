@@ -1,0 +1,461 @@
+{
+  "parent": "gameIStatusEffectSystem",
+  "name": "gameStatusEffectSystem",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "ObjectHasStatusEffect",
+      "shortName": "ObjectHasStatusEffect",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12813,
+      "flags": 3,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "target",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "statusEffectID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ObjectHasStatusEffectOfType",
+      "shortName": "ObjectHasStatusEffectOfType",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12814,
+      "flags": 3,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "target",
+          "flags": 128
+        },
+        {
+          "type": "gamedataStatusEffectType",
+          "name": "statusEffectType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ObjectHasStatusEffectOfTypeName",
+      "shortName": "ObjectHasStatusEffectOfTypeName",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12815,
+      "flags": 3,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "target",
+          "flags": 128
+        },
+        {
+          "type": "String",
+          "name": "statusEffectTypeName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ObjectHasStatusEffectWithTag",
+      "shortName": "ObjectHasStatusEffectWithTag",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12816,
+      "flags": 3,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "target",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "tag",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ObjectHasStatusEffectWithTags",
+      "shortName": "ObjectHasStatusEffectWithTags",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12817,
+      "flags": 3,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "target",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:array:CName",
+          "name": "tag",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ApplyStatusEffect",
+      "shortName": "ApplyStatusEffect",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12799,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "objID",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "statusEffectID",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "instigatorID",
+          "flags": 1152
+        },
+        {
+          "type": "entEntityID",
+          "name": "instigatorEntityID",
+          "flags": 1152
+        },
+        {
+          "type": "Uint32",
+          "name": "applyCount",
+          "flags": 1152
+        },
+        {
+          "type": "Vector4",
+          "name": "direction",
+          "flags": 1152
+        },
+        {
+          "type": "Bool",
+          "name": "isSavable",
+          "flags": 1152
+        },
+        {
+          "type": "entEntityID",
+          "name": "proxyEntityID",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "GetAppliedEffects",
+      "shortName": "GetAppliedEffects",
+      "index": 12802,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "objID",
+          "flags": 128
+        },
+        {
+          "type": "array:handle:gameStatusEffect",
+          "name": "appliedEffects",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "GetAppliedEffectsOfType",
+      "shortName": "GetAppliedEffectsOfType",
+      "index": 12804,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "objID",
+          "flags": 128
+        },
+        {
+          "type": "gamedataStatusEffectType",
+          "name": "statusEffectType",
+          "flags": 128
+        },
+        {
+          "type": "array:handle:gameStatusEffect",
+          "name": "appliedEffects",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "GetAppliedEffectsOfTypeName",
+      "shortName": "GetAppliedEffectsOfTypeName",
+      "index": 12805,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "objID",
+          "flags": 128
+        },
+        {
+          "type": "String",
+          "name": "statusEffectTypeName",
+          "flags": 128
+        },
+        {
+          "type": "array:handle:gameStatusEffect",
+          "name": "outappliedEffects",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetAppliedEffectsWithID",
+      "shortName": "GetAppliedEffectsWithID",
+      "index": 12803,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "objID",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "statusEffectID",
+          "flags": 128
+        },
+        {
+          "type": "array:handle:gameStatusEffect",
+          "name": "appliedEffects",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "GetAppliedEffectsWithTag",
+      "shortName": "GetAppliedEffectsWithTag",
+      "index": 12806,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "objID",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "tag",
+          "flags": 128
+        },
+        {
+          "type": "array:handle:gameStatusEffect",
+          "name": "appliedEffects",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "HasStatusEffect",
+      "shortName": "HasStatusEffect",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12807,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "objID",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "statusEffectID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HasStatusEffectOfType",
+      "shortName": "HasStatusEffectOfType",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12808,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "objID",
+          "flags": 128
+        },
+        {
+          "type": "gamedataStatusEffectType",
+          "name": "statusEffectType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HasStatusEffectOfTypeName",
+      "shortName": "HasStatusEffectOfTypeName",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12809,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "objID",
+          "flags": 128
+        },
+        {
+          "type": "String",
+          "name": "statusEffectTypeName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HasStatusEffectWithTag",
+      "shortName": "HasStatusEffectWithTag",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12810,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "objID",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "tag",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterListener",
+      "shortName": "RegisterListener",
+      "index": 12811,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "objID",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameIStatusEffectListener",
+          "name": "listener",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RemoveAllStatusEffectOfType",
+      "shortName": "RemoveAllStatusEffectOfType",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12801,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "objID",
+          "flags": 128
+        },
+        {
+          "type": "gamedataStatusEffectType",
+          "name": "statusEffectType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RemoveStatusEffect",
+      "shortName": "RemoveStatusEffect",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12800,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "objID",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "statusEffectID",
+          "flags": 128
+        },
+        {
+          "type": "Uint32",
+          "name": "removeCount",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "SetStatusEffectRemainingDuration",
+      "shortName": "SetStatusEffectRemainingDuration",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12812,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "objID",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "statusEffectID",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "duration",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

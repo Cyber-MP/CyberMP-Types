@@ -1,0 +1,195 @@
+{
+  "parent": "gamedataTweakDBRecord",
+  "name": "gamedataBounty_Record",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "BountySetter",
+      "shortName": "BountySetter",
+      "return": {
+        "type": "whandle:gamedataAffiliation_Record",
+        "flags": 64
+      },
+      "index": 2914,
+      "flags": 1
+    },
+    {
+      "fullName": "BountySetterHandle",
+      "shortName": "BountySetterHandle",
+      "return": {
+        "type": "handle:gamedataAffiliation_Record",
+        "flags": 64
+      },
+      "index": 2915,
+      "flags": 1
+    },
+    {
+      "fullName": "DrawWeight",
+      "shortName": "DrawWeight",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 2927,
+      "flags": 1
+    },
+    {
+      "fullName": "GetTransgressionsCount",
+      "shortName": "GetTransgressionsCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 2923,
+      "flags": 1
+    },
+    {
+      "fullName": "GetTransgressionsItem",
+      "shortName": "GetTransgressionsItem",
+      "return": {
+        "type": "whandle:gamedataTransgression_Record",
+        "flags": 64
+      },
+      "index": 2924,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetTransgressionsItemHandle",
+      "shortName": "GetTransgressionsItemHandle",
+      "return": {
+        "type": "handle:gamedataTransgression_Record",
+        "flags": 64
+      },
+      "index": 2925,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetVisualTagsFilterCount",
+      "shortName": "GetVisualTagsFilterCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 2919,
+      "flags": 1
+    },
+    {
+      "fullName": "GetVisualTagsFilterItem",
+      "shortName": "GetVisualTagsFilterItem",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "index": 2920,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Reward",
+      "shortName": "Reward",
+      "return": {
+        "type": "whandle:gamedataRewardBase_Record",
+        "flags": 64
+      },
+      "index": 2916,
+      "flags": 1
+    },
+    {
+      "fullName": "RewardHandle",
+      "shortName": "RewardHandle",
+      "return": {
+        "type": "handle:gamedataRewardBase_Record",
+        "flags": 64
+      },
+      "index": 2917,
+      "flags": 1
+    },
+    {
+      "fullName": "Transgressions",
+      "shortName": "Transgressions",
+      "index": 2922,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataTransgression_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "TransgressionsContains",
+      "shortName": "TransgressionsContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 2926,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataTransgression_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "VisualTagsFilter",
+      "shortName": "VisualTagsFilter",
+      "return": {
+        "type": "array:CName",
+        "flags": 64
+      },
+      "index": 2918,
+      "flags": 1
+    },
+    {
+      "fullName": "VisualTagsFilterContains",
+      "shortName": "VisualTagsFilterContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 2921,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "WantedStars",
+      "shortName": "WantedStars",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 2928,
+      "flags": 1
+    }
+  ]
+}

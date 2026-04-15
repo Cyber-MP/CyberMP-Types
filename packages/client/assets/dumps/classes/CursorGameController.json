@@ -1,0 +1,327 @@
+{
+  "parent": "gameuiWidgetGameController",
+  "name": "CursorGameController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "whandle:CursorRootController",
+      "name": "cursorRoot",
+      "flags": 4297130016
+    },
+    {
+      "type": "CName",
+      "name": "currentContext",
+      "flags": 4297130016
+    },
+    {
+      "type": "inkMargin",
+      "name": "margin",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:MenuCursorUserData",
+      "name": "data",
+      "flags": 4431347744
+    },
+    {
+      "type": "Bool",
+      "name": "isCursorVisible",
+      "flags": 4297130016
+    },
+    {
+      "type": "CName",
+      "name": "cursorType",
+      "flags": 4297130016
+    },
+    {
+      "type": "CName",
+      "name": "cursorForDevice",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "dpadAnimProxy",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "clickAnimProxy",
+      "flags": 4431347744
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnCursorSpawned",
+      "shortName": "OnCursorSpawned",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkWidget",
+          "name": "widget",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "userData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnDpadCursorMoved",
+      "shortName": "OnDpadCursorMoved",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Float",
+          "name": "angle",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnHold",
+      "shortName": "OnHold",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnRelease",
+      "shortName": "OnRelease",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSetCursorContext",
+      "shortName": "OnSetCursorContext",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "CName",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "handle:inkUserData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSetCursorForDevice",
+      "shortName": "OnSetCursorForDevice",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "CName",
+          "name": "type",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSetCursorPosition",
+      "shortName": "OnSetCursorPosition",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Vector2",
+          "name": "pos",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSetCursorScale",
+      "shortName": "OnSetCursorScale",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Vector2",
+          "name": "scale",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSetCursorType",
+      "shortName": "OnSetCursorType",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "CName",
+          "name": "type",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSetCursorVisibility",
+      "shortName": "OnSetCursorVisibility",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "isVisible",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUnitialize",
+      "shortName": "OnUnitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "DoesActionMatch;inkPointerEventscript_ref<array<CName>>",
+      "shortName": "DoesActionMatch",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:array:CName",
+          "name": "actionsList",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetCursorType;",
+      "shortName": "GetCursorType",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 33024
+    },
+    {
+      "fullName": "ProcessCursorContext;CNameinkUserDataBool",
+      "shortName": "ProcessCursorContext",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "CName",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "handle:inkUserData",
+          "name": "data",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "force",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "SpawnCursor;",
+      "shortName": "SpawnCursor",
+      "flags": 33284
+    },
+    {
+      "fullName": "UpdateFillPercent;Float",
+      "shortName": "UpdateFillPercent",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Float",
+          "name": "percent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "isClickAction;inkPointerEvent",
+      "shortName": "isClickAction",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

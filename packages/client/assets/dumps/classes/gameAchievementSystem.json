@@ -1,0 +1,48 @@
+{
+  "parent": "gameIAchievementSystem",
+  "name": "gameAchievementSystem",
+  "flags": 2,
+  "funcs": [
+    {
+      "fullName": "GetServiceName",
+      "shortName": "GetServiceName",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "index": 15035,
+      "flags": 1
+    },
+    {
+      "fullName": "SetAchievementProgress",
+      "shortName": "SetAchievementProgress",
+      "index": 15034,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gamedataAchievement_Record",
+          "name": "achievement",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "precentComplete",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UnlockAchievement",
+      "shortName": "UnlockAchievement",
+      "index": 15033,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gamedataAchievement_Record",
+          "name": "achievement",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

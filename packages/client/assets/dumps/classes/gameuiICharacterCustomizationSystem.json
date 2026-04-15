@@ -1,0 +1,322 @@
+{
+  "parent": "gameIGameSystem",
+  "name": "gameuiICharacterCustomizationSystem",
+  "flags": 3,
+  "props": [
+    {
+      "type": "whandle:gameuiCharacterCreationPuppetPreviewGameController",
+      "name": "puppetPreviewGameController",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "ApplyChangeToOption",
+      "shortName": "ApplyChangeToOption",
+      "index": 11903,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameuiCharacterCustomizationOption",
+          "name": "option",
+          "flags": 128
+        },
+        {
+          "type": "Uint32",
+          "name": "newValue",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ApplyEditTag",
+      "shortName": "ApplyEditTag",
+      "index": 11901,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gameuiCharacterCustomizationEditTag",
+          "name": "editTag",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ApplyUIPreset",
+      "shortName": "ApplyUIPreset",
+      "index": 11902,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "presetName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CancelFinalizedStateUpdate",
+      "shortName": "CancelFinalizedStateUpdate",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 11893,
+      "flags": 1
+    },
+    {
+      "fullName": "ClearState",
+      "shortName": "ClearState",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 11894,
+      "flags": 1
+    },
+    {
+      "fullName": "FinalizeState",
+      "shortName": "FinalizeState",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 11891,
+      "flags": 1
+    },
+    {
+      "fullName": "GetArmsOptions",
+      "shortName": "GetArmsOptions",
+      "return": {
+        "type": "array:handle:gameuiCharacterCustomizationOption",
+        "flags": 64
+      },
+      "index": 11898,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "presetName",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "GetBodyOptions",
+      "shortName": "GetBodyOptions",
+      "return": {
+        "type": "array:handle:gameuiCharacterCustomizationOption",
+        "flags": 64
+      },
+      "index": 11897,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "presetName",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "GetHeadOptions",
+      "shortName": "GetHeadOptions",
+      "return": {
+        "type": "array:handle:gameuiCharacterCustomizationOption",
+        "flags": 64
+      },
+      "index": 11896,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "presetName",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "GetRandomizationParameters",
+      "shortName": "GetRandomizationParameters",
+      "return": {
+        "type": "handle:gameuiCharacterRandomizationParametersData",
+        "flags": 64
+      },
+      "index": 11906,
+      "flags": 1
+    },
+    {
+      "fullName": "GetState",
+      "shortName": "GetState",
+      "return": {
+        "type": "handle:gameuiICharacterCustomizationState",
+        "flags": 64
+      },
+      "index": 11895,
+      "flags": 1
+    },
+    {
+      "fullName": "GetUnitedOptions",
+      "shortName": "GetUnitedOptions",
+      "return": {
+        "type": "array:handle:gameuiCharacterCustomizationOption",
+        "flags": 64
+      },
+      "index": 11899,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "head",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "body",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "arms",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "headPreset",
+          "flags": 1152
+        },
+        {
+          "type": "CName",
+          "name": "bodyPreset",
+          "flags": 1152
+        },
+        {
+          "type": "CName",
+          "name": "armsPreset",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "HasCharacterCustomizationComponent",
+      "shortName": "HasCharacterCustomizationComponent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 11905,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:entEntity",
+          "name": "entity",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "InitializeOptionsFromFinalizedState",
+      "shortName": "InitializeOptionsFromFinalizedState",
+      "index": 11890,
+      "flags": 1
+    },
+    {
+      "fullName": "InitializeState",
+      "shortName": "InitializeState",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 11889,
+      "flags": 1
+    },
+    {
+      "fullName": "IsNudityAllowed",
+      "shortName": "IsNudityAllowed",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 11888,
+      "flags": 1
+    },
+    {
+      "fullName": "IsTransgenderAllowed",
+      "shortName": "IsTransgenderAllowed",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 11887,
+      "flags": 1
+    },
+    {
+      "fullName": "RandomizeOptions",
+      "shortName": "RandomizeOptions",
+      "index": 11900,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameuiCharacterRandomizationParametersData",
+          "name": "randomizeData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ReFinalizeState",
+      "shortName": "ReFinalizeState",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 11892,
+      "flags": 1
+    },
+    {
+      "fullName": "SetRandomizationParameters",
+      "shortName": "SetRandomizationParameters",
+      "index": 11907,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameuiCharacterRandomizationParametersData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TriggerVoiceToneSample",
+      "shortName": "TriggerVoiceToneSample",
+      "index": 11904,
+      "flags": 1
+    },
+    {
+      "fullName": "GetPuppetPreviewGameController;",
+      "shortName": "GetPuppetPreviewGameController",
+      "return": {
+        "type": "whandle:gameuiCharacterCreationPuppetPreviewGameController",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "RegisterPuppetPreviewGameController;inkCharacterCreationPuppetPreviewGameController",
+      "shortName": "RegisterPuppetPreviewGameController",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "whandle:gameuiCharacterCreationPuppetPreviewGameController",
+          "name": "puppetPreviewGameController",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UnregisterPuppetPreviewGameController;",
+      "shortName": "UnregisterPuppetPreviewGameController",
+      "flags": 33284
+    }
+  ]
+}

@@ -1,0 +1,194 @@
+{
+  "parent": "gameScriptableComponent",
+  "name": "ScannerControlComponent",
+  "flags": 4,
+  "props": [
+    {
+      "type": "MechanicalScanType",
+      "name": "currentScanType",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:gameEffectInstance",
+      "name": "currentScanEffect",
+      "flags": 4431347744
+    },
+    {
+      "type": "CName",
+      "name": "currentScanAnimation",
+      "flags": 4297130016
+    },
+    {
+      "type": "CName",
+      "name": "scannerTriggerComponentName",
+      "flags": 4297130017
+    },
+    {
+      "type": "handle:entIComponent",
+      "name": "scannerTriggerComponent",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:gameStaticTriggerAreaComponent",
+      "name": "a",
+      "flags": 4431347744
+    },
+    {
+      "type": "Bool",
+      "name": "isScanningPlayer",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnAIEvent",
+      "shortName": "OnAIEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:AIAIEvent",
+          "name": "aiEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnAreaEnter",
+      "shortName": "OnAreaEnter",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:entAreaEnteredEvent",
+          "name": "trigger",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnAreaExit",
+      "shortName": "OnAreaExit",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:entAreaExitedEvent",
+          "name": "trigger",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnDeath",
+      "shortName": "OnDeath",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameeventsDeathEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRequestComponents",
+      "shortName": "OnRequestComponents",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "entEntityRequestComponentsInterface",
+          "name": "ri",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnTakeControl",
+      "shortName": "OnTakeControl",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "entEntityResolveComponentsInterface",
+          "name": "ri",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnGameAttach;",
+      "shortName": "OnGameAttach",
+      "flags": 34052
+    },
+    {
+      "fullName": "PlayScannerSlotAnimation;CName",
+      "shortName": "PlayScannerSlotAnimation",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "CName",
+          "name": "animationName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "StartFullscreenPlayerVFX;",
+      "shortName": "StartFullscreenPlayerVFX",
+      "flags": 33028
+    },
+    {
+      "fullName": "StartScanning;MechanicalScanType",
+      "shortName": "StartScanning",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "MechanicalScanType",
+          "name": "scanType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "StopCurrentScanningEffect;",
+      "shortName": "StopCurrentScanningEffect",
+      "flags": 32900
+    },
+    {
+      "fullName": "StopFullscreenPlayerVFX;",
+      "shortName": "StopFullscreenPlayerVFX",
+      "flags": 33028
+    },
+    {
+      "fullName": "StopScannerSlotAnimation;",
+      "shortName": "StopScannerSlotAnimation",
+      "flags": 33028
+    },
+    {
+      "fullName": "StopScanning;",
+      "shortName": "StopScanning",
+      "flags": 32900
+    }
+  ]
+}

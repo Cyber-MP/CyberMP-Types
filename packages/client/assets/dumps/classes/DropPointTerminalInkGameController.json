@@ -1,0 +1,122 @@
+{
+  "parent": "DeviceInkGameControllerBase",
+  "name": "DropPointTerminalInkGameController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkWidgetReference",
+      "name": "sellAction",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "statusText",
+      "flags": 4297130017
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "onGlitchingStateChangedListener",
+      "flags": 4431347744
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnActionWidgetSpawned",
+      "shortName": "OnActionWidgetSpawned",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkWidget",
+          "name": "widget",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "userData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetOwner;",
+      "shortName": "GetOwner",
+      "return": {
+        "type": "handle:DropPoint",
+        "flags": 64
+      },
+      "flags": 33024
+    },
+    {
+      "fullName": "Refresh;EDeviceStatus",
+      "shortName": "Refresh",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "EDeviceStatus",
+          "name": "state",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterBlackboardCallbacks;IBlackboard",
+      "shortName": "RegisterBlackboardCallbacks",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "handle:gameIBlackboard",
+          "name": "blackboard",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetupWidgets;",
+      "shortName": "SetupWidgets",
+      "flags": 33024
+    },
+    {
+      "fullName": "StopGlitchingScreen;",
+      "shortName": "StopGlitchingScreen",
+      "flags": 32896
+    },
+    {
+      "fullName": "TurnOff;",
+      "shortName": "TurnOff",
+      "flags": 33284
+    },
+    {
+      "fullName": "TurnOn;",
+      "shortName": "TurnOn",
+      "flags": 33284
+    },
+    {
+      "fullName": "UnRegisterBlackboardCallbacks;IBlackboard",
+      "shortName": "UnRegisterBlackboardCallbacks",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "handle:gameIBlackboard",
+          "name": "blackboard",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateActionWidgets;script_ref<array<SActionWidgetPackage>>",
+      "shortName": "UpdateActionWidgets",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "script_ref:array:SActionWidgetPackage",
+          "name": "widgetsData",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

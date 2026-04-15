@@ -1,0 +1,283 @@
+{
+  "parent": "gameuiHUDGameController",
+  "name": "gameuiCrosshairContainerController",
+  "flags": 2,
+  "props": [
+    {
+      "type": "TweakDBID",
+      "name": "defaultCrosshair",
+      "flags": 6627016705
+    },
+    {
+      "type": "whandle:gameIBlackboard",
+      "name": "bbUIData",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:gameIBlackboard",
+      "name": "bbWeaponInfo",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "bbPlayerTierEventId",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "bbWeaponEventId",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "interactionBlackboardId",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "visionStateBlackboardId",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "psmVehicleInTPPBlackboardId",
+      "flags": 4431347744
+    },
+    {
+      "type": "whandle:inkCanvasWidget",
+      "name": "rootWidget",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:inkanimDefinition",
+      "name": "fadeOutAnimation",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkanimDefinition",
+      "name": "fadeInAnimation",
+      "flags": 4431347744
+    },
+    {
+      "type": "GameplayTier",
+      "name": "sceneTier",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isUnarmed",
+      "flags": 4297130016
+    },
+    {
+      "type": "Float",
+      "name": "fadeOutValue",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "wasLastInteractionWithDevice",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "CombatStateBlackboardId",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "hiddenAnimProxy",
+      "flags": 4431347744
+    },
+    {
+      "type": "whandle:PlayerPuppet",
+      "name": "Player",
+      "flags": 4297130016
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "HiddenTextCanvas",
+      "flags": 4297130017
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "GetActiveCrosshairGameController",
+      "shortName": "GetActiveCrosshairGameController",
+      "return": {
+        "type": "whandle:gameuiCrosshairBaseGameController",
+        "flags": 64
+      },
+      "index": 14885,
+      "flags": 1
+    },
+    {
+      "fullName": "GetActiveCrosshairWidget",
+      "shortName": "GetActiveCrosshairWidget",
+      "return": {
+        "type": "whandle:inkWidget",
+        "flags": 64
+      },
+      "index": 14884,
+      "flags": 1
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnInteractionStateChange",
+      "shortName": "OnInteractionStateChange",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Variant",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPSMVehicleInTPPChanged",
+      "shortName": "OnPSMVehicleInTPPChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPSMVisionStateChanged",
+      "shortName": "OnPSMVisionStateChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPlayerAttach",
+      "shortName": "OnPlayerAttach",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "playerGameObject",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPlayerDetach",
+      "shortName": "OnPlayerDetach",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "playerGameObject",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSceneTierChange",
+      "shortName": "OnSceneTierChange",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "argTier",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnWeaponSwap",
+      "shortName": "OnWeaponSwap",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Variant",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CreateAnimations;",
+      "shortName": "CreateAnimations",
+      "flags": 32900
+    },
+    {
+      "fullName": "RegisterPSMListeners;GameObject",
+      "shortName": "RegisterPSMListeners",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "playerPuppet",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UnregisterPSMListeners;GameObject",
+      "shortName": "UnregisterPSMListeners",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "playerPuppet",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

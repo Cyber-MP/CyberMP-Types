@@ -1,0 +1,274 @@
+{
+  "parent": "AIbehaviortaskScript",
+  "name": "AIDeathReactionsTask",
+  "flags": 5,
+  "props": [
+    {
+      "type": "handle:AIArgumentMapping",
+      "name": "fastForwardAnimation",
+      "flags": 4431544357
+    },
+    {
+      "type": "handle:animAnimFeature_HitReactionsData",
+      "name": "hitData",
+      "flags": 4431413280
+    },
+    {
+      "type": "handle:ActionHitReactionScriptProxy",
+      "name": "hitReactionAction",
+      "flags": 4431347744
+    },
+    {
+      "type": "Float",
+      "name": "previousRagdollTimeStamp",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "deathHasBeenPlayed",
+      "flags": 4297130016
+    },
+    {
+      "type": "Int32",
+      "name": "updateFrame",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "AIDeathReactionsTask::ShouldUseRagdoll;ScriptedPuppet",
+      "shortName": "ShouldUseRagdoll",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:ScriptedPuppet",
+          "name": "owner",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Activate;ScriptExecutionContext",
+      "shortName": "Activate",
+      "flags": 34048,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AngleToAttackSource;ScriptExecutionContextAnimFeature_HitReactionsData",
+      "shortName": "AngleToAttackSource",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 33024,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "handle:animAnimFeature_HitReactionsData",
+          "name": "hitData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "BrainMeltDeathData;ScriptExecutionContext",
+      "shortName": "BrainMeltDeathData",
+      "return": {
+        "type": "handle:animAnimFeature_HitReactionsData",
+        "flags": 64
+      },
+      "flags": 33028,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CanSkipDeathAnimation;",
+      "shortName": "CanSkipDeathAnimation",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33024
+    },
+    {
+      "fullName": "ChangeHighLevelState;ScriptExecutionContext",
+      "shortName": "ChangeHighLevelState",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Deactivate;ScriptExecutionContext",
+      "shortName": "Deactivate",
+      "flags": 34048,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetDeathReactionType;ScriptExecutionContext",
+      "shortName": "GetDeathReactionType",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 33024,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetHitData;ScriptExecutionContext",
+      "shortName": "GetHitData",
+      "return": {
+        "type": "handle:animAnimFeature_HitReactionsData",
+        "flags": 64
+      },
+      "flags": 33024,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsFloorSteepEnoughToRagdoll;ScriptExecutionContext",
+      "shortName": "IsFloorSteepEnoughToRagdoll",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33028,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PlayHitReactionAction;ScriptExecutionContext",
+      "shortName": "PlayHitReactionAction",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33024,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ShouldFastForward;script_ref<ScriptExecutionContext>",
+      "shortName": "ShouldFastForward",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33024,
+      "params": [
+        {
+          "type": "script_ref:AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SpawnBloodPuddle;ScriptedPuppet",
+      "shortName": "SpawnBloodPuddle",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "whandle:ScriptedPuppet",
+          "name": "puppet",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "StopMotionExtraction;ScriptExecutionContext",
+      "shortName": "StopMotionExtraction",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TurnOnRagdoll;ScriptExecutionContextCName",
+      "shortName": "TurnOnRagdoll",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "activationReason",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Update;ScriptExecutionContext",
+      "shortName": "Update",
+      "return": {
+        "type": "AIbehaviorUpdateOutcome",
+        "flags": 64
+      },
+      "flags": 34048,
+      "params": [
+        {
+          "type": "AIbehaviorScriptExecutionContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

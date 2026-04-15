@@ -1,0 +1,470 @@
+{
+  "parent": "inkRadioGroupController",
+  "name": "PhotoModeGridList",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkScrollAreaWidgetReference",
+      "name": "ScrollArea",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "ContentRoot",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "SliderWidget",
+      "flags": 4297130017
+    },
+    {
+      "type": "Int32",
+      "name": "rowOffset",
+      "flags": 4297130017
+    },
+    {
+      "type": "Int32",
+      "name": "firstOffset",
+      "flags": 4297130017
+    },
+    {
+      "type": "CName",
+      "name": "rowLibraryId",
+      "flags": 4297130017
+    },
+    {
+      "type": "CName",
+      "name": "buttonLibraryId",
+      "flags": 4297130017
+    },
+    {
+      "type": "whandle:PhotoModeMenuListItem",
+      "name": "parentListItem",
+      "flags": 4297130016
+    },
+    {
+      "type": "array:whandle:PhotoModeGridButton",
+      "name": "buttons",
+      "flags": 6583025696
+    },
+    {
+      "type": "array:whandle:inkWidget",
+      "name": "rows",
+      "flags": 6583025696
+    },
+    {
+      "type": "whandle:inkSliderController",
+      "name": "sliderController",
+      "flags": 4297130016
+    },
+    {
+      "type": "Int32",
+      "name": "ItemsInRow",
+      "flags": 4297130016
+    },
+    {
+      "type": "Int32",
+      "name": "RowsCount",
+      "flags": 4297130016
+    },
+    {
+      "type": "Int32",
+      "name": "SelectedIndex",
+      "flags": 4297130016
+    },
+    {
+      "type": "Int32",
+      "name": "PreviousSelectedIndex",
+      "flags": 4297130016
+    },
+    {
+      "type": "Float",
+      "name": "visibleSize",
+      "flags": 4297130016
+    },
+    {
+      "type": "Int32",
+      "name": "visibleRows",
+      "flags": 4297130016
+    },
+    {
+      "type": "Int32",
+      "name": "scrollRow",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isVisibleOnscreen",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnSliderValueChanged",
+      "shortName": "OnSliderValueChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "whandle:inkSliderController",
+          "name": "sliderController",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "progress",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnValueChanged",
+      "shortName": "OnValueChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "whandle:inkRadioGroupController",
+          "name": "controller",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "selectedIndex",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AddButton;inkWidget",
+      "shortName": "AddButton",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "whandle:inkWidget",
+          "name": "parentWidget",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AddRow;",
+      "shortName": "AddRow",
+      "return": {
+        "type": "whandle:inkWidget",
+        "flags": 64
+      },
+      "flags": 33028
+    },
+    {
+      "fullName": "GetRow;Int32",
+      "shortName": "GetRow",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "buttonIndex",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetRowClamped;Int32",
+      "shortName": "GetRowClamped",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "row",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetSelectedRow;",
+      "shortName": "GetSelectedRow",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "HandleReleasedInput;inkPointerEventinkGameController",
+      "shortName": "HandleReleasedInput",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameuiWidgetGameController",
+          "name": "gameCtrl",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "OnDeSelected;",
+      "shortName": "OnDeSelected",
+      "flags": 33284
+    },
+    {
+      "fullName": "OnGridButtonAction;Int32",
+      "shortName": "OnGridButtonAction",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "buttonindex",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnGridButtonSelected;Int32",
+      "shortName": "OnGridButtonSelected",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "buttonindex",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSelected;",
+      "shortName": "OnSelected",
+      "flags": 33284
+    },
+    {
+      "fullName": "OnVisbilityChanged;Bool",
+      "shortName": "OnVisbilityChanged",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "visible",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ScrollToRow;Int32",
+      "shortName": "ScrollToRow",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "row",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SelectButton;Int32",
+      "shortName": "SelectButton",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetGridButtonImage;Uint32ResRefCNameInt32",
+      "shortName": "SetGridButtonImage",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Uint32",
+          "name": "buttonIndex",
+          "flags": 128
+        },
+        {
+          "type": "redResourceReferenceScriptToken",
+          "name": "atlasPath",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "imagePart",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "buttonData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetGridButtonImageForceVisible;Uint32",
+      "shortName": "SetGridButtonImageForceVisible",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Uint32",
+          "name": "buttonIndex",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetGridData;script_ref<array<PhotoModeOptionGridButtonData>>",
+      "shortName": "SetGridData",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "script_ref:array:gameuiPhotoModeOptionGridButtonData",
+          "name": "gridData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Setup;PhotoModeMenuListItemInt32Int32",
+      "shortName": "Setup",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:PhotoModeMenuListItem",
+          "name": "listItem",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "rows",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "itemsInRow",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TrySelectDown;",
+      "shortName": "TrySelectDown",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "TrySelectLeft;",
+      "shortName": "TrySelectLeft",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "TrySelectRight;",
+      "shortName": "TrySelectRight",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "TrySelectUp;",
+      "shortName": "TrySelectUp",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "Update;Float",
+      "shortName": "Update",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Float",
+          "name": "timeDelta",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateButtonsVisibility;",
+      "shortName": "UpdateButtonsVisibility",
+      "flags": 33284
+    },
+    {
+      "fullName": "UpdateScroll;",
+      "shortName": "UpdateScroll",
+      "flags": 33284
+    },
+    {
+      "fullName": "UpdateSelectedState;",
+      "shortName": "UpdateSelectedState",
+      "flags": 33284
+    },
+    {
+      "fullName": "UpdateSize;Float",
+      "shortName": "UpdateSize",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Float",
+          "name": "timeDelta",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

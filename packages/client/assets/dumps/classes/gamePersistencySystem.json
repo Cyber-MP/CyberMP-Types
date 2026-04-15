@@ -1,0 +1,284 @@
+{
+  "parent": "gameIPersistencySystem",
+  "name": "gamePersistencySystem",
+  "flags": 2,
+  "funcs": [
+    {
+      "fullName": "EntityProxy_DisablePhysics",
+      "shortName": "EntityProxy_DisablePhysics",
+      "index": 12071,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "targetEntity",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "disable",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ForgetObject",
+      "shortName": "ForgetObject",
+      "index": 12075,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamePersistentID",
+          "name": "targetID",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "notifyEntity",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetConstAccessToPSObject",
+      "shortName": "GetConstAccessToPSObject",
+      "return": {
+        "type": "handle:gamePersistentState",
+        "flags": 64
+      },
+      "index": 12074,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamePersistentID",
+          "name": "targetID",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "psClassName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetPersistentBool",
+      "shortName": "GetPersistentBool",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12077,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamePersistentID",
+          "name": "targetEntity",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "psClassName",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "varName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetPersistentFloat",
+      "shortName": "GetPersistentFloat",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 12079,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamePersistentID",
+          "name": "targetEntity",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "psClassName",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "varName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetPersistentInt",
+      "shortName": "GetPersistentInt",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 12078,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamePersistentID",
+          "name": "targetEntity",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "psClassName",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "varName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "QueueEntityEvent",
+      "shortName": "QueueEntityEvent",
+      "index": 12072,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "targetEntity",
+          "flags": 128
+        },
+        {
+          "type": "handle:redEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "QueuePSDeviceEvent",
+      "shortName": "QueuePSDeviceEvent",
+      "index": 12076,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gamedeviceAction",
+          "name": "action",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "QueuePSEvent",
+      "shortName": "QueuePSEvent",
+      "index": 12073,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamePersistentID",
+          "name": "targetID",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "psClassName",
+          "flags": 128
+        },
+        {
+          "type": "handle:redEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetPersistentBool",
+      "shortName": "SetPersistentBool",
+      "index": 12080,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamePersistentID",
+          "name": "targetEntity",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "psClassName",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "varName",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "newValue",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetPersistentFloat",
+      "shortName": "SetPersistentFloat",
+      "index": 12082,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamePersistentID",
+          "name": "targetEntity",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "psClassName",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "varName",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "newValue",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetPersistentInt",
+      "shortName": "SetPersistentInt",
+      "index": 12081,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamePersistentID",
+          "name": "targetEntity",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "psClassName",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "varName",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "newValue",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

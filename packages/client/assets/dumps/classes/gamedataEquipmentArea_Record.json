@@ -1,0 +1,121 @@
+{
+  "parent": "gamedataTweakDBRecord",
+  "name": "gamedataEquipmentArea_Record",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "EnumComment",
+      "shortName": "EnumComment",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "index": 8055,
+      "flags": 1
+    },
+    {
+      "fullName": "EnumName",
+      "shortName": "EnumName",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "index": 8062,
+      "flags": 1
+    },
+    {
+      "fullName": "EquipSlots",
+      "shortName": "EquipSlots",
+      "index": 8057,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataEquipSlot_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "EquipSlotsContains",
+      "shortName": "EquipSlotsContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 8061,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataEquipSlot_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetEquipSlotsCount",
+      "shortName": "GetEquipSlotsCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 8058,
+      "flags": 1
+    },
+    {
+      "fullName": "GetEquipSlotsItem",
+      "shortName": "GetEquipSlotsItem",
+      "return": {
+        "type": "whandle:gamedataEquipSlot_Record",
+        "flags": 64
+      },
+      "index": 8059,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetEquipSlotsItemHandle",
+      "shortName": "GetEquipSlotsItemHandle",
+      "return": {
+        "type": "handle:gamedataEquipSlot_Record",
+        "flags": 64
+      },
+      "index": 8060,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "LocalizedName",
+      "shortName": "LocalizedName",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "index": 8056,
+      "flags": 1
+    },
+    {
+      "fullName": "Type",
+      "shortName": "Type",
+      "return": {
+        "type": "gamedataEquipmentArea",
+        "flags": 64
+      },
+      "index": 8063,
+      "flags": 1
+    }
+  ]
+}

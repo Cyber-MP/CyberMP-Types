@@ -1,0 +1,231 @@
+{
+  "parent": "LocomotionGroundDecisions",
+  "name": "VaultDecisions",
+  "flags": 4,
+  "props": [
+    {
+      "type": "array:handle:redCallbackObject",
+      "name": "callbackIDs",
+      "flags": 6583222304
+    },
+    {
+      "type": "Bool",
+      "name": "stateBodyDone",
+      "flags": 4297326624
+    },
+    {
+      "type": "Bool",
+      "name": "shouldDisableEnterCondition",
+      "flags": 4297326624
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnAction",
+      "shortName": "OnAction",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "gameinputScriptListenerAction",
+          "name": "action",
+          "flags": 128
+        },
+        {
+          "type": "gameinputScriptListenerActionConsumer",
+          "name": "consumer",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnMeleeLeapChanged",
+      "shortName": "OnMeleeLeapChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "EnterCondition;StateContextStateGameScriptInterface",
+      "shortName": "EnterCondition",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 42240,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "FitTest;StateGameScriptInterfaceVector4PlayerClimbInfo",
+      "shortName": "FitTest",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41220,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "playerCapsuleDimensions",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamePlayerClimbInfo",
+          "name": "vaultInfo",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ObstacleLengthCheck;StateContextStateGameScriptInterfacePlayerClimbInfo",
+      "shortName": "ObstacleLengthCheck",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41092,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamePlayerClimbInfo",
+          "name": "vaultInfo",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnAttach;StateContextStateGameScriptInterface",
+      "shortName": "OnAttach",
+      "flags": 34048,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnDetach;StateContextStateGameScriptInterface",
+      "shortName": "OnDetach",
+      "flags": 34052,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ToCrouch;StateContextStateGameScriptInterface",
+      "shortName": "ToCrouch",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ToSlide;StateContextStateGameScriptInterface",
+      "shortName": "ToSlide",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ToStand;StateContextStateGameScriptInterface",
+      "shortName": "ToStand",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,350 @@
+{
+  "parent": "IScriptable",
+  "name": "ProjectileLaunchHelper",
+  "flags": 4,
+  "funcs": [
+    {
+      "fullName": "ProjectileLaunchHelper::SetCurvedLaunchTrajectory;ProjectileComponentGameObjectIPlacedComponentFloatFloatFloatFloatFloatFloatFloatFloatFloat",
+      "shortName": "SetCurvedLaunchTrajectory",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameprojectileComponent",
+          "name": "projectileComponent",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameObject",
+          "name": "targetObject",
+          "flags": 1152
+        },
+        {
+          "type": "handle:entIPlacedComponent",
+          "name": "targetComponent",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "startVelocity",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "linearTimeRatio",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "interpolationTimeRatio",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "returnTimeMargin",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "bendTimeRatio",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "bendFactor",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "halfLeanAngle",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "endLeanAngle",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "angleInterpolationDuration",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProjectileLaunchHelper::SetCustomTargetPositionToFollow;ProjectileComponentscript_ref<Matrix>FloatFloatFloatFloatFloatFloatFloatFloatFloatFloatFloatFloatFloat",
+      "shortName": "SetCustomTargetPositionToFollow",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameprojectileComponent",
+          "name": "projectileComponent",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:Matrix",
+          "name": "localToWorld",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "startVelocity",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "distance",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "sideOffset",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "height",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "linearTimeRatio",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "interpolationTimeRatio",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "returnTimeMargin",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "bendTimeRatio",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "bendFactor",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "accuracy",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "halfLeanAngle",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "endLeanAngle",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "angleInterpolationDuration",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProjectileLaunchHelper::SetLinearLaunchTrajectory;ProjectileComponentFloat",
+      "shortName": "SetLinearLaunchTrajectory",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameprojectileComponent",
+          "name": "projectileComponent",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "velocity",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProjectileLaunchHelper::SetParabolicLaunchTrajectory;ProjectileComponentFloatFloatFloat",
+      "shortName": "SetParabolicLaunchTrajectory",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameprojectileComponent",
+          "name": "projectileComponent",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "gravitySimulation",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "velocity",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "energyLossFactorAfterCollision",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProjectileLaunchHelper::SpawnArmsLauncherProjectileWithRotation;GameObjectCNameItemObjectFloat",
+      "shortName": "SpawnArmsLauncherProjectileWithRotation",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "ownerObject",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "projectileTemplateName",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameItemObject",
+          "name": "itemObj",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "rotationRad",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "ProjectileLaunchHelper::SpawnProjectile;GameObjectCNameCNameItemObjectIPositionProviderIOrientationProvider",
+      "shortName": "SpawnProjectile",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32902,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "ownerObject",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "projectileTemplateName",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "appearance",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameItemObject",
+          "name": "itemObj",
+          "flags": 128
+        },
+        {
+          "type": "handle:entIPositionProvider",
+          "name": "logicalPositionProvider",
+          "flags": 128
+        },
+        {
+          "type": "handle:entIOrientationProvider",
+          "name": "logicalOrientationProvider",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProjectileLaunchHelper::SpawnProjectileFromRightHand;GameObjectCNameCNameItemObject",
+      "shortName": "SpawnProjectileFromRightHand",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "ownerObject",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "projectileTemplateName",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "appearance",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameItemObject",
+          "name": "itemObj",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProjectileLaunchHelper::SpawnProjectileFromScreenCenter;GameObjectCNameCNameItemObject",
+      "shortName": "SpawnProjectileFromScreenCenter",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "ownerObject",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "projectileTemplateName",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "appearance",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameItemObject",
+          "name": "itemObj",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

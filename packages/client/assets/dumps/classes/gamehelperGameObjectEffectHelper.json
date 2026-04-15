@@ -1,0 +1,109 @@
+{
+  "parent": "IScriptable",
+  "name": "gamehelperGameObjectEffectHelper",
+  "flags": 2,
+  "funcs": [
+    {
+      "fullName": "ActivateEffectAction",
+      "shortName": "ActivateEffectAction",
+      "index": 13433,
+      "flags": 3,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "obj",
+          "flags": 128
+        },
+        {
+          "type": "gamedataFxActionType",
+          "name": "actionType",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "fxName",
+          "flags": 128
+        },
+        {
+          "type": "handle:worldEffectBlackboard",
+          "name": "fxBlackboard",
+          "flags": 1152
+        },
+        {
+          "type": "Bool",
+          "name": "startOnlyIfNotStarted",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "BreakEffectLoopEvent",
+      "shortName": "BreakEffectLoopEvent",
+      "index": 13435,
+      "flags": 3,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "obj",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "effectName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "StartEffectEvent",
+      "shortName": "StartEffectEvent",
+      "index": 13434,
+      "flags": 3,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "obj",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "effectName",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "shouldPersist",
+          "flags": 1152
+        },
+        {
+          "type": "handle:worldEffectBlackboard",
+          "name": "blackboard",
+          "flags": 1152
+        },
+        {
+          "type": "Bool",
+          "name": "startOnlyIfNotStarted",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "StopEffectEvent",
+      "shortName": "StopEffectEvent",
+      "index": 13436,
+      "flags": 3,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "obj",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "effectName",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

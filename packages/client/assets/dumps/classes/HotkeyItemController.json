@@ -1,0 +1,210 @@
+{
+  "parent": "GenericHotkeyController",
+  "name": "HotkeyItemController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkWidgetReference",
+      "name": "hotkeyItemSlot",
+      "flags": 4297195553
+    },
+    {
+      "type": "whandle:inkWidget",
+      "name": "hotkeyItemWidget",
+      "flags": 4297195552
+    },
+    {
+      "type": "whandle:InventoryItemDisplayController",
+      "name": "hotkeyItemController",
+      "flags": 4297195552
+    },
+    {
+      "type": "gameInventoryItemData",
+      "name": "currentItem",
+      "flags": 4297195552
+    },
+    {
+      "type": "whandle:gameIBlackboard",
+      "name": "hotkeyBlackboard",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "hotkeyCallbackID",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "holocallCallback",
+      "flags": 4431347744
+    },
+    {
+      "type": "whandle:EquipmentSystem",
+      "name": "equipmentSystem",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:InventoryDataManagerV2",
+      "name": "inventoryManager",
+      "flags": 4431413280
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "dpadAnim",
+      "flags": 4431413280
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnDpadActionPerformed",
+      "shortName": "OnDpadActionPerformed",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:DPADActionPerformed",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnHotkeyRefreshed",
+      "shortName": "OnHotkeyRefreshed",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Variant",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPhoneCallInfoChanged",
+      "shortName": "OnPhoneCallInfoChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Variant",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPlayerAttach",
+      "shortName": "OnPlayerAttach",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "playerPuppet",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetEquipmentSystem;",
+      "shortName": "GetEquipmentSystem",
+      "return": {
+        "type": "whandle:EquipmentSystem",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "Initialize;",
+      "shortName": "Initialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33024
+    },
+    {
+      "fullName": "InitializeHotkeyItem;",
+      "shortName": "InitializeHotkeyItem",
+      "flags": 32900
+    },
+    {
+      "fullName": "IsAllowedByGameplay;",
+      "shortName": "IsAllowedByGameplay",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33024
+    },
+    {
+      "fullName": "IsHoloCallActive;",
+      "shortName": "IsHoloCallActive",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "IsInDefaultState;",
+      "shortName": "IsInDefaultState",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33024
+    },
+    {
+      "fullName": "OnQuestActivate;Int32",
+      "shortName": "OnQuestActivate",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterHolocallListener;",
+      "shortName": "RegisterHolocallListener",
+      "flags": 32900
+    },
+    {
+      "fullName": "StopDpadAnim;",
+      "shortName": "StopDpadAnim",
+      "flags": 33028
+    },
+    {
+      "fullName": "Uninitialize;",
+      "shortName": "Uninitialize",
+      "flags": 33024
+    },
+    {
+      "fullName": "UnregisterHolocallListener;",
+      "shortName": "UnregisterHolocallListener",
+      "flags": 32900
+    },
+    {
+      "fullName": "UpdateCurrentItem;",
+      "shortName": "UpdateCurrentItem",
+      "flags": 33024
+    }
+  ]
+}

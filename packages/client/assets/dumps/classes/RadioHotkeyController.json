@@ -1,0 +1,256 @@
+{
+  "parent": "GenericHotkeyController",
+  "name": "RadioHotkeyController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "whandle:gameIBlackboard",
+      "name": "vehicleBB",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "vehicleEnterListener",
+      "flags": 4431347744
+    },
+    {
+      "type": "Uint32",
+      "name": "factListener",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "animationProxy",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "equalizerAnimProxy",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkGameNotificationToken",
+      "name": "pocketRadioToken",
+      "flags": 4431347744
+    },
+    {
+      "type": "Bool",
+      "name": "isInDefaultState",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnAction",
+      "shortName": "OnAction",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "gameinputScriptListenerAction",
+          "name": "action",
+          "flags": 128
+        },
+        {
+          "type": "gameinputScriptListenerActionConsumer",
+          "name": "consumer",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPlayerAttach",
+      "shortName": "OnPlayerAttach",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "player",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPlayerEnteredVehicle",
+      "shortName": "OnPlayerEnteredVehicle",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPocketRadioUIEvent",
+      "shortName": "OnPocketRadioUIEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:PocketRadioUIEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnVehicleRadioCycleEvent",
+      "shortName": "OnVehicleRadioCycleEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:UIVehicleRadioCycleEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnVehicleRadioEvent",
+      "shortName": "OnVehicleRadioEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:UIVehicleRadioEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnVehicleRadioStationChanged",
+      "shortName": "OnVehicleRadioStationChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:vehicleRadioStationChanged",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Initialize;",
+      "shortName": "Initialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33024
+    },
+    {
+      "fullName": "InitializeEqualizerAnim;",
+      "shortName": "InitializeEqualizerAnim",
+      "flags": 32900
+    },
+    {
+      "fullName": "InitializeQuestListener;",
+      "shortName": "InitializeQuestListener",
+      "flags": 32900
+    },
+    {
+      "fullName": "IsInDefaultState;",
+      "shortName": "IsInDefaultState",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33024
+    },
+    {
+      "fullName": "IsRadioEnabled;",
+      "shortName": "IsRadioEnabled",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "OnFactChanged;Int32",
+      "shortName": "OnFactChanged",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ResolveState;",
+      "shortName": "ResolveState",
+      "flags": 33024
+    },
+    {
+      "fullName": "SetHintController;Bool",
+      "shortName": "SetHintController",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "isInVehicle",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ShouldEqualizerShow;",
+      "shortName": "ShouldEqualizerShow",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "StartEqualizerAnim;",
+      "shortName": "StartEqualizerAnim",
+      "flags": 33284
+    },
+    {
+      "fullName": "StopEqualizerAnim;",
+      "shortName": "StopEqualizerAnim",
+      "flags": 33284
+    },
+    {
+      "fullName": "Uninitialize;",
+      "shortName": "Uninitialize",
+      "flags": 33024
+    },
+    {
+      "fullName": "UpdateEqualizer;",
+      "shortName": "UpdateEqualizer",
+      "flags": 32900
+    }
+  ]
+}

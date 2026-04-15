@@ -1,0 +1,60 @@
+{
+  "parent": "gameTimeDilatable",
+  "name": "sampleTimeDilatable",
+  "flags": 4,
+  "props": [
+    {
+      "type": "handle:sampleTimeListener",
+      "name": "listener",
+      "flags": 4431544352
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnGameAttached",
+      "shortName": "OnGameAttached",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnInteractionChoice",
+      "shortName": "OnInteractionChoice",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameinteractionsChoiceEvent",
+          "name": "choice",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnTimeDilationFinished",
+      "shortName": "OnTimeDilationFinished",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnFinished;CName",
+      "shortName": "OnFinished",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "CName",
+          "name": "reason",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

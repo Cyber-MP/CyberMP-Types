@@ -1,0 +1,86 @@
+{
+  "parent": "entIVisualComponent",
+  "name": "entPhysicalDestructionComponent",
+  "flags": 66,
+  "props": [
+    {
+      "type": "raRef:CMesh",
+      "name": "mesh",
+      "group": "Rendering",
+      "flags": 6627016705
+    },
+    {
+      "type": "CName",
+      "name": "meshAppearance",
+      "group": "Rendering",
+      "flags": 6627016705
+    },
+    {
+      "type": "Float",
+      "name": "forceAutoHideDistance",
+      "group": "LOD",
+      "flags": 6627016705
+    },
+    {
+      "type": "physicsDestructionParams",
+      "name": "destructionParams",
+      "group": "Physics",
+      "flags": 6627016709
+    },
+    {
+      "type": "array:physicsDestructionLevelData",
+      "name": "destructionLevelData",
+      "group": "Physics",
+      "flags": 6631211013
+    },
+    {
+      "type": "Bool",
+      "name": "isEnabled",
+      "group": "Component state",
+      "flags": 6694125569
+    },
+    {
+      "type": "CName",
+      "name": "audioMetadata",
+      "group": "Audio ",
+      "flags": 6627016705
+    },
+    {
+      "type": "Uint16",
+      "name": "systemsToNotifyFlags",
+      "group": "Internal",
+      "flags": 6627016704
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "CreatePhysicalBodyInterface",
+      "shortName": "CreatePhysicalBodyInterface",
+      "index": 11270,
+      "flags": 1
+    },
+    {
+      "fullName": "IsFractured",
+      "shortName": "IsFractured",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 11271,
+      "flags": 1
+    },
+    {
+      "fullName": "TriggerDestruction",
+      "shortName": "TriggerDestruction",
+      "index": 11272,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Float",
+          "name": "velocity",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

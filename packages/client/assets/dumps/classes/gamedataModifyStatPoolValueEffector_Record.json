@@ -1,0 +1,111 @@
+{
+  "parent": "gamedataEffector_Record",
+  "name": "gamedataModifyStatPoolValueEffector_Record",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "ApplicationTarget",
+      "shortName": "ApplicationTarget",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "index": 6334,
+      "flags": 1
+    },
+    {
+      "fullName": "GetStatPoolUpdatesCount",
+      "shortName": "GetStatPoolUpdatesCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 6330,
+      "flags": 1
+    },
+    {
+      "fullName": "GetStatPoolUpdatesItem",
+      "shortName": "GetStatPoolUpdatesItem",
+      "return": {
+        "type": "whandle:gamedataStatPoolUpdate_Record",
+        "flags": 64
+      },
+      "index": 6331,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetStatPoolUpdatesItemHandle",
+      "shortName": "GetStatPoolUpdatesItemHandle",
+      "return": {
+        "type": "handle:gamedataStatPoolUpdate_Record",
+        "flags": 64
+      },
+      "index": 6332,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetValue",
+      "shortName": "SetValue",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 6336,
+      "flags": 1
+    },
+    {
+      "fullName": "StatPoolUpdates",
+      "shortName": "StatPoolUpdates",
+      "index": 6329,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataStatPoolUpdate_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "StatPoolUpdatesContains",
+      "shortName": "StatPoolUpdatesContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 6333,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataStatPoolUpdate_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UsePercent",
+      "shortName": "UsePercent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 6335,
+      "flags": 1
+    }
+  ]
+}

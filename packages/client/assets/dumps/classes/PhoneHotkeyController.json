@@ -1,0 +1,407 @@
+{
+  "parent": "GenericHotkeyController",
+  "name": "PhoneHotkeyController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkImageWidgetReference",
+      "name": "mainIcon",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "questIcon",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkImageWidgetReference",
+      "name": "callIcon",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "messageCounterLabel",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "messageCounterLabelCircle",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "messageCounter",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "messageCounterCircle",
+      "flags": 4297130017
+    },
+    {
+      "type": "whandle:gameJournalManager",
+      "name": "journalManager",
+      "flags": 4297130016
+    },
+    {
+      "type": "String",
+      "name": "phoneIconAtlas",
+      "flags": 4297130016
+    },
+    {
+      "type": "CName",
+      "name": "phoneIconName",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "proxy",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "questImportantAnimProxy",
+      "flags": 4431347744
+    },
+    {
+      "type": "whandle:gameIBlackboard",
+      "name": "comDeviceBB",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:gameIBlackboard",
+      "name": "quickSlotBB",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "phoneEnabledBBId",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "isVehiclesPopupVisibleBBId",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "isRadioPopupVisibleBBId",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "isRadialMenuVisibleBBId",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "cinematicCameraBBId",
+      "flags": 4431347744
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnDpadActionPerformed",
+      "shortName": "OnDpadActionPerformed",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:DPADActionPerformed",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnJournalUpdate",
+      "shortName": "OnJournalUpdate",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Uint32",
+          "name": "entryHash",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "className",
+          "flags": 128
+        },
+        {
+          "type": "gameJournalNotifyOption",
+          "name": "notifyOption",
+          "flags": 128
+        },
+        {
+          "type": "gameJournalChangeType",
+          "name": "changeType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnJournalUpdateVisited",
+      "shortName": "OnJournalUpdateVisited",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Uint32",
+          "name": "entryHash",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "className",
+          "flags": 128
+        },
+        {
+          "type": "gameJournalNotifyOption",
+          "name": "notifyOption",
+          "flags": 128
+        },
+        {
+          "type": "gameJournalChangeType",
+          "name": "changeType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPhoneDeviceReset",
+      "shortName": "OnPhoneDeviceReset",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "whandle:inkWidget",
+          "name": "target",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPhoneDeviceSlot",
+      "shortName": "OnPhoneDeviceSlot",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "whandle:inkWidget",
+          "name": "target",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPlayerAttach",
+      "shortName": "OnPlayerAttach",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "player",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnTrackedEntryChanges",
+      "shortName": "OnTrackedEntryChanges",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Uint32",
+          "name": "hash",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "className",
+          "flags": 128
+        },
+        {
+          "type": "gameJournalNotifyOption",
+          "name": "notifyOption",
+          "flags": 128
+        },
+        {
+          "type": "gameJournalChangeType",
+          "name": "changeType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CountMessages;JournalPhoneConversationscript_ref<array<Int32>>Int32Int32",
+      "shortName": "CountMessages",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "whandle:gameJournalPhoneConversation",
+          "name": "convEntry",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:array:Int32",
+          "name": "tracked",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "questImportantMessages",
+          "flags": 640
+        },
+        {
+          "type": "Int32",
+          "name": "unreadMessages",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "Initialize;",
+      "shortName": "Initialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33024
+    },
+    {
+      "fullName": "InitializeStatusListener;",
+      "shortName": "InitializeStatusListener",
+      "flags": 33024
+    },
+    {
+      "fullName": "IsInDefaultState;",
+      "shortName": "IsInDefaultState",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33024
+    },
+    {
+      "fullName": "IsPhoneInUse;",
+      "shortName": "IsPhoneInUse",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "OnCinematicCameraChange;Bool",
+      "shortName": "OnCinematicCameraChange",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPhoneEnabledChanged;Bool",
+      "shortName": "OnPhoneEnabledChanged",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "val",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRadialMenuShown;Bool",
+      "shortName": "OnRadialMenuShown",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRadioManagerPopupIsShown;Bool",
+      "shortName": "OnRadioManagerPopupIsShown",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnVehiclesManagerPopupIsShown;Bool",
+      "shortName": "OnVehiclesManagerPopupIsShown",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "QuestImportantBlink;Bool",
+      "shortName": "QuestImportantBlink",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "enable",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RestoreDefaultIcon;",
+      "shortName": "RestoreDefaultIcon",
+      "flags": 32900
+    },
+    {
+      "fullName": "Uninitialize;",
+      "shortName": "Uninitialize",
+      "flags": 33024
+    },
+    {
+      "fullName": "UpdateData;",
+      "shortName": "UpdateData",
+      "flags": 32900
+    }
+  ]
+}

@@ -1,0 +1,170 @@
+{
+  "parent": "gameIGameSystem",
+  "name": "CallbackSystem",
+  "flags": 2,
+  "funcs": [
+    {
+      "fullName": "DispatchEvent",
+      "shortName": "DispatchEvent",
+      "index": 15176,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:CallbackSystemEvent",
+          "name": "arg",
+          "flags": 0
+        }
+      ]
+    },
+    {
+      "fullName": "DispatchEventAs",
+      "shortName": "DispatchEventAs",
+      "index": 15177,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "arg",
+          "flags": 0
+        },
+        {
+          "type": "handle:CallbackSystemEvent",
+          "name": "arg",
+          "flags": 0
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterCallback",
+      "shortName": "RegisterCallback",
+      "return": {
+        "type": "handle:CallbackSystemHandler",
+        "flags": 64
+      },
+      "index": 15171,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "arg",
+          "flags": 0
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "arg",
+          "flags": 0
+        },
+        {
+          "type": "CName",
+          "name": "arg",
+          "flags": 0
+        },
+        {
+          "type": "Bool",
+          "name": "arg",
+          "flags": 1024
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterEvent",
+      "shortName": "RegisterEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 15175,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "arg",
+          "flags": 0
+        },
+        {
+          "type": "CName",
+          "name": "arg",
+          "flags": 1024
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterStaticCallback",
+      "shortName": "RegisterStaticCallback",
+      "return": {
+        "type": "handle:CallbackSystemHandler",
+        "flags": 64
+      },
+      "index": 15173,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "arg",
+          "flags": 0
+        },
+        {
+          "type": "CName",
+          "name": "arg",
+          "flags": 0
+        },
+        {
+          "type": "CName",
+          "name": "arg",
+          "flags": 0
+        },
+        {
+          "type": "Bool",
+          "name": "arg",
+          "flags": 1024
+        }
+      ]
+    },
+    {
+      "fullName": "UnregisterCallback",
+      "shortName": "UnregisterCallback",
+      "index": 15172,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "arg",
+          "flags": 0
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "arg",
+          "flags": 0
+        },
+        {
+          "type": "CName",
+          "name": "arg",
+          "flags": 1024
+        }
+      ]
+    },
+    {
+      "fullName": "UnregisterStaticCallback",
+      "shortName": "UnregisterStaticCallback",
+      "index": 15174,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "arg",
+          "flags": 0
+        },
+        {
+          "type": "CName",
+          "name": "arg",
+          "flags": 0
+        },
+        {
+          "type": "CName",
+          "name": "arg",
+          "flags": 1024
+        }
+      ]
+    }
+  ]
+}

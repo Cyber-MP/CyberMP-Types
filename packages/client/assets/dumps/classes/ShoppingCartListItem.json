@@ -1,0 +1,83 @@
+{
+  "parent": "inkWidgetLogicController",
+  "name": "ShoppingCartListItem",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkTextWidgetReference",
+      "name": "label",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "quantity",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "value",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "removeBtn",
+      "flags": 4297130017
+    },
+    {
+      "type": "gameInventoryItemData",
+      "name": "data",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "GetData;",
+      "shortName": "GetData",
+      "return": {
+        "type": "gameInventoryItemData",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "OnHoverOut;",
+      "shortName": "OnHoverOut",
+      "flags": 33284
+    },
+    {
+      "fullName": "OnHoverOver;",
+      "shortName": "OnHoverOver",
+      "flags": 33284
+    },
+    {
+      "fullName": "SetupData;script_ref<InventoryItemData>",
+      "shortName": "SetupData",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "script_ref:gameInventoryItemData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

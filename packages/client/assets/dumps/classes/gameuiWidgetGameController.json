@@ -1,0 +1,203 @@
+{
+  "parent": "worlduiIWidgetGameController",
+  "name": "gameuiWidgetGameController",
+  "flags": 2,
+  "funcs": [
+    {
+      "fullName": "GetBlackboardSystem",
+      "shortName": "GetBlackboardSystem",
+      "return": {
+        "type": "handle:gameBlackboardSystem",
+        "flags": 64
+      },
+      "index": 14609,
+      "flags": 1
+    },
+    {
+      "fullName": "GetOwnerEntity",
+      "shortName": "GetOwnerEntity",
+      "return": {
+        "type": "handle:entEntity",
+        "flags": 64
+      },
+      "index": 14607,
+      "flags": 1
+    },
+    {
+      "fullName": "GetPSMBlackboard",
+      "shortName": "GetPSMBlackboard",
+      "return": {
+        "type": "handle:gameIBlackboard",
+        "flags": 64
+      },
+      "index": 14611,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "playerPuppet",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetPlayerControlledObject",
+      "shortName": "GetPlayerControlledObject",
+      "return": {
+        "type": "handle:gameObject",
+        "flags": 64
+      },
+      "index": 14608,
+      "flags": 1
+    },
+    {
+      "fullName": "GetUIBlackboard",
+      "shortName": "GetUIBlackboard",
+      "return": {
+        "type": "handle:gameIBlackboard",
+        "flags": 64
+      },
+      "index": 14610,
+      "flags": 1
+    },
+    {
+      "fullName": "PlayRumble",
+      "shortName": "PlayRumble",
+      "index": 14613,
+      "flags": 1,
+      "params": [
+        {
+          "type": "inkRumbleStrength",
+          "name": "rStrength",
+          "flags": 128
+        },
+        {
+          "type": "inkRumbleType",
+          "name": "rType",
+          "flags": 128
+        },
+        {
+          "type": "inkRumblePosition",
+          "name": "rPosition",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PlayRumbleByName",
+      "shortName": "PlayRumbleByName",
+      "index": 14614,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "eventName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PlayRumbleLoop",
+      "shortName": "PlayRumbleLoop",
+      "index": 14615,
+      "flags": 1,
+      "params": [
+        {
+          "type": "inkRumbleStrength",
+          "name": "rStrength",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PlaySound",
+      "shortName": "PlaySound",
+      "index": 14612,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "widgetName",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "eventName",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "actionKey",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterDebugCommand",
+      "shortName": "RegisterDebugCommand",
+      "index": 14617,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "debugFunctionName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetCursorContext",
+      "shortName": "SetCursorContext",
+      "index": 14618,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "handle:inkUserData",
+          "name": "data",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "SetCursorOverWidget",
+      "shortName": "SetCursorOverWidget",
+      "index": 14619,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:inkWidget",
+          "name": "widget",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "time",
+          "flags": 1152
+        },
+        {
+          "type": "Bool",
+          "name": "forceSnapping",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "StopRumbleLoop",
+      "shortName": "StopRumbleLoop",
+      "index": 14616,
+      "flags": 1,
+      "params": [
+        {
+          "type": "inkRumbleStrength",
+          "name": "rStrength",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

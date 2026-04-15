@@ -1,0 +1,392 @@
+{
+  "parent": "gameuiHUDGameController",
+  "name": "StaminabarWidgetGameController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkWidgetReference",
+      "name": "staminaControllerRef",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "staminaPercTextPath",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "staminaStatusTextPath",
+      "flags": 4297130017
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "bbPSceneTierEventId",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "bbPStaminaPSMEventId",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "bbAreaZoneEventId",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "combatModeListener",
+      "flags": 4431347744
+    },
+    {
+      "type": "whandle:NameplateBarLogicController",
+      "name": "staminaController",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:inkWidget",
+      "name": "RootWidget",
+      "flags": 4297130016
+    },
+    {
+      "type": "Float",
+      "name": "currentBarValue",
+      "flags": 4297130016
+    },
+    {
+      "type": "gamedataStatPoolType",
+      "name": "currentStatPool",
+      "flags": 4297130016
+    },
+    {
+      "type": "GameplayTier",
+      "name": "sceneTier",
+      "flags": 4297130016
+    },
+    {
+      "type": "gamePSMStamina",
+      "name": "staminaState",
+      "flags": 4297130016
+    },
+    {
+      "type": "gamePSMZones",
+      "name": "zoneState",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:StaminaPoolListener",
+      "name": "staminaPoolListener",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:gameStatsSystem",
+      "name": "statsSystem",
+      "flags": 4431347744
+    },
+    {
+      "type": "Bool",
+      "name": "forceHidden",
+      "flags": 4297130016
+    },
+    {
+      "type": "Float",
+      "name": "staminaRatioEnterCondition",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:PulseAnimation",
+      "name": "pulse",
+      "flags": 4431347744
+    },
+    {
+      "type": "whandle:gameObject",
+      "name": "playerPuppet",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnAction",
+      "shortName": "OnAction",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "gameinputScriptListenerAction",
+          "name": "action",
+          "flags": 128
+        },
+        {
+          "type": "gameinputScriptListenerActionConsumer",
+          "name": "consumer",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnCombatStateChanged",
+      "shortName": "OnCombatStateChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnFocusedCoolPerkActive",
+      "shortName": "OnFocusedCoolPerkActive",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:FocusPerkTriggerd",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnForceHide",
+      "shortName": "OnForceHide",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnForceTierVisibility",
+      "shortName": "OnForceTierVisibility",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "tierVisibility",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnPlayerAttach",
+      "shortName": "OnPlayerAttach",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "playerGameObject",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPlayerDetach",
+      "shortName": "OnPlayerDetach",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "playerGameObject",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnReflexesMasterPerk3Triggerd",
+      "shortName": "OnReflexesMasterPerk3Triggerd",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:ReflexesMasterPerk3Triggerd",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSceneTierChange",
+      "shortName": "OnSceneTierChange",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "argTier",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnStaminaPSMChange",
+      "shortName": "OnStaminaPSMChange",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "arg",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnZoneChange",
+      "shortName": "OnZoneChange",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "arg",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CreateAnimations;",
+      "shortName": "CreateAnimations",
+      "flags": 32900
+    },
+    {
+      "fullName": "EvaluateStaminaBarVisibility;",
+      "shortName": "EvaluateStaminaBarVisibility",
+      "flags": 33284
+    },
+    {
+      "fullName": "IsInCombat;",
+      "shortName": "IsInCombat",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "RegisterPSMListeners;GameObject",
+      "shortName": "RegisterPSMListeners",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "playerPuppet",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ShouldHide;",
+      "shortName": "ShouldHide",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "UnregisterPSMListeners;GameObject",
+      "shortName": "UnregisterPSMListeners",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "playerPuppet",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateStaminaLevelWarningFluffTexts;gamePSMStamina",
+      "shortName": "UpdateStaminaLevelWarningFluffTexts",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "gamePSMStamina",
+          "name": "staminaState",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateStaminaValue;FloatFloatFloatgamedataStatPoolType",
+      "shortName": "UpdateStaminaValue",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Float",
+          "name": "oldValue",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "newValue",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "percToPoints",
+          "flags": 128
+        },
+        {
+          "type": "gamedataStatPoolType",
+          "name": "statPoolType",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

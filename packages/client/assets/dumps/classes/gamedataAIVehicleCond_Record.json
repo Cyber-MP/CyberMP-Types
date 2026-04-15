@@ -1,0 +1,185 @@
+{
+  "parent": "gamedataAIActionSubCondition_Record",
+  "name": "gamedataAIVehicleCond_Record",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "ActivePassangers",
+      "shortName": "ActivePassangers",
+      "return": {
+        "type": "Vector2",
+        "flags": 64
+      },
+      "index": 4931,
+      "flags": 1
+    },
+    {
+      "fullName": "CurrentSpeed",
+      "shortName": "CurrentSpeed",
+      "return": {
+        "type": "Vector2",
+        "flags": 64
+      },
+      "index": 4932,
+      "flags": 1
+    },
+    {
+      "fullName": "DriverCheck",
+      "shortName": "DriverCheck",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 4933,
+      "flags": 1
+    },
+    {
+      "fullName": "FreeSlots",
+      "shortName": "FreeSlots",
+      "index": 4926,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataVehicleSeat_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "FreeSlotsContains",
+      "shortName": "FreeSlotsContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 4930,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataVehicleSeat_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetFreeSlotsCount",
+      "shortName": "GetFreeSlotsCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 4927,
+      "flags": 1
+    },
+    {
+      "fullName": "GetFreeSlotsItem",
+      "shortName": "GetFreeSlotsItem",
+      "return": {
+        "type": "whandle:gamedataVehicleSeat_Record",
+        "flags": 64
+      },
+      "index": 4928,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetFreeSlotsItemHandle",
+      "shortName": "GetFreeSlotsItemHandle",
+      "return": {
+        "type": "handle:gamedataVehicleSeat_Record",
+        "flags": 64
+      },
+      "index": 4929,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetHasTagsCount",
+      "shortName": "GetHasTagsCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 4923,
+      "flags": 1
+    },
+    {
+      "fullName": "GetHasTagsItem",
+      "shortName": "GetHasTagsItem",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "index": 4924,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HasTags",
+      "shortName": "HasTags",
+      "return": {
+        "type": "array:CName",
+        "flags": 64
+      },
+      "index": 4922,
+      "flags": 1
+    },
+    {
+      "fullName": "HasTagsContains",
+      "shortName": "HasTagsContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 4925,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Vehicle",
+      "shortName": "Vehicle",
+      "return": {
+        "type": "whandle:gamedataAIActionTarget_Record",
+        "flags": 64
+      },
+      "index": 4920,
+      "flags": 1
+    },
+    {
+      "fullName": "VehicleHandle",
+      "shortName": "VehicleHandle",
+      "return": {
+        "type": "handle:gamedataAIActionTarget_Record",
+        "flags": 64
+      },
+      "index": 4921,
+      "flags": 1
+    }
+  ]
+}

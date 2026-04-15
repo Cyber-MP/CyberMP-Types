@@ -1,0 +1,287 @@
+{
+  "parent": "MasterDeviceInkGameControllerBase",
+  "name": "TerminalInkGameControllerBase",
+  "flags": 4,
+  "props": [
+    {
+      "type": "TweakDBID",
+      "name": "layoutID",
+      "flags": 4297195553
+    },
+    {
+      "type": "CName",
+      "name": "currentLayoutLibraryID",
+      "flags": 4297195552
+    },
+    {
+      "type": "whandle:inkWidget",
+      "name": "mainLayout",
+      "flags": 4297195552
+    },
+    {
+      "type": "array:gamePersistentID",
+      "name": "currentlyActiveDevices",
+      "flags": 6583091232
+    },
+    {
+      "type": "Bool",
+      "name": "buttonVisibility",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:inkVideoWidget",
+      "name": "mainDisplayWidget",
+      "flags": 4297130016
+    },
+    {
+      "type": "String",
+      "name": "terminalTitle",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "onGlitchingStateChangedListener",
+      "flags": 4431347744
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnMainLayoutSpawned",
+      "shortName": "OnMainLayoutSpawned",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkWidget",
+          "name": "widget",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "userData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnReturnCallback",
+      "shortName": "OnReturnCallback",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "GetMainLayoutController;",
+      "shortName": "GetMainLayoutController",
+      "return": {
+        "type": "handle:TerminalMainLayoutWidgetController",
+        "flags": 64
+      },
+      "flags": 33280
+    },
+    {
+      "fullName": "GetOwner;",
+      "shortName": "GetOwner",
+      "return": {
+        "type": "handle:InteractiveMasterDevice",
+        "flags": 64
+      },
+      "flags": 33024
+    },
+    {
+      "fullName": "GetTerminalTitle;",
+      "shortName": "GetTerminalTitle",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "InitializeMainLayout;",
+      "shortName": "InitializeMainLayout",
+      "flags": 33024
+    },
+    {
+      "fullName": "IsMainLayoutInitialized;",
+      "shortName": "IsMainLayoutInitialized",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33028
+    },
+    {
+      "fullName": "PlayVideo;ResRefBoolCName",
+      "shortName": "PlayVideo",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "redResourceReferenceScriptToken",
+          "name": "videoPath",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "looped",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "audioEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Refresh;EDeviceStatus",
+      "shortName": "Refresh",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "EDeviceStatus",
+          "name": "state",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterBlackboardCallbacks;IBlackboard",
+      "shortName": "RegisterBlackboardCallbacks",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "handle:gameIBlackboard",
+          "name": "blackboard",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterReturnButtonCallback;",
+      "shortName": "RegisterReturnButtonCallback",
+      "flags": 33028
+    },
+    {
+      "fullName": "ResolveBreadcrumbLevel;",
+      "shortName": "ResolveBreadcrumbLevel",
+      "flags": 33024
+    },
+    {
+      "fullName": "SetupTerminalTitle;",
+      "shortName": "SetupTerminalTitle",
+      "flags": 32900
+    },
+    {
+      "fullName": "SetupWidgets;",
+      "shortName": "SetupWidgets",
+      "flags": 33024
+    },
+    {
+      "fullName": "StartGlitchingScreen;GlitchData",
+      "shortName": "StartGlitchingScreen",
+      "flags": 32896,
+      "params": [
+        {
+          "type": "GlitchData",
+          "name": "glitchData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "StopGlitchingScreen;",
+      "shortName": "StopGlitchingScreen",
+      "flags": 32896
+    },
+    {
+      "fullName": "StopVideo;",
+      "shortName": "StopVideo",
+      "flags": 33284
+    },
+    {
+      "fullName": "TurnOff;",
+      "shortName": "TurnOff",
+      "flags": 33028
+    },
+    {
+      "fullName": "TurnOn;",
+      "shortName": "TurnOn",
+      "flags": 33028
+    },
+    {
+      "fullName": "UnRegisterBlackboardCallbacks;IBlackboard",
+      "shortName": "UnRegisterBlackboardCallbacks",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "handle:gameIBlackboard",
+          "name": "blackboard",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateBreadCrumbBar;script_ref<SBreadCrumbUpdateData>",
+      "shortName": "UpdateBreadCrumbBar",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "script_ref:SBreadCrumbUpdateData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateDeviceWidgets;script_ref<array<SDeviceWidgetPackage>>",
+      "shortName": "UpdateDeviceWidgets",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "script_ref:array:SDeviceWidgetPackage",
+          "name": "widgetsData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateReturnButtonVisibility;",
+      "shortName": "UpdateReturnButtonVisibility",
+      "flags": 33028
+    },
+    {
+      "fullName": "UpdateThumbnailWidgets;script_ref<array<SThumbnailWidgetPackage>>",
+      "shortName": "UpdateThumbnailWidgets",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "script_ref:array:SThumbnailWidgetPackage",
+          "name": "widgetsData",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

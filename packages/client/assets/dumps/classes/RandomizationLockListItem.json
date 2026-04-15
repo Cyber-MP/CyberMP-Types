@@ -1,0 +1,188 @@
+{
+  "parent": "inkWidgetLogicController",
+  "name": "RandomizationLockListItem",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkWidgetReference",
+      "name": "checker",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "lockIcon",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "hitArea",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "lockName",
+      "flags": 4297130017
+    },
+    {
+      "type": "whandle:inkDiscreteNavigationController",
+      "name": "navigationController",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:gamedataCharacterRandomizationCategory_Record",
+      "name": "lockCategory",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isHovered",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isInteractable",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:inkWidget",
+      "name": "rootWidget",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnHoverOut",
+      "shortName": "OnHoverOut",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnHoverOver",
+      "shortName": "OnHoverOver",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "EnableLock;Bool",
+      "shortName": "EnableLock",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "enable",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetLockCategory;",
+      "shortName": "GetLockCategory",
+      "return": {
+        "type": "handle:gamedataCharacterRandomizationCategory_Record",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "IsLockEnabled;",
+      "shortName": "IsLockEnabled",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "IsLockHovered;",
+      "shortName": "IsLockHovered",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "SetLockCategory;CharacterRandomizationCategoryUI_Record",
+      "shortName": "SetLockCategory",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "whandle:gamedataCharacterRandomizationCategoryUI_Record",
+          "name": "lockCategory",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetLockInteractable;Bool",
+      "shortName": "SetLockInteractable",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "interactable",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetLockState;CName",
+      "shortName": "SetLockState",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "CName",
+          "name": "state",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SwitchLock;",
+      "shortName": "SwitchLock",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284
+    }
+  ]
+}

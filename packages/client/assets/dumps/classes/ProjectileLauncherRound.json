@@ -1,0 +1,832 @@
+{
+  "parent": "gameItemObject",
+  "name": "ProjectileLauncherRound",
+  "flags": 4,
+  "props": [
+    {
+      "type": "handle:gameprojectileComponent",
+      "name": "projectileComponent",
+      "flags": 4431413280
+    },
+    {
+      "type": "handle:ResourceLibraryComponent",
+      "name": "resourceLibraryComponent",
+      "flags": 4431413280
+    },
+    {
+      "type": "whandle:gameObject",
+      "name": "user",
+      "flags": 4297195552
+    },
+    {
+      "type": "whandle:gameObject",
+      "name": "projectile",
+      "flags": 4297195552
+    },
+    {
+      "type": "whandle:gameweaponObject",
+      "name": "weapon",
+      "flags": 4297195552
+    },
+    {
+      "type": "Vector4",
+      "name": "projectileSpawnPoint",
+      "flags": 4297195552
+    },
+    {
+      "type": "gamedataProjectileLaunchMode",
+      "name": "launchMode",
+      "flags": 4297195552
+    },
+    {
+      "type": "Float",
+      "name": "initialLaunchVelocity",
+      "flags": 4297195552
+    },
+    {
+      "type": "gameItemID",
+      "name": "installedProjectile",
+      "flags": 4297195552
+    },
+    {
+      "type": "ELauncherActionType",
+      "name": "actionType",
+      "flags": 4297195552
+    },
+    {
+      "type": "handle:gamedataAttack_Record",
+      "name": "attackRecord",
+      "flags": 4431413280
+    },
+    {
+      "type": "gameDelayID",
+      "name": "releaseRequestDelayID",
+      "flags": 4297195552
+    },
+    {
+      "type": "gameDelayID",
+      "name": "detonateRequestDelayID",
+      "flags": 4297195552
+    },
+    {
+      "type": "CName",
+      "name": "projectileTrailName",
+      "flags": 4297195552
+    },
+    {
+      "type": "handle:ProjectileLauncherRoundCollisionEvaluator",
+      "name": "projectileCollisionEvaluator",
+      "flags": 4431413280
+    },
+    {
+      "type": "Bool",
+      "name": "isAlive",
+      "flags": 4297195552
+    },
+    {
+      "type": "Bool",
+      "name": "isSinking",
+      "flags": 4297195552
+    },
+    {
+      "type": "Float",
+      "name": "waterHeight",
+      "flags": 4297195552
+    },
+    {
+      "type": "Float",
+      "name": "deepWaterDepth",
+      "flags": 4297195552
+    },
+    {
+      "type": "Float",
+      "name": "sinkingDetonationDelay",
+      "flags": 4297195552
+    },
+    {
+      "type": "Float",
+      "name": "waterSurfaceImpactImpulseRadius",
+      "flags": 4297195552
+    },
+    {
+      "type": "Float",
+      "name": "waterSurfaceImpactImpulseStrength",
+      "flags": 4297195552
+    },
+    {
+      "type": "Float",
+      "name": "waterDetonationImpulseRadius",
+      "flags": 4297195552
+    },
+    {
+      "type": "Float",
+      "name": "waterDetonationImpulseStrength",
+      "flags": 4297195552
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnCollision",
+      "shortName": "OnCollision",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameprojectileHitEvent",
+          "name": "eventData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnMaxDetonationTimeReached",
+      "shortName": "OnMaxDetonationTimeReached",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:ProjectileLauncherRoundDetonationDelayEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnMaxLifetimeReached",
+      "shortName": "OnMaxLifetimeReached",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:ProjectileDelayEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnProjectileInitialize",
+      "shortName": "OnProjectileInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameprojectileSetUpEvent",
+          "name": "eventData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRequestComponents",
+      "shortName": "OnRequestComponents",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "entEntityRequestComponentsInterface",
+          "name": "ri",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnShoot",
+      "shortName": "OnShoot",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameprojectileShootEvent",
+          "name": "eventData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnShootTarget",
+      "shortName": "OnShootTarget",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameprojectileShootTargetEvent",
+          "name": "eventData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnTakeControl",
+      "shortName": "OnTakeControl",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "entEntityResolveComponentsInterface",
+          "name": "ri",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnTick",
+      "shortName": "OnTick",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameprojectileTickEvent",
+          "name": "eventData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AddWaterImpulsesOnDetonation;Vector4Int32",
+      "shortName": "AddWaterImpulsesOnDetonation",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "Vector4",
+          "name": "position",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "numImpulses",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "BreakVisualEffectLoop;CName",
+      "shortName": "BreakVisualEffectLoop",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "CName",
+          "name": "effectName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CollisionActionNameToEnum;CName",
+      "shortName": "CollisionActionNameToEnum",
+      "return": {
+        "type": "gamedataProjectileOnCollisionAction",
+        "flags": 64
+      },
+      "flags": 33028,
+      "params": [
+        {
+          "type": "CName",
+          "name": "collisionAction",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CollisionStimTypeNameToEnum;CName",
+      "shortName": "CollisionStimTypeNameToEnum",
+      "return": {
+        "type": "gamedataStimType",
+        "flags": 64
+      },
+      "flags": 33028,
+      "params": [
+        {
+          "type": "CName",
+          "name": "onCollisionStimType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CreateCustomTickEventWithDuration;Float",
+      "shortName": "CreateCustomTickEventWithDuration",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "Float",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CreateDelayEvent;Float",
+      "shortName": "CreateDelayEvent",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "Float",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CreateDetonationDelayEvent;Float",
+      "shortName": "CreateDetonationDelayEvent",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "Float",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CurvedLaunch;gameprojectileShootEventGameObjectIPlacedComponentFloatFloatFloatFloatFloatFloatFloatFloatFloat",
+      "shortName": "CurvedLaunch",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gameprojectileShootEvent",
+          "name": "eventData",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameObject",
+          "name": "targetObject",
+          "flags": 1152
+        },
+        {
+          "type": "handle:entIPlacedComponent",
+          "name": "targetComponent",
+          "flags": 1152
+        },
+        {
+          "type": "Float",
+          "name": "startVelocity",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "linearTimeRatio",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "interpolationTimeRatio",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "returnTimeMargin",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "bendTimeRatio",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "bendFactor",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "halfLeanAngle",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "endLeanAngle",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "angleInterpolationDuration",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CurvedLaunchToTarget;gameprojectileShootEventGameObjectIPlacedComponent",
+      "shortName": "CurvedLaunchToTarget",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gameprojectileShootEvent",
+          "name": "eventData",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameObject",
+          "name": "targetObject",
+          "flags": 1152
+        },
+        {
+          "type": "handle:entIPlacedComponent",
+          "name": "targetComponent",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "EvaluateStimBroadcasting;gamedataStimType",
+      "shortName": "EvaluateStimBroadcasting",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "gamedataStimType",
+          "name": "stimToSend",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ExecuteGameEffect;Vector4",
+      "shortName": "ExecuteGameEffect",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "Vector4",
+          "name": "projectilePosition",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GeneralLaunchSetup;gameprojectileShootEvent",
+      "shortName": "GeneralLaunchSetup",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gameprojectileShootEvent",
+          "name": "eventData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetBool;script_ref<String>",
+      "shortName": "GetBool",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33028,
+      "params": [
+        {
+          "type": "script_ref:String",
+          "name": "param",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetCName;script_ref<String>",
+      "shortName": "GetCName",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 33028,
+      "params": [
+        {
+          "type": "script_ref:String",
+          "name": "param",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetFloat;script_ref<String>",
+      "shortName": "GetFloat",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 33028,
+      "params": [
+        {
+          "type": "script_ref:String",
+          "name": "param",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetInt;script_ref<String>",
+      "shortName": "GetInt",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 33028,
+      "params": [
+        {
+          "type": "script_ref:String",
+          "name": "param",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetObject;script_ref<gameprojectileHitInstance>",
+      "shortName": "GetObject",
+      "return": {
+        "type": "whandle:gameObject",
+        "flags": 64
+      },
+      "flags": 33028,
+      "params": [
+        {
+          "type": "script_ref:gameprojectileHitInstance",
+          "name": "hitInstance",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetObjectWorldPosition;GameObject",
+      "shortName": "GetObjectWorldPosition",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "flags": 33028,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "object",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetString;script_ref<String>",
+      "shortName": "GetString",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "flags": 33028,
+      "params": [
+        {
+          "type": "script_ref:String",
+          "name": "param",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetVector3;script_ref<String>",
+      "shortName": "GetVector3",
+      "return": {
+        "type": "Vector3",
+        "flags": 64
+      },
+      "flags": 33028,
+      "params": [
+        {
+          "type": "script_ref:String",
+          "name": "param",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HasTrajectory;",
+      "shortName": "HasTrajectory",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33028
+    },
+    {
+      "fullName": "KillVisualEffect;CName",
+      "shortName": "KillVisualEffect",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "CName",
+          "name": "effectName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "LaunchModeNameToEnum;CName",
+      "shortName": "LaunchModeNameToEnum",
+      "return": {
+        "type": "gamedataProjectileLaunchMode",
+        "flags": 64
+      },
+      "flags": 33028,
+      "params": [
+        {
+          "type": "CName",
+          "name": "launchModeName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "LinearLaunch;gameprojectileShootEventFloat",
+      "shortName": "LinearLaunch",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gameprojectileShootEvent",
+          "name": "eventData",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "startVelocity",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ParabolicLaunch;gameprojectileShootEventFloatFloatFloat",
+      "shortName": "ParabolicLaunch",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gameprojectileShootEvent",
+          "name": "eventData",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "gravitySimulation",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "startVelocity",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "energyLossFactorAfterCollision",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Release;",
+      "shortName": "Release",
+      "flags": 33028
+    },
+    {
+      "fullName": "SetAttackRecordBasedOnAction;",
+      "shortName": "SetAttackRecordBasedOnAction",
+      "flags": 33028
+    },
+    {
+      "fullName": "SetCollisionAction;",
+      "shortName": "SetCollisionAction",
+      "flags": 33028
+    },
+    {
+      "fullName": "SetCurrentlyInstalledRound;",
+      "shortName": "SetCurrentlyInstalledRound",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33028
+    },
+    {
+      "fullName": "SetLaunchModeBasedOnAction;",
+      "shortName": "SetLaunchModeBasedOnAction",
+      "flags": 33028
+    },
+    {
+      "fullName": "SetLaunchVelocityBasedOnAction;",
+      "shortName": "SetLaunchVelocityBasedOnAction",
+      "flags": 33028
+    },
+    {
+      "fullName": "SetProjectileDetonationTime;",
+      "shortName": "SetProjectileDetonationTime",
+      "flags": 33028
+    },
+    {
+      "fullName": "SetProjectileLauncherAction;",
+      "shortName": "SetProjectileLauncherAction",
+      "return": {
+        "type": "ELauncherActionType",
+        "flags": 64
+      },
+      "flags": 33028
+    },
+    {
+      "fullName": "SetProjectileLifetime;",
+      "shortName": "SetProjectileLifetime",
+      "flags": 33028
+    },
+    {
+      "fullName": "SetProjectileTrailEffect;",
+      "shortName": "SetProjectileTrailEffect",
+      "flags": 33028
+    },
+    {
+      "fullName": "SpawnVisualEffect;CNameCName",
+      "shortName": "SpawnVisualEffect",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "CName",
+          "name": "effectName",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "eventTag",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "StopProjectile;",
+      "shortName": "StopProjectile",
+      "flags": 33028
+    },
+    {
+      "fullName": "TriggerActiveStimuliWithLifetime;gamedataStimTypeFloatFloat",
+      "shortName": "TriggerActiveStimuliWithLifetime",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "gamedataStimType",
+          "name": "stimToSend",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "lifetime",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "radius",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TriggerSingleStimuli;FloatgamedataStimType",
+      "shortName": "TriggerSingleStimuli",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "Float",
+          "name": "radius",
+          "flags": 128
+        },
+        {
+          "type": "gamedataStimType",
+          "name": "stimToSend",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "WeaponIsCharged;",
+      "shortName": "WeaponIsCharged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41220
+    }
+  ]
+}

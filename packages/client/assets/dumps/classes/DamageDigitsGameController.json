@@ -1,0 +1,314 @@
+{
+  "parent": "gameuiProjectedHUDGameController",
+  "name": "DamageDigitsGameController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "Int32",
+      "name": "maxVisible",
+      "flags": 4297326625
+    },
+    {
+      "type": "Int32",
+      "name": "maxAccumulatedVisible",
+      "flags": 4297326625
+    },
+    {
+      "type": "whandle:gameObject",
+      "name": "realOwner",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:inkScriptFIFOQueue",
+      "name": "digitsQueue",
+      "flags": 4431347744
+    },
+    {
+      "type": "array:whandle:DamageDigitLogicController",
+      "name": "individualControllerArray",
+      "flags": 6583025696
+    },
+    {
+      "type": "array:AccumulatedDamageDigitsNode",
+      "name": "accumulatedControllerArray",
+      "flags": 6583025696
+    },
+    {
+      "type": "Bool",
+      "name": "showDigitsIndividual",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "showDigitsAccumulated",
+      "flags": 4297130016
+    },
+    {
+      "type": "gameuiDamageDigitsStickingMode",
+      "name": "damageDigitsStickingMode",
+      "flags": 4297130016
+    },
+    {
+      "type": "Int32",
+      "name": "spawnedDigits",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "damageListBlackboardId",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "damageDigitsModeBlackboardId",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "damageDigitsStickingModeBlackboardId",
+      "flags": 4431347744
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnAccumulatedDamageDigitSpawned",
+      "shortName": "OnAccumulatedDamageDigitSpawned",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkWidget",
+          "name": "widget",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "userData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnDamageAdded",
+      "shortName": "OnDamageAdded",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Variant",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnDamageDigitSpawned",
+      "shortName": "OnDamageDigitSpawned",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkWidget",
+          "name": "widget",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "userData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnDamageDigitsModeChanged",
+      "shortName": "OnDamageDigitsModeChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Variant",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnDigitsStickingModeChanged",
+      "shortName": "OnDigitsStickingModeChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Variant",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnHideAccumulatedDigit",
+      "shortName": "OnHideAccumulatedDigit",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "whandle:inkWidget",
+          "name": "digitWidget",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnHideDigit",
+      "shortName": "OnHideDigit",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "whandle:inkWidget",
+          "name": "digitWidget",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnPlayerAttach",
+      "shortName": "OnPlayerAttach",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "player",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnVehicleTirePuncturedEvent",
+      "shortName": "OnVehicleTirePuncturedEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:vehicleVehicleTirePuncturedEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CreateAccumulatedDamageDigitsArray;",
+      "shortName": "CreateAccumulatedDamageDigitsArray",
+      "flags": 32900
+    },
+    {
+      "fullName": "CreateDigitsQueue;",
+      "shortName": "CreateDigitsQueue",
+      "flags": 32900
+    },
+    {
+      "fullName": "IsCriticalHit;script_ref<DamageInfo>",
+      "shortName": "IsCriticalHit",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "script_ref:gameuiDamageInfo",
+          "name": "damageInfo",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsDamageOverTime;script_ref<DamageInfo>",
+      "shortName": "IsDamageOverTime",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:gameuiDamageInfo",
+          "name": "damageInfo",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterDigitsToQueue;",
+      "shortName": "RegisterDigitsToQueue",
+      "flags": 32900
+    },
+    {
+      "fullName": "ShowDamageFloater;script_ref<DamageInfo>",
+      "shortName": "ShowDamageFloater",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:gameuiDamageInfo",
+          "name": "damageInfo",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateDamageDigitsStickingMode;",
+      "shortName": "UpdateDamageDigitsStickingMode",
+      "flags": 32900
+    }
+  ]
+}

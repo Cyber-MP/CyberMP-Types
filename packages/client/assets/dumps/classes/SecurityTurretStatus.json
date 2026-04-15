@@ -1,0 +1,106 @@
+{
+  "parent": "BaseDeviceStatus",
+  "name": "SecurityTurretStatus",
+  "flags": 4,
+  "funcs": [
+    {
+      "fullName": "SecurityTurretStatus::IsAvailable;ScriptableDeviceComponentPS",
+      "shortName": "IsAvailable",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:ScriptableDeviceComponentPS",
+          "name": "device",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SecurityTurretStatus::IsClearanceValid;Clearance",
+      "shortName": "IsClearanceValid",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gamedeviceClearance",
+          "name": "clearance",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SecurityTurretStatus::IsContextValid;script_ref<GetActionsContext>",
+      "shortName": "IsContextValid",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "script_ref:gameGetActionsContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SecurityTurretStatus::IsDefaultConditionMet;ScriptableDeviceComponentPSscript_ref<GetActionsContext>",
+      "shortName": "IsDefaultConditionMet",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:ScriptableDeviceComponentPS",
+          "name": "device",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:gameGetActionsContext",
+          "name": "context",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetCurrentDisplayString",
+      "shortName": "GetCurrentDisplayString",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "GetTweakDBChoiceRecord;",
+      "shortName": "GetTweakDBChoiceRecord",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "flags": 33280
+    },
+    {
+      "fullName": "SetProperties;ScriptableDeviceComponentPS",
+      "shortName": "SetProperties",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "handle:ScriptableDeviceComponentPS",
+          "name": "deviceRef",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

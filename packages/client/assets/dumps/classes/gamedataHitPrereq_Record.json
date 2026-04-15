@@ -1,0 +1,131 @@
+{
+  "parent": "gamedataIPrereq_Record",
+  "name": "gamedataHitPrereq_Record",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "CallbackType",
+      "shortName": "CallbackType",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "index": 5797,
+      "flags": 1
+    },
+    {
+      "fullName": "Conditions",
+      "shortName": "Conditions",
+      "index": 5800,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataHitPrereqCondition_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "ConditionsContains",
+      "shortName": "ConditionsContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 5804,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataHitPrereqCondition_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetConditionsCount",
+      "shortName": "GetConditionsCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 5801,
+      "flags": 1
+    },
+    {
+      "fullName": "GetConditionsItem",
+      "shortName": "GetConditionsItem",
+      "return": {
+        "type": "whandle:gamedataHitPrereqCondition_Record",
+        "flags": 64
+      },
+      "index": 5802,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetConditionsItemHandle",
+      "shortName": "GetConditionsItemHandle",
+      "return": {
+        "type": "handle:gamedataHitPrereqCondition_Record",
+        "flags": 64
+      },
+      "index": 5803,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IgnoreSelfInflictedPressureWave",
+      "shortName": "IgnoreSelfInflictedPressureWave",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 5806,
+      "flags": 1
+    },
+    {
+      "fullName": "IsSynchronous",
+      "shortName": "IsSynchronous",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 5805,
+      "flags": 1
+    },
+    {
+      "fullName": "PipelineStage",
+      "shortName": "PipelineStage",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "index": 5799,
+      "flags": 1
+    },
+    {
+      "fullName": "PipelineType",
+      "shortName": "PipelineType",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "index": 5798,
+      "flags": 1
+    }
+  ]
+}

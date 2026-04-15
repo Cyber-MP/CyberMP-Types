@@ -1,0 +1,72 @@
+{
+  "parent": "ScriptableDeviceComponentPS",
+  "name": "BaseDestructibleControllerPS",
+  "flags": 1028,
+  "props": [
+    {
+      "type": "Bool",
+      "name": "destroyed",
+      "flags": 4297195552
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnInstantiated",
+      "shortName": "OnInstantiated",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "GameAttached;",
+      "shortName": "GameAttached",
+      "flags": 33024
+    },
+    {
+      "fullName": "Initialize;",
+      "shortName": "Initialize",
+      "flags": 33024
+    },
+    {
+      "fullName": "IsDestroyed;",
+      "shortName": "IsDestroyed",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "IsMasterDestroyed;",
+      "shortName": "IsMasterDestroyed",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "OnMasterDeviceDestroyed;MasterDeviceDestroyed",
+      "shortName": "OnMasterDeviceDestroyed",
+      "return": {
+        "type": "EntityNotificationType",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:MasterDeviceDestroyed",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetDestroyed;",
+      "shortName": "SetDestroyed",
+      "flags": 33284
+    }
+  ]
+}

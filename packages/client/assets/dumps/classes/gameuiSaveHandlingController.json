@@ -1,0 +1,167 @@
+{
+  "parent": "gameuiMenuGameController",
+  "name": "gameuiSaveHandlingController",
+  "flags": 2,
+  "funcs": [
+    {
+      "fullName": "DeleteSavedGame",
+      "shortName": "DeleteSavedGame",
+      "index": 14726,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "saveId",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsGameSavedNotificationActive",
+      "shortName": "IsGameSavedNotificationActive",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 14733,
+      "flags": 1
+    },
+    {
+      "fullName": "IsSaveFailedNotificationActive",
+      "shortName": "IsSaveFailedNotificationActive",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 14732,
+      "flags": 1
+    },
+    {
+      "fullName": "IsTransferSavedExportSupported",
+      "shortName": "IsTransferSavedExportSupported",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 14727,
+      "flags": 1
+    },
+    {
+      "fullName": "IsTransferSavedImportSupported",
+      "shortName": "IsTransferSavedImportSupported",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 14728,
+      "flags": 1
+    },
+    {
+      "fullName": "LoadModdedSave",
+      "shortName": "LoadModdedSave",
+      "index": 14735,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "saveId",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "LoadSaveInGame",
+      "shortName": "LoadSaveInGame",
+      "index": 14734,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "saveId",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OverrideSavedGame",
+      "shortName": "OverrideSavedGame",
+      "index": 14738,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "saveId",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "showXbCompatWarn",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "PreSpawnInitialLoadingScreen",
+      "shortName": "PreSpawnInitialLoadingScreen",
+      "index": 14737,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Uint64",
+          "name": "tweakID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RequestGameSavedNotification",
+      "shortName": "RequestGameSavedNotification",
+      "index": 14731,
+      "flags": 1
+    },
+    {
+      "fullName": "RequestSaveFailedNotification",
+      "shortName": "RequestSaveFailedNotification",
+      "index": 14730,
+      "flags": 1
+    },
+    {
+      "fullName": "SetNextInitialLoadingScreen",
+      "shortName": "SetNextInitialLoadingScreen",
+      "index": 14736,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Uint64",
+          "name": "tweakID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TransferSavedGame",
+      "shortName": "TransferSavedGame",
+      "index": 14729,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:IScriptable",
+          "name": "scriptableData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ShowSavingLockedNotification;script_ref<array<gameSaveLock>>",
+      "shortName": "ShowSavingLockedNotification",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "script_ref:array:gameSaveLock",
+          "name": "locks",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

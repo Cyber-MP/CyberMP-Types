@@ -1,0 +1,94 @@
+{
+  "parent": "VendingMachineInkGameController",
+  "name": "WeaponMachineInkGameController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "whandle:WeaponVendorActionWidgetController",
+      "name": "buttonRef",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnActionWidgetSpawned",
+      "shortName": "OnActionWidgetSpawned",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkWidget",
+          "name": "widget",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "userData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUpdateStatus",
+      "shortName": "OnUpdateStatus",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Variant",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetOwner;",
+      "shortName": "GetOwner",
+      "return": {
+        "type": "handle:WeaponVendingMachine",
+        "flags": 64
+      },
+      "flags": 33024
+    },
+    {
+      "fullName": "NoMoney;",
+      "shortName": "NoMoney",
+      "flags": 32900
+    },
+    {
+      "fullName": "Processing;",
+      "shortName": "Processing",
+      "flags": 32900
+    },
+    {
+      "fullName": "Refresh;EDeviceStatus",
+      "shortName": "Refresh",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "EDeviceStatus",
+          "name": "state",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateActionWidgets;script_ref<array<SActionWidgetPackage>>",
+      "shortName": "UpdateActionWidgets",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "script_ref:array:SActionWidgetPackage",
+          "name": "widgetsData",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

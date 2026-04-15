@@ -1,0 +1,159 @@
+{
+  "parent": "JournalEntryListItemController",
+  "name": "MessangerReplyItemRenderer",
+  "flags": 4,
+  "props": [
+    {
+      "type": "Bool",
+      "name": "selectedState",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isQuestImportant",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isActive",
+      "flags": 4297130016
+    },
+    {
+      "type": "CName",
+      "name": "stateDefault",
+      "flags": 4297130017
+    },
+    {
+      "type": "CName",
+      "name": "stateSelected",
+      "flags": 4297130017
+    },
+    {
+      "type": "CName",
+      "name": "stateQuestDefault",
+      "flags": 4297130017
+    },
+    {
+      "type": "CName",
+      "name": "stateQuestSelected",
+      "flags": 4297130017
+    },
+    {
+      "type": "CName",
+      "name": "stateDisabled",
+      "flags": 4297130017
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnButtonStateChanged",
+      "shortName": "OnButtonStateChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "whandle:inkButtonController",
+          "name": "controller",
+          "flags": 128
+        },
+        {
+          "type": "inkEButtonState",
+          "name": "oldState",
+          "flags": 128
+        },
+        {
+          "type": "inkEButtonState",
+          "name": "newState",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnDeselected",
+      "shortName": "OnDeselected",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "whandle:inkListItemController",
+          "name": "parent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnSelected",
+      "shortName": "OnSelected",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "whandle:inkListItemController",
+          "name": "parent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "AnimateSelection;",
+      "shortName": "AnimateSelection",
+      "flags": 33284
+    },
+    {
+      "fullName": "OnJournalEntryUpdated;JournalEntryIScriptable",
+      "shortName": "OnJournalEntryUpdated",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "whandle:gameJournalEntry",
+          "name": "entry",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "extraData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetActive;Bool",
+      "shortName": "SetActive",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "active",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "parent": "gamedataStat_Record",
+  "name": "gamedataAttribute_Record",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "GetProficienciesCount",
+      "shortName": "GetProficienciesCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 4166,
+      "flags": 1
+    },
+    {
+      "fullName": "GetProficienciesItem",
+      "shortName": "GetProficienciesItem",
+      "return": {
+        "type": "whandle:gamedataProficiency_Record",
+        "flags": 64
+      },
+      "index": 4167,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetProficienciesItemHandle",
+      "shortName": "GetProficienciesItemHandle",
+      "return": {
+        "type": "handle:gamedataProficiency_Record",
+        "flags": 64
+      },
+      "index": 4168,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Proficiencies",
+      "shortName": "Proficiencies",
+      "index": 4165,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataProficiency_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "ProficienciesContains",
+      "shortName": "ProficienciesContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 4169,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataProficiency_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "parent": "gameuiWidgetGameController",
+  "name": "gameuiHUDGameController",
+  "flags": 2,
+  "props": [
+    {
+      "type": "handle:inkanimDefinition",
+      "name": "showAnimDef",
+      "flags": 4431413280
+    },
+    {
+      "type": "handle:inkanimDefinition",
+      "name": "hideAnimDef",
+      "flags": 4431413280
+    },
+    {
+      "type": "CName",
+      "name": "showAnimationName",
+      "flags": 4297130016
+    },
+    {
+      "type": "CName",
+      "name": "hideAnimationName",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "moduleShown",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "showAnimProxy",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "hideAnimProxy",
+      "flags": 4431347744
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "ToggleVisibility",
+      "shortName": "ToggleVisibility",
+      "index": 14847,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "value",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "isSkippingInOutAnimation",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnHideAnimationFinished",
+      "shortName": "OnHideAnimationFinished",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkanimProxy",
+          "name": "anim",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPlayInitFoldingAnimFinished",
+      "shortName": "OnPlayInitFoldingAnimFinished",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkanimProxy",
+          "name": "anim",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CreateContextChangeAnimations;",
+      "shortName": "CreateContextChangeAnimations",
+      "flags": 32900
+    },
+    {
+      "fullName": "GetIntroAnimation;",
+      "shortName": "GetIntroAnimation",
+      "return": {
+        "type": "handle:inkanimDefinition",
+        "flags": 64
+      },
+      "flags": 34304
+    },
+    {
+      "fullName": "GetOutroAnimation;",
+      "shortName": "GetOutroAnimation",
+      "return": {
+        "type": "handle:inkanimDefinition",
+        "flags": 64
+      },
+      "flags": 34304
+    },
+    {
+      "fullName": "HideRequest;",
+      "shortName": "HideRequest",
+      "flags": 33028
+    },
+    {
+      "fullName": "IsPlayingMultiplayer;",
+      "shortName": "IsPlayingMultiplayer",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33028
+    },
+    {
+      "fullName": "PlayInitFoldingAnim;",
+      "shortName": "PlayInitFoldingAnim",
+      "flags": 33028
+    },
+    {
+      "fullName": "ShowRequest;",
+      "shortName": "ShowRequest",
+      "flags": 33028
+    },
+    {
+      "fullName": "UpdateRequired;",
+      "shortName": "UpdateRequired",
+      "flags": 33280
+    }
+  ]
+}

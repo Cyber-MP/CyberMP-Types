@@ -1,0 +1,455 @@
+{
+  "parent": "gameITimeSystem",
+  "name": "gameTimeSystem",
+  "flags": 2,
+  "funcs": [
+    {
+      "fullName": "GetActiveTimeDilation",
+      "shortName": "GetActiveTimeDilation",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 12594,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "reason",
+          "flags": 1152
+        },
+        {
+          "type": "Bool",
+          "name": "ignoreCurves",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "GetGameTime",
+      "shortName": "GetGameTime",
+      "return": {
+        "type": "GameTime",
+        "flags": 64
+      },
+      "index": 12598,
+      "flags": 1
+    },
+    {
+      "fullName": "GetGameTimeStamp",
+      "shortName": "GetGameTimeStamp",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 12600,
+      "flags": 1
+    },
+    {
+      "fullName": "GetSimTime",
+      "shortName": "GetSimTime",
+      "return": {
+        "type": "EngineTime",
+        "flags": 64
+      },
+      "index": 12599,
+      "flags": 1
+    },
+    {
+      "fullName": "IsPausedState",
+      "shortName": "IsPausedState",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12602,
+      "flags": 1
+    },
+    {
+      "fullName": "IsTimeDilationActive",
+      "shortName": "IsTimeDilationActive",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 12593,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "reason",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "RealTimeSecondsToGameTime",
+      "shortName": "RealTimeSecondsToGameTime",
+      "return": {
+        "type": "GameTime",
+        "flags": 64
+      },
+      "index": 12607,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Float",
+          "name": "seconds",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterDelayedListener",
+      "shortName": "RegisterDelayedListener",
+      "return": {
+        "type": "Uint32",
+        "flags": 64
+      },
+      "index": 12604,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:entEntity",
+          "name": "entity",
+          "flags": 128
+        },
+        {
+          "type": "handle:redEvent",
+          "name": "eventToDelay",
+          "flags": 128
+        },
+        {
+          "type": "GameTime",
+          "name": "delay",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "repeat",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "sendOldNoifications",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterIntervalListener",
+      "shortName": "RegisterIntervalListener",
+      "return": {
+        "type": "Uint32",
+        "flags": 64
+      },
+      "index": 12605,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:entEntity",
+          "name": "entity",
+          "flags": 128
+        },
+        {
+          "type": "handle:redEvent",
+          "name": "eventToDelay",
+          "flags": 128
+        },
+        {
+          "type": "GameTime",
+          "name": "expectedHour",
+          "flags": 128
+        },
+        {
+          "type": "GameTime",
+          "name": "timeout",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "repeat",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterListener",
+      "shortName": "RegisterListener",
+      "return": {
+        "type": "Uint32",
+        "flags": 64
+      },
+      "index": 12603,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:entEntity",
+          "name": "entity",
+          "flags": 128
+        },
+        {
+          "type": "handle:redEvent",
+          "name": "eventToDelay",
+          "flags": 128
+        },
+        {
+          "type": "GameTime",
+          "name": "expectedTime",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "repeat",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "sendOldNoifications",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterScriptableSystemIntervalListener",
+      "shortName": "RegisterScriptableSystemIntervalListener",
+      "return": {
+        "type": "Uint32",
+        "flags": 64
+      },
+      "index": 12608,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "systemName",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameScriptableSystemRequest",
+          "name": "requestToDelay",
+          "flags": 128
+        },
+        {
+          "type": "GameTime",
+          "name": "expectedHour",
+          "flags": 128
+        },
+        {
+          "type": "GameTime",
+          "name": "timeout",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "repeat",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "RestorePreviousIgnoreTimeDilationOnLocalPlayerZero",
+      "shortName": "RestorePreviousIgnoreTimeDilationOnLocalPlayerZero",
+      "index": 12590,
+      "flags": 1
+    },
+    {
+      "fullName": "SetGameTime",
+      "shortName": "SetGameTime",
+      "index": 12597,
+      "flags": 1
+    },
+    {
+      "fullName": "SetGameTimeByHMS",
+      "shortName": "SetGameTimeByHMS",
+      "index": 12596,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "hours",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "minutes",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "seconds",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "reason",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "SetGameTimeBySeconds",
+      "shortName": "SetGameTimeBySeconds",
+      "index": 12595,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "seconds",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetIgnoreTimeDilationOnLocalPlayerZero",
+      "shortName": "SetIgnoreTimeDilationOnLocalPlayerZero",
+      "index": 12589,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "ignore",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetPausedState",
+      "shortName": "SetPausedState",
+      "index": 12601,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "paused",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "source",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetTimeDilation",
+      "shortName": "SetTimeDilation",
+      "index": 12587,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "reason",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "dilation",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "duration",
+          "flags": 1152
+        },
+        {
+          "type": "CName",
+          "name": "easeInCurve",
+          "flags": 1152
+        },
+        {
+          "type": "CName",
+          "name": "easeOutCurve",
+          "flags": 1152
+        },
+        {
+          "type": "handle:tickScriptTimeDilationListener",
+          "name": "listener",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "SetTimeDilationOnLocalPlayerZero",
+      "shortName": "SetTimeDilationOnLocalPlayerZero",
+      "index": 12591,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "reason",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "dilation",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "duration",
+          "flags": 1152
+        },
+        {
+          "type": "CName",
+          "name": "easeInCurve",
+          "flags": 1152
+        },
+        {
+          "type": "CName",
+          "name": "easeOutCurve",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "UnregisterListener",
+      "shortName": "UnregisterListener",
+      "index": 12606,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Uint32",
+          "name": "listenerID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UnsetTimeDilation",
+      "shortName": "UnsetTimeDilation",
+      "index": 12588,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "reason",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "easeOutCurve",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "UnsetTimeDilationOnLocalPlayerZero",
+      "shortName": "UnsetTimeDilationOnLocalPlayerZero",
+      "index": 12592,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "reason",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "easeOutCurve",
+          "flags": 1152
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+{
+  "parent": "InputContextTransitionDecisions",
+  "name": "AutodriveAndCinematicCameraContextDecisions",
+  "flags": 4,
+  "props": [
+    {
+      "type": "handle:redCallbackObject",
+      "name": "autodriveCallbackID",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "cinematicCameraCallbackID",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "delamainTaxiCallbackID",
+      "flags": 4431347744
+    },
+    {
+      "type": "Bool",
+      "name": "autodriveEnabled",
+      "flags": 4297195552
+    },
+    {
+      "type": "Bool",
+      "name": "cinematicCameraActive",
+      "flags": 4297195552
+    },
+    {
+      "type": "Bool",
+      "name": "delamainTaxi",
+      "flags": 4297195552
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnAutodriveStateChanged",
+      "shortName": "OnAutodriveStateChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "autodriveEnabled",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnCinematicCameraStateChanged",
+      "shortName": "OnCinematicCameraStateChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "cinematicCameraActive",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnDelamainTaxiStateChanged",
+      "shortName": "OnDelamainTaxiStateChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "delamaintaxi",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "EnterCondition;StateContextStateGameScriptInterface",
+      "shortName": "EnterCondition",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41216,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnAttach;StateContextStateGameScriptInterface",
+      "shortName": "OnAttach",
+      "flags": 34052,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnDetach;StateContextStateGameScriptInterface",
+      "shortName": "OnDetach",
+      "flags": 34052,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnStateChanged;",
+      "shortName": "OnStateChanged",
+      "flags": 33024
+    }
+  ]
+}

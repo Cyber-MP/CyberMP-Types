@@ -1,0 +1,125 @@
+{
+  "parent": "gameuiWidgetGameController",
+  "name": "gameuiMenuGameController",
+  "flags": 2,
+  "props": [
+    {
+      "type": "whandle:inkMenuEventDispatcher",
+      "name": "baseEventDispatcher",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "GetTelemetrySystem",
+      "shortName": "GetTelemetrySystem",
+      "return": {
+        "type": "handle:gameITelemetrySystem",
+        "flags": 64
+      },
+      "index": 14725,
+      "flags": 1
+    },
+    {
+      "fullName": "IsAnyActionWithoutAssignedKey",
+      "shortName": "IsAnyActionWithoutAssignedKey",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 14723,
+      "flags": 1
+    },
+    {
+      "fullName": "PushNotification",
+      "shortName": "PushNotification",
+      "index": 14724,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "notificationTitle",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "noticationDescription",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RefreshInputIcons",
+      "shortName": "RefreshInputIcons",
+      "index": 14722,
+      "flags": 1
+    },
+    {
+      "fullName": "RegisterToGlobalInputCallback",
+      "shortName": "RegisterToGlobalInputCallback",
+      "index": 14721,
+      "flags": 1
+    },
+    {
+      "fullName": "UnregisterFromGlobalInputCallback",
+      "shortName": "UnregisterFromGlobalInputCallback",
+      "index": 14720,
+      "flags": 1
+    },
+    {
+      "fullName": "OnBack",
+      "shortName": "OnBack",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:IScriptable",
+          "name": "userData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnSetMenuEventDispatcher",
+      "shortName": "OnSetMenuEventDispatcher",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "whandle:inkMenuEventDispatcher",
+          "name": "menuEventDispatcher",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "ForceResetCursorType;",
+      "shortName": "ForceResetCursorType",
+      "flags": 33028
+    }
+  ]
+}

@@ -1,0 +1,422 @@
+{
+  "parent": "DeviceOperationBase",
+  "name": "GenericDeviceOperation",
+  "flags": 4,
+  "props": [
+    {
+      "type": "array:SVfxInstanceData",
+      "name": "fxInstances",
+      "flags": 6583025696
+    },
+    {
+      "type": "array:STransformAnimationData",
+      "name": "transformAnimations",
+      "flags": 6650331169
+    },
+    {
+      "type": "array:SVFXOperationData",
+      "name": "VFXs",
+      "flags": 6650331169
+    },
+    {
+      "type": "array:SSFXOperationData",
+      "name": "SFXs",
+      "flags": 6650331169
+    },
+    {
+      "type": "array:SFactOperationData",
+      "name": "facts",
+      "flags": 6650331169
+    },
+    {
+      "type": "array:SComponentOperationData",
+      "name": "components",
+      "flags": 6650331169
+    },
+    {
+      "type": "array:SStimOperationData",
+      "name": "stims",
+      "flags": 6650331169
+    },
+    {
+      "type": "array:SStatusEffectOperationData",
+      "name": "statusEffects",
+      "flags": 6650331169
+    },
+    {
+      "type": "array:SDamageOperationData",
+      "name": "damages",
+      "flags": 6650331169
+    },
+    {
+      "type": "array:SInventoryOperationData",
+      "name": "items",
+      "flags": 6650331169
+    },
+    {
+      "type": "STeleportOperationData",
+      "name": "teleport",
+      "flags": 4364435489
+    },
+    {
+      "type": "CName",
+      "name": "meshesAppearence",
+      "flags": 4364435489
+    },
+    {
+      "type": "SWorkspotData",
+      "name": "playerWorkspot",
+      "flags": 4364435489
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "CreateFxInstance;GameObjectCNameFxResourceWorldTransform",
+      "shortName": "CreateFxInstance",
+      "return": {
+        "type": "handle:gameFxInstance",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "owner",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "id",
+          "flags": 128
+        },
+        {
+          "type": "gameFxResource",
+          "name": "resource",
+          "flags": 128
+        },
+        {
+          "type": "WorldTransform",
+          "name": "transform",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "EnterWorkspot;DeviceGameObjectBoolCName",
+      "shortName": "EnterWorkspot",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "handle:Device",
+          "name": "target",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameObject",
+          "name": "activator",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "freeCamera",
+          "flags": 1152
+        },
+        {
+          "type": "CName",
+          "name": "componentName",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "Execute;GameObject",
+      "shortName": "Execute",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "owner",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetFxInstance;CName",
+      "shortName": "GetFxInstance",
+      "return": {
+        "type": "handle:gameFxInstance",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "CName",
+          "name": "id",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "LeaveWorkspot;GameObject",
+      "shortName": "LeaveWorkspot",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "activator",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RemoveFxInstance;CName",
+      "shortName": "RemoveFxInstance",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "CName",
+          "name": "id",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ResolveComponents;script_ref<array<SComponentOperationData>>GameObject",
+      "shortName": "ResolveComponents",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:array:SComponentOperationData",
+          "name": "componentsData",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameObject",
+          "name": "owner",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ResolveDamages;script_ref<array<SDamageOperationData>>GameObject",
+      "shortName": "ResolveDamages",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:array:SDamageOperationData",
+          "name": "damagesArg",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameObject",
+          "name": "owner",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ResolveFacts;script_ref<array<SFactOperationData>>GameObjectBool",
+      "shortName": "ResolveFacts",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:array:SFactOperationData",
+          "name": "factsArg",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameObject",
+          "name": "owner",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "restore",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "ResolveItems;script_ref<array<SInventoryOperationData>>GameObject",
+      "shortName": "ResolveItems",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:array:SInventoryOperationData",
+          "name": "itemsArg",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameObject",
+          "name": "owner",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ResolveMeshesAppearence;CNameGameObject",
+      "shortName": "ResolveMeshesAppearence",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "CName",
+          "name": "appearanceName",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameObject",
+          "name": "owner",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ResolveSFXs;script_ref<array<SSFXOperationData>>GameObject",
+      "shortName": "ResolveSFXs",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:array:SSFXOperationData",
+          "name": "SFXsArg",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameObject",
+          "name": "owner",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ResolveStatusEffects;array<SStatusEffectOperationData>GameObject",
+      "shortName": "ResolveStatusEffects",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "array:SStatusEffectOperationData",
+          "name": "statusEffectsArg",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameObject",
+          "name": "owner",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ResolveStims;script_ref<array<SStimOperationData>>GameObject",
+      "shortName": "ResolveStims",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:array:SStimOperationData",
+          "name": "stimsArg",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameObject",
+          "name": "owner",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ResolveTeleport;STeleportOperationDataGameObject",
+      "shortName": "ResolveTeleport",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "STeleportOperationData",
+          "name": "teleportArg",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameObject",
+          "name": "owner",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ResolveTransformAnimations;script_ref<array<STransformAnimationData>>GameObject",
+      "shortName": "ResolveTransformAnimations",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:array:STransformAnimationData",
+          "name": "animations",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameObject",
+          "name": "owner",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ResolveVFXs;array<SVFXOperationData>GameObject",
+      "shortName": "ResolveVFXs",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "array:SVFXOperationData",
+          "name": "VFXsArg",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameObject",
+          "name": "owner",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ResolveWorkspots;SWorkspotDataGameObject",
+      "shortName": "ResolveWorkspots",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "SWorkspotData",
+          "name": "workspot",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameObject",
+          "name": "owner",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Restore;GameObject",
+      "shortName": "Restore",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "whandle:gameObject",
+          "name": "owner",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "StoreFxInstance;CNameFxInstance",
+      "shortName": "StoreFxInstance",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "CName",
+          "name": "id",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameFxInstance",
+          "name": "fx",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "parent": "DeviceInkGameControllerBase",
+  "name": "InteractiveSignInkGameController",
+  "flags": 4,
+  "funcs": [
+    {
+      "fullName": "GetOwner;",
+      "shortName": "GetOwner",
+      "return": {
+        "type": "handle:InteractiveSign",
+        "flags": 64
+      },
+      "flags": 33024
+    },
+    {
+      "fullName": "Refresh;EDeviceStatus",
+      "shortName": "Refresh",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "EDeviceStatus",
+          "name": "state",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TurnOFF;",
+      "shortName": "TurnOFF",
+      "flags": 32900
+    },
+    {
+      "fullName": "TurnON;",
+      "shortName": "TurnON",
+      "flags": 32900
+    },
+    {
+      "fullName": "UpdateDeviceWidgets;script_ref<array<SDeviceWidgetPackage>>",
+      "shortName": "UpdateDeviceWidgets",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "script_ref:array:SDeviceWidgetPackage",
+          "name": "widgetsData",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

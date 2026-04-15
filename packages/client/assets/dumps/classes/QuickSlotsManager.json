@@ -1,0 +1,1156 @@
+{
+  "parent": "gameScriptableComponent",
+  "name": "QuickSlotsManager",
+  "flags": 4,
+  "props": [
+    {
+      "type": "whandle:PlayerPuppet",
+      "name": "Player",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:gameIBlackboard",
+      "name": "QuickSlotsBB",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "IsPlayerInCar",
+      "flags": 4297130016
+    },
+    {
+      "type": "entEntityID",
+      "name": "PlayerVehicleID",
+      "flags": 4297130016
+    },
+    {
+      "type": "array:QuickSlotCommand",
+      "name": "QuickDpadCommands",
+      "flags": 6583025696
+    },
+    {
+      "type": "array:QuickSlotCommand",
+      "name": "QuickDpadCommands_Vehicle",
+      "flags": 6583025696
+    },
+    {
+      "type": "array:QuickSlotCommand",
+      "name": "DefaultHoldCommands",
+      "flags": 6583025696
+    },
+    {
+      "type": "array:QuickSlotCommand",
+      "name": "DefaultHoldCommands_Vehicle",
+      "flags": 6583025696
+    },
+    {
+      "type": "Int32",
+      "name": "NumberOfItemsPerWheel",
+      "flags": 4297130016
+    },
+    {
+      "type": "array:QuickSlotCommand",
+      "name": "QuickKeyboardCommands",
+      "flags": 6583025696
+    },
+    {
+      "type": "array:QuickSlotCommand",
+      "name": "QuickKeyboardCommands_Vehicle",
+      "flags": 6583025696
+    },
+    {
+      "type": "handle:QuickSlotButtonHoldEndEvent",
+      "name": "lastPressAndHoldBtn",
+      "flags": 4431347744
+    },
+    {
+      "type": "array:QuickSlotCommand",
+      "name": "WheelList_Vehicles",
+      "flags": 6583025696
+    },
+    {
+      "type": "QuickSlotCommand",
+      "name": "currentWheelItem",
+      "flags": 4297130016
+    },
+    {
+      "type": "QuickSlotCommand",
+      "name": "currentWeaponWheelItem",
+      "flags": 4297130016
+    },
+    {
+      "type": "QuickSlotCommand",
+      "name": "currentGadgetWheelConsumable",
+      "flags": 4297130016
+    },
+    {
+      "type": "QuickSlotCommand",
+      "name": "currentGadgetWheelGadget",
+      "flags": 4297130016
+    },
+    {
+      "type": "QuickSlotCommand",
+      "name": "currentVehicleWheelItem",
+      "flags": 4297130016
+    },
+    {
+      "type": "QuickSlotCommand",
+      "name": "currentGadgetWheelItem",
+      "flags": 4297130016
+    },
+    {
+      "type": "QuickSlotCommand",
+      "name": "currentInteractionWheelItem",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "OnVehPlayerStateDataChangedCallback",
+      "flags": 4431347744
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "QuickSlotsManager::CreateBlankWheelCommand;",
+      "shortName": "CreateBlankWheelCommand",
+      "return": {
+        "type": "QuickSlotCommand",
+        "flags": 64
+      },
+      "flags": 33286
+    },
+    {
+      "fullName": "QuickSlotsManager::GetMaxKeyboardItems;",
+      "shortName": "GetMaxKeyboardItems",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 33286
+    },
+    {
+      "fullName": "OnCallAction",
+      "shortName": "OnCallAction",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:CallAction",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnQuickSlotButtonHoldStartEvent",
+      "shortName": "OnQuickSlotButtonHoldStartEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:QuickSlotButtonHoldStartEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnQuickSlotButtonTap",
+      "shortName": "OnQuickSlotButtonTap",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:QuickSlotButtonTap",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnQuickSlotKeyboardTap",
+      "shortName": "OnQuickSlotKeyboardTap",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:QuickSlotKeyboardTap",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ApplyQuickHack;script_ref<QuickSlotCommand>",
+      "shortName": "ApplyQuickHack",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:QuickSlotCommand",
+          "name": "command",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AssignItem;ItemID",
+      "shortName": "AssignItem",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "gameItemID",
+          "name": "itemId",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AssignItemToCyberwareSlot;ItemIDInt32",
+      "shortName": "AssignItemToCyberwareSlot",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "gameItemID",
+          "name": "itemId",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "slotIndex",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ChooseWeaponsWheel;array<QuickSlotCommand>",
+      "shortName": "ChooseWeaponsWheel",
+      "flags": 41476,
+      "params": [
+        {
+          "type": "array:QuickSlotCommand",
+          "name": "weaponsWheel",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "ChooseWheelItem;EDPadSlotscript_ref<QuickSlotCommand>",
+      "shortName": "ChooseWheelItem",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "EDPadSlot",
+          "name": "direction",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:QuickSlotCommand",
+          "name": "wheelItem",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CreateEmptyQuickSlotCommand;",
+      "shortName": "CreateEmptyQuickSlotCommand",
+      "return": {
+        "type": "QuickSlotCommand",
+        "flags": 64
+      },
+      "flags": 33028
+    },
+    {
+      "fullName": "CreateQuickSlotCommand;QuickSlotActionTypeCNameCNameInt32Int32BoolBoolInt32StringString",
+      "shortName": "CreateQuickSlotCommand",
+      "return": {
+        "type": "QuickSlotCommand",
+        "flags": 64
+      },
+      "flags": 41092,
+      "params": [
+        {
+          "type": "QuickSlotActionType",
+          "name": "actionType",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "imageAtlasPath",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "actionName",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "maxTier",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "vehicleState",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "isLocked",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "isSlotUnlocked",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "intData",
+          "flags": 1152
+        },
+        {
+          "type": "String",
+          "name": "argTitle",
+          "flags": 1152
+        },
+        {
+          "type": "String",
+          "name": "argType",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "CreateQuickSlotItemCommand;ItemIDQuickSlotActionTypeCNamescript_ref<String>script_ref<String>script_ref<String>",
+      "shortName": "CreateQuickSlotItemCommand",
+      "return": {
+        "type": "QuickSlotCommand",
+        "flags": 64
+      },
+      "flags": 41092,
+      "params": [
+        {
+          "type": "gameItemID",
+          "name": "itemID",
+          "flags": 128
+        },
+        {
+          "type": "QuickSlotActionType",
+          "name": "argActionType",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "argIcon",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:String",
+          "name": "argTitle",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:String",
+          "name": "argType",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:String",
+          "name": "argDesc",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ExecuteCommand;script_ref<QuickSlotCommand>",
+      "shortName": "ExecuteCommand",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "script_ref:QuickSlotCommand",
+          "name": "command",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "FindTempVehicleIcon;PlayerVehicle",
+      "shortName": "FindTempVehicleIcon",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 41092,
+      "params": [
+        {
+          "type": "vehiclePlayerVehicle",
+          "name": "vehicle",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetActionData;",
+      "shortName": "GetActionData",
+      "return": {
+        "type": "QuickSlotCommand",
+        "flags": 64
+      },
+      "flags": 41092
+    },
+    {
+      "fullName": "GetActiveVehicleType;",
+      "shortName": "GetActiveVehicleType",
+      "return": {
+        "type": "gamedataVehicleType",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "GetAssignedItemIDByType;QuickSlotItemType",
+      "shortName": "GetAssignedItemIDByType",
+      "return": {
+        "type": "gameItemID",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "QuickSlotItemType",
+          "name": "itemType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetAssignedQuickSlotCommand;QuickSlotItemType",
+      "shortName": "GetAssignedQuickSlotCommand",
+      "return": {
+        "type": "QuickSlotCommand",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "QuickSlotItemType",
+          "name": "itemType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetConsumablesWheel;script_ref<array<QuickSlotCommand>>",
+      "shortName": "GetConsumablesWheel",
+      "flags": 41476,
+      "params": [
+        {
+          "type": "script_ref:array:QuickSlotCommand",
+          "name": "wheel",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetCyberwareWheel;script_ref<array<QuickSlotCommand>>",
+      "shortName": "GetCyberwareWheel",
+      "flags": 41476,
+      "params": [
+        {
+          "type": "script_ref:array:QuickSlotCommand",
+          "name": "wheel",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetDPadCommandAtSlot;Int32",
+      "shortName": "GetDPadCommandAtSlot",
+      "return": {
+        "type": "QuickSlotCommand",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "argIndex",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetDPadIndex;EDPadSlot",
+      "shortName": "GetDPadIndex",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 33028,
+      "params": [
+        {
+          "type": "EDPadSlot",
+          "name": "direction",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetDriverCombatBikeOnlyWeaponsWheel;script_ref<array<QuickSlotCommand>>",
+      "shortName": "GetDriverCombatBikeOnlyWeaponsWheel",
+      "flags": 41476,
+      "params": [
+        {
+          "type": "script_ref:array:QuickSlotCommand",
+          "name": "weaponsWheel",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetDriverCombatOnlyWeaponsWheel;script_ref<array<QuickSlotCommand>>",
+      "shortName": "GetDriverCombatOnlyWeaponsWheel",
+      "flags": 41476,
+      "params": [
+        {
+          "type": "script_ref:array:QuickSlotCommand",
+          "name": "weaponsWheel",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetEmptyWheel;script_ref<array<QuickSlotCommand>>",
+      "shortName": "GetEmptyWheel",
+      "flags": 41476,
+      "params": [
+        {
+          "type": "script_ref:array:QuickSlotCommand",
+          "name": "weaponsWheel",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetEquipAreaCommands;gamedataEquipmentAreaarray<gamedataItemType>CName",
+      "shortName": "GetEquipAreaCommands",
+      "return": {
+        "type": "array:QuickSlotCommand",
+        "flags": 64
+      },
+      "flags": 41476,
+      "params": [
+        {
+          "type": "gamedataEquipmentArea",
+          "name": "equipArea",
+          "flags": 128
+        },
+        {
+          "type": "array:gamedataItemType",
+          "name": "allowedItemTypes",
+          "flags": 1152
+        },
+        {
+          "type": "CName",
+          "name": "allowedTag",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "GetFirearmsOnlyWeaponsWheel;script_ref<array<QuickSlotCommand>>",
+      "shortName": "GetFirearmsOnlyWeaponsWheel",
+      "flags": 41476,
+      "params": [
+        {
+          "type": "script_ref:array:QuickSlotCommand",
+          "name": "weaponsWheel",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetFistFightOnlyWeaponsWheel;script_ref<array<QuickSlotCommand>>",
+      "shortName": "GetFistFightOnlyWeaponsWheel",
+      "flags": 41476,
+      "params": [
+        {
+          "type": "script_ref:array:QuickSlotCommand",
+          "name": "weaponsWheel",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetGadgetsWheel;script_ref<array<QuickSlotCommand>>",
+      "shortName": "GetGadgetsWheel",
+      "flags": 41476,
+      "params": [
+        {
+          "type": "script_ref:array:QuickSlotCommand",
+          "name": "wheel",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetGamedataEquipmentAreaFromItemType;QuickSlotItemType",
+      "shortName": "GetGamedataEquipmentAreaFromItemType",
+      "return": {
+        "type": "gamedataEquipmentArea",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "QuickSlotItemType",
+          "name": "itemType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetKeyboardCommandAtSlot;Int32",
+      "shortName": "GetKeyboardCommandAtSlot",
+      "return": {
+        "type": "QuickSlotCommand",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "argIndex",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetLauncher;script_ref<array<QuickSlotCommand>>",
+      "shortName": "GetLauncher",
+      "flags": 41476,
+      "params": [
+        {
+          "type": "script_ref:array:QuickSlotCommand",
+          "name": "wheel",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetMeleeOnlyWeaponsWheel;script_ref<array<QuickSlotCommand>>",
+      "shortName": "GetMeleeOnlyWeaponsWheel",
+      "flags": 41476,
+      "params": [
+        {
+          "type": "script_ref:array:QuickSlotCommand",
+          "name": "weaponsWheel",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetNoArmsCWWeaponsWheel;script_ref<array<QuickSlotCommand>>",
+      "shortName": "GetNoArmsCWWeaponsWheel",
+      "flags": 41476,
+      "params": [
+        {
+          "type": "script_ref:array:QuickSlotCommand",
+          "name": "weaponsWheel",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetNumberOfItemsPerWheel;",
+      "shortName": "GetNumberOfItemsPerWheel",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetOneHandedOnlyOnlyWeaponsWheel;script_ref<array<QuickSlotCommand>>",
+      "shortName": "GetOneHandedOnlyOnlyWeaponsWheel",
+      "flags": 41476,
+      "params": [
+        {
+          "type": "script_ref:array:QuickSlotCommand",
+          "name": "weaponsWheel",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetPS",
+      "shortName": "GetPS",
+      "return": {
+        "type": "handle:QuickSlotsManagerPS",
+        "flags": 64
+      },
+      "flags": 41216
+    },
+    {
+      "fullName": "GetQuickSlotCommandByDpadSlot;EDPadSlot",
+      "shortName": "GetQuickSlotCommandByDpadSlot",
+      "return": {
+        "type": "QuickSlotCommand",
+        "flags": 64
+      },
+      "flags": 41476,
+      "params": [
+        {
+          "type": "EDPadSlot",
+          "name": "wheelType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetQuickSlotItemTypeByEquipArea;gamedataEquipmentArea",
+      "shortName": "GetQuickSlotItemTypeByEquipArea",
+      "return": {
+        "type": "QuickSlotItemType",
+        "flags": 64
+      },
+      "flags": 41220,
+      "params": [
+        {
+          "type": "gamedataEquipmentArea",
+          "name": "eqArea",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetQuickWheel;script_ref<array<QuickSlotCommand>>",
+      "shortName": "GetQuickWheel",
+      "flags": 41476,
+      "params": [
+        {
+          "type": "script_ref:array:QuickSlotCommand",
+          "name": "wheel",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetRPGWheel;script_ref<array<QuickSlotCommand>>",
+      "shortName": "GetRPGWheel",
+      "flags": 41476,
+      "params": [
+        {
+          "type": "script_ref:array:QuickSlotCommand",
+          "name": "rpgWheel",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetRegularWeaponsWheel;script_ref<array<QuickSlotCommand>>",
+      "shortName": "GetRegularWeaponsWheel",
+      "flags": 41476,
+      "params": [
+        {
+          "type": "script_ref:array:QuickSlotCommand",
+          "name": "weaponsWheel",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetVehicleInsideWheel;script_ref<array<QuickSlotCommand>>",
+      "shortName": "GetVehicleInsideWheel",
+      "flags": 41476,
+      "params": [
+        {
+          "type": "script_ref:array:QuickSlotCommand",
+          "name": "wheel",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetVehicleObject;",
+      "shortName": "GetVehicleObject",
+      "return": {
+        "type": "handle:vehicleBaseObject",
+        "flags": 64
+      },
+      "flags": 41092
+    },
+    {
+      "fullName": "GetVehicleWheel;script_ref<array<QuickSlotCommand>>",
+      "shortName": "GetVehicleWheel",
+      "flags": 41476,
+      "params": [
+        {
+          "type": "script_ref:array:QuickSlotCommand",
+          "name": "vehicleWheel",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetVehicleWheelCommands;EDPadSlot",
+      "shortName": "GetVehicleWheelCommands",
+      "return": {
+        "type": "array:QuickSlotCommand",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "EDPadSlot",
+          "name": "direction",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetWeaponsWheel;script_ref<array<QuickSlotCommand>>array<gamedataItemType>CName",
+      "shortName": "GetWeaponsWheel",
+      "flags": 41092,
+      "params": [
+        {
+          "type": "script_ref:array:QuickSlotCommand",
+          "name": "weaponsWheel",
+          "flags": 128
+        },
+        {
+          "type": "array:gamedataItemType",
+          "name": "allowedItemTypes",
+          "flags": 1152
+        },
+        {
+          "type": "CName",
+          "name": "allowedTag",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "GetWheelCommands;EDPadSlot",
+      "shortName": "GetWheelCommands",
+      "return": {
+        "type": "array:QuickSlotCommand",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "EDPadSlot",
+          "name": "direction",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetWheelItem;script_ref<QuickSlotCommand>",
+      "shortName": "GetWheelItem",
+      "return": {
+        "type": "QuickSlotCommand",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "script_ref:QuickSlotCommand",
+          "name": "currentWheelItem",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HideWeapon;",
+      "shortName": "HideWeapon",
+      "flags": 32900
+    },
+    {
+      "fullName": "InitializeCommandsData;",
+      "shortName": "InitializeCommandsData",
+      "flags": 32900
+    },
+    {
+      "fullName": "IsDPadActionAvaliable;Int32",
+      "shortName": "IsDPadActionAvaliable",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "actionIndex",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsDPadActionAvaliable;EDPadSlot",
+      "shortName": "IsDPadActionAvaliable",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "EDPadSlot",
+          "name": "direction",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsKeyboardActionAvaliable;Int32",
+      "shortName": "IsKeyboardActionAvaliable",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "actionIndex",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsPhoneAvailable;",
+      "shortName": "IsPhoneAvailable",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "IsSelectingCombatGadgetPrevented;",
+      "shortName": "IsSelectingCombatGadgetPrevented",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41220
+    },
+    {
+      "fullName": "IsSelectingCombatItemPrevented;",
+      "shortName": "IsSelectingCombatItemPrevented",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41220
+    },
+    {
+      "fullName": "OnGameAttach;",
+      "shortName": "OnGameAttach",
+      "flags": 34308
+    },
+    {
+      "fullName": "OnVehPlayerStateDataChanged;Variant",
+      "shortName": "OnVehPlayerStateDataChanged",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "Variant",
+          "name": "vehPlayerStateData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PushBackCommands;gamedataEquipmentAreascript_ref<array<QuickSlotCommand>>array<gamedataItemType>CName",
+      "shortName": "PushBackCommands",
+      "flags": 41220,
+      "params": [
+        {
+          "type": "gamedataEquipmentArea",
+          "name": "area",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:array:QuickSlotCommand",
+          "name": "commandList",
+          "flags": 128
+        },
+        {
+          "type": "array:gamedataItemType",
+          "name": "allowedItemTypes",
+          "flags": 1152
+        },
+        {
+          "type": "CName",
+          "name": "allowedTag",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "RequestEquipFists;",
+      "shortName": "RequestEquipFists",
+      "flags": 33284
+    },
+    {
+      "fullName": "RequestWeaponEquip;ItemID",
+      "shortName": "RequestWeaponEquip",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "gameItemID",
+          "name": "itemId",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SelectItem;script_ref<QuickSlotCommand>",
+      "shortName": "SelectItem",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "script_ref:QuickSlotCommand",
+          "name": "command",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SendRadioEvent;BoolBoolInt32",
+      "shortName": "SendRadioEvent",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "toggle",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "setStation",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "stationIndex",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetActiveVehicle;PlayerVehicle",
+      "shortName": "SetActiveVehicle",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "vehiclePlayerVehicle",
+          "name": "vehicleData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetWheelItem;script_ref<QuickSlotCommand>",
+      "shortName": "SetWheelItem",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "script_ref:QuickSlotCommand",
+          "name": "currentWheelItem",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SummonActiveVehicle;Bool",
+      "shortName": "SummonActiveVehicle",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "force",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SummonVehicle;BoolgamedataVehicleTypeTweakDBIDBool",
+      "shortName": "SummonVehicle",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "force",
+          "flags": 128
+        },
+        {
+          "type": "gamedataVehicleType",
+          "name": "type",
+          "flags": 128
+        },
+        {
+          "type": "TweakDBID",
+          "name": "vehicle",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "spawnOnlyOnValidRoad",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ToggleFireMode;",
+      "shortName": "ToggleFireMode",
+      "flags": 32900
+    },
+    {
+      "fullName": "ToggleSummonMode;",
+      "shortName": "ToggleSummonMode",
+      "flags": 32900
+    },
+    {
+      "fullName": "TryExecuteCommand;script_ref<QuickSlotCommand>",
+      "shortName": "TryExecuteCommand",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33028,
+      "params": [
+        {
+          "type": "script_ref:QuickSlotCommand",
+          "name": "currentCommand",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UsePhone;",
+      "shortName": "UsePhone",
+      "flags": 32900
+    }
+  ]
+}

@@ -1,0 +1,505 @@
+{
+  "parent": "gamedataTweakDBRecord",
+  "name": "gamedataVehicleColorTemplate_Record",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "CustomDecals",
+      "shortName": "CustomDecals",
+      "index": 7908,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataVehicleDecalAttachment_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "CustomDecalsContains",
+      "shortName": "CustomDecalsContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 7912,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataVehicleDecalAttachment_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CustomIcon",
+      "shortName": "CustomIcon",
+      "return": {
+        "type": "whandle:gamedataUIIcon_Record",
+        "flags": 64
+      },
+      "index": 7891,
+      "flags": 1
+    },
+    {
+      "fullName": "CustomIconHandle",
+      "shortName": "CustomIconHandle",
+      "return": {
+        "type": "handle:gamedataUIIcon_Record",
+        "flags": 64
+      },
+      "index": 7892,
+      "flags": 1
+    },
+    {
+      "fullName": "CustomMultilayers",
+      "shortName": "CustomMultilayers",
+      "index": 7895,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataVehicleCustomMultilayer_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "CustomMultilayersContains",
+      "shortName": "CustomMultilayersContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 7899,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataVehicleCustomMultilayer_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetCustomDecalsCount",
+      "shortName": "GetCustomDecalsCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 7909,
+      "flags": 1
+    },
+    {
+      "fullName": "GetCustomDecalsItem",
+      "shortName": "GetCustomDecalsItem",
+      "return": {
+        "type": "whandle:gamedataVehicleDecalAttachment_Record",
+        "flags": 64
+      },
+      "index": 7910,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetCustomDecalsItemHandle",
+      "shortName": "GetCustomDecalsItemHandle",
+      "return": {
+        "type": "handle:gamedataVehicleDecalAttachment_Record",
+        "flags": 64
+      },
+      "index": 7911,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetCustomMultilayersCount",
+      "shortName": "GetCustomMultilayersCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 7896,
+      "flags": 1
+    },
+    {
+      "fullName": "GetCustomMultilayersItem",
+      "shortName": "GetCustomMultilayersItem",
+      "return": {
+        "type": "whandle:gamedataVehicleCustomMultilayer_Record",
+        "flags": 64
+      },
+      "index": 7897,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetCustomMultilayersItemHandle",
+      "shortName": "GetCustomMultilayersItemHandle",
+      "return": {
+        "type": "handle:gamedataVehicleCustomMultilayer_Record",
+        "flags": 64
+      },
+      "index": 7898,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetMainColorCount",
+      "shortName": "GetMainColorCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 7901,
+      "flags": 1
+    },
+    {
+      "fullName": "GetMainColorItem",
+      "shortName": "GetMainColorItem",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 7902,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetMatchingAppearancesCount",
+      "shortName": "GetMatchingAppearancesCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 7905,
+      "flags": 1
+    },
+    {
+      "fullName": "GetMatchingAppearancesItem",
+      "shortName": "GetMatchingAppearancesItem",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "index": 7906,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetMatchingColorVariantCount",
+      "shortName": "GetMatchingColorVariantCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 7914,
+      "flags": 1
+    },
+    {
+      "fullName": "GetMatchingColorVariantItem",
+      "shortName": "GetMatchingColorVariantItem",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "index": 7915,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetPartsClearCoatOverridesCount",
+      "shortName": "GetPartsClearCoatOverridesCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 7922,
+      "flags": 1
+    },
+    {
+      "fullName": "GetPartsClearCoatOverridesItem",
+      "shortName": "GetPartsClearCoatOverridesItem",
+      "return": {
+        "type": "whandle:gamedataVehiclePartsClearCoatOverrides_Record",
+        "flags": 64
+      },
+      "index": 7923,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetPartsClearCoatOverridesItemHandle",
+      "shortName": "GetPartsClearCoatOverridesItemHandle",
+      "return": {
+        "type": "handle:gamedataVehiclePartsClearCoatOverrides_Record",
+        "flags": 64
+      },
+      "index": 7924,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetSecondaryColorCount",
+      "shortName": "GetSecondaryColorCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 7918,
+      "flags": 1
+    },
+    {
+      "fullName": "GetSecondaryColorItem",
+      "shortName": "GetSecondaryColorItem",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 7919,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GlobalClearCoatOverrides",
+      "shortName": "GlobalClearCoatOverrides",
+      "return": {
+        "type": "whandle:gamedataVehicleClearCoatOverrides_Record",
+        "flags": 64
+      },
+      "index": 7893,
+      "flags": 1
+    },
+    {
+      "fullName": "GlobalClearCoatOverridesHandle",
+      "shortName": "GlobalClearCoatOverridesHandle",
+      "return": {
+        "type": "handle:gamedataVehicleClearCoatOverrides_Record",
+        "flags": 64
+      },
+      "index": 7894,
+      "flags": 1
+    },
+    {
+      "fullName": "HasCustomPattern",
+      "shortName": "HasCustomPattern",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 7927,
+      "flags": 1
+    },
+    {
+      "fullName": "LightsHue",
+      "shortName": "LightsHue",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 7926,
+      "flags": 1
+    },
+    {
+      "fullName": "MainColor",
+      "shortName": "MainColor",
+      "return": {
+        "type": "array:Int32",
+        "flags": 64
+      },
+      "index": 7900,
+      "flags": 1
+    },
+    {
+      "fullName": "MainColorContains",
+      "shortName": "MainColorContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 7903,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "MatchingAppearances",
+      "shortName": "MatchingAppearances",
+      "return": {
+        "type": "array:CName",
+        "flags": 64
+      },
+      "index": 7904,
+      "flags": 1
+    },
+    {
+      "fullName": "MatchingAppearancesContains",
+      "shortName": "MatchingAppearancesContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 7907,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "MatchingColorVariant",
+      "shortName": "MatchingColorVariant",
+      "return": {
+        "type": "array:CName",
+        "flags": 64
+      },
+      "index": 7913,
+      "flags": 1
+    },
+    {
+      "fullName": "MatchingColorVariantContains",
+      "shortName": "MatchingColorVariantContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 7916,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "PartsClearCoatOverrides",
+      "shortName": "PartsClearCoatOverrides",
+      "index": 7921,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataVehiclePartsClearCoatOverrides_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "PartsClearCoatOverridesContains",
+      "shortName": "PartsClearCoatOverridesContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 7925,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataVehiclePartsClearCoatOverrides_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SecondaryColor",
+      "shortName": "SecondaryColor",
+      "return": {
+        "type": "array:Int32",
+        "flags": 64
+      },
+      "index": 7917,
+      "flags": 1
+    },
+    {
+      "fullName": "SecondaryColorContains",
+      "shortName": "SecondaryColorContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 7920,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

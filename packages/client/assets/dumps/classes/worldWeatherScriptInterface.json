@@ -1,0 +1,146 @@
+{
+  "parent": "IScriptable",
+  "name": "worldWeatherScriptInterface",
+  "flags": 2,
+  "funcs": [
+    {
+      "fullName": "GetEnvironmentDefinition",
+      "shortName": "GetEnvironmentDefinition",
+      "return": {
+        "type": "handle:worldEnvironmentDefinition",
+        "flags": 64
+      },
+      "index": 15392,
+      "flags": 1
+    },
+    {
+      "fullName": "GetRainIntensity",
+      "shortName": "GetRainIntensity",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 11201,
+      "flags": 8193
+    },
+    {
+      "fullName": "GetRainIntensityType",
+      "shortName": "GetRainIntensityType",
+      "return": {
+        "type": "worldRainIntensity",
+        "flags": 64
+      },
+      "index": 11202,
+      "flags": 8193
+    },
+    {
+      "fullName": "GetRainMoisture",
+      "shortName": "GetRainMoisture",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 11199,
+      "flags": 8193
+    },
+    {
+      "fullName": "GetRainPuddles",
+      "shortName": "GetRainPuddles",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 11200,
+      "flags": 8193
+    },
+    {
+      "fullName": "GetWeatherState",
+      "shortName": "GetWeatherState",
+      "return": {
+        "type": "handle:worldWeatherState",
+        "flags": 64
+      },
+      "index": 15393,
+      "flags": 1
+    },
+    {
+      "fullName": "RegisterWeatherListener",
+      "shortName": "RegisterWeatherListener",
+      "return": {
+        "type": "Uint32",
+        "flags": 64
+      },
+      "index": 11197,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:worldWeatherScriptListener",
+          "name": "callback",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ResetWeather",
+      "shortName": "ResetWeather",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 15391,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "arg",
+          "flags": 1024
+        },
+        {
+          "type": "Float",
+          "name": "arg",
+          "flags": 1024
+        }
+      ]
+    },
+    {
+      "fullName": "SetWeather",
+      "shortName": "SetWeather",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 15390,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "arg",
+          "flags": 0
+        },
+        {
+          "type": "Float",
+          "name": "arg",
+          "flags": 1024
+        },
+        {
+          "type": "Uint32",
+          "name": "arg",
+          "flags": 1024
+        }
+      ]
+    },
+    {
+      "fullName": "UnregisterWeatherListener",
+      "shortName": "UnregisterWeatherListener",
+      "index": 11198,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Uint32",
+          "name": "callbackId",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

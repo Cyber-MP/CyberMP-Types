@@ -1,0 +1,82 @@
+{
+  "parent": "gameObject",
+  "name": "NcartStationMarker",
+  "flags": 4,
+  "props": [
+    {
+      "type": "ENcartStations",
+      "name": "station",
+      "flags": 4364304417
+    },
+    {
+      "type": "Bool",
+      "name": "callBackOnlyIfMatchesDestination",
+      "flags": 4364304417
+    },
+    {
+      "type": "Bool",
+      "name": "setAsNewActive",
+      "flags": 4364304417
+    },
+    {
+      "type": "CName",
+      "name": "onTrainApproachingFact",
+      "flags": 4364304417
+    },
+    {
+      "type": "CName",
+      "name": "TrainGlobalRef",
+      "flags": 4364304417
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnAreaEnter",
+      "shortName": "OnAreaEnter",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:entAreaEnteredEvent",
+          "name": "trigger",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnAreaExit",
+      "shortName": "OnAreaExit",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:entAreaExitedEvent",
+          "name": "trigger",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetMetroStationNumber;ENcartStations",
+      "shortName": "GetMetroStationNumber",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 41092,
+      "params": [
+        {
+          "type": "ENcartStations",
+          "name": "stationName",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

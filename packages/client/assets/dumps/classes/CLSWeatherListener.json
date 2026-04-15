@@ -1,0 +1,74 @@
+{
+  "parent": "worldWeatherScriptListener",
+  "name": "CLSWeatherListener",
+  "flags": 4,
+  "props": [
+    {
+      "type": "whandle:CityLightSystem",
+      "name": "owner",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "Initialize;CityLightSystem",
+      "shortName": "Initialize",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:CityLightSystem",
+          "name": "owner",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRainIntensityChanged;Float",
+      "shortName": "OnRainIntensityChanged",
+      "flags": 34304,
+      "params": [
+        {
+          "type": "Float",
+          "name": "rainIntensity",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRainIntensityTypeChanged;worldRainIntensity",
+      "shortName": "OnRainIntensityTypeChanged",
+      "flags": 34304,
+      "params": [
+        {
+          "type": "worldRainIntensity",
+          "name": "rainIntensityType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TurnOffLights;CName",
+      "shortName": "TurnOffLights",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "CName",
+          "name": "reason",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TurnOnLights;CName",
+      "shortName": "TurnOnLights",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "CName",
+          "name": "reason",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

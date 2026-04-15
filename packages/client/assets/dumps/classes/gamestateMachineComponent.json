@@ -1,0 +1,230 @@
+{
+  "parent": "gamePlayerControlledComponent",
+  "name": "gamestateMachineComponent",
+  "flags": 2,
+  "props": [
+    {
+      "type": "String",
+      "name": "packageName",
+      "flags": 6627016705
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "AddStateMachine",
+      "shortName": "AddStateMachine",
+      "index": 13539,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "stateMachineName",
+          "flags": 128
+        },
+        {
+          "type": "gamestateMachineStateMachineInstanceData",
+          "name": "instanceData",
+          "flags": 128
+        },
+        {
+          "type": "whandle:entEntity",
+          "name": "owner",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "tryHotSwap",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "GetSnapshotContainer",
+      "shortName": "GetSnapshotContainer",
+      "return": {
+        "type": "gamestateMachineStateSnapshotsContainer",
+        "flags": 64
+      },
+      "index": 13542,
+      "flags": 1
+    },
+    {
+      "fullName": "IsStateMachinePresent",
+      "shortName": "IsStateMachinePresent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13541,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamestateMachineStateMachineIdentifier",
+          "name": "stateMachineIdentifier",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RemoveStateMachine",
+      "shortName": "RemoveStateMachine",
+      "index": 13540,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gamestateMachineStateMachineIdentifier",
+          "name": "stateMachineIdentifier",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRipOff",
+      "shortName": "OnRipOff",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:RipOff",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnStartFinisherEvent",
+      "shortName": "OnStartFinisherEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameeventsStartFinisherEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnStartMountingEvent",
+      "shortName": "OnStartMountingEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gamemountingMountingEvent",
+          "name": "mountingEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnStartTakedownEvent",
+      "shortName": "OnStartTakedownEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameeventsStartTakedownEvent",
+          "name": "startTakedownEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnStartUnmountingEvent",
+      "shortName": "OnStartUnmountingEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gamemountingUnmountingEvent",
+          "name": "unmountingEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "MountAsChild;MountingEventEntity",
+      "shortName": "MountAsChild",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gamemountingMountingEvent",
+          "name": "mountingEvent",
+          "flags": 128
+        },
+        {
+          "type": "handle:entEntity",
+          "name": "ownerEntity",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "MountFromParent;MountingEventEntity",
+      "shortName": "MountFromParent",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gamemountingMountingEvent",
+          "name": "mountingEvent",
+          "flags": 128
+        },
+        {
+          "type": "handle:entEntity",
+          "name": "ownerEntity",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UnmountChild;UnmountingEventEntity",
+      "shortName": "UnmountChild",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gamemountingUnmountingEvent",
+          "name": "unmountingEvent",
+          "flags": 128
+        },
+        {
+          "type": "handle:entEntity",
+          "name": "ownerEntity",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UnmountFromParent;UnmountingEventEntity",
+      "shortName": "UnmountFromParent",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gamemountingUnmountingEvent",
+          "name": "unmountingEvent",
+          "flags": 128
+        },
+        {
+          "type": "handle:entEntity",
+          "name": "ownerEntity",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

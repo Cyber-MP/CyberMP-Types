@@ -1,0 +1,82 @@
+{
+  "parent": "ScannerChunk",
+  "name": "ScannerVehicleCustomizationTemplate",
+  "flags": 4,
+  "props": [
+    {
+      "type": "VehicleVisualCustomizationTemplate",
+      "name": "VehicleCustomizationTemplate",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "ProfileRestricted",
+      "flags": 4297130016
+    },
+    {
+      "type": "CName",
+      "name": "ModelName",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "GetModelName;",
+      "shortName": "GetModelName",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetProfileRestricted;",
+      "shortName": "GetProfileRestricted",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetType;",
+      "shortName": "GetType",
+      "return": {
+        "type": "ScannerDataType",
+        "flags": 64
+      },
+      "flags": 33280
+    },
+    {
+      "fullName": "GetVehicleCustomizationTemplate;",
+      "shortName": "GetVehicleCustomizationTemplate",
+      "return": {
+        "type": "VehicleVisualCustomizationTemplate",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "Set;VehicleVisualCustomizationTemplateBoolCName",
+      "shortName": "Set",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "VehicleVisualCustomizationTemplate",
+          "name": "data",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "profileRestricted",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "modelName",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

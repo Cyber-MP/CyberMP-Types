@@ -1,0 +1,166 @@
+{
+  "parent": "gameuiWidgetGameController",
+  "name": "gameuiGenericNotificationGameController",
+  "flags": 2,
+  "props": [
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "notificationsRoot",
+      "flags": 6627016705
+    },
+    {
+      "type": "Bool",
+      "name": "exclusiveProcessing",
+      "flags": 6627016705
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "AddNewNotificationData",
+      "shortName": "AddNewNotificationData",
+      "index": 14854,
+      "flags": 1,
+      "params": [
+        {
+          "type": "gameuiGenericNotificationData",
+          "name": "notification",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetBlackBarFullscreenWidgetOffsets",
+      "shortName": "GetBlackBarFullscreenWidgetOffsets",
+      "return": {
+        "type": "Vector2",
+        "flags": 64
+      },
+      "index": 14859,
+      "flags": 1
+    },
+    {
+      "fullName": "GetHudSafezoneWidgetOffsets",
+      "shortName": "GetHudSafezoneWidgetOffsets",
+      "return": {
+        "type": "Vector2",
+        "flags": 64
+      },
+      "index": 14860,
+      "flags": 1
+    },
+    {
+      "fullName": "MakeSilent",
+      "shortName": "MakeSilent",
+      "index": 14861,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RemoveAllQueuedNotifications",
+      "shortName": "RemoveAllQueuedNotifications",
+      "index": 14862,
+      "flags": 1
+    },
+    {
+      "fullName": "RemoveNotification",
+      "shortName": "RemoveNotification",
+      "index": 14855,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:IScriptable",
+          "name": "notification",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetNotificationPauseWhenHidden",
+      "shortName": "SetNotificationPauseWhenHidden",
+      "index": 14857,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetNotificationPaused",
+      "shortName": "SetNotificationPaused",
+      "index": 14856,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetNotificationVisibility",
+      "shortName": "SetNotificationVisibility",
+      "index": 14858,
+      "flags": 1
+    },
+    {
+      "fullName": "OnCleanupUiNotificationsEvent",
+      "shortName": "OnCleanupUiNotificationsEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:questCleanupUiNotificationsEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnMakeNotificationQueueSilent",
+      "shortName": "OnMakeNotificationQueueSilent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:MakeNotificationQueueSilentEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetID;",
+      "shortName": "GetID",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "flags": 34304
+    },
+    {
+      "fullName": "GetShouldSaveState;",
+      "shortName": "GetShouldSaveState",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 34304
+    }
+  ]
+}

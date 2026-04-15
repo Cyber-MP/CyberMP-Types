@@ -1,0 +1,183 @@
+{
+  "parent": "ActivatedDeviceTrap",
+  "name": "ActivatedDeviceIndustrialArm",
+  "flags": 4,
+  "props": [
+    {
+      "type": "EIndustrialArmAnimations",
+      "name": "loopAnimation",
+      "flags": 4364435489
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnAreaEnter",
+      "shortName": "OnAreaEnter",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:entAreaEnteredEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnAreaExit",
+      "shortName": "OnAreaExit",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:entAreaExitedEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnIndustrialArmDamageEvent",
+      "shortName": "OnIndustrialArmDamageEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:IndustrialArmDamageEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnQuestSetIndustrialArmAnimationOverride",
+      "shortName": "OnQuestSetIndustrialArmAnimationOverride",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:QuestSetIndustrialArmAnimationOverride",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRequestComponents",
+      "shortName": "OnRequestComponents",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "entEntityRequestComponentsInterface",
+          "name": "ri",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnTakeControl",
+      "shortName": "OnTakeControl",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "entEntityResolveComponentsInterface",
+          "name": "ri",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "DeterminGameplayRole;",
+      "shortName": "DeterminGameplayRole",
+      "return": {
+        "type": "EGameplayRole",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "RefreshAnimation;",
+      "shortName": "RefreshAnimation",
+      "flags": 33024
+    },
+    {
+      "fullName": "ResolveGameplayState;",
+      "shortName": "ResolveGameplayState",
+      "flags": 33024
+    },
+    {
+      "fullName": "SendIndustrialArmAnimFeature;Int32BoolBoolBool",
+      "shortName": "SendIndustrialArmAnimFeature",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "idleAnimNumber",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "isRotate",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "isDistraction",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "isPoke",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SendIndustrialArmDamageEvent;",
+      "shortName": "SendIndustrialArmDamageEvent",
+      "flags": 33028
+    },
+    {
+      "fullName": "StartGlitching;EGlitchStateFloat",
+      "shortName": "StartGlitching",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "EGlitchState",
+          "name": "glitchState",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "intensity",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "StopGlitching;",
+      "shortName": "StopGlitching",
+      "flags": 33024
+    }
+  ]
+}

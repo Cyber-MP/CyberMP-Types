@@ -1,0 +1,72 @@
+{
+  "parent": "gameuiHUDGameController",
+  "name": "NarrationJournalGameController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "entriesContainer",
+      "flags": 4297130017
+    },
+    {
+      "type": "handle:redCallbackObject",
+      "name": "narrationJournalBlackboardId",
+      "flags": 4431347744
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnEntryHidden",
+      "shortName": "OnEntryHidden",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "whandle:inkWidget",
+          "name": "entryWidget",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnEventAdded",
+      "shortName": "OnEventAdded",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Variant",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "AddEntry;script_ref<NarrationEvent>",
+      "shortName": "AddEntry",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "script_ref:gameuiNarrationEvent",
+          "name": "entry",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

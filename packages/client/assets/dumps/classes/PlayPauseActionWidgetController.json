@@ -1,0 +1,76 @@
+{
+  "parent": "NextPreviousActionWidgetController",
+  "name": "PlayPauseActionWidgetController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkWidgetReference",
+      "name": "playContainer",
+      "group": "Widget Refs",
+      "flags": 4297195553
+    },
+    {
+      "type": "Bool",
+      "name": "isPlaying",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "DetermineState;",
+      "shortName": "DetermineState",
+      "flags": 33028
+    },
+    {
+      "fullName": "FinalizeActionExecution;GameObjectDeviceAction",
+      "shortName": "FinalizeActionExecution",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "executor",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamedeviceAction",
+          "name": "action",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Initialize;DeviceInkGameControllerBasescript_ref<SActionWidgetPackage>",
+      "shortName": "Initialize",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "handle:DeviceInkGameControllerBase",
+          "name": "gameController",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:SActionWidgetPackage",
+          "name": "widgetData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Reset;",
+      "shortName": "Reset",
+      "flags": 33280
+    },
+    {
+      "fullName": "TogglePlay;Bool",
+      "shortName": "TogglePlay",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

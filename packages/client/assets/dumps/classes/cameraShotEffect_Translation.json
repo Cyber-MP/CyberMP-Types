@@ -1,0 +1,85 @@
+{
+  "parent": "vehicleTimedCinematicCameraShotEffect",
+  "name": "cameraShotEffect_Translation",
+  "flags": 4,
+  "props": [
+    {
+      "type": "CName",
+      "name": "movementCurve",
+      "flags": 4297326625
+    },
+    {
+      "type": "Transform",
+      "name": "targetTransform",
+      "flags": 4297326625
+    },
+    {
+      "type": "cameraShotEffect_TranslationAffectedAxis",
+      "name": "affectedAxisPosition",
+      "flags": 4297326625
+    },
+    {
+      "type": "Bool",
+      "name": "ignoreRotation",
+      "flags": 4297326625
+    },
+    {
+      "type": "Transform",
+      "name": "startTransformShotSpace",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "Reset;",
+      "shortName": "Reset",
+      "flags": 33280
+    },
+    {
+      "fullName": "Start;CinematicCameraData",
+      "shortName": "Start",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "CinematicCameraData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "StartDelayed;CinematicCameraDatascript_ref<WorldTransform>",
+      "shortName": "StartDelayed",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "CinematicCameraData",
+          "name": "data",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:WorldTransform",
+          "name": "resultTransform",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Update;CinematicCameraDatascript_ref<WorldTransform>",
+      "shortName": "Update",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "CinematicCameraData",
+          "name": "data",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:WorldTransform",
+          "name": "resultTransform",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

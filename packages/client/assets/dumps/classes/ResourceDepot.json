@@ -1,0 +1,88 @@
+{
+  "parent": "IScriptable",
+  "name": "ResourceDepot",
+  "flags": 2,
+  "funcs": [
+    {
+      "fullName": "ArchiveExists",
+      "shortName": "ArchiveExists",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 15426,
+      "flags": 1,
+      "params": [
+        {
+          "type": "String",
+          "name": "arg",
+          "flags": 0
+        }
+      ]
+    },
+    {
+      "fullName": "LoadReference",
+      "shortName": "LoadReference",
+      "return": {
+        "type": "handle:ResourceToken",
+        "flags": 64
+      },
+      "index": 15429,
+      "flags": 1,
+      "params": [
+        {
+          "type": "rRef:CResource",
+          "name": "arg",
+          "flags": 0
+        }
+      ]
+    },
+    {
+      "fullName": "LoadResource",
+      "shortName": "LoadResource",
+      "return": {
+        "type": "handle:ResourceToken",
+        "flags": 64
+      },
+      "index": 15428,
+      "flags": 1,
+      "params": [
+        {
+          "type": "raRef:CResource",
+          "name": "arg",
+          "flags": 0
+        }
+      ]
+    },
+    {
+      "fullName": "RemoveResourceFromCache",
+      "shortName": "RemoveResourceFromCache",
+      "index": 15430,
+      "flags": 1,
+      "params": [
+        {
+          "type": "raRef:CResource",
+          "name": "arg",
+          "flags": 0
+        }
+      ]
+    },
+    {
+      "fullName": "ResourceExists",
+      "shortName": "ResourceExists",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 15427,
+      "flags": 1,
+      "params": [
+        {
+          "type": "raRef:CResource",
+          "name": "arg",
+          "flags": 0
+        }
+      ]
+    }
+  ]
+}

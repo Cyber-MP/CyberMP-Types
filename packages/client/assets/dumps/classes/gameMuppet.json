@@ -1,0 +1,188 @@
+{
+  "parent": "gamePuppetBase",
+  "name": "gameMuppet",
+  "flags": 2,
+  "props": [
+    {
+      "type": "handle:entSlotComponent",
+      "name": "hitRepresantation",
+      "flags": 4431347744
+    },
+    {
+      "type": "handle:entSlotComponent",
+      "name": "slotComponent",
+      "flags": 4431347744
+    },
+    {
+      "type": "Float",
+      "name": "highDamageThreshold",
+      "flags": 4297326624
+    },
+    {
+      "type": "Float",
+      "name": "medDamageThreshold",
+      "flags": 4297326624
+    },
+    {
+      "type": "Float",
+      "name": "lowDamageThreshold",
+      "flags": 4297326624
+    },
+    {
+      "type": "Float",
+      "name": "effectTimeStamp",
+      "flags": 4297326624
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "GetAttitude",
+      "shortName": "GetAttitude",
+      "return": {
+        "type": "handle:gameAttitudeAgent",
+        "flags": 64
+      },
+      "index": 14918,
+      "flags": 8193
+    },
+    {
+      "fullName": "GetItemQuantity",
+      "shortName": "GetItemQuantity",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 14921,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "gameItemID",
+          "name": "itemId",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetRecordID",
+      "shortName": "GetRecordID",
+      "index": 14919,
+      "flags": 1
+    },
+    {
+      "fullName": "IsMuppetIncapacitated",
+      "shortName": "IsMuppetIncapacitated",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 14920,
+      "flags": 8193
+    },
+    {
+      "fullName": "OnRequestComponents",
+      "shortName": "OnRequestComponents",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "entEntityRequestComponentsInterface",
+          "name": "ri",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnTakeControl",
+      "shortName": "OnTakeControl",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "entEntityResolveComponentsInterface",
+          "name": "ri",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetAttitudeAgent;",
+      "shortName": "GetAttitudeAgent",
+      "return": {
+        "type": "handle:gameAttitudeAgent",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "GetDamageThresholdParams;",
+      "shortName": "GetDamageThresholdParams",
+      "flags": 32900
+    },
+    {
+      "fullName": "GetHitRepresantationSlotComponent;",
+      "shortName": "GetHitRepresantationSlotComponent",
+      "return": {
+        "type": "handle:entSlotComponent",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetSlotComponent;",
+      "shortName": "GetSlotComponent",
+      "return": {
+        "type": "handle:entSlotComponent",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "IsIncapacitated;",
+      "shortName": "IsIncapacitated",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "IsPlayer;",
+      "shortName": "IsPlayer",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "OnHitSounds;gameHitEvent",
+      "shortName": "OnHitSounds",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnHitVFX;gameHitEvent",
+      "shortName": "OnHitVFX",
+      "flags": 32896,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hitEvent",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

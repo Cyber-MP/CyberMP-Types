@@ -1,0 +1,81 @@
+{
+  "parent": "gamedataTweakDBRecord",
+  "name": "gamedataVehicleFxCollision_Record",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "GetMaterialsCount",
+      "shortName": "GetMaterialsCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 9303,
+      "flags": 1
+    },
+    {
+      "fullName": "GetMaterialsItem",
+      "shortName": "GetMaterialsItem",
+      "return": {
+        "type": "whandle:gamedataVehicleFxCollisionMaterial_Record",
+        "flags": 64
+      },
+      "index": 9304,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetMaterialsItemHandle",
+      "shortName": "GetMaterialsItemHandle",
+      "return": {
+        "type": "handle:gamedataVehicleFxCollisionMaterial_Record",
+        "flags": 64
+      },
+      "index": 9305,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Materials",
+      "shortName": "Materials",
+      "index": 9302,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataVehicleFxCollisionMaterial_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "MaterialsContains",
+      "shortName": "MaterialsContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 9306,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataVehicleFxCollisionMaterial_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

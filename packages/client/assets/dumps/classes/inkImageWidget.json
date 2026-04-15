@@ -1,0 +1,281 @@
+{
+  "parent": "inkLeafWidget",
+  "name": "inkImageWidget",
+  "flags": 2,
+  "props": [
+    {
+      "type": "Bool",
+      "name": "useExternalDynamicTexture",
+      "group": "Type related",
+      "flags": 6627016705
+    },
+    {
+      "type": "CName",
+      "name": "externalDynamicTexture",
+      "group": "Type related",
+      "flags": 6627016704
+    },
+    {
+      "type": "Bool",
+      "name": "useNineSliceScale",
+      "group": "Type related",
+      "flags": 6627016705
+    },
+    {
+      "type": "inkMargin",
+      "name": "nineSliceScale",
+      "group": "Type related",
+      "flags": 6627016704
+    },
+    {
+      "type": "inkBrushMirrorType",
+      "name": "mirrorType",
+      "group": "Type related",
+      "flags": 6627016705
+    },
+    {
+      "type": "inkBrushTileType",
+      "name": "tileType",
+      "group": "Type related",
+      "flags": 6627016705
+    },
+    {
+      "type": "Float",
+      "name": "horizontalTileCrop",
+      "group": "Type related",
+      "flags": 6627016704
+    },
+    {
+      "type": "Float",
+      "name": "verticalTileCrop",
+      "group": "Type related",
+      "flags": 6627016704
+    },
+    {
+      "type": "raRef:inkTextureAtlas",
+      "name": "textureAtlas",
+      "group": "Type related",
+      "flags": 6627016705
+    },
+    {
+      "type": "CName",
+      "name": "texturePart",
+      "group": "Type related",
+      "flags": 6627016705
+    },
+    {
+      "type": "inkEHorizontalAlign",
+      "name": "contentHAlign",
+      "group": "Type related",
+      "flags": 6627016705
+    },
+    {
+      "type": "inkEVerticalAlign",
+      "name": "contentVAlign",
+      "group": "Type related",
+      "flags": 6627016705
+    },
+    {
+      "type": "inkEHorizontalAlign",
+      "name": "tileHAlign",
+      "group": "Type related",
+      "flags": 6627016705
+    },
+    {
+      "type": "inkEVerticalAlign",
+      "name": "tileVAlign",
+      "group": "Type related",
+      "flags": 6627016705
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "GetActiveTextureType",
+      "shortName": "GetActiveTextureType",
+      "return": {
+        "type": "inkTextureType",
+        "flags": 64
+      },
+      "index": 2129,
+      "flags": 1
+    },
+    {
+      "fullName": "GetContentHAlign",
+      "shortName": "GetContentHAlign",
+      "return": {
+        "type": "inkEHorizontalAlign",
+        "flags": 64
+      },
+      "index": 2130,
+      "flags": 1
+    },
+    {
+      "fullName": "GetContentVAlign",
+      "shortName": "GetContentVAlign",
+      "return": {
+        "type": "inkEVerticalAlign",
+        "flags": 64
+      },
+      "index": 2132,
+      "flags": 1
+    },
+    {
+      "fullName": "GetTexturePart",
+      "shortName": "GetTexturePart",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "index": 2126,
+      "flags": 1
+    },
+    {
+      "fullName": "IsTexturePartExist",
+      "shortName": "IsTexturePartExist",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 2125,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "texturePart",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RequestSetImage",
+      "shortName": "RequestSetImage",
+      "index": 2135,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:inkIconReference",
+          "name": "iconRefernce",
+          "flags": 128
+        },
+        {
+          "type": "whandle:IScriptable",
+          "name": "callbackTarget",
+          "flags": 1152
+        },
+        {
+          "type": "CName",
+          "name": "callbackName",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "SetActiveTextureType",
+      "shortName": "SetActiveTextureType",
+      "index": 2128,
+      "flags": 1,
+      "params": [
+        {
+          "type": "inkTextureType",
+          "name": "activeTextureType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetAtlasResource",
+      "shortName": "SetAtlasResource",
+      "index": 2127,
+      "flags": 1,
+      "params": [
+        {
+          "type": "redResourceReferenceScriptToken",
+          "name": "atlasResourcePath",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetBrushMirrorType",
+      "shortName": "SetBrushMirrorType",
+      "index": 2123,
+      "flags": 1,
+      "params": [
+        {
+          "type": "inkBrushMirrorType",
+          "name": "mirrorType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetBrushTileType",
+      "shortName": "SetBrushTileType",
+      "index": 2122,
+      "flags": 1,
+      "params": [
+        {
+          "type": "inkBrushTileType",
+          "name": "tileType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetContentHAlign",
+      "shortName": "SetContentHAlign",
+      "index": 2131,
+      "flags": 1,
+      "params": [
+        {
+          "type": "inkEHorizontalAlign",
+          "name": "contentHAlign",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetContentVAlign",
+      "shortName": "SetContentVAlign",
+      "index": 2133,
+      "flags": 1,
+      "params": [
+        {
+          "type": "inkEVerticalAlign",
+          "name": "contentVAlign",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetDynamicTextureUV",
+      "shortName": "SetDynamicTextureUV",
+      "index": 2134,
+      "flags": 1,
+      "params": [
+        {
+          "type": "RectF",
+          "name": "uv",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetTexturePart",
+      "shortName": "SetTexturePart",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 2124,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "texturePart",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "parent": "DeviceActionWidgetControllerBase",
+  "name": "VendorItemActionWidgetController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkTextWidgetReference",
+      "name": "priceWidget",
+      "group": "Widget Refs",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "priceContainer",
+      "group": "Widget Refs",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "moneyStatusContainer",
+      "group": "Widget Refs",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "processingStatusContainer",
+      "group": "Widget Refs",
+      "flags": 4297195553
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnNoMoneyShowed",
+      "shortName": "OnNoMoneyShowed",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkanimProxy",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPaymentProcessed",
+      "shortName": "OnPaymentProcessed",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkanimProxy",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "FinalizeActionExecution;GameObjectDeviceAction",
+      "shortName": "FinalizeActionExecution",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "executor",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamedeviceAction",
+          "name": "action",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Initialize;DeviceInkGameControllerBasescript_ref<SActionWidgetPackage>",
+      "shortName": "Initialize",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "handle:DeviceInkGameControllerBase",
+          "name": "gameController",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:SActionWidgetPackage",
+          "name": "widgetData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ProcessPayment;DispenceItemFromVendorGameObject",
+      "shortName": "ProcessPayment",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:DispenceItemFromVendor",
+          "name": "action",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameObject",
+          "name": "executor",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

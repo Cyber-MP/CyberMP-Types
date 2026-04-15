@@ -1,0 +1,45 @@
+{
+  "parent": "inkWidgetLogicController",
+  "name": "PanzerSmartWeaponTargetController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkTextWidgetReference",
+      "name": "distanceText",
+      "flags": 4297130017
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "lockingAnimationProxy",
+      "flags": 4431347744
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "SetData;script_ref<smartGunUITargetParameters>",
+      "shortName": "SetData",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "script_ref:gamesmartGunUITargetParameters",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "StopAnimation;",
+      "shortName": "StopAnimation",
+      "flags": 33284
+    }
+  ]
+}

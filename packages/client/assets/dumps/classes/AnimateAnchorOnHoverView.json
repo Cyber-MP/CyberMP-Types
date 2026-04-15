@@ -1,0 +1,101 @@
+{
+  "parent": "inkWidgetLogicController",
+  "name": "AnimateAnchorOnHoverView",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkWidgetReference",
+      "name": "Raycaster",
+      "flags": 4297130017
+    },
+    {
+      "type": "handle:inkanimProxy",
+      "name": "AnimProxy",
+      "flags": 4431347744
+    },
+    {
+      "type": "Vector2",
+      "name": "HoverAnchor",
+      "flags": 4297130017
+    },
+    {
+      "type": "Vector2",
+      "name": "NormalAnchor",
+      "flags": 4297130017
+    },
+    {
+      "type": "Float",
+      "name": "AnimTime",
+      "flags": 4297130017
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnHoverOut",
+      "shortName": "OnHoverOut",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnHoverOver",
+      "shortName": "OnHoverOver",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "e",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnHoverChanged;Bool",
+      "shortName": "OnHoverChanged",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "isHovered",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "StopAnimation;",
+      "shortName": "StopAnimation",
+      "flags": 33028
+    }
+  ]
+}

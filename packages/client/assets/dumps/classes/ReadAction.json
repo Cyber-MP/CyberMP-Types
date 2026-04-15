@@ -1,0 +1,65 @@
+{
+  "parent": "BaseItemAction",
+  "name": "ReadAction",
+  "flags": 4,
+  "funcs": [
+    {
+      "fullName": "ReadAction::GetJournalEntryFromAction;TweakDBID",
+      "shortName": "GetJournalEntryFromAction",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "TweakDBID",
+          "name": "actionID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CompleteAction;GameInstance",
+      "shortName": "CompleteAction",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "ScriptGameInstance",
+          "name": "gameInstance",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetJournalEntryFromAction;",
+      "shortName": "GetJournalEntryFromAction",
+      "return": {
+        "type": "String",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "IsVisible;script_ref<GetActionsContext>gameObjectActionsCallbackController",
+      "shortName": "IsVisible",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33280,
+      "params": [
+        {
+          "type": "script_ref:gameGetActionsContext",
+          "name": "context",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameObjectActionsCallbackController",
+          "name": "objectActionsCallbackController",
+          "flags": 1152
+        }
+      ]
+    }
+  ]
+}

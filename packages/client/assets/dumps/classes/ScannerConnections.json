@@ -1,0 +1,53 @@
+{
+  "parent": "ScannerChunk",
+  "name": "ScannerConnections",
+  "flags": 4,
+  "props": [
+    {
+      "type": "array:DeviceConnectionScannerData",
+      "name": "deviceConnections",
+      "flags": 6583025696
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "GetConnections;",
+      "shortName": "GetConnections",
+      "return": {
+        "type": "array:DeviceConnectionScannerData",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetType;",
+      "shortName": "GetType",
+      "return": {
+        "type": "ScannerDataType",
+        "flags": 64
+      },
+      "flags": 33280
+    },
+    {
+      "fullName": "IsValid;",
+      "shortName": "IsValid",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "Set;script_ref<array<DeviceConnectionScannerData>>",
+      "shortName": "Set",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "script_ref:array:DeviceConnectionScannerData",
+          "name": "connections",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

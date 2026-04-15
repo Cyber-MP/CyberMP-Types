@@ -1,0 +1,122 @@
+{
+  "parent": "gameScriptableSystem",
+  "name": "gameNativeHudManager",
+  "flags": 2,
+  "funcs": [
+    {
+      "fullName": "GetActor",
+      "shortName": "GetActor",
+      "return": {
+        "type": "handle:gameHudActor",
+        "flags": 64
+      },
+      "index": 13145,
+      "flags": 8193,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "actorId",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetAllActors",
+      "shortName": "GetAllActors",
+      "return": {
+        "type": "array:handle:gameHudActor",
+        "flags": 64
+      },
+      "index": 13146,
+      "flags": 8193
+    },
+    {
+      "fullName": "IsQuickHackPanelOpened",
+      "shortName": "IsQuickHackPanelOpened",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13147,
+      "flags": 8193
+    },
+    {
+      "fullName": "RegisterActor",
+      "shortName": "RegisterActor",
+      "return": {
+        "type": "handle:gameHudActor",
+        "flags": 64
+      },
+      "index": 13141,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "actorId",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RegisterAssociatedActor",
+      "shortName": "RegisterAssociatedActor",
+      "index": 13143,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "actorId",
+          "flags": 128
+        },
+        {
+          "type": "entEntityID",
+          "name": "associatedId",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetIsQuickHackPanelOpened",
+      "shortName": "SetIsQuickHackPanelOpened",
+      "index": 13148,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "isOpen",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UnregisterActor",
+      "shortName": "UnregisterActor",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13142,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "actorId",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UnregisterAssociatedActor",
+      "shortName": "UnregisterAssociatedActor",
+      "index": 13144,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "actorId",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

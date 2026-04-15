@@ -1,0 +1,244 @@
+{
+  "parent": "IScriptable",
+  "name": "NPCManager",
+  "flags": 4,
+  "props": [
+    {
+      "type": "whandle:NPCPuppet",
+      "name": "owner",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "NPCManager::HasAllTags;TweakDBIDscript_ref<array<CName>>",
+      "shortName": "HasAllTags",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "TweakDBID",
+          "name": "recordID",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:array:CName",
+          "name": "tags",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "NPCManager::HasAllVisualTags;ScriptedPuppetscript_ref<array<CName>>",
+      "shortName": "HasAllVisualTags",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:ScriptedPuppet",
+          "name": "puppet",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:array:CName",
+          "name": "visualTags",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "NPCManager::HasAnyTags;TweakDBIDscript_ref<array<CName>>",
+      "shortName": "HasAnyTags",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "TweakDBID",
+          "name": "recordID",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:array:CName",
+          "name": "tags",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "NPCManager::HasAnyVisualTags;ScriptedPuppetscript_ref<array<CName>>",
+      "shortName": "HasAnyVisualTags",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:ScriptedPuppet",
+          "name": "puppet",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:array:CName",
+          "name": "visualTags",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "NPCManager::HasTag;TweakDBIDCName",
+      "shortName": "HasTag",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "TweakDBID",
+          "name": "recordID",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "tag",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "NPCManager::HasVisualTag;ScriptedPuppetCName",
+      "shortName": "HasVisualTag",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "whandle:ScriptedPuppet",
+          "name": "puppet",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "visualTag",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ApplySpawnAnimWrappers;",
+      "shortName": "ApplySpawnAnimWrappers",
+      "flags": 33284
+    },
+    {
+      "fullName": "ApplySpawnGLPs;Character_RecordBool",
+      "shortName": "ApplySpawnGLPs",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "whandle:gamedataCharacter_Record",
+          "name": "record",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "applyAnimWrappers",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ClearNPCImmortalityMode;",
+      "shortName": "ClearNPCImmortalityMode",
+      "flags": 32900
+    },
+    {
+      "fullName": "Init;GameObject",
+      "shortName": "Init",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "owner",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ScaleToPlayer;",
+      "shortName": "ScaleToPlayer",
+      "flags": 32900
+    },
+    {
+      "fullName": "SetNPCAbilities;Character_Record",
+      "shortName": "SetNPCAbilities",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "whandle:gamedataCharacter_Record",
+          "name": "record",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetNPCArchetypeData;Character_Record",
+      "shortName": "SetNPCArchetypeData",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "whandle:gamedataCharacter_Record",
+          "name": "record",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetNPCImmortalityMode;Character_Record",
+      "shortName": "SetNPCImmortalityMode",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "whandle:gamedataCharacter_Record",
+          "name": "record",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetNPCVisualTagsStats;Character_Record",
+      "shortName": "SetNPCVisualTagsStats",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "whandle:gamedataCharacter_Record",
+          "name": "record",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UnInit;GameObject",
+      "shortName": "UnInit",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "owner",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

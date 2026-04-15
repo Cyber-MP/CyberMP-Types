@@ -1,0 +1,655 @@
+{
+  "parent": "gamedataTweakDBRecord",
+  "name": "gamedataVehicleDestruction_Record",
+  "flags": 66,
+  "funcs": [
+    {
+      "fullName": "ChargePortCenter",
+      "shortName": "ChargePortCenter",
+      "return": {
+        "type": "Vector3",
+        "flags": 64
+      },
+      "index": 4324,
+      "flags": 1
+    },
+    {
+      "fullName": "ChargePortRadius",
+      "shortName": "ChargePortRadius",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 4332,
+      "flags": 1
+    },
+    {
+      "fullName": "DamageExponent",
+      "shortName": "DamageExponent",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 4329,
+      "flags": 1
+    },
+    {
+      "fullName": "DamageThreshold",
+      "shortName": "DamageThreshold",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 4327,
+      "flags": 1
+    },
+    {
+      "fullName": "DeformableParts",
+      "shortName": "DeformableParts",
+      "index": 4312,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataVehicleDeformablePart_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "DeformablePartsContains",
+      "shortName": "DeformablePartsContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 4316,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataVehicleDeformablePart_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "DetachableParts",
+      "shortName": "DetachableParts",
+      "index": 4302,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataVehicleDetachablePart_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "DetachablePartsContains",
+      "shortName": "DetachablePartsContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 4306,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataVehicleDetachablePart_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "DetachedPartExplosionEffect",
+      "shortName": "DetachedPartExplosionEffect",
+      "return": {
+        "type": "redResourceReferenceScriptToken",
+        "flags": 64
+      },
+      "index": 4322,
+      "flags": 1
+    },
+    {
+      "fullName": "DoorDetachRules",
+      "shortName": "DoorDetachRules",
+      "index": 4317,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataVehicleDoorDetachRule_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "DoorDetachRulesContains",
+      "shortName": "DoorDetachRulesContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 4321,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataVehicleDoorDetachRule_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "EnableOnHit",
+      "shortName": "EnableOnHit",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 4334,
+      "flags": 1
+    },
+    {
+      "fullName": "ForcePropagationFalloff",
+      "shortName": "ForcePropagationFalloff",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 4330,
+      "flags": 1
+    },
+    {
+      "fullName": "GetDeformablePartsCount",
+      "shortName": "GetDeformablePartsCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 4313,
+      "flags": 1
+    },
+    {
+      "fullName": "GetDeformablePartsItem",
+      "shortName": "GetDeformablePartsItem",
+      "return": {
+        "type": "whandle:gamedataVehicleDeformablePart_Record",
+        "flags": 64
+      },
+      "index": 4314,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetDeformablePartsItemHandle",
+      "shortName": "GetDeformablePartsItemHandle",
+      "return": {
+        "type": "handle:gamedataVehicleDeformablePart_Record",
+        "flags": 64
+      },
+      "index": 4315,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetDetachablePartsCount",
+      "shortName": "GetDetachablePartsCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 4303,
+      "flags": 1
+    },
+    {
+      "fullName": "GetDetachablePartsItem",
+      "shortName": "GetDetachablePartsItem",
+      "return": {
+        "type": "whandle:gamedataVehicleDetachablePart_Record",
+        "flags": 64
+      },
+      "index": 4304,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetDetachablePartsItemHandle",
+      "shortName": "GetDetachablePartsItemHandle",
+      "return": {
+        "type": "handle:gamedataVehicleDetachablePart_Record",
+        "flags": 64
+      },
+      "index": 4305,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetDoorDetachRulesCount",
+      "shortName": "GetDoorDetachRulesCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 4318,
+      "flags": 1
+    },
+    {
+      "fullName": "GetDoorDetachRulesItem",
+      "shortName": "GetDoorDetachRulesItem",
+      "return": {
+        "type": "whandle:gamedataVehicleDoorDetachRule_Record",
+        "flags": 64
+      },
+      "index": 4319,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetDoorDetachRulesItemHandle",
+      "shortName": "GetDoorDetachRulesItemHandle",
+      "return": {
+        "type": "handle:gamedataVehicleDoorDetachRule_Record",
+        "flags": 64
+      },
+      "index": 4320,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetGlassCount",
+      "shortName": "GetGlassCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 4288,
+      "flags": 1
+    },
+    {
+      "fullName": "GetGlassItem",
+      "shortName": "GetGlassItem",
+      "return": {
+        "type": "whandle:gamedataVehicleDestructibleGlass_Record",
+        "flags": 64
+      },
+      "index": 4289,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetGlassItemHandle",
+      "shortName": "GetGlassItemHandle",
+      "return": {
+        "type": "handle:gamedataVehicleDestructibleGlass_Record",
+        "flags": 64
+      },
+      "index": 4290,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetLightsCount",
+      "shortName": "GetLightsCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 4293,
+      "flags": 1
+    },
+    {
+      "fullName": "GetLightsItem",
+      "shortName": "GetLightsItem",
+      "return": {
+        "type": "whandle:gamedataVehicleDestructibleLight_Record",
+        "flags": 64
+      },
+      "index": 4294,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetLightsItemHandle",
+      "shortName": "GetLightsItemHandle",
+      "return": {
+        "type": "handle:gamedataVehicleDestructibleLight_Record",
+        "flags": 64
+      },
+      "index": 4295,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetPointDampersCount",
+      "shortName": "GetPointDampersCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 4308,
+      "flags": 1
+    },
+    {
+      "fullName": "GetPointDampersItem",
+      "shortName": "GetPointDampersItem",
+      "return": {
+        "type": "whandle:gamedataVehicleDestructionPointDamper_Record",
+        "flags": 64
+      },
+      "index": 4309,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetPointDampersItemHandle",
+      "shortName": "GetPointDampersItemHandle",
+      "return": {
+        "type": "handle:gamedataVehicleDestructionPointDamper_Record",
+        "flags": 64
+      },
+      "index": 4310,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetWheelsCount",
+      "shortName": "GetWheelsCount",
+      "return": {
+        "type": "Int32",
+        "flags": 64
+      },
+      "index": 4298,
+      "flags": 1
+    },
+    {
+      "fullName": "GetWheelsItem",
+      "shortName": "GetWheelsItem",
+      "return": {
+        "type": "whandle:gamedataVehicleDestructibleWheel_Record",
+        "flags": 64
+      },
+      "index": 4299,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetWheelsItemHandle",
+      "shortName": "GetWheelsItemHandle",
+      "return": {
+        "type": "handle:gamedataVehicleDestructibleWheel_Record",
+        "flags": 64
+      },
+      "index": 4300,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Int32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Glass",
+      "shortName": "Glass",
+      "index": 4287,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataVehicleDestructibleGlass_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "GlassContains",
+      "shortName": "GlassContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 4291,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataVehicleDestructibleGlass_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GridDimensions",
+      "shortName": "GridDimensions",
+      "return": {
+        "type": "Vector3",
+        "flags": 64
+      },
+      "index": 4325,
+      "flags": 1
+    },
+    {
+      "fullName": "GridLocalOffset",
+      "shortName": "GridLocalOffset",
+      "return": {
+        "type": "Vector3",
+        "flags": 64
+      },
+      "index": 4326,
+      "flags": 1
+    },
+    {
+      "fullName": "Lights",
+      "shortName": "Lights",
+      "index": 4292,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataVehicleDestructibleLight_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "LightsContains",
+      "shortName": "LightsContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 4296,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataVehicleDestructibleLight_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnHitVelocity",
+      "shortName": "OnHitVelocity",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 4333,
+      "flags": 1
+    },
+    {
+      "fullName": "PointDampers",
+      "shortName": "PointDampers",
+      "index": 4307,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataVehicleDestructionPointDamper_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "PointDampersContains",
+      "shortName": "PointDampersContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 4311,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataVehicleDestructionPointDamper_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "VehicleDimensions",
+      "shortName": "VehicleDimensions",
+      "return": {
+        "type": "Vector3",
+        "flags": 64
+      },
+      "index": 4323,
+      "flags": 1
+    },
+    {
+      "fullName": "VelocityValueMaxDamage",
+      "shortName": "VelocityValueMaxDamage",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 4331,
+      "flags": 1
+    },
+    {
+      "fullName": "VelocityValueMinDamage",
+      "shortName": "VelocityValueMinDamage",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 4328,
+      "flags": 1
+    },
+    {
+      "fullName": "Wheels",
+      "shortName": "Wheels",
+      "index": 4297,
+      "flags": 1,
+      "params": [
+        {
+          "type": "array:whandle:gamedataVehicleDestructibleWheel_Record",
+          "name": "outList",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "WheelsContains",
+      "shortName": "WheelsContains",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 4301,
+      "flags": 1,
+      "params": [
+        {
+          "type": "whandle:gamedataVehicleDestructibleWheel_Record",
+          "name": "item",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,307 @@
+{
+  "parent": "InteractiveDevice",
+  "name": "Frame",
+  "flags": 4,
+  "props": [
+    {
+      "type": "Bool",
+      "name": "isLinkedToPower",
+      "flags": 4364238881
+    },
+    {
+      "type": "String",
+      "name": "smartFrameName",
+      "flags": 4297130017
+    },
+    {
+      "type": "String",
+      "name": "smartFrameDescriptionLocKey",
+      "flags": 4297130017
+    },
+    {
+      "type": "whandle:inkISystemRequestsHandler",
+      "name": "systemHandler",
+      "flags": 4297130016
+    },
+    {
+      "type": "Uint32",
+      "name": "squatFactToken",
+      "flags": 4297130016
+    },
+    {
+      "type": "Uint32",
+      "name": "questFactToken",
+      "flags": 4297130016
+    },
+    {
+      "type": "Uint32",
+      "name": "powerFactToken",
+      "flags": 4297130016
+    },
+    {
+      "type": "Int32",
+      "name": "activePhotoID",
+      "flags": 4297130016
+    },
+    {
+      "type": "Uint32",
+      "name": "activePhotoHash",
+      "flags": 4297130016
+    },
+    {
+      "type": "RectF",
+      "name": "activePhotoUV",
+      "flags": 4297130016
+    },
+    {
+      "type": "handle:inkGameNotificationToken",
+      "name": "frameSwitcherToken",
+      "flags": 4431347744
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnDeleteSreenshotComplete",
+      "shortName": "OnDeleteSreenshotComplete",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Uint32",
+          "name": "hash",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnFactChangedEvent",
+      "shortName": "OnFactChangedEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameFactChangedEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnFrameInitialisation",
+      "shortName": "OnFrameInitialisation",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:FrameInitialisation",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnFrameSwitch",
+      "shortName": "OnFrameSwitch",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:FrameSwitch",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnFrameSwitcher",
+      "shortName": "OnFrameSwitcher",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:FrameSwitcher",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRequestComponents",
+      "shortName": "OnRequestComponents",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "entEntityRequestComponentsInterface",
+          "name": "ri",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnScanningLookedAt",
+      "shortName": "OnScanningLookedAt",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameScanningLookAtEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnScreenshotChanged",
+      "shortName": "OnScreenshotChanged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "Vector2",
+          "name": "screenshotSize",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "errorCode",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnTakeControl",
+      "shortName": "OnTakeControl",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "entEntityResolveComponentsInterface",
+          "name": "ri",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CompileScannerChunks;",
+      "shortName": "CompileScannerChunks",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "DeterminGameplayRole;",
+      "shortName": "DeterminGameplayRole",
+      "return": {
+        "type": "EGameplayRole",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "GetController;",
+      "shortName": "GetController",
+      "return": {
+        "type": "handle:FrameController",
+        "flags": 64
+      },
+      "flags": 41088
+    },
+    {
+      "fullName": "GetDevicePS;",
+      "shortName": "GetDevicePS",
+      "return": {
+        "type": "handle:FrameControllerPS",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "GetFrameSize;",
+      "shortName": "GetFrameSize",
+      "return": {
+        "type": "Vector2",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "GetPS",
+      "shortName": "GetPS",
+      "return": {
+        "type": "handle:FramePS",
+        "flags": 64
+      },
+      "flags": 41216
+    },
+    {
+      "fullName": "LinkToPower;",
+      "shortName": "LinkToPower",
+      "flags": 32900
+    },
+    {
+      "fullName": "SpawnFrameSwitcherPopup;",
+      "shortName": "SpawnFrameSwitcherPopup",
+      "flags": 32900
+    },
+    {
+      "fullName": "TestPowerFact;QuestsSystem",
+      "shortName": "TestPowerFact",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:questQuestsSystem",
+          "name": "questSystem",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "TrySpawnFrameSwitcherPopup;",
+      "shortName": "TrySpawnFrameSwitcherPopup",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 32900
+    },
+    {
+      "fullName": "UpdateCurrentPhoto;",
+      "shortName": "UpdateCurrentPhoto",
+      "flags": 32900
+    }
+  ]
+}

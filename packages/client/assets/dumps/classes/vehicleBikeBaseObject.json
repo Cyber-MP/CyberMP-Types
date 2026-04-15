@@ -1,0 +1,75 @@
+{
+  "parent": "vehicleWheeledBaseObject",
+  "name": "vehicleBikeBaseObject",
+  "flags": 2,
+  "funcs": [
+    {
+      "fullName": "EnableTiltControl",
+      "shortName": "EnableTiltControl",
+      "index": 13898,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "enable",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetCustomTargetTilt",
+      "shortName": "GetCustomTargetTilt",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "index": 13899,
+      "flags": 1
+    },
+    {
+      "fullName": "IsPerformingAWheelieOrEndo",
+      "shortName": "IsPerformingAWheelieOrEndo",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13901,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Float",
+          "name": "minCOMOffset",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "minPitchAngle",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsTiltControlEnabled",
+      "shortName": "IsTiltControlEnabled",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 13897,
+      "flags": 1
+    },
+    {
+      "fullName": "SetCustomTargetTilt",
+      "shortName": "SetCustomTargetTilt",
+      "index": 13900,
+      "flags": 1,
+      "params": [
+        {
+          "type": "Float",
+          "name": "targetTilt",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

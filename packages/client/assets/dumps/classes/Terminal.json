@@ -1,0 +1,410 @@
+{
+  "parent": "InteractiveMasterDevice",
+  "name": "Terminal",
+  "flags": 4,
+  "props": [
+    {
+      "type": "handle:ScriptableVirtualCameraViewComponent",
+      "name": "cameraFeed",
+      "flags": 4431413280
+    },
+    {
+      "type": "Bool",
+      "name": "isShortGlitchActive",
+      "flags": 4297130016
+    },
+    {
+      "type": "gameDelayID",
+      "name": "shortGlitchDelayID",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnActionEngineering",
+      "shortName": "OnActionEngineering",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:ActionEngineering",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnAuthorizeUser",
+      "shortName": "OnAuthorizeUser",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:AuthorizeUser",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnDetach",
+      "shortName": "OnDetach",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnDisassembleDevice",
+      "shortName": "OnDisassembleDevice",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:DisassembleDevice",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnHitEvent",
+      "shortName": "OnHitEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:gameeventsHitEvent",
+          "name": "hit",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnLogicReady",
+      "shortName": "OnLogicReady",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:SetLogicReadyEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPersitentStateInitialized",
+      "shortName": "OnPersitentStateInitialized",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:GameAttachedEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnRequestComponents",
+      "shortName": "OnRequestComponents",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "entEntityRequestComponentsInterface",
+          "name": "ri",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnStopShortGlitch",
+      "shortName": "OnStopShortGlitch",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:StopShortGlitchEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnTakeControl",
+      "shortName": "OnTakeControl",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "entEntityResolveComponentsInterface",
+          "name": "ri",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnWorkspotFinished",
+      "shortName": "OnWorkspotFinished",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "CName",
+          "name": "componentName",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "BreakDevice;",
+      "shortName": "BreakDevice",
+      "flags": 33024
+    },
+    {
+      "fullName": "CreateBlackboard;",
+      "shortName": "CreateBlackboard",
+      "flags": 33024
+    },
+    {
+      "fullName": "CutPower;",
+      "shortName": "CutPower",
+      "flags": 33024
+    },
+    {
+      "fullName": "DeterminGameplayRole;",
+      "shortName": "DeterminGameplayRole",
+      "return": {
+        "type": "EGameplayRole",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "GetBlackboardDef;",
+      "shortName": "GetBlackboardDef",
+      "return": {
+        "type": "handle:MasterDeviceBaseBlackboardDef",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "GetBroadcastGlitchVideoPath;",
+      "shortName": "GetBroadcastGlitchVideoPath",
+      "return": {
+        "type": "redResourceReferenceScriptToken",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "GetController;",
+      "shortName": "GetController",
+      "return": {
+        "type": "handle:TerminalController",
+        "flags": 64
+      },
+      "flags": 41088
+    },
+    {
+      "fullName": "GetDefaultGlitchVideoPath;",
+      "shortName": "GetDefaultGlitchVideoPath",
+      "return": {
+        "type": "redResourceReferenceScriptToken",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "GetDevicePS;",
+      "shortName": "GetDevicePS",
+      "return": {
+        "type": "handle:TerminalControllerPS",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "InitializeScreenDefinition;",
+      "shortName": "InitializeScreenDefinition",
+      "flags": 32896
+    },
+    {
+      "fullName": "IsAuthorizationModuleOn;",
+      "shortName": "IsAuthorizationModuleOn",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "ResetScreenToDefault;",
+      "shortName": "ResetScreenToDefault",
+      "flags": 33028
+    },
+    {
+      "fullName": "ResolveGameplayState;",
+      "shortName": "ResolveGameplayState",
+      "flags": 33024
+    },
+    {
+      "fullName": "SetState;gameinteractionsReactionState",
+      "shortName": "SetState",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "gameinteractionsReactionState",
+          "name": "state",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ShouldAlwasyRefreshUIInLogicAra;",
+      "shortName": "ShouldAlwasyRefreshUIInLogicAra",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33024
+    },
+    {
+      "fullName": "ShouldExitZoomOnAuthorization;",
+      "shortName": "ShouldExitZoomOnAuthorization",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33024
+    },
+    {
+      "fullName": "ShouldShowTerminalTitle;",
+      "shortName": "ShouldShowTerminalTitle",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41472
+    },
+    {
+      "fullName": "ShowScreenSaver;",
+      "shortName": "ShowScreenSaver",
+      "flags": 33028
+    },
+    {
+      "fullName": "StartGlitching;EGlitchStateFloat",
+      "shortName": "StartGlitching",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "EGlitchState",
+          "name": "glitchState",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "intensity",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "StartHacking;GameObject",
+      "shortName": "StartHacking",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "executor",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "StartShortGlitch;",
+      "shortName": "StartShortGlitch",
+      "flags": 32900
+    },
+    {
+      "fullName": "StopGlitching;",
+      "shortName": "StopGlitching",
+      "flags": 33024
+    },
+    {
+      "fullName": "TurnOffDevice;",
+      "shortName": "TurnOffDevice",
+      "flags": 33024
+    },
+    {
+      "fullName": "TurnOffScreen;",
+      "shortName": "TurnOffScreen",
+      "flags": 33028
+    },
+    {
+      "fullName": "TurnOnDevice;",
+      "shortName": "TurnOnDevice",
+      "flags": 33024
+    },
+    {
+      "fullName": "TurnOnScreen;",
+      "shortName": "TurnOnScreen",
+      "flags": 33028
+    },
+    {
+      "fullName": "UnsecureTerminal;",
+      "shortName": "UnsecureTerminal",
+      "flags": 32900
+    },
+    {
+      "fullName": "UpdateDeviceState;Bool",
+      "shortName": "UpdateDeviceState",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33024,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "isDelayed",
+          "flags": 1152
+        }
+      ]
+    }
+  ]
+}

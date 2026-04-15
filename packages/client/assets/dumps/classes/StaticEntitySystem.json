@@ -1,0 +1,343 @@
+{
+  "parent": "gameIGameSystem",
+  "name": "StaticEntitySystem",
+  "flags": 2,
+  "funcs": [
+    {
+      "fullName": "AssignTag",
+      "shortName": "AssignTag",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 15380,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "arg",
+          "flags": 0
+        },
+        {
+          "type": "CName",
+          "name": "arg",
+          "flags": 0
+        }
+      ]
+    },
+    {
+      "fullName": "AttachEntity",
+      "shortName": "AttachEntity",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 15372,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "arg",
+          "flags": 0
+        }
+      ]
+    },
+    {
+      "fullName": "AttachTagged",
+      "shortName": "AttachTagged",
+      "index": 15387,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "arg",
+          "flags": 0
+        }
+      ]
+    },
+    {
+      "fullName": "DespawnEntity",
+      "shortName": "DespawnEntity",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 15371,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "arg",
+          "flags": 0
+        }
+      ]
+    },
+    {
+      "fullName": "DespawnTagged",
+      "shortName": "DespawnTagged",
+      "index": 15386,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "arg",
+          "flags": 0
+        }
+      ]
+    },
+    {
+      "fullName": "DetachEntity",
+      "shortName": "DetachEntity",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 15373,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "arg",
+          "flags": 0
+        }
+      ]
+    },
+    {
+      "fullName": "DetachTagged",
+      "shortName": "DetachTagged",
+      "index": 15388,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "arg",
+          "flags": 0
+        }
+      ]
+    },
+    {
+      "fullName": "GetEntity",
+      "shortName": "GetEntity",
+      "return": {
+        "type": "handle:entEntity",
+        "flags": 64
+      },
+      "index": 15378,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "arg",
+          "flags": 0
+        }
+      ]
+    },
+    {
+      "fullName": "GetTagged",
+      "shortName": "GetTagged",
+      "return": {
+        "type": "array:handle:entEntity",
+        "flags": 64
+      },
+      "index": 15383,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "arg",
+          "flags": 0
+        }
+      ]
+    },
+    {
+      "fullName": "GetTaggedID",
+      "shortName": "GetTaggedID",
+      "return": {
+        "type": "entEntityID",
+        "flags": 64
+      },
+      "index": 15384,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "arg",
+          "flags": 0
+        }
+      ]
+    },
+    {
+      "fullName": "GetTaggedIDs",
+      "shortName": "GetTaggedIDs",
+      "return": {
+        "type": "array:entEntityID",
+        "flags": 64
+      },
+      "index": 15385,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "arg",
+          "flags": 0
+        }
+      ]
+    },
+    {
+      "fullName": "GetTags",
+      "shortName": "GetTags",
+      "return": {
+        "type": "array:CName",
+        "flags": 64
+      },
+      "index": 15379,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "arg",
+          "flags": 0
+        }
+      ]
+    },
+    {
+      "fullName": "IsManaged",
+      "shortName": "IsManaged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 15374,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "arg",
+          "flags": 0
+        }
+      ]
+    },
+    {
+      "fullName": "IsPopulated",
+      "shortName": "IsPopulated",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 15382,
+      "flags": 1,
+      "params": [
+        {
+          "type": "CName",
+          "name": "arg",
+          "flags": 0
+        }
+      ]
+    },
+    {
+      "fullName": "IsReady",
+      "shortName": "IsReady",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 15369,
+      "flags": 1
+    },
+    {
+      "fullName": "IsSpawned",
+      "shortName": "IsSpawned",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 15376,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "arg",
+          "flags": 0
+        }
+      ]
+    },
+    {
+      "fullName": "IsSpawning",
+      "shortName": "IsSpawning",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 15377,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "arg",
+          "flags": 0
+        }
+      ]
+    },
+    {
+      "fullName": "IsTagged",
+      "shortName": "IsTagged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 15375,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "arg",
+          "flags": 0
+        },
+        {
+          "type": "CName",
+          "name": "arg",
+          "flags": 0
+        }
+      ]
+    },
+    {
+      "fullName": "SpawnEntity",
+      "shortName": "SpawnEntity",
+      "return": {
+        "type": "entEntityID",
+        "flags": 64
+      },
+      "index": 15370,
+      "flags": 1,
+      "params": [
+        {
+          "type": "handle:StaticEntitySpec",
+          "name": "arg",
+          "flags": 0
+        }
+      ]
+    },
+    {
+      "fullName": "UnassignTag",
+      "shortName": "UnassignTag",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 15381,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "arg",
+          "flags": 0
+        },
+        {
+          "type": "CName",
+          "name": "arg",
+          "flags": 0
+        }
+      ]
+    }
+  ]
+}

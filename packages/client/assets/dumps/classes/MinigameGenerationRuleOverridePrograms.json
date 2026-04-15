@@ -1,0 +1,44 @@
+{
+  "parent": "gameuiMinigameGenerationRule",
+  "name": "MinigameGenerationRuleOverridePrograms",
+  "flags": 4,
+  "funcs": [
+    {
+      "fullName": "ConvertToUint;script_ref<array<Int32>>",
+      "shortName": "ConvertToUint",
+      "return": {
+        "type": "array:Uint32",
+        "flags": 64
+      },
+      "flags": 33284,
+      "params": [
+        {
+          "type": "script_ref:array:Int32",
+          "name": "arr",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnProcessRule;Uint32array<array<GridCell>>",
+      "shortName": "OnProcessRule",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33024,
+      "params": [
+        {
+          "type": "Uint32",
+          "name": "size",
+          "flags": 128
+        },
+        {
+          "type": "array:array:gameuiGridCell",
+          "name": "grid",
+          "flags": 640
+        }
+      ]
+    }
+  ]
+}

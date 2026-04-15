@@ -1,0 +1,662 @@
+{
+  "parent": "inkWidgetLogicController",
+  "name": "CraftingMainLogicController",
+  "flags": 4,
+  "props": [
+    {
+      "type": "Float",
+      "name": "TIME_UNTIL_SELECTION",
+      "flags": 4297130016
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "root",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "itemDetailsContainer",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "leftListScrollHolder",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkVirtualCompoundWidgetReference",
+      "name": "virtualListContainer",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "filterGroup",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "sortingButton",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "sortingDropdown",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkWidgetReference",
+      "name": "tooltipContainer",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "itemName",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "itemQuality",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "progressBarContainer",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "progressButtonContainer",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "blockedText",
+      "flags": 4297195553
+    },
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "ingredientsListContainer",
+      "flags": 4297195553
+    },
+    {
+      "type": "UIMenuNotificationType",
+      "name": "notificationType",
+      "flags": 4297195552
+    },
+    {
+      "type": "handle:CraftingItemTemplateClassifier",
+      "name": "classifier",
+      "flags": 4431413280
+    },
+    {
+      "type": "handle:CraftingDataView",
+      "name": "dataView",
+      "flags": 4431413280
+    },
+    {
+      "type": "handle:inkScriptableDataSourceWrapper",
+      "name": "dataSource",
+      "flags": 4431413280
+    },
+    {
+      "type": "whandle:inkVirtualGridController",
+      "name": "virtualListController",
+      "flags": 4297195552
+    },
+    {
+      "type": "whandle:inkScrollController",
+      "name": "leftListScrollController",
+      "flags": 4297195552
+    },
+    {
+      "type": "array:whandle:IngredientListItemLogicController",
+      "name": "ingredientsControllerList",
+      "flags": 6583091232
+    },
+    {
+      "type": "Int32",
+      "name": "maxIngredientCount",
+      "flags": 4297195552
+    },
+    {
+      "type": "handle:RecipeData",
+      "name": "selectedRecipe",
+      "flags": 4431413280
+    },
+    {
+      "type": "gameInventoryItemData",
+      "name": "selectedItemData",
+      "flags": 4297195552
+    },
+    {
+      "type": "Bool",
+      "name": "isCraftable",
+      "flags": 4297195552
+    },
+    {
+      "type": "array:Int32",
+      "name": "filters",
+      "flags": 6583091232
+    },
+    {
+      "type": "whandle:ProgressBarButton",
+      "name": "progressButtonController",
+      "flags": 4297195552
+    },
+    {
+      "type": "whandle:InventoryItemDisplayController",
+      "name": "itemWeaponController",
+      "flags": 4297195552
+    },
+    {
+      "type": "whandle:InventoryItemDisplayController",
+      "name": "itemIngredientController",
+      "flags": 4297195552
+    },
+    {
+      "type": "Bool",
+      "name": "doPlayFilterSounds",
+      "flags": 4297195552
+    },
+    {
+      "type": "whandle:CraftingMainGameController",
+      "name": "craftingGameController",
+      "flags": 4297195552
+    },
+    {
+      "type": "whandle:CraftingSystem",
+      "name": "craftingSystem",
+      "flags": 4297195552
+    },
+    {
+      "type": "whandle:gameuiTooltipsManager",
+      "name": "tooltipsManager",
+      "flags": 4297195552
+    },
+    {
+      "type": "whandle:ButtonHints",
+      "name": "buttonHintsController",
+      "flags": 4297195552
+    },
+    {
+      "type": "whandle:InventoryDataManagerV2",
+      "name": "inventoryManager",
+      "flags": 4297195552
+    },
+    {
+      "type": "whandle:DropdownListController",
+      "name": "sortingController",
+      "flags": 4297195552
+    },
+    {
+      "type": "whandle:DropdownButtonController",
+      "name": "sortingButtonController",
+      "flags": 4297195552
+    },
+    {
+      "type": "Bool",
+      "name": "isPanelOpen",
+      "flags": 4297195552
+    },
+    {
+      "type": "Bool",
+      "name": "hasSpawnedTooltip",
+      "flags": 4297195552
+    },
+    {
+      "type": "whandle:CraftableItemLogicController",
+      "name": "currentSelected",
+      "flags": 4297130016
+    },
+    {
+      "type": "redResourceReferenceScriptToken",
+      "name": "itemTooltipPath",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isProcessing",
+      "flags": 4297130016
+    },
+    {
+      "type": "whandle:gameDelaySystem",
+      "name": "DelaySystem",
+      "flags": 4297195552
+    },
+    {
+      "type": "whandle:gameStatsSystem",
+      "name": "StatsSystem",
+      "flags": 4297195552
+    },
+    {
+      "type": "whandle:PlayerPuppet",
+      "name": "Player",
+      "flags": 4297195552
+    },
+    {
+      "type": "ScriptGameInstance",
+      "name": "Game",
+      "flags": 4297195552
+    },
+    {
+      "type": "Bool",
+      "name": "firstClicked",
+      "flags": 4297130016
+    },
+    {
+      "type": "Float",
+      "name": "progress",
+      "flags": 4297130016
+    },
+    {
+      "type": "Bool",
+      "name": "isFirstOpen",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "CraftingMainLogicController::GetDropdownOption;ItemSortMode",
+      "shortName": "GetDropdownOption",
+      "return": {
+        "type": "handle:DropdownItemData",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "ItemSortMode",
+          "name": "identifier",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CraftingMainLogicController::IsWeapon;gamedataEquipmentArea",
+      "shortName": "IsWeapon",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "gamedataEquipmentArea",
+          "name": "type",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnButtonClick",
+      "shortName": "OnButtonClick",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnDropdownItemClickedEvent",
+      "shortName": "OnDropdownItemClickedEvent",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:DropdownItemClickedEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnFilterChange",
+      "shortName": "OnFilterChange",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "whandle:inkRadioGroupController",
+          "name": "controller",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "selectedIndex",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnHoldSelectedItem",
+      "shortName": "OnHoldSelectedItem",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnHoverOutSelectedItem",
+      "shortName": "OnHoverOutSelectedItem",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnIngedientControllerSpawned",
+      "shortName": "OnIngedientControllerSpawned",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkWidget",
+          "name": "widget",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "userData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnItemSelect",
+      "shortName": "OnItemSelect",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkVirtualCompoundItemController",
+          "name": "previous",
+          "flags": 128
+        },
+        {
+          "type": "handle:inkVirtualCompoundItemController",
+          "name": "next",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnReleaseSelectedItem",
+      "shortName": "OnReleaseSelectedItem",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnSortingButtonClicked",
+      "shortName": "OnSortingButtonClicked",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "ClosePanel;",
+      "shortName": "ClosePanel",
+      "flags": 33284
+    },
+    {
+      "fullName": "DispatchSelectDelayed;Uint32",
+      "shortName": "DispatchSelectDelayed",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "Uint32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "Init;CraftingMainGameController",
+      "shortName": "Init",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "whandle:CraftingMainGameController",
+          "name": "craftingGameController",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "InitVirtualList;",
+      "shortName": "InitVirtualList",
+      "flags": 33028
+    },
+    {
+      "fullName": "IsEmptyData;",
+      "shortName": "IsEmptyData",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33028
+    },
+    {
+      "fullName": "OnChangeTab;Bool",
+      "shortName": "OnChangeTab",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "Bool",
+          "name": "isCurrent",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnPressSelectedItem;inkPointerEvent",
+      "shortName": "OnPressSelectedItem",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OpenPanel;",
+      "shortName": "OpenPanel",
+      "flags": 33284
+    },
+    {
+      "fullName": "RefreshListViewContent;InventoryItemData",
+      "shortName": "RefreshListViewContent",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "gameInventoryItemData",
+          "name": "inventoryItemData",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "ResetProcess;",
+      "shortName": "ResetProcess",
+      "flags": 32900
+    },
+    {
+      "fullName": "Select;Uint32",
+      "shortName": "Select",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "Uint32",
+          "name": "index",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetCraftingButton;script_ref<String>",
+      "shortName": "SetCraftingButton",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "script_ref:String",
+          "name": "label",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetItemButtonHintsHoverOut;inkPointerEvent",
+      "shortName": "SetItemButtonHintsHoverOut",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetItemButtonHintsHoverOver;inkPointerEvent",
+      "shortName": "SetItemButtonHintsHoverOver",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "handle:inkPointerEvent",
+          "name": "evt",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetupFilters;",
+      "shortName": "SetupFilters",
+      "flags": 33024
+    },
+    {
+      "fullName": "SetupIngredientWidgets;",
+      "shortName": "SetupIngredientWidgets",
+      "flags": 33024
+    },
+    {
+      "fullName": "SetupSortingDropdown;",
+      "shortName": "SetupSortingDropdown",
+      "flags": 33028
+    },
+    {
+      "fullName": "SpawnItemTooltipAsync;inkWidgetIScriptableCName",
+      "shortName": "SpawnItemTooltipAsync",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "whandle:inkWidget",
+          "name": "parentWidget",
+          "flags": 128
+        },
+        {
+          "type": "handle:IScriptable",
+          "name": "callbackObject",
+          "flags": 1152
+        },
+        {
+          "type": "CName",
+          "name": "callbackFunctionName",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "StartProcess;",
+      "shortName": "StartProcess",
+      "flags": 32900
+    },
+    {
+      "fullName": "UpdateItemPreview;CraftableItemLogicController",
+      "shortName": "UpdateItemPreview",
+      "flags": 33024,
+      "params": [
+        {
+          "type": "handle:CraftableItemLogicController",
+          "name": "craftableController",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateSelection;CraftableItemLogicController",
+      "shortName": "UpdateSelection",
+      "flags": 32900,
+      "params": [
+        {
+          "type": "handle:CraftableItemLogicController",
+          "name": "selection",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}

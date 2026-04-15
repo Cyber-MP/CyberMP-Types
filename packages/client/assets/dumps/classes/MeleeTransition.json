@@ -1,0 +1,2013 @@
+{
+  "parent": "DefaultTransition",
+  "name": "MeleeTransition",
+  "flags": 5,
+  "props": [
+    {
+      "type": "String",
+      "name": "stateNameString",
+      "flags": 4297326624
+    },
+    {
+      "type": "handle:DriverCombatListener",
+      "name": "driverCombatListener",
+      "flags": 4431413280
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "MeleeTransition::AnyMeleeAttack;StateGameScriptInterface",
+      "shortName": "AnyMeleeAttack",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "MeleeTransition::AnyMeleeAttackPressed;StateGameScriptInterface",
+      "shortName": "AnyMeleeAttackPressed",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "MeleeTransition::CanThrowWeaponObject;GameObjectWeaponObject",
+      "shortName": "CanThrowWeaponObject",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gameObject",
+          "name": "owner",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameweaponObject",
+          "name": "weapon",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "MeleeTransition::CheckMeleeAttackPressCount;StateContextStateGameScriptInterface",
+      "shortName": "CheckMeleeAttackPressCount",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "MeleeTransition::ClearInputBuffer;StateContext",
+      "shortName": "ClearInputBuffer",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "MeleeTransition::GetAimAssistMeleeRecord;StateGameScriptInterface",
+      "shortName": "GetAimAssistMeleeRecord",
+      "return": {
+        "type": "handle:gamedataAimAssistMelee_Record",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "MeleeTransition::GetGorillaArmsOnePunchNPCMarkStatusEffectID;",
+      "shortName": "GetGorillaArmsOnePunchNPCMarkStatusEffectID",
+      "return": {
+        "type": "TweakDBID",
+        "flags": 64
+      },
+      "flags": 33030
+    },
+    {
+      "fullName": "MeleeTransition::GetGorillaArmsSpyTreeStatusEffectID;",
+      "shortName": "GetGorillaArmsSpyTreeStatusEffectID",
+      "return": {
+        "type": "TweakDBID",
+        "flags": 64
+      },
+      "flags": 33030
+    },
+    {
+      "fullName": "MeleeTransition::GetHoldEnterDuration;StateGameScriptInterface",
+      "shortName": "GetHoldEnterDuration",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "MeleeTransition::GetMantisBladesInvulnerableLeapRelicBufffStatusEffectID;",
+      "shortName": "GetMantisBladesInvulnerableLeapRelicBufffStatusEffectID",
+      "return": {
+        "type": "TweakDBID",
+        "flags": 64
+      },
+      "flags": 33030
+    },
+    {
+      "fullName": "MeleeTransition::GetMantisBladesLeapDismembermentSpyTreeDebuffStatusEffectID;",
+      "shortName": "GetMantisBladesLeapDismembermentSpyTreeDebuffStatusEffectID",
+      "return": {
+        "type": "TweakDBID",
+        "flags": 64
+      },
+      "flags": 33030
+    },
+    {
+      "fullName": "MeleeTransition::GetMantisBladesSpecialAttackSpyTreeStatusEffectID;",
+      "shortName": "GetMantisBladesSpecialAttackSpyTreeStatusEffectID",
+      "return": {
+        "type": "TweakDBID",
+        "flags": 64
+      },
+      "flags": 33030
+    },
+    {
+      "fullName": "MeleeTransition::GetMeleeAttackCooldownName;",
+      "shortName": "GetMeleeAttackCooldownName",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 33286
+    },
+    {
+      "fullName": "MeleeTransition::GetWeaponObject;StateGameScriptInterface",
+      "shortName": "GetWeaponObject",
+      "return": {
+        "type": "handle:gameweaponObject",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "MeleeTransition::GetWeaponType;StateGameScriptInterface",
+      "shortName": "GetWeaponType",
+      "return": {
+        "type": "gamedataItemType",
+        "flags": 64
+      },
+      "flags": 33030,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "MeleeTransition::HasGrandFinaleStatusEffect;StateGameScriptInterface",
+      "shortName": "HasGrandFinaleStatusEffect",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33030,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "MeleeTransition::HasMonowireWithQuickhackSelected;StateGameScriptInterface",
+      "shortName": "HasMonowireWithQuickhackSelected",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33030,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "MeleeTransition::HasNewSpyAttackStatFlag;StateGameScriptInterface",
+      "shortName": "HasNewSpyAttackStatFlag",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33030,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "MeleeTransition::HasOnePunchManStatusEffect;StateGameScriptInterface",
+      "shortName": "HasOnePunchManStatusEffect",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33030,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "MeleeTransition::IsPlayingSyncedAnimation;StateGameScriptInterface",
+      "shortName": "IsPlayingSyncedAnimation",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "MeleeTransition::IsThrownWeaponReloading;StateContextStateGameScriptInterface",
+      "shortName": "IsThrownWeaponReloading",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "MeleeTransition::LightMeleeAttackPressed;StateGameScriptInterface",
+      "shortName": "LightMeleeAttackPressed",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "MeleeTransition::MeleeAttackPressed;StateGameScriptInterface",
+      "shortName": "MeleeAttackPressed",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "MeleeTransition::MeleeAttackReleased;StateGameScriptInterface",
+      "shortName": "MeleeAttackReleased",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "MeleeTransition::MeleeSprintStateCondition;StateContextStateGameScriptInterface",
+      "shortName": "MeleeSprintStateCondition",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "MeleeTransition::MeleeUseExplorationCondition;StateContextStateGameScriptInterface",
+      "shortName": "MeleeUseExplorationCondition",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "MeleeTransition::NoMeleeAttack;StateGameScriptInterface",
+      "shortName": "NoMeleeAttack",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "MeleeTransition::PlayerLeapedToTargetCheck;StateGameScriptInterface",
+      "shortName": "PlayerLeapedToTargetCheck",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33030,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "MeleeTransition::QuickMeleePressed;StateGameScriptInterface",
+      "shortName": "QuickMeleePressed",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33030,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "MeleeTransition::QuickMeleeReleased;StateGameScriptInterface",
+      "shortName": "QuickMeleeReleased",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33030,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "MeleeTransition::QuickMeleeTapped;StateGameScriptInterface",
+      "shortName": "QuickMeleeTapped",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33030,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "MeleeTransition::StrongMeleeAttackPressed;StateGameScriptInterface",
+      "shortName": "StrongMeleeAttackPressed",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "MeleeTransition::StrongMeleeAttackReleased;StateGameScriptInterface",
+      "shortName": "StrongMeleeAttackReleased",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "MeleeTransition::UpdateMeleeInputBuffer;StateContextStateGameScriptInterfaceBool",
+      "shortName": "UpdateMeleeInputBuffer",
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "onlyLightMeleeAttack",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "MeleeTransition::WantsToLightAttack;StateContextStateGameScriptInterface",
+      "shortName": "WantsToLightAttack",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "MeleeTransition::WantsToQuickMelee;StateContextStateGameScriptInterface",
+      "shortName": "WantsToQuickMelee",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "MeleeTransition::WantsToStrongAttack;StateContextStateGameScriptInterface",
+      "shortName": "WantsToStrongAttack",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33286,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "MeleeTransition::WeaponIsCharged;StateGameScriptInterface",
+      "shortName": "WeaponIsCharged",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33030,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AddAttackImpulse;StateGameScriptInterfaceStateContextMeleeAttackData",
+      "shortName": "AddAttackImpulse",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameMeleeAttackData",
+          "name": "attackData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AddCameraSpaceImpulse;StateGameScriptInterfaceStateContextMeleeAttackData",
+      "shortName": "AddCameraSpaceImpulse",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameMeleeAttackData",
+          "name": "attackData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AddForwardImpulse;StateGameScriptInterfaceStateContextMeleeAttackData",
+      "shortName": "AddForwardImpulse",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameMeleeAttackData",
+          "name": "attackData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AddUpImpulse;StateGameScriptInterfaceStateContextMeleeAttackData",
+      "shortName": "AddUpImpulse",
+      "return": {
+        "type": "Vector4",
+        "flags": 64
+      },
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameMeleeAttackData",
+          "name": "attackData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "AdjustAttackPosition;StateGameScriptInterfaceStateContextMeleeAttackData",
+      "shortName": "AdjustAttackPosition",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameMeleeAttackData",
+          "name": "attackData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ApplyThrowAttackGameplayRestrictions;StateContextStateGameScriptInterface",
+      "shortName": "ApplyThrowAttackGameplayRestrictions",
+      "flags": 41220,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CanPerformRelicLeap;StateGameScriptInterface",
+      "shortName": "CanPerformRelicLeap",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41220,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CanThrowWeapon;StateContextStateGameScriptInterface",
+      "shortName": "CanThrowWeapon",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41220,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CanWeaponBlock;StateContextStateGameScriptInterface",
+      "shortName": "CanWeaponBlock",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41220,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CanWeaponDeflect;StateContextStateGameScriptInterface",
+      "shortName": "CanWeaponDeflect",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41220,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CheckIfFinalAttack;StateGameScriptInterfaceStateContext",
+      "shortName": "CheckIfFinalAttack",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41220,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CheckIfInfiniteCombo;StateContextStateGameScriptInterface",
+      "shortName": "CheckIfInfiniteCombo",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41220,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CheckItemType;StateGameScriptInterfacegamedataItemType",
+      "shortName": "CheckItemType",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41220,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        },
+        {
+          "type": "gamedataItemType",
+          "name": "itemType",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "CheckLeapCollision;StateContextStateGameScriptInterface",
+      "shortName": "CheckLeapCollision",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41220,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ClearDebugText;StateGameScriptInterfaceUint32",
+      "shortName": "ClearDebugText",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        },
+        {
+          "type": "Uint32",
+          "name": "textLayerId",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ClearMeleePressCount;StateContextStateGameScriptInterface",
+      "shortName": "ClearMeleePressCount",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ConsumeStamina;StateGameScriptInterfaceMeleeAttackData",
+      "shortName": "ConsumeStamina",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameMeleeAttackData",
+          "name": "attackData",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "DisableNanoWireIK;StateGameScriptInterface",
+      "shortName": "DisableNanoWireIK",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "DrawDebugText;StateGameScriptInterfaceUint32script_ref<String>",
+      "shortName": "DrawDebugText",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        },
+        {
+          "type": "Uint32",
+          "name": "textLayerId",
+          "flags": 640
+        },
+        {
+          "type": "script_ref:String",
+          "name": "text",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetAttackDataFromCurrentState;StateContextStateGameScriptInterfaceInt32MeleeAttackData",
+      "shortName": "GetAttackDataFromCurrentState",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41220,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "attackNumber",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameMeleeAttackData",
+          "name": "outgoingStruct",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "GetAttackDataFromState;StateContextStateGameScriptInterfaceStringInt32MeleeAttackData",
+      "shortName": "GetAttackDataFromState",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41220,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        },
+        {
+          "type": "String",
+          "name": "stateName",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "attackNumber",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameMeleeAttackData",
+          "name": "outgoingStruct",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "GetAttackRecord;StateGameScriptInterfaceStringInt32Attack_Melee_Record",
+      "shortName": "GetAttackRecord",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41220,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        },
+        {
+          "type": "String",
+          "name": "stateName",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "attackNumber",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gamedataAttack_Melee_Record",
+          "name": "attackRecord",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "GetBlockLookAtParams;",
+      "shortName": "GetBlockLookAtParams",
+      "return": {
+        "type": "gameaimAssistAimRequest",
+        "flags": 64
+      },
+      "flags": 33028
+    },
+    {
+      "fullName": "GetMeleeMovementDirection;StateContextStateGameScriptInterface",
+      "shortName": "GetMeleeMovementDirection",
+      "return": {
+        "type": "meleeMoveDirection",
+        "flags": 64
+      },
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetMeleeWeaponFriendlyName;StateGameScriptInterface",
+      "shortName": "GetMeleeWeaponFriendlyName",
+      "return": {
+        "type": "CName",
+        "flags": 64
+      },
+      "flags": 41220,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetMovementInput;StateGameScriptInterface",
+      "shortName": "GetMovementInput",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetNanoWireTargetObject;StateGameScriptInterface",
+      "shortName": "GetNanoWireTargetObject",
+      "return": {
+        "type": "handle:gameObject",
+        "flags": 64
+      },
+      "flags": 41220,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "GetPerfectAimSnapParams;",
+      "shortName": "GetPerfectAimSnapParams",
+      "return": {
+        "type": "gameaimAssistAimRequest",
+        "flags": 64
+      },
+      "flags": 33028
+    },
+    {
+      "fullName": "GetPlayerAimingStatusEffectID;",
+      "shortName": "GetPlayerAimingStatusEffectID",
+      "return": {
+        "type": "TweakDBID",
+        "flags": 64
+      },
+      "flags": 33028
+    },
+    {
+      "fullName": "GetSlotTransformToTarget;StateGameScriptInterfaceGameObjectFloatBoolVector4",
+      "shortName": "GetSlotTransformToTarget",
+      "flags": 41220,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameObject",
+          "name": "target",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "leapDuration",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "isTargetKnockedOver",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "targetPos",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "GetSlotTransformToTarget;StateGameScriptInterfaceGameObjectFloatBoolVector4Float",
+      "shortName": "GetSlotTransformToTarget",
+      "flags": 41220,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        },
+        {
+          "type": "handle:gameObject",
+          "name": "target",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "leapDuration",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "isTargetKnockedOver",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "targetPos",
+          "flags": 640
+        },
+        {
+          "type": "Float",
+          "name": "rotationDuration",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "HasAttackRecord;StateGameScriptInterfaceInt32",
+      "shortName": "HasAttackRecord",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41220,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "attackNumber",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "HasMeleeTargeting;StateContextStateGameScriptInterface",
+      "shortName": "HasMeleeTargeting",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41220,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HasWeaponStatFlag;StateGameScriptInterfacegamedataStatType",
+      "shortName": "HasWeaponStatFlag",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41220,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        },
+        {
+          "type": "gamedataStatType",
+          "name": "flag",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IncrementAttackNumber;StateGameScriptInterfaceStateContext",
+      "shortName": "IncrementAttackNumber",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IncrementTotalComboAttackNumber;StateGameScriptInterfaceStateContext",
+      "shortName": "IncrementTotalComboAttackNumber",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsAttackParried;StateContextStateGameScriptInterface",
+      "shortName": "IsAttackParried",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41220,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsBlockHeld;StateContextStateGameScriptInterface",
+      "shortName": "IsBlockHeld",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41220,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsBlockPressed;StateContextStateGameScriptInterface",
+      "shortName": "IsBlockPressed",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41220,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsChoice1Released;StateGameScriptInterface",
+      "shortName": "IsChoice1Released",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41220,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsCloseEnoughForOnePunch;StateGameScriptInterfaceGameObject",
+      "shortName": "IsCloseEnoughForOnePunch",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameObject",
+          "name": "target",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsPlayerInputDirectedForward;StateGameScriptInterface",
+      "shortName": "IsPlayerInputDirectedForward",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsTargetAPuppet;StateGameScriptInterface",
+      "shortName": "IsTargetAPuppet",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsTargetOfficer;StateGameScriptInterfaceGameObject",
+      "shortName": "IsTargetOfficer",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        },
+        {
+          "type": "whandle:gameObject",
+          "name": "object",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsWeaponReady;StateContextStateGameScriptInterface",
+      "shortName": "IsWeaponReady",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41220,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "LightMeleeAttackReleased;StateGameScriptInterface",
+      "shortName": "LightMeleeAttackReleased",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41220,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "NoStrongAttackPressed;StateGameScriptInterface",
+      "shortName": "NoStrongAttackPressed",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41220,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnAttach;StateContextStateGameScriptInterface",
+      "shortName": "OnAttach",
+      "flags": 34048,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "OnDetach;StateContextStateGameScriptInterface",
+      "shortName": "OnDetach",
+      "flags": 34048,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "QuickMeleeHeld;StateGameScriptInterface",
+      "shortName": "QuickMeleeHeld",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41220,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RemoveAllMeleeGameplayRestrictions;StateContextStateGameScriptInterface",
+      "shortName": "RemoveAllMeleeGameplayRestrictions",
+      "flags": 41220,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "RemoveThrowAttackGameplayRestrictions;StateContextStateGameScriptInterface",
+      "shortName": "RemoveThrowAttackGameplayRestrictions",
+      "flags": 41220,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ResetAttackNumber;StateContext",
+      "shortName": "ResetAttackNumber",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ResetFlags;StateContext",
+      "shortName": "ResetFlags",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SendAnimFeatureData;StateContextStateGameScriptInterface",
+      "shortName": "SendAnimFeatureData",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetAttackNumber;StateContextInt32",
+      "shortName": "SetAttackNumber",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "Int32",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetCanSprintWhileCharging;StateContextBool",
+      "shortName": "SetCanSprintWhileCharging",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetIsAttacking;StateContextBool",
+      "shortName": "SetIsAttacking",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetIsBlocking;StateContextBool",
+      "shortName": "SetIsBlocking",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetIsHolding;StateContextBool",
+      "shortName": "SetIsHolding",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetIsParried;StateContextBool",
+      "shortName": "SetIsParried",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetIsSafe;StateContextBool",
+      "shortName": "SetIsSafe",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetIsTargeting;StateContextBool",
+      "shortName": "SetIsTargeting",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetIsThrowReloading;StateContextBool",
+      "shortName": "SetIsThrowReloading",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetMeleeAttackPressCount;StateContextStateGameScriptInterface",
+      "shortName": "SetMeleeAttackPressCount",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SetThrowReloadTime;StateContextFloat",
+      "shortName": "SetThrowReloadTime",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "Float",
+          "name": "value",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ShouldHold;StateContextStateGameScriptInterfaceBoolBool",
+      "shortName": "ShouldHold",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41220,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "skipDurationCheck",
+          "flags": 1152
+        },
+        {
+          "type": "Bool",
+          "name": "skipPressCount",
+          "flags": 1152
+        }
+      ]
+    },
+    {
+      "fullName": "ShouldInterruptHoldStates;StateContextStateGameScriptInterface",
+      "shortName": "ShouldInterruptHoldStates",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41220,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "SpawnMeleeWeaponProjectile;StateGameScriptInterface",
+      "shortName": "SpawnMeleeWeaponProjectile",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "ToMeleeChargedHold;StateContextStateGameScriptInterface",
+      "shortName": "ToMeleeChargedHold",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 42244,
+      "params": [
+        {
+          "type": "handle:gamestateMachineStateContextScript",
+          "name": "stateContext",
+          "flags": 128
+        },
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "UpdateNanoWireEndPositionAnimFeature;StateGameScriptInterfaceCNameBoolBoolVector4",
+      "shortName": "UpdateNanoWireEndPositionAnimFeature",
+      "flags": 33028,
+      "params": [
+        {
+          "type": "handle:gamestateMachineGameScriptInterface",
+          "name": "scriptInterface",
+          "flags": 128
+        },
+        {
+          "type": "CName",
+          "name": "animFeatureName",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "enable",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "setPosition",
+          "flags": 1152
+        },
+        {
+          "type": "Vector4",
+          "name": "slotPosition",
+          "flags": 1152
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "parent": "AIIGuardAreaManager",
+  "name": "AIGuardAreaManager",
+  "flags": 2,
+  "funcs": [
+    {
+      "fullName": "AssignRestrictMovementArea",
+      "shortName": "AssignRestrictMovementArea",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 14209,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "npcEntityID",
+          "flags": 128
+        },
+        {
+          "type": "NodeRef",
+          "name": "restrictMovementArea",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "FindPointInRestrictMovementArea",
+      "shortName": "FindPointInRestrictMovementArea",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 14212,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "npcEntityID",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "referencePoint",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "restrictMovementAreaPoint",
+          "flags": 640
+        }
+      ]
+    },
+    {
+      "fullName": "GetAllPuppetsInRestrictMovementArea",
+      "shortName": "GetAllPuppetsInRestrictMovementArea",
+      "return": {
+        "type": "array:entEntityID",
+        "flags": 64
+      },
+      "index": 14213,
+      "flags": 1,
+      "params": [
+        {
+          "type": "AIScriptGuardArea",
+          "name": "area",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HasAssignedRestrictMovementArea",
+      "shortName": "HasAssignedRestrictMovementArea",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 14208,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "npcEntityID",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsPointInPursuitZone",
+      "shortName": "IsPointInPursuitZone",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 14211,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "npcEntityID",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "point",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "IsPointInRestrictMovementArea",
+      "shortName": "IsPointInRestrictMovementArea",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "index": 14210,
+      "flags": 1,
+      "params": [
+        {
+          "type": "entEntityID",
+          "name": "npcEntityID",
+          "flags": 128
+        },
+        {
+          "type": "Vector4",
+          "name": "point",
+          "flags": 128
+        },
+        {
+          "type": "Bool",
+          "name": "onlyActualArea",
+          "flags": 1152
+        }
+      ]
+    }
+  ]
+}

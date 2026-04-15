@@ -1,0 +1,88 @@
+{
+  "parent": "inkWidgetLogicController",
+  "name": "ItemDisplayInventoryMiniGrid",
+  "flags": 4,
+  "props": [
+    {
+      "type": "inkCompoundWidgetReference",
+      "name": "gridList",
+      "flags": 4297130017
+    },
+    {
+      "type": "inkTextWidgetReference",
+      "name": "label",
+      "flags": 4297130017
+    },
+    {
+      "type": "Int32",
+      "name": "gridWidth",
+      "flags": 4297130016
+    },
+    {
+      "type": "array:whandle:InventoryItemDisplayController",
+      "name": "gridData",
+      "flags": 6583025696
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "OnInitialize",
+      "shortName": "OnInitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "OnUninitialize",
+      "shortName": "OnUninitialize",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 33032
+    },
+    {
+      "fullName": "GetInventoryItemDisplays;",
+      "shortName": "GetInventoryItemDisplays",
+      "return": {
+        "type": "array:whandle:InventoryItemDisplayController",
+        "flags": 64
+      },
+      "flags": 33284
+    },
+    {
+      "fullName": "RemoveElement;",
+      "shortName": "RemoveElement",
+      "flags": 33284
+    },
+    {
+      "fullName": "SetupData;script_ref<String>script_ref<array<InventoryItemData>>gamedataEquipmentAreaItemDisplayContext",
+      "shortName": "SetupData",
+      "flags": 33284,
+      "params": [
+        {
+          "type": "script_ref:String",
+          "name": "label",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:array:gameInventoryItemData",
+          "name": "playerEquipAreaInventory",
+          "flags": 128
+        },
+        {
+          "type": "gamedataEquipmentArea",
+          "name": "equipArea",
+          "flags": 1152
+        },
+        {
+          "type": "gameItemDisplayContext",
+          "name": "displayContext",
+          "flags": 1152
+        }
+      ]
+    }
+  ]
+}

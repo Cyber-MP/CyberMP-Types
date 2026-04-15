@@ -1,0 +1,83 @@
+{
+  "parent": "vehicleCinematicCameraShotEffect",
+  "name": "vehicleTimedCinematicCameraShotEffect",
+  "flags": 2,
+  "props": [
+    {
+      "type": "Float",
+      "name": "startDelay",
+      "flags": 6627016705
+    },
+    {
+      "type": "Float",
+      "name": "duration",
+      "flags": 6627016705
+    },
+    {
+      "type": "Bool",
+      "name": "hasStarted",
+      "flags": 4297130016
+    }
+  ],
+  "funcs": [
+    {
+      "fullName": "GetExecutionTime;CinematicCameraData",
+      "shortName": "GetExecutionTime",
+      "return": {
+        "type": "Float",
+        "flags": 64
+      },
+      "flags": 33280,
+      "params": [
+        {
+          "type": "CinematicCameraData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "HasStarted;",
+      "shortName": "HasStarted",
+      "return": {
+        "type": "Bool",
+        "flags": 64
+      },
+      "flags": 41476
+    },
+    {
+      "fullName": "Reset;",
+      "shortName": "Reset",
+      "flags": 33280
+    },
+    {
+      "fullName": "Start;CinematicCameraData",
+      "shortName": "Start",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "CinematicCameraData",
+          "name": "data",
+          "flags": 128
+        }
+      ]
+    },
+    {
+      "fullName": "StartDelayed;CinematicCameraDatascript_ref<WorldTransform>",
+      "shortName": "StartDelayed",
+      "flags": 33280,
+      "params": [
+        {
+          "type": "CinematicCameraData",
+          "name": "data",
+          "flags": 128
+        },
+        {
+          "type": "script_ref:WorldTransform",
+          "name": "resultTransform",
+          "flags": 128
+        }
+      ]
+    }
+  ]
+}
