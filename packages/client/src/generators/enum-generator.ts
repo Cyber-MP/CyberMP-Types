@@ -1,5 +1,6 @@
 import { consola } from 'consola';
 import { defsIndex } from 'src/config/constants';
+import { dumps } from 'src/dumps';
 import { RedEnumAst } from 'src/red-ast/red-enum.ast';
 import { uniqueBy } from 'src/utils/file-utils';
 import type {
@@ -8,7 +9,6 @@ import type {
   OptionalKind,
   Project,
 } from 'ts-morph';
-import enums from '../../assets/enums.json';
 import { BaseGenerator } from './base-generator';
 
 export class EnumGenerator extends BaseGenerator {
@@ -17,17 +17,17 @@ export class EnumGenerator extends BaseGenerator {
   constructor(project: Project) {
     super(project);
 
-    this.enums = enums.map(RedEnumAst.fromJson);
+    this.enums = dumps.enums.map(RedEnumAst.fromJson);
     defsIndex.enums = new Set<string>(this.enums.map((o) => o.name));
   }
 
   generate() {
-    const sourceFile = this.createSourceFile('./out/enums.d.ts');
+    const sourceFile = this.createSourceFile('./out/enums.ts');
 
     this.addHeader(sourceFile);
 
     sourceFile.addExportDeclaration({
-      moduleSpecifier: './precomputed/enums.d.ts',
+      moduleSpecifier: './precomputed/enums',
     });
 
     sourceFile.addEnums(

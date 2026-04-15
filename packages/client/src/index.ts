@@ -1,8 +1,12 @@
 import fs from 'node:fs';
 import { consola } from 'consola';
 import { rimraf } from 'rimraf';
-import { defsIndex } from './config/constants';
+import { defsIndex, project } from './config/constants';
 import { getDumps } from './dumps';
+import { BitfieldGenerator } from './generators/bitfield-generator';
+import { EnumGenerator } from './generators/enum-generator';
+import { GameGenerator } from './generators/game-generator';
+import { MpGenerator } from './generators/mp-generator';
 import { capitalizeFirstLetter } from './utils/string';
 
 const copyPrecomputedFiles = () => {
@@ -20,27 +24,24 @@ const logDefsIndex = () => {
 async function main() {
   await rimraf('./out');
 
-  getDumps();
-  // const modules = await Promise.all(
-  //   [...files].map((file) => import(new URL(file, import.meta.url).pathname)),
-  // );
+  await getDumps();
 
-  // consola.start('Starting generation process...');
-  // const enumGenerator = new EnumGenerator(project);
-  // const bitfieldGenerator = new BitfieldGenerator(project);
-  // const mpGenerator = new MpGenerator(project);
-  // const gameGenerator = new GameGenerator(project);
+  consola.start('Starting generation process...');
+  const enumGenerator = new EnumGenerator(project);
+  const bitfieldGenerator = new BitfieldGenerator(project);
+  const mpGenerator = new MpGenerator(project);
+  const gameGenerator = new GameGenerator(project);
 
-  // enumGenerator.generate();
-  // bitfieldGenerator.generate();
-  // gameGenerator.generate();
-  // mpGenerator.generate();
+  enumGenerator.generate();
+  bitfieldGenerator.generate();
+  gameGenerator.generate();
+  mpGenerator.generate();
 
-  // copyPrecomputedFiles();
+  copyPrecomputedFiles();
 
-  // consola.info('Generation process completed.');
+  consola.info('Generation process completed.');
 
-  // logDefsIndex();
+  logDefsIndex();
 }
 
 void main();

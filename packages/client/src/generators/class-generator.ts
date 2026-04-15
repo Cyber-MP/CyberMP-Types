@@ -1,5 +1,6 @@
 import { consola } from 'consola';
 import { defsIndex } from 'src/config/constants';
+import { dumps } from 'src/dumps';
 import { RedClassAst } from 'src/red-ast/red-class.ast';
 import { RedFunctionAst } from 'src/red-ast/red-function.ast';
 import { RedPropertyAst } from 'src/red-ast/red-property.ast';
@@ -17,7 +18,6 @@ import type {
   PropertySignatureStructure,
   SourceFile,
 } from 'ts-morph';
-import classes from '../../assets/classes.json';
 import { BaseGenerator } from './base-generator';
 
 export class ClassGenerator extends BaseGenerator<[SourceFile]> {
@@ -26,7 +26,7 @@ export class ClassGenerator extends BaseGenerator<[SourceFile]> {
   constructor(project: Project) {
     super(project);
 
-    const objects: RedClassAst[] = (classes as any[]).map(RedClassAst.fromJson);
+    const objects: RedClassAst[] = dumps.classes.map(RedClassAst.fromJson);
 
     objects.sort(RedClassAst.sort);
     objects.forEach((object) => {

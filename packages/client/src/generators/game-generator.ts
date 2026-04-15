@@ -35,11 +35,11 @@ type MultiChannelCurve<T> = T;
 
     sourceFile.addImportDeclarations([
       {
-        moduleSpecifier: './enums.d.ts',
+        moduleSpecifier: './enums',
         namespaceImport: 'CyberEnums',
       },
       {
-        moduleSpecifier: './bitfields.d.ts',
+        moduleSpecifier: './bitfields',
         namespaceImport: 'CyberBitfields',
       },
     ]);

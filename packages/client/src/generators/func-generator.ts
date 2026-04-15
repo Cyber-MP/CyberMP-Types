@@ -1,5 +1,6 @@
 import { consola } from 'consola';
 import { defsIndex } from 'src/config/constants';
+import { dumps } from 'src/dumps';
 import { RedFunctionAst } from 'src/red-ast/red-function.ast';
 import {
   getFunctionParams,
@@ -11,7 +12,6 @@ import type {
   Project,
   SourceFile,
 } from 'ts-morph';
-import globalFuncs from '../../assets/globals.json';
 import { uniqueBy } from '../utils/file-utils';
 import { BaseGenerator } from './base-generator';
 
@@ -21,7 +21,7 @@ export class FuncGenerator extends BaseGenerator<[SourceFile]> {
   constructor(project: Project) {
     super(project);
 
-    const functions: RedFunctionAst[] = globalFuncs.map((json) =>
+    const functions: RedFunctionAst[] = dumps.globals.map((json) =>
       RedFunctionAst.fromJson(json),
     );
 

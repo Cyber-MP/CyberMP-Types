@@ -129,6 +129,7 @@ declare module '../game.d.ts' {
 
   export interface entEntity {
     GetMorphWeights(): entMorphTargetWeightEntry[];
+    ReassembleWithComponents(arr: entIComponent[]): void;
   }
 
   export interface MpClasses {
