@@ -138,7 +138,6 @@ declare module '../game.d.ts' {
   }
 
   export interface MpGame {
-    CyberMP: CyberMP;
     TweakDB: TweakDB;
 
     onInputKeyEvent(
