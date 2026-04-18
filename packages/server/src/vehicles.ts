@@ -19,6 +19,20 @@ export interface MpVehicle extends MpEntity<EntityType.Vehicle> {
   readonly velocity: Vector3;
   readonly angularVelocity: Vector3;
 
+  seats: {
+    readonly driver: MpPlayer | null;
+    readonly passenger: MpPlayer | null;
+    readonly rearLeft: MpPlayer | null;
+    readonly rearRight: MpPlayer | null;
+  };
+
+  lastSeats: {
+    readonly driver: MpPlayer | null;
+    readonly passenger: MpPlayer | null;
+    readonly rearLeft: MpPlayer | null;
+    readonly rearRight: MpPlayer | null;
+  };
+
   getPlayerInSeat(seat: VehicleSeat): MpPlayer | null;
   getLastPlayerInSeat(seat: VehicleSeat): MpPlayer | null;
 
