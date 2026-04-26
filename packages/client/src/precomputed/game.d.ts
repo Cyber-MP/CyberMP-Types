@@ -1,5 +1,10 @@
 import type * as CyberEnums from '../enums';
-import type { entMorphTargetWeightEntry, MpClasses, Vector3 } from '../game';
+import type {
+  EulerAngles,
+  entMorphTargetWeightEntry,
+  MpClasses,
+  Vector3,
+} from '../game';
 
 type UnwrapClass<T> = T extends { new (): infer U } ? U : T;
 
@@ -130,6 +135,7 @@ declare module '../game.d.ts' {
   export interface entEntity {
     GetMorphWeights(): entMorphTargetWeightEntry[];
     ReassembleWithComponents(arr: entIComponent[]): void;
+    TeleportPed(position: Vector3, rotation?: EulerAngles): void;
   }
 
   export interface MpClasses {
