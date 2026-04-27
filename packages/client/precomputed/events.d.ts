@@ -9,12 +9,29 @@ interface MpEventsMap {
 
   objectStreamOut(netID: number, gameID: number): void;
   objectStreamIn(netID: number, gameID: number): void;
+  
   pedStreamOut(netID: number, gameID: number): void;
   pedStreamIn(netID: number, gameID: number): void;
+  
   remotePlayerStreamOut(netID: number, gameID: number): void;
   remotePlayerStreamIn(netID: number, gameID: number): void;
+  
   vehicleStreamOut(netID: number, gameID: number): void;
   vehicleStreamIn(netID: number, gameID: number): void;
+}
+
+type CefLoadingFailedError = {
+  frameName: string;
+  message: string;
+  source: string;
+  line: string;
+  column: string;
+  stack: string;
+};
+
+interface MpCefEventsMap {
+  domReady(name: string): void;
+  loadingFailed(error: CefLoadingFailedError): void;
 }
 
 export interface MpEvents {
@@ -23,7 +40,13 @@ export interface MpEvents {
   emitCef(eventName: string, ...args: any[]): void;
 
   onServer(eventName: string, callback: (...args: any[]) => void): void;
+
+  onCef<E extends keyof MpCefEventsMap>(
+    eventName: E,
+    callback: MpCefEventsMap[E],
+  ): void;
   onCef(eventName: string, callback: (...args: any[]) => void): void;
+
   on<E extends keyof MpEventsMap>(eventName: E, callback: MpEventsMap[E]): void;
   on(eventName: string, callback: (...args: any[]) => void): void;
 
