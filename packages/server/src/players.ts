@@ -11,9 +11,9 @@ export interface MpPlayer extends MpEntity<EntityType.Player> {
   readonly ping: number;
   readonly vehicle: MpVehicle | null;
   readonly lastVehicle: MpVehicle | null;
+  readonly ip: string;
 
   kick(reason?: string): void;
-  getIdentifier(type: MpPlayerIdentifierType): string;
 
   emit(eventName: string, ...args: any[]): void;
   mute(): void;
@@ -21,9 +21,5 @@ export interface MpPlayer extends MpEntity<EntityType.Player> {
 
 export interface MpPlayers extends MpEntities<MpPlayer> {
   kick(player: MpPlayer | number, reason?: string): void;
-  getIdentifier(
-    player: MpPlayer | number,
-    type: MpPlayerIdentifierType,
-  ): string;
   toArray(): MpPlayer[];
 }
