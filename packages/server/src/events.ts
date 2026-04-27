@@ -1,6 +1,7 @@
 import type { EntityType } from './entities';
 import type { MpPlayer } from './players';
 import type { GameHash } from './shared';
+import type { VehicleSeat } from './vehicles';
 
 /**
  * Data describing a damage event between players.
@@ -27,6 +28,54 @@ export type DamageEventData = {
   hitShapeTypes: any[];
   hitShapeNames: string[];
   physicsMaterials: string[];
+};
+
+/**
+ * @category Enums
+ */
+export enum MeleeActionType {
+  QuickMelee = 1,
+  ComboAttack1 = 2,
+  ComboAttack2 = 3,
+  StrongAttack = 4,
+  FinalAttack = 5,
+  JumpAttack = 6,
+  SprintAttack = 7,
+  CrouchAttack = 8,
+}
+
+/**
+ * @category Events/Players
+ */
+export type MeleeActionEventData = Vector3Object & {
+  type: MeleeActionType;
+  weaponHash: GameHash;
+  instigatorID: number;
+};
+
+/**
+ * @category Events/Players
+ */
+export type ShootActionEventData = Vector3Object & {
+  weaponHash: GameHash;
+  instigatorID: number;
+};
+
+/**
+ * @category Events/Players
+ */
+export type ThrowGrenadeEventData = {
+  weaponHash: GameHash;
+  type: number;
+  isQuickThrow: boolean;
+  accelerationZ: number;
+  initialVelocity: number;
+  forwardX: number;
+  forwardY: number;
+  forwardZ: number;
+  aimposX: number;
+  aimposY: number;
+  aimposZ: number;
 };
 
 /**
@@ -137,6 +186,36 @@ export type VehicleDestructionChangeEventData = {
   brokenLights: number;
   flatTire: number;
   windshieldShattered: boolean;
+};
+
+/**
+ * @category Events/Vehicles
+ */
+type VehicleWeaponShootEventData = {
+  type: number;
+  numBullets: number;
+  vehicleType: number;
+  waeponHash: GameHash;
+  slotHash: GameHash;
+  animHash: GameHash;
+  weaponPosX: number;
+  weaponPosY: number;
+  weaponPosZ: number;
+  offsetPosX: number;
+  offsetPosY: number;
+  offsetPosZ: number;
+  tracePosX: number;
+  tracePosY: number;
+  tracePosZ: number;
+};
+
+/**
+ * @category Events/Vehicles
+ */
+type VehicleHittedByPlayerEventData = {
+  componentNameHash: GameHash;
+  tweaponHash: GameHash;
+  byOwner: boolean;
 };
 
 /**
@@ -252,11 +331,34 @@ interface PlayersEvents {
     playerId: number,
     data: PlayerAppearanceChangeEventData,
   ): void;
-
+  /**
+   * Triggered when a player's healing.
+   */
+  playerHealing(playerId: number): void;
+  /**
+   * Triggered when a player's knocked down.
+   */
+  playerKnockdown(playerId: number): void;
   /**
    * Triggered when a player takes damage.
    */
   damage(playerId: number, data: DamageEventData): void;
+  /**
+   * Triggered when a player performs a melee action.
+   */
+  meleeAction(playerId: number, data: MeleeActionEventData): void;
+  /**
+   * Triggered when a player performs a shoot action.
+   */
+  shootAction(playerId: number, data: ShootActionEventData): void;
+  /**
+   * Triggered when a player reloads their weapon.
+   */
+  weaponReload(playerId: number, weaponHash: GameHash): void;
+  /**
+   * Triggered when a player throws a grenade.
+   */
+  throwGrenade(playerId: number, data: ThrowGrenadeEventData): void;
 }
 
 /**
@@ -312,6 +414,26 @@ interface VehiclesEvents {
    * Triggered when a vehicle despawns.
    */
   vehicleDespawn(id: number): void;
+
+  /**
+   * Triggered when a vehicle's weapon shoots.
+   */
+  vehicleWeaponShoot(id: number, data: VehicleWeaponShootEventData): void;
+
+  /**
+   * Triggered when a vehicle is hit by a player.
+   */
+  vehicleHittedByPlayer(id: number, data: VehicleHittedByPlayerEventData): void;
+
+  /**
+   * Triggered when a player exits a vehicle.
+   */
+  exitVehicle(id: number): void;
+
+  /**
+   * Triggered when a player enters a vehicle.
+   */
+  enterVehicle(id: number, seat: VehicleSeat): void;
 }
 
 /**
