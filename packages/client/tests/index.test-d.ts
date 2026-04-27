@@ -1,3 +1,4 @@
+import { describe, expectTypeOf, test } from 'vitest';
 import type {
   gameObject,
   MpGame,
@@ -8,9 +9,8 @@ import type {
   VehicleObject,
   vehicleBaseObject,
   worldWeatherScriptInterface,
-} from 'out/game';
-import type { MpClient } from 'out/mp';
-import { describe, expectTypeOf, test } from 'vitest';
+} from '../out/game';
+import type { MpClient } from '../precomputed/mp';
 
 const mp = {} as MpClient;
 

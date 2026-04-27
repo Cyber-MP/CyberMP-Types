@@ -1,5 +1,5 @@
-import type { RedFunctionAst } from 'src/red-ast/red-function.ast';
-import { RedTypeAst } from 'src/red-ast/red-type.ast';
+import type { RedFunctionAst } from '../red-ast/red-function.ast';
+import { RedTypeAst } from '../red-ast/red-type.ast';
 import type { OptionalKind, ParameterDeclarationStructure } from 'ts-morph';
 import { blacklist } from '../config/constants';
 

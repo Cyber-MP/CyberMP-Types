@@ -1,18 +1,18 @@
 import { consola } from 'consola';
-import { defsIndex } from 'src/config/constants';
-import { dumps } from 'src/dumps';
-import { RedFunctionAst } from 'src/red-ast/red-function.ast';
-import {
-  getFunctionParams,
-  getFunctionReturnType,
-} from 'src/utils/type-resolver';
 import type {
   MethodSignatureStructure,
   OptionalKind,
   Project,
   SourceFile,
 } from 'ts-morph';
+import { defsIndex } from '../config/constants';
+import { dumps } from '../dumps';
+import { RedFunctionAst } from '../red-ast/red-function.ast';
 import { uniqueBy } from '../utils/file-utils';
+import {
+  getFunctionParams,
+  getFunctionReturnType,
+} from '../utils/type-resolver';
 import { BaseGenerator } from './base-generator';
 
 export class FuncGenerator extends BaseGenerator<[SourceFile]> {

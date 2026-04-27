@@ -4,7 +4,8 @@
   "description": "",
   "types": "./out/index.d.ts",
   "files": [
-    "./out"
+    "./out",
+    "./precomputed"
   ],
   "scripts": {
     "start": "tsx ./src",
@@ -25,8 +26,8 @@
   ],
   "exports": {
     ".": {
-      "import": "./out/mp.d.ts",
-      "types": "./out/mp.d.ts"
+      "import": "./precomputed/mp.d.ts",
+      "types": "./precomputed/mp.d.ts"
     },
     "./game": {
       "import": "./out/game.d.ts",

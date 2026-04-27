@@ -1,14 +1,4 @@
 import { consola } from 'consola';
-import { defsIndex } from 'src/config/constants';
-import { dumps } from 'src/dumps';
-import { RedClassAst } from 'src/red-ast/red-class.ast';
-import { RedFunctionAst } from 'src/red-ast/red-function.ast';
-import { RedPropertyAst } from 'src/red-ast/red-property.ast';
-import { RedTypeAst } from 'src/red-ast/red-type.ast';
-import {
-  getFunctionParams,
-  getFunctionReturnType,
-} from 'src/utils/type-resolver';
 import type {
   ClassDeclarationStructure,
   MethodDeclarationStructure,
@@ -18,6 +8,16 @@ import type {
   PropertySignatureStructure,
   SourceFile,
 } from 'ts-morph';
+import { defsIndex } from '../config/constants';
+import { dumps } from '../dumps';
+import { RedClassAst } from '../red-ast/red-class.ast';
+import { RedFunctionAst } from '../red-ast/red-function.ast';
+import { RedPropertyAst } from '../red-ast/red-property.ast';
+import { RedTypeAst } from '../red-ast/red-type.ast';
+import {
+  getFunctionParams,
+  getFunctionReturnType,
+} from '../utils/type-resolver';
 import { BaseGenerator } from './base-generator';
 
 export class ClassGenerator extends BaseGenerator<[SourceFile]> {

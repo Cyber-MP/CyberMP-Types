@@ -1,4 +1,4 @@
-import type * as CyberEnums from '../enums';
+import type * as CyberEnums from '../out/enums';
 
 export interface MpVoiceChat {
   enable(state: boolean): void;

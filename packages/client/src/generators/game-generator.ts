@@ -56,7 +56,7 @@ type MultiChannelCurve<T> = T;
     });
 
     sourceFile.addExportDeclaration({
-      moduleSpecifier: './precomputed/game.d.ts',
+      moduleSpecifier: '../precomputed/game.d.ts',
     });
 
     sourceFile.saveSync();

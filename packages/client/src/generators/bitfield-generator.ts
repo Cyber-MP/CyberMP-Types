@@ -1,13 +1,13 @@
 import { consola } from 'consola';
-import { defsIndex } from 'src/config/constants';
-import { dumps } from 'src/dumps';
-import { RedBitfieldAst } from 'src/red-ast/red-bitfield.ast';
 import type {
   EnumDeclarationStructure,
   EnumMemberStructure,
   OptionalKind,
   Project,
 } from 'ts-morph';
+import { defsIndex } from '../config/constants';
+import { dumps } from '../dumps';
+import { RedBitfieldAst } from '../red-ast/red-bitfield.ast';
 import { uniqueBy } from '../utils/file-utils';
 import { BaseGenerator } from './base-generator';
 

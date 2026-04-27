@@ -1,14 +1,14 @@
 import { consola } from 'consola';
-import { defsIndex } from 'src/config/constants';
-import { dumps } from 'src/dumps';
-import { RedEnumAst } from 'src/red-ast/red-enum.ast';
-import { uniqueBy } from 'src/utils/file-utils';
 import type {
   EnumDeclarationStructure,
   EnumMemberStructure,
   OptionalKind,
   Project,
 } from 'ts-morph';
+import { defsIndex } from '../config/constants';
+import { dumps } from '../dumps';
+import { RedEnumAst } from '../red-ast/red-enum.ast';
+import { uniqueBy } from '../utils/file-utils';
 import { BaseGenerator } from './base-generator';
 
 export class EnumGenerator extends BaseGenerator {
@@ -27,7 +27,7 @@ export class EnumGenerator extends BaseGenerator {
     this.addHeader(sourceFile);
 
     sourceFile.addExportDeclaration({
-      moduleSpecifier: './precomputed/enums',
+      moduleSpecifier: '../precomputed/enums',
     });
 
     sourceFile.addEnums(

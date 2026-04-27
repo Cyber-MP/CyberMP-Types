@@ -1,10 +1,10 @@
-import type * as CyberEnums from '../enums';
+import type * as CyberEnums from '../out/enums';
 import type {
   EulerAngles,
   entMorphTargetWeightEntry,
   MpClasses,
   Vector3,
-} from '../game';
+} from '../out/game';
 
 type UnwrapClass<T> = T extends { new (): infer U } ? U : T;
 
@@ -65,9 +65,9 @@ interface MultiplayerSystem {
   SetDefaultSpawnPosition(position: Vector3, yaw: number): void;
 }
 
-import '../game.d.ts';
+import '../out/game.d.ts';
 
-declare module '../game.d.ts' {
+declare module '../out/game.d.ts' {
   export interface worldWeatherScriptInterface extends IScriptable {
     SetWeather(
       weather: CyberEnums.EWeatherState,

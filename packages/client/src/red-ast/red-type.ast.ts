@@ -1,4 +1,4 @@
-import { defsIndex, LuaPrimitiveDef } from 'src/config/constants';
+import { defsIndex, LuaPrimitiveDef } from '../config/constants';
 import { cyrb53 } from '../utils/string';
 import {
   CodeSyntax,
