@@ -10,7 +10,7 @@ export interface MpMeta {
   ): void;
   getPlayerMeta<T = any>(playerId: number, key: string): T;
 
-  setLocalPlayerMeta(key: string, value: any): void;
+  setLocalPlayerMeta(key: string, value: any, sync?: boolean): void;
   getLocalPlayerMeta<T = any>(key: string): T;
 
   setEntityMeta(netId: number, key: string, value: any, sync?: boolean): void;
