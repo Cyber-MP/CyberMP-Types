@@ -2,23 +2,21 @@ import { consola } from 'consola';
 import type { Project } from 'ts-morph';
 import { BaseGenerator } from './base-generator';
 import { ClassGenerator } from './class-generator';
-import { FuncGenerator } from './func-generator';
+import { GlobalsGenerator } from './globals-generator';
 
 export class GameGenerator extends BaseGenerator {
-  private funcGenerator: FuncGenerator;
+  private globalsGenerator: GlobalsGenerator;
   private classGenerator: ClassGenerator;
 
   constructor(project: Project) {
     super(project);
 
-    this.funcGenerator = new FuncGenerator(project);
+    this.globalsGenerator = new GlobalsGenerator(project);
     this.classGenerator = new ClassGenerator(project);
   }
 
   generate() {
-    const sourceFile = this.project.createSourceFile('./out/game.d.ts', '', {
-      overwrite: true,
-    });
+    const sourceFile = this.createSourceFile('./out/game.d.ts');
 
     sourceFile.addStatements(
       `
@@ -46,7 +44,7 @@ type MultiChannelCurve<T> = T;
 
     this.addHeader(sourceFile);
 
-    this.funcGenerator.generate(sourceFile);
+    this.globalsGenerator.generate(sourceFile);
     this.classGenerator.generate(sourceFile);
 
     sourceFile.addInterface({

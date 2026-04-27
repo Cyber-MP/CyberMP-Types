@@ -1,4 +1,5 @@
 import { consola } from 'consola';
+import { unique } from 'radash';
 import type {
   MethodSignatureStructure,
   OptionalKind,
@@ -8,14 +9,9 @@ import type {
 import { defsIndex } from '../config/constants';
 import { dumps } from '../dumps';
 import { RedFunctionAst } from '../red-ast/red-function.ast';
-import { uniqueBy } from '../utils/file-utils';
-import {
-  getFunctionParams,
-  getFunctionReturnType,
-} from '../utils/type-resolver';
 import { BaseGenerator } from './base-generator';
 
-export class FuncGenerator extends BaseGenerator<[SourceFile]> {
+export class GlobalsGenerator extends BaseGenerator<[SourceFile]> {
   private funcs: RedFunctionAst[];
 
   constructor(project: Project) {
@@ -27,12 +23,11 @@ export class FuncGenerator extends BaseGenerator<[SourceFile]> {
 
     functions.sort(RedFunctionAst.sort);
 
-    this.funcs = uniqueBy(
-      functions.filter((item) => {
-        return (
-          !item.name.startsWith('Operator') && !item.name.startsWith('Cast')
-        );
-      }),
+    this.funcs = unique(
+      functions.filter(
+        (item) =>
+          !item.name.startsWith('Operator') && !item.name.startsWith('Cast'),
+      ),
       (m) => m.name,
     );
 
@@ -44,8 +39,8 @@ export class FuncGenerator extends BaseGenerator<[SourceFile]> {
       name: 'MpFuncs',
       methods: this.funcs.map<OptionalKind<MethodSignatureStructure>>((fn) => ({
         name: `"${fn.name}"`,
-        returnType: getFunctionReturnType(fn),
-        parameters: getFunctionParams(fn.arguments),
+        returnType: RedFunctionAst.getFunctionReturnType(fn),
+        parameters: RedFunctionAst.getFunctionParams(fn.arguments),
       })),
     });
 

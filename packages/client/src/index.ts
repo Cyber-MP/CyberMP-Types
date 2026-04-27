@@ -1,20 +1,16 @@
 import { consola } from 'consola';
+import { capitalize } from 'radash';
 import { rimraf } from 'rimraf';
 import { defsIndex, project } from './config/constants';
 import { getDumps } from './dumps';
 import { BitfieldGenerator } from './generators/bitfield-generator';
 import { EnumGenerator } from './generators/enum-generator';
 import { GameGenerator } from './generators/game-generator';
-import { capitalizeFirstLetter } from './utils/string';
-
-// const copyPrecomputedFiles = () => {
-//   fs.cpSync('./src/precomputed', './out/precomputed', { recursive: true });
-// };
 
 const logDefsIndex = () => {
   consola.box(
     Object.entries(defsIndex)
-      .map(([key, value]) => `${capitalizeFirstLetter(key)}: ${value.size}`)
+      .map(([key, value]) => `${capitalize(key)}: ${value.size}`)
       .join('\n'),
   );
 };
@@ -32,8 +28,6 @@ async function main() {
   enumGenerator.generate();
   bitfieldGenerator.generate();
   gameGenerator.generate();
-
-  // copyPrecomputedFiles();
 
   consola.info('Generation process completed.');
 

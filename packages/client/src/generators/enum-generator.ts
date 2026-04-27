@@ -1,4 +1,5 @@
 import { consola } from 'consola';
+import { unique } from 'radash';
 import type {
   EnumDeclarationStructure,
   EnumMemberStructure,
@@ -8,7 +9,6 @@ import type {
 import { defsIndex } from '../config/constants';
 import { dumps } from '../dumps';
 import { RedEnumAst } from '../red-ast/red-enum.ast';
-import { uniqueBy } from '../utils/file-utils';
 import { BaseGenerator } from './base-generator';
 
 export class EnumGenerator extends BaseGenerator {
@@ -34,7 +34,7 @@ export class EnumGenerator extends BaseGenerator {
       this.enums.map<OptionalKind<EnumDeclarationStructure>>((obj) => ({
         name: obj.name,
         isExported: true,
-        members: uniqueBy(obj.members, (m) => m.key).map<
+        members: unique(obj.members, (m) => m.key).map<
           OptionalKind<EnumMemberStructure>
         >((o) => ({
           name: `"${o.key}"`,

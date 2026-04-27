@@ -14,10 +14,6 @@ import { RedClassAst } from '../red-ast/red-class.ast';
 import { RedFunctionAst } from '../red-ast/red-function.ast';
 import { RedPropertyAst } from '../red-ast/red-property.ast';
 import { RedTypeAst } from '../red-ast/red-type.ast';
-import {
-  getFunctionParams,
-  getFunctionReturnType,
-} from '../utils/type-resolver';
 import { BaseGenerator } from './base-generator';
 
 export class ClassGenerator extends BaseGenerator<[SourceFile]> {
@@ -26,16 +22,17 @@ export class ClassGenerator extends BaseGenerator<[SourceFile]> {
   constructor(project: Project) {
     super(project);
 
-    const objects: RedClassAst[] = dumps.classes.map(RedClassAst.fromJson);
+    const classes: RedClassAst[] = dumps.classes.map(RedClassAst.fromJson);
 
-    objects.sort(RedClassAst.sort);
-    objects.forEach((object) => {
+    classes.sort(RedClassAst.sort);
+    classes.forEach((object) => {
       object.properties.sort(RedPropertyAst.sort);
       object.functions.sort(RedFunctionAst.sort);
     });
 
-    this.classObjs = objects.reduce((acc, curr) => {
+    this.classObjs = classes.reduce((acc, curr) => {
       acc.push(curr);
+
       if (curr.aliasName) {
         const aliasClass: RedClassAst = {
           name: curr.aliasName,
@@ -46,6 +43,7 @@ export class ClassGenerator extends BaseGenerator<[SourceFile]> {
       }
       return acc;
     }, [] as RedClassAst[]);
+
     defsIndex.classes = new Set<string>(this.classObjs.map((o) => o.name));
   }
 
@@ -72,13 +70,9 @@ export class ClassGenerator extends BaseGenerator<[SourceFile]> {
 
         const methodNames = new Set<string>(funcs.map((f) => String(f.name)));
 
-        const filteredProps = propsList.filter((p) => {
-          const propName = String(p.name);
-          if (methodNames.has(propName)) {
-            return false;
-          }
-          return true;
-        });
+        const filteredProps = propsList.filter(
+          (p) => !methodNames.has(String(p.name)),
+        );
 
         const properties: OptionalKind<PropertyDeclarationStructure>[] =
           filteredProps.map((p) => ({
@@ -89,8 +83,8 @@ export class ClassGenerator extends BaseGenerator<[SourceFile]> {
         const methods: OptionalKind<MethodDeclarationStructure>[] = funcs.map(
           (fn) => ({
             name: `"${fn.name}"`,
-            returnType: getFunctionReturnType(fn),
-            parameters: getFunctionParams(fn.arguments),
+            returnType: RedFunctionAst.getFunctionReturnType(fn),
+            parameters: RedFunctionAst.getFunctionParams(fn.arguments),
             isStatic: fn.isStatic,
           }),
         );
@@ -117,6 +111,7 @@ export class ClassGenerator extends BaseGenerator<[SourceFile]> {
       properties: this.classObjs.map<OptionalKind<PropertySignatureStructure>>(
         (obj) => ({
           name: obj.name,
+          // if class extends from gameIGameSystem then its a singleton
           type: this.recursiveParentIs(obj, 'gameIGameSystem')
             ? obj.name
             : `typeof ${obj.name}`,
