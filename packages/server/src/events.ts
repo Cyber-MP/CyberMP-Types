@@ -330,35 +330,35 @@ interface PlayersEvents {
   playerAppearanceChange(
     playerId: number,
     data: PlayerAppearanceChangeEventData,
-  ): void;
+  ): void | boolean;
   /**
    * Triggered when a player's healing.
    */
-  playerHealing(playerId: number): void;
+  playerHealing(playerId: number): void | boolean;
   /**
    * Triggered when a player's knocked down.
    */
-  playerKnockdown(playerId: number): void;
+  playerKnockdown(playerId: number): void | boolean;
   /**
    * Triggered when a player takes damage.
    */
-  damage(playerId: number, data: DamageEventData): void;
+  damage(playerId: number, data: DamageEventData): void | boolean;
   /**
    * Triggered when a player performs a melee action.
    */
-  meleeAction(playerId: number, data: MeleeActionEventData): void;
+  meleeAction(playerId: number, data: MeleeActionEventData): void | boolean;
   /**
    * Triggered when a player performs a shoot action.
    */
-  shootAction(playerId: number, data: ShootActionEventData): void;
+  shootAction(playerId: number, data: ShootActionEventData): void | boolean;
   /**
    * Triggered when a player reloads their weapon.
    */
-  weaponReload(playerId: number, weaponHash: GameHash): void;
+  weaponReload(playerId: number, weaponHash: GameHash): void | boolean;
   /**
    * Triggered when a player throws a grenade.
    */
-  throwGrenade(playerId: number, data: ThrowGrenadeEventData): void;
+  throwGrenade(playerId: number, data: ThrowGrenadeEventData): void | boolean;
 }
 
 /**
@@ -369,19 +369,25 @@ interface WorldEvents {
   /**
    * Triggered when a any door's state changes.
    */
-  doorStateChange(playerId: number, data: DoorStateChangeEventData): void;
+  doorStateChange(
+    playerId: number,
+    data: DoorStateChangeEventData,
+  ): void | boolean;
   /**
    * Triggered when a any lift's state changes.
    */
-  liftStateChange(playerId: number, data: LiftStateChangeEventData): void;
+  liftStateChange(
+    playerId: number,
+    data: LiftStateChangeEventData,
+  ): void | boolean;
   /**
    * Triggered when a fire starts anywhere on map.
    */
-  fire(playerId: number, data: FireEventData): void;
+  fire(playerId: number, data: FireEventData): void | boolean;
   /**
    * Triggered when an explosion occurs.
    */
-  explosion(playerId: number, data: ExplosionEventData): void;
+  explosion(playerId: number, data: ExplosionEventData): void | boolean;
 }
 
 /**
@@ -418,12 +424,18 @@ interface VehiclesEvents {
   /**
    * Triggered when a vehicle's weapon shoots.
    */
-  vehicleWeaponShoot(id: number, data: VehicleWeaponShootEventData): void;
+  vehicleWeaponShoot(
+    id: number,
+    data: VehicleWeaponShootEventData,
+  ): void | boolean;
 
   /**
    * Triggered when a vehicle is hit by a player.
    */
-  vehicleHittedByPlayer(id: number, data: VehicleHittedByPlayerEventData): void;
+  vehicleHittedByPlayer(
+    id: number,
+    data: VehicleHittedByPlayerEventData,
+  ): void | boolean;
 
   /**
    * Triggered when a player exits a vehicle.
@@ -444,17 +456,17 @@ interface PickupsEvents {
   /**
    * Triggered when a pickup's state changes.
    */
-  pickupChange(playerId: number, data: PickupChangeEventData): void;
+  pickupChange(playerId: number, data: PickupChangeEventData): void | boolean;
 
   /**
    * Triggered when a pickup is raised.
    */
-  pickupRaise(playerId: number, data: PickupDespawnEventData): void;
+  pickupRaise(playerId: number, data: PickupDespawnEventData): void | boolean;
 
   /**
    * Triggered when a pickup is dropped.
    */
-  pickupDrop(playerId: number, data: PickupCreateEventData): void;
+  pickupDrop(playerId: number, data: PickupCreateEventData): void | boolean;
 
   /**
    * Triggered when a pickup spawns.
