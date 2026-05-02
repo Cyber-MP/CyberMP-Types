@@ -81,7 +81,7 @@ export type ThrowGrenadeEventData = {
 /**
  * @category Events/World
  */
-type Vector3Object = {
+export type Vector3Object = {
   posX: number;
   posY: number;
   posZ: number;
@@ -191,7 +191,7 @@ export type VehicleDestructionChangeEventData = {
 /**
  * @category Events/Vehicles
  */
-type VehicleWeaponShootEventData = {
+export type VehicleWeaponShootEventData = {
   type: number;
   numBullets: number;
   vehicleType: number;
@@ -260,7 +260,7 @@ export type PickupCreateEventData = Vector3Object & {
  * Events related to resources.
  * @category Events/Resources
  */
-interface ResourcesEvents {
+export interface ResourcesEvents {
   /**
    * Triggered when any resource starts.
    */
@@ -295,7 +295,7 @@ interface ResourcesEvents {
  * Events related to players.
  * @category Events/Players
  */
-interface PlayersEvents {
+export interface PlayersEvents {
   /**
    * Triggered when a player is connecting.
    */
@@ -365,7 +365,7 @@ interface PlayersEvents {
  * Events related to the world.
  * @category Events/World
  */
-interface WorldEvents {
+export interface WorldEvents {
   /**
    * Triggered when a any door's state changes.
    */
@@ -394,7 +394,7 @@ interface WorldEvents {
  * Events related to Vehicles.
  * @category Events/Vehicles
  */
-interface VehiclesEvents {
+export interface VehiclesEvents {
   /**
    * Triggered when a vehicle's customization changes (usually CrystalCoat).
    */
@@ -452,7 +452,7 @@ interface VehiclesEvents {
  * Events related to Pickups
  * @category Events/Pickups
  */
-interface PickupsEvents {
+export interface PickupsEvents {
   /**
    * Triggered when a pickup's state changes.
    */
@@ -483,7 +483,7 @@ interface PickupsEvents {
  * Events related to Peds.
  * @category Events/Peds
  */
-interface PedEvents {
+export interface PedEvents {
   /**
    * Triggered when a ped spawns.
    */
@@ -497,7 +497,7 @@ interface PedEvents {
 /**
  * @category Events/Entities
  */
-interface EntitiesEvents {
+export interface EntitiesEvents {
   /**
    * Triggered when an entity spawns.
    *
@@ -534,7 +534,7 @@ interface EntitiesEvents {
 }
 
 /**
- * @ignore
+ * @category Events
  */
 export interface MpEventsMap
   extends EntitiesEvents,
