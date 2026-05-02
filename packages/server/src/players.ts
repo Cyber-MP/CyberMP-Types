@@ -2,8 +2,6 @@ import type { EntityType, MpEntities, MpEntity } from './entities';
 import type { Vector3 } from './shared';
 import type { MpVehicle } from './vehicles';
 
-export type MpPlayerIdentifierType = 'steam' | 'ip';
-
 export interface MpPlayer extends MpEntity<EntityType.Player> {
   readonly velocity: Vector3;
   readonly health: number;
