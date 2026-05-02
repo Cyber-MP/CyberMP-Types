@@ -48,6 +48,7 @@ type CoreConfig = {
  * @category Global
  */
 export type ServerConfig = {
+  [key: string]: any;
   tcp_host: string;
   udp_host: string;
   connection_host_addr: string;
