@@ -3,7 +3,7 @@ import type { MpPlayer } from './players';
 import type { CName, TweakDBID, Vector3 } from './shared';
 
 /**
- * @category Enums
+ * @category Entities/Vehicles
  */
 export enum VehicleSeat {
   Driver = 0,
@@ -12,6 +12,9 @@ export enum VehicleSeat {
   RearRight = 3,
 }
 
+/**
+ * @category Entities/Vehicles
+ */
 export interface MpVehicle extends MpEntity<EntityType.Vehicle> {
   readonly model: TweakDBID;
   readonly appearance: CName;
@@ -39,6 +42,9 @@ export interface MpVehicle extends MpEntity<EntityType.Vehicle> {
   destroy(): void;
 }
 
+/**
+ * @category Entities/Vehicles
+ */
 type CreateVehicleOptions = {
   model: TweakDBID;
   appearance: CName;
@@ -48,6 +54,9 @@ type CreateVehicleOptions = {
   dimension?: number;
 };
 
+/**
+ * @category Entities/Vehicles
+ */
 export interface MpVehicles extends MpEntities<MpVehicle> {
   create(options: CreateVehicleOptions): MpVehicle;
   destroy(vehicle: MpVehicle | number): void;

@@ -5,7 +5,7 @@ import type { VehicleSeat } from './vehicles';
 
 /**
  * Data describing a damage event between players.
- * @category Events/Players
+ * @category Entities
  */
 export type DamageEventData = {
   damageType: number;
@@ -31,7 +31,7 @@ export type DamageEventData = {
 };
 
 /**
- * @category Enums
+ * @category Events/Players
  */
 export enum MeleeActionType {
   QuickMelee = 1,
@@ -340,6 +340,18 @@ export interface PlayersEvents {
    */
   playerKnockdown(playerId: number): void | boolean;
   /**
+   * Triggered when a player exits a vehicle.
+   */
+  playerExitVehicle(playerId: number, vehicleId: number): void;
+  /**
+   * Triggered when a player enters a vehicle.
+   */
+  playerEnterVehicle(
+    playerId: number,
+    vehicleId: number,
+    seat: VehicleSeat,
+  ): void;
+  /**
    * Triggered when a player takes damage.
    */
   damage(playerId: number, data: DamageEventData): void | boolean;
@@ -436,16 +448,6 @@ export interface VehiclesEvents {
     id: number,
     data: VehicleHittedByPlayerEventData,
   ): void | boolean;
-
-  /**
-   * Triggered when a player exits a vehicle.
-   */
-  exitVehicle(id: number): void;
-
-  /**
-   * Triggered when a player enters a vehicle.
-   */
-  enterVehicle(id: number, seat: VehicleSeat): void;
 }
 
 /**

@@ -86,7 +86,7 @@ export interface MpEntity<TEntityType extends EntityType = EntityType> {
 
 /**
  * Collection wrapper for managing multiple entities.
- * @category Entities/Pools
+ * @category Entities
  *
  * @typeParam T - Specific entity type extending MpEntity
  */

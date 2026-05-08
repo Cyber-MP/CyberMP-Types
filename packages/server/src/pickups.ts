@@ -2,7 +2,7 @@ import type { EntityType, MpEntities, MpEntity } from './entities';
 import type { TweakDBID, Vector3 } from './shared';
 
 /**
- * @category Enums
+ * @category Entities/Pickups
  */
 export enum PickupType {
   Clothes = 1,
@@ -10,6 +10,9 @@ export enum PickupType {
   Other = 3,
 }
 
+/**
+ * @category Entities/Pickups
+ */
 export interface MpPickup extends MpEntity<EntityType.Pickup> {
   readonly model: TweakDBID;
   readonly pickupType: PickupType;
@@ -17,6 +20,9 @@ export interface MpPickup extends MpEntity<EntityType.Pickup> {
   destroy(): void;
 }
 
+/**
+ * @category Entities/Pickups
+ */
 export type CreatePickupOptions = {
   model: TweakDBID;
   type: PickupType;
@@ -25,6 +31,9 @@ export type CreatePickupOptions = {
   dimension?: number;
 };
 
+/**
+ * @category Entities/Pickups
+ */
 export interface MpPickups extends MpEntities<MpPickup> {
   create(options: CreatePickupOptions): MpPickup;
 }
