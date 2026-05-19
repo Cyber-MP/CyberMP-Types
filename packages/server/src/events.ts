@@ -371,6 +371,10 @@ export interface PlayersEvents {
    * Triggered when a player throws a grenade.
    */
   throwGrenade(playerId: number, data: ThrowGrenadeEventData): void | boolean;
+  /**
+   * Triggered when player meta changed
+   */
+  playerMetaChange(id: string, key: string, oldValue: any, newValue: any): void;
 }
 
 /**
@@ -400,6 +404,10 @@ export interface WorldEvents {
    * Triggered when an explosion occurs.
    */
   explosion(playerId: number, data: ExplosionEventData): void | boolean;
+  /**
+   * Triggered when global meta changed
+   */
+  globalMetaChange(id: string, key: string, oldValue: any, newValue: any): void;
 }
 
 /**
@@ -533,6 +541,10 @@ export interface EntitiesEvents {
    * Triggered when a game object despawns.
    */
   gameObjectDespawn(id: number): void;
+  /**
+   * Triggered when any entity meta changed
+   */
+  entityMetaChange(id: string, key: string, oldValue: any, newValue: any): void;
 }
 
 /**
