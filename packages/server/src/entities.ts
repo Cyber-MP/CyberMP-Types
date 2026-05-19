@@ -38,7 +38,7 @@ export interface MpEntity<TEntityType extends EntityType = EntityType> {
   readonly id: number;
 
   /** Current owner of the entity sync */
-  readonly owner: MpPlayer;
+  owner: MpPlayer;
 
   /** First player who synced this entity */
   readonly firstOwner: MpPlayer;
