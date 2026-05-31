@@ -3,7 +3,6 @@ import type { MpPlayer } from './players';
 
 /**
  * Sets/gets metadata for the any entity.
- * @category Global
  */
 export interface MpMeta {
   setGlobalMeta(key: string, value: any, sync?: boolean): void;

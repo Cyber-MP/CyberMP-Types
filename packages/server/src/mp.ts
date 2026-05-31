@@ -12,9 +12,9 @@ import type { Class } from './shared';
 import type { MpVehicle, MpVehicles } from './vehicles';
 
 /**
- * @category Global
+ * @category Global/Config
  */
-type CoreOverrides = {
+export type CoreConfigOverrides = {
   change_player_on_death_logic?: boolean;
   disable_side_quests_notifications?: boolean;
   change_vehicles_logic?: boolean;
@@ -29,9 +29,9 @@ type CoreOverrides = {
 };
 
 /**
- * @category Global
+ * @category Global/Config
  */
-type CoreConfig = {
+export type CoreConfig = {
   nametags?: boolean;
   death_autostand?: boolean;
   disable_switch_seats?: boolean;
@@ -40,12 +40,12 @@ type CoreConfig = {
   disable_drop_points?: boolean;
   disable_location_dependent_quests?: boolean;
   disable_garage?: boolean;
-  overrides?: CoreOverrides;
+  overrides?: CoreConfigOverrides;
   files?: string[];
 };
 
 /**
- * @category Global
+ * @category Global/Config
  */
 export type ServerConfig = {
   [key: string]: any;
@@ -59,9 +59,6 @@ export type ServerConfig = {
   core?: CoreConfig;
 };
 
-/**
- * @category Global
- */
 export interface MpServer {
   events: MpEvents;
   meta: MpMeta;

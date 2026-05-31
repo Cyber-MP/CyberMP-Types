@@ -5,7 +5,7 @@ import type { VehicleSeat } from './vehicles';
 
 /**
  * Data describing a damage event between players.
- * @category Entities
+ * @category Events/Players
  */
 export type DamageEventData = {
   damageType: number;

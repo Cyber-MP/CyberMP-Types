@@ -1,5 +1,5 @@
 /**
- * See {@link worldWeatherState#name}
+ * @category Enums
  */
 export enum EWeatherState {
   SUNNY = '24h_weather_sunny',
@@ -19,17 +19,26 @@ export enum EWeatherState {
   COURIER_CLOUDS = 'sa_courier_clouds',
 }
 
+/**
+ * @category Enums
+ */
 export enum EVoiceActivationType {
   UNDEFINED = 0,
   VOICE = 1,
   PUSH_TO_TALK = 2,
 }
 
+/**
+ * @category Enums
+ */
 export enum EPlayerGender {
   Female = 1,
   Male = 2,
 }
 
+/**
+ * @category Enums
+ */
 export enum ELoadingScreenState {
   Started = 1,
   Loading,

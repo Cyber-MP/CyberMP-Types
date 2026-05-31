@@ -36,7 +36,8 @@ export class GlobalsGenerator extends BaseGenerator<[SourceFile]> {
 
   generate(parentFile: SourceFile) {
     parentFile.addInterface({
-      name: 'MpFuncs',
+      name: 'MpGlobals',
+      isExported: true,
       methods: this.funcs.map<OptionalKind<MethodSignatureStructure>>((fn) => ({
         name: `"${fn.name}"`,
         returnType: RedFunctionAst.getFunctionReturnType(fn),

@@ -1,8 +1,5 @@
 import type { MpPlayer } from './players';
 
-/**
- * @category Commands
- */
 export interface MpCommands {
   /**
    * Register a command in the server scope.

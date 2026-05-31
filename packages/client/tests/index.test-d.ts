@@ -1,7 +1,6 @@
 import { describe, expectTypeOf, test } from 'vitest';
 import type {
   gameObject,
-  MpGame,
   ObserveFunction,
   OverrideFunction,
   PlayerPuppet,
@@ -9,15 +8,17 @@ import type {
   VehicleObject,
   vehicleBaseObject,
   worldWeatherScriptInterface,
+  MpGlobals,
+  MpClasses,
 } from '../out/game';
-import type { MpClient } from '../precomputed/mp';
+import type { MpClient, MpGame } from '../precomputed';
 
 const mp = {} as MpClient;
 
 describe('Core, basis functions', () => {
   test('Mp, MpGame', () => {
     expectTypeOf(mp).toEqualTypeOf<MpClient>();
-    expectTypeOf(mp.game).toEqualTypeOf<MpGame>();
+    expectTypeOf(mp.game).toEqualTypeOf<MpGame & MpGlobals & MpClasses>();
     expectTypeOf(mp.game.ScriptGameInstance).toEqualTypeOf<
       typeof ScriptGameInstance
     >();
@@ -45,7 +46,7 @@ describe('Core, basis functions', () => {
 
     expectTypeOf<
       ReturnType<worldWeatherScriptInterface['SetWeather']>
-    >().toEqualTypeOf<void>();
+    >().toEqualTypeOf<boolean>();
 
     expectTypeOf(
       mp.game.ScriptGameInstance.GetLoadingScreenSystem,
@@ -102,12 +103,14 @@ describe('Core, basis functions', () => {
     mp.game.override(
       'worldWeatherScriptInterface',
       'SetWeather',
-      (self, weather, blendTime, priority, origin) => {
+      (self, _weather, _blendTime, _priority, origin) => {
         expectTypeOf(self).toEqualTypeOf<worldWeatherScriptInterface>();
 
         expectTypeOf(origin).toEqualTypeOf<
           worldWeatherScriptInterface['SetWeather']
         >();
+
+        return true;
       },
     );
 

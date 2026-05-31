@@ -47,11 +47,11 @@ type MultiChannelCurve<T> = T;
     this.globalsGenerator.generate(sourceFile);
     this.classGenerator.generate(sourceFile);
 
-    sourceFile.addInterface({
-      name: 'MpGame',
-      extends: ['MpFuncs', 'MpClasses'],
-      isExported: true,
-    });
+    // sourceFile.addInterface({
+    //   name: 'MpGame',
+    //   extends: ['MpFuncs', 'MpClasses'],
+    //   isExported: true,
+    // });
 
     sourceFile.addExportDeclaration({
       moduleSpecifier: '../precomputed/game.d.ts',

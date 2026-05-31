@@ -7,7 +7,7 @@ import type { MpVehicle } from './vehicles';
 
 /**
  * Types of entities available in the multiplayer environment.
- * @category Enums
+ * @category Entities
  */
 export enum EntityType {
   Player = 1,
