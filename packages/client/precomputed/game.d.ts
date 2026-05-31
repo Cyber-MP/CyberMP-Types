@@ -132,7 +132,8 @@ export interface TweakDB {
 }
 
 /**
- * System managing core multiplayer session synchronization, asset deletion maps, and basic spawn configurations.
+ * Custom CyberMP System managing asset deletion maps, and basic spawn configurations.
+ * Accessible through `mp.game.ScriptGameInstance.GetMultiplayerSystem()`
  * @category Natives
  */
 export class MultiplayerSystem {
@@ -163,7 +164,8 @@ export class MultiplayerSystem {
 }
 
 /**
- * System providing status and progression access for the game's loading screen interfaces.
+ * System providing status and progression access for the game's loading screen interface.
+ * Accessible through `mp.game.ScriptGameInstance.GetLoadingScreenSystem()`
  * @category Natives
  */
 export class LoadingScreenSystem {
@@ -322,7 +324,7 @@ export interface MpGame {
 }
 
 /**
- * Extension modifications interface for handling core UI layout system menu changes.
+ * Extended by CyberMP `inkISystemRequestsHandler` class
  * @category Natives
  */
 export interface extended__inkISystemRequestsHandler {
@@ -333,7 +335,7 @@ export interface extended__inkISystemRequestsHandler {
 }
 
 /**
- * Extension properties layout covering basic model transformation and mesh manipulation structures.
+ * Extended by CyberMP `entEntity` class
  * @category Natives
  */
 interface extended__entEntity {
@@ -358,7 +360,7 @@ interface extended__entEntity {
 }
 
 /**
- * Extension targeting profile gender assignment states within character builder customization instances.
+ * Extended by CyberMP `gameuiICharacterCustomizationSystem` class
  * @category Natives
  */
 interface extended__gameuiICharacterCustomizationSystem {
@@ -377,7 +379,7 @@ interface extended__gameuiICharacterCustomizationSystem {
 }
 
 /**
- * Extension containing world environmental configuration loops and dynamic weather controllers.
+ * Extended by CyberMP `worldWeatherScriptInterface` class
  * @category Natives
  */
 interface extended__worldWeatherScriptInterface {
@@ -404,7 +406,7 @@ interface extended__worldWeatherScriptInterface {
 }
 
 /**
- * Extension mapping comprehensive physical data structures on vehicle entities.
+ * Extended by CyberMP `vehicleBaseObject` class
  * @category Natives
  */
 interface extended__vehicleBaseObject {
@@ -479,7 +481,7 @@ interface extended__vehicleBaseObject {
 }
 
 /**
- * Extension covering target waypoint paths tracking adjustments.
+ * Extended by CyberMP `gameMappinSystem` class
  * @category Natives
  */
 interface extended__gameMappinSystem {
