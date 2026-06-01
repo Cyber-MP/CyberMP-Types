@@ -1,4 +1,4 @@
-<h3 align="center">@cybermp/browser-types</h3>
+<h1 align="center">@cybermp/browser-types</h1>
 
 ✅ **Official** browser (CEF) environment type definitions for CyberMP multiplayer.
 

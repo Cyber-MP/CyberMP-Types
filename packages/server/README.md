@@ -1,4 +1,4 @@
-<h3 align="center">@cybermp/server-types</h3>
+<h1 align="center">@cybermp/server-types</h1>
 
 ✅ **Official** server-side type definitions for CyberMP multiplayer.
 

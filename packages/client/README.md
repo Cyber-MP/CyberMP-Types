@@ -1,4 +1,4 @@
-<h3 align="center">@cybermp/client-types</h3>
+<h1 align="center">@cybermp/client-types</h1>
 
 ✅ **Official** client-side type definitions for CyberMP multiplayer.
 
