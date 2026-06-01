@@ -16,7 +16,7 @@ With pnpm:
 pnpm add -D @cybermp/browser-types
 ```
 
-With pnpm:
+With yarn:
 ```bash
 yarn add -D @cybermp/browser-types
 ```
