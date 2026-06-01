@@ -10,9 +10,19 @@ import type {
 /**
  * Extracts the instance type from a class constructor type, or returns the type itself if it is not a constructor.
  * @template T - The type to unwrap.
- * @ignore
+ * @internal
  */
 type UnwrapClass<T> = T extends { new (): infer U } ? U : T;
+
+/**
+ * @internal
+ */
+type AnyFunc = (...args: any[]) => any;
+
+/**
+ * @internal
+ */
+type SafeMethod<I, M extends keyof I> = I[M] extends AnyFunc ? I[M] : AnyFunc;
 
 /**
  * Defines a function signature used to completely override a method within a specified game class.
@@ -20,19 +30,18 @@ type UnwrapClass<T> = T extends { new (): infer U } ? U : T;
  * @template C - The class name key from `MpClasses`.
  * @template I - The resolved instance type of the class.
  * @template M - The method names available on the class instance.
- * @internal
  */
 export type OverrideFunction = <
   C extends keyof MpClasses,
   I extends UnwrapClass<MpClasses[C]>,
-  M extends keyof I extends never ? string : keyof I,
+  M extends keyof I,
 >(
   className: C,
   methodName: M,
   callback: (
     self: I,
-    ...args: [...Parameters<I[M]>, origin: I[M]]
-  ) => ReturnType<I[M]>,
+    ...args: [...Parameters<SafeMethod<I, M>>, origin: SafeMethod<I, M>]
+  ) => ReturnType<SafeMethod<I, M>>,
 ) => void;
 
 /**
@@ -41,16 +50,15 @@ export type OverrideFunction = <
  * @template C - The class name key from `MpClasses`.
  * @template I - The resolved instance type of the class.
  * @template M - The method names available on the class instance.
- * @internal
  */
 export type ObserveFunction = <
   C extends keyof MpClasses,
   I extends UnwrapClass<MpClasses[C]>,
-  M extends keyof I extends never ? string : keyof I,
+  M extends keyof I,
 >(
   className: C,
   methodName: M,
-  callback: (self: I, ...args: Parameters<I[M]>) => void,
+  callback: (self: I, ...args: Parameters<SafeMethod<I, M>>) => void,
 ) => void;
 
 /**
@@ -138,7 +146,7 @@ export interface TweakDB {
  */
 export class MultiplayerSystem {
   /**
-   * Removes game object classes (e.g., `gameObject`, `playerPuppet`, `NpcPuppet`) from the active multiplayer map state.
+   * Removes game object classes (e.g., `GameObject`, `Door`) from the active multiplayer map state.
    * @param objectClassMap - Array of class names from `MpClasses` to clear.
    */
   DeclareDeletedObjects(objectClassMap: Array<keyof MpClasses>): void;
@@ -177,7 +185,7 @@ export class LoadingScreenSystem {
 
   /**
    * Gets the numeric loading progression factor.
-   * @returns A value representing loading progress (typically from 0 to 100, or 0 to 1).
+   * @returns A value representing loading progress (from 0 to 100).
    */
   GetLoadingScreenProgress(): number;
 
@@ -385,13 +393,13 @@ interface extended__gameuiICharacterCustomizationSystem {
 interface extended__worldWeatherScriptInterface {
   /**
    * Commands the environment engine manager to override active weather profiles.
-   * @param weather - The numerical weather enum state or specific profile asset name path string.
+   * @param weather - The weather enum state or specific profile asset name path string.
    * @param blendTime - Optional transition timeline sequence parameter in seconds.
    * @param priority - Optional overlay layer sorting stack index weight level identifier.
    * @returns `true` if weather override commands executed, otherwise `false`.
    */
   SetWeather(
-    weather: CyberEnums.EWeatherState | string,
+    weather: CyberEnums.EWeatherState,
     blendTime?: number,
     priority?: number,
   ): boolean;
@@ -492,20 +500,24 @@ interface extended__gameMappinSystem {
   TrackMappin(id: gameNewMappinID): void;
 }
 
-import '../out/game.d.ts';
+import '../out/game';
 
 /**
  * Module ambient typing overlay declarations expanding baseline types inside the internal engine definitions path.
  */
-declare module '../out/game.d.ts' {
+declare module '../out/game' {
   interface worldWeatherScriptInterface {
-    SetWeather: extended__worldWeatherScriptInterface['SetWeather'];
-    ResetWeather: extended__worldWeatherScriptInterface['ResetWeather'];
+    SetWeather(
+      weather: CyberEnums.EWeatherState,
+      blendTime?: number,
+      priority?: number,
+    ): boolean;
+    ResetWeather(forceRestore?: boolean, blendTime?: number): boolean;
   }
 
   interface vehicleBaseObject extends extended__vehicleBaseObject {}
 
-  export interface gameMappinSystem extends extended__gameMappinSystem {}
+  interface gameMappinSystem extends extended__gameMappinSystem {}
 
   /**
    * Filter type mapped strictly to extract fields inheriting properties originating from `gameScriptableSystem`.

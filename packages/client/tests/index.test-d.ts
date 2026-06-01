@@ -39,7 +39,7 @@ describe('Core, basis functions', () => {
     >().toEqualTypeOf<number>();
   });
 
-  test('Custom mp injeceted natives', () => {
+  test('Custom mp injected natives', () => {
     expectTypeOf<
       ReturnType<vehicleBaseObject['HasGravity']>
     >().toEqualTypeOf<boolean>();
