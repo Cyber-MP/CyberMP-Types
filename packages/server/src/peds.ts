@@ -1,12 +1,12 @@
 import type { EntityType, MpEntities, MpEntity } from './entities';
-import type { CName, TweakDBID, Vector3 } from './shared';
+import type { CName, GameHash, Vector3 } from './shared';
 
 /**
  * @category Entities/Peds
  */
 export interface MpPed extends MpEntity<EntityType.Ped> {
   readonly health: number;
-  readonly model: TweakDBID;
+  readonly model: GameHash;
   readonly appearance: CName;
 
   destroy(): void;
@@ -16,7 +16,7 @@ export interface MpPed extends MpEntity<EntityType.Ped> {
  * @category Entities/Peds
  */
 export type CreatePedOptions = {
-  model: TweakDBID;
+  model: GameHash;
   appearance: CName;
   position: Vector3;
   health?: number;

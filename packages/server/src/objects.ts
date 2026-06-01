@@ -1,11 +1,11 @@
 import type { EntityType, MpEntities, MpEntity } from './entities';
-import type { TweakDBID, Vector3 } from './shared';
+import type { GameHash, Vector3 } from './shared';
 
 /**
  * @category Entities/Objects
  */
 export interface MpObject extends MpEntity<EntityType.GameObject> {
-  readonly model: TweakDBID;
+  readonly model: GameHash;
 
   destroy(): void;
 }
@@ -14,7 +14,7 @@ export interface MpObject extends MpEntity<EntityType.GameObject> {
  * @category Entities/Objects
  */
 export type CreateObjectOptions = {
-  model: TweakDBID;
+  model: GameHash;
   position: Vector3;
   yaw?: number;
   dynamic?: boolean;

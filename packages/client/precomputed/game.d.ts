@@ -502,9 +502,6 @@ interface extended__gameMappinSystem {
 
 import '../out/game';
 
-/**
- * Module ambient typing overlay declarations expanding baseline types inside the internal engine definitions path.
- */
 declare module '../out/game' {
   interface worldWeatherScriptInterface {
     SetWeather(

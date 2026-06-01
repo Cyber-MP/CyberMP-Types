@@ -1,6 +1,6 @@
 import type { EntityType, MpEntities, MpEntity } from './entities';
 import type { MpPlayer } from './players';
-import type { CName, TweakDBID, Vector3 } from './shared';
+import type { CName, GameHash, Vector3 } from './shared';
 
 /**
  * @category Entities/Vehicles
@@ -16,7 +16,7 @@ export enum VehicleSeat {
  * @category Entities/Vehicles
  */
 export interface MpVehicle extends MpEntity<EntityType.Vehicle> {
-  readonly model: TweakDBID;
+  readonly model: GameHash;
   readonly appearance: CName;
   readonly health: number;
   readonly velocity: Vector3;
@@ -46,7 +46,7 @@ export interface MpVehicle extends MpEntity<EntityType.Vehicle> {
  * @category Entities/Vehicles
  */
 type CreateVehicleOptions = {
-  model: TweakDBID;
+  model: GameHash;
   appearance: CName;
   position: Vector3;
   yaw?: number;

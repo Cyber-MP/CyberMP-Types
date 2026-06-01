@@ -1,5 +1,5 @@
 import type { EntityType, MpEntities, MpEntity } from './entities';
-import type { TweakDBID, Vector3 } from './shared';
+import type { GameHash, Vector3 } from './shared';
 
 /**
  * @category Entities/Pickups
@@ -14,7 +14,7 @@ export enum PickupType {
  * @category Entities/Pickups
  */
 export interface MpPickup extends MpEntity<EntityType.Pickup> {
-  readonly model: TweakDBID;
+  readonly model: GameHash;
   readonly pickupType: PickupType;
 
   destroy(): void;
@@ -24,7 +24,7 @@ export interface MpPickup extends MpEntity<EntityType.Pickup> {
  * @category Entities/Pickups
  */
 export type CreatePickupOptions = {
-  model: TweakDBID;
+  model: GameHash;
   type: PickupType;
   position: Vector3;
   yaw?: number;
