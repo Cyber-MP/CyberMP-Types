@@ -55,7 +55,7 @@ export type ServerConfig = {
   max_players: number;
   secret_token: string;
   resources: string[];
-  disable_VoIP_server: boolean;
+  disable_voice: boolean;
   core?: CoreConfig;
 };
 

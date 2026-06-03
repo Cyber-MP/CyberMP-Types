@@ -41,10 +41,6 @@ export class RedTypeAst {
       baseName = `CyberBitfields.${type.name}`;
     }
 
-    if (type.name === 'Void') {
-      console.log('void captured');
-    }
-
     // Primitive mapping
     if (RedTypeAst.isPrimitive(type)) {
       switch (type.flag as RedPrimitiveDef) {
