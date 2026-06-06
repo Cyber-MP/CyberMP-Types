@@ -1,5 +1,6 @@
 import type { MpClasses, MpGlobals } from '../out/game';
 import type { MpCef } from './cef';
+import type { MpCommands } from './commands';
 import type { MpDiscord } from './discord';
 import type { MpEvents } from './events';
 import type { MpGame } from './game';
@@ -52,7 +53,15 @@ export interface MpClient {
    */
   network: MpNetwork;
 
+  /**
+   * Manages local player lifecycle operations and the creation of client-side entities.
+   */
   local: MpLocal;
+
+  /**
+   * Manages the registration, handling, and unregistration of runtime client console commands.
+   */
+  commands: MpCommands;
 
   /**
    * Provides access to local key-value data storage states spanning resource restarts.

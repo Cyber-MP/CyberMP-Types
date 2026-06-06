@@ -1,3 +1,6 @@
+/**
+ * Manages the registration, handling, and unregistration of runtime client console commands.
+ */
 export interface MpCommands {
   /**
    * Register a command
