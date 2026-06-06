@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "biome:lint": "biome lint --write ./packages",
+    "biome:format": "biome format --write ./packages",
+    "biome:check": "biome check --write ./packages",
+    "test": "pnpm -r test"
   },
   "keywords": [],
   "author": "terminaate",

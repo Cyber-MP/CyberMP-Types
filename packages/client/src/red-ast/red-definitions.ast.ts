@@ -45,7 +45,7 @@ export enum RedPrimitiveDef {
 }
 
 export enum RedTemplateDef {
-  ref = RedPrimitiveDef.Variant + 1,
+  ref = 26,
   wref,
   script_ref,
   ResRef,

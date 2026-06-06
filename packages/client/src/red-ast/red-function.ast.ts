@@ -43,7 +43,7 @@ export class RedFunctionAst {
   }
 
   static testByUsage(func: RedFunctionAst, rule: RegExp): boolean {
-    if (func.returnType && RedTypeAst.testType(func.returnType!, rule)) {
+    if (func.returnType && RedTypeAst.testType(func.returnType, rule)) {
       return true;
     }
     const args: RedArgumentAst[] = func.arguments.filter((arg) =>
@@ -54,7 +54,7 @@ export class RedFunctionAst {
   }
 
   static filterByStrictUsage(func: RedFunctionAst, query: string): boolean {
-    if (func.returnType && RedTypeAst.hasStrictType(func.returnType!, query)) {
+    if (func.returnType && RedTypeAst.hasStrictType(func.returnType, query)) {
       return true;
     }
     const args: RedArgumentAst[] = func.arguments.filter((arg) =>
@@ -65,7 +65,7 @@ export class RedFunctionAst {
   }
 
   static filterByUsage(func: RedFunctionAst, words: string[]): boolean {
-    if (func.returnType && RedTypeAst.hasType(func.returnType!, words)) {
+    if (func.returnType && RedTypeAst.hasType(func.returnType, words)) {
       return true;
     }
     const args: RedArgumentAst[] = func.arguments.filter((arg) =>

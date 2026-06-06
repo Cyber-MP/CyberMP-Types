@@ -76,7 +76,6 @@ export class RedTypeAst {
           return 'ArrayBuffer';
         case RedPrimitiveDef.CDateTime:
           return 'Date';
-        case RedPrimitiveDef.Variant:
         default:
           return 'any';
       }
@@ -284,7 +283,7 @@ export class RedTypeAst {
     const flag: RedPrimitiveDef | RedTemplateDef | undefined = json.a;
     const name: string =
       flag === undefined
-        ? json.b!
+        ? json.b
         : flag <= RedPrimitiveDef.Variant
           ? RedPrimitiveDef[flag]
           : RedTemplateDef[flag];
@@ -367,7 +366,7 @@ export class RedTypeAst {
     );
 
     if (staticArrayMatch) {
-      innerDef.size = +staticArrayMatch.groups!['size'];
+      innerDef.size = +staticArrayMatch.groups.size;
       return RedTemplateDef.array;
     }
     switch (code) {
