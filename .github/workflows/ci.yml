@@ -18,6 +18,8 @@ jobs:
 
       - run: pnpm i
 
+      - run: pnpm build
+
       - run: pnpm run biome:lint
-        
+
       - run: pnpm run test

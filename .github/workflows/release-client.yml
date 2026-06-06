@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: 'Bump version (e.g., 4.0.0, 4.1.0-alpha.1, 5.0.0-beta.2)'
+        description: "Bump version (e.g., 4.0.0, 4.1.0-alpha.1, 5.0.0-beta.2)"
         required: true
         type: string
 
@@ -48,6 +48,10 @@ jobs:
       - run: pnpm env use --global 22
 
       - run: pnpm i
+
+      - name: Build
+        working-directory: packages/client
+        run: pnpm run build
 
       - run: |
           git config --global user.name "github-actions[bot]"
