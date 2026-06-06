@@ -221,14 +221,4 @@ export interface MpEvents {
    * @param callback - Functional reference signature block to unbind.
    */
   off(eventName: string, callback: (...args: any[]) => void): void;
-
-  /**
-   * Registers an execution text console command processor linked directly to player chatting or console prompt interactions.
-   * @param commandName - The terminal string command literal (e.g., passing `"spawn"` handles requests targeting `/spawn`).
-   * @param callback - Callback execution script processing console interactions.
-   */
-  addCommand(
-    commandName: string,
-    callback: (id: number, args: string[]) => void,
-  ): void;
 }

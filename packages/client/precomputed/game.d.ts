@@ -140,6 +140,55 @@ export interface TweakDB {
 }
 
 /**
+ * Utility interface providing bidirectional translation between readable game engine naming string conventions
+ * and their encrypted/hashed formats.
+ * @category Natives
+ */
+export interface MpGameHashes {
+  /**
+   * Converts a TweakDB record string path into its unique TweakDBID hash signature format.
+   * @param name - The text record path string (e.g., `"Items.money"`).
+   * @returns The resolved TweakDBID hash string reference.
+   */
+  toTweakdbid(name: string): string;
+
+  /**
+   * Resolves an internal TweakDBID hash signature string back into its original readable record path string.
+   * @param hash - The native TweakDBID hash layout signature.
+   * @returns The readable path text description string if found, otherwise an empty or fallback string representation.
+   */
+  fromTweakdbid(hash: string): string;
+
+  /**
+   * Resolves a resource file route or asset system address string into its designated numeric/hexadecimal Resource Reference (`ResRef`) signature hash.
+   * @param name - The full system asset path string (e.g., `"base\\characters\\main_npc\\jackie.ent"`).
+   * @returns The matching native ResRef serialization target hash key.
+   */
+  toResref(name: string): string;
+
+  /**
+   * Translates a native game engine Resource Reference (`ResRef`) asset identifier string back into its readable raw directory path string.
+   * @param hash - The target ResRef hash format token layout string.
+   * @returns The verified asset resource string path.
+   */
+  fromResref(hash: string): string;
+
+  /**
+   * Converts a standard text identifier string into its corresponding internal engine unique 64-bit string identifier (`CName`) hash representation.
+   * @param name - The plaintext string label configuration name to translate.
+   * @returns The matching numeric engine structure string token representation.
+   */
+  toCname(name: string): string;
+
+  /**
+   * Reverses a native engine 64-bit name identification token identifier (`CName`) back into its human-readable plaintext string label.
+   * @param hash - The string representation of the target CName identifier.
+   * @returns The corresponding unhashed string literal value.
+   */
+  fromCname(hash: string): string;
+}
+
+/**
  * Custom CyberMP System managing asset deletion maps, and basic spawn configurations.
  * Accessible through `mp.game.ScriptGameInstance.GetMultiplayerSystem()`
  * @category Natives
@@ -206,6 +255,12 @@ export interface MpGame {
   TweakDB: TweakDB;
 
   /**
+   * Utility interface providing bidirectional translation between readable game engine naming string conventions
+   * and their encrypted/hashed formats.
+   */
+  hashes: MpGameHashes;
+
+  /**
    * Registers a callback listener tracking real-time keyboard or controller hardware input events.
    * @param callback - Function invoked on keystrokes.
    */
@@ -227,6 +282,12 @@ export interface MpGame {
    * @param callback - Execution callback.
    */
   onGameLoaded(callback: () => void): void;
+
+  /**
+   * Event hook that fires ONCE immediately when the underlying game session finishes initial loading structures.
+   * @param callback - Execution callback.
+   */
+  onceGameLoaded(callback: () => void): void;
 
   /**
    * Event hook that fires specifically when tweaks and TweakDB engine patches are loaded and safe to manipulate.
@@ -260,14 +321,6 @@ export interface MpGame {
    * @param count - Total item quantity stack to add.
    */
   AddToInventory(itemName: string, count: number): void;
-
-  /**
-   * Converts a plaintext string model or path identifier name directly into a stable 64-bit unsigned hash representation.
-   * @param name - Raw item asset or TweakDB blueprint name path string.
-   * @param type - Parsing method mode targeting either a TweakDB path reference (`tweakdbid`) or an internal engine CName string hash (`cname`).
-   * @returns The calculated hash string value.
-   */
-  getHashFromName(name: string, type: 'tweakdbid' | 'cname'): string;
 
   /**
    * Fully replaces a targeted class method with custom script logic.
@@ -516,10 +569,6 @@ declare module '../out/game' {
 
   interface gameMappinSystem extends extended__gameMappinSystem {}
 
-  /**
-   * Filter type mapped strictly to extract fields inheriting properties originating from `gameScriptableSystem`.
-   * @template T - The baseline target typing mapping block index to scan.
-   */
   type OnlyExtendingScriptableSystem<T> = {
     [K in keyof T as T[K] extends typeof gameScriptableSystem
       ? K
@@ -529,12 +578,6 @@ declare module '../out/game' {
   interface gameScriptableSystemsContainer<
     Map = OnlyExtendingScriptableSystem<MpClasses>,
   > {
-    /**
-     * Resolves an isolated structural execution system script framework block instance module by name.
-     * @template N - Key matching target extensions inside active scripting layouts.
-     * @param systemName - The exact structural name of the requested scriptable system.
-     * @returns The active unwrapped instance structure mapping implementation.
-     */
     Get<N extends keyof Map>(systemName: N): UnwrapClass<Map[N]>;
   }
 

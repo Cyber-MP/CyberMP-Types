@@ -1,5 +1,3 @@
-import type { MpPlayer } from './players';
-
 export interface MpCommands {
   /**
    * Register a command
@@ -8,7 +6,7 @@ export interface MpCommands {
    */
   add(
     commandName: string,
-    callback: (player: MpPlayer, args: string[]) => void,
+    callback: (id: number, args: string[]) => void,
   ): void;
 
   /**
