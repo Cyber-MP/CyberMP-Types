@@ -3,11 +3,13 @@ import type { MpCef } from './cef';
 import type { MpCommands } from './commands';
 import type { MpDiscord } from './discord';
 import type { MpEvents } from './events';
+import type { MpExports } from './exports';
 import type { MpGame } from './game';
 import type { MpLocal } from './local';
 import type { MpLocalStorage } from './local-storage';
 import type { MpMeta } from './meta';
 import type { MpNetwork } from './network';
+import type { MpResources } from './resources';
 import type { MpVoiceChat } from './voice-chat';
 
 type ServerVector3 = [number, number, number];
@@ -67,6 +69,16 @@ export interface MpClient {
    * Provides access to local key-value data storage states spanning resource restarts.
    */
   localStorage: MpLocalStorage;
+
+  /**
+   * Interface managing cross-resource execution pipelines.
+   */
+  exports: MpExports;
+
+  /**
+   * Interface for managing, loading, and tracking resources.
+   */
+  resources: MpResources;
 
   /**
    * Queries environment configuration arrays to fetch string system variable values defined inside config manifest structures.

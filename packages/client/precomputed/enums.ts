@@ -45,3 +45,13 @@ export enum ELoadingScreenState {
   PreEnded,
   Hidden,
 }
+
+/**
+ * @category Enums
+ */
+export enum EResourceState {
+  NotRunning = 0,
+  Starting = 1,
+  Running = 2,
+  Stopped = 3,
+}
