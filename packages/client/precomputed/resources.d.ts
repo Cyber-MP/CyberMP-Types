@@ -15,11 +15,12 @@ export interface MpResources {
   getTOML(name: string): string;
 
   /**
-   * Loads the raw string data of a file from the specified file system path.
-   * @param path - The path to the file relative to the resource directory.
-   * @returns The complete string content of the target file.
+   * Reads a file inside a resource and returns its contents.
+   * @param resourceName Name of the resource.
+   * @param pathToResource Path to the file.
+   * @returns File content as string.
    */
-  loadFile(path: string): string;
+  loadFile(resourceName: string, pathToResource: string): string;
 
   /**
    * Queries the current loading or runtime execution state of a specific resource.
