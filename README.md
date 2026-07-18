@@ -1,9 +1,9 @@
 <h1 align="center">CyberMP Types</h1>
 
 ✅ **Official** type definitions for CyberMP multiplayer, contains:
-- [@cybermp/server-types](https://www.npmjs.com/package/@cybermp/server-types): server environment definitions
-- [@cybermp/client-types](https://www.npmjs.com/package/@cybermp/client-types): client environment definitions
-- [@cybermp/browser-types](https://www.npmjs.com/package/@cybermp/browser-types): browser environment definitions
+- [@cybermp/server-types](https://www.npmjs.com/package/@cybermp/server-types): Server environment definitions
+- [@cybermp/client-types](https://www.npmjs.com/package/@cybermp/client-types): Client environment definitions
+- [@cybermp/browser-types](https://www.npmjs.com/package/@cybermp/browser-types): Browser environment definitions
 
 ## 📜 Documentation
 
