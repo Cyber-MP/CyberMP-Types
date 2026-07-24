@@ -78,4 +78,10 @@ export interface MpNetwork {
    * @returns The synchronized network ID assigned to that player.
    */
   getPlayerId(gameId: number): number;
+
+  /**
+   * Gives access to local player network id without depending on local player's entity or anything to game
+   * @returns The synchronized network ID assigned to local player.
+   */
+  getLocalPlayerId(): number;
 }
