@@ -40,8 +40,6 @@ export interface MpEntity<TEntityType extends EntityType = EntityType> {
   /** Current owner of the entity sync */
   owner: MpPlayer;
 
-  /** First player who synced this entity */
-  readonly firstOwner: MpPlayer;
   readonly position: Vector3;
   readonly rotation: Rotation;
 

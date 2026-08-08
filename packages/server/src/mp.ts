@@ -53,7 +53,7 @@ export type ServerConfig = {
   udp_host: string;
   connection_host_addr: string;
   max_players: number;
-  secret_token: string;
+  private_token: string;
   resources: string[];
   disable_voice: boolean;
   core?: CoreConfig;

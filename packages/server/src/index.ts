@@ -11,4 +11,4 @@ export * from './players';
 export * from './resources';
 export * from './shared';
 export * from './vehicles';
-export * from './voice-chat';
+//export * from './voice-chat';

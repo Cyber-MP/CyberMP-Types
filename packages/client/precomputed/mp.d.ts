@@ -38,7 +38,7 @@ export interface MpClient {
   /**
    * Integrated structural client voice communication management interface.
    */
-  voiceChat: MpVoiceChat;
+  //voiceChat: MpVoiceChat;
 
   /**
    * Controls and interfaces with the embedded Chromium Embedded Framework web views.
@@ -81,24 +81,10 @@ export interface MpClient {
   resources: MpResources;
 
   /**
-   * Queries environment configuration arrays to fetch string system variable values defined inside config manifest structures.
-   * @param varName - Target environmental variable path identifier name key string.
-   * @returns The corresponding variable value matching that name string.
-   */
-  getVar(varName: string): string;
-
-  /**
-   * Queries environment configuration arrays to fetch integer variable values defined inside config manifest structures.
-   * @param varName - Target environmental variable path identifier name key string.
-   * @returns The variable evaluation value parsed into a numerical integer.
-   */
-  getVarInt(varName: string): number;
-
-  /**
    * Retrieves total execution duration elapsed since initialization of the master game engine shell layer tracking loops.
    * @returns Calculated time tracker measurement value in milliseconds.
    */
-  getGameTimer(): number;
+  getTimer(): number;
 
   /**
    * Fetches raw unparsed configurations mapping platform launcher operational states.

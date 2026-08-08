@@ -50,15 +50,6 @@ export interface MpResources {
   getCurrentName(): string;
 
   /**
-   * Gets metadata from a resource manifest.
-   * @param resourceName Resource name.
-   * @param keyName Metadata key.
-   * @param index Index (if multiple values exist).
-   * @returns Metadata string.
-   */
-  getMetadata(resourceName: string, keyName: string, index: number): string;
-
-  /**
    * Reads a file inside a resource and returns its contents.
    * @param resourceName Name of the resource.
    * @param pathToResource Path to the file.
