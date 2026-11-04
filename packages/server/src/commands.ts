@@ -8,7 +8,7 @@ export interface MpCommands {
    */
   add(
     commandName: string,
-    callback: (player: MpPlayer, args: string[]) => void,
+    callback: (player: MpPlayer | null, args: string[]) => void,
   ): void;
 
   /**
