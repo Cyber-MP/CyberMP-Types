@@ -45,7 +45,7 @@ export interface MpVehicle extends MpEntity<EntityType.Vehicle> {
 /**
  * @category Entities/Vehicles
  */
-type CreateVehicleOptions = {
+export type CreateVehicleOptions = {
   model: GameHash;
   appearance: CName;
   position: Vector3;
