@@ -1,15 +1,15 @@
-import type { MpCommands } from './commands';
-import type { MpEntities, MpEntity } from './entities';
-import type { MpEvents } from './events';
-import type { MpHashes } from './hashes';
-import type { MpMeta } from './meta';
-import type { MpObject, MpObjects } from './objects';
-import type { MpPed, MpPeds } from './peds';
-import type { MpPickup, MpPickups } from './pickups';
-import type { MpPlayer, MpPlayers } from './players';
-import type { MpResources } from './resources';
-import type { Class } from './shared';
-import type { MpVehicle, MpVehicles } from './vehicles';
+import type { MpCommands } from "./commands";
+import type { MpEntities, MpEntity } from "./entities";
+import type { MpEvents } from "./events";
+import type { MpHashes } from "./hashes";
+import type { MpMeta } from "./meta";
+import type { MpObject, MpObjects } from "./objects";
+import type { MpPed, MpPeds } from "./peds";
+import type { MpPickup, MpPickups } from "./pickups";
+import type { MpPlayer, MpPlayers } from "./players";
+import type { MpResources } from "./resources";
+import type { Class } from "./shared";
+import type { MpVehicle, MpVehicles } from "./vehicles";
 
 /**
  * @category Global/Config
@@ -72,7 +72,7 @@ export interface MpServer {
   peds: MpPeds;
   hashes: MpHashes;
 
-  cancelEvent(): void;
+  // cancelEvent(): void;
 
   MpPlayer: Class<MpPlayer>;
   MpEntity: Class<MpEntity>;
