@@ -2,6 +2,10 @@ export function cyrb53(str: string, seed: number = 0): number {
   let h1: number = 0xdeadbeef ^ seed;
   let h2: number = 0x41c6ce57 ^ seed;
 
+  if (!str) {
+    console.log(str, seed);
+  }
+
   for (let i: number = 0, ch: number; i < str.length; i++) {
     ch = str.charCodeAt(i);
     h1 = Math.imul(h1 ^ ch, 2654435761);

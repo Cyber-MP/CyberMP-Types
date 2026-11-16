@@ -1,4 +1,4 @@
-import { consola } from 'consola';
+import { consola } from "consola";
 import type {
   ClassDeclarationStructure,
   MethodDeclarationStructure,
@@ -7,14 +7,14 @@ import type {
   PropertyDeclarationStructure,
   PropertySignatureStructure,
   SourceFile,
-} from 'ts-morph';
-import { defsIndex } from '../config/constants';
-import { dumps } from '../dumps';
-import { RedClassAst } from '../red-ast/red-class.ast';
-import { RedFunctionAst } from '../red-ast/red-function.ast';
-import { RedPropertyAst } from '../red-ast/red-property.ast';
-import { RedTypeAst } from '../red-ast/red-type.ast';
-import { BaseGenerator } from './base-generator';
+} from "ts-morph";
+import { defsIndex } from "../config/constants";
+import { dumps } from "../dumps";
+import { RedClassAst } from "../red-ast/red-class.ast";
+import { RedFunctionAst } from "../red-ast/red-function.ast";
+import { RedPropertyAst } from "../red-ast/red-property.ast";
+import { RedTypeAst } from "../red-ast/red-type.ast";
+import { BaseGenerator } from "./base-generator";
 
 export class ClassGenerator extends BaseGenerator<[SourceFile]> {
   private classObjs: RedClassAst[];
@@ -76,22 +76,27 @@ export class ClassGenerator extends BaseGenerator<[SourceFile]> {
 
         const properties: OptionalKind<PropertyDeclarationStructure>[] =
           filteredProps.map((p) => ({
-            name: `"${p.name}"`,
+            name: JSON.stringify(p.name),
             type: RedTypeAst.toTypescript(p.type),
           }));
 
         const methods: OptionalKind<MethodDeclarationStructure>[] = funcs.map(
           (fn) => ({
-            name: `"${fn.name}"`,
+            name: JSON.stringify(fn.name),
             returnType: RedFunctionAst.getFunctionReturnType(fn),
             parameters: RedFunctionAst.getFunctionParams(fn.arguments),
             isStatic: fn.isStatic,
           }),
         );
 
+        const safeName = obj.name.replace(/[^a-zA-Z0-9_$]/g, "_");
+        const safeParent = obj.parent
+          ? obj.parent.replace(/[^a-zA-Z0-9_$]/g, "_")
+          : undefined;
+
         return {
-          name: obj.name,
-          extends: obj.parent,
+          name: safeName,
+          extends: safeParent,
           isExported: true,
           properties,
           methods,
@@ -106,19 +111,22 @@ export class ClassGenerator extends BaseGenerator<[SourceFile]> {
     parentFile.saveSync();
 
     parentFile.addInterface({
-      name: 'MpClasses',
+      name: "MpClasses",
       isExported: true,
       properties: this.classObjs.map<OptionalKind<PropertySignatureStructure>>(
-        (obj) => ({
-          name: obj.name,
-          // if class extends from gameIGameSystem then its a singleton
-          type: this.recursiveParentIs(obj, 'gameIGameSystem')
-            ? obj.name
-            : `typeof ${obj.name}`,
-        }),
+        (obj) => {
+          const safeName = obj.name.replace(/[^a-zA-Z0-9_$]/g, "_");
+
+          return {
+            name: JSON.stringify(obj.name),
+            type: this.recursiveParentIs(obj, "gameIGameSystem")
+              ? safeName
+              : `typeof ${safeName}`,
+          };
+        },
       ),
     });
 
-    consola.success('Classes generated successfully');
+    consola.success("Classes generated successfully");
   }
 }

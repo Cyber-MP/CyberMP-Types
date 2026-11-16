@@ -1,15 +1,15 @@
-import { consola } from 'consola';
-import { unique } from 'radash';
+import { consola } from "consola";
+import { unique } from "radash";
 import type {
   EnumDeclarationStructure,
   EnumMemberStructure,
   OptionalKind,
   Project,
-} from 'ts-morph';
-import { defsIndex } from '../config/constants';
-import { dumps } from '../dumps';
-import { RedEnumAst } from '../red-ast/red-enum.ast';
-import { BaseGenerator } from './base-generator';
+} from "ts-morph";
+import { defsIndex } from "../config/constants";
+import { dumps } from "../dumps";
+import { RedEnumAst } from "../red-ast/red-enum.ast";
+import { BaseGenerator } from "./base-generator";
 
 export class EnumGenerator extends BaseGenerator {
   private enums: RedEnumAst[];
@@ -22,29 +22,33 @@ export class EnumGenerator extends BaseGenerator {
   }
 
   generate() {
-    const sourceFile = this.createSourceFile('./out/enums.ts');
+    const sourceFile = this.createSourceFile("./out/enums.ts");
 
     this.addHeader(sourceFile);
 
     sourceFile.addExportDeclaration({
-      moduleSpecifier: '../precomputed/enums',
+      moduleSpecifier: "../precomputed/enums",
     });
 
     sourceFile.addEnums(
-      this.enums.map<OptionalKind<EnumDeclarationStructure>>((obj) => ({
-        name: obj.name,
-        isExported: true,
-        members: unique(obj.members, (m) => m.key).map<
-          OptionalKind<EnumMemberStructure>
-        >((o) => ({
-          name: `"${o.key}"`,
-          value: o.value,
-        })),
-      })),
+      this.enums.map<OptionalKind<EnumDeclarationStructure>>((obj) => {
+        const safeName = obj.name.replace(/[^a-zA-Z0-9_$]/g, "_");
+
+        return {
+          name: safeName,
+          isExported: true,
+          members: unique(obj.members, (m) => m.key).map<
+            OptionalKind<EnumMemberStructure>
+          >((o) => ({
+            name: JSON.stringify(o.key),
+            value: o.value,
+          })),
+        };
+      }),
     );
 
     sourceFile.saveSync();
 
-    consola.success('Enums generated successfully');
+    consola.success("Enums generated successfully");
   }
 }
