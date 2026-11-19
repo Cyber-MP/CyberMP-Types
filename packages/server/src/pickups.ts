@@ -36,4 +36,6 @@ export type CreatePickupOptions = {
  */
 export interface MpPickups extends MpEntities<MpPickup> {
   create(options: CreatePickupOptions): MpPickup;
+  destroy(pickup: MpPickup | number): void;
+  toArray(): MpPickup[];
 }

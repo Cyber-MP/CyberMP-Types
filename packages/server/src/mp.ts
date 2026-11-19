@@ -45,17 +45,26 @@ export type CoreConfig = {
 };
 
 /**
+ * The content of `server.toml`, as returned by `mp.config`.
+ *
+ * It only holds the keys that are written in the file: a setting you left
+ * out is `undefined` here, not filled in with the server's default.
  * @category Global/Config
  */
 export type ServerConfig = {
   [key: string]: any;
   tcp_host: string;
   udp_host: string;
-  connection_host_addr: string;
-  max_players: number;
-  private_token: string;
   resources: string[];
-  disable_voice: boolean;
+  connection_host_addr?: string;
+  max_players?: number;
+  private_token?: string;
+  disable_voice?: boolean;
+  cef_debug?: boolean;
+  ep2_dlc_enabled?: boolean;
+  duplicatePlayers?: number;
+  useCdn?: boolean;
+  cdnUrl?: string;
   core?: CoreConfig;
 };
 
@@ -87,7 +96,17 @@ export interface MpServer {
    */
   isServer(): boolean;
 
-  config: ServerConfig;
+  /**
+   * The server configuration, read from `server.toml`.
+   *
+   * The file is read and parsed again every time you access this property,
+   * so you always see what is on disk right now (including edits made after
+   * the server started) and you get a new object each time. Read it once
+   * into a variable instead of accessing it in a loop.
+   *
+   * If the file cannot be read or parsed at that moment, the value is `null`.
+   */
+  readonly config: ServerConfig;
 }
 
 /**

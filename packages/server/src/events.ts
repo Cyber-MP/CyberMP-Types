@@ -282,7 +282,11 @@ export interface ResourcesEvents {
    */
   resourceStart(): void;
   /**
-   * Triggered when a resource stops.
+   * Triggered when this resource is stopped or restarted
+   * (`stop` / `restart` console commands, `mp.resources.stop()` / `restart()`).
+   *
+   * It is not triggered when the whole server shuts down (`quit`),
+   * so do not rely on it to save data on shutdown.
    */
   resourceStop(): void;
   /**
@@ -372,9 +376,19 @@ export interface PlayersEvents {
    */
   throwGrenade(playerId: number, data: ThrowGrenadeEventData): void | boolean;
   /**
-   * Triggered when player meta changed
+   * Triggered when a player's meta value changes.
+   *
+   * @param playerId - The ID of the player whose meta changed
+   * @param key - The meta key that changed
+   * @param newValue - The value that was just set
+   * @param oldValue - The previous value, or `null` the first time the key is set
    */
-  playerMetaChange(id: string, key: string, oldValue: any, newValue: any): void;
+  playerMetaChange(
+    playerId: number,
+    key: string,
+    newValue: any,
+    oldValue: any,
+  ): void;
 }
 
 /**
@@ -405,9 +419,13 @@ export interface WorldEvents {
    */
   explosion(playerId: number, data: ExplosionEventData): void | boolean;
   /**
-   * Triggered when global meta changed
+   * Triggered when a global meta value changes.
+   *
+   * @param key - The meta key that changed
+   * @param newValue - The value that was just set
+   * @param oldValue - The previous value, or `null` the first time the key is set
    */
-  globalMetaChange(id: string, key: string, oldValue: any, newValue: any): void;
+  globalMetaChange(key: string, newValue: any, oldValue: any): void;
 }
 
 /**
@@ -542,9 +560,19 @@ export interface EntitiesEvents {
    */
   gameObjectDespawn(id: number): void;
   /**
-   * Triggered when any entity meta changed
+   * Triggered when an entity's meta value changes.
+   *
+   * @param entityId - The ID of the entity whose meta changed
+   * @param key - The meta key that changed
+   * @param newValue - The value that was just set
+   * @param oldValue - The previous value, or `null` the first time the key is set
    */
-  entityMetaChange(id: string, key: string, oldValue: any, newValue: any): void;
+  entityMetaChange(
+    entityId: number,
+    key: string,
+    newValue: any,
+    oldValue: any,
+  ): void;
 }
 
 /**
